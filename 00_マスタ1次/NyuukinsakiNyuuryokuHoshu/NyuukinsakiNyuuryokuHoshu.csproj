@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBD44606-661C-4D69-ADF9-5059E2EE9811}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NyuukinsakiNyuuryokuHoshu</RootNamespace>
+    <AssemblyName>NyuukinsakiNyuuryokuHoshu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\GrapeCity.Framework.InputMan.v22.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\GrapeCity.Win.Editors.v70.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\M209.cs" />
+    <Compile Include="APP\NyuukinsakiNyuuryokuHoshuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\NyuukinsakiNyuuryokuHoshuForm.Designer.cs">
+      <DependentUpon>NyuukinsakiNyuuryokuHoshuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Const\NyuukinsakiNyuuryokuHoshuConstans.cs" />
+    <Compile Include="Logic\NyuukinsakiNyuuryokuHoshuLogic.cs" />
+    <Compile Include="MultiRowTemplate\NyuukinsakiFurikomiDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\NyuukinsakiFurikomiDetail.designer.cs">
+      <DependentUpon>NyuukinsakiFurikomiDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\NyuukinsakiTorihikisakiDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\NyuukinsakiTorihikisakiDetail.designer.cs">
+      <DependentUpon>NyuukinsakiTorihikisakiDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validator\DataRowNyuukinsakiNyuuryokuCompare.cs" />
+    <Compile Include="Validator\NyuukinsakiNyuuryokuHoshuValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckDeleteNyuukinsakiSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql\GetTorihikisakiSeikyuudataSql.sql" />
+    <EmbeddedResource Include="Sql\GetFurikomisakidataSql.sql" />
+    <EmbeddedResource Include="Sql\GetInputCddataNyuukinsakiSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APP\NyuukinsakiNyuuryokuHoshuForm.resx">
+      <DependentUpon>NyuukinsakiNyuuryokuHoshuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\NyuukinsakiFurikomiDetail.resx">
+      <DependentUpon>NyuukinsakiFurikomiDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\NyuukinsakiTorihikisakiDetail.resx">
+      <DependentUpon>NyuukinsakiTorihikisakiDetail.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetInputCddataTorihikisakiSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteFurikomisakidataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MasterCommon\MasterCommon.csproj">
+      <Project>{33456DFB-0BB4-4717-B6C7-4D91F5500C4A}</Project>
+      <Name>MasterCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

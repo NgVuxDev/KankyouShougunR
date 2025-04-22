@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <OutputColumnSelect Kbn="001">
+        <Group OutputKbn="1">
+            <Column ID="1" DispNumber="1" DispName="伝票種類" TableName="" Name="'出荷'" Format="" />
+            <Column ID="2" DispNumber="2" DispName="拠点CD" TableName="T_SHUKKA_ENTRY" Name="KYOTEN_CD" Format="" />
+            <Column ID="3" DispNumber="3" DispName="拠点名" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+            <Column ID="4" DispNumber="4" DispName="伝票番号" TableName="T_SHUKKA_ENTRY" Name="SHUKKA_NUMBER" Format="" />
+            <Column ID="5" DispNumber="5" DispName="日連番" TableName="T_SHUKKA_ENTRY" Name="DATE_NUMBER" Format="" />
+            <Column ID="6" DispNumber="6" DispName="年連番" TableName="T_SHUKKA_ENTRY" Name="YEAR_NUMBER" Format="" />
+            <Column ID="7" DispNumber="7" DispName="確定区分" TableName="" Name="CASE T_SHUKKA_ENTRY.KAKUTEI_KBN WHEN 1 THEN '確定' WHEN 2 THEN '未確定' ELSE '' END" Format="" />
+            <Column ID="8" DispNumber="8" DispName="伝票日付" TableName="T_SHUKKA_ENTRY" Name="DENPYOU_DATE" Format="yyyy/MM/dd" />
+            <Column ID="9" DispNumber="9" DispName="売上日付" TableName="T_SHUKKA_ENTRY" Name="URIAGE_DATE" Format="yyyy/MM/dd" />
+            <Column ID="10" DispNumber="10" DispName="支払日付" TableName="T_SHUKKA_ENTRY" Name="SHIHARAI_DATE" Format="yyyy/MM/dd" />
+            <Column ID="11" DispNumber="11" DispName="取引先CD" TableName="T_SHUKKA_ENTRY" Name="TORIHIKISAKI_CD" Format="" />
+            <Column ID="12" DispNumber="12" DispName="取引先名" TableName="T_SHUKKA_ENTRY" Name="TORIHIKISAKI_NAME" Format="" />
+            <Column ID="13" DispNumber="13" DispName="業者CD" TableName="T_SHUKKA_ENTRY" Name="GYOUSHA_CD" Format="" />
+            <Column ID="14" DispNumber="14" DispName="業者名" TableName="T_SHUKKA_ENTRY" Name="GYOUSHA_NAME" Format="" />
+            <Column ID="15" DispNumber="15" DispName="現場CD" TableName="T_SHUKKA_ENTRY" Name="GENBA_CD" Format="" />
+            <Column ID="16" DispNumber="16" DispName="現場名" TableName="T_SHUKKA_ENTRY" Name="GENBA_NAME" Format="" />
+            <Column ID="17" DispNumber="17" DispName="荷積業者CD" TableName="T_SHUKKA_ENTRY" Name="NIZUMI_GYOUSHA_CD" Format="" />
+            <Column ID="18" DispNumber="18" DispName="荷積業者名" TableName="T_SHUKKA_ENTRY" Name="NIZUMI_GYOUSHA_NAME" Format="" />
+            <Column ID="19" DispNumber="19" DispName="荷積現場CD" TableName="T_SHUKKA_ENTRY" Name="NIZUMI_GENBA_CD" Format="" />
+            <Column ID="20" DispNumber="20" DispName="荷積現場名" TableName="T_SHUKKA_ENTRY" Name="NIZUMI_GENBA_NAME" Format="" />
+            <Column ID="21" DispNumber="21" DispName="荷降業者CD" TableName="" Name="NULL" Format="" />
+            <Column ID="22" DispNumber="22" DispName="荷降業者名" TableName="" Name="NULL" Format="" />
+            <Column ID="23" DispNumber="23" DispName="荷降現場CD" TableName="" Name="NULL" Format="" />
+            <Column ID="24" DispNumber="24" DispName="荷降現場名" TableName="" Name="NULL" Format="" />
+            <Column ID="25" DispNumber="25" DispName="営業担当者CD" TableName="T_SHUKKA_ENTRY" Name="EIGYOU_TANTOUSHA_CD" Format="" />
+            <Column ID="26" DispNumber="26" DispName="営業担当者名" TableName="T_SHUKKA_ENTRY" Name="EIGYOU_TANTOUSHA_NAME" Format="" />
+            <Column ID="27" DispNumber="27" DispName="入力担当者CD" TableName="T_SHUKKA_ENTRY" Name="NYUURYOKU_TANTOUSHA_CD" Format="" />
+            <Column ID="28" DispNumber="28" DispName="入力担当者名" TableName="T_SHUKKA_ENTRY" Name="NYUURYOKU_TANTOUSHA_NAME" Format="" />
+            <Column ID="29" DispNumber="29" DispName="車輌CD" TableName="T_SHUKKA_ENTRY" Name="SHARYOU_CD" Format="" />
+            <Column ID="30" DispNumber="30" DispName="車輌名" TableName="T_SHUKKA_ENTRY" Name="SHARYOU_NAME" Format="" />
+            <Column ID="31" DispNumber="31" DispName="車種CD" TableName="T_SHUKKA_ENTRY" Name="SHASHU_CD" Format="" />
+            <Column ID="32" DispNumber="32" DispName="車種名" TableName="T_SHUKKA_ENTRY" Name="SHASHU_NAME" Format="" />
+            <Column ID="33" DispNumber="33" DispName="運搬業者CD" TableName="T_SHUKKA_ENTRY" Name="UNPAN_GYOUSHA_CD" Format="" />
+            <Column ID="34" DispNumber="34" DispName="運搬業者名" TableName="T_SHUKKA_ENTRY" Name="UNPAN_GYOUSHA_NAME" Format="" />
+            <Column ID="35" DispNumber="35" DispName="運転者CD" TableName="T_SHUKKA_ENTRY" Name="UNTENSHA_CD" Format="" />
+            <Column ID="36" DispNumber="36" DispName="運転者名" TableName="T_SHUKKA_ENTRY" Name="UNTENSHA_NAME" Format="" />
+            <Column ID="37" DispNumber="37" DispName="人数" TableName="T_SHUKKA_ENTRY" Name="NINZUU_CNT" Format="" />
+            <Column ID="38" DispNumber="38" DispName="形態区分CD" TableName="T_SHUKKA_ENTRY" Name="KEITAI_KBN_CD" Format="" />
+            <Column ID="39" DispNumber="39" DispName="形態区分名" TableName="M_KEITAI_KBN1" Name="KEITAI_KBN_NAME_RYAKU" Format="" />
+            <Column ID="40" DispNumber="40" DispName="台貫" TableName="" Name="CASE T_SHUKKA_ENTRY.DAIKAN_KBN WHEN 1 THEN '自社' WHEN 2 THEN '他社' ELSE '' END" Format="" />
+            <Column ID="41" DispNumber="41" DispName="コンテナ操作CD" TableName="T_SHUKKA_ENTRY" Name="CONTENA_SOUSA_CD" Format="" />
+            <Column ID="42" DispNumber="42" DispName="コンテナ操作名" TableName="M_CONTENA_JOUKYOU1" Name="CONTENA_JOUKYOU_NAME_RYAKU" Format="" />
+            <Column ID="43" DispNumber="43" DispName="マニフェスト種類CD" TableName="T_SHUKKA_ENTRY" Name="MANIFEST_SHURUI_CD" Format="" />
+            <Column ID="44" DispNumber="44" DispName="マニフェスト種類名" TableName="M_MANIFEST_SHURUI1" Name="MANIFEST_SHURUI_NAME_RYAKU" Format="" />
+            <Column ID="45" DispNumber="45" DispName="マニフェスト手配CD" TableName="T_SHUKKA_ENTRY" Name="MANIFEST_TEHAI_CD" Format="" />
+            <Column ID="46" DispNumber="46" DispName="マニフェスト手配名" TableName="M_MANIFEST_TEHAI1" Name="MANIFEST_TEHAI_NAME_RYAKU" Format="" />
+            <Column ID="47" DispNumber="47" DispName="伝票備考" TableName="T_SHUKKA_ENTRY" Name="DENPYOU_BIKOU" Format="" />
+            <Column ID="48" DispNumber="48" DispName="滞留備考" TableName="T_SHUKKA_ENTRY" Name="TAIRYUU_BIKOU" Format="" />
+            <Column ID="49" DispNumber="49" DispName="受付番号" TableName="T_SHUKKA_ENTRY" Name="UKETSUKE_NUMBER" Format="" />
+            <Column ID="50" DispNumber="50" DispName="領収書番号(日連番)" TableName="T_SHUKKA_ENTRY" Name="RECEIPT_NUMBER" Format="" />
+            <Column ID="51" DispNumber="51" DispName="領収書番号(年連番)" TableName="T_SHUKKA_ENTRY" Name="RECEIPT_NUMBER_YEAR" Format="" />
+            <Column ID="52" DispNumber="52" DispName="正味合計" TableName="T_SHUKKA_ENTRY" Name="KENSHU_NET_TOTAL" Format="" />
+            <Column ID="53" DispNumber="53" DispName="売上消費税率" TableName="T_SHUKKA_ENTRY" Name="KENSHU_URIAGE_SHOUHIZEI_RATE" Format="" />
+            <Column ID="54" DispNumber="54" DispName="売上金額合計(税抜)" TableName="" Name="T_SHUKKA_ENTRY.KENSHU_URIAGE_AMOUNT_TOTAL + T_SHUKKA_ENTRY.KENSHU_HINMEI_URIAGE_KINGAKU_TOTAL - T_SHUKKA_ENTRY.KENSHU_HINMEI_URIAGE_TAX_UCHI_TOTAL - ISNULL(CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_UCHI WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_UCHI_TOTAL ELSE 0 END, 0)" Format="" />
+            <Column ID="55" DispNumber="55" DispName="売上消費税合計" TableName="" Name="T_SHUKKA_ENTRY.KENSHU_HINMEI_URIAGE_TAX_UCHI_TOTAL + T_SHUKKA_ENTRY.KENSHU_HINMEI_URIAGE_TAX_SOTO_TOTAL + ISNULL(CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_UCHI + T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_SOTO WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_UCHI_TOTAL + T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_SOTO_TOTAL ELSE 0 END, 0)" Format="" />
+            <Column ID="56" DispNumber="56" DispName="売上金額合計(税込)" TableName="" Name="T_SHUKKA_ENTRY.KENSHU_URIAGE_AMOUNT_TOTAL + T_SHUKKA_ENTRY.KENSHU_HINMEI_URIAGE_KINGAKU_TOTAL + T_SHUKKA_ENTRY.KENSHU_HINMEI_URIAGE_TAX_SOTO_TOTAL + ISNULL(CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_SOTO WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_SOTO_TOTAL ELSE 0 END, 0)" Format="" />
+            <Column ID="57" DispNumber="57" DispName="売上伝票毎消費税外税" TableName="" Name="CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_SOTO ELSE 0 END" Format="" />
+            <Column ID="58" DispNumber="58" DispName="売上伝票毎消費税内税" TableName="" Name="CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_UCHI ELSE 0 END" Format="" />
+            <Column ID="59" DispNumber="59" DispName="売上明細毎消費税外税合計" TableName="" Name="CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_SOTO_TOTAL ELSE 0 END" Format="" />
+            <Column ID="60" DispNumber="60" DispName="売上明細毎消費税内税合計" TableName="" Name="CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_URIAGE_TAX_UCHI_TOTAL ELSE 0 END" Format="" />
+            <Column ID="61" DispNumber="61" DispName="売上税計算区分CD" TableName="T_SHUKKA_ENTRY" Name="URIAGE_ZEI_KEISAN_KBN_CD" Format="" />
+            <Column ID="62" DispNumber="62" DispName="売上税計算区分" TableName="" Name="CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 1 THEN '伝票毎' WHEN 2 THEN '請求毎' WHEN 3 THEN '明細毎' ELSE '' END" Format="" />
+            <Column ID="63" DispNumber="63" DispName="売上税区分CD" TableName="T_SHUKKA_ENTRY" Name="URIAGE_ZEI_KBN_CD" Format="" />
+            <Column ID="64" DispNumber="64" DispName="売上税区分" TableName="" Name="CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KBN_CD WHEN 1 THEN '外税' WHEN 2 THEN '内税' WHEN 3 THEN '非課税' ELSE '' END" Format="" />
+            <Column ID="65" DispNumber="65" DispName="売上取引区分CD" TableName="T_SHUKKA_ENTRY" Name="URIAGE_TORIHIKI_KBN_CD" Format="" />
+            <Column ID="66" DispNumber="66" DispName="売上取引区分名" TableName="M_TORIHIKI_KBN1" Name="TORIHIKI_KBN_NAME_RYAKU" Format="" />
+            <Column ID="67" DispNumber="67" DispName="支払消費税率" TableName="T_SHUKKA_ENTRY" Name="KENSHU_SHIHARAI_SHOUHIZEI_RATE" Format="" />
+            <Column ID="68" DispNumber="68" DispName="支払金額合計(税抜)" TableName="" Name="T_SHUKKA_ENTRY.KENSHU_SHIHARAI_AMOUNT_TOTAL + T_SHUKKA_ENTRY.KENSHU_HINMEI_SHIHARAI_KINGAKU_TOTAL - T_SHUKKA_ENTRY.KENSHU_HINMEI_SHIHARAI_TAX_UCHI_TOTAL - ISNULL(CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_UCHI WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_UCHI_TOTAL ELSE 0 END, 0)" Format="" />
+            <Column ID="69" DispNumber="69" DispName="支払消費税合計" TableName="" Name="T_SHUKKA_ENTRY.KENSHU_HINMEI_SHIHARAI_TAX_UCHI_TOTAL + T_SHUKKA_ENTRY.KENSHU_HINMEI_SHIHARAI_TAX_SOTO_TOTAL + ISNULL(CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_UCHI + T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_SOTO WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_UCHI_TOTAL + T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_SOTO_TOTAL ELSE 0 END, 0)" Format="" />
+            <Column ID="70" DispNumber="70" DispName="支払金額合計(税込)" TableName="" Name="T_SHUKKA_ENTRY.KENSHU_SHIHARAI_AMOUNT_TOTAL + T_SHUKKA_ENTRY.KENSHU_HINMEI_SHIHARAI_KINGAKU_TOTAL + T_SHUKKA_ENTRY.KENSHU_HINMEI_SHIHARAI_TAX_SOTO_TOTAL + ISNULL(CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_SOTO WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_SOTO_TOTAL ELSE 0 END, 0)" Format="" />
+            <Column ID="71" DispNumber="71" DispName="支払伝票毎消費税外税" TableName="" Name="CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_SOTO ELSE 0 END" Format="" />
+            <Column ID="72" DispNumber="72" DispName="支払伝票毎消費税内税" TableName="" Name="CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 1 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_UCHI ELSE 0 END" Format="" />
+            <Column ID="73" DispNumber="73" DispName="支払明細毎消費税外税合計" TableName="" Name="CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_SOTO_TOTAL ELSE 0 END" Format="" />
+            <Column ID="74" DispNumber="74" DispName="支払明細毎消費税内税合計" TableName="" Name="CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 3 THEN T_SHUKKA_ENTRY.KENSHU_SHIHARAI_TAX_UCHI_TOTAL ELSE 0 END" Format="" />
+            <Column ID="75" DispNumber="75" DispName="支払税計算区分CD" TableName="T_SHUKKA_ENTRY" Name="SHIHARAI_ZEI_KEISAN_KBN_CD" Format="" />
+            <Column ID="76" DispNumber="76" DispName="支払税計算区分" TableName="" Name="CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 1 THEN '伝票毎' WHEN 2 THEN '請求毎' WHEN 3 THEN '明細毎' ELSE '' END" Format="" />
+            <Column ID="77" DispNumber="77" DispName="支払税区分CD" TableName="T_SHUKKA_ENTRY" Name="SHIHARAI_ZEI_KBN_CD" Format="" />
+            <Column ID="78" DispNumber="78" DispName="支払税区分" TableName="" Name="CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KBN_CD WHEN 1 THEN '外税' WHEN 2 THEN '内税' WHEN 3 THEN '非課税' ELSE '' END" Format="" />
+            <Column ID="79" DispNumber="79" DispName="支払取引区分CD" TableName="T_SHUKKA_ENTRY" Name="SHIHARAI_TORIHIKI_KBN_CD" Format="" />
+            <Column ID="80" DispNumber="80" DispName="支払取引区分名" TableName="M_TORIHIKI_KBN2" Name="TORIHIKI_KBN_NAME_RYAKU" Format="" />
+            <Column ID="81" DispNumber="81" DispName="締処理状況(売上)" TableName="" Name="CASE T_SEIKYUU_DETAIL1.DENPYOU_SHURUI_CD WHEN 2 THEN '締済' ELSE '未締' END" Format="" />
+            <Column ID="82" DispNumber="82" DispName="締処理状況(支払)" TableName="" Name="CASE T_SEISAN_DETAIL1.DENPYOU_SHURUI_CD WHEN 2 THEN '締済' ELSE '未締' END" Format="" />
+            <Column ID="83" DispNumber="83" DispName="作成者" TableName="T_SHUKKA_ENTRY" Name="CREATE_USER" Format="" />
+            <Column ID="84" DispNumber="84" DispName="作成日時" TableName="T_SHUKKA_ENTRY" Name="CREATE_DATE" Format="yyyy/MM/dd" />
+            <Column ID="85" DispNumber="85" DispName="作成PC" TableName="T_SHUKKA_ENTRY" Name="CREATE_PC" Format="" />
+            <Column ID="86" DispNumber="86" DispName="最終更新者" TableName="T_SHUKKA_ENTRY" Name="UPDATE_USER" Format="" />
+            <Column ID="87" DispNumber="87" DispName="最終更新日時" TableName="T_SHUKKA_ENTRY" Name="UPDATE_DATE" Format="yyyy/MM/dd" />
+            <Column ID="88" DispNumber="88" DispName="最終更新PC" TableName="T_SHUKKA_ENTRY" Name="UPDATE_PC" Format="" />
+            <Column ID="89" DispNumber="89" DispName="検収状況" TableName="" Name="CASE WHEN T_SHUKKA_ENTRY.KENSHU_MUST_KBN = 1 THEN (CASE WHEN T_SHUKKA_ENTRY.KENSHU_DATE IS NULL THEN '未検収' ELSE '検収済' END) ELSE '検収不要' END" Format="" />
+        </Group>
+        <Group OutputKbn="2">
+            <Column ID="1" DispNumber="1" DispName="行番号" TableName="T_KENSHU_DETAIL" Name="KENSHU_ROW_NO" Format="" />
+            <Column ID="2" DispNumber="2" DispName="総重量" TableName="T_SHUKKA_DETAIL" Name="STACK_JYUURYOU" Format="" />
+            <Column ID="3" DispNumber="3" DispName="空車重量" TableName="T_SHUKKA_DETAIL" Name="EMPTY_JYUURYOU" Format="" />
+            <Column ID="4" DispNumber="4" DispName="調整前正味重量" TableName="" Name="T_SHUKKA_DETAIL.STACK_JYUURYOU - T_SHUKKA_DETAIL.EMPTY_JYUURYOU" Format="" />
+            <Column ID="5" DispNumber="5" DispName="出荷時正味重量" TableName="T_SHUKKA_DETAIL" Name="NET_JYUURYOU" Format="" />
+            <Column ID="6" DispNumber="6" DispName="割振重量" TableName="T_SHUKKA_DETAIL" Name="WARIFURI_JYUURYOU" Format="" />
+            <Column ID="7" DispNumber="7" DispName="割振割合" TableName="T_SHUKKA_DETAIL" Name="WARIFURI_PERCENT / 100" Format="" />
+            <Column ID="8" DispNumber="8" DispName="調整重量" TableName="T_SHUKKA_DETAIL" Name="CHOUSEI_JYUURYOU" Format="" />
+            <Column ID="9" DispNumber="9" DispName="調整割合" TableName="T_SHUKKA_DETAIL" Name="CHOUSEI_PERCENT / 100" Format="" />
+            <Column ID="10" DispNumber="10" DispName="容器CD" TableName="T_SHUKKA_DETAIL" Name="YOUKI_CD" Format="" />
+            <Column ID="11" DispNumber="11" DispName="容器名" TableName="M_YOUKI1" Name="YOUKI_NAME_RYAKU" Format="" />
+            <Column ID="12" DispNumber="12" DispName="容器数量" TableName="T_SHUKKA_DETAIL" Name="YOUKI_SUURYOU" Format="" />
+            <Column ID="13" DispNumber="13" DispName="容器重量" TableName="T_SHUKKA_DETAIL" Name="YOUKI_JYUURYOU" Format="" />
+            <Column ID="14" DispNumber="14" DispName="正味重量" TableName="T_KENSHU_DETAIL" Name="KENSHU_NET" Format="" />
+            <Column ID="15" DispNumber="15" DispName="品名CD" TableName="T_KENSHU_DETAIL" Name="HINMEI_CD" Format="" />
+            <Column ID="16" DispNumber="16" DispName="品名" TableName="T_KENSHU_DETAIL" Name="HINMEI_NAME" Format="" />
+            <Column ID="17" DispNumber="17" DispName="伝票区分CD" TableName="T_KENSHU_DETAIL" Name="DENPYOU_KBN_CD" Format="" />
+            <Column ID="18" DispNumber="18" DispName="伝票区分名" TableName="M_DENPYOU_KBN2" Name="DENPYOU_KBN_NAME_RYAKU" Format="" />
+            <Column ID="19" DispNumber="19" DispName="数量" TableName="T_KENSHU_DETAIL" Name="SUURYOU" Format="" />
+            <Column ID="20" DispNumber="20" DispName="単位CD" TableName="T_KENSHU_DETAIL" Name="UNIT_CD" Format="" />
+            <Column ID="21" DispNumber="21" DispName="単位名" TableName="M_UNIT3" Name="UNIT_NAME_RYAKU" Format="" />
+            <Column ID="22" DispNumber="22" DispName="単価" TableName="T_KENSHU_DETAIL" Name="TANKA" Format="" />
+            <Column ID="23" DispNumber="23" DispName="金額" TableName="" Name="T_KENSHU_DETAIL.KINGAKU + T_KENSHU_DETAIL.HINMEI_KINGAKU" Format="" />
+            <Column ID="24" DispNumber="24" DispName="消費税外税" TableName="" Name="CASE T_KENSHU_DETAIL.DENPYOU_KBN_CD WHEN 1 THEN (CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 3 THEN ISNULL(T_KENSHU_DETAIL.TAX_SOTO,0) + ISNULL(T_KENSHU_DETAIL.HINMEI_TAX_SOTO,0) ELSE 0 END) WHEN 2 THEN (CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 3 THEN ISNULL(T_KENSHU_DETAIL.TAX_SOTO,0) + ISNULL(T_KENSHU_DETAIL.HINMEI_TAX_SOTO,0) ELSE 0 END) ELSE 0 END" Format="" />
+            <Column ID="25" DispNumber="25" DispName="消費税内税" TableName="" Name="CASE T_KENSHU_DETAIL.DENPYOU_KBN_CD WHEN 1 THEN (CASE T_SHUKKA_ENTRY.URIAGE_ZEI_KEISAN_KBN_CD WHEN 3 THEN ISNULL(T_KENSHU_DETAIL.TAX_UCHI,0) + ISNULL(T_KENSHU_DETAIL.HINMEI_TAX_UCHI,0) ELSE 0 END) WHEN 2 THEN (CASE T_SHUKKA_ENTRY.SHIHARAI_ZEI_KEISAN_KBN_CD WHEN 3 THEN ISNULL(T_KENSHU_DETAIL.TAX_UCHI,0) + ISNULL(T_KENSHU_DETAIL.HINMEI_TAX_UCHI,0) ELSE 0 END) ELSE 0 END" Format="" />
+            <Column ID="26" DispNumber="26" DispName="明細備考" TableName="T_SHUKKA_DETAIL" Name="MEISAI_BIKOU" Format="" />
+            <Column ID="27" DispNumber="27" DispName="荷姿数量" TableName="T_SHUKKA_DETAIL" Name="NISUGATA_SUURYOU" Format="" />
+            <Column ID="28" DispNumber="28" DispName="荷姿単位CD" TableName="T_SHUKKA_DETAIL" Name="NISUGATA_UNIT_CD" Format="" />
+            <Column ID="29" DispNumber="29" DispName="荷姿単位名" TableName="M_UNIT2" Name="UNIT_NAME_RYAKU" Format="" />
+            <Column ID="30" DispNumber="30" DispName="マニフェスト番号" TableName="T_MANIFEST_ENTRY" Name="MANIFEST_ID" Format="" />
+            <Column ID="31" DispNumber="31" DispName="在庫品名CD" TableName="T_ZAIKO_HINMEI_HURIWAKE" Name="ZAIKO_HINMEI_CD" Format="" />
+            <Column ID="32" DispNumber="32" DispName="在庫品名" TableName="T_ZAIKO_HINMEI_HURIWAKE" Name="ZAIKO_HINMEI_NAME" Format="" />
+            <Column ID="33" DispNumber="33" DispName="歩引き" TableName="T_KENSHU_DETAIL" Name="BUBIKI" Format="" />
+        </Group>
+        <FromCondition TableName="T_SHUKKA_ENTRY">
+            (SELECT
+            SYSTEM_ID, SEQ, TAIRYUU_KBN, KYOTEN_CD, SHUKKA_NUMBER, DATE_NUMBER, YEAR_NUMBER, KAKUTEI_KBN,
+            <!-- 検収日付で入れ換え -->
+            <!-- DENPYOU_DATE, URIAGE_DATE, SHIHARAI_DATE, -->
+            KENSHU_DATE AS DENPYOU_DATE,
+            KENSHU_URIAGE_DATE AS URIAGE_DATE,
+            KENSHU_SHIHARAI_DATE AS SHIHARAI_DATE,
+            TORIHIKISAKI_CD, TORIHIKISAKI_NAME, GYOUSHA_CD, GYOUSHA_NAME, GENBA_CD, GENBA_NAME, NIZUMI_GYOUSHA_CD, NIZUMI_GYOUSHA_NAME, NIZUMI_GENBA_CD,
+            NIZUMI_GENBA_NAME, EIGYOU_TANTOUSHA_CD, EIGYOU_TANTOUSHA_NAME, NYUURYOKU_TANTOUSHA_CD, NYUURYOKU_TANTOUSHA_NAME, SHARYOU_CD,
+            SHARYOU_NAME, SHASHU_CD, SHASHU_NAME, UNPAN_GYOUSHA_CD, UNPAN_GYOUSHA_NAME, UNTENSHA_CD, UNTENSHA_NAME, NINZUU_CNT, KEITAI_KBN_CD,
+            DAIKAN_KBN, CONTENA_SOUSA_CD, MANIFEST_SHURUI_CD, MANIFEST_TEHAI_CD, DENPYOU_BIKOU, TAIRYUU_BIKOU, UKETSUKE_NUMBER, KEIRYOU_NUMBER,
+            RECEIPT_NUMBER, NET_TOTAL, URIAGE_SHOUHIZEI_RATE, URIAGE_AMOUNT_TOTAL, URIAGE_TAX_SOTO, URIAGE_TAX_UCHI, URIAGE_TAX_SOTO_TOTAL,
+            URIAGE_TAX_UCHI_TOTAL, HINMEI_URIAGE_KINGAKU_TOTAL, HINMEI_URIAGE_TAX_SOTO_TOTAL, HINMEI_URIAGE_TAX_UCHI_TOTAL, SHIHARAI_SHOUHIZEI_RATE,
+            SHIHARAI_AMOUNT_TOTAL, SHIHARAI_TAX_SOTO, SHIHARAI_TAX_UCHI, SHIHARAI_TAX_SOTO_TOTAL, SHIHARAI_TAX_UCHI_TOTAL, HINMEI_SHIHARAI_KINGAKU_TOTAL,
+            HINMEI_SHIHARAI_TAX_SOTO_TOTAL, HINMEI_SHIHARAI_TAX_UCHI_TOTAL, URIAGE_ZEI_KEISAN_KBN_CD, URIAGE_ZEI_KBN_CD, URIAGE_TORIHIKI_KBN_CD,
+            SHIHARAI_ZEI_KEISAN_KBN_CD, SHIHARAI_ZEI_KBN_CD, SHIHARAI_TORIHIKI_KBN_CD, KENSHU_DATE, SHUKKA_NET_TOTAL, KENSHU_NET_TOTAL, SABUN,
+            SHUKKA_KINGAKU_TOTAL, KENSHU_KINGAKU_TOTAL, SAGAKU, CREATE_USER, CREATE_DATE, CREATE_PC, UPDATE_USER, UPDATE_DATE, UPDATE_PC, DELETE_FLG,
+            TIME_STAMP, KENSHU_MUST_KBN, KENSHU_URIAGE_SHOUHIZEI_RATE, KENSHU_URIAGE_AMOUNT_TOTAL, KENSHU_URIAGE_TAX_SOTO, KENSHU_URIAGE_TAX_UCHI,
+            KENSHU_URIAGE_TAX_SOTO_TOTAL, KENSHU_URIAGE_TAX_UCHI_TOTAL, KENSHU_HINMEI_URIAGE_KINGAKU_TOTAL, KENSHU_HINMEI_URIAGE_TAX_SOTO_TOTAL,
+            KENSHU_HINMEI_URIAGE_TAX_UCHI_TOTAL, KENSHU_SHIHARAI_SHOUHIZEI_RATE, KENSHU_SHIHARAI_AMOUNT_TOTAL, KENSHU_SHIHARAI_TAX_SOTO,
+            KENSHU_SHIHARAI_TAX_UCHI, KENSHU_SHIHARAI_TAX_SOTO_TOTAL, KENSHU_SHIHARAI_TAX_UCHI_TOTAL, KENSHU_HINMEI_SHIHARAI_KINGAKU_TOTAL,
+            KENSHU_HINMEI_SHIHARAI_TAX_SOTO_TOTAL, KENSHU_HINMEI_SHIHARAI_TAX_UCHI_TOTAL, KENSHU_URIAGE_DATE, KENSHU_SHIHARAI_DATE, RECEIPT_NUMBER_YEAR
+            FROM
+            T_SHUKKA_ENTRY
+            WHERE
+            TAIRYUU_KBN = 0 AND KENSHU_MUST_KBN = 1 AND KENSHU_DATE IS NOT NULL)
+        </FromCondition>
+        <JoinCondition TableName="T_SHUKKA_DETAIL">INNER JOIN T_SHUKKA_DETAIL ON T_SHUKKA_ENTRY.SYSTEM_ID = T_SHUKKA_DETAIL.SYSTEM_ID AND T_SHUKKA_ENTRY.SEQ = T_SHUKKA_DETAIL.SEQ</JoinCondition>
+        <JoinCondition TableName="T_KENSHU_DETAIL">LEFT JOIN T_KENSHU_DETAIL ON T_KENSHU_DETAIL.SYSTEM_ID = T_SHUKKA_DETAIL.SYSTEM_ID AND T_KENSHU_DETAIL.SEQ = T_SHUKKA_DETAIL.SEQ AND T_KENSHU_DETAIL.DETAIL_SYSTEM_ID = T_SHUKKA_DETAIL.DETAIL_SYSTEM_ID</JoinCondition>
+        <JoinCondition TableName="T_SEIKYUU_DETAIL1">LEFT JOIN T_SEIKYUU_DETAIL T_SEIKYUU_DETAIL1 ON T_SHUKKA_ENTRY.SYSTEM_ID = T_SEIKYUU_DETAIL1.DENPYOU_SYSTEM_ID AND T_SHUKKA_ENTRY.SEQ = T_SEIKYUU_DETAIL1.DENPYOU_SEQ AND T_SEIKYUU_DETAIL1.DENPYOU_SHURUI_CD = 2 AND T_SEIKYUU_DETAIL1.DELETE_FLG = 0</JoinCondition>
+        <JoinCondition TableName="T_SEISAN_DETAIL1">LEFT JOIN T_SEISAN_DETAIL T_SEISAN_DETAIL1 ON T_SHUKKA_ENTRY.SYSTEM_ID = T_SEISAN_DETAIL1.DENPYOU_SYSTEM_ID AND T_SHUKKA_ENTRY.SEQ = T_SEISAN_DETAIL1.DENPYOU_SEQ AND T_SEISAN_DETAIL1.DENPYOU_SHURUI_CD = 2 AND T_SEISAN_DETAIL1.DELETE_FLG = 0</JoinCondition>
+        <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_SHUKKA_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+        <JoinCondition TableName="M_TORIHIKISAKI1">LEFT JOIN M_TORIHIKISAKI M_TORIHIKISAKI1 ON T_SHUKKA_ENTRY.TORIHIKISAKI_CD = M_TORIHIKISAKI1.TORIHIKISAKI_CD</JoinCondition>
+        <JoinCondition TableName="M_GYOUSHA1">LEFT JOIN M_GYOUSHA M_GYOUSHA1 ON T_SHUKKA_ENTRY.GYOUSHA_CD = M_GYOUSHA1.GYOUSHA_CD</JoinCondition>
+        <JoinCondition TableName="M_GENBA1">LEFT JOIN M_GENBA M_GENBA1 ON T_SHUKKA_ENTRY.GYOUSHA_CD = M_GENBA1.GYOUSHA_CD AND T_SHUKKA_ENTRY.GENBA_CD = M_GENBA1.GENBA_CD</JoinCondition>
+        <JoinCondition TableName="M_KEITAI_KBN1">LEFT JOIN M_KEITAI_KBN M_KEITAI_KBN1 ON T_SHUKKA_ENTRY.KEITAI_KBN_CD = M_KEITAI_KBN1.KEITAI_KBN_CD</JoinCondition>
+        <JoinCondition TableName="M_CONTENA_JOUKYOU1">LEFT JOIN M_CONTENA_JOUKYOU M_CONTENA_JOUKYOU1 ON T_SHUKKA_ENTRY.CONTENA_SOUSA_CD = M_CONTENA_JOUKYOU1.CONTENA_JOUKYOU_CD</JoinCondition>
+        <JoinCondition TableName="M_MANIFEST_SHURUI1">LEFT JOIN M_MANIFEST_SHURUI M_MANIFEST_SHURUI1 ON T_SHUKKA_ENTRY.MANIFEST_SHURUI_CD = M_MANIFEST_SHURUI1.MANIFEST_SHURUI_CD</JoinCondition>
+        <JoinCondition TableName="M_MANIFEST_TEHAI1">LEFT JOIN M_MANIFEST_TEHAI M_MANIFEST_TEHAI1 ON T_SHUKKA_ENTRY.MANIFEST_TEHAI_CD = M_MANIFEST_TEHAI1.MANIFEST_TEHAI_CD</JoinCondition>
+        <JoinCondition TableName="M_TORIHIKI_KBN1">LEFT JOIN M_TORIHIKI_KBN M_TORIHIKI_KBN1 ON T_SHUKKA_ENTRY.URIAGE_TORIHIKI_KBN_CD = M_TORIHIKI_KBN1.TORIHIKI_KBN_CD</JoinCondition>
+        <JoinCondition TableName="M_TORIHIKI_KBN2">LEFT JOIN M_TORIHIKI_KBN M_TORIHIKI_KBN2 ON T_SHUKKA_ENTRY.SHIHARAI_TORIHIKI_KBN_CD = M_TORIHIKI_KBN2.TORIHIKI_KBN_CD</JoinCondition>
+        <JoinCondition TableName="M_DENPYOU_KBN1">LEFT JOIN M_DENPYOU_KBN M_DENPYOU_KBN1 ON T_SHUKKA_DETAIL.DENPYOU_KBN_CD = M_DENPYOU_KBN1.DENPYOU_KBN_CD</JoinCondition>
+        <JoinCondition TableName="M_DENPYOU_KBN2">LEFT JOIN M_DENPYOU_KBN M_DENPYOU_KBN2 ON T_KENSHU_DETAIL.DENPYOU_KBN_CD = M_DENPYOU_KBN2.DENPYOU_KBN_CD</JoinCondition>
+        <JoinCondition TableName="M_YOUKI1">LEFT JOIN M_YOUKI M_YOUKI1 ON T_SHUKKA_DETAIL.YOUKI_CD = M_YOUKI1.YOUKI_CD</JoinCondition>
+        <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON T_SHUKKA_DETAIL.UNIT_CD = M_UNIT1.UNIT_CD</JoinCondition>
+        <JoinCondition TableName="M_UNIT2">LEFT JOIN M_UNIT M_UNIT2 ON T_SHUKKA_DETAIL.NISUGATA_UNIT_CD = M_UNIT2.UNIT_CD</JoinCondition>
+        <JoinCondition TableName="M_UNIT3">LEFT JOIN M_UNIT M_UNIT3 ON T_KENSHU_DETAIL.UNIT_CD = M_UNIT3.UNIT_CD</JoinCondition>
+        <JoinCondition TableName="T_MANIFEST_ENTRY">LEFT JOIN (SELECT * FROM T_MANIFEST_ENTRY WHERE DELETE_FLG = 0) T_MANIFEST_ENTRY ON T_SHUKKA_DETAIL.SYSTEM_ID = T_MANIFEST_ENTRY.RENKEI_SYSTEM_ID AND T_SHUKKA_DETAIL.DETAIL_SYSTEM_ID = T_MANIFEST_ENTRY.RENKEI_MEISAI_SYSTEM_ID AND T_MANIFEST_ENTRY.RENKEI_DENSHU_KBN_CD = 2</JoinCondition>
+        <JoinCondition TableName="T_ZAIKO_HINMEI_HURIWAKE">
+            LEFT OUTER JOIN
+            (SELECT
+            SYSTEM_ID, SEQ, DETAIL_SYSTEM_ID, ZAIKO_HINMEI_COUNT,
+            CASE WHEN ZAIKO_HINMEI_COUNT = 1 THEN ZAIKO_HINMEI_CD ELSE '' END ZAIKO_HINMEI_CD,
+            CASE WHEN ZAIKO_HINMEI_COUNT = 1 THEN ZAIKO_HINMEI_NAME ELSE '複数在庫品名' END ZAIKO_HINMEI_NAME
+            FROM
+            (SELECT
+            SYSTEM_ID, SEQ, DETAIL_SYSTEM_ID,
+            MIN(ZAIKO_HINMEI_CD) ZAIKO_HINMEI_CD,
+            MIN(ZAIKO_HINMEI_NAME) ZAIKO_HINMEI_NAME,
+            COUNT(*) ZAIKO_HINMEI_COUNT
+            FROM
+            T_ZAIKO_HINMEI_HURIWAKE
+            WHERE
+            DENSHU_KBN_CD = '2'
+            GROUP BY
+            SYSTEM_ID, SEQ, DETAIL_SYSTEM_ID
+            ) T
+            ) T_ZAIKO_HINMEI_HURIWAKE
+            ON
+            T_SHUKKA_DETAIL.SYSTEM_ID = T_ZAIKO_HINMEI_HURIWAKE.SYSTEM_ID AND
+            T_SHUKKA_DETAIL.SEQ = T_ZAIKO_HINMEI_HURIWAKE.SEQ AND
+            T_SHUKKA_DETAIL.DETAIL_SYSTEM_ID = T_ZAIKO_HINMEI_HURIWAKE.DETAIL_SYSTEM_ID
+        </JoinCondition>
+    </OutputColumnSelect>
+</root>

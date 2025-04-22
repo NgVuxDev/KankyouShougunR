@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23CADAB4-EFE4-4F05-8BDB-213A7A5105A4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.Scale.KeiryouNyuuryoku</RootNamespace>
+    <AssemblyName>KeiryouNyuuryoku</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170" />
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12" />
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <ProjectReference Include="..\..\00_マスタ1次\SystemSetteiHoshu\SystemSetteiHoshu.csproj">
+      <Project>{640040C4-82C6-4517-BE9A-F53C8F75AE6C}</Project>
+      <Name>SystemSetteiHoshu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\FileUploadCommon\FileUploadCommon.csproj">
+      <Project>{A7BDC179-28A0-4565-9DE1-5901BAAFCC63}</Project>
+      <Name>FileUploadCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MasterKyoutsuPopup2\MasterKyoutsuPopup2.csproj">
+      <Project>{24A8C872-5ACF-42A5-A1AC-27E6C0C25B85}</Project>
+      <Name>MasterKyoutsuPopup2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\Shougun.Core.Message\Shougun.Core.Message.csproj">
+      <Project>{DDF5B1E5-6897-48EB-A194-ECA45C8201FD}</Project>
+      <Name>Shougun.Core.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\System.Windows.Forms.Ribbon\System.Windows.Forms.Ribbon35.csproj">
+      <Project>{2BBF4FC0-4169-4EA5-8947-9C421F0B2CDF}</Project>
+      <Name>System.Windows.Forms.Ribbon35</Name>
+    </ProjectReference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accessor\DBAccessor.cs" />
+    <Compile Include="APP\UIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIForm.Designer.cs">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\G672.cs" />
+    <Compile Include="APP\UIHeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIHeaderForm.Designer.cs">
+      <DependentUpon>UIHeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DAOClass.cs" />
+    <Compile Include="DTO\DTOClass.cs" />
+    <Compile Include="DTO\DTOUketukeKeiryoClass.cs" />
+    <Compile Include="DTO\TairyuuDTOClass.cs" />
+    <Compile Include="Logic\LogicClass.cs" />
+    <Compile Include="Logic\TabPageManager.cs" />
+    <Compile Include="MultiRowTemplate\KeiryouNyuuryokuDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\KeiryouNyuuryokuDetail.designer.cs">
+      <DependentUpon>KeiryouNyuuryokuDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TairyuuDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TairyuuDetail.designer.cs">
+      <DependentUpon>TairyuuDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\KeiryouNyuuryokuJisseki.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\KeiryouNyuuryokuJisseki.designer.cs">
+      <DependentUpon>KeiryouNyuuryokuJisseki.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MultiRowTemplate\KeiryouNyuuryokuDetail.resx">
+      <DependentUpon>KeiryouNyuuryokuDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\KeiryouNyuuryokuJisseki.resx">
+      <DependentUpon>KeiryouNyuuryokuJisseki.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APP\UIHeaderForm.resx">
+      <DependentUpon>UIHeaderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\TairyuuDetail.resx">
+      <DependentUpon>TairyuuDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIForm.resx">
+      <DependentUpon>UIForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01_共通\G184\G184.csproj">
+      <Project>{7418C90B-624C-4E17-BBE5-7832CFB5E515}</Project>
+      <Name>G184</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01_共通\G553\G553.csproj">
+      <Project>{56B5586B-FB45-46EE-A959-245E628A6D67}</Project>
+      <Name>G553</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02_売上支払処理\G055\G055.csproj">
+      <Project>{B9D2F9BA-8DE2-43E6-98B6-984171082347}</Project>
+      <Name>G055</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02_売上支払処理\G292\G292.csproj">
+      <Project>{144CAE97-89A5-4B95-9127-10FC5E754540}</Project>
+      <Name>G292</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02_売上支払処理\G335\G335.csproj">
+      <Project>{5BD5CDA6-DFB3-4B89-B38D-2714EE79B398}</Project>
+      <Name>G335</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\14_計量\G045\G045.csproj">
+      <Project>{BD93768F-1F82-4432-AE40-C7044A61BEFB}</Project>
+      <Name>G045</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\17_代納\G507\G507.csproj">
+      <Project>{1FCB4C78-F4EB-4D4F-ABC6-F382C1C2F22E}</Project>
+      <Name>G507</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\18_在庫\G165\G165.csproj">
+      <Project>{71FA9210-A27A-429B-989E-11DE769AC753}</Project>
+      <Name>G165</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonChouhyouPopup\CommonChouhyouPopup.csproj">
+      <Project>{445254EB-6A9C-4D9D-8431-3ED2658FE6DD}</Project>
+      <Name>CommonChouhyouPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\Common\Common.csproj">
+      <Project>{7749C25E-83F6-4478-A720-92162E76FB53}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetTorihikisakiKBN_Seikyuu.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetTorihikisakiKBN_Shiharai.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetKeitaiKbnCd.sql" />
+    <EmbeddedResource Include="Sql\GetNextKeiryouNumber.sql" />
+    <EmbeddedResource Include="Sql\GetPreKeiryouNumber.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetTairyuuData.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

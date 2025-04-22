@@ -1,0 +1,14 @@
+﻿SELECT * FROM dbo.M_GURUPU_NYURYOKU
+WHERE 
+/*IF data.ISNOT_NEED_DELETE_FLG.IsNull || data.ISNOT_NEED_DELETE_FLG.IsFalse*/
+ DELETE_FLG = 0
+-- ELSE
+ 1 = 1
+/*END*/
+AND DENPYOU_KBN_CD = 1
+/*IF data.GURUPU_CD != null*/AND GURUPU_CD = /*data.GURUPU_CD*//*END*/
+/*IF data.GURUPU_NAME != null*/AND GURUPU_NAME = /*data.GURUPU_NAME*//*END*/
+/*IF data.UPDATE_USER != null*/AND UPDATE_USER = /*data.UPDATE_USER*//*END*/
+/*IF !data.UPDATE_DATE.IsNull*/AND UPDATE_DATE = /*data.UPDATE_DATE.Value*//*END*/
+/*IF data.CREATE_USER != null*/AND CREATE_USER = /*data.CREATE_USER*//*END*/
+/*IF !data.CREATE_DATE.IsNull*/AND CREATE_DATE = /*data.CREATE_DATE.Value*//*END*/

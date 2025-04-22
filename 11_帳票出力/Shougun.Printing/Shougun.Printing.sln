@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shougun.Printing.Common", "Common\Shougun.Printing.Common.csproj", "{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shougun.Printing.Manager", "Manager\Shougun.Printing.Manager.csproj", "{98462FD4-121A-4E26-B9EB-9DBE9461B260}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shougun.Printing.Viewer", "Viewer\Shougun.Printing.Viewer.csproj", "{0DA25C02-0A70-4246-8DEE-0570A8FF1668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shougun.Printing.Client", "Client\Shougun.Printing.Client.csproj", "{D142ECB2-1857-4CE2-BF17-4AFFC563BE5E}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Shougun.Printing.Setup", "Setup\Shougun.Printing.Setup.vdproj", "{7CB058C5-DD51-4846-85E8-8325A11D5495}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shougun.Printing.Verup", "Verup\Shougun.Printing.Verup.csproj", "{028B6866-58B6-4EBB-9FFF-4E259FAE2426}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}.Debug|x86.ActiveCfg = Debug|x86
+		{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}.Debug|x86.Build.0 = Debug|x86
+		{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}.Release|x86.ActiveCfg = Release|x86
+		{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}.Release|x86.Build.0 = Release|x86
+		{98462FD4-121A-4E26-B9EB-9DBE9461B260}.Debug|x86.ActiveCfg = Debug|x86
+		{98462FD4-121A-4E26-B9EB-9DBE9461B260}.Debug|x86.Build.0 = Debug|x86
+		{98462FD4-121A-4E26-B9EB-9DBE9461B260}.Release|x86.ActiveCfg = Release|x86
+		{98462FD4-121A-4E26-B9EB-9DBE9461B260}.Release|x86.Build.0 = Release|x86
+		{0DA25C02-0A70-4246-8DEE-0570A8FF1668}.Debug|x86.ActiveCfg = Debug|x86
+		{0DA25C02-0A70-4246-8DEE-0570A8FF1668}.Debug|x86.Build.0 = Debug|x86
+		{0DA25C02-0A70-4246-8DEE-0570A8FF1668}.Release|x86.ActiveCfg = Release|x86
+		{0DA25C02-0A70-4246-8DEE-0570A8FF1668}.Release|x86.Build.0 = Release|x86
+		{D142ECB2-1857-4CE2-BF17-4AFFC563BE5E}.Debug|x86.ActiveCfg = Debug|x86
+		{D142ECB2-1857-4CE2-BF17-4AFFC563BE5E}.Debug|x86.Build.0 = Debug|x86
+		{D142ECB2-1857-4CE2-BF17-4AFFC563BE5E}.Release|x86.ActiveCfg = Release|x86
+		{D142ECB2-1857-4CE2-BF17-4AFFC563BE5E}.Release|x86.Build.0 = Release|x86
+		{7CB058C5-DD51-4846-85E8-8325A11D5495}.Debug|x86.ActiveCfg = Debug
+		{7CB058C5-DD51-4846-85E8-8325A11D5495}.Debug|x86.Build.0 = Debug
+		{7CB058C5-DD51-4846-85E8-8325A11D5495}.Release|x86.ActiveCfg = Release
+		{7CB058C5-DD51-4846-85E8-8325A11D5495}.Release|x86.Build.0 = Release
+		{028B6866-58B6-4EBB-9FFF-4E259FAE2426}.Debug|x86.ActiveCfg = Debug|x86
+		{028B6866-58B6-4EBB-9FFF-4E259FAE2426}.Debug|x86.Build.0 = Debug|x86
+		{028B6866-58B6-4EBB-9FFF-4E259FAE2426}.Release|x86.ActiveCfg = Release|x86
+		{028B6866-58B6-4EBB-9FFF-4E259FAE2426}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

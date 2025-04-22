@@ -1,0 +1,8 @@
+﻿SELECT
+  TUE.*
+FROM
+  T_UKEIRE_ENTRY AS TUE
+WHERE
+  TUE.SEQ = /*data.SEQ*/
+  AND TUE.SYSTEM_ID = /*data.SystemID*/
+  AND TUE.DELETE_FLG = 0

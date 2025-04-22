@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33A1BC11-B2F8-4FE0-9125-019771FE6B52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FixChouhyou</RootNamespace>
+    <AssemblyName>FixChouhyou</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar">
+      <HintPath>..\..\..\DLL\Seasar.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\..\DLL\Seasar.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\..\DLL\Seasar.Dxo.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\..\DLL\Seasar.Quill.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\..\DLL\Seasar.Unit.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\..\DLL\Seasar.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DAOClass.cs" />
+    <Compile Include="DTO\DTOClass.cs" />
+    <Compile Include="Logic\LogicClass.cs" />
+    <Compile Include="Logic\ReportInfoR338.cs" />
+    <Compile Include="Logic\ReportInfoR345_R350.cs" />
+    <Compile Include="Logic\ReportInfoR346.cs" />
+    <Compile Include="Logic\ReportInfoR354_R549_R550.cs" />
+    <Compile Include="Logic\ReportInfoR400.cs" />
+    <Compile Include="Logic\ReportInfoR403.cs" />
+    <Compile Include="Logic\ReportInfoR405.cs" />
+    <Compile Include="Logic\ReportInfoR424.cs" />
+    <Compile Include="Logic\ReportInfoR425_R508_R547_R548.cs" />
+    <Compile Include="Logic\ReportInfoR425_R508_R547_R548_Kyokusei.cs" />
+    <Compile Include="Logic\ReportInfoR429.cs" />
+    <Compile Include="Logic\ReportInfoR430.cs" />
+    <Compile Include="Logic\ReportInfoR450_R551.cs">
+      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="Logic\ReportInfoR483.cs" />
+    <Compile Include="Logic\ReportInfoR488.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Setting\ButtonSetting.xml" />
+    <EmbeddedResource Include="APP\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql\Sample.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\CommonChouhyouPopup\CommonChouhyouPopup.csproj">
+      <Project>{375544A2-5AA4-4EA6-B9C5-F4F7B147DCAB}</Project>
+      <Name>CommonChouhyouPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{F58E3E2C-89CE-4655-925E-3F866513659E}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

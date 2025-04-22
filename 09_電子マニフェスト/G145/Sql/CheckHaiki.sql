@@ -1,0 +1,9 @@
+﻿SELECT 
+	HAIKI_SHURUI_NAME
+FROM  
+	M_DENSHI_HAIKI_SHURUI
+/*BEGIN*/
+where 
+/*IF data.HAIKI_KBN_CD != null && data.HAIKI_KBN_CD != ''*/
+AND	HAIKI_SHURUI_CD = /*data.HAIKI_KBN_CD*//*END*/ 		
+/*END*/

@@ -1,0 +1,1 @@
+﻿DELETE DelT FROM /*$TableName*/ DelT /*$Joken*/

@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{28C3A90A-CDA9-4592-94CA-0F02C39FB342}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.ExternalConnection.GaibuRenkeiGenbaHoshu</RootNamespace>
+    <AssemblyName>GaibuRenkeiGenbaHoshu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar">
+      <HintPath>..\..\dll\Seasar.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\dll\Seasar.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\dll\Seasar.Dxo.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\dll\Seasar.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\dll\Seasar.Quill.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\dll\Seasar.Unit.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\dll\Seasar.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\HeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\HeaderForm.Designer.cs">
+      <DependentUpon>HeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\M693.cs" />
+    <Compile Include="APP\UIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIForm.Designer.cs">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\LogicClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="APP\HeaderForm.resx">
+      <DependentUpon>HeaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml" />
+    <EmbeddedResource Include="APP\UIForm.resx">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExternalCommon\ExternalCommon.csproj">
+      <Project>{8E5462BC-8B85-42EC-B551-834F84B3AB25}</Project>
+      <Name>ExternalCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

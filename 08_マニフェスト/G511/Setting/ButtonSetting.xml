@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <IchiranButtonName>[F1]&#xD;&#xA;前</IchiranButtonName>
+    <IchiranButtonHintText>前の報告書情報を表示します。※報告者または事業場毎に内容を表示します </IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>    
+    <ButtonName>bt_func2</ButtonName>
+    <IchiranButtonName>[F2]&#xD;&#xA;次</IchiranButtonName>
+    <IchiranButtonHintText>次の報告書情報を表示します。※報告者または事業場毎に内容を表示します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func4</ButtonName>
+    <IchiranButtonName>[F4]&#xD;&#xA;個別印刷</IchiranButtonName>
+    <IchiranButtonHintText>画面に表示された内容を印刷します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func5</ButtonName>
+    <IchiranButtonName>[F5]&#xD;&#xA;全印刷</IchiranButtonName>
+    <IchiranButtonHintText>現在の条件で表示される全ての内容を印刷します</IchiranButtonHintText>
+  </ButtonSetting>
+  <!--20140709 chinchisi EV004844_交付状況報告書にてCSV出力機能がない start-->
+  <ButtonSetting>
+    <ButtonName>bt_func6</ButtonName>
+    <IchiranButtonName>[F6]&#xD;&#xA;CSV出力</IchiranButtonName>
+    <IchiranButtonHintText>画面に表示された内容をCSVファイルにて出力します</IchiranButtonHintText>
+  </ButtonSetting>
+  <!--20140709 chinchisi EV004844_交付状況報告書にてCSV出力機能がない end-->
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <IchiranButtonHintText>画面を閉じます</IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

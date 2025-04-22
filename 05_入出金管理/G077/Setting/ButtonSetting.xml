@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <NewButtonName>[F2]&#xD;&#xA;新規</NewButtonName>
+    <UpdateButtonName>[F2]&#xD;&#xA;新規</UpdateButtonName>
+    <DeleteButtonName>[F2]&#xD;&#xA;新規</DeleteButtonName>
+    <NewButtonHintText>新規データを追加する画面に切り替わります</NewButtonHintText>
+    <UpdateButtonHintText>新規データを追加する画面に切り替わります</UpdateButtonHintText>
+    <DeleteButtonHintText>新規データを追加する画面に切り替わります</DeleteButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <NewButtonName>[F3]&#xD;&#xA;修正</NewButtonName>
+    <UpdateButtonName>[F3]&#xD;&#xA;修正</UpdateButtonName>
+    <DeleteButtonName>[F3]&#xD;&#xA;修正</DeleteButtonName>
+    <NewButtonHintText>既存データを修正する画面に切り替わります</NewButtonHintText>
+    <UpdateButtonHintText>既存データを修正する画面に切り替わります</UpdateButtonHintText>
+    <DeleteButtonHintText>既存データを修正する画面に切り替わります</DeleteButtonHintText>
+  </ButtonSetting>
+
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <NewButtonName>[F7]&#xD;&#xA;一覧</NewButtonName>
+    <UpdateButtonName>[F7]&#xD;&#xA;一覧</UpdateButtonName>
+    <DeleteButtonName>[F7]&#xD;&#xA;一覧</DeleteButtonName>
+    <NewButtonHintText>入出金一覧画面に移動します</NewButtonHintText>
+    <UpdateButtonHintText>入出金一覧画面に移動します</UpdateButtonHintText>
+    <DeleteButtonHintText>入出金一覧画面に移動します</DeleteButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;登録</NewButtonName>
+    <UpdateButtonName>[F9]&#xD;&#xA;登録</UpdateButtonName>
+    <DeleteButtonName>[F9]&#xD;&#xA;登録</DeleteButtonName>
+    <NewButtonHintText>表示されている内容を登録します。</NewButtonHintText>
+    <UpdateButtonHintText>表示されている内容を登録します。</UpdateButtonHintText>
+    <DeleteButtonHintText>表示されている内容を登録します。</DeleteButtonHintText>
+
+
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <DeleteButtonName>[F12]&#xD;&#xA;閉じる</DeleteButtonName>
+    <NewButtonHintText>画面を閉じます</NewButtonHintText>
+    <UpdateButtonHintText>画面を閉じます</UpdateButtonHintText>
+    <DeleteButtonHintText>画面を閉じます</DeleteButtonHintText>
+
+
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process2</ButtonName>
+    <NewButtonName>[2] 抽出</NewButtonName>
+    <UpdateButtonName>[2] 抽出</UpdateButtonName>
+    <DeleteButtonName>[2] 抽出</DeleteButtonName>
+    <NewButtonHintText>消込明細欄を表示します</NewButtonHintText>
+    <UpdateButtonHintText>消込明細欄を表示します</UpdateButtonHintText>
+    <DeleteButtonHintText>消込明細欄を表示します</DeleteButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <NewButtonName>[1]手形情報</NewButtonName>
+    <UpdateButtonName>[1]手形情報</UpdateButtonName>
+    <DeleteButtonName>[1]手形情報</DeleteButtonName>
+    <NewButtonHintText>受取手形情報入力に移動します</NewButtonHintText>
+    <UpdateButtonHintText>受取手形情報入力に移動します</UpdateButtonHintText>
+    <DeleteButtonHintText>受取手形情報入力に移動します</DeleteButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

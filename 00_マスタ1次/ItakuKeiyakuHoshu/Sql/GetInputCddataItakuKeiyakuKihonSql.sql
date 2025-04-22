@@ -1,0 +1,10 @@
+SELECT 
+    KI.*
+FROM 
+    dbo.M_ITAKU_KEIYAKU_KIHON KI
+/*BEGIN*/WHERE
+ /*IF data.SYSTEM_ID != null*/
+ KI.SYSTEM_ID = /*data.SYSTEM_ID*/'000001'
+ /*END*/
+/*END*/
+ORDER BY KI.SYSTEM_ID

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfPatternSettingDto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PatternSettingDto>
+    <DisplayColumnName>EDI_MEMBER_ID</DisplayColumnName>
+    <DisplayJapaneseName>加入者番号</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>JIGYOUSHA_NAME</DisplayColumnName>
+    <DisplayJapaneseName>事業者名</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>(M_DENSHI_JIGYOUSHA.JIGYOUSHA_ADDRESS1 + M_DENSHI_JIGYOUSHA.JIGYOUSHA_ADDRESS2 + M_DENSHI_JIGYOUSHA.JIGYOUSHA_ADDRESS3)</DisplayColumnName>
+    <DisplayJapaneseName>住所</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>JIGYOUSHA_TEL</DisplayColumnName>
+    <DisplayJapaneseName>電話番号</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>GYOUSHA_CD</DisplayColumnName>
+    <DisplayJapaneseName>業者CD</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>GYOUSHA_NAME_RYAKU</DisplayColumnName>
+    <DisplayJapaneseName>業者名</DisplayJapaneseName>
+    <JoinTableName>M_GYOUSHA</JoinTableName>
+    <SendColumnName>
+      <string>M_DENSHI_JIGYOUSHA.GYOUSHA_CD</string>
+    </SendColumnName>
+  </PatternSettingDto>
+</ArrayOfPatternSettingDto>

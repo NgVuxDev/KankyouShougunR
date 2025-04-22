@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <OutputColumnSelect Kbn="002">
+        <Group OutputKbn="1">
+            <Column ID="1" DispNumber="1" DispName="伝票種類" TableName="" Name="'出金'" Format="" />
+            <Column ID="2" DispNumber="2" DispName="拠点CD" TableName="T_SHUKKIN_ENTRY" Name="KYOTEN_CD" Format="" />
+            <Column ID="3" DispNumber="3" DispName="拠点名" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+            <Column ID="4" DispNumber="4" DispName="伝票番号" TableName="T_SHUKKIN_ENTRY" Name="SHUKKIN_NUMBER" Format="" />
+            <Column ID="5" DispNumber="5" DispName="伝票日付" TableName="T_SHUKKIN_ENTRY" Name="DENPYOU_DATE" Format="yyyy/MM/dd" />
+            <Column ID="6" DispNumber="6" DispName="取引先CD" TableName="T_SHUKKIN_ENTRY" Name="TORIHIKISAKI_CD" Format="" />
+            <Column ID="7" DispNumber="7" DispName="取引先名" TableName="M_TORIHIKISAKI1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+            <Column ID="8" DispNumber="8" DispName="入金先CD" TableName="" Name="NULL" Format="" />
+            <Column ID="9" DispNumber="9" DispName="入金先名" TableName="" Name="NULL" Format="" />
+            <Column ID="10" DispNumber="10" DispName="銀行CD" TableName="" Name="NULL" Format="" />
+            <Column ID="11" DispNumber="11" DispName="銀行名" TableName="" Name="NULL" Format="" />
+            <Column ID="12" DispNumber="12" DispName="銀行支店CD" TableName="" Name="NULL" Format="" />
+            <Column ID="13" DispNumber="13" DispName="銀行支店名" TableName="" Name="NULL" Format="" />
+            <Column ID="14" DispNumber="14" DispName="口座種類" TableName="" Name="NULL" Format="" />
+            <Column ID="15" DispNumber="15" DispName="口座番号" TableName="" Name="NULL" Format="" />
+            <Column ID="16" DispNumber="16" DispName="口座名義" TableName="" Name="NULL" Format="" />
+            <Column ID="17" DispNumber="17" DispName="営業担当者CD" TableName="T_SHUKKIN_ENTRY" Name="EIGYOU_TANTOUSHA_CD" Format="" />
+            <Column ID="18" DispNumber="18" DispName="営業担当者名" TableName="M_SHAIN1" Name="SHAIN_NAME_RYAKU" Format="" />
+            <Column ID="19" DispNumber="19" DispName="伝票備考" TableName="T_SHUKKIN_ENTRY" Name="DENPYOU_BIKOU" Format="" />
+            <Column ID="20" DispNumber="20" DispName="入出金額合計" TableName="T_SHUKKIN_ENTRY" Name="SHUKKIN_AMOUNT_TOTAL" Format="" />
+            <Column ID="21" DispNumber="21" DispName="調整額合計" TableName="T_SHUKKIN_ENTRY" Name="CHOUSEI_AMOUNT_TOTAL" Format="" />
+            <Column ID="22" DispNumber="22" DispName="合計額" TableName="" Name="ISNULL(T_SHUKKIN_ENTRY.SHUKKIN_AMOUNT_TOTAL, 0) + ISNULL(T_SHUKKIN_ENTRY.CHOUSEI_AMOUNT_TOTAL, 0)" Format="" />
+            <Column ID="23" DispNumber="23" DispName="締処理状況" TableName="T_SEISAN_DETAIL1" Name="CASE T_SEISAN_DETAIL1.DENPYOU_SHURUI_CD WHEN 20 THEN '締済' ELSE '未締' END" Format="" />
+            <Column ID="24" DispNumber="24" DispName="作成者" TableName="T_SHUKKIN_ENTRY" Name="CREATE_USER" Format="" />
+            <Column ID="25" DispNumber="25" DispName="作成日時" TableName="T_SHUKKIN_ENTRY" Name="CREATE_DATE" Format="yyyy/MM/dd" />
+            <Column ID="26" DispNumber="26" DispName="作成PC" TableName="T_SHUKKIN_ENTRY" Name="CREATE_PC" Format="" />
+            <Column ID="27" DispNumber="27" DispName="最終更新者" TableName="T_SHUKKIN_ENTRY" Name="UPDATE_USER" Format="" />
+            <Column ID="28" DispNumber="28" DispName="最終更新日時" TableName="T_SHUKKIN_ENTRY" Name="UPDATE_DATE" Format="yyyy/MM/dd" />
+            <Column ID="29" DispNumber="29" DispName="最終更新PC" TableName="T_SHUKKIN_ENTRY" Name="UPDATE_PC" Format="" />
+        </Group>
+        <Group OutputKbn="2">
+            <Column ID="1" DispNumber="1" DispName="行番号" TableName="T_SHUKKIN_DETAIL" Name="ROW_NUMBER" Format="" />
+            <Column ID="2" DispNumber="2" DispName="入出金区分CD" TableName="T_SHUKKIN_DETAIL" Name="NYUUSHUKKIN_KBN_CD" Format="" />
+            <Column ID="3" DispNumber="3" DispName="入出金区分名" TableName="M_NYUUSHUKKIN_KBN1" Name="NYUUSHUKKIN_KBN_NAME_RYAKU" Format="" />
+            <Column ID="4" DispNumber="4" DispName="金額" TableName="T_SHUKKIN_DETAIL" Name="KINGAKU" Format="" />
+            <Column ID="5" DispNumber="5" DispName="明細備考" TableName="T_SHUKKIN_DETAIL" Name="MEISAI_BIKOU" Format="" />
+        </Group>
+        <FromCondition TableName="T_SHUKKIN_ENTRY" />
+        <JoinCondition TableName="T_SHUKKIN_DETAIL">INNER JOIN T_SHUKKIN_DETAIL ON T_SHUKKIN_ENTRY.SYSTEM_ID = T_SHUKKIN_DETAIL.SYSTEM_ID AND T_SHUKKIN_ENTRY.SEQ = T_SHUKKIN_DETAIL.SEQ </JoinCondition>
+        <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_SHUKKIN_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+        <JoinCondition TableName="M_TORIHIKISAKI1">LEFT JOIN M_TORIHIKISAKI M_TORIHIKISAKI1 ON T_SHUKKIN_ENTRY.TORIHIKISAKI_CD = M_TORIHIKISAKI1.TORIHIKISAKI_CD</JoinCondition>
+        <JoinCondition TableName="M_SHUKKINSAKI1">LEFT JOIN M_SYUKKINSAKI M_SHUKKINSAKI1 ON T_SHUKKIN_ENTRY.SHUKKINSAKI_CD = M_SHUKKINSAKI1.SYUKKINSAKI_CD</JoinCondition>
+        <JoinCondition TableName="M_SHAIN1">LEFT JOIN M_SHAIN M_SHAIN1 ON T_SHUKKIN_ENTRY.EIGYOU_TANTOUSHA_CD = M_SHAIN1.SHAIN_CD</JoinCondition>
+        <JoinCondition TableName="M_NYUUSHUKKIN_KBN1">LEFT JOIN M_NYUUSHUKKIN_KBN M_NYUUSHUKKIN_KBN1 ON T_SHUKKIN_DETAIL.NYUUSHUKKIN_KBN_CD = M_NYUUSHUKKIN_KBN1.NYUUSHUKKIN_KBN_CD</JoinCondition>
+        <JoinCondition TableName="T_SEISAN_DETAIL1">LEFT JOIN T_SEISAN_DETAIL T_SEISAN_DETAIL1 ON T_SEISAN_DETAIL1.DENPYOU_SHURUI_CD = 20 AND T_SHUKKIN_ENTRY.SYSTEM_ID = T_SEISAN_DETAIL1.DENPYOU_SYSTEM_ID AND T_SHUKKIN_ENTRY.SEQ = T_SEISAN_DETAIL1.DENPYOU_SEQ AND T_SEISAN_DETAIL1.DELETE_FLG = 0</JoinCondition>
+    </OutputColumnSelect>
+</root>

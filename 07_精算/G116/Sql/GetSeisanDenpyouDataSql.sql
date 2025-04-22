@@ -1,0 +1,149 @@
+﻿SELECT DISTINCT
+    TSD.HAKKOU_KBN,
+    TSD.SEISAN_NUMBER,
+    TSD.TORIHIKISAKI_CD,
+    MT.TORIHIKISAKI_NAME_RYAKU,
+    TSD.SHIMEBI,
+    (CASE TSD.SHIHARAI_KEITAI_KBN 
+        WHEN 2 THEN TSD.ZENKAI_KURIKOSI_GAKU 
+        WHEN 1 THEN NULL
+        ELSE 0 
+        END) AS ZENKAI_KURIKOSI_GAKU,
+    CASE TSD.SHIHARAI_KEITAI_KBN 
+        WHEN 1 THEN NULL
+        ELSE TSD.KONKAI_SHUKKIN_GAKU
+    END AS KONKAI_SHUKKIN_GAKU,
+    CASE TSD.SHIHARAI_KEITAI_KBN 
+        WHEN 1 THEN NULL
+        ELSE TSD.KONKAI_CHOUSEI_GAKU
+    END AS KONKAI_CHOUSEI_GAKU,
+    TSD.KONKAI_SHIHARAI_GAKU,
+    TSD.KONKAI_SEI_UTIZEI_GAKU
+        + TSD.KONKAI_SEI_SOTOZEI_GAKU
+        + TSD.KONKAI_DEN_UTIZEI_GAKU
+        + TSD.KONKAI_DEN_SOTOZEI_GAKU
+        + TSD.KONKAI_MEI_UTIZEI_GAKU
+        + TSD.KONKAI_MEI_SOTOZEI_GAKU SHOHIZEI_GAKU,
+    (CASE TSD.SHIHARAI_KEITAI_KBN 
+        WHEN 2 THEN TSD.KONKAI_SEISAN_GAKU
+        ELSE (TSD.KONKAI_SHIHARAI_GAKU + TSD.KONKAI_SEI_UTIZEI_GAKU + TSD.KONKAI_SEI_SOTOZEI_GAKU + TSD.KONKAI_DEN_UTIZEI_GAKU + TSD.KONKAI_DEN_SOTOZEI_GAKU + TSD.KONKAI_MEI_UTIZEI_GAKU + TSD.KONKAI_MEI_SOTOZEI_GAKU)
+        END) AS KONKAI_SEISAN_GAKU,
+    TSD.SHUKKIN_YOTEI_BI,
+    TSD.TIME_STAMP,
+    TSD.SEISAN_DATE
+    /*IF data.PrintOrder == 1*/
+    ,MT.TORIHIKISAKI_FURIGANA
+    /*END*/
+    /*IF data.PrintOrder == 2*/
+    ,TSD.TORIHIKISAKI_CD
+    /*END*/
+    /*IF !data.FilteringData.IsNull && data.FilteringData == 2*/
+    ,TSDE.SEISAN_NUMBER
+    /*END*/
+FROM
+    T_SEISAN_DENPYOU TSD
+    LEFT OUTER JOIN M_TORIHIKISAKI MT ON
+        TSD.TORIHIKISAKI_CD = MT.TORIHIKISAKI_CD
+    LEFT OUTER JOIN M_TORIHIKISAKI_SHIHARAI MTS ON
+        TSD.TORIHIKISAKI_CD = MTS.TORIHIKISAKI_CD
+    /*IF !data.FilteringData.IsNull && data.FilteringData == 1*/
+    INNER JOIN T_SEISAN_DETAIL AS TSDE ON 
+    TSD.SEISAN_NUMBER = TSDE.SEISAN_NUMBER
+    AND TSDE.DELETE_FLG = 0
+    AND TSDE.DENPYOU_SHURUI_CD != 20
+    /*END*/
+    /*IF !data.FilteringData.IsNull && data.FilteringData == 2*/
+    LEFT JOIN T_SEISAN_DETAIL AS TSDE ON 
+    TSD.SEISAN_NUMBER = TSDE.SEISAN_NUMBER
+    AND TSDE.DELETE_FLG = 0
+    /*END*/
+/*BEGIN*/
+WHERE
+    /*IF !deletechuFlg*/
+    TSD.DELETE_FLG = 0
+    /*END*/
+    /*IF data.DenpyoHizukeFrom != null && data.DenpyoHizukeFrom != ''*/
+    AND TSD.SEISAN_DATE >= /*data.DenpyoHizukeFrom*/'2013/01/07'
+    /*END*/
+    /*IF data.DenpyoHizukeTo != null && data.DenpyoHizukeTo != ''*/
+    AND TSD.SEISAN_DATE <= /*data.DenpyoHizukeTo*/'2014/01/07'
+    /*END*/
+    /*IF data.HakkouKyotenCD != null && data.HakkouKyotenCD != ''*/
+    AND TSD.KYOTEN_CD = /*data.HakkouKyotenCD*/''
+    /*END*/
+    /*IF !deletechuFlg && data.Simebi != null && data.Simebi != ''*/
+    AND TSD.SHIMEBI = /*data.Simebi*/31
+    /*END*/
+    /*IF data.ShiharaiPaper < 3*/
+    AND TSD.YOUSHI_KBN = /*data.ShiharaiPaper*/2
+    -- ELSE
+    /*IF data.ShiharaiPaper == 3*/
+    AND MTS.YOUSHI_KBN = 1
+    /*END*/
+    /*IF data.ShiharaiPaper == 4*/
+    AND MTS.YOUSHI_KBN = 2
+    /*END*/
+    /*END*/
+    /*IF data.TorihikisakiCD != null && data.TorihikisakiCD != ''*/
+    AND TSD.TORIHIKISAKI_CD = /*data.TorihikisakiCD*/''
+    /*END*/
+    /*IF !data.HakkoKbn.IsNull*/
+    AND TSD.HAKKOU_KBN = /*data.HakkoKbn*/1
+    /*END*/
+    /*END*/
+    /*IF !data.FilteringData.IsNull && data.FilteringData == 2*/
+    AND 
+    (
+        TSD.SEISAN_NUMBER IS NOT NULL
+        OR NOT (
+            CASE TSD.SHIHARAI_KEITAI_KBN 
+            WHEN 2 THEN
+            ISNULL(TSD.ZENKAI_KURIKOSI_GAKU, 0)
+            ELSE 0
+            END = 0
+            AND
+            CASE TSD.SHIHARAI_KEITAI_KBN 
+            WHEN 2 THEN ISNULL(TSD.KONKAI_SEISAN_GAKU, 0)
+            ELSE (TSD.KONKAI_SHIHARAI_GAKU + TSD.KONKAI_SEI_UTIZEI_GAKU + TSD.KONKAI_SEI_SOTOZEI_GAKU + TSD.KONKAI_DEN_UTIZEI_GAKU + TSD.KONKAI_DEN_SOTOZEI_GAKU + TSD.KONKAI_MEI_UTIZEI_GAKU + TSD.KONKAI_MEI_SOTOZEI_GAKU)
+            END = 0
+        )
+    )
+    /*END*/
+	/*IF data.ZeroKingakuTaishogai*/
+	--今回御請求額
+	AND (
+		 (TSD.SHOSHIKI_KBN != 1 
+		 AND EXISTS (SELECT 1 
+					   FROM T_SEISAN_DENPYOU_KAGAMI TSDK
+					   WHERE
+					   TSDK.SEISAN_NUMBER = TSD.SEISAN_NUMBER
+					   AND (ISNULL(TSDK.KONKAI_SHIHARAI_GAKU,0) + 
+							 ISNULL(TSDK.KONKAI_SEI_UTIZEI_GAKU,0) + 
+							 ISNULL(TSDK.KONKAI_SEI_SOTOZEI_GAKU,0) + 
+							 ISNULL(TSDK.KONKAI_DEN_UTIZEI_GAKU,0) + 
+							 ISNULL(TSDK.KONKAI_DEN_SOTOZEI_GAKU,0) + 
+							 ISNULL(TSDK.KONKAI_MEI_UTIZEI_GAKU,0) + 
+							 ISNULL(TSDK.KONKAI_MEI_SOTOZEI_GAKU,0) <> 0)))
+		OR
+		(TSD.SHOSHIKI_KBN = 1
+		 AND (CASE TSD.SHIHARAI_KEITAI_KBN 
+				WHEN 2 THEN ISNULL(TSD.KONKAI_SEISAN_GAKU, 0)
+				ELSE (ISNULL(TSD.KONKAI_SHIHARAI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_SEI_UTIZEI_GAKU,0)+ 
+					  ISNULL(TSD.KONKAI_SEI_SOTOZEI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_DEN_UTIZEI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_DEN_SOTOZEI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_MEI_UTIZEI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_MEI_SOTOZEI_GAKU,0))
+				END) <> 0))
+	/*END*/
+	/*IF data.UseInxsShiharaiKbn*/
+		AND (MTS.INXS_SHIHARAI_KBN = 2 OR MTS.INXS_SHIHARAI_KBN IS NULL)
+	/*END*/
+    /*IF data.PrintOrder == 1*/
+    ORDER BY MT.TORIHIKISAKI_FURIGANA
+    /*END*/
+    /*IF data.PrintOrder == 2*/
+    ORDER BY TSD.TORIHIKISAKI_CD
+    /*END*/
+/*END*/

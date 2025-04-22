@@ -1,0 +1,47 @@
+UPDATE 
+/*IF type == 1*/
+T_MANIFEST_DETAIL 
+/*END*/
+/*IF type == 2*/
+DT_R18_EX 
+/*END*/
+/*IF type == 3*/
+DT_R18_MIX 
+/*END*/
+SET 
+/*IF !KANSAN_SUU.IsNull*/ 
+KANSAN_SUU = /*KANSAN_SUU.Value*/ 
+/*END*/
+/*IF KANSAN_SUU.IsNull*/ 
+KANSAN_SUU = null
+/*END*/
+/*IF !GENNYOU_SUU.IsNull*/ 
+, GENNYOU_SUU = /*GENNYOU_SUU.Value*/
+/*END*/
+/*IF GENNYOU_SUU.IsNull*/ 
+, GENNYOU_SUU = null
+/*END*/
+, SBN_HOUHOU_CD = /*SBN_HOUHOU_CD*/
+WHERE
+SYSTEM_ID = /*SYSTEM_ID.Value*/
+/*IF type == 1*/
+AND SEQ = /*SEQ.Value*/
+/*IF !DETAIL_SYSTEM_ID.IsNull*/ 
+AND DETAIL_SYSTEM_ID = /*DETAIL_SYSTEM_ID.Value*/
+/*END*/
+/*IF DETAIL_SYSTEM_ID.IsNull*/ 
+AND DETAIL_SYSTEM_ID = null
+/*END*/
+/*END*/
+/*IF type == 2*/
+AND DELETE_FLG = 0
+/*END*/
+/*IF type == 3*/
+AND DELETE_FLG = 0
+/*IF !DETAIL_SYSTEM_ID.IsNull*/ 
+AND DETAIL_SYSTEM_ID = /*DETAIL_SYSTEM_ID.Value*/
+/*END*/
+/*IF DETAIL_SYSTEM_ID.IsNull*/ 
+AND DETAIL_SYSTEM_ID = null
+/*END*/
+/*END*/

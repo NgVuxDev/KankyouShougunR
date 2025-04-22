@@ -1,0 +1,63 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <IchiranButtonName>[F1]電子&#xD;&#xA;契約照会</IchiranButtonName>
+    <IchiranButtonHintText>電子契約を照会します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <IchiranButtonName>[F3]&#xD;&#xA;修正</IchiranButtonName>
+    <IchiranButtonHintText>現在選択されている行の修正画面を表示します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func5</ButtonName>
+    <IchiranButtonName>[F5]&#xD;&#xA;契約参照</IchiranButtonName>
+    <IchiranButtonHintText>委託契約検索画面に切り替わります</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <IchiranButtonName>[F7]&#xD;&#xA;条件ｸﾘｱ</IchiranButtonName>
+    <IchiranButtonHintText>検索条件をクリアします</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func8</ButtonName>
+    <IchiranButtonName>[F8]&#xD;&#xA;検索</IchiranButtonName>
+    <IchiranButtonHintText>検索します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <IchiranButtonName>[F9]&#xD;&#xA;登録</IchiranButtonName>
+    <IchiranButtonHintText>登録します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func10</ButtonName>
+    <IchiranButtonName>[F10]&#xD;&#xA;並び替え</IchiranButtonName>
+    <IchiranButtonHintText>一覧の並び替えします</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <IchiranButtonName>[F11]&#xD;&#xA;フィルタ</IchiranButtonName>
+    <IchiranButtonHintText>一覧をフィルタします</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <IchiranButtonHintText>画面を閉じます</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <IchiranButtonName>[1] パターン一覧</IchiranButtonName>
+    <IchiranButtonHintText>パターン一覧を開きます</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process2</ButtonName>
+    <IchiranButtonName>[2] 契約書ﾀﾞｳﾝﾛｰﾄﾞ</IchiranButtonName>
+    <IchiranButtonHintText>契約書をダウンロードします</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process3</ButtonName>
+    <IchiranButtonName>[3] 紐付補助</IchiranButtonName>
+    <IchiranButtonHintText>電子契約紐付補助画面に切り替わります</IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

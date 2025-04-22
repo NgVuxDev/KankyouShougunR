@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9052">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="廃棄物区分CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HAIKI_KBN_CD" Format="" />
+      <Column ID="2" DispNumber="" DispName="廃棄物区分名" Needs="0" TableName="M_HAIKI_KBN1" Name="HAIKI_KBN_NAME_RYAKU" Format="" />
+      <Column ID="3" DispNumber="" DispName="一次二次区分" Needs="0" TableName="" Name="CASE T_MANIFEST_ENTRY.FIRST_MANIFEST_KBN WHEN 0 THEN '一次' WHEN 1 THEN '二次' ELSE '' END" Format="" />
+      <Column ID="4" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="KYOTEN_CD" Format="00" />
+      <Column ID="5" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="8" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="9" DispNumber="" DispName="取引先名" Needs="0" TableName="M_TORIHIKISAKI1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="10" DispNumber="" DispName="連携伝票種類" Needs="0" TableName="M_DENSHU_KBN1" Name="DENSHU_KBN_NAME_RYAKU" Format="" />
+      <Column ID="11" DispNumber="" DispName="連携番号" Needs="0" TableName="RENKEI_TBL_E" Name="RENKEI_NUMBER" Format="" />
+      <Column ID="12" DispNumber="" DispName="連携明細行" Needs="0" TableName="RENKEI_TBL_D" Name="RENKEI_ROW_NUMBER" Format="" />
+      <Column ID="13" DispNumber="" DispName="事前協議番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="JIZEN_NUMBER" Format="" />
+      <Column ID="14" DispNumber="" DispName="事前協議年月日" Needs="0" TableName="T_MANIFEST_ENTRY" Name="JIZEN_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="15" DispNumber="" DispName="交付年月日" Needs="0" TableName="T_MANIFEST_ENTRY" Name="KOUFU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="16" DispNumber="" DispName="交付番号区分" Needs="0" TableName="" Name="CASE T_MANIFEST_ENTRY.KOUFU_KBN WHEN 1 THEN '通常' WHEN 2 THEN '特殊' ELSE '' END" Format="" />
+      <Column ID="17" DispNumber="" DispName="交付番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="MANIFEST_ID" Format="" />
+      <Column ID="18" DispNumber="" DispName="整理番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SEIRI_ID" Format="" />
+      <Column ID="19" DispNumber="" DispName="交付担当者" Needs="0" TableName="T_MANIFEST_ENTRY" Name="KOUFU_TANTOUSHA" Format="" />
+      <Column ID="20" DispNumber="" DispName="排出事業者CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HST_GYOUSHA_CD" Format="" />
+      <Column ID="21" DispNumber="" DispName="排出事業者名" Needs="0" TableName="" Name="LTRIM(RTRIM(SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GYOUSHA_NAME, ''),1, 40)) + SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GYOUSHA_NAME, ''),41, 40))" Format="" />
+      <Column ID="22" DispNumber="" DispName="排出事業者郵便番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HST_GYOUSHA_POST" Format="" />
+      <Column ID="23" DispNumber="" DispName="排出事業者電話番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HST_GYOUSHA_TEL" Format="" />
+      <Column ID="24" DispNumber="" DispName="排出事業者住所" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HST_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="25" DispNumber="" DispName="排出事業場CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HST_GENBA_CD" Format="" />
+      <Column ID="26" DispNumber="" DispName="排出事業場名" Needs="0" TableName="" Name="LTRIM(RTRIM(SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GENBA_NAME, ''),1, 40)) + SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GENBA_NAME, ''),41, 40))" Format="" />
+      <Column ID="27" DispNumber="" DispName="排出事業場郵便番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HST_GENBA_POST" Format="" />
+      <Column ID="28" DispNumber="" DispName="排出事業場電話番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HST_GENBA_TEL" Format="" />
+      <Column ID="29" DispNumber="" DispName="排出事業場住所" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HST_GENBA_ADDRESS" Format="" />
+      <Column ID="30" DispNumber="" DispName="照合・確認日B1票" Needs="0" TableName="T_MANIFEST_ENTRY" Name="CHECK_B1" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="31" DispNumber="" DispName="照合・確認日B2票" Needs="0" TableName="T_MANIFEST_ENTRY" Name="CHECK_B2" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="32" DispNumber="" DispName="照合・確認日D票" Needs="0" TableName="T_MANIFEST_ENTRY" Name="CHECK_D" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="33" DispNumber="" DispName="照合・確認日E票" Needs="0" TableName="T_MANIFEST_ENTRY" Name="CHECK_E" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="34" DispNumber="" DispName="混合種類CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="KONGOU_SHURUI_CD" Format="" />
+      <Column ID="35" DispNumber="" DispName="混合種類名" Needs="0" TableName="M_KONGOU_SHURUI1" Name="KONGOU_SHURUI_NAME_RYAKU" Format="" />
+      <Column ID="36" DispNumber="" DispName="混合数量" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HAIKI_SUU" Format="#,##0.####" />
+      <Column ID="37" DispNumber="" DispName="混合単位CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="HAIKI_UNIT_CD" Format="00" />
+      <Column ID="38" DispNumber="" DispName="混合単位名" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <!--20140708 chinchisi EV004606_入力画面になくて一覧にある項目を削除する。(建廃マニ一覧) start-->
+      <!--<Column ID="39" DispNumber="" DispName="産業廃棄物の名称CD(原本)" Needs="0" TableName="T_MANIFEST_PRT" Name="PRT_HAIKI_NAME_CD" Format="" />
+      <Column ID="40" DispNumber="" DispName="産業廃棄物の名称(原本)" Needs="0" TableName="T_MANIFEST_PRT" Name="PRT_HAIKI_NAME" Format="" />-->
+      <!--20140708 chinchisi EV004606_入力画面になくて一覧にある項目を削除する。(建廃マニ一覧) end-->
+      <Column ID="41" DispNumber="" DispName="数量の合計" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TOTAL_SUU" Format="#,##0.####" />
+      <Column ID="42" DispNumber="" DispName="換算後数量の合計" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TOTAL_KANSAN_SUU" Format="#,##0.####" />
+      <Column ID="43" DispNumber="" DispName="減容後数量の合計" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TOTAL_GENNYOU_SUU" Format="#,##0.####" />
+      <Column ID="44" DispNumber="" DispName="廃棄物種類(原本)" Needs="0" TableName="T_MANIFEST_DETAIL_PRT" Name="CASE T_MANIFEST_DETAIL_PRT.HAIKI_SHURUI_NAME WHEN '' THEN '種類なし' ELSE ISNULL(T_MANIFEST_DETAIL_PRT.HAIKI_SHURUI_NAME, '種類なし') END + ' ' + CAST(ISNULL(T_MANIFEST_DETAIL_PRT.HAIKI_SUURYOU, 0) AS NVARCHAR)" Format="" />
+      <Column ID="45" DispNumber="" DispName="総重量又は総容量(原本)" Needs="0" TableName="T_MANIFEST_PRT" Name="PRT_SUU" Format="#,##0.####" />
+      <Column ID="46" DispNumber="" DispName="単位CD(原本)" Needs="0" TableName="T_MANIFEST_PRT" Name="PRT_UNIT_CD" Format="00" />
+      <Column ID="47" DispNumber="" DispName="単位名(原本)" Needs="0" TableName="M_UNIT2" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="48" DispNumber="" DispName="形状(原本)" Needs="0" TableName="T_MANIFEST_KP_KEIJYOU" Name="KEIJOU_NAME" Format="" />
+      <Column ID="49" DispNumber="" DispName="荷姿(原本)" Needs="0" TableName="T_MANIFEST_KP_NISUGATA" Name="NISUGATA_NAME" Format="" />
+      <Column ID="50" DispNumber="" DispName="中間処理産業廃棄物区分" Needs="0" TableName="" Name="CASE T_MANIFEST_ENTRY.CHUUKAN_HAIKI_KBN WHEN 0 THEN '設定なし' WHEN 1 THEN '委託契約書記載のとおり' WHEN 2 THEN '当欄記載のとおり' ELSE '' END" Format="" />
+      <Column ID="51" DispNumber="" DispName="管理交付者(処分受託者)の氏名又は名称及び管理票の交付番号(登録番号)" Needs="0" TableName="T_MANIFEST_ENTRY" Name="CHUUKAN_HAIKI" Format="" />
+      <Column ID="52" DispNumber="" DispName="最終処分の場所区分" Needs="0" TableName="" Name="CASE T_MANIFEST_ENTRY.LAST_SBN_YOTEI_KBN WHEN 0 THEN '設定なし' WHEN 1 THEN '委託契約書記載のとおり' WHEN 2 THEN '当欄記載のとおり' ELSE '' END" Format="" />
+      <!--20140708 chinchisi EV004606_入力画面になくて一覧にある項目を削除する。(建廃マニ一覧) start-->
+      <!--<Column ID="53" DispNumber="" DispName="最終処分の場所郵便番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_YOTEI_GENBA_POST" Format="" />
+      <Column ID="54" DispNumber="" DispName="最終処分の場所電話番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_YOTEI_GENBA_TEL" Format="" />-->
+      <!--20140708 chinchisi EV004606_入力画面になくて一覧にある項目を削除する。(建廃マニ一覧) end-->
+      <Column ID="55" DispNumber="" DispName="最終処分の場所業者CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_YOTEI_GYOUSHA_CD" Format="" />
+      <Column ID="56" DispNumber="" DispName="最終処分の場所業者名" Needs="0" TableName="M_GYOUSHA1" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="57" DispNumber="" DispName="最終処分の場所現場CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_YOTEI_GENBA_CD" Format="" />
+      <Column ID="58" DispNumber="" DispName="最終処分の場所現場名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_YOTEI_GENBA_NAME" Format="" />
+      <Column ID="59" DispNumber="" DispName="最終処分の場所住所" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_YOTEI_GENBA_ADDRESS" Format="" />
+      <Column ID="60" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)郵便番号" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_GYOUSHA_POST" Format="" />
+      <Column ID="61" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)電話番号" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_GYOUSHA_TEL" Format="" />
+      <Column ID="62" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)住所" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="63" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)CD" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_GYOUSHA_CD" Format="" />
+      <Column ID="64" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)名" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_GYOUSHA_NAME" Format="" />
+      <Column ID="65" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)積替・保管区分" Needs="0" TableName="" Name="CASE T_MANIFEST_UPN1.TMH_KBN WHEN 1 THEN '有' WHEN 2 THEN '無' ELSE '' END" Format="" />
+      <Column ID="66" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)収集運搬車輌番号CD" Needs="0" TableName="T_MANIFEST_UPN1" Name="SHARYOU_CD" Format="" />
+      <Column ID="67" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)収集運搬車輌番号名" Needs="0" TableName="T_MANIFEST_UPN1" Name="SHARYOU_NAME" Format="" />
+      <Column ID="68" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)車種CD" Needs="0" TableName="T_MANIFEST_UPN1" Name="SHASHU_CD" Format="" />
+      <Column ID="69" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)車種名" Needs="0" TableName="T_MANIFEST_UPN1" Name="SHASHU_NAME" Format="" />
+      <Column ID="70" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)運搬方法CD" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_HOUHOU_CD" Format="" />
+      <Column ID="71" DispNumber="" DispName="運搬受託者(収集運搬業者)(1)運搬方法名" Needs="0" TableName="M_UNPAN_HOUHOU1" Name="UNPAN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="72" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)郵便番号" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_GYOUSHA_POST" Format="" />
+      <Column ID="73" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)電話番号" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_GYOUSHA_TEL" Format="" />
+      <Column ID="74" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)住所" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="75" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)CD" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_GYOUSHA_CD" Format="" />
+      <Column ID="76" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)名" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_GYOUSHA_NAME" Format="" />
+      <Column ID="77" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)積替・保管区分" Needs="0" TableName="" Name="CASE T_MANIFEST_UPN2.TMH_KBN WHEN 1 THEN '有' WHEN 2 THEN '無' ELSE '' END" Format="" />
+      <Column ID="78" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)収集運搬車輌番号CD" Needs="0" TableName="T_MANIFEST_UPN2" Name="SHARYOU_CD" Format="" />
+      <Column ID="79" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)収集運搬車輌番号名" Needs="0" TableName="T_MANIFEST_UPN2" Name="SHARYOU_NAME" Format="" />
+      <Column ID="80" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)車種CD" Needs="0" TableName="T_MANIFEST_UPN2" Name="SHASHU_CD" Format="" />
+      <Column ID="81" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)車種名" Needs="0" TableName="T_MANIFEST_UPN2" Name="SHASHU_NAME" Format="" />
+      <Column ID="82" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)運搬方法CD" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_HOUHOU_CD" Format="" />
+      <Column ID="83" DispNumber="" DispName="運搬受託者(収集運搬業者)(2)運搬方法名" Needs="0" TableName="M_UNPAN_HOUHOU2" Name="UNPAN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="84" DispNumber="" DispName="処分受託者(処分業者)郵便番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_GYOUSHA_POST" Format="" />
+      <Column ID="85" DispNumber="" DispName="処分受託者(処分業者)電話番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_GYOUSHA_TEL" Format="" />
+      <Column ID="86" DispNumber="" DispName="処分受託者(処分業者)住所" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="87" DispNumber="" DispName="処分受託者(処分業者)CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_GYOUSHA_CD" Format="" />
+      <Column ID="88" DispNumber="" DispName="処分受託者(処分業者)名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_GYOUSHA_NAME" Format="" />
+      <Column ID="89" DispNumber="" DispName="積替え又は保管業者CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TMH_GYOUSHA_CD" Format="" />
+      <Column ID="90" DispNumber="" DispName="積替え又は保管業者名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TMH_GYOUSHA_NAME" Format="" />
+      <Column ID="91" DispNumber="" DispName="積替え又は保管場CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TMH_GENBA_CD" Format="" />
+      <Column ID="92" DispNumber="" DispName="積替え又は保管場名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TMH_GENBA_NAME" Format="" />
+      <Column ID="93" DispNumber="" DispName="積替え又は保管場郵便番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TMH_GENBA_POST" Format="" />
+      <Column ID="94" DispNumber="" DispName="積替え又は保管場電話番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TMH_GENBA_TEL" Format="" />
+      <Column ID="95" DispNumber="" DispName="積替え又は保管場住所" Needs="0" TableName="T_MANIFEST_ENTRY" Name="TMH_GENBA_ADDRESS" Format="" />
+      <Column ID="96" DispNumber="" DispName="有価物拾集有無" Needs="0" TableName="" Name="CASE T_MANIFEST_ENTRY.YUUKA_KBN WHEN 1 THEN '有' WHEN 2 THEN '無' ELSE '' END" Format="" />
+      <Column ID="97" DispNumber="" DispName="有価物拾集実績数量" Needs="0" TableName="T_MANIFEST_ENTRY" Name="YUUKA_SUU" Format="#,##0.####" />
+      <Column ID="98" DispNumber="" DispName="有価物拾集実績単位" Needs="0" TableName="" Name="CASE T_MANIFEST_ENTRY.YUUKA_UNIT_CD WHEN 1 THEN 't' WHEN 2 THEN 'm3' ELSE '' END" Format="" />
+      <Column ID="99" DispNumber="" DispName="運搬先の事業場(処分業者の処理施設)郵便番号" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_SAKI_GENBA_POST" Format="" />
+      <Column ID="100" DispNumber="" DispName="運搬先の事業場(処分業者の処理施設)電話番号" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_SAKI_GENBA_TEL" Format="" />
+      <Column ID="101" DispNumber="" DispName="運搬先の事業場(処分業者の処理施設)住所" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_SAKI_GENBA_ADDRESS" Format="" />
+      <Column ID="102" DispNumber="" DispName="運搬先の事業場(処分業者の処理施設)CD" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_SAKI_GENBA_CD" Format="" />
+      <Column ID="103" DispNumber="" DispName="運搬先の事業場(処分業者の処理施設)名" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_SAKI_GENBA_NAME" Format="" />
+      <Column ID="104" DispNumber="" DispName="処分方法中間処理" Needs="0" TableName="T_MANIFEST_KP_SBN_HOUHOU1" Name="SHOBUN_HOUHOU_NAME" Format="" />
+      <Column ID="105" DispNumber="" DispName="処分方法最終処分" Needs="0" TableName="T_MANIFEST_KP_SBN_HOUHOU2" Name="SHOBUN_HOUHOU_NAME" Format="" />
+      <Column ID="106" DispNumber="" DispName="追加特記事項" Needs="0" TableName="T_MANIFEST_ENTRY" Name="BIKOU" Format="" />
+      <Column ID="107" DispNumber="" DispName="運搬の受託(1)業者CD" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_JYUTAKUSHA_CD" Format="" />
+      <Column ID="108" DispNumber="" DispName="運搬の受託(1)業者名" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_JYUTAKUSHA_NAME" Format="" />
+      <Column ID="109" DispNumber="" DispName="運搬の受託(1)運転者CD" Needs="0" TableName="T_MANIFEST_UPN1" Name="UNTENSHA_CD" Format="" />
+      <Column ID="110" DispNumber="" DispName="運搬の受託(1)運転者名" Needs="0" TableName="T_MANIFEST_UPN1" Name="UNTENSHA_NAME" Format="" />
+      <Column ID="111" DispNumber="" DispName="運搬の受託(1)運搬終了日" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="112" DispNumber="" DispName="運搬の受託(2)業者CD" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_JYUTAKUSHA_CD" Format="" />
+      <Column ID="113" DispNumber="" DispName="運搬の受託(2)業者名" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_JYUTAKUSHA_NAME" Format="" />
+      <Column ID="114" DispNumber="" DispName="運搬の受託(2)運転者CD" Needs="0" TableName="T_MANIFEST_UPN2" Name="UNTENSHA_CD" Format="" />
+      <Column ID="115" DispNumber="" DispName="運搬の受託(2)運転者名" Needs="0" TableName="T_MANIFEST_UPN2" Name="UNTENSHA_NAME" Format="" />
+      <Column ID="116" DispNumber="" DispName="運搬の受託(2)運搬終了日" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="117" DispNumber="" DispName="処分の受託(受領)業者CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_JYURYOUSHA_CD" Format="" />
+      <Column ID="118" DispNumber="" DispName="処分の受託(受領)業者名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_JYURYOUSHA_NAME" Format="" />
+      <Column ID="119" DispNumber="" DispName="処分の受託(受領)処分担当者CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_JYURYOU_TANTOU_CD" Format="" />
+      <Column ID="120" DispNumber="" DispName="処分の受託(受領)処分担当者名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_JYURYOU_TANTOU_NAME" Format="" />
+      <Column ID="121" DispNumber="" DispName="処分の受託(受領)処分終了日" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_JYURYOU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="122" DispNumber="" DispName="処分の受託(処分)業者CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_JYUTAKUSHA_CD" Format="" />
+      <Column ID="123" DispNumber="" DispName="処分の受託(処分)業者名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_JYUTAKUSHA_NAME" Format="" />
+      <Column ID="124" DispNumber="" DispName="処分の受託(処分)処分担当者CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_TANTOU_CD" Format="" />
+      <Column ID="125" DispNumber="" DispName="処分の受託(処分)処分担当者名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="SBN_TANTOU_NAME" Format="" />
+      <!--20140708 chinchisi EV004607_入力画面に存在する項目が一覧上に存在しないので追加する。(建廃マニ一覧) start-->
+      <Column ID="126" DispNumber="" DispName="処分の受託(処分)処分終了日" Needs="0" TableName="T_MANIFEST_D_GENPON_END" Name="SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="127" DispNumber="" DispName="最終処分終了日(原本)" Needs="0" TableName="T_MANIFEST_D_GENPON_LAST" Name="LAST_SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="128" DispNumber="" DispName="確認者(サイン又は押印)" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_CHECK_NAME" Format="" />
+      <Column ID="129" DispNumber="" DispName="最終処分を行った場所業者CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_GYOUSHA_CD" Format="" />
+      <Column ID="130" DispNumber="" DispName="最終処分を行った場所業者名" Needs="0" TableName="M_GYOUSHA2" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="131" DispNumber="" DispName="最終処分を行った場所現場CD" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_GENBA_CD" Format="" />
+      <Column ID="132" DispNumber="" DispName="最終処分を行った場所現場名" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_GENBA_NAME" Format="" />
+      <Column ID="133" DispNumber="" DispName="最終処分を行った場所郵便番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_GENBA_POST" Format="" />
+      <Column ID="134" DispNumber="" DispName="最終処分を行った場所所在地" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_GENBA_ADDRESS" Format="" />
+      <Column ID="135" DispNumber="" DispName="最終処分を行った場所処分先№" Needs="0" TableName="T_MANIFEST_ENTRY" Name="LAST_SBN_GENBA_NUMBER" Format="" />
+      <Column ID="136" DispNumber="" DispName="返却日入力A票" Needs="0" TableName="T_MANIFEST_RET_DATE" Name="SEND_A" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="137" DispNumber="" DispName="返却日入力B1票" Needs="0" TableName="T_MANIFEST_RET_DATE" Name="SEND_B1" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="138" DispNumber="" DispName="返却日入力B2票" Needs="0" TableName="T_MANIFEST_RET_DATE" Name="SEND_B2" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="139" DispNumber="" DispName="返却日入力C1票" Needs="0" TableName="T_MANIFEST_RET_DATE" Name="SEND_C1" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="140" DispNumber="" DispName="返却日入力C2票" Needs="0" TableName="T_MANIFEST_RET_DATE" Name="SEND_C2" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="141" DispNumber="" DispName="返却日入力D票" Needs="0" TableName="T_MANIFEST_RET_DATE" Name="SEND_D" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="142" DispNumber="" DispName="返却日入力E票" Needs="0" TableName="T_MANIFEST_RET_DATE" Name="SEND_E" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="143" DispNumber="" DispName="作成者" Needs="0" TableName="T_MANIFEST_ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="144" DispNumber="" DispName="作成日時" Needs="0" TableName="T_MANIFEST_ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="145" DispNumber="" DispName="作成PC" Needs="0" TableName="T_MANIFEST_ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="146" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_MANIFEST_ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="147" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_MANIFEST_ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="148" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_MANIFEST_ENTRY" Name="UPDATE_PC" Format="" />
+      <Column ID="149" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_MANIFEST_ENTRY" Name="DELETE_FLG" Format="" />
+      <!--20140708 chinchisi EV004607_入力画面に存在する項目が一覧上に存在しないので追加する。(建廃マニ一覧) end-->
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="廃棄物種類CD(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="HAIKI_SHURUI_CD" Format="" />
+      <Column ID="2" DispNumber="" DispName="廃棄物種類名(実績)" Needs="0" TableName="M_HAIKI_SHURUI1" Name="HAIKI_SHURUI_NAME_RYAKU" Format="" />
+      <Column ID="3" DispNumber="" DispName="廃棄物名称CD(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="HAIKI_NAME_CD" Format="" />
+      <Column ID="4" DispNumber="" DispName="廃棄物名称(実績)" Needs="0" TableName="M_HAIKI_NAME1" Name="HAIKI_NAME_RYAKU" Format="" />
+      <Column ID="5" DispNumber="" DispName="報告書分類CD" Needs="0" TableName="M_HAIKI_SHURUI" Name="HOUKOKUSHO_BUNRUI_CD" />
+      <Column ID="6" DispNumber="" DispName="報告書分類名" Needs="0" TableName="M_HOUKOKUSHO_BUNRUI" Name="HOUKOKUSHO_BUNRUI_NAME_RYAKU" />
+      <Column ID="7" DispNumber="" DispName="荷姿CD(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="NISUGATA_CD" Format="" />
+      <Column ID="8" DispNumber="" DispName="荷姿名(実績)" Needs="0" TableName="M_NISUGATA1" Name="NISUGATA_NAME_RYAKU" Format="" />
+      <Column ID="9" DispNumber="" DispName="割合(%)(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="WARIAI/100" Format="#,##0.####%" />
+      <Column ID="10" DispNumber="" DispName="数量(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="HAIKI_SUU" Format="#,##0.####" />
+      <Column ID="11" DispNumber="" DispName="単位CD(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="HAIKI_UNIT_CD" Format="00" />
+      <Column ID="12" DispNumber="" DispName="単位名(実績)" Needs="0" TableName="M_UNIT3" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="" DispName="換算後数量(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="KANSAN_SUU" Format="#,##0.####" />
+      <Column ID="14" DispNumber="" DispName="減容後数量(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="GENNYOU_SUU" Format="#,##0.####" />
+      <Column ID="15" DispNumber="" DispName="処分方法CD(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="SBN_HOUHOU_CD" Format="" />
+      <Column ID="16" DispNumber="" DispName="処分方法名(実績)" Needs="0" TableName="M_SHOBUN_HOUHOU1" Name="SHOBUN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="17" DispNumber="" DispName="処分終了日(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="18" DispNumber="" DispName="最終処分終了日(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="LAST_SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="19" DispNumber="" DispName="最終処分業者CD(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="LAST_SBN_GYOUSHA_CD" Format="" />
+      <Column ID="20" DispNumber="" DispName="最終処分業者名(実績)" Needs="0" TableName="M_GYOUSHA3" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="21" DispNumber="" DispName="最終処分場所CD(実績)" Needs="0" TableName="T_MANIFEST_DETAIL" Name="LAST_SBN_GENBA_CD" Format="" />
+      <Column ID="22" DispNumber="" DispName="最終処分場所名(実績)" Needs="0" TableName="M_GENBA1" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="23" DispNumber="" DispName="二次マニ交付番号(実績)" Needs="0" TableName="T_MANIFEST_ENTRY_NIJI" Name="MANIFEST_ID" Format="" />
+    </Group>
+    <JoinCondition TableName="M_HAIKI_KBN1">LEFT JOIN M_HAIKI_KBN M_HAIKI_KBN1 ON T_MANIFEST_ENTRY.HAIKI_KBN_CD = M_HAIKI_KBN1.HAIKI_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_MANIFEST_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_TORIHIKISAKI1">LEFT JOIN M_TORIHIKISAKI M_TORIHIKISAKI1 ON T_MANIFEST_ENTRY.TORIHIKISAKI_CD = M_TORIHIKISAKI1.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="M_DENSHU_KBN1">LEFT JOIN M_DENSHU_KBN M_DENSHU_KBN1 ON T_MANIFEST_ENTRY.RENKEI_DENSHU_KBN_CD = M_DENSHU_KBN1.DENSHU_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_KONGOU_SHURUI1">LEFT JOIN M_KONGOU_SHURUI M_KONGOU_SHURUI1 ON T_MANIFEST_ENTRY.HAIKI_KBN_CD = M_KONGOU_SHURUI1.HAIKI_KBN_CD AND T_MANIFEST_ENTRY.KONGOU_SHURUI_CD = M_KONGOU_SHURUI1.KONGOU_SHURUI_CD</JoinCondition>
+    <JoinCondition TableName="M_HAIKI_SHURUI1">LEFT JOIN M_HAIKI_SHURUI M_HAIKI_SHURUI1 ON T_MANIFEST_ENTRY.HAIKI_KBN_CD = M_HAIKI_SHURUI1.HAIKI_KBN_CD AND T_MANIFEST_DETAIL.HAIKI_SHURUI_CD = M_HAIKI_SHURUI1.HAIKI_SHURUI_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON T_MANIFEST_ENTRY.HAIKI_UNIT_CD = M_UNIT1.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT2">LEFT JOIN M_UNIT M_UNIT2 ON T_MANIFEST_PRT.PRT_UNIT_CD = M_UNIT2.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT3">LEFT JOIN M_UNIT M_UNIT3 ON T_MANIFEST_DETAIL.HAIKI_UNIT_CD = M_UNIT3.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA1">LEFT JOIN M_GYOUSHA M_GYOUSHA1 ON T_MANIFEST_ENTRY.LAST_SBN_YOTEI_GYOUSHA_CD = M_GYOUSHA1.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA2">LEFT JOIN M_GYOUSHA M_GYOUSHA2 ON T_MANIFEST_ENTRY.LAST_SBN_GYOUSHA_CD = M_GYOUSHA2.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA3">LEFT JOIN M_GYOUSHA M_GYOUSHA3 ON T_MANIFEST_DETAIL.LAST_SBN_GYOUSHA_CD = M_GYOUSHA3.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA1">LEFT JOIN M_GENBA M_GENBA1 ON T_MANIFEST_DETAIL.LAST_SBN_GYOUSHA_CD = M_GENBA1.GYOUSHA_CD AND T_MANIFEST_DETAIL.LAST_SBN_GENBA_CD = M_GENBA1.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="M_HAIKI_NAME1">LEFT JOIN M_HAIKI_NAME M_HAIKI_NAME1 ON T_MANIFEST_DETAIL.HAIKI_NAME_CD = M_HAIKI_NAME1.HAIKI_NAME_CD</JoinCondition>
+    <JoinCondition TableName="M_NISUGATA1">LEFT JOIN M_NISUGATA M_NISUGATA1 ON T_MANIFEST_DETAIL.NISUGATA_CD = M_NISUGATA1.NISUGATA_CD</JoinCondition>
+    <JoinCondition TableName="M_SHOBUN_HOUHOU1">LEFT JOIN M_SHOBUN_HOUHOU M_SHOBUN_HOUHOU1 ON T_MANIFEST_DETAIL.SBN_HOUHOU_CD = M_SHOBUN_HOUHOU1.SHOBUN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHASHU1">LEFT JOIN M_SHASHU M_SHASHU1 ON T_MANIFEST_UPN1.SHASHU_CD = M_SHASHU1.SHASHU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHASHU2">LEFT JOIN M_SHASHU M_SHASHU2 ON T_MANIFEST_UPN2.SHASHU_CD = M_SHASHU2.SHASHU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHARYOU1">LEFT JOIN M_SHARYOU M_SHARYOU1 ON T_MANIFEST_UPN1.UPN_GYOUSHA_CD = M_SHARYOU1.GYOUSHA_CD AND T_MANIFEST_UPN1.SHARYOU_CD = M_SHARYOU1.SHARYOU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHARYOU2">LEFT JOIN M_SHARYOU M_SHARYOU2 ON T_MANIFEST_UPN2.UPN_GYOUSHA_CD = M_SHARYOU2.GYOUSHA_CD AND T_MANIFEST_UPN2.SHARYOU_CD = M_SHARYOU2.SHARYOU_CD</JoinCondition>
+    <JoinCondition TableName="M_UNPAN_HOUHOU1">LEFT JOIN M_UNPAN_HOUHOU M_UNPAN_HOUHOU1 ON T_MANIFEST_UPN1.UPN_HOUHOU_CD = M_UNPAN_HOUHOU1.UNPAN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_UNPAN_HOUHOU2">LEFT JOIN M_UNPAN_HOUHOU M_UNPAN_HOUHOU2 ON T_MANIFEST_UPN2.UPN_HOUHOU_CD = M_UNPAN_HOUHOU2.UNPAN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="T_MANIFEST_D_GENPON_END">LEFT JOIN (SELECT T_MANIFEST_ENTRY.SYSTEM_ID, T_MANIFEST_ENTRY.SEQ, MAX (SBN_END_DATE) AS SBN_END_DATE FROM T_MANIFEST_ENTRY INNER JOIN T_MANIFEST_DETAIL ON T_MANIFEST_ENTRY.SYSTEM_ID = T_MANIFEST_DETAIL.SYSTEM_ID AND T_MANIFEST_ENTRY.SEQ = T_MANIFEST_DETAIL.SEQ AND T_MANIFEST_DETAIL.SBN_END_DATE IS NOT NULL WHERE 	T_MANIFEST_ENTRY.DELETE_FLG = 'false' AND NOT EXISTS( SELECT * FROM T_MANIFEST_DETAIL WHERE T_MANIFEST_ENTRY.DELETE_FLG = 'false' AND T_MANIFEST_ENTRY.SYSTEM_ID = T_MANIFEST_DETAIL.SYSTEM_ID AND T_MANIFEST_ENTRY.SEQ = T_MANIFEST_DETAIL.SEQ and T_MANIFEST_DETAIL.SBN_END_DATE IS NULL ) GROUP BY T_MANIFEST_ENTRY.SYSTEM_ID, T_MANIFEST_ENTRY.SEQ	UNION SELECT T_MANIFEST_ENTRY.SYSTEM_ID, T_MANIFEST_ENTRY.SEQ, SBN_END_DATE FROM T_MANIFEST_ENTRY LEFT JOIN T_MANIFEST_DETAIL ON T_MANIFEST_ENTRY.SYSTEM_ID = T_MANIFEST_DETAIL.SYSTEM_ID AND T_MANIFEST_ENTRY.SEQ = T_MANIFEST_DETAIL.SEQ WHERE T_MANIFEST_ENTRY.DELETE_FLG = 'false' and T_MANIFEST_DETAIL.SBN_END_DATE IS NULL GROUP BY T_MANIFEST_ENTRY.SYSTEM_ID, T_MANIFEST_ENTRY.SEQ, T_MANIFEST_DETAIL.SBN_END_DATE )AS T_MANIFEST_D_GENPON_END ON T_MANIFEST_ENTRY.SYSTEM_ID = T_MANIFEST_D_GENPON_END.SYSTEM_ID AND T_MANIFEST_ENTRY.SEQ = T_MANIFEST_D_GENPON_END.SEQ </JoinCondition>
+    <JoinCondition TableName="T_MANIFEST_D_GENPON_LAST">LEFT JOIN (SELECT T_MANIFEST_ENTRY.SYSTEM_ID, T_MANIFEST_ENTRY.SEQ, MAX (LAST_SBN_END_DATE) AS LAST_SBN_END_DATE FROM T_MANIFEST_ENTRY INNER JOIN T_MANIFEST_DETAIL ON T_MANIFEST_ENTRY.SYSTEM_ID = T_MANIFEST_DETAIL.SYSTEM_ID AND T_MANIFEST_ENTRY.SEQ = T_MANIFEST_DETAIL.SEQ AND T_MANIFEST_DETAIL.LAST_SBN_END_DATE IS NOT NULL WHERE 	T_MANIFEST_ENTRY.DELETE_FLG = 'false' AND NOT EXISTS( SELECT * FROM T_MANIFEST_DETAIL WHERE T_MANIFEST_ENTRY.DELETE_FLG = 'false' AND T_MANIFEST_ENTRY.SYSTEM_ID = T_MANIFEST_DETAIL.SYSTEM_ID AND T_MANIFEST_ENTRY.SEQ = T_MANIFEST_DETAIL.SEQ and T_MANIFEST_DETAIL.LAST_SBN_END_DATE IS NULL ) GROUP BY T_MANIFEST_ENTRY.SYSTEM_ID, T_MANIFEST_ENTRY.SEQ	UNION SELECT T_MANIFEST_ENTRY.SYSTEM_ID, T_MANIFEST_ENTRY.SEQ, LAST_SBN_END_DATE FROM T_MANIFEST_ENTRY LEFT JOIN T_MANIFEST_DETAIL ON T_MANIFEST_ENTRY.SYSTEM_ID = T_MANIFEST_DETAIL.SYSTEM_ID AND T_MANIFEST_ENTRY.SEQ = T_MANIFEST_DETAIL.SEQ WHERE T_MANIFEST_ENTRY.DELETE_FLG = 'false' and T_MANIFEST_DETAIL.LAST_SBN_END_DATE IS NULL GROUP BY T_MANIFEST_ENTRY.SYSTEM_ID, T_MANIFEST_ENTRY.SEQ, T_MANIFEST_DETAIL.LAST_SBN_END_DATE )AS T_MANIFEST_D_GENPON_LAST ON T_MANIFEST_ENTRY.SYSTEM_ID = T_MANIFEST_D_GENPON_LAST.SYSTEM_ID AND T_MANIFEST_ENTRY.SEQ = T_MANIFEST_D_GENPON_LAST.SEQ </JoinCondition>
+  </OutputColumnSelect>
+</root>

@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B5FA3149-3A18-4987-9AD6-1B86AE87D97A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ItakuKeiyakuHoshu</RootNamespace>
+    <AssemblyName>ItakuKeiyakuHoshu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\00_マスタ\M420\M420.csproj">
+      <Project>{BB94B9FE-623C-4401-A10A-B4B240A5CAE1}</Project>
+      <Name>M420</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\11_帳票出力\Shougun.Printing\Common\Shougun.Printing.Common.csproj">
+      <Project>{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}</Project>
+      <Name>Shougun.Printing.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\CommunicateLib\CommunicateLib.csproj">
+      <Project>{48903edc-99cd-43e0-97b7-548dbc1da889}</Project>
+      <Name>CommunicateLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\FileUploadCommon\FileUploadCommon.csproj">
+      <Project>{A7BDC179-28A0-4565-9DE1-5901BAAFCC63}</Project>
+      <Name>FileUploadCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\G730\G730.csproj">
+      <Project>{3F7682EF-C99A-478E-8187-A2DDCB5BACC5}</Project>
+      <Name>G730</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ItemViewPopup\ItemViewPopup.csproj">
+      <Project>{440EBF4A-0B4F-41C4-9593-BF26DD1AB710}</Project>
+      <Name>ItemViewPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MasterKyoutsuPopup2\MasterKyoutsuPopup2.csproj">
+      <Project>{24A8C872-5ACF-42A5-A1AC-27E6C0C25B85}</Project>
+      <Name>MasterKyoutsuPopup2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\IchiranCommon\IchiranCommon.csproj">
+      <Project>{6429E01D-AB2A-4EA8-B9A4-3FBCD0A30D38}</Project>
+      <Name>IchiranCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\Shougun.Core.Message\Shougun.Core.Message.csproj">
+      <Project>{DDF5B1E5-6897-48EB-A194-ECA45C8201FD}</Project>
+      <Name>Shougun.Core.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\Common\Common.csproj">
+      <Project>{7749C25E-83F6-4478-A720-92162E76FB53}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\DLL\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy">
+      <HintPath>..\..\DLL\Castle.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <ProjectReference Include="..\..\CommonChouhyouPopup\CommonChouhyouPopup.csproj">
+      <Project>{445254EB-6A9C-4D9D-8431-3ED2658FE6DD}</Project>
+      <Name>CommonChouhyouPopup</Name>
+    </ProjectReference>
+    <Reference Include="GrapeCity.Framework.InputMan.v22">
+      <HintPath>..\..\DLL\GrapeCity.Framework.InputMan.v22.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.MultiRow.v22">
+      <HintPath>..\..\DLL\GrapeCity.Framework.MultiRow.v22.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v70">
+      <HintPath>..\..\DLL\GrapeCity.Win.Editors.v70.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Win.MultiRow.v70">
+      <HintPath>..\..\DLL\GrapeCity.Win.MultiRow.v70.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <Reference Include="OboegakiIkkatuHoshu, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <ProjectReference Include="..\..\r-framework\System.Windows.Forms.Ribbon\System.Windows.Forms.Ribbon35.csproj">
+      <Project>{2BBF4FC0-4169-4EA5-8947-9C421F0B2CDF}</Project>
+      <Name>System.Windows.Forms.Ribbon35</Name>
+    </ProjectReference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\SelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\SelectForm.designer.cs">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\ItakuKeiyakuHoshuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\ItakuKeiyakuHoshuForm.Designer.cs">
+      <DependentUpon>ItakuKeiyakuHoshuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\M001.cs" />
+    <Compile Include="APP\PatternRegistForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\PatternRegistForm.designer.cs">
+      <DependentUpon>PatternRegistForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\ItakuKeiyakuKenpaiHoshuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\ItakuKeiyakuKenpaiHoshuForm.Designer.cs">
+      <DependentUpon>ItakuKeiyakuKenpaiHoshuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Const\ItakuKeiyakuHoshuConstants.cs" />
+    <Compile Include="Dto\ItakuKeiyakuHoshuDto.cs" />
+    <Compile Include="Logic\InxsContractLogic.cs" />
+    <Compile Include="Logic\SelectLogic.cs" />
+    <Compile Include="Logic\ItakuKeiyakuHoshuLogic.cs" />
+    <Compile Include="Logic\PatternRegistLogic.cs" />
+    <Compile Include="Logic\ItakuKeiyakuKenpaiHoshuLogic.cs" />
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu1Yotei.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu1Yotei.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu1Yotei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu3.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu1Hst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu1Hst.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu1Hst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu4.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuKihonHstGenba.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuKihonHstGenba.designer.cs">
+      <DependentUpon>ItakuKeiyakuKihonHstGenba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuOboe.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuOboe.designer.cs">
+      <DependentUpon>ItakuKeiyakuOboe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu2.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuUpnKyoka.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuUpnKyoka.designer.cs">
+      <DependentUpon>ItakuUpnKyoka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuSbnKyoka.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuSbnKyoka.designer.cs">
+      <DependentUpon>ItakuSbnKyoka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu1HstKenpai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu1HstKenpai.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu1HstKenpai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu2Kenpai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu2Kenpai.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu2Kenpai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu3Kenpai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu3Kenpai.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu3Kenpai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu4Kenpai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu4Kenpai.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu4Kenpai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu1YoteiKenpai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsu1YoteiKenpai.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsu1YoteiKenpai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsuTMKE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsuTMKE.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsuTMKE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsuTMKEKenpai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuBetsuTMKEKenpai.designer.cs">
+      <DependentUpon>ItakuKeiyakuBetsuTMKEKenpai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuSaiseiHinmokuKenpai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ItakuKeiyakuSaiseiHinmokuKenpai.designer.cs">
+      <DependentUpon>ItakuKeiyakuSaiseiHinmokuKenpai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validator\DataRowItakuKeiyakuCompare.cs" />
+    <Compile Include="Validator\ItakuKeiyakuHoshuValidator.cs" />
+    <EmbeddedResource Include="APP\SelectForm.resx">
+      <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\ItakuKeiyakuHoshuForm.resx">
+      <DependentUpon>ItakuKeiyakuHoshuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PatternRegistForm.resx">
+      <DependentUpon>PatternRegistForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\ItakuKeiyakuKenpaiHoshuForm.resx">
+      <DependentUpon>ItakuKeiyakuKenpaiHoshuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu1Yotei.resx">
+      <DependentUpon>ItakuKeiyakuBetsu1Yotei.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu3.resx">
+      <DependentUpon>ItakuKeiyakuBetsu3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu1Hst.resx">
+      <DependentUpon>ItakuKeiyakuBetsu1Hst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu4.resx">
+      <DependentUpon>ItakuKeiyakuBetsu4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuKihonHstGenba.resx">
+      <DependentUpon>ItakuKeiyakuKihonHstGenba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuOboe.resx">
+      <DependentUpon>ItakuKeiyakuOboe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu2.resx">
+      <DependentUpon>ItakuKeiyakuBetsu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuUpnKyoka.resx">
+      <DependentUpon>ItakuUpnKyoka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuSbnKyoka.resx">
+      <DependentUpon>ItakuSbnKyoka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu1HstKenpai.resx">
+      <DependentUpon>ItakuKeiyakuBetsu1HstKenpai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu2Kenpai.resx">
+      <DependentUpon>ItakuKeiyakuBetsu2Kenpai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu3Kenpai.resx">
+      <DependentUpon>ItakuKeiyakuBetsu3Kenpai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu4Kenpai.resx">
+      <DependentUpon>ItakuKeiyakuBetsu4Kenpai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsu1YoteiKenpai.resx">
+      <DependentUpon>ItakuKeiyakuBetsu1YoteiKenpai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsuTMKE.resx">
+      <DependentUpon>ItakuKeiyakuBetsuTMKE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuBetsuTMKEKenpai.resx">
+      <DependentUpon>ItakuKeiyakuBetsuTMKEKenpai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ItakuKeiyakuSaiseiHinmokuKenpai.resx">
+      <DependentUpon>ItakuKeiyakuSaiseiHinmokuKenpai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaMeigaraDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuKihonHstGenbaDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu1HstDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu1YoteiDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu2DataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu3DataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu4DataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuOboeDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuUpnKyokashoDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuSbnKyokashoDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetInputCddataItakuKeiyakuKihonSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaDataSql_1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaDataSql_2.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaDataSql_4.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaDataSql_3.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaDataSql_5.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaDataSql_6.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuUpnKyokashoStructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuSbnKyokashoStructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckGenbaDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuKihonHstGenbaSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuBetsu1HstSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuBetsu1YoteiSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuBetsu2Sql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuBetsu3Sql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuBetsu4Sql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuOboeSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuUpnKyokashoSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuSbnKyokashoSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuKihonHstGenbaStructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu1HstStructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu1YoteiStructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu2StructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu3StructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuBetsu4StructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuOboeStructSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MasterCommon\MasterCommon.csproj">
+      <Project>{33456DFB-0BB4-4717-B6C7-4D91F5500C4A}</Project>
+      <Name>MasterCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetSbnbPatternSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteSbnbPatternSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuHinmeiSql.sql" />
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuHinmeiDataSql.sql" />
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuHinmeiStructSql.sql" />
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuTsumikaeSql.sql" />
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuTsumikaeDataSql.sql" />
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuTsumikaeStructSql.sql" />
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuSaiseihinmokuStructSql.sql" />
+    <EmbeddedResource Include="Sql\DeleteItakuKeiyakuSaiseihinmokuSql.sql" />
+    <EmbeddedResource Include="Sql\GetItakuKeiyakuSaiseihinmokuDataSql.sql" />
+    <EmbeddedResource Include="Sql\DeleteItakuDenshiSouhusakiSql.sql" />
+    <Content Include="Template\R001_01Report.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\R001_02Report.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\R001_03Report.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Template\R546_01Report.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

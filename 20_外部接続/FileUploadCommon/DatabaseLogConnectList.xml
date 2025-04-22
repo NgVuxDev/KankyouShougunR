@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DatabaseConnectList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <DispName selected="1">LOGDB</DispName>
+    <ConnectionString>Data Source=PC-29-003\SQL2008R2;Initial Catalog=KankyouShougunR_operateLog;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=Ed203388;Connect Timeout=5;Encrypt=False</ConnectionString>
+  </Items>
+</DatabaseConnectList>

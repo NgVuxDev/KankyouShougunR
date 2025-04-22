@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <IchiranButtonName>[F9]&#xD;&#xA;実行</IchiranButtonName>
+    <IchiranButtonHintText></IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <IchiranButtonHintText></IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

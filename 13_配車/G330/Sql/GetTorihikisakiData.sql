@@ -1,0 +1,483 @@
+﻿SELECT 
+
+	-- 業者マスタから取得 --
+    t.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+
+	-- 定期実績明細から取得 --
+	,t.SYSTEM_ID
+    ,t.SEQ
+    ,t.DETAIL_SYSTEM_ID
+	,t.DETAIL_TIME_STAMP AS DETAIL_TIME_STAMP
+
+    ,t.GYOUSHA_CD AS GYOUSHA_CD
+	,t.GENBA_CD AS GENBA_CD
+	,t.HINMEI_CD AS HINMEI_CD
+	-- 数量Null時の例外対応 [2014/01/30] nullの場合0として取得--
+	,ISNULL(t.SUURYOU, 0) AS SUURYOU
+
+	,t.UNIT_CD AS UNIT_CD
+	,t.TSUKIGIME_KBN AS TSUKIGIME_KBN
+	,t.DENPYOU_KBN_CD AS DENPYOU_KBN_CD
+	,t.UR_SH_NUMBER AS UR_SH_NUMBER
+    ,t.ROUND_NO
+	,t.KEIYAKU_KBN
+	    
+	 -- 定期実績入力から取得 --
+	,t.KYOTEN_CD AS KYOTEN_CD
+    --[2014/01/29] DENPYOU_DATE->SAGYOU_DATE--
+	,t.SAGYOU_DATE AS SAGYOU_DATE
+	,t.ENTRY_TIME_STAMP AS ENTRY_TIME_STAMP
+	----[2014/02/14] SHARYOU～UNTENSHA--
+	,t.SHARYOU_CD AS SHARYOU_CD
+	,t.SHASHU_CD AS SHASHU_CD
+	,t.UNTENSHA_CD AS UNTENSHA_CD
+	,t.TEIKI_JISSEKI_NUMBER AS TEIKI_JISSEKI_NUMBER
+    
+	-- 定期実績荷降から取得 --
+	,t.NIOROSHI_GYOUSHA_CD AS NIOROSHI_GYOUSHA_CD
+	,t.NIOROSHI_GENBA_CD AS NIOROSHI_GENBA_CD
+	
+	-- 現場マスタから取得 --
+	,CASE WHEN mge1.SHOKUCHI_KBN = 1
+	      THEN mge1.GENBA_NAME1
+		  ELSE mge1.GENBA_NAME_RYAKU 
+		  END AS GENBA_NAME_RYAKU
+	,CASE WHEN mge2.SHOKUCHI_KBN = 1
+	      THEN mge2.GENBA_NAME1
+		  ELSE mge2.GENBA_NAME_RYAKU 
+		  END AS NIOROSHI_GENBA_NAME_RYAKU
+	
+	-- 業者マスタから取得 --
+	,CASE WHEN mgs1.SHOKUCHI_KBN = 1
+	      THEN mgs1.GYOUSHA_NAME1
+		  ELSE mgs1.GYOUSHA_NAME_RYAKU 
+		  END AS GYOUSHA_NAME_RYAKU
+	,CASE WHEN mgs2.SHOKUCHI_KBN = 1
+	      THEN mgs2.GYOUSHA_NAME1
+		  ELSE mgs2.GYOUSHA_NAME_RYAKU
+		  END AS NIOROSHI_GYOUSHA_NAME_RYAKU
+	
+	-- 品名マスタから取得 --
+	,CASE WHEN mkh.HINMEI_CD IS NOT NULL THEN mkh.SEIKYUU_HINMEI_NAME 
+	      WHEN mkh2.HINMEI_CD IS NOT NULL THEN mkh2.SEIKYUU_HINMEI_NAME 
+		  ELSE mhe.HINMEI_NAME END AS HINMEI_NAME_RYAKU
+	,CASE WHEN tsuki.HINMEI_CD IS NOT NULL THEN mhe2.ZEI_KBN_CD
+	      ELSE mhe.ZEI_KBN_CD END AS HINMEI_ZEI_KBN_CD
+	
+	-- 取引先マスタから取得 --
+	,CASE WHEN mtr.SHOKUCHI_KBN = 1
+	      THEN mtr.TORIHIKISAKI_NAME1
+		  ELSE mtr.TORIHIKISAKI_NAME_RYAKU
+		  END AS TORIHIKISAKI_NAME_RYAKU
+	,mtr.TORIHIKISAKI_FURIGANA AS TORIHIKISAKI_FURIGANA
+	
+	-- 取引先_請求情報マスタから取得 --
+	,mtsk.TORIHIKI_KBN_CD AS TORIHIKI_KBN_CD
+	,mtsk.ZEI_KBN_CD AS ZEI_KBN_CD
+	,mtsk.TAX_HASUU_CD AS TAX_HASUU_CD
+	,mtsk.ZEI_KEISAN_KBN_CD AS ZEI_KEISAN_KBN_CD
+	,mtsk.KINGAKU_HASUU_CD AS KINGAKU_HASUU_CD 
+    
+    -- 取引先_支払情報マスタ --
+	,mtsh.TORIHIKI_KBN_CD AS SHIHARAI_TORIHIKI_KBN_CD
+	,mtsh.ZEI_KBN_CD AS SHIHARAI_ZEI_KBN_CD
+	,mtsh.TAX_HASUU_CD AS SHIHARAI_TAX_HASUU_CD
+	,mtsh.ZEI_KEISAN_KBN_CD AS SHIHARAI_ZEI_KEISAN_KBN_CD
+	,mtsh.KINGAKU_HASUU_CD AS SHIHARAI_KINGAKU_HASUU_CD 
+
+	-- 現場_定期品名マスタから取得 [2014/01/25] nullの場合0として取得--
+	,mgh.HINMEI_CD AS TEIKI_HINMEI_CD
+
+	,tsuki.HINMEI_CD AS TSUKI_HINMEI_CD
+	,tsuki.CHOUKA_SETTING AS CHOUKA_SETTING
+	,tsuki.CHOUKA_LIMIT_AMOUNT AS CHOUKA_LIMIT_AMOUNT
+	,tsuki.CHOUKA_HINMEI_NAME AS CHOUKA_HINMEI_NAME
+	
+	-- 消費税マスタから取得 --
+	,msz.SHOUHIZEI_RATE AS SHOUHIZEI_RATE
+
+	-- 車種マスタ --
+	,shashu.SHASHU_NAME_RYAKU AS SHASHU_NAME
+
+	-- 車輌マスタ --
+	,sharyou.SHARYOU_NAME_RYAKU AS SHARYOU_NAME
+
+	-- 社員マスタ --
+	,shain.SHAIN_NAME_RYAKU AS UNTENSHA_NAME
+
+    ,t.UNPAN_GYOUSHA_CD AS UNPAN_GYOUSHA_CD
+    ,(SELECT 
+	      CASE WHEN SHOKUCHI_KBN = 1 THEN GYOUSHA_NAME1 ELSE GYOUSHA_NAME_RYAKU END AS
+	      GYOUSHA_NAME_RYAKU FROM M_GYOUSHA WHERE M_GYOUSHA.GYOUSHA_CD = t.UNPAN_GYOUSHA_CD) AS UNPAN_GYOUSHA_NAME
+FROM (
+
+    SELECT 
+	    -- 定期実績明細 --
+		tjd.GYOUSHA_CD AS GYOUSHA_CD
+		,tjd.GENBA_CD AS GENBA_CD
+		,tjd.HINMEI_CD AS HINMEI_CD
+		,tjd.SUURYOU AS SUURYOU
+		,tjd.UNIT_CD AS UNIT_CD
+		,tjd.UNIT_CD AS UNIT_CD_TRUE
+		,tjd.TSUKIGIME_KBN AS TSUKIGIME_KBN
+		,tjd.SYSTEM_ID
+        ,tjd.SEQ
+        ,tjd.DETAIL_SYSTEM_ID
+		,tjd.TIME_STAMP AS DETAIL_TIME_STAMP
+		,tjd.DENPYOU_KBN_CD AS DENPYOU_KBN_CD
+		,tjd.UR_SH_NUMBER AS UR_SH_NUMBER
+		,tjd.ROUND_NO
+		,tjd.KEIYAKU_KBN
+
+	    -- 定期実績入力 --
+		,tje.KYOTEN_CD AS KYOTEN_CD
+      --  [2014/01/29] DENPYOU_DATE->SAGYOU_DATE--
+		,tje.SAGYOU_DATE AS SAGYOU_DATE
+		,tje.TIME_STAMP AS ENTRY_TIME_STAMP
+	  --  [2014/02/14] SHARYOU～UNTENSHA --
+		,tje.SHARYOU_CD AS SHARYOU_CD
+		,tje.SHASHU_CD AS SHASHU_CD
+		,tje.UNTENSHA_CD AS UNTENSHA_CD
+		,tje.UNPAN_GYOUSHA_CD AS UNPAN_GYOUSHA_CD
+		,tje.TEIKI_JISSEKI_NUMBER AS TEIKI_JISSEKI_NUMBER
+		
+	    -- 定期実績荷降 --
+		,tjn.NIOROSHI_GYOUSHA_CD AS NIOROSHI_GYOUSHA_CD
+		,tjn.NIOROSHI_GENBA_CD AS NIOROSHI_GENBA_CD
+		
+	    -- 現場マスタ --
+		,mg.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+		
+    -- 定期実績明細 --
+    FROM dbo.T_TEIKI_JISSEKI_DETAIL AS tjd
+
+    -- 定期実績入力 --
+    INNER JOIN dbo.T_TEIKI_JISSEKI_ENTRY AS tje
+      ON tje.SYSTEM_ID = tjd.SYSTEM_ID
+      AND tje.SEQ = tjd.SEQ
+      AND tje.DELETE_FLG = 0
+
+      -- [入力条件] --
+      /*IF data.KYOTEN_CD != null */ 
+      AND tje.KYOTEN_CD =  /*data.KYOTEN_CD*/0 /*END*/
+
+      --  [2014/01/29] DENPYOU_DATE->SAGYOU_DATE--
+      AND CONVERT(nvarchar, tje.SAGYOU_DATE, 112) >=  CONVERT(nvarchar, /*data.KIKAN_DATE_FROM*/null, 112)
+      AND CONVERT(nvarchar, tje.SAGYOU_DATE, 112) <=  CONVERT(nvarchar, /*data.KIKAN_DATE_TO*/null, 112)
+
+    -- 定期実績荷降 --
+    LEFT JOIN dbo.T_TEIKI_JISSEKI_NIOROSHI AS tjn
+      ON tjn.SYSTEM_ID = tjd.SYSTEM_ID
+      AND tjn.SEQ = tjd.SEQ
+	  AND tjn.NIOROSHI_NUMBER = tjd.NIOROSHI_NUMBER
+
+    -- 現場マスタ --
+    INNER JOIN dbo.M_GENBA AS mg
+      ON mg.GYOUSHA_CD = tjd.GYOUSHA_CD
+      AND mg.GENBA_CD = tjd.GENBA_CD
+
+    -- 取引先マスタ --
+    INNER JOIN dbo.M_TORIHIKISAKI AS mt
+      ON mt.TORIHIKISAKI_CD = mg.TORIHIKISAKI_CD
+
+    -- 取引先請求情報マスタ --
+    INNER JOIN dbo.M_TORIHIKISAKI_SEIKYUU AS ts
+      ON ts.TORIHIKISAKI_CD = mg.TORIHIKISAKI_CD
+
+	-- 取引先支払情報マスタ --
+	INNER JOIN dbo.M_TORIHIKISAKI_SHIHARAI as tsh
+		ON tsh.TORIHIKISAKI_CD = mg.TORIHIKISAKI_CD
+
+    WHERE 
+    -- 月極区分：1(伝票)／2(合算) --
+    tjd.TSUKIGIME_KBN IN( 1 , 2 )
+    -- 取引先
+    /*IF data.TORIHIKISAKI_CD_custom != null */ 
+    AND mt.TORIHIKISAKI_CD = /*data.TORIHIKISAKI_CD_custom*/'000000'
+    /*END*/
+	/*IF data.FIX_CONDITION_VALUE == 2 */ 
+    AND tjd.KAKUTEI_FLG = 0
+	/*END*/
+	/*IF data.FIX_CONDITION_VALUE != 2 */ 
+	AND tjd.KAKUTEI_FLG = 1
+	/*END*/
+    -- 契約区分：2固定(1:定期、2単価) [2014/01/25] 追加--
+    AND tjd.KEIYAKU_KBN = 2
+	
+    -- [入力条件] --
+    /*IF data.SHIMEBI != null */ 
+    AND (
+	  (
+	  -- 請求情報絞込み --
+	    tjd.DENPYOU_KBN_CD = '1'
+		AND  (
+          ts.SHIMEBI1 = /*data.SHIMEBI*/0 
+		)
+      )
+	  OR
+	  (
+	  -- 支払情報絞込み --
+	    tjd.DENPYOU_KBN_CD = '2'
+		AND  (
+          tsh.SHIMEBI1 = /*data.SHIMEBI*/0 
+		)
+	  )
+    )
+    /*END*/
+	/*IF data.SHIMEBI == null */ 
+	    AND (
+	  (
+	  -- 請求情報絞込み --
+	    tjd.DENPYOU_KBN_CD = '1'
+		AND  (
+          ts.TORIHIKI_KBN_CD = 1 
+		)
+      )
+	  OR
+	  (
+	  -- 支払情報絞込み --
+	    tjd.DENPYOU_KBN_CD = '2'
+		AND  (
+          tsh.TORIHIKI_KBN_CD = 1
+		)
+	  )
+    )
+	/*END*/
+    AND EXISTS (SELECT 1 FROM T_TEIKI_JISSEKI_DETAIL CHECK_TABLE 
+				WHERE CHECK_TABLE.SUURYOU IS NOT NULL 
+				AND CHECK_TABLE.SYSTEM_ID = tjd.SYSTEM_ID 
+				AND CHECK_TABLE.SEQ = tjd.SEQ 
+				AND CHECK_TABLE.DETAIL_SYSTEM_ID = tjd.DETAIL_SYSTEM_ID)
+
+    UNION
+
+    SELECT 
+	    -- 定期実績明細 --
+		tjd.GYOUSHA_CD AS GYOUSHA_CD
+		,tjd.GENBA_CD AS GENBA_CD
+		,tjd.HINMEI_CD AS HINMEI_CD
+		,CASE WHEN tjd.UNIT_CD = 3 THEN tjd.SUURYOU
+		      WHEN tjd.KANSAN_UNIT_CD = 3 THEN tjd.KANSAN_SUURYOU
+		 END AS SUURYOU
+		,3 AS UNIT_CD
+		,tjd.UNIT_CD AS UNIT_CD_TRUE
+		,tjd.TSUKIGIME_KBN AS TSUKIGIME_KBN
+		,tjd.SYSTEM_ID
+        ,tjd.SEQ
+        ,tjd.DETAIL_SYSTEM_ID
+		,tjd.TIME_STAMP AS DETAIL_TIME_STAMP
+		,tjd.DENPYOU_KBN_CD AS DENPYOU_KBN_CD
+		,tjd.UR_SH_NUMBER AS UR_SH_NUMBER
+		,tjd.ROUND_NO
+		,tjd.KEIYAKU_KBN
+	    -- 定期実績入力 --
+		,tje.KYOTEN_CD AS KYOTEN_CD
+		,tje.SAGYOU_DATE AS SAGYOU_DATE
+		,tje.TIME_STAMP AS ENTRY_TIME_STAMP
+		,tje.SHARYOU_CD AS SHARYOU_CD
+		,tje.SHASHU_CD AS SHASHU_CD
+		,tje.UNTENSHA_CD AS UNTENSHA_CD
+		,tje.UNPAN_GYOUSHA_CD AS UNPAN_GYOUSHA_CD
+		,tje.TEIKI_JISSEKI_NUMBER AS TEIKI_JISSEKI_NUMBER
+	    -- 定期実績荷降 --
+		,tjn.NIOROSHI_GYOUSHA_CD AS NIOROSHI_GYOUSHA_CD
+		,tjn.NIOROSHI_GENBA_CD AS NIOROSHI_GENBA_CD		
+	    -- 現場マスタ --
+		,mg.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+    -- 定期実績明細 --
+    FROM dbo.T_TEIKI_JISSEKI_DETAIL AS tjd
+
+    -- 定期実績入力 --
+    INNER JOIN dbo.T_TEIKI_JISSEKI_ENTRY AS tje
+      ON tje.SYSTEM_ID = tjd.SYSTEM_ID
+      AND tje.SEQ = tjd.SEQ
+      AND tje.DELETE_FLG = 0
+
+      -- [入力条件] --
+      /*IF data.KYOTEN_CD != null */ 
+      AND tje.KYOTEN_CD =  /*data.KYOTEN_CD*/0 /*END*/
+      AND CONVERT(nvarchar, tje.SAGYOU_DATE, 112) >=  CONVERT(nvarchar, /*data.KIKAN_DATE_FROM*/null, 112)
+      AND CONVERT(nvarchar, tje.SAGYOU_DATE, 112) <=  CONVERT(nvarchar, /*data.KIKAN_DATE_TO*/null, 112)
+
+    -- 定期実績荷降 --
+    LEFT JOIN dbo.T_TEIKI_JISSEKI_NIOROSHI AS tjn
+      ON tjn.SYSTEM_ID = tjd.SYSTEM_ID
+      AND tjn.SEQ = tjd.SEQ
+	  AND tjn.NIOROSHI_NUMBER = tjd.NIOROSHI_NUMBER
+
+    -- 現場マスタ --
+    INNER JOIN dbo.M_GENBA AS mg
+      ON mg.GYOUSHA_CD = tjd.GYOUSHA_CD
+      AND mg.GENBA_CD = tjd.GENBA_CD
+
+    -- 取引先マスタ --
+    INNER JOIN dbo.M_TORIHIKISAKI AS mt
+      ON mt.TORIHIKISAKI_CD = mg.TORIHIKISAKI_CD
+
+    -- 取引先請求情報マスタ --
+    INNER JOIN dbo.M_TORIHIKISAKI_SEIKYUU AS ts
+      ON ts.TORIHIKISAKI_CD = mg.TORIHIKISAKI_CD
+
+	-- 取引先支払情報マスタ --
+	INNER JOIN dbo.M_TORIHIKISAKI_SHIHARAI as tsh
+		ON tsh.TORIHIKISAKI_CD = mg.TORIHIKISAKI_CD
+		
+    INNER JOIN dbo.M_GENBA_TEIKI_HINMEI AS teiki
+      ON teiki.GYOUSHA_CD = tjd.GYOUSHA_CD
+      AND teiki.GENBA_CD = tjd.GENBA_CD
+      AND teiki.DENPYOU_KBN_CD = tjd.DENPYOU_KBN_CD
+      AND teiki.HINMEI_CD = tjd.HINMEI_CD
+	  
+    INNER JOIN dbo.M_GENBA_TSUKI_HINMEI AS tsuki
+      ON tsuki.GYOUSHA_CD = teiki.GYOUSHA_CD
+      AND tsuki.GENBA_CD = teiki.GENBA_CD
+      AND tsuki.DENPYOU_KBN_CD = teiki.DENPYOU_KBN_CD
+      AND tsuki.HINMEI_CD = teiki.TSUKI_HINMEI_CD
+      AND tsuki.CHOUKA_SETTING = 1
+    WHERE 
+    tjd.KEIYAKU_KBN = 1
+    -- 取引先
+    /*IF data.TORIHIKISAKI_CD_custom != null */ 
+    AND mt.TORIHIKISAKI_CD = /*data.TORIHIKISAKI_CD_custom*/'000000'
+    /*END*/
+	/*IF data.FIX_CONDITION_VALUE == 2 */ 
+    AND tjd.KAKUTEI_FLG = 0
+	/*END*/
+	/*IF data.FIX_CONDITION_VALUE != 2 */ 
+	AND tjd.KAKUTEI_FLG = 1
+	/*END*/
+	
+    -- [入力条件] --
+    /*IF data.SHIMEBI != null */ 
+    AND (
+	  (
+	  -- 請求情報絞込み --
+	    tjd.DENPYOU_KBN_CD = '1'
+		AND  (
+          ts.SHIMEBI1 = /*data.SHIMEBI*/0 
+		)
+      )
+	  OR
+	  (
+	  -- 支払情報絞込み --
+	    tjd.DENPYOU_KBN_CD = '2'
+		AND  (
+          tsh.SHIMEBI1 = /*data.SHIMEBI*/0 
+		)
+	  )
+    )
+    /*END*/
+	/*IF data.SHIMEBI == null */ 
+	    AND (
+	  (
+	  -- 請求情報絞込み --
+	    tjd.DENPYOU_KBN_CD = '1'
+		AND  (
+          ts.TORIHIKI_KBN_CD = 1 
+		)
+      )
+	  OR
+	  (
+	  -- 支払情報絞込み --
+	    tjd.DENPYOU_KBN_CD = '2'
+		AND  (
+          tsh.TORIHIKI_KBN_CD = 1
+		)
+	  )
+    )
+	/*END*/
+    AND ((tjd.UNIT_CD = '3' AND tjd.SUURYOU IS NOT NULL )
+	      OR(tjd.KANSAN_UNIT_CD = '3' AND tjd.KANSAN_SUURYOU IS NOT NULL ))
+) AS t
+
+-- 現場マスタ --
+INNER JOIN dbo.M_GENBA AS mge1
+    ON mge1.GYOUSHA_CD = t.GYOUSHA_CD
+    AND mge1.GENBA_CD = t.GENBA_CD
+
+-- 現場マスタ(荷降) --
+LEFT JOIN dbo.M_GENBA AS mge2
+    ON mge2.GYOUSHA_CD = t.NIOROSHI_GYOUSHA_CD
+    AND mge2.GENBA_CD = t.NIOROSHI_GENBA_CD
+
+-- 業者マスタ --
+INNER JOIN dbo.M_GYOUSHA AS mgs1
+    ON mgs1.GYOUSHA_CD = t.GYOUSHA_CD
+
+-- 業者マスタ(荷降) --
+LEFT JOIN dbo.M_GYOUSHA AS mgs2
+    ON mgs2.GYOUSHA_CD = t.NIOROSHI_GYOUSHA_CD
+
+-- 品名マスタ --
+INNER JOIN dbo.M_HINMEI AS mhe
+    ON mhe.HINMEI_CD = t.HINMEI_CD
+	
+LEFT JOIN dbo.M_KOBETSU_HINMEI AS mkh
+     ON t.GYOUSHA_CD = mkh.GYOUSHA_CD
+    AND t.GENBA_CD = mkh.GENBA_CD
+    AND t.HINMEI_CD = mkh.HINMEI_CD
+    AND mkh.DELETE_FLG = 0
+
+LEFT JOIN dbo.M_KOBETSU_HINMEI AS mkh2
+     ON t.GYOUSHA_CD = mkh2.GYOUSHA_CD
+    AND mkh2.GENBA_CD = ''
+    AND t.HINMEI_CD = mkh2.HINMEI_CD
+    AND mkh2.DELETE_FLG = 0
+
+-- 取引先マスタ --
+INNER JOIN dbo.M_TORIHIKISAKI AS mtr
+    ON mtr.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+
+-- 取引先_請求情報マスタ --
+INNER JOIN dbo.M_TORIHIKISAKI_SEIKYUU AS mtsk
+    ON mtsk.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+    
+-- 取引先_支払情報マスタ --
+INNER JOIN dbo.M_TORIHIKISAKI_SHIHARAI AS mtsh
+    ON mtsh.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+
+-- 現場_定期品名マスタ -- [2014/01/25] INNER->LEFT --
+LEFT OUTER JOIN dbo.M_GENBA_TEIKI_HINMEI AS mgh
+    ON mgh.GYOUSHA_CD = t.GYOUSHA_CD
+    AND mgh.GENBA_CD = t.GENBA_CD
+    AND mgh.HINMEI_CD = t.HINMEI_CD
+    AND mgh.UNIT_CD = t.UNIT_CD_TRUE
+    AND mgh.DENPYOU_KBN_CD = t.DENPYOU_KBN_CD
+LEFT JOIN dbo.M_GENBA_TSUKI_HINMEI AS tsuki
+    ON mgh.GYOUSHA_CD = tsuki.GYOUSHA_CD
+    AND mgh.GENBA_CD = tsuki.GENBA_CD
+    AND mgh.TSUKI_HINMEI_CD = tsuki.HINMEI_CD
+    AND mgh.DENPYOU_KBN_CD = tsuki.DENPYOU_KBN_CD
+    AND tsuki.CHOUKA_SETTING = 1
+    
+-- 品名マスタ --
+LEFT JOIN dbo.M_HINMEI AS mhe2
+    ON mhe2.HINMEI_CD = tsuki.HINMEI_CD
+
+-- 消費税マスタ --
+INNER JOIN dbo.M_SHOUHIZEI AS msz
+    ON 1 = 1
+	AND (
+        --[2014/01/29] DENPYOU_DATE->SAGYOU_DATE--
+		msz.TEKIYOU_BEGIN <= CONVERT(DATETIME, CONVERT(nvarchar, t.SAGYOU_DATE, 111), 120) 
+		AND (msz.TEKIYOU_END IS NULL OR msz.TEKIYOU_END >= CONVERT(DATETIME, CONVERT(nvarchar,t.SAGYOU_DATE, 111), 120))
+	)
+
+-- 車種マスタ -- 
+LEFT JOIN dbo.M_SHASHU AS shashu
+	ON t.SHASHU_CD = shashu.SHASHU_CD
+
+-- 車輌マスタ --
+LEFT JOIN dbo.M_SHARYOU AS sharyou
+	ON sharyou.GYOUSHA_CD = t.UNPAN_GYOUSHA_CD AND sharyou.SHARYOU_CD = t.SHARYOU_CD
+
+-- 運転者マスタ --
+LEFT JOIN dbo.M_SHAIN AS shain
+    ON t.UNTENSHA_CD = shain.SHAIN_CD
+
+ORDER BY 
+  t.TORIHIKISAKI_CD ASC
+  , t.GYOUSHA_CD ASC
+  , t.GENBA_CD ASC
+  , t.HINMEI_CD ASC
+  , t.UNIT_CD ASC

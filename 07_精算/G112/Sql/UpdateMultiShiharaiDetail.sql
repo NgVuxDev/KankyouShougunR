@@ -1,0 +1,5 @@
+﻿UPDATE
+  T_SEISAN_DETAIL
+SET DELETE_FLG = '1'
+ WHERE 
+ SEISAN_NUMBER IN /*arrShiharaiNumber*/() 

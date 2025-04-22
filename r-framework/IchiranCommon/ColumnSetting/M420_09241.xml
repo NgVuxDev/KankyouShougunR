@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9241">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="パターン名" Needs="1" TableName="M_SBNB_PATTERN" Name="PATTERN_NAME" Format="" />
+      <Column ID="2" DispNumber="" DispName="パターンフリガナ" Needs="1" TableName="M_SBNB_PATTERN" Name="PATTERN_FURIGANA" Format="" />
+      <Column ID="3" DispNumber="" DispName="処分業者CD" Needs="0" TableName="M_SBNB_PATTERN" Name="GYOUSHA_CD" Format="" />
+      <Column ID="4" DispNumber="" DispName="処分業者名" Needs="0" TableName="M_SBNB_PATTERN" Name="GYOUSHA_NAME" Format="" />
+      <Column ID="5" DispNumber="" DispName="処分業者都道府県" Needs="0" TableName="MT1" Name="TODOUFUKEN_NAME_RYAKU" Format="" />
+      <Column ID="6" DispNumber="" DispName="処分業者住所1" Needs="0" TableName="M_SBNB_PATTERN" Name="GYOUSHA_ADDRESS1" Format="" />
+      <Column ID="7" DispNumber="" DispName="処分業者住所2" Needs="0" TableName="M_SBNB_PATTERN" Name="GYOUSHA_ADDRESS2" Format="" />
+      <Column ID="8" DispNumber="" DispName="最終処分場CD" Needs="0" TableName="M_SBNB_PATTERN" Name="GENBA_CD" Format="" />
+      <Column ID="9" DispNumber="" DispName="最終処分場名" Needs="0" TableName="M_SBNB_PATTERN" Name="GENBA_NAME" Format="" />
+      <Column ID="10" DispNumber="" DispName="最終処分場都道府県" Needs="0" TableName="MT2" Name="TODOUFUKEN_NAME_RYAKU" Format="" />
+      <Column ID="11" DispNumber="" DispName="最終処分場住所1" Needs="0" TableName="M_SBNB_PATTERN" Name="GENBA_ADDRESS1" Format="" />
+      <Column ID="12" DispNumber="" DispName="最終処分場住所2" Needs="0" TableName="M_SBNB_PATTERN" Name="GENBA_ADDRESS2" Format="" />
+      <Column ID="13" DispNumber="" DispName="処分方法CD" Needs="0" TableName="M_SBNB_PATTERN" Name="SHOBUN_HOUHOU_CD" Format="" />
+      <Column ID="14" DispNumber="" DispName="処分方法名" Needs="0" TableName="M_SHOBUN_HOUHOU1" Name="SHOBUN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="" DispName="施設の処理能力（t／日）" Needs="0" TableName="M_SBNB_PATTERN" Name="SHORI_SPEC" Format="" />
+      <Column ID="16" DispNumber="" DispName="その他（再生方法等）" Needs="0" TableName="M_SBNB_PATTERN" Name="OTHER" Format="" />
+      <Column ID="17" DispNumber="" DispName="作成者" Needs="0" TableName="M_SBNB_PATTERN" Name="CREATE_USER" Format="" />
+      <Column ID="18" DispNumber="" DispName="作成日時" Needs="0" TableName="M_SBNB_PATTERN" Name="CREATE_DATE" Format="" />
+      <Column ID="19" DispNumber="" DispName="作成PC" Needs="0" TableName="M_SBNB_PATTERN" Name="CREATE_PC" Format="" />
+      <Column ID="20" DispNumber="" DispName="最終更新者" Needs="0" TableName="M_SBNB_PATTERN" Name="UPDATE_USER" Format="" />
+      <Column ID="21" DispNumber="" DispName="最終更新日時" Needs="0" TableName="M_SBNB_PATTERN" Name="UPDATE_DATE" Format="" />
+      <Column ID="22" DispNumber="" DispName="最終更新PC" Needs="0" TableName="M_SBNB_PATTERN" Name="UPDATE_PC" Format="" />
+    </Group>
+    <JoinCondition TableName="M_SHOBUN_HOUHOU1">LEFT JOIN M_SHOBUN_HOUHOU M_SHOBUN_HOUHOU1 ON M_SBNB_PATTERN.SHOBUN_HOUHOU_CD = M_SHOBUN_HOUHOU1.SHOBUN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="MT1">LEFT JOIN M_GYOUSHA MGYOUSHA ON MGYOUSHA.GYOUSHA_CD = M_SBNB_PATTERN.GYOUSHA_CD LEFT JOIN M_TODOUFUKEN MT1 ON MT1.TODOUFUKEN_CD = MGYOUSHA.GYOUSHA_TODOUFUKEN_CD</JoinCondition>
+    <JoinCondition TableName="MT2">LEFT JOIN M_GENBA MGENBA ON MGENBA.GENBA_CD = M_SBNB_PATTERN.GENBA_CD AND MGENBA.GYOUSHA_CD = M_SBNB_PATTERN.GYOUSHA_CD LEFT JOIN M_TODOUFUKEN MT2 ON MT2.TODOUFUKEN_CD = MGENBA.GENBA_TODOUFUKEN_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

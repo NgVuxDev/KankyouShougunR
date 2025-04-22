@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F6BEB01C-BF29-407F-9F04-6B357B2A647F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.Adjustment.Shiharaishimesyori</RootNamespace>
+    <AssemblyName>Shiharaishimesyori</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\G110.cs" />
+    <Compile Include="APP\UIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIForm.Designer.cs">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIHeader.designer.cs">
+      <DependentUpon>UIHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\ShiharaiShimeShoriDao.cs" />
+    <Compile Include="DTO\CheckErrorMessageDTOClass.cs" />
+    <Compile Include="DTO\SaishimeSearchDTOClass.cs" />
+    <Compile Include="DTO\ShiharaiShimeShoriDispDto.cs" />
+    <Compile Include="Logic\ShimeLogicClass.cs" />
+    <Compile Include="Logic\LogicClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DeleteShimeShoriChuu.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APP\UIForm.resx">
+      <DependentUpon>UIForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIHeader.resx">
+      <DependentUpon>UIHeader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\CommunicateLib\CommunicateLib.csproj">
+      <Project>{48903EDC-99CD-43E0-97B7-548DBC1DA889}</Project>
+      <Name>CommunicateLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G117\G117.csproj">
+      <Project>{F0C1E2F2-12F0-4683-8FBD-F650B3EFC477}</Project>
+      <Name>G117</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G333\G333.csproj">
+      <Project>{A8BC1B36-36A1-4B98-89E6-56D5C6845E83}</Project>
+      <Name>G333</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Setting\ButtonSettingKikanChange.xml" />
+    <EmbeddedResource Include="Setting\ButtonSettingKikanDenpyou.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckDateSelectedNotZensha.sql" />
+    <EmbeddedResource Include="Sql\CheckDateSelectedZensha.sql" />
+    <EmbeddedResource Include="Sql\CheckErrorTableData.sql" />
+    <EmbeddedResource Include="Sql\CheckShimeShoriUserData.sql" />
+    <EmbeddedResource Include="Sql\GetDenpyouShimeShoriDispData.sql" />
+    <EmbeddedResource Include="Sql\GetKaisyuutukiData.sql" />
+    <EmbeddedResource Include="Sql\GetKikanShimeShoriDispData.sql" />
+    <EmbeddedResource Include="Sql\GetKyotenData.sql" />
+    <EmbeddedResource Include="Sql\GetShukkinDataDenpyouMeisai.sql" />
+    <EmbeddedResource Include="Sql\GetShukkinDataKikan.sql" />
+    <EmbeddedResource Include="Sql\GetRowNumber.sql" />
+    <EmbeddedResource Include="Sql\GetTorihikisakiData.sql" />
+    <EmbeddedResource Include="Sql\GetCorpInfo.sql" />
+    <EmbeddedResource Include="Sql\GetUriageDataKikan.sql" />
+    <EmbeddedResource Include="Sql\GetZenkaiKurikosigakuDataKikan.sql" />
+    <EmbeddedResource Include="Sql\GetZenkaiKurikosigakuKaisiDataKikan.sql" />
+    <EmbeddedResource Include="Sql\SelectErrorTableData.sql" />
+    <EmbeddedResource Include="Sql\SelectSeisanDenpyouNewDate.sql" />
+    <EmbeddedResource Include="Sql\SelectShimeShoriChuuTableData.sql" />
+    <EmbeddedResource Include="Sql\GetUriageDataDenpyou.sql" />
+    <EmbeddedResource Include="Sql\SelectShimeJikkouRirekiTableData.sql" />
+    <EmbeddedResource Include="Sql\SelectSeisanDenpyouKagamiTableData.sql" />
+    <EmbeddedResource Include="Sql\SelectSeisanDenpyouTableData.sql" />
+    <EmbeddedResource Include="Sql\SelectSeisanDetailTableData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\虫眼鏡.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetShimebiCheck.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckMishimeDate.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckShiharaData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetSeisanSaishimeData.sql" />
+    <EmbeddedResource Include="Sql\UpdateSeisanSaishimeiDeleteData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckSeisanInxsUploadStatus.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetJikkouRirekiSearchData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckLatestSeisanData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetDenpyouShimeshoriDispDataForShukkin.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Barcode\GetShukkaData.sql" />
+    <EmbeddedResource Include="Sql\Barcode\GetUkeireData.sql" />
+    <EmbeddedResource Include="Sql\Barcode\GetUriageData.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

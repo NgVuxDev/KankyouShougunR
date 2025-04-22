@@ -1,0 +1,16 @@
+﻿SELECT
+GYOUSHA_CD,	
+SHARYOU_CD	,
+SHARYOU_NAME,	
+SHARYOU_NAME_RYAKU,	
+SHASYU_CD,	
+SHAIN_CD,	
+SAIDAI_SEKISAI,	
+KUUSHA_JYURYO,	
+SHARYOU_BIKOU
+FROM
+M_SHARYOU 
+WHERE
+1 = 1
+ /*IF gosyaCd != null && gosyaCd != ''*/ AND M_SHARYOU.GYOUSHA_CD = /*gosyaCd*//*END*/
+ /*IF sharyouCd != null && sharyouCd != ''*/ AND M_SHARYOU.SHARYOU_CD = /*sharyouCd*//*END*/

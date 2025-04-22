@@ -1,0 +1,10 @@
+SELECT 
+    *
+FROM 
+    dbo.M_DENSHI_JIGYOUSHA
+/*BEGIN*/WHERE
+ /*IF data.EDI_MEMBER_ID != null*/
+ EDI_MEMBER_ID = /*data.EDI_MEMBER_ID*/'000001'
+ /*END*/
+/*END*/
+ORDER BY EDI_MEMBER_ID

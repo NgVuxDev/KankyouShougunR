@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="155">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="調整伝票番号" Needs="1" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="CHOUSEI_NUMBER" Format="" />
+      <Column ID="2" DispNumber="" DispName="伝票日付" Needs="1" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="DENPYOU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="3" DispNumber="" DispName="作成者" Needs="0" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="4" DispNumber="" DispName="作成日時" Needs="0" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="5" DispNumber="" DispName="作成PC" Needs="0" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="6" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="7" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="8" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="UPDATE_PC" Format="" />
+      <Column ID="9" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_ZAIKO_CHOUSEI_ENTRY" Name="DELETE_FLG" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="業者CD" Needs="0" TableName="T_ZAIKO_CHOUSEI_DETAIL" Name="GYOUSHA_CD" Format="" />
+      <Column ID="2" DispNumber="" DispName="業者名" Needs="0" TableName="M_GYOUSHA1" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="3" DispNumber="" DispName="現場CD" Needs="0" TableName="T_ZAIKO_CHOUSEI_DETAIL" Name="GENBA_CD" Format="1" />
+      <Column ID="4" DispNumber="" DispName="現場名" Needs="0" TableName="M_GENBA1" Name="GENBA_NAME_RYAKU" Format="1" />
+      <Column ID="5" DispNumber="" DispName="在庫品名CD" Needs="0" TableName="T_ZAIKO_CHOUSEI_DETAIL" Name="ZAIKO_HINMEI_CD" Format="" />
+      <Column ID="6" DispNumber="" DispName="在庫品名" Needs="0" TableName="M_ZAIKO_HINMEI1" Name="ZAIKO_HINMEI_RYAKU" Format="" />
+      <Column ID="7" DispNumber="" DispName="在庫数（Kg）" Needs="0" TableName="" Name="T_ZAIKO_CHOUSEI_DETAIL.KINGAKU / T_ZAIKO_CHOUSEI_DETAIL.TANKA - T_ZAIKO_CHOUSEI_DETAIL.JYUURYOU" Format="2" />
+      <Column ID="8" DispNumber="" DispName="調整数量（Kg）" Needs="0" TableName="T_ZAIKO_CHOUSEI_DETAIL" Name="JYUURYOU" Format="2" />
+      <Column ID="9" DispNumber="" DispName="調整後在庫数（Kg）" Needs="0" TableName="" Name="T_ZAIKO_CHOUSEI_DETAIL.KINGAKU / T_ZAIKO_CHOUSEI_DETAIL.TANKA" Format="2" />
+      <Column ID="10" DispNumber="" DispName="単価" Needs="0" TableName="T_ZAIKO_CHOUSEI_DETAIL" Name="TANKA" Format="3" />
+      <Column ID="11" DispNumber="" DispName="金額" Needs="0" TableName="T_ZAIKO_CHOUSEI_DETAIL" Name="KINGAKU" Format="#,##0" />
+      <Column ID="12" DispNumber="" DispName="調整種別" Needs="0" TableName="" Name="CASE WHEN T_ZAIKO_CHOUSEI_DETAIL.JYUURYOU > 0 THEN '繰入' WHEN T_ZAIKO_CHOUSEI_DETAIL.JYUURYOU = 0 THEN '' ELSE '差引' END" Format="" />
+    </Group>
+    <JoinCondition TableName="M_GYOUSHA1">LEFT JOIN M_GYOUSHA M_GYOUSHA1 ON T_ZAIKO_CHOUSEI_DETAIL.GYOUSHA_CD = M_GYOUSHA1.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA1">LEFT JOIN M_GENBA M_GENBA1 ON T_ZAIKO_CHOUSEI_DETAIL.GYOUSHA_CD = M_GENBA1.GYOUSHA_CD AND T_ZAIKO_CHOUSEI_DETAIL.GENBA_CD = M_GENBA1.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="M_ZAIKO_HINMEI1">LEFT JOIN M_ZAIKO_HINMEI M_ZAIKO_HINMEI1 ON T_ZAIKO_CHOUSEI_DETAIL.ZAIKO_HINMEI_CD = M_ZAIKO_HINMEI1.ZAIKO_HINMEI_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

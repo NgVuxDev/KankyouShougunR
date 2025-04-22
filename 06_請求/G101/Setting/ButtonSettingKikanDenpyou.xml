@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" ?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <IchiranButtonName>[F2]&#xD;&#xA;伝票</IchiranButtonName>
+    <IchiranButtonHintText>伝票請求締処理画面に切り替えます。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <IchiranButtonName>[F3]&#xD;&#xA;前月</IchiranButtonName>
+    <IchiranButtonHintText>請求締日を1ヶ月前に変更します。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func4</ButtonName>
+    <IchiranButtonName>[F4]&#xD;&#xA;翌月</IchiranButtonName>
+    <IchiranButtonHintText>請求締日を1ヶ月後に変更します。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func5</ButtonName>
+    <IchiranButtonName>[F5]&#xD;&#xA;ﾌｫｰｶｽ設定</IchiranButtonName>
+    <IchiranButtonHintText> </IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func8</ButtonName>
+    <IchiranButtonName>[F8]&#xD;&#xA;検索</IchiranButtonName>
+    <IchiranButtonHintText>検索条件に設定した内容にて取引先リストを再表示します。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <IchiranButtonName>[F9]&#xD;&#xA;実行</IchiranButtonName>
+    <IchiranButtonHintText>請求締処理を実行します。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func10</ButtonName>
+    <IchiranButtonName>[F10]&#xD;&#xA;ﾛｯｸ解除</IchiranButtonName>
+    <IchiranButtonHintText>締め処理中に強制終了してしまった場合リカバリーします</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <IchiranButtonHintText>画面を閉じます</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <IchiranButtonName>[1] 請求チェック</IchiranButtonName>
+    <IchiranButtonHintText>請求データのチェックを行います。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process2</ButtonName>
+    <IchiranButtonName>[2] 請求書発行</IchiranButtonName>
+    <IchiranButtonHintText>請求書発行画面に切り替わります。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process3</ButtonName>
+    <IchiranButtonName>[3] 請求一覧</IchiranButtonName>
+    <IchiranButtonHintText>請求一覧画面に切り替わります。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process4</ButtonName>
+    <IchiranButtonName>[4] 実行⇒現金入金</IchiranButtonName>
+    <IchiranButtonHintText> </IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process5</ButtonName>
+    <IchiranButtonName>[5] 実行⇒振込入金</IchiranButtonName>
+    <IchiranButtonHintText> </IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process6</ButtonName>
+    <IchiranButtonName>[6] INXS請求書発行</IchiranButtonName>
+    <IchiranButtonHintText>INXS請求書発行画面に切り替わります。</IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

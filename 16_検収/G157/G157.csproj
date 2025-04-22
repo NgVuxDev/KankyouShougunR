@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A72C28B2-6998-4CFF-B7A8-009E8EBB0DED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.Inspection.KenshuMeisaiNyuryoku</RootNamespace>
+    <AssemblyName>KenshuMeisaiNyuryoku</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\xx_MultiRow\G725\G725.csproj">
+      <Project>{E8EF76D7-1548-41D2-897B-1444A5A028A2}</Project>
+      <Name>G725</Name>
+    </ProjectReference>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9" />
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <ProjectReference Include="..\..\15_運賃\G153\G153.csproj">
+      <Project>{0D8D9FB0-60CC-4DCB-BA47-1C8C1AF5DEDA}</Project>
+      <Name>G153</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\G157.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="APP\KenshuMeisaiNyuryokuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\KenshuMeisaiNyuryokuForm.Designer.cs">
+      <DependentUpon>KenshuMeisaiNyuryokuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIHeader.designer.cs">
+      <DependentUpon>UIHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Const\ConstClass.cs" />
+    <Compile Include="DTO\KenshuNyuuryokuDTO.cs" />
+    <Compile Include="Logic\KenshuMeisaiNyuryokuLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\KenshuMeisaiNyuryokuForm.resx">
+      <DependentUpon>KenshuMeisaiNyuryokuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIHeader.resx">
+      <DependentUpon>UIHeader.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\Common\Common.csproj">
+      <Project>{7749C25E-83F6-4478-A720-92162E76FB53}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

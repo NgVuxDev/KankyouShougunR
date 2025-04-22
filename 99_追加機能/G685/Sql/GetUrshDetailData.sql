@@ -1,0 +1,6 @@
+﻿  SELECT T_UR_SH_DETAIL.*
+    FROM T_UR_SH_DETAIL
+   WHERE SYSTEM_ID = /*data.SYSTEM_ID.Value*/0
+     AND SEQ = /*data.SEQ.Value*/0
+ORDER BY SYSTEM_ID,
+         DETAIL_SYSTEM_ID

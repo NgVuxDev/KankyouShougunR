@@ -1,0 +1,10 @@
+﻿SELECT	* 
+FROM    T_SEIKYUU_DENPYOU 
+WHERE   TORIHIKISAKI_CD = /*torihikisakiCd*/ 
+AND		NYUUKIN_YOTEI_BI <= /*denpyouDate*/ 
+AND		DELETE_FLG = 0 
+AND		NYUUKIN_YOTEI_BI = (SELECT	MAX(NYUUKIN_YOTEI_BI) 
+							FROM	T_SEIKYUU_DENPYOU 
+							WHERE	TORIHIKISAKI_CD = /*torihikisakiCd*/ 
+							AND		NYUUKIN_YOTEI_BI <= /*denpyouDate*/ 
+							AND		DELETE_FLG = 0) 

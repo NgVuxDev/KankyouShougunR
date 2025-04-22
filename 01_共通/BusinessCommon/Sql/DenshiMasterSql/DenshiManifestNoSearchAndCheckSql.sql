@@ -1,0 +1,25 @@
+﻿SELECT
+    R18.KANRI_ID
+    , R18.SEQ
+    , R18.MANIFEST_ID
+FROM
+    DT_MF_TOC AS TOC
+    INNER JOIN DT_R18 AS R18
+        ON TOC.KANRI_ID = R18.KANRI_ID 
+        AND TOC.LATEST_SEQ = R18.SEQ
+    LEFT JOIN DT_R18_EX AS R18EX 
+        ON R18.KANRI_ID = R18EX.KANRI_ID 
+        AND R18EX.DELETE_FLG = 0
+WHERE
+    -- 自動マニの確認
+    (
+        (TOC.KIND IS NULL OR TOC.KIND = 4)
+        AND (TOC.STATUS_FLAG != 9 AND R18.CANCEL_FLAG != 1)
+        AND R18.MANIFEST_ID = /*data.MANIFEST_ID*/
+    )
+    -- 手動マニ確認
+    OR
+    (
+        (TOC.KIND = 5)
+        AND R18EX.MANIFEST_ID = /*data.MANIFEST_ID*/
+    )

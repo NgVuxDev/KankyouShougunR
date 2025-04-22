@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DatabaseConnectList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <DispName selected="1">FileDB</DispName>
+    <ConnectionString>Data Source=SW08SQL02\\SQL2008R2;Initial Catalog=KankyouShougunR_v2.15_filedata;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=203388;Connect Timeout=20;Encrypt=False</ConnectionString>
+  </Items>
+</DatabaseConnectList>

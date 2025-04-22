@@ -1,0 +1,12 @@
+﻿SELECT
+	MG.GYOUSHA_CD
+FROM
+	M_GYOUSHA AS MG
+WHERE
+/*IF gyoshaCd != ""*/
+	MG.GYOUSHA_CD = /*gyoshaCd*/
+	/*IF joken == 2*/
+	AND MG.GYOUSHAKBN_MANI = 1
+	AND MG.MANI_HENSOUSAKI_KBN = 1
+	/*END*/
+/*END*/

@@ -1,0 +1,10 @@
+﻿SELECT 
+	SHAIN_CD,
+	SHAIN_NAME_RYAKU
+FROM 
+	M_SHAIN 
+WHERE 
+DELETE_FLG = 'False'
+/*IF data.SHAIN_CD != null*/AND M_SHAIN.SHAIN_CD LIKE '%' + /*data.SHAIN_CD*/ + '%'/*END*/
+/*IF data.SHAIN_NAME_RYAKU != null*/AND M_SHAIN.SHAIN_NAME_RYAKU LIKE '%' + /*data.SHAIN_NAME_RYAKU*/ + '%'/*END*/
+AND UNTEN_KBN = '1'

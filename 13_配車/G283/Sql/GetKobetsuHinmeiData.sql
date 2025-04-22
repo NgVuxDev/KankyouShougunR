@@ -1,0 +1,5 @@
+﻿SELECT * FROM M_KOBETSU_HINMEI
+ where DELETE_FLG = 0
+   AND GYOUSHA_CD = /*data.GYOUSHA_CD*/''
+   AND GENBA_CD = /*data.GENBA_CD*/''
+   AND HINMEI_CD = /*data.HINMEI_CD*/''

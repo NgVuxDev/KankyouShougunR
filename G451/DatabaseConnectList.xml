@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DatabaseConnectList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <DispName selected="1">開閉テスト用DB_ver2.1</DispName>
+	  <ConnectionString>Data Source=192.168.1.163;Initial Catalog=Ver2.32_PG;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=123456;Connect Timeout=20;Encrypt=False</ConnectionString>
+  </Items>
+  <Items>
+    <DispName selected="0">フロントDB_ver2.1</DispName>
+    <ConnectionString>Data Source=sw08sql02\\sql2008r2;Initial Catalog=KankyouShougunR_v2.1_frontdb;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=203388;Connect Timeout=20;Encrypt=False</ConnectionString>
+  </Items>
+  <Items>
+    <DispName selected="0">電マニDB_ver2</DispName>
+    <ConnectionString>Data Source=sw08sql02\\sql2008r2;Initial Catalog=KankyouShougunR_v2_denMani;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=203388;Connect Timeout=20;Encrypt=False</ConnectionString>
+  </Items>
+  <Items>
+    <DispName selected="0">開閉テスト用DB_ver2.0</DispName>
+    <ConnectionString>Data Source=sw08sql02\\sql2008r2;Initial Catalog=KankyouShougunR_v2_Init;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=203388;Connect Timeout=20;Encrypt=False</ConnectionString>
+  </Items>
+  <Items>
+    <DispName selected="0">フロントDB_ver2.0</DispName>
+    <ConnectionString>Data Source=sw08sql02\\sql2008r2;Initial Catalog=KankyouShougunR_v2_frontdb;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=203388;Connect Timeout=20;Encrypt=False</ConnectionString>
+  </Items>
+  <Items>
+    <DispName selected="0">環境将軍INXS_ver2.20</DispName>
+    <ConnectionString>Data Source=sw08sql02\\sql2008r2;Initial Catalog=KankyouShougunR_v2.20_INXS;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=203388;Connect Timeout=20;Encrypt=False</ConnectionString>
+  </Items>
+  <Items>
+    <DispName selected="0">ローカルDB</DispName>
+    <ConnectionString>Data Source=PC-29-064\SQLEXPRESS2008R2;Initial Catalog=KankyouShougunR_v2.23.2_sms;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=Ed203388;Connect Timeout=20;Encrypt=False</ConnectionString>
+  </Items>
+</DatabaseConnectList>

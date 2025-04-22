@@ -1,0 +1,53 @@
+﻿   SELECT UR_SH_E.DENPYOU_DATE,
+          UR_SH_E.TORIHIKISAKI_CD,
+          UR_SH_E.TORIHIKISAKI_NAME,
+          UR_SH_E.NIZUMI_GYOUSHA_CD,
+          UR_SH_E.NIZUMI_GYOUSHA_NAME,
+          UR_SH_E.GYOUSHA_CD,
+          UR_SH_E.GYOUSHA_NAME,
+          UR_SH_E.NIZUMI_GENBA_CD,
+          UR_SH_E.NIZUMI_GENBA_NAME,
+          UR_SH_E.GENBA_CD,
+          UR_SH_E.GENBA_NAME,
+          UR_SH_E.UNPAN_GYOUSHA_CD,
+          UR_SH_E.UNPAN_GYOUSHA_NAME,
+          UR_SH_E.NIOROSHI_GYOUSHA_CD,
+          UR_SH_E.NIOROSHI_GYOUSHA_NAME,
+          UR_SH_E.NIOROSHI_GENBA_CD,
+          UR_SH_E.NIOROSHI_GENBA_NAME,
+          HAIKI.HAIKI_SHURUI_CD,
+          HAIKI.HAIKI_SHURUI_NAME_RYAKU,
+          UR_SH_E.UNTENSHA_CD,
+          UR_SH_E.UNTENSHA_NAME,
+          UR_SH_E.SHASHU_CD,
+          UR_SH_E.SHASHU_NAME,
+          UR_SH_E.SHARYOU_CD,
+          UR_SH_E.SHARYOU_NAME,
+          UR_SH_E.SYSTEM_ID,
+          UR_SH_D.DETAIL_SYSTEM_ID,
+          UR_SH_E.MANIFEST_SHURUI_CD
+     FROM (SELECT TOP 1
+                  UR_SH_E.*
+             FROM T_UR_SH_ENTRY  UR_SH_E
+        LEFT JOIN T_UR_SH_DETAIL UR_SH_D
+               ON UR_SH_E.SYSTEM_ID = UR_SH_D.SYSTEM_ID
+              AND UR_SH_E.SEQ       = UR_SH_D.SEQ
+            WHERE UR_SH_E.UR_SH_NUMBER = /*data.RENKEI_NUMBER*/0
+              AND UR_SH_E.DELETE_FLG   = 0
+             /*IF data.RENKEI_ROW_NO != NULL*/
+              AND UR_SH_D.ROW_NO       = /*data.RENKEI_ROW_NO*/0
+            /*END*/) UR_SH_E
+LEFT JOIN T_UR_SH_DETAIL UR_SH_D
+       ON UR_SH_E.SYSTEM_ID = UR_SH_D.SYSTEM_ID
+      AND UR_SH_E.SEQ       = UR_SH_D.SEQ
+LEFT JOIN M_HINMEI
+       ON UR_SH_D.HINMEI_CD   = M_HINMEI.HINMEI_CD
+LEFT JOIN M_HAIKI_SHURUI HAIKI
+       ON HAIKI.HAIKI_KBN_CD    = 2
+      AND HAIKI.HAIKI_SHURUI_CD = M_HINMEI.KP_HAIKI_SHURUI_CD
+    WHERE UR_SH_E.UR_SH_NUMBER = /*data.RENKEI_NUMBER*/0
+      AND UR_SH_E.DELETE_FLG   = 0
+     /*IF data.RENKEI_ROW_NO != NULL*/
+      AND UR_SH_D.ROW_NO       = /*data.RENKEI_ROW_NO*/0
+     /*END*/
+

@@ -1,0 +1,3055 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfFormAssembly xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FormAssembly>
+    <FormID>M001</FormID>
+    <Caption>委託契約書入力</Caption>
+    <AssemblyName>ItakuKeiyakuHoshu.dll</AssemblyName>
+    <Namespace>ItakuKeiyakuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M011</FormID>
+    <Caption>委託契約書許可証期限管理</Caption>
+    <AssemblyName>ItakuKeiyakushoKyokashoKigenHoshu.dll</AssemblyName>
+    <Namespace>ItakuKeiyakushoKyokashoKigenHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M014</FormID>
+    <Caption>覚書一括入力</Caption>
+    <AssemblyName>OboegakiIkkatuHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.OboegakiIkkatuHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G015</FormID>
+    <Caption>受付（収集）入力</Caption>
+    <AssemblyName>UketsukeSyuusyuuNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Reception.UketsukeSyuusyuuNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G016</FormID>
+    <Caption>受付（出荷）入力</Caption>
+    <AssemblyName>UketsukeSyukkaNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Reception.UketsukeSyukkaNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G018</FormID>
+    <Caption>受付（持込）入力</Caption>
+    <AssemblyName>UketsukeMochikomiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Reception.UketsukeMochikomiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G020</FormID>
+    <Caption>受付（クレーム）入力</Caption>
+    <AssemblyName>UketsukeKuremuNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Reception.UketsukeKuremuNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G021</FormID>
+    <Caption>受付一覧</Caption>
+    <AssemblyName>UketukeiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Reception.UketukeiIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G026</FormID>
+    <Caption>配車割当（1日）入力</Caption>
+    <AssemblyName>HaishaWariateDay.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.HaishaWariateDay</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G027</FormID>
+    <Caption>作業日変更</Caption>
+    <AssemblyName>SagyoubiHenkou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.SagyoubiHenkou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G030</FormID>
+    <Caption>定期配車入力</Caption>
+    <AssemblyName>TeikiHaishaNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.TeikiHaishaNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G031</FormID>
+    <Caption>コース配車依頼入力</Caption>
+    <AssemblyName>CourseHaishaIraiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.CourseHaishaIraiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G032</FormID>
+    <Caption>配車一覧</Caption>
+    <AssemblyName>TeikiHaisyaIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.TeikiHaisyaIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G033</FormID>
+    <Caption>配車明細表</Caption>
+    <AssemblyName>HaishaMeisai.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.HaishaMeisai</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G041</FormID>
+    <Caption>設置コンテナ一覧</Caption>
+    <AssemblyName>ContenaIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.ContenaIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G044</FormID>
+    <Caption>定期配車一括作成</Caption>
+    <AssemblyName>TeikiHaishaIkkatsuSakusei.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.TeikiHaishaIkkatsuSakusei</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G045</FormID>
+    <Caption>計量入力</Caption>
+    <AssemblyName>Keiryou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Scale.Keiryou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G051</FormID>
+    <Caption>受入入力</Caption>
+    <AssemblyName>UkeireNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UkeireNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G721</FormID>
+    <Caption>受入入力</Caption>
+    <AssemblyName>UkeireNyuuryoku2.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UkeireNyuuryoku2</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G053</FormID>
+    <Caption>出荷入力</Caption>
+    <AssemblyName>SyukkaNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.SyukkaNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G054</FormID>
+    <Caption>売上／支払入力</Caption>
+    <AssemblyName>UriageShiharaiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageShiharaiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G055</FormID>
+    <Caption>伝票一覧</Caption>
+    <AssemblyName>Denpyouichiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.Denpyouichiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G059</FormID>
+    <Caption>売上確定入力</Caption>
+    <AssemblyName>Uriagekakutenyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.Uriagekakutenyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G064</FormID>
+    <Caption>売上元帳</Caption>
+    <AssemblyName>UriageMotocho.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesManagement.UriageMotocho.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G065</FormID>
+    <Caption>売掛金一覧表</Caption>
+    <AssemblyName>UrikakekinItiranHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesManagement.UrikakekinItiranHyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G068</FormID>
+    <Caption>支払確定入力</Caption>
+    <AssemblyName>Shiharaikakuteinyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesManagement.Shiharaikakuteinyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G073</FormID>
+    <Caption>支払元帳</Caption>
+    <AssemblyName>ShiharaiMotocho.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesManagement.ShiharaiMotocho.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G074</FormID>
+    <Caption>買掛金一覧表</Caption>
+    <AssemblyName>KaikakekinItiranHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaymentManagement.KaikakekinItiranHyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G077</FormID>
+    <Caption>入金入力</Caption>
+    <AssemblyName>Nyukinnyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.Nyukinnyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G611</FormID>
+    <Caption>入金入力</Caption>
+    <AssemblyName>NyukinKeshikomiNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyukinKeshikomiNyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G078</FormID>
+    <Caption>入出金一覧</Caption>
+    <AssemblyName>NyuuSyutuKinIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyuuSyutuKinIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G084</FormID>
+    <Caption>入金消込履歴一覧</Caption>
+    <AssemblyName>NyukinKeshikomi.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyukinKeshikomi</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G090</FormID>
+    <Caption>出金入力</Caption>
+    <AssemblyName>Syukinnyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.Syukinnyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M012</FormID>
+    <Caption>委託契約書一覧</Caption>
+    <AssemblyName>ItakuKeiyakushoIchiran.dll</AssemblyName>
+    <Namespace>ItakuKeiyakushoIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G101</FormID>
+    <Caption>請求締処理</Caption>
+    <AssemblyName>SeikyuShimeShori.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.SeikyuShimeShori</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G102</FormID>
+    <Caption>請求書確認</Caption>
+    <AssemblyName>Seikyushokakunin.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.Seikyushokakunin</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G103</FormID>
+    <Caption>請求一覧</Caption>
+    <AssemblyName>Seikyuichiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.Seikyuichiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G107</FormID>
+    <Caption>請求書発行</Caption>
+    <AssemblyName>SeikyuushoHakkou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.SeikyuushoHakkou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G108</FormID>
+    <Caption>請求チェック表</Caption>
+    <AssemblyName>Seikyucheckhyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.Seikyucheckhyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G109</FormID>
+    <Caption>請求宛名ラベル</Caption>
+    <AssemblyName>AtenaLabel.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.AtenaLabel</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G110</FormID>
+    <Caption>支払締処理</Caption>
+    <AssemblyName>Shiharaishimesyori.dll</AssemblyName>
+    <Namespace>Shougun.Core.Adjustment.Shiharaishimesyori</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G111</FormID>
+    <Caption>支払明細書確認</Caption>
+    <AssemblyName>Shiharaimeisaishokakunin.dll</AssemblyName>
+    <Namespace>Shougun.Core.Adjustment.Shiharaimeisaishokakunin</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G112</FormID>
+    <Caption>支払明細一覧</Caption>
+    <AssemblyName>Shiharaiichiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Adjustment.Shiharaiichiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G116</FormID>
+    <Caption>支払明細書発行</Caption>
+    <AssemblyName>ShiharaiMeisaishoHakko.dll</AssemblyName>
+    <Namespace>Shougun.Core.Adjustment.ShiharaiMeisaishoHakko</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G117</FormID>
+    <Caption>支払チェック表</Caption>
+    <AssemblyName>Shiharaicheckhyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.Adjustment.Shiharaicheckhyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G118</FormID>
+    <Caption>精算宛名ラベル</Caption>
+    <AssemblyName>AtenaLabel.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.AtenaLabel</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G119</FormID>
+    <Caption>産廃マニフェスト(直行)</Caption>
+    <AssemblyName>SampaiManifestoChokkou.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.SampaiManifestoChokkou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G120</FormID>
+    <Caption>産廃マニフェスト(積替)</Caption>
+    <AssemblyName>SampaiManifestoThumiKae.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.SampaiManifestoThumiKae</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G121</FormID>
+    <Caption>建廃マニフェスト</Caption>
+    <AssemblyName>KenpaiManifestoNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.KenpaiManifestoNyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G122</FormID>
+    <Caption>マニフェスト入力(一括)</Caption>
+    <AssemblyName>ManifestNyuryokuIkkatsu.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestNyuryokuIkkatsu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G124</FormID>
+    <Caption>マニフェストチェック表</Caption>
+    <AssemblyName>ManifestCheckHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestCheckHyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G126</FormID>
+    <Caption>マニフェスト一覧</Caption>
+    <AssemblyName>Manifestichiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G127</FormID>
+    <Caption>マニフェスト明細表</Caption>
+    <AssemblyName>Manifestmeisaihyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.Manifestmeisaihyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G128</FormID>
+    <Caption>マニフェスト推移表</Caption>
+    <AssemblyName>Manifestsuiihyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.Manifestsuiihyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G133</FormID>
+    <Caption>廃棄物帳簿</Caption>
+    <AssemblyName>HaikibutuTyoubo.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.HaikibutuTyoubo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G137</FormID>
+    <Caption>返却日入力／一覧</Caption>
+    <AssemblyName>HenkyakuIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.HenkyakuIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G138</FormID>
+    <Caption>マニフェスト宛名ラベル</Caption>
+    <AssemblyName>AtenaLabel.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.AtenaLabel</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G141</FormID>
+    <Caption>電子マニフェスト入力</Caption>
+    <AssemblyName>DenshiManifestNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.DenshiManifestNyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G142</FormID>
+    <Caption>送信保留登録情報</Caption>
+    <AssemblyName>SousinhoryuuTouroku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.SousinhoryuuTouroku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G144</FormID>
+    <Caption>運搬終了報告</Caption>
+    <AssemblyName>UnpanShuryouHoukoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.UnpanShuryouHoukoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G145</FormID>
+    <Caption>処分終了報告</Caption>
+    <AssemblyName>ShobunShuryouHoukoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.ShobunShuryouHoukoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G146</FormID>
+    <Caption>送信保留最終処分報告</Caption>
+    <AssemblyName>SousinHoryuSaisyuSyobunhoukoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.SousinHoryuSaisyuSyobunhoukoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G147</FormID>
+    <Caption>未紐付け一覧</Caption>
+    <AssemblyName>MihimodukeIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.MihimodukeIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G152</FormID>
+    <Caption>>電子マニフェストCSV取込</Caption>
+    <AssemblyName>DenshiCSVTorikomu.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.DenshiCSVTorikomu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G616</FormID>
+    <Caption>混合廃棄物振分</Caption>
+    <AssemblyName>KongouHaikibutsuFuriwake.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.KongouHaikibutsuFuriwake</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G153</FormID>
+    <Caption>運賃入力</Caption>
+    <AssemblyName>UnchinNyuuRyoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Carriage.UnchinNyuuRyoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G157</FormID>
+    <Caption>検収明細入力</Caption>
+    <AssemblyName>KenshuMeisaiNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Inspection.KenshuMeisaiNyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G159</FormID>
+    <Caption>検収一覧表</Caption>
+    <AssemblyName>KensyuuIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Inspection.KensyuuIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G161</FormID>
+    <Caption>代納入力</Caption>
+    <AssemblyName>DainoNyuryuku.dll</AssemblyName>
+    <Namespace>Shougun.Core.PayByProxy.DainoNyuryuku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G167</FormID>
+    <Caption>在庫調整入力</Caption>
+    <AssemblyName>ZaikoTyouseiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.ZaikoTyouseiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G168</FormID>
+    <Caption>在庫調整一覧画面</Caption>
+    <AssemblyName>ZaikoTyouseiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.ZaikoTyouseiIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G170</FormID>
+    <Caption>在庫締め処理</Caption>
+    <AssemblyName>ZaikoShimeSyori.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.ZaikoShimeSyori</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G173</FormID>
+    <Caption>顧客カルテ</Caption>
+    <AssemblyName>KokyakuKarute.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.KokyakuKarute</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G176</FormID>
+    <Caption>検索結果一覧</Caption>
+    <AssemblyName>KensakuKekkaIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.KensakuKekkaIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G186</FormID>
+    <Caption>パターン一覧</Caption>
+    <AssemblyName>PatternIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.PatternIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G187</FormID>
+    <Caption>一覧出力項目選択</Caption>
+    <AssemblyName>IchiranSyu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.IchiranSyu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M188</FormID>
+    <Caption>メニュー権限入力</Caption>
+    <AssemblyName>MenuKengenHoshu.dll</AssemblyName>
+    <Namespace>MenuKengenHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M189</FormID>
+    <Caption>会社休日入力</Caption>
+    <AssemblyName>KaisyaKyujitsuHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.KaisyaKyujitsuHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M190</FormID>
+    <Caption>拠点入力</Caption>
+    <AssemblyName>KyotenHoshu.dll</AssemblyName>
+    <Namespace>KyotenHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M191</FormID>
+    <Caption>自社情報入力</Caption>
+    <AssemblyName>CorpInfoNyuuryokuHoshu.dll</AssemblyName>
+    <Namespace>CorpInfoNyuuryokuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M192</FormID>
+    <Caption>社員入力</Caption>
+    <AssemblyName>ShainHoshu.dll</AssemblyName>
+    <Namespace>ShainHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M193</FormID>
+    <Caption>営業担当者情報入力</Caption>
+    <AssemblyName>EigyouTantoushaHoshu.dll</AssemblyName>
+    <Namespace>EigyouTantoushaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M194</FormID>
+    <Caption>運転者情報入力</Caption>
+    <AssemblyName>UntenshaHoshu.dll</AssemblyName>
+    <Namespace>UntenshaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M195</FormID>
+    <Caption>入力担当者情報入力</Caption>
+    <AssemblyName>NyuuryokuTantoushaHoshu.dll</AssemblyName>
+    <Namespace>NyuuryokuTantoushaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M196</FormID>
+    <Caption>手形保管者情報入力</Caption>
+    <AssemblyName>TegatahokanshaHoshu.dll</AssemblyName>
+    <Namespace>TegatahokanshaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M197</FormID>
+    <Caption>部署入力</Caption>
+    <AssemblyName>BushoHoshu.dll</AssemblyName>
+    <Namespace>BushoHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M198</FormID>
+    <Caption>銀行入力</Caption>
+    <AssemblyName>BankHoshu.dll</AssemblyName>
+    <Namespace>BankHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M199</FormID>
+    <Caption>銀行支店入力</Caption>
+    <AssemblyName>BankShitenHoshu.dll</AssemblyName>
+    <Namespace>BankShitenHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M200</FormID>
+    <Caption>処分担当者情報入力</Caption>
+    <AssemblyName>ShobunTantoushaHoshu.dll</AssemblyName>
+    <Namespace>ShobunTantoushaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G202</FormID>
+    <Caption>運転者休動入力</Caption>
+    <AssemblyName>Untenshakyudounyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.Untenshakyudounyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G203</FormID>
+    <Caption>搬入先休動入力</Caption>
+    <AssemblyName>HannyuusakiKyuudouNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.HannyuusakiKyuudouNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M204</FormID>
+    <Caption>コンテナ種類入力</Caption>
+    <AssemblyName>ContenaShuruiHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ContenaShuruiHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M205</FormID>
+    <Caption>コンテナ入力</Caption>
+    <AssemblyName>ContenaHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ContenaHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M206</FormID>
+    <Caption>車種入力</Caption>
+    <AssemblyName>ShaShuHoshu.dll</AssemblyName>
+    <Namespace>ShaShuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M207</FormID>
+    <Caption>車輛入力</Caption>
+    <AssemblyName>SharyouHoshu.dll</AssemblyName>
+    <Namespace>SharyouHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G208</FormID>
+    <Caption>車輌休動入力</Caption>
+    <AssemblyName>Sharyoukyuudounyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.Sharyoukyuudounyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M209</FormID>
+    <Caption>入金先入力</Caption>
+    <AssemblyName>NyuukinsakiNyuuryokuHoshu.dll</AssemblyName>
+    <Namespace>NyuukinsakiNyuuryokuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M211</FormID>
+    <Caption>基本品名単価入力</Caption>
+    <AssemblyName>KihonHinmeiTankaHoshu.dll</AssemblyName>
+    <Namespace>KihonHinmeiTankaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M212</FormID>
+    <Caption>個別品名単価入力</Caption>
+    <AssemblyName>KobetsuHinmeiTankaHoshu.dll</AssemblyName>
+    <Namespace>KobetsuHinmeiTankaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M213</FormID>
+    <Caption>取引先入力</Caption>
+    <AssemblyName>TorihikisakiHoshu.dll</AssemblyName>
+    <Namespace>TorihikisakiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M214</FormID>
+    <Caption>取引先一覧</Caption>
+    <AssemblyName>TorihikisakiIchiran.dll</AssemblyName>
+    <Namespace>TorihikisakiIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M215</FormID>
+    <Caption>業者入力</Caption>
+    <AssemblyName>GyoushaHoshu.dll</AssemblyName>
+    <Namespace>GyoushaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M216</FormID>
+    <Caption>業者一覧</Caption>
+    <AssemblyName>GyoushaIchiran.dll</AssemblyName>
+    <Namespace>GyoushaIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M217</FormID>
+    <Caption>現場入力</Caption>
+    <AssemblyName>GenbaHoshu.dll</AssemblyName>
+    <Namespace>GenbaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M218</FormID>
+    <Caption>現場一覧</Caption>
+    <AssemblyName>GenbaIchiran.dll</AssemblyName>
+    <Namespace>GenbaIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M221</FormID>
+    <Caption>減容率入力</Caption>
+    <AssemblyName>GennyouritsuHoshu.dll</AssemblyName>
+    <Namespace>GennyouritsuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M222</FormID>
+    <Caption>容器入力</Caption>
+    <AssemblyName>YoukiHoshu.dll</AssemblyName>
+    <Namespace>YoukiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M223</FormID>
+    <Caption>現着時間入力</Caption>
+    <AssemblyName>GenchakuJikanHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.GenchakuJikanHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M224</FormID>
+    <Caption>コンテナ操作入力</Caption>
+    <AssemblyName>ContenaSousaHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ContenaSousaHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M225</FormID>
+    <Caption>計量調整入力</Caption>
+    <AssemblyName>KeiryouChouseiHoshu.dll</AssemblyName>
+    <Namespace>KeiryouChouseiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M226</FormID>
+    <Caption>換算値入力</Caption>
+    <AssemblyName>KansanHoshu.dll</AssemblyName>
+    <Namespace>KansanHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M227</FormID>
+    <Caption>マニフェスト換算値入力</Caption>
+    <AssemblyName>ManifestKansanHoshu.dll</AssemblyName>
+    <Namespace>ManifestKansanHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M228</FormID>
+    <Caption>混合品名入力</Caption>
+    <AssemblyName>KongouHaikibutsuHoshu.dll</AssemblyName>
+    <Namespace>KongouHaikibutsuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M229</FormID>
+    <Caption>廃棄物種類入力</Caption>
+    <AssemblyName>HaikiShuruiHoshu.dll</AssemblyName>
+    <Namespace>HaikiShuruiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M230</FormID>
+    <Caption>品名入力</Caption>
+    <AssemblyName>HinmeiHoshu.dll</AssemblyName>
+    <Namespace>HinmeiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M231</FormID>
+    <Caption>コース名入力</Caption>
+    <AssemblyName>CourseNameHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.CourseNameHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M232</FormID>
+    <Caption>コース入力</Caption>
+    <AssemblyName>CourseNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.CourseNyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M233</FormID>
+    <Caption>業種入力</Caption>
+    <AssemblyName>GyoushuHoshu.dll</AssemblyName>
+    <Namespace>GyoushuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M234</FormID>
+    <Caption>種類入力</Caption>
+    <AssemblyName>ShuruiHoshu.dll</AssemblyName>
+    <Namespace>ShuruiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M235</FormID>
+    <Caption>分類入力</Caption>
+    <AssemblyName>BunruiHoshu.dll</AssemblyName>
+    <Namespace>BunruiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M236</FormID>
+    <Caption>混合種類入力</Caption>
+    <AssemblyName>KongouShuruiHoshu.dll</AssemblyName>
+    <Namespace>KongouShuruiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M237</FormID>
+    <Caption>地域別許可番号入力</Caption>
+    <AssemblyName>ChiikibetsuKyokaBangoHoshu.dll</AssemblyName>
+    <Namespace>ChiikibetsuKyokaBangoHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M238</FormID>
+    <Caption>地域別業種入力</Caption>
+    <AssemblyName>ChiikibetsuGyoushuHoshu.dll</AssemblyName>
+    <Namespace>ChiikibetsuGyoushuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M239</FormID>
+    <Caption>地域別施設入力</Caption>
+    <AssemblyName>ChiikibetsuShisetsuHoshu.dll</AssemblyName>
+    <Namespace>ChiikibetsuShisetsuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M240</FormID>
+    <Caption>地域別住所入力</Caption>
+    <AssemblyName>ChiikibetsuJuushoHoshu.dll</AssemblyName>
+    <Namespace>ChiikibetsuJuushoHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M241</FormID>
+    <Caption>地域別処分入力</Caption>
+    <AssemblyName>ChiikibetsuShobunHoshu.dll</AssemblyName>
+    <Namespace>ChiikibetsuShobunHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M242</FormID>
+    <Caption>地域別分類入力</Caption>
+    <AssemblyName>ChiikibetsuBunruiHoshu.dll</AssemblyName>
+    <Namespace>ChiikibetsuBunruiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M243</FormID>
+    <Caption>廃棄物名称入力</Caption>
+    <AssemblyName>HaikiNameHoshu.dll</AssemblyName>
+    <Namespace>HaikiNameHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M244</FormID>
+    <Caption>在庫商品入力</Caption>
+    <AssemblyName>ZaikoHinmeiHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ZaikoHinmeiHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M245</FormID>
+    <Caption>在庫比率入力</Caption>
+    <AssemblyName>ZaikoHiritsuHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ZaikoHiritsuHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M246</FormID>
+    <Caption>報告書分類入力</Caption>
+    <AssemblyName>HoukokushoBunruiHoshu.dll</AssemblyName>
+    <Namespace>HoukokushoBunruiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M247</FormID>
+    <Caption>処分目的入力</Caption>
+    <AssemblyName>ShobunMokutekiHoshu.dll</AssemblyName>
+    <Namespace>ShobunMokutekiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M249</FormID>
+    <Caption>形態区分入力</Caption>
+    <AssemblyName>KeitaiKbnHoshu.dll</AssemblyName>
+    <Namespace>KeitaiKbnHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M250</FormID>
+    <Caption>伝票区分入力</Caption>
+    <AssemblyName>DenPyouKbnHoshu.dll</AssemblyName>
+    <Namespace>DenPyouKbnHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M251</FormID>
+    <Caption>取引区分入力</Caption>
+    <AssemblyName>TorihikikubunHoshu.dll</AssemblyName>
+    <Namespace>TorihikikubunHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M252</FormID>
+    <Caption>伝種区分入力</Caption>
+    <AssemblyName>DenShuKbnHoshu.dll</AssemblyName>
+    <Namespace>DenShuKbnHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M253</FormID>
+    <Caption>郵便辞書メンテナンス</Caption>
+    <AssemblyName>ZipCodeHoshu.dll</AssemblyName>
+    <Namespace>ZipCodeHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M254</FormID>
+    <Caption>マニフェスト種類入力</Caption>
+    <AssemblyName>ManiFestShuRuiHoshu.dll</AssemblyName>
+    <Namespace>ManiFestShuRuiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M255</FormID>
+    <Caption>マニフェスト手配入力</Caption>
+    <AssemblyName>ManiFestTeHaiHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ManiFestTeHaiHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M256</FormID>
+    <Caption>コンテナ状況入力</Caption>
+    <AssemblyName>ContenaJoukyouHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ContenaJoukyouHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M258</FormID>
+    <Caption>形状入力</Caption>
+    <AssemblyName>KeijouHoshu.dll</AssemblyName>
+    <Namespace>KeijouHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M259</FormID>
+    <Caption>荷姿入力</Caption>
+    <AssemblyName>NisugataHoshu.dll</AssemblyName>
+    <Namespace>NisugataHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M260</FormID>
+    <Caption>廃棄物区分入力</Caption>
+    <AssemblyName>HaikiKbnHoshu.dll</AssemblyName>
+    <Namespace>HaikiKbnHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M261</FormID>
+    <Caption>システム設定入力</Caption>
+    <AssemblyName>SystemSetteiHoshu.dll</AssemblyName>
+    <Namespace>SystemSetteiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M262</FormID>
+    <Caption>市区町村入力</Caption>
+    <AssemblyName>ShikuchousonHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ShikuchousonHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M263</FormID>
+    <Caption>都道府県入力</Caption>
+    <AssemblyName>TodouFukenHoshu.dll</AssemblyName>
+    <Namespace>TodouFukenHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M264</FormID>
+    <Caption>地域入力</Caption>
+    <AssemblyName>ChiikiHoshu.dll</AssemblyName>
+    <Namespace>ChiikiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M265</FormID>
+    <Caption>単位入力</Caption>
+    <AssemblyName>UnitHoshu.dll</AssemblyName>
+    <Namespace>UnitHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M266</FormID>
+    <Caption>消費税入力</Caption>
+    <AssemblyName>ShouhizeiHoshu.dll</AssemblyName>
+    <Namespace>ShouhizeiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M267</FormID>
+    <Caption>入出金区分入力</Caption>
+    <AssemblyName>NyuushukkinKbnHoshu.dll</AssemblyName>
+    <Namespace>NyuushukkinKbnHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M268</FormID>
+    <Caption>運搬方法入力</Caption>
+    <AssemblyName>UnpanHouhouHoshu.dll</AssemblyName>
+    <Namespace>UnpanHouhouHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M269</FormID>
+    <Caption>処分方法入力</Caption>
+    <AssemblyName>ShobunHouhouHoshu.dll</AssemblyName>
+    <Namespace>ShobunHouhouHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M270</FormID>
+    <Caption>有害物質入力</Caption>
+    <AssemblyName>YuugaiBusshitsuHoshu.dll</AssemblyName>
+    <Namespace>YuugaiBusshitsuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M272</FormID>
+    <Caption>利用履歴</Caption>
+    <AssemblyName>RiyouRirekiKanri.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.RiyouRirekiKanri.APP</Namespace>
+  </FormAssembly>
+
+  <!-- 20150610 マイメニュー追加 Start -->
+  <FormAssembly>
+    <FormID>M654</FormID>
+    <Caption>マイメニュー選択</Caption>
+    <AssemblyName>BookmarkHoshu.dll</AssemblyName>
+    <Namespace>BookmarkHoshu.APP</Namespace>
+  </FormAssembly>
+  <!-- 20150610 マイメニュー追加 End -->
+
+  <FormAssembly>
+    <FormID>M683</FormID>
+    <Caption>個別品名単価一覧</Caption>
+    <AssemblyName>KobetsuHinmeiTankaIchiran.dll</AssemblyName>
+    <Namespace>KobetsuHinmeiTankaIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G273</FormID>
+    <Caption>営業予算入力</Caption>
+    <AssemblyName>EigyoYosanNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.EigyoYosanNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G275</FormID>
+    <Caption>営業予実管理表</Caption>
+    <AssemblyName>EigyouYojitsuKanrihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.EigyouYojitsuKanrihyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G276</FormID>
+    <Caption>見積入力</Caption>
+    <AssemblyName>MitsumoriNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.MitsumoriNyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G277</FormID>
+    <Caption>見積一覧</Caption>
+    <AssemblyName>MitumoriIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.MitumoriIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G278</FormID>
+    <Caption>受注予実管理表</Caption>
+    <AssemblyName>JuchuuYojitsuKanrihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.JuchuuYojitsuKanrihyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G279</FormID>
+    <Caption>申請入力</Caption>
+    <AssemblyName>DenshiShinseiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.DenshiShinseiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G280</FormID>
+    <Caption>申請一覧</Caption>
+    <AssemblyName>DenshiShinseiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.DenshiShinseiIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G283</FormID>
+    <Caption>モバイル将軍データ取込</Caption>
+    <AssemblyName>MobileShougunTorikomi.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.MobileShougunTorikomi.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G284</FormID>
+    <Caption>モバイル将軍データ出力</Caption>
+    <AssemblyName>MobileShougunShutsuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.MobileShougunShutsuryoku.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M288</FormID>
+    <Caption>集計項目入力</Caption>
+    <AssemblyName>ShuukeikoumokuHoshu.dll</AssemblyName>
+    <Namespace>ShuukeikoumokuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G289</FormID>
+    <Caption>定期配車実績入力</Caption>
+    <AssemblyName>TeikiHaisyaJisekiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.TeikiHaisyaJisekiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G290</FormID>
+    <Caption>定期配車実績一覧</Caption>
+    <AssemblyName>TeikiHaisyaJisekiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.TeikiHaisyaJisekiIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G292</FormID>
+    <Caption>搬入出予定一覧</Caption>
+    <AssemblyName>HannyushutsuIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.HannyushutsuIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G293</FormID>
+    <Caption>物販在庫調整入力</Caption>
+    <AssemblyName>BuppanZaikoTyouseiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.BuppanZaikoTyouseiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G294</FormID>
+    <Caption>物販在庫品名状況</Caption>
+    <AssemblyName>BuppanZaikoSyouhinJyoukyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.BuppanZaikoSyouhinJyoukyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M295</FormID>
+    <Caption>物販在庫保管場所入力</Caption>
+    <AssemblyName>BupanZaikoHokanBasyoHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.BupanZaikoHokanBasyoHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M296</FormID>
+    <Caption>物販在庫品名入力</Caption>
+    <AssemblyName>BuppanZaikoHinmeiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.BuppanZaikoHinmeiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M297</FormID>
+    <Caption>営業担当者一括変更</Caption>
+    <AssemblyName>EigyoTantoushaIkkatsu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.EigyoTantoushaIkkatsu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M298</FormID>
+    <Caption>銀行一括変更</Caption>
+    <AssemblyName>BankIkkatsu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.BankIkkatsu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G299</FormID>
+    <Caption>マニフェストパターン一覧</Caption>
+    <AssemblyName>ManifestPattern.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestPattern</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G300</FormID>
+    <Caption>定期配車実績表</Caption>
+    <AssemblyName>Teikihaisyajissekihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.Teikihaisyajissekihyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G303</FormID>
+    <Caption>滞留一覧</Caption>
+    <AssemblyName>Tairyuichiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.Tairyuichiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M309</FormID>
+    <Caption>事業者入力</Caption>
+    <AssemblyName>DenManiJigyoushaHoshu.dll</AssemblyName>
+    <Namespace>DenManiJigyoushaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M310</FormID>
+    <Caption>事業者一覧</Caption>
+    <AssemblyName>DenManiJigyoushaIchiran.dll</AssemblyName>
+    <Namespace>DenManiJigyoushaIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M311</FormID>
+    <Caption>事業者未紐付一覧</Caption>
+    <AssemblyName>DenManiJigyoushaMihimodukeIchiran.dll</AssemblyName>
+    <Namespace>DenManiJigyoushaMihimodukeIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M312</FormID>
+    <Caption>事業場入力</Caption>
+    <AssemblyName>DenManiJigyoujouHoshu.dll</AssemblyName>
+    <Namespace>DenManiJigyoujouHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M313</FormID>
+    <Caption>事業場一覧</Caption>
+    <AssemblyName>DenManiJigyoujyouIchiran.dll</AssemblyName>
+    <Namespace>DenManiJigyoujyouIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M314</FormID>
+    <Caption>事業場未紐付一覧</Caption>
+    <AssemblyName>DenManiJigyoujouMihimodukeIchiran.dll</AssemblyName>
+    <Namespace>DenManiJigyoujouMihimodukeIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M315</FormID>
+    <Caption>担当者入力</Caption>
+    <AssemblyName>DenManiTantoushaHoshu.dll</AssemblyName>
+    <Namespace>DenManiTantoushaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M320</FormID>
+    <Caption>廃棄物種類入力</Caption>
+    <AssemblyName>DenManiHaikiShuruiHoshu.dll</AssemblyName>
+    <Namespace>DenManiHaikiShuruiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M321</FormID>
+    <Caption>廃棄物名称入力</Caption>
+    <AssemblyName>DenManiHaikiNameHoshu.dll</AssemblyName>
+    <Namespace>DenManiHaikiNameHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G330</FormID>
+    <Caption>実績売上支払確定</Caption>
+    <AssemblyName>JissekiUriageShiharaiKakutei.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.JissekiUriageShiharaiKakutei.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G331</FormID>
+    <Caption>月極売上伝票作成</Caption>
+    <AssemblyName>TukigimeUriageDenpyoSakusei.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.TukigimeUriageDenpyoSakusei</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G334</FormID>
+    <Caption>取引履歴一覧</Caption>
+    <AssemblyName>TorihikisakiRirekiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.TorihikisakiRirekiIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G411</FormID>
+    <Caption>通知履歴照会</Caption>
+    <AssemblyName>TuuchiJouhouShoukai.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.TuuchiJouhouShoukai</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G412</FormID>
+    <Caption>通信履歴照会</Caption>
+    <AssemblyName>TuusinnRirekiShoukai.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.TuusinnRirekiShoukai</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G413</FormID>
+    <Caption>最新情報照会</Caption>
+    <AssemblyName>RealInfoSearch.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.RealInfoSearch</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M420</FormID>
+    <Caption>最終処分場所パターン一覧</Caption>
+    <AssemblyName>SaishuShobunBasyoPatternIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.SaishuShobunBasyoPatternIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M421</FormID>
+    <Caption>覚書一括入力一覧</Caption>
+    <AssemblyName>OboeGakiIkkatuIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.OboeGakiIkkatuIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M423</FormID>
+    <Caption>個別品名単価一括変更</Caption>
+    <AssemblyName>KobestuHinmeiTankaIkkatsu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.KobestuHinmeiTankaIkkatsu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G428</FormID>
+    <Caption>伝票単価一括変更</Caption>
+    <AssemblyName>TenpyouTankaIkatsuHenkou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.TenpyouTankaIkatsuHenkou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G449</FormID>
+    <Caption>伝票紐付一覧</Caption>
+    <AssemblyName>DenpyouHimodukeIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.DenpyouHimodukeIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G458</FormID>
+    <Caption>物販在庫調整一覧</Caption>
+    <AssemblyName>BuppanZaikoIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.BuppanZaikoIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G459</FormID>
+    <Caption>入金入力(入金先)</Caption>
+    <AssemblyName>NyukinNyuryoku2.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyukinNyuryoku2</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M461</FormID>
+    <Caption>引合取引先入力</Caption>
+    <AssemblyName>HikiaiTorihikisakiHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.HikiaiTorihikisakiHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M462</FormID>
+    <Caption>引合業者入力</Caption>
+    <AssemblyName>HikiaiGyousha.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.HikiaiGyousha.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M463</FormID>
+    <Caption>引合現場入力</Caption>
+    <AssemblyName>HikiaiGenbaHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.HikiaiGenbaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <!--G614-->
+  <FormAssembly>
+    <FormID>G614</FormID>
+    <Caption>申請内容確認（現場）</Caption>
+    <AssemblyName>GenbaKakunin.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.GenbaKakunin.APP</Namespace>
+  </FormAssembly>
+  <!--G614-->
+
+  <!--M557-->
+  <FormAssembly>
+    <FormID>M557</FormID>
+    <Caption>申請経路名入力</Caption>
+    <AssemblyName>DenshiShinSeiKeiroName.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.DenshiShinSeiKeiroName</Namespace>
+  </FormAssembly>
+  <!--M557-->
+
+  <FormAssembly>
+    <FormID>M558</FormID>
+    <Caption>申請経路入力</Caption>
+    <AssemblyName>DenshiShinseiRoute.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.DenshiShinseiRoute</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G464</FormID>
+    <Caption>受注目標件数入力</Caption>
+    <AssemblyName>JuchuuMokuhyouKensuuNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.JuchuuMokuhyouKensuuNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G471</FormID>
+    <Caption>見積書選択</Caption>
+    <AssemblyName>Mitumorisyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.Mitumorisyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G560</FormID>
+    <Caption>申請内容選択入力</Caption>
+    <AssemblyName>DenshiShinseiNaiyouSentakuNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.DenshiShinseiNaiyouSentakuNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G477</FormID>
+    <Caption>トラックスケール通信設定</Caption>
+    <AssemblyName>TruckScaleTsuushin.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.TruckScaleTsuushin</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G480</FormID>
+    <Caption>一覧出力項目選択（伝票紐付一覧用）</Caption>
+    <AssemblyName>IchiranSyuDenpyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.IchiranSyuDenpyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M484</FormID>
+    <Caption>引合取引先一覧</Caption>
+    <AssemblyName>HikiaiTorihikisakiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.HikiaiTorihikisakiIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M485</FormID>
+    <Caption>引合業者一覧</Caption>
+    <AssemblyName>HikiaiGyoushaIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.HikiaiGyoushaIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M486</FormID>
+    <Caption>引合現場一覧</Caption>
+    <AssemblyName>HikiaiGenbaIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.HikiaiGenbaIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G487</FormID>
+    <Caption>印刷設定</Caption>
+    <AssemblyName>Shougun.Printing.Common.dll</AssemblyName>
+    <Namespace>Shougun.Printing.Common.UI.G487PrintSettingsDialogWrapper</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G497</FormID>
+    <Caption>物販在庫締処理</Caption>
+    <AssemblyName>BuppanZaikoShime.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.BuppanZaikoShime</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M498</FormID>
+    <Caption>物販在庫換算値入力</Caption>
+    <AssemblyName>BuppanZaikoKansanti.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.BuppanZaikoKansanti</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G507</FormID>
+    <Caption>代納伝票発行</Caption>
+    <AssemblyName>DainoDenpyoHakkou.dll</AssemblyName>
+    <Namespace>Shougun.Core.PayByProxy.DainoDenpyoHakkou.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G531</FormID>
+    <Caption>代納明細表／集計表条件指定ポップアップ</Caption>
+    <AssemblyName>ShukeiHyoJokenShiteiPoppup.dll</AssemblyName>
+    <Namespace>Shougun.Core.PayByProxy.ShukeiHyoJokenShiteiPoppup</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G533</FormID>
+    <Caption>推移表／一覧</Caption>
+    <AssemblyName>CommonChouhyouViewer.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReportOutput.CommonChouhyouViewer</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G534</FormID>
+    <Caption>○○○順位表／一覧</Caption>
+    <AssemblyName>CommonChouhyouViewer.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReportOutput.CommonChouhyouViewer</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G535</FormID>
+    <Caption>○○○前年対比表／一覧</Caption>
+    <AssemblyName>CommonChouhyouViewer.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReportOutput.CommonChouhyouViewer</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G536</FormID>
+    <Caption>受付明細表／一覧</Caption>
+    <AssemblyName>CommonChouhyouViewer.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReportOutput.CommonChouhyouViewer</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G537</FormID>
+    <Caption>運賃明細表／一覧</Caption>
+    <AssemblyName>CommonChouhyouViewer.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReportOutput.CommonChouhyouViewer</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G538</FormID>
+    <Caption>計量明細表／一覧</Caption>
+    <AssemblyName>CommonChouhyouViewer.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReportOutput.CommonChouhyouViewer</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G539</FormID>
+    <Caption>計量集計表／一覧</Caption>
+    <AssemblyName>CommonChouhyouViewer.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReportOutput.CommonChouhyouViewer</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G540</FormID>
+    <Caption>運賃集計表／一覧</Caption>
+    <AssemblyName>UnchinSyuukeihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Carriage.UnchinSyuukeihyou</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G541</FormID>
+    <Caption>代納明細表</Caption>
+    <AssemblyName>DainoMeisaihyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.PayByProxy.DainoMeisaihyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G542</FormID>
+    <Caption>代納集計表</Caption>
+    <AssemblyName>DainoSyukeihyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.PayByProxy.DainoSyukeihyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G552</FormID>
+    <Caption>検収一覧表 条件指定ポップアップ</Caption>
+    <AssemblyName>KenshuIchiranJokenShiteiPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Inspection.KenshuIchiranJokenShiteiPopup</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G553</FormID>
+    <Caption>トラックスケール通信設定</Caption>
+    <AssemblyName>TruckScaleWeight.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.TruckScaleWeight</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M555</FormID>
+    <Caption>入金先一覧</Caption>
+    <AssemblyName>NyuukinsakiIchiran.dll</AssemblyName>
+    <Namespace>NyuukinsakiIchiran.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M590</FormID>
+    <Caption>入力項目設定</Caption>
+    <AssemblyName>TabOrderSettei.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.TabOrderSettei</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G587</FormID>
+    <Caption>入金明細表</Caption>
+    <AssemblyName>NyuukinKoteiChouhyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyuukinKoteiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G627</FormID>
+    <Caption>入金集計表</Caption>
+    <AssemblyName>NyuukinShuukeiChouhyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyuukinShuukeiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G591</FormID>
+    <Caption>出金明細表</Caption>
+    <AssemblyName>ShukkinKoteiChouhyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.ShukkinKoteiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G629</FormID>
+    <Caption>出金集計表</Caption>
+    <AssemblyName>ShukkinShuukeiChouhyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.ShukkinShuukeiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G597</FormID>
+    <Caption>未入金一覧</Caption>
+    <AssemblyName>MinyuukinIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.MinyuukinIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G598</FormID>
+    <Caption>入金予定一覧</Caption>
+    <AssemblyName>NyuukinYoteiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyuukinYoteiIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R336</FormID>
+    <Caption>請求書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R337</FormID>
+    <Caption>支払明細書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R338</FormID>
+    <Caption>仕切書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R339</FormID>
+    <Caption>領収書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R342</FormID>
+    <Caption>受付明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R345</FormID>
+    <Caption>配車依頼書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R346</FormID>
+    <Caption>配車明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R349</FormID>
+    <Caption>配車割当表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R350</FormID>
+    <Caption>作業指示書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R351</FormID>
+    <Caption>計量明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R352</FormID>
+    <Caption>計量集計表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R354</FormID>
+    <Caption>計量表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R355</FormID>
+    <Caption>売上支払明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R356</FormID>
+    <Caption>売上支払集計表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R358</FormID>
+    <Caption>売上明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R359</FormID>
+    <Caption>売上集計表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R361</FormID>
+    <Caption>売掛金一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R362</FormID>
+    <Caption>支払明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R363</FormID>
+    <Caption>支払集計表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R365</FormID>
+    <Caption>買掛金一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R366</FormID>
+    <Caption>入金明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R367</FormID>
+    <Caption>入金集計表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R369</FormID>
+    <Caption>未入金一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R370</FormID>
+    <Caption>入金予定一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R372</FormID>
+    <Caption>滞留債権年齢表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R373</FormID>
+    <Caption>出金明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R374</FormID>
+    <Caption>出金一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R376</FormID>
+    <Caption>未払金一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R377</FormID>
+    <Caption>出金予定一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R379</FormID>
+    <Caption>請求明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R382</FormID>
+    <Caption>請求チェック表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R383</FormID>
+    <Caption>宛名ラベル</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R384</FormID>
+    <Caption>支払明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R387</FormID>
+    <Caption>支払チェック表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R389</FormID>
+    <Caption>マニフェストチェック表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R390</FormID>
+    <Caption>マニフェスト明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R391</FormID>
+    <Caption>マニフェスト推移表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R394</FormID>
+    <Caption>交付等状況報告書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R395</FormID>
+    <Caption>廃棄物帳簿</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R396</FormID>
+    <Caption>実績報告書表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R398</FormID>
+    <Caption>運賃明細表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R400</FormID>
+    <Caption>検収一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R403</FormID>
+    <Caption>代納一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R405</FormID>
+    <Caption>在庫管理表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R407</FormID>
+    <Caption>返送案内書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R408</FormID>
+    <Caption>業者台帳</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R409</FormID>
+    <Caption>現場台帳</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R410</FormID>
+    <Caption>取引先台帳</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R415</FormID>
+    <Caption>売上元帳</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R416</FormID>
+    <Caption>支払元帳</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R419</FormID>
+    <Caption>委託契約書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R424</FormID>
+    <Caption>単価変更対象一覧表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R425</FormID>
+    <Caption>見積書</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R429</FormID>
+    <Caption>定期配車表(月報)</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R430</FormID>
+    <Caption>定期配車表(年報)</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R432</FormID>
+    <Caption>売上推移表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G581</FormID>
+    <Caption>売上推移表</Caption>
+    <AssemblyName>UriageSuiihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageSuiiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G584</FormID>
+    <Caption>支払推移表</Caption>
+    <AssemblyName>ShiharaiSuiihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.ShiharaiSuiiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R433</FormID>
+    <Caption>売上順位表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R434</FormID>
+    <Caption>売上前年対比表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R450</FormID>
+    <Caption>運転日報</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R467</FormID>
+    <Caption>請求書(横レイアウト)</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R468</FormID>
+    <Caption>支払明細書(横レイアウト)</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R470</FormID>
+    <Caption>在庫元帳</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R473</FormID>
+    <Caption>請求締処理エラー一覧</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R474</FormID>
+    <Caption>支払締処理エラー一覧</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R483</FormID>
+    <Caption>運賃集計表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R488</FormID>
+    <Caption>代納集計表</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R493</FormID>
+    <Caption>マニフェスト直行用</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R494</FormID>
+    <Caption>マニフェスト積替用</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>R495</FormID>
+    <Caption>マニフェスト建廃用</Caption>
+    <AssemblyName>MeisaihyoSyukeihyoPatternSentakuPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MeisaihyoSyukeihyoPatternSentakuPopup.G417_MeisaihyoSyukeihyoPatternSentakuPopupForm</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G554</FormID>
+    <Caption>伝票紐付一覧用パターン一覧</Caption>
+    <AssemblyName>DenpyouhimozukePatternIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.DenpyouhimozukePatternIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G568</FormID>
+    <Caption>売上明細表 出力画面</Caption>
+    <AssemblyName>UriageShiharaiKoteiChouhyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageShiharaiKoteiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G569</FormID>
+    <Caption>受入明細表 出力画面</Caption>
+    <AssemblyName>UriageShiharaiKoteiChouhyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageShiharaiKoteiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G572</FormID>
+    <Caption>支払明細表 出力画面</Caption>
+    <AssemblyName>UriageShiharaiKoteiChouhyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageShiharaiKoteiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G574</FormID>
+    <Caption>出荷明細表 出力画面</Caption>
+    <AssemblyName>UriageShiharaiKoteiChouhyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageShiharaiKoteiChouhyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G324</FormID>
+    <Caption>返送案内書</Caption>
+    <AssemblyName>HensoSakiAnnaisho.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.HensoSakiAnnaisho</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G131</FormID>
+    <Caption>交付等状況報告書</Caption>
+    <AssemblyName>KoufuJoukyouHoukokushoPopup.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.KoufuJoukyouHoukokushoPopup</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G511</FormID>
+    <Caption>交付等状況報告書一覧</Caption>
+    <AssemblyName>KoufuJoukyouHoukokushoIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.KoufuJoukyouHoukokushoIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G527</FormID>
+    <Caption>マニフェスト推移表/一覧</Caption>
+    <AssemblyName>ManifestsuiihyoIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestsuiihyoIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G576</FormID>
+    <Caption>伝票確定入力</Caption>
+    <AssemblyName>DenpyouKakuteiNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.DenpyouKakuteiNyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G577</FormID>
+    <Caption>売上集計表 出力画面</Caption>
+    <AssemblyName>UriageShukeiHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageShukeiHyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G579</FormID>
+    <Caption>支払集計表 出力画面</Caption>
+    <AssemblyName>ShiharaiShukeiHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.ShiharaiShukeiHyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G589</FormID>
+    <Caption>マニフェスト紐付一覧</Caption>
+    <AssemblyName>Himodukeichiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.Himodukeichiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G593</FormID>
+    <Caption>待機コンテナ一覧表</Caption>
+    <AssemblyName>KaraContenaIchiranHyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.KaraContenaIchiranHyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G595</FormID>
+    <Caption>コンテナ履歴一覧表</Caption>
+    <AssemblyName>ContenaRirekiIchiranHyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.ContenaRirekiIchiranHyou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G599</FormID>
+    <Caption>マニフェスト終了日警告一覧</Caption>
+    <AssemblyName>ManifestSyuuryoubiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestSyuuryoubiIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G601</FormID>
+    <Caption>モバイル通信設定</Caption>
+    <AssemblyName>MobileTsuushin.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.MobileTsuushin</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G602</FormID>
+    <Caption>定期実績報告</Caption>
+    <AssemblyName>Teikijissekihoukoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.Teikijissekihoukoku.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G612</FormID>
+    <Caption>申請内容確認（取引先）</Caption>
+    <AssemblyName>TorihikisakiKakunin.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.TorihikisakiKakunin.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G613</FormID>
+    <Caption>申請内容確認（業者）</Caption>
+    <AssemblyName>GyoushaKakunin.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.GyoushaKakunin.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M559</FormID>
+    <Caption>重要度入力</Caption>
+    <AssemblyName>DenshiShinseiJyuyoudoHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.DenshiShinseiJyuyoudoHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G561</FormID>
+    <Caption>承認済申請一覧</Caption>
+    <AssemblyName>ShouninzumiDenshiShinseiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.ShouninzumiDenshiShinseiIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G615</FormID>
+    <Caption>混合廃棄物状況一覧</Caption>
+    <AssemblyName>KongouHaikibutsuJoukyouIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.KongouHaikibutsuJoukyouIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G617</FormID>
+    <Caption>月次処理</Caption>
+    <AssemblyName>GetsujiShori.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.GetsujiShori</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G618</FormID>
+    <Caption>月次消費税調整入力</Caption>
+    <AssemblyName>GetsujiShouhizeiChouseiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.GetsujiShouhizeiChouseiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G134</FormID>
+    <Caption>実績報告書（処分実績）</Caption>
+    <AssemblyName>JissekiHokoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokoku</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G135</FormID>
+    <Caption>実績報告書一覧</Caption>
+    <AssemblyName>JissekiHokokuIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokokuIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G603</FormID>
+    <Caption>実績報告書（処理施設）</Caption>
+    <AssemblyName>JissekiHokokuSisetsu.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokokuSisetsu</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G606</FormID>
+    <Caption>実績報告書（運搬実績）</Caption>
+    <AssemblyName>JissekiHokokuUnpan.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokokuUnpan</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G609</FormID>
+    <Caption>CSV出力項目選択（処分実績）</Caption>
+    <AssemblyName>JissekiHokokuCsv.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokokuCsv</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G610</FormID>
+    <Caption>実績報告書（運搬実績）</Caption>
+    <AssemblyName>JissekiHokokuUnpanCsv.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokokuUnpanCsv</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G136</FormID>
+    <Caption>実績報告書修正（処分実績）</Caption>
+    <AssemblyName>JissekiHokokuSyusei.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokokuSyusei</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G604</FormID>
+    <Caption>実績報告書修正（処理施設実績）</Caption>
+    <AssemblyName>JissekiHokokuSyuseiSisetsu.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokokuSyuseiSisetsu</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G607</FormID>
+    <Caption>実績報告書修正（運搬実績）</Caption>
+    <AssemblyName>JissekiHokokuSyuseiShobun.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.JissekiHokokuSyuseiShobun</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G619</FormID>
+    <Caption>入金入力（取引先）</Caption>
+    <AssemblyName>NyukinNyuryoku3.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyukinNyuryoku3</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G620</FormID>
+    <Caption>入金消込修正入力</Caption>
+    <AssemblyName>NyukinKeshikomiShusei.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyukinKeshikomiShusei</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G478</FormID>
+    <Caption>マニフェスト集計表</Caption>
+    <AssemblyName>ManifestShukeiHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestShukeiHyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G623</FormID>
+    <Caption>売上順位表</Caption>
+    <AssemblyName>UriageJunihyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageJunihyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G625</FormID>
+    <Caption>支払順位表</Caption>
+    <AssemblyName>ShiharaiJunihyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.ShiharaiJunihyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G631</FormID>
+    <Caption>在庫移動入力</Caption>
+    <AssemblyName>ZaikoIdou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.ZaikoIdou</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G632</FormID>
+    <Caption>在庫移動一覧</Caption>
+    <AssemblyName>ZaikoIdouIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.ZaikoIdouIchiran</Namespace>
+  </FormAssembly>
+  <!--Sontt #10030 G635 請求明細表出力 -->
+  <FormAssembly>
+    <FormID>G635</FormID>
+    <Caption>請求明細表出力</Caption>
+    <AssemblyName>SeikyuuMeisaihyouShutsuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.SeikyuuMeisaihyouShutsuryoku</Namespace>
+  </FormAssembly>
+  <!--Sontt #10030 G635 請求明細表出力 -->
+  <FormAssembly>
+    <FormID>G634</FormID>
+    <Caption>在庫管理表</Caption>
+    <AssemblyName>ZaikoKanriHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.Stock.ZaikoKanriHyo</Namespace>
+  </FormAssembly>
+  <!--M639 運賃品名入力 #4935 STR-->
+  <FormAssembly>
+    <FormID>M639</FormID>
+    <Caption>運賃品名入力</Caption>
+    <AssemblyName>UnchiHinmeiHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.UnchiHinmeiHoshu.APP</Namespace>
+  </FormAssembly>
+  <!--M639 運賃品名入力 #4935 END-->
+  <!--M640 運賃単価入力 #4936 STR-->
+  <FormAssembly>
+    <FormID>M640</FormID>
+    <Caption>運賃単価入力</Caption>
+    <AssemblyName>UnchinTankaHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.UnchinTankaHoshu.APP</Namespace>
+  </FormAssembly>
+  <!--M640 運賃単価入力 #4936 END-->
+  <!-- 20150420 katen 代納明細表 出力画面 -->
+  <FormAssembly>
+    <FormID>G638</FormID>
+    <Caption>代納明細表 出力画面</Caption>
+    <AssemblyName>DainoMeisaihyoOutput.dll</AssemblyName>
+    <Namespace>Shougun.Core.PayByProxy.DainoMeisaihyoOutput</Namespace>
+  </FormAssembly>
+  <!-- 20150420 katen 代納明細表 出力画面 -->
+  <FormAssembly>
+    <FormID>G641</FormID>
+    <Caption>運賃一覧</Caption>
+    <AssemblyName>Unchinichiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Carriage.Unchinichiran</Namespace>
+  </FormAssembly>
+  <!--20150422 Jyokou 運賃集計表 STR-->
+  <FormAssembly>
+    <FormID>G646</FormID>
+    <Caption>運賃集計表</Caption>
+    <AssemblyName>UnchinShukeiHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.Carriage.UnchinShukeiHyo</Namespace>
+  </FormAssembly>
+  <!--20150422 Jyokou 運賃集計表 END-->
+  <!--Start Sontt #10156 20150425-->
+  <FormAssembly>
+    <FormID>M652</FormID>
+    <Caption>開始在庫情報入力</Caption>
+    <AssemblyName>KaishiZaikoJouhouHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.KaishiZaikoJouhouHoshu</Namespace>
+  </FormAssembly>
+  <!--End Sontt #10156 20150425-->
+  <!--G642 運賃明細表 #4936 STR-->
+  <FormAssembly>
+    <FormID>G642</FormID>
+    <Caption>運賃明細表</Caption>
+    <AssemblyName>UnchinMeisaihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Carriage.UnchinMeisaihyou</Namespace>
+  </FormAssembly>
+  <!--G642 運賃明細表 #4936 END-->
+  <FormAssembly>
+    <FormID>G650</FormID>
+    <Caption>運賃台帳</Caption>
+    <AssemblyName>UnchinDaichou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Carriage.UnchinDaichou.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M653</FormID>
+    <Caption>電子マニフェスト換算値入力</Caption>
+    <AssemblyName>DenManiKansanHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.DenManiKansanHoshu</Namespace>
+  </FormAssembly>
+  <!--G465 マニフェスト換算値再計算-->
+  <FormAssembly>
+    <FormID>G465</FormID>
+    <Caption>マニフェスト換算値再計算</Caption>
+    <AssemblyName>ManifestKansanSaikeisanIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestKansanSaikeisanIchiran</Namespace>
+  </FormAssembly>
+  <!--M655 一般廃用報告書分類入力-->
+  <FormAssembly>
+    <FormID>M655</FormID>
+    <Caption>一般廃用報告書分類入力</Caption>
+    <AssemblyName>JissekiBunruiHoshu.dll</AssemblyName>
+    <Namespace>JissekiBunruiHoshu.APP</Namespace>
+  </FormAssembly>
+  <!--G656 伝票連携状況一覧-->
+  <FormAssembly>
+    <FormID>G656</FormID>
+    <Caption>伝票連携状況一覧</Caption>
+    <AssemblyName>DenpyouRenkeiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.DenpyouRenkeiIchiran</Namespace>
+  </FormAssembly>
+  
+  <FormAssembly>
+    <FormID>G658</FormID>
+    <Caption>受付明細表</Caption>
+    <AssemblyName>UketsukeMeisaihyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.Reception.UketsukeMeisaihyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G660</FormID>
+    <Caption>支払明細明細表</Caption>
+    <AssemblyName>ShiharaiMeisaiMeisaihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Adjustment.ShiharaiMeisaiMeisaihyou</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M662</FormID>
+    <Caption>支払明細明細表</Caption>
+    <AssemblyName>KobetsuHinmeiHoshu.dll</AssemblyName>
+    <Namespace>KobetsuHinmeiHoshu.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M663</FormID>
+    <Caption>コース一覧</Caption>
+    <AssemblyName>CourseIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.CourseIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G665</FormID>
+    <Caption>汎用CSV出力</Caption>
+    <AssemblyName>HanyoCSVShutsuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.HanyoCSVShutsuryoku</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G666</FormID>
+    <Caption>CTI連携設定</Caption>
+    <AssemblyName>CtiRenkeiSettei.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.CtiRenkeiSettei</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G281</FormID>
+    <Caption>入金データ取込</Caption>
+    <AssemblyName>NyuukinDataTorikomi.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.NyuukinDataTorikomi</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G667</FormID>
+    <Caption>モバイル状況一覧</Caption>
+    <AssemblyName>MobileJoukyouIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.MobileJoukyouIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G668</FormID>
+    <Caption>モバイル状況詳細</Caption>
+    <AssemblyName>MobileJoukyouInfo.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.MobileJoukyouInfo</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M669</FormID>
+    <Caption>QRコード発行</Caption>
+    <AssemblyName>ContenaQrHakkou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ContenaQrHakkou</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G671</FormID>
+    <Caption>マニフェストデータインポート</Caption>
+    <AssemblyName>ManifestImport.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestImport</Namespace>
+  </FormAssembly>
+
+
+  <FormAssembly>
+    <FormID>M319</FormID>
+    <Caption>有害物質入力</Caption>
+    <AssemblyName>DenManiYuugaiBusshitsuHoshu.dll</AssemblyName>
+    <Namespace>DenManiYuugaiBusshitsuHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M682</FormID>
+    <Caption>個別品名単価一括変更</Caption>
+    <AssemblyName>KobetsuHimeiTankaUpdate.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.KobetsuHimeiTankaUpdate.App</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G672</FormID>
+    <Caption>計量入力</Caption>
+    <AssemblyName>KeiryouNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Scale.KeiryouNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G673</FormID>
+    <Caption>計量一覧</Caption>
+    <AssemblyName>KeiryouIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.Scale.KeiryouIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G674</FormID>
+    <Caption>計量報告</Caption>
+    <AssemblyName>KeiryouHoukoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.Scale.KeiryouHoukoku.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G678</FormID>
+    <Caption>計量集計表</Caption>
+    <AssemblyName>KeiryouShukeiHyo.dll</AssemblyName>
+    <Namespace>Shougun.Core.Scale.KeiryouShukeiHyo</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M688</FormID>
+    <Caption>システム個別設定入力</Caption>
+    <AssemblyName>SystemKobetsuSetteiHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.SystemKobetsuSetteiHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M689</FormID>
+    <Caption>デジタコマスタ連携</Caption>
+    <AssemblyName>DigitachoMasterRenkei.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DigitachoMasterRenkei</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M693</FormID>
+    <Caption>外部連携現場入力</Caption>
+    <AssemblyName>GaibuRenkeiGenbaHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.GaibuRenkeiGenbaHoshu.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M694</FormID>
+    <Caption>外部連携現場一覧</Caption>
+    <AssemblyName>GaibuRenkeiGenbaIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.GaibuRenkeiGenbaIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G695</FormID>
+    <Caption>配送計画入力</Caption>
+    <AssemblyName>HaisouKeikakuNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.HaisouKeikakuNyuuryoku</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G696</FormID>
+    <Caption>配送計画一覧</Caption>
+    <AssemblyName>HaisouKeikakuIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.HaisouKeikakuIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G684</FormID>
+    <Caption>伝票一括更新</Caption>
+    <AssemblyName>DenpyouIkkatuUpdate.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.DenpyouIkkatuUpdate.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G685</FormID>
+    <Caption>伝票明細一括更新</Caption>
+    <AssemblyName>DenpyouDetailIkkatuUpdate.dll</AssemblyName>
+    <Namespace>Shougun.Core.BusinessManagement.DenpyouDetailIkkatuUpdate.APP</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G686</FormID>
+    <Caption>マニフェスト終了日一括更新</Caption>
+    <AssemblyName>ManifestIkkatsuKousin.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestIkkatsuKousin</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G687</FormID>
+    <Caption>紐付1次最終処分終了報告</Caption>
+    <AssemblyName>DenmaniSaishuShobun.dll</AssemblyName>
+    <Namespace>Shougun.Core.ElectronicManifest.DenmaniSaishuShobun</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M714</FormID>
+    <Caption>地域一括変更</Caption>
+    <AssemblyName>ChiikiIkkatsu.dll</AssemblyName>
+    <Namespace>Shougun.Core.Master.ChiikiIkkatsu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G713</FormID>
+    <Caption>マニフェスト実績一覧</Caption>
+    <AssemblyName>ManifestoJissekiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestoJissekiIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M690</FormID>
+    <Caption>NAVITIMEマスタ連携</Caption>
+    <AssemblyName>NaviTimeMasterRenkei.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.NaviTimeMasterRenkei</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G697</FormID>
+    <Caption>配車計画(NAVITIME)</Caption>
+    <AssemblyName>HaisouKeikakuTeiki.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.HaisouKeikakuTeiki</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G698</FormID>
+    <Caption>コース最適化入力</Caption>
+    <AssemblyName>CourseSaitekikaNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.CourseSaitekikaNyuuryoku</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G715</FormID>
+    <Caption>電子契約入力</Caption>
+    <AssemblyName>DenshiKeiyakuNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DenshiKeiyakuNyuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G716</FormID>
+    <Caption>電子契約履歴一覧</Caption>
+    <AssemblyName>DenshiKeiyakuRirekiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DenshiKeiyakuRirekiIchiran</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M717</FormID>
+    <Caption>クライアントID入力</Caption>
+    <AssemblyName>ClientIdNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.ClientIdNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M718</FormID>
+    <Caption>社内経路名入力（電子）</Caption>
+    <AssemblyName>DenshiKeiyakuShinseiKeiroName.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DenshiKeiyakuShinseiKeiroName</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M719</FormID>
+    <Caption>社内経路入力（電子）</Caption>
+    <AssemblyName>DenshiKeiyakuShinseiKeiro.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DenshiKeiyakuShinseiKeiro</Namespace>
+  </FormAssembly>
+  
+  <FormAssembly>
+    <FormID>M720</FormID>
+    <Caption>画面制御入力</Caption>
+    <AssemblyName>GamenSeigyoHoshu.dll</AssemblyName>
+    <Namespace>GamenSeigyoHoshu</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G722</FormID>
+    <Caption>出荷入力</Caption>
+    <AssemblyName>SyukkaNyuuryoku2.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.SyukkaNyuuryoku2</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G723</FormID>
+    <Caption>マニフェスト推移表</Caption>
+    <AssemblyName>ManifestSuiihyoData.dll</AssemblyName>
+    <Namespace>Shougun.Core.PaperManifest.ManifestSuiihyoData</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G730</FormID>
+    <Caption>ファイルアップロード</Caption>
+    <AssemblyName>FileUpload.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.FileUpload</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G731</FormID>
+    <Caption>ファイルアップロード一覧</Caption>
+    <AssemblyName>FileUploadIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.FileUploadIchiran.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M734</FormID>
+    <Caption>電子契約最新照会</Caption>
+    <AssemblyName>DenshiKeiyakuSaishinShoukai.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DenshiKeiyakuSaishinShoukai</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M737</FormID>
+    <Caption>書類情報入力</Caption>
+    <AssemblyName>DenshiKeiyakuShoruiInfo.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DenshiKeiyakuShoruiInfo</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G732</FormID>
+    <Caption>履歴データ削除</Caption>
+    <AssemblyName>AnnualUpdatesDEL.dll</AssemblyName>
+    <Namespace>Shougun.Core.AnnualUpdates.AnnualUpdatesDEL</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M738</FormID>
+    <Caption>コンテナ設置期間表示設定</Caption>
+    <AssemblyName>ContenaKeikaDate.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.ContenaKeikaDate</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M739</FormID>
+    <Caption>地図連携</Caption>
+    <AssemblyName>MapRenkei.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.MapRenkei</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M740</FormID>
+    <Caption>現場メモ分類入力</Caption>
+    <AssemblyName>GenbamemoBunruiHoshu.dll</AssemblyName>
+    <Namespace>GenbamemoBunruiHoshu.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G741</FormID>
+    <Caption>現場メモ入力</Caption>
+    <AssemblyName>GenbamemoNyuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.GenbamemoNyuryoku</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G742</FormID>
+    <Caption>現場メモ一覧</Caption>
+    <AssemblyName>GenbamemoIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.GenbamemoIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G743</FormID>
+    <Caption>他車振替登録（スポット）</Caption>
+    <AssemblyName>CarTransferSpot.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.CarTransferSpot</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G744</FormID>
+    <Caption>他車振替登録（定期配車）</Caption>
+    <AssemblyName>CarTransferTeiki.dll</AssemblyName>
+    <Namespace>Shougun.Core.Allocation.CarTransferTeiki</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G726</FormID>
+    <Caption>売上前年対比表</Caption>
+    <AssemblyName>UriageZennenTaihihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.UriageZennenTaihihyou</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G725</FormID>
+    <Caption>単価履歴</Caption>
+    <AssemblyName>TankaRirekiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.TankaRirekiIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G728</FormID>
+    <Caption>支払前年対比表</Caption>
+    <AssemblyName>ShiharaiZennenTaihihyou.dll</AssemblyName>
+    <Namespace>Shougun.Core.SalesPayment.ShiharaiZennenTaihihyou</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G745</FormID>
+    <Caption>INXS請求書発行</Caption>
+    <AssemblyName>InxsSeikyuushoHakkou.dll</AssemblyName>
+    <Namespace>Shougun.Core.Billing.InxsSeikyuushoHakkou</Namespace>
+  </FormAssembly>
+  <!--G747 INXS支払明細書発行-->
+  <FormAssembly>
+    <FormID>G747</FormID>
+    <Caption>INXS支払明細書発行</Caption>
+    <AssemblyName>InxsShiharaiMeisaishoHakko.dll</AssemblyName>
+    <Namespace>Shougun.Core.Adjustment.InxsShiharaiMeisaishoHakko</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M748</FormID>
+    <Caption>許可証一覧</Caption>
+    <AssemblyName>KyokaShouIchiran.dll</AssemblyName>
+    <Namespace>KyokaShouIchiran.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M750</FormID>
+    <Caption>現場メモ表題入力</Caption>
+    <AssemblyName>GenbamemoHyoudaiHoshu.dll</AssemblyName>
+    <Namespace>GenbamemoHyoudaiHoshu.APP</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>M746</FormID>
+    <Caption>共有先入力</Caption>
+    <AssemblyName>KyoyusakiNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.KyoyusakiNyuuryoku</Namespace>
+  </FormAssembly>
+
+  <!-- Begin: LANDUONG - 20220211 - refs#160057 -->
+  <FormAssembly>
+	<FormID>M757</FormID>
+	<Caption>楽楽明細マスタ一覧</Caption>
+	<AssemblyName>RakurakuMasutaIchiran.dll</AssemblyName>
+	<Namespace>Shougun.Core.ExternalConnection.RakurakuMasutaIchiran.APP</Namespace>
+  </FormAssembly>
+  <!-- End: LANDUONG - 20220211 - refs#160057 -->
+
+  <FormAssembly>
+    <FormID>G761</FormID>
+    <Caption>伝票履歴</Caption>
+    <AssemblyName>DenpyouRireki.dll</AssemblyName>
+    <Namespace>Shougun.Core.Common.DenpyouRireki</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>G751</FormID>
+    <Caption>出金消込修正入力</Caption>
+    <AssemblyName>ShukkinKeshikomiShusei.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.ShukkinKeshikomiShusei</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G752</FormID>
+    <Caption>出金消込一覧</Caption>
+    <AssemblyName>ShukkinKeshikomi.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.ShukkinKeshikomi</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G753</FormID>
+    <Caption>未出金一覧表</Caption>
+    <AssemblyName>MiShukkinIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.MiShukkinIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G754</FormID>
+    <Caption>出金予定一覧表</Caption>
+    <AssemblyName>ShukkinYoteiIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ReceiptPayManagement.ShukkinYoteiIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G762</FormID>
+    <Caption>出金データ出力</Caption>
+    <AssemblyName>ShukkinDataShutsuryoku.dll</AssemblyName>
+    <Namespace>ShukkinDataShutsuryoku</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M758</FormID>
+    <Caption>電子契約最新照会(WAN-Sign)</Caption>
+    <AssemblyName>DenshiKeiyakuSaishinShoukaiWanSign.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DenshiKeiyakuSaishinShoukaiWanSign</Namespace>
+  </FormAssembly>
+
+  <FormAssembly>
+    <FormID>M760</FormID>
+    <Caption>電子文書詳細入力</Caption>
+    <AssemblyName>DenshiBunshoHoshu.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.DenshiBunshoHoshu</Namespace>
+  </FormAssembly>
+  
+  <FormAssembly>
+    <FormID>M766</FormID>
+    <Caption>ｼｮｰﾄﾒｯｾｰｼﾞ受信者入力</Caption>
+    <AssemblyName>SmsReceiverNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.SmsReceiverNyuuryoku</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G767</FormID>
+    <Caption>ｼｮｰﾄﾒｯｾｰｼﾞ入力</Caption>
+    <AssemblyName>SmsNyuuryoku.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.SmsNyuuryoku</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G768</FormID>
+    <Caption>ｼｮｰﾄﾒｯｾｰｼﾞ送信一覧</Caption>
+    <AssemblyName>SmsIchiran.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.SmsIchiran</Namespace>
+  </FormAssembly>
+  <FormAssembly>
+    <FormID>G769</FormID>
+    <Caption>ｼｮｰﾄﾒｯｾｰｼﾞ着信結果</Caption>
+    <AssemblyName>SmsResult.dll</AssemblyName>
+    <Namespace>Shougun.Core.ExternalConnection.SmsResult</Namespace>
+  </FormAssembly>
+  <!--20250317-->
+  <FormAssembly>
+	<FormID>M0317</FormID>
+	<Caption>グループ入力</Caption>
+	<AssemblyName>GurupuNyuryoku.dll</AssemblyName>
+	<Namespace>GurupuNyuryoku.APP</Namespace>
+  </FormAssembly>
+  <!--20250403-->
+  <FormAssembly>
+	<FormID>M0403</FormID>
+	<Caption>備考パターン入力</Caption>
+	<AssemblyName>BikoPatanNyuryoku.dll</AssemblyName>
+	<Namespace>BikoPatanNyuryoku.APP</Namespace>
+  </FormAssembly>
+  <!--20250404-->
+  <FormAssembly>
+	<FormID>M0404</FormID>
+	<Caption>備考選択肢入力</Caption>
+	<AssemblyName>BikoSentakushiNyuryoku.dll</AssemblyName>
+	<Namespace>BikoSentakushiNyuryoku.APP</Namespace>
+  </FormAssembly>
+	<!--20250404-->
+  <FormAssembly>
+	<FormID>M0405</FormID>
+	<Caption>備考内訳入力</Caption>
+	<AssemblyName>BikoUchiwakeNyuryoku.dll</AssemblyName>
+	<Namespace>BikoUchiwakeNyuryoku.APP</Namespace>
+  </FormAssembly>
+</ArrayOfFormAssembly>

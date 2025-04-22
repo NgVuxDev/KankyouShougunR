@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.Common.BusinessCommon</RootNamespace>
+    <AssemblyName>BusinessCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Report.4">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1Report.4">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accessor\CasherAccessor.cs" />
+    <Compile Include="Accessor\DBAccessor.cs" />
+    <Compile Include="Accessor\XMLAccessor.cs" />
+    <Compile Include="Accessor\DenshiShinseiDBAccessor.cs" />
+    <Compile Include="App\PasswordPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\PasswordPopupForm.designer.cs">
+      <DependentUpon>PasswordPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseForm\BasePopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\BaseForm\BasePopForm.Designer.cs">
+      <DependentUpon>BasePopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Const\CommonConst.cs" />
+    <Compile Include="CustomControl\CustomRadioCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomRadioCheckNumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dao\CasherDAOClass.cs" />
+    <Compile Include="Dao\GetsujiShoriDao.cs" />
+    <Compile Include="Dao\SyuuryouBiKeikokuDAOClass.cs" />
+    <Compile Include="Dao\IT_DENSHI_SHINSEI_ENTRYDao.cs" />
+    <Compile Include="Dao\IT_DENSHI_SHINSEI_DETAILDao.cs" />
+    <Compile Include="Dao\IT_DENSHI_SHINSEI_STATUSDao.cs" />
+    <Compile Include="Dao\IT_DENSHI_SHINSEI_DETAIL_ACTIONDao.cs" />
+    <Compile Include="Dao\ItakuKeiyakuDAOClass.cs" />
+    <Compile Include="Dto\CasherDTOClass.cs" />
+    <Compile Include="Dto\CurrentUserDto.cs" />
+    <Compile Include="Dto\GetsujiShoriDTOClass.cs" />
+    <Compile Include="Dto\GetusjiShoriCheckDTOClass.cs" />
+    <Compile Include="Dto\GetusjiShoriZaikoDTOClass.cs" />
+    <Compile Include="Dto\InxsExecuteResponseDto.cs" />
+    <Compile Include="Dto\ItakuCheckDTO.cs" />
+    <Compile Include="Dto\ItakuErrorDTO.cs" />
+    <Compile Include="Dto\KihonHinmeiTankaParam.cs" />
+    <Compile Include="Dto\KobetsuHinmeiTankaParam.cs" />
+    <Compile Include="Dto\RequestStatusInxsDto.cs" />
+    <Compile Include="Dto\SyuuryouBiKeikokuDTOClass.cs" />
+    <Compile Include="Dao\DAOClass.cs" />
+    <Compile Include="Dao\ManifestoDAOClass.cs" />
+    <Compile Include="Dao\DenshiMasterDAOClass.cs" />
+    <Compile Include="Dto\CheckDTOClass.cs" />
+    <Compile Include="Dto\ManifestoDTOClass.cs" />
+    <Compile Include="Dto\ShimeDTOClass.cs" />
+    <Compile Include="Dto\DenshiManifestoDTOClass.cs" />
+    <Compile Include="Dto\DenshiShinseiNyuuryokuInitDTO.cs" />
+    <Compile Include="Dto\ItakuKeiyakuDTOClass.cs" />
+    <Compile Include="Dto\CheckDateClass.cs" />
+    <Compile Include="Dto\ReturnDateClass.cs" />
+    <Compile Include="Enums\EnumCls.cs" />
+    <Compile Include="Logic\GetEnvironmentInfoClass.cs" />
+    <Compile Include="Logic\GetsujiShoriCheckLogicClass.cs" />
+    <Compile Include="Logic\GetsujiShoriLogic.cs" />
+    <Compile Include="Logic\InxsClass.cs" />
+    <Compile Include="Logic\InxsManifestLogic.cs" />
+    <Compile Include="Logic\SyuuryouBiKeikokuLogicClass.cs" />
+    <Compile Include="Logic\CheckLogicClass.cs" />
+    <Compile Include="Logic\ManifestoLogicClass.cs" />
+    <Compile Include="Logic\DenshiGetMasterDataLogicClass.cs" />
+    <Compile Include="Logic\ItakuKeiyakuCheckLogicClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UserControlSelectTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\UserControlSelectTime.Designer.cs">
+      <DependentUpon>UserControlSelectTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ConvertStrByte.cs" />
+    <Compile Include="Utility\CSVExport.cs" />
+    <Compile Include="Utility\CurrentUserUtil.cs" />
+    <Compile Include="Utility\DateUtility.cs" />
+    <Compile Include="Utility\EnumUtil.cs" />
+    <Compile Include="Utility\MasterUtility.cs" />
+    <Compile Include="Utility\NumberUtil.cs" />
+    <Compile Include="Utility\ObjectExtension.cs" />
+    <Compile Include="Utility\PopupUtility.cs" />
+    <Compile Include="Utility\ProgramKickerUtility.cs" />
+    <Compile Include="Utility\SaibanUtil.cs" />
+    <Compile Include="Utility\ShimezumiCheckUtil.cs" />
+    <Compile Include="Utility\StringExtension.cs" />
+    <Compile Include="Utility\StringUtil.cs" />
+    <Compile Include="Utility\TankaUtil.cs" />
+    <Compile Include="Utility\TaxUtil.cs" />
+    <Compile Include="Utility\Transaction.cs" />
+    <Compile Include="Utility\DenshiShinseiUtility.cs" />
+    <Compile Include="Xml\CurrentUserCustomConfigProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App\PasswordPopupForm.resx">
+      <DependentUpon>PasswordPopupForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\UserControlSelectTime.resx">
+      <DependentUpon>UserControlSelectTime.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckNyuukinData.sql" />
+    <EmbeddedResource Include="Sql\CheckNyuukinGoukeiKingaku.sql" />
+    <EmbeddedResource Include="Sql\CheckShukkaData.sql" />
+    <EmbeddedResource Include="Sql\CheckShukkaGoukeiKingaku.sql" />
+    <EmbeddedResource Include="Sql\CheckShukkaMikakuteiData.sql" />
+    <EmbeddedResource Include="Sql\CheckUkeireData.sql" />
+    <EmbeddedResource Include="Sql\CheckUkeireGoukeiKingaku.sql" />
+    <EmbeddedResource Include="Sql\CheckUkeireMikakuteiData.sql" />
+    <EmbeddedResource Include="Sql\CheckUriageGoukeiKingaku.sql" />
+    <EmbeddedResource Include="Sql\CheckUriageMikakuteiData.sql" />
+    <EmbeddedResource Include="Sql\CheckUriageShiharaiData.sql" />
+    <EmbeddedResource Include="Sql\Check_CheckNyuukinData.sql" />
+    <EmbeddedResource Include="Sql\Check_CheckShukkaData.sql" />
+    <EmbeddedResource Include="Sql\Check_CheckShukkaMikakuteiData.sql" />
+    <EmbeddedResource Include="Sql\Check_CheckUkeireData.sql" />
+    <EmbeddedResource Include="Sql\Check_CheckUkeireMikakuteiData.sql" />
+    <EmbeddedResource Include="Sql\Check_CheckUriageMikakuteiData.sql" />
+    <EmbeddedResource Include="Sql\Check_CheckUriageShiharaiData.sql" />
+    <EmbeddedResource Include="Sql\SelectSeikyuMeisaiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckShukkinData.sql" />
+    <EmbeddedResource Include="Sql\CheckShukkinGoukeiKingaku.sql" />
+    <EmbeddedResource Include="Sql\Check_CheckShukkinData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiUnitSearchAndCheckSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiHaikiNameSearchAndCheckSql.sql" />
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiHaikiShuruiSearchAndCheckSql.sql" />
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiGyoushaSearchAndCheckSql.sql" />
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiGenbaSearchAndCheckSql.sql" />
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiTantoushaSearchAndCheckSql.sql" />
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiYougaibushituSearchAndCheckSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiNISUGATASearchAndCheckSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiSBN_HOUHOUSearchAndCheckSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiUNPAN_HOUHOUSearchAndCheckSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiCARSearchAndCheckSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiSharyouSearchAndCheckSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiManifestNoSearchAndCheckSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_KongouHaikibutu.sql" />
+    <EmbeddedResource Include="Sql\Manifest_KansanData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_PtMani.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_Mani.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_PtDetail.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_PtDetailPrt.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_Detail.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_DetailPrt.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_Gyousha.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_Genba.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_GenbaAll.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_GenyouData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_Unit.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\20_外部接続\CommunicateLib\CommunicateLib.csproj">
+      <Project>{48903edc-99cd-43e0-97b7-548dbc1da889}</Project>
+      <Name>CommunicateLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\Shougun.Core.Message\Shougun.Core.Message.csproj">
+      <Project>{DDF5B1E5-6897-48EB-A194-ECA45C8201FD}</Project>
+      <Name>Shougun.Core.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\Common\Common.csproj">
+      <Project>{7749C25E-83F6-4478-A720-92162E76FB53}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_HaikiShurui.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_ShobunTantousha.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\DenshiKansanSearchSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\GetQue_SeqInfoForLastSbnEndRepFunction.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetSyuuryouBiKeikokuData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_MaxDetailSyobunDate.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_GetDetailSyobunData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_GetSecondLastSbnInfo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiShinseiSql\GetAllValidData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetSeikyuuData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetShiharaiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetManifestRelation.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetManifestRelationCancel.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\GetGenYourituSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShoriLockCheck.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShoriLatestData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShori\GetUriageZandaka.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShori\GetShiharaiZandaka.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShori\GetShiharaiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShori\GetUriageData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShori\GetNyuukinData.sql" />
+    <EmbeddedResource Include="Sql\GetsujiShori\GetShukkinData.sql" />
+    <EmbeddedResource Include="Sql\GetsujiShori\GetsujiShoriLatestData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetManiRelationForFixedEndRepElec.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_GetFirstManiInfo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_GetLastSbnInfoForNextMani.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Manifest_GetR18EX_ForSystemId.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetAllValidManifestRelation.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetAllValidManifestRelationMinCols.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShori\GetHenkouZaikoRyou.sql" />
+    <EmbeddedResource Include="Sql\GetsujiShori\GetMonthlyLockZaiko.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\IT_SEIKYUU_DETAILDao_GetDataForEntity.sql" />
+    <EmbeddedResource Include="Sql\IT_SEISAN_DETAILDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiShinseiSql\GetAllValidDataMinCols.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetMixManifestForLastSbnData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShori\GetNyuukinSeikyuuData.sql" />
+    <EmbeddedResource Include="Sql\GetsujiShori\GetUriageSeikyuuData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetsujiShori\GetShiharaiSeikyuuData.sql" />
+    <EmbeddedResource Include="Sql\GetsujiShori\GetShukkinShiharaiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\DenshiMasterSql\GetQue_SeqInfoForHoryuDel.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\Check_ItakuKeiyaku.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckShukkaTaxData.sql" />
+    <EmbeddedResource Include="Sql\CheckUkeireTaxData.sql" />
+    <EmbeddedResource Include="Sql\CheckUriageTaxData.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

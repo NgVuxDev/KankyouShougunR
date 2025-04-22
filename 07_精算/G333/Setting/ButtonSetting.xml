@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func5</ButtonName>
+    <IchiranButtonName>[F5]&#xD;&#xA;印刷</IchiranButtonName>
+    <IchiranButtonHintText>画面に表示された内容を印刷します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func6</ButtonName>
+    <IchiranButtonName>[F6]&#xD;&#xA;CSV</IchiranButtonName>
+    <IchiranButtonHintText>CSVファイルを出力します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <IchiranButtonName>[F9]締&#xD;&#xA;処理続行</IchiranButtonName>
+    <IchiranButtonHintText>エラー理由を登録後、締処理を続行します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]締&#xD;&#xA;処理中止</IchiranButtonName>
+    <IchiranButtonHintText>エラー理由を登録後、締処理を中止します</IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

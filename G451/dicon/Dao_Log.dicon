@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN" "http://www.seasar.org/dtd/components.dtd"[]>
+<components namespace="DaoLog">
+  <include path="dicon\Tx_Log.dicon" />
+  <!-- S2Dao.NETのDaoInterceptorとそれに必要なコンポーネント -->
+  <component class="Seasar.Extension.ADO.Impl.BasicDataReaderFactory" />
+  <component class="Seasar.Extension.ADO.Impl.BasicCommandFactory">
+    <property name="CommandTimeout">60</property>
+  </component>
+  <component class="Seasar.Dao.Impl.DaoMetaDataFactoryImpl" />
+  <component class="Seasar.Dao.Impl.FieldAnnotationReaderFactory" />
+  <component name="DaoInterceptorLog" class="Seasar.Dao.Interceptors.S2DaoInterceptor" />
+  <!-- Dao設定 -->
+  <component class="r_framework.Dao.IT_OPERATE_LOGDao">
+    <aspect>DaoInterceptorLog</aspect>
+  </component>
+</components>

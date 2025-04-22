@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="330">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="書類ID" Needs="0" TableName="ENTRY" Name="DOCUMENT_ID" Format="" />
+      <Column ID="2" DispNumber="2" DispName="送付タイトル" Needs="0" TableName="ENTRY" Name="SEND_TITLE" Format="" />
+      <Column ID="3" DispNumber="3" DispName="管理用タイトル" Needs="0" TableName="ENTRY" Name="KANRI_TITLE" Format="" />
+      <Column ID="4" DispNumber="4" DispName="契約状況" Needs="0" TableName="" Name="CASE ENTRY.KEIYAKU_JYOUKYOU WHEN 0 THEN '下書き' WHEN 1 THEN '先方確認中' WHEN 2 THEN '締結済' WHEN 3 THEN '取消、または却下' WHEN 4 THEN 'テンプレート' ELSE '' END" Format="" />
+      <Column ID="5" DispNumber="5" DispName="クラウドサイン備考" Needs="0" TableName="ENTRY" Name="SHANAI_BIKO" Format="" />
+      <Column ID="6" DispNumber="6" DispName="ファイルID" Needs="0" TableName="DETAIL" Name="FILE_ID" Format="" />
+      <Column ID="7" DispNumber="7" DispName="ファイル名" Needs="0" TableName="DETAIL" Name="FILE_NAME" Format="" />
+      <Column ID="8" DispNumber="8" DispName="契約者" Needs="0" TableName="ENTRY" Name="KEIYAKUSHA" Format="" />
+      <Column ID="9" DispNumber="9" DispName="契約締結日" Needs="0" TableName="ENTRY" Name="KEIYAKUSHO_KEIYAKU_DATE" Format="" />
+      <Column ID="10" DispNumber="10" DispName="契約開始日" Needs="0" TableName="ENTRY" Name="YUUKOU_BEGIN" Format="" />
+      <Column ID="11" DispNumber="11" DispName="契約終了日" Needs="0" TableName="ENTRY" Name="YUUKOU_END" Format="" />
+      <Column ID="12" DispNumber="12" DispName="自動更新の有無" Needs="0" TableName="" Name="CASE ENTRY.AUTO_UPDATE WHEN 0 THEN '指定なし' WHEN 1 THEN 'あり' WHEN 2 THEN 'なし' ELSE '' END" Format="" />
+      <Column ID="13" DispNumber="13" DispName="解約通知期限" Needs="0" TableName="ENTRY" Name="KAIYAKU_TSUUCHI" Format="" />
+      <Column ID="14" DispNumber="14" DispName="クラウドサイン管理番号" Needs="0" TableName="ENTRY" Name="LOCAL_ID" Format="" />
+      <Column ID="15" DispNumber="15" DispName="取引金額" Needs="0" TableName="ENTRY" Name="AMOUNT" Format="#,##0" />
+      <Column ID="16" DispNumber="16" DispName="書類項目1" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME1" Format="" />
+      <Column ID="17" DispNumber="17" DispName="書類項目2" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME2" Format="" />
+      <Column ID="18" DispNumber="18" DispName="書類項目3" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME3" Format="" />
+      <Column ID="19" DispNumber="19" DispName="書類項目4" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME4" Format="" />
+      <Column ID="20" DispNumber="20" DispName="書類項目5" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME5" Format="" />
+      <Column ID="21" DispNumber="21" DispName="書類項目6" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME6" Format="" />
+      <Column ID="22" DispNumber="22" DispName="書類項目7" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME7" Format="" />
+      <Column ID="23" DispNumber="23" DispName="書類項目8" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME8" Format="" />
+      <Column ID="24" DispNumber="24" DispName="書類項目9" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME9" Format="" />
+      <Column ID="25" DispNumber="25" DispName="書類項目10" Needs="0" TableName="ENTRY" Name="SHORUI_INFO_NAME10" Format="" />
+      <Column ID="26" DispNumber="26" DispName="電子契約登録" Needs="0" TableName="" Name="CASE WHEN KIHON.SYSTEM_ID IS NULL THEN '' ELSE '済' END" Format="" />
+      <Column ID="27" DispNumber="27" DispName="作成者" Needs="0" TableName="ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="28" DispNumber="28" DispName="作成日時" Needs="0" TableName="ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="29" DispNumber="29" DispName="作成PC" Needs="0" TableName="ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="30" DispNumber="30" DispName="最終更新者" Needs="0" TableName="ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="31" DispNumber="31" DispName="最終更新日時" Needs="0" TableName="ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="32" DispNumber="32" DispName="最終更新PC" Needs="0" TableName="ENTRY" Name="UPDATE_PC" Format="" />
+    </Group>
+  </OutputColumnSelect>
+</root>

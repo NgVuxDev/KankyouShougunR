@@ -1,0 +1,6 @@
+﻿SELECT *
+FROM
+  T_SEISAN_DENPYOU
+WHERE
+  SEISAN_NUMBER = /*seisanNumber*/0
+  AND DELETE_FLG = 0

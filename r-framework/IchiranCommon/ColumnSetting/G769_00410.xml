@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="410">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="作業日" Needs="0" TableName="T_SMS" Name="SAGYOU_DATE" Format="" />
+      <Column ID="2" DispNumber="2" DispName="伝票種類" Needs="0" TableName="T_SMS" Name="CASE WHEN T_SMS.DENPYOU_SHURUI = 1 THEN '収集' WHEN T_SMS.DENPYOU_SHURUI = 2 THEN '出荷' WHEN T_SMS.DENPYOU_SHURUI = 3 THEN '持込' WHEN T_SMS.DENPYOU_SHURUI = 4 THEN '定期' ELSE null END" Format="" />
+      <Column ID="3" DispNumber="3" DispName="伝票番号" Needs="0" TableName="T_SMS" Name="DENPYOU_NUMBER" Format="" />
+      <Column ID="4" DispNumber="4" DispName="SMS状態" Needs="0" TableName="T_SMS" Name="CASE WHEN T_SMS.SMS_STATUS = 0 THEN 'SMS受付完了' WHEN T_SMS.SMS_STATUS = 1 THEN 'SMS送信完了' WHEN T_SMS.SMS_STATUS = 2 THEN 'SMS送信エラー' WHEN T_SMS.SMS_STATUS = 3 THEN '履歴判定結果によるSMS送信エラー' WHEN T_SMS.SMS_STATUS = 4 THEN '限度日時超過' WHEN T_SMS.SMS_STATUS = 6 THEN '送信禁止' WHEN T_SMS.SMS_STATUS = 9 THEN '不明' ELSE null END" Format="" />
+      <Column ID="5" DispNumber="5" DispName="受信者状態" Needs="0" TableName="T_SMS" Name="CASE WHEN T_SMS.RECEIVER_STATUS = 0 THEN '送達結果なし' WHEN T_SMS.RECEIVER_STATUS = 1 THEN '着信済' WHEN T_SMS.RECEIVER_STATUS = 2 THEN '圏外' WHEN T_SMS.RECEIVER_STATUS = 3 THEN 'エラー' WHEN T_SMS.RECEIVER_STATUS = 9 THEN '不明' ELSE null END" Format="" />
+      <Column ID="6" DispNumber="6" DispName="キャリア" Needs="0" TableName="T_SMS" Name="CASE WHEN T_SMS.CARRIER = 1 THEN 'ドコモ' WHEN T_SMS.CARRIER = 2 THEN 'ソフトバンク' WHEN T_SMS.CARRIER = 3 THEN 'au' WHEN T_SMS.CARRIER = 4 THEN 'オプション携帯キャリア' WHEN T_SMS.CARRIER = 5 THEN '処理中(判別中)' WHEN T_SMS.CARRIER = 6 THEN '楽天' ELSE null END" Format="" />
+      <Column ID="7" DispNumber="7" DispName="業者CD" Needs="0" TableName="T_SMS" Name="GYOUSHA_CD" Format="" />
+      <Column ID="8" DispNumber="8" DispName="業者名" Needs="0" TableName="T_SMS" Name="GYOUSHA_NAME" Format="" />
+      <Column ID="9" DispNumber="9" DispName="現場CD" Needs="0" TableName="T_SMS" Name="GENBA_CD" Format="" />
+      <Column ID="10" DispNumber="10" DispName="現場名" Needs="0" TableName="T_SMS" Name="GENBA_NAME" Format="" />
+      <Column ID="11" DispNumber="11" DispName="受信者名" Needs="0" TableName="T_SMS" Name="RECEIVER_NAME" Format="" />
+      <Column ID="12" DispNumber="12" DispName="携帯番号" Needs="0" TableName="T_SMS" Name="MOBILE_PHONE_NUMBER" Format="" />
+      <Column ID="13" DispNumber="13" DispName="メッセージ送信日時(R)" Needs="0" TableName="T_SMS" Name="SEND_DATE_R" Format="" />
+      <Column ID="14" DispNumber="14" DispName="メッセージ送信日時(空電)" Needs="0" TableName="T_SMS" Name="SEND_DATE_KARADEN" Format="" />
+      <Column ID="15" DispNumber="15" DispName="送信者" Needs="0" TableName="T_SMS" Name="SEND_USER" Format="" />
+      <Column ID="16" DispNumber="16" DispName="作成者" Needs="0" TableName="T_SMS" Name="CREATE_USER" Format="" />
+      <Column ID="17" DispNumber="17" DispName="作成日時" Needs="0" TableName="T_SMS" Name="CREATE_DATE" Format="" />
+      <Column ID="18" DispNumber="18" DispName="作成PC" Needs="0" TableName="T_SMS" Name="CREATE_PC" Format="" />
+      <Column ID="19" DispNumber="19" DispName="最終更新者" Needs="0" TableName="T_SMS" Name="UPDATE_USER" Format="" />
+      <Column ID="20" DispNumber="20" DispName="最終更新日時" Needs="0" TableName="T_SMS" Name="UPDATE_DATE" Format="" />
+      <Column ID="21" DispNumber="21" DispName="最終更新PC" Needs="0" TableName="T_SMS" Name="UPDATE_PC" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="1" DispName="メッセージID" Needs="0" TableName="T_SMS" Name="MESSAGE_ID" Format="" />
+      <Column ID="2" DispNumber="2" DispName="エラーコード" Needs="0" TableName="T_SMS" Name="ERROR_CODE" Format="" />
+      <Column ID="3" DispNumber="3" DispName="エラー詳細" Needs="0" TableName="T_SMS" Name="ERROR_DETAIL" Format="" />
+    </Group>
+  </OutputColumnSelect>
+</root>

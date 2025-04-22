@@ -1,0 +1,721 @@
+<?xml version="1.0"?>
+<Reports>
+  <!--Report *** LAYOUT1 ***-->
+  <Report version="4.6.20133.54661">
+    <Name>LAYOUT1</Name>
+    <ReportInfo>
+      <Author>CaternaRentalSystem</Author>
+    </ReportInfo>
+    <DataSource>
+      <DataProvider>1</DataProvider>
+    </DataSource>
+    <Layout>
+      <Width>10860</Width>
+      <MarginLeft>288</MarginLeft>
+      <MarginTop>288</MarginTop>
+      <MarginRight>288</MarginRight>
+      <MarginBottom>288</MarginBottom>
+      <Orientation>1</Orientation>
+      <PaperSize>9</PaperSize>
+    </Layout>
+    <Font>
+      <Name>Segoe UI</Name>
+      <Size>9</Size>
+    </Font>
+    <OnOpen>' -- style script start
+_styleCtr = 0
+' -- style script end
+</OnOpen>
+    <CompatibilityOptions />
+    <Groups />
+    <Sections>
+      <Section>
+        <Name>Detail</Name>
+        <Type>0</Type>
+        <Height>200</Height>
+      </Section>
+      <Section>
+        <Name>Header</Name>
+        <Type>1</Type>
+        <Height>1365</Height>
+      </Section>
+      <Section>
+        <Name>Footer</Name>
+        <Type>2</Type>
+        <Visible>0</Visible>
+      </Section>
+      <Section>
+        <Name>PageHeader</Name>
+        <Type>3</Type>
+        <Height>200</Height>
+      </Section>
+      <Section>
+        <Name>PageFooter</Name>
+        <Type>4</Type>
+        <Height>300</Height>
+      </Section>
+    </Sections>
+    <Fields>
+      <Field>
+        <Name>DTL_CONTENA_SHURUI_CD_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_CONTENA_SHURUI_CD_FLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>1170</Left>
+        <Width>2370</Width>
+        <Height>200</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_CONTENA_SHURUI_NAME_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_CONTENA_SHURUI_NAME_FLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>3539</Left>
+        <Width>4380</Width>
+        <Height>200</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>FH_CORP_RYAKU_NAME_VLB</Name>
+        <Section>1</Section>
+        <Text>会社略称ああああああ</Text>
+        <Width>3795</Width>
+        <Height>285</Height>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_PRINT_DATE_VLB</Name>
+        <Section>1</Section>
+        <Text>yyyy/MM/dd hh:mm:ss 発行</Text>
+        <Left>8070</Left>
+        <Width>2760</Width>
+        <Height>285</Height>
+        <Align>2</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_TITLE_VLB</Name>
+        <Section>1</Section>
+        <Text>待機コンテナ一覧表</Text>
+        <Left>105</Left>
+        <Top>390</Top>
+        <Width>10755</Width>
+        <Height>600</Height>
+        <Align>7</Align>
+        <Font>
+          <Bold>-1</Bold>
+          <Underline>-1</Underline>
+          <Name>ＭＳ 明朝</Name>
+          <Size>20</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CHUSHUTSU_JOKEN_FLB</Name>
+        <Section>1</Section>
+        <Text>【抽出条件】</Text>
+        <Top>1170</Top>
+        <Width>1170</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_DENPYOU_DATE_FLB</Name>
+        <Section>1</Section>
+        <Text>[コンテナ種類]</Text>
+        <Left>1215</Left>
+        <Top>1170</Top>
+        <Width>1350</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CONTENA_SHURUI_CD_START_CTL</Name>
+        <Section>1</Section>
+        <Text>000</Text>
+        <Left>2730</Left>
+        <Top>1170</Top>
+        <Width>405</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>PHY_CONTENA_SHURUI_CD_FLB</Name>
+        <Section>3</Section>
+        <Text>コンテナ種類CD</Text>
+        <Left>1170</Left>
+        <Width>2370</Width>
+        <Height>200</Height>
+        <Align>1</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_CONTENA_SHURUI_NAME_FLB</Name>
+        <Section>3</Section>
+        <Text>コンテナ種類名</Text>
+        <Left>3539</Left>
+        <Width>4380</Width>
+        <Height>200</Height>
+        <Align>1</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PF_PAGE_FLB</Name>
+        <Section>4</Section>
+        <Text>[Page] &amp; " / " &amp; [Pages] &amp; " 頁"</Text>
+        <Calculated>-1</Calculated>
+        <Left>6300</Left>
+        <Width>4514.39990234375</Width>
+        <Height>300</Height>
+        <Align>2</Align>
+        <ForeColor>5594999</ForeColor>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CONTENA_SHURUI_NAME_START_CTL</Name>
+        <Section>1</Section>
+        <Text>最大10文字</Text>
+        <Left>3165</Left>
+        <Top>1170</Top>
+        <Width>2160</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CONTENA_SHURUI_CD_END_CTL</Name>
+        <Section>1</Section>
+        <Text>zzz</Text>
+        <Left>5985</Left>
+        <Top>1170</Top>
+        <Width>405</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CONTENA_SHURUI_NAME_END_CTL</Name>
+        <Section>1</Section>
+        <Text>最大10文字</Text>
+        <Left>6420</Left>
+        <Top>1170</Top>
+        <Width>2160</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_～_CTL</Name>
+        <Section>1</Section>
+        <Text>～</Text>
+        <Left>5400</Left>
+        <Top>1170</Top>
+        <Width>405</Width>
+        <Height>195</Height>
+        <Align>7</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>PHY_CONTENA_SHURUI_ZAN_SUURYOU_FLB</Name>
+        <Section>3</Section>
+        <Text>残数量</Text>
+        <Left>7918</Left>
+        <Width>1755</Width>
+        <Height>200</Height>
+        <Align>1</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_CONTENA_SHURUI_ZAN_SUURYOU_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_CONTENA_SHURUI_ZAN_SUURYOU_FLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>7918</Left>
+        <Width>1755</Width>
+        <Height>200</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+    </Fields>
+  </Report>
+  <!--Report *** LAYOUT2 ***-->
+  <Report version="4.6.20133.54661">
+    <Name>LAYOUT2</Name>
+    <ReportInfo>
+      <Author>CaternaRentalSystem</Author>
+    </ReportInfo>
+    <DataSource>
+      <DataProvider>1</DataProvider>
+    </DataSource>
+    <Layout>
+      <Width>10860</Width>
+      <MarginLeft>288</MarginLeft>
+      <MarginTop>288</MarginTop>
+      <MarginRight>288</MarginRight>
+      <MarginBottom>288</MarginBottom>
+      <Orientation>1</Orientation>
+      <PaperSize>9</PaperSize>
+    </Layout>
+    <Font>
+      <Name>Segoe UI</Name>
+      <Size>9</Size>
+    </Font>
+    <OnOpen>' -- style script start
+_styleCtr = 0
+' -- style script end
+</OnOpen>
+    <CompatibilityOptions />
+    <Groups />
+    <Sections>
+      <Section>
+        <Name>Detail</Name>
+        <Type>0</Type>
+        <Height>200</Height>
+      </Section>
+      <Section>
+        <Name>Header</Name>
+        <Type>1</Type>
+        <Height>1365</Height>
+      </Section>
+      <Section>
+        <Name>Footer</Name>
+        <Type>2</Type>
+        <Visible>0</Visible>
+      </Section>
+      <Section>
+        <Name>PageHeader</Name>
+        <Type>3</Type>
+        <Height>200</Height>
+      </Section>
+      <Section>
+        <Name>PageFooter</Name>
+        <Type>4</Type>
+        <Height>300</Height>
+      </Section>
+    </Sections>
+    <Fields>
+      <Field>
+        <Name>DTL_CONTENA_SHURUI_CD_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_CONTENA_SHURUI_CD_FLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>795</Left>
+        <Width>1455</Width>
+        <Height>200</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_CONTENA_SHURUI_NAME_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_CONTENA_SHURUI_NAME_FLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>2251</Left>
+        <Width>3120</Width>
+        <Height>200</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>FH_CORP_RYAKU_NAME_VLB</Name>
+        <Section>1</Section>
+        <Text>会社略称ああああああ</Text>
+        <Width>3795</Width>
+        <Height>285</Height>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_PRINT_DATE_VLB</Name>
+        <Section>1</Section>
+        <Text>yyyy/MM/dd hh:mm:ss 発行</Text>
+        <Left>8070</Left>
+        <Width>2760</Width>
+        <Height>285</Height>
+        <Align>2</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_TITLE_VLB</Name>
+        <Section>1</Section>
+        <Text>待機コンテナ一覧表</Text>
+        <Left>105</Left>
+        <Top>390</Top>
+        <Width>10755</Width>
+        <Height>600</Height>
+        <Align>7</Align>
+        <Font>
+          <Bold>-1</Bold>
+          <Underline>-1</Underline>
+          <Name>ＭＳ 明朝</Name>
+          <Size>20</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CHUSHUTSU_JOKEN_FLB</Name>
+        <Section>1</Section>
+        <Text>【抽出条件】</Text>
+        <Top>1170</Top>
+        <Width>1170</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_DENPYOU_DATE_FLB</Name>
+        <Section>1</Section>
+        <Text>[コンテナ種類]</Text>
+        <Left>1215</Left>
+        <Top>1170</Top>
+        <Width>1350</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CONTENA_SHURUI_CD_START_CTL</Name>
+        <Section>1</Section>
+        <Text>000</Text>
+        <Left>2730</Left>
+        <Top>1170</Top>
+        <Width>405</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>PHY_CONTENA_SHURUI_CD_FLB</Name>
+        <Section>3</Section>
+        <Text>コンテナ種類CD</Text>
+        <Left>795</Left>
+        <Width>1455</Width>
+        <Height>200</Height>
+        <Align>1</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_CONTENA_SHURUI_NAME_FLB</Name>
+        <Section>3</Section>
+        <Text>コンテナ種類名</Text>
+        <Left>2250</Left>
+        <Width>3120</Width>
+        <Height>200</Height>
+        <Align>1</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PF_PAGE_FLB</Name>
+        <Section>4</Section>
+        <Text>[Page] &amp; " / " &amp; [Pages] &amp; " 頁"</Text>
+        <Calculated>-1</Calculated>
+        <Left>6300</Left>
+        <Width>4514.39990234375</Width>
+        <Height>300</Height>
+        <Align>2</Align>
+        <ForeColor>5594999</ForeColor>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CONTENA_SHURUI_NAME_START_CTL</Name>
+        <Section>1</Section>
+        <Text>最大10文字</Text>
+        <Left>3165</Left>
+        <Top>1170</Top>
+        <Width>2160</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CONTENA_SHURUI_CD_END_CTL</Name>
+        <Section>1</Section>
+        <Text>zzz</Text>
+        <Left>5985</Left>
+        <Top>1170</Top>
+        <Width>405</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CONTENA_SHURUI_NAME_END_CTL</Name>
+        <Section>1</Section>
+        <Text>最大10文字</Text>
+        <Left>6420</Left>
+        <Top>1170</Top>
+        <Width>2160</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_～_CTL</Name>
+        <Section>1</Section>
+        <Text>～</Text>
+        <Left>5400</Left>
+        <Top>1170</Top>
+        <Width>405</Width>
+        <Height>195</Height>
+        <Align>7</Align>
+        <Visible>0</Visible>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>PHY_CONTENA_CD_FLB</Name>
+        <Section>3</Section>
+        <Text>コンテナCD</Text>
+        <Left>5370</Left>
+        <Width>1455</Width>
+        <Height>200</Height>
+        <Align>1</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_CONTENA_NAME_FLB</Name>
+        <Section>3</Section>
+        <Text>コンテナ名</Text>
+        <Left>6825</Left>
+        <Width>3120</Width>
+        <Height>200</Height>
+        <Align>1</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_CONTENA_CD_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_CONTENA_CD_FLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>5370</Left>
+        <Width>1455</Width>
+        <Height>200</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_CONTENA_NAME_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_CONTENA_NAME_FLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>6825</Left>
+        <Width>3120</Width>
+        <Height>200</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+    </Fields>
+  </Report>
+</Reports>

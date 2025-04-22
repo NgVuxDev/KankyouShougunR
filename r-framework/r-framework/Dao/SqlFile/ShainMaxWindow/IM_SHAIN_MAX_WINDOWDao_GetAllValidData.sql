@@ -1,0 +1,8 @@
+﻿SELECT * FROM dbo.M_SHAIN_MAX_WINDOW
+WHERE 
+/*IF data.ISNOT_NEED_DELETE_FLG.IsNull || data.ISNOT_NEED_DELETE_FLG.IsFalse*/
+ DELETE_FLG = 0
+-- ELSE
+ 1 = 1
+/*END*/
+/*IF data.SHAIN_CD != null*/AND SHAIN_CD = /*data.SHAIN_CD*//*END*/

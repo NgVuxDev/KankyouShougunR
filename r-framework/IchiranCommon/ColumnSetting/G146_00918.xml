@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="918">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="マニフェスト番号" Needs="1" TableName="SUMMARY" Name="MANIFEST_ID" Format="" />
+      <Column ID="2" DispNumber="" DispName="交付年月日" Needs="0" TableName="SUMMARY" Name="HIKIWATASHI_DATE" Format="" />
+      <Column ID="3" DispNumber="" DispName="排出事業者名" Needs="0" TableName="SUMMARY" Name="HST_SHA_NAME" Format="" />
+      <Column ID="4" DispNumber="" DispName="排出事業場名" Needs="0" TableName="SUMMARY" Name="HST_JOU_NAME" Format="" />
+      <Column ID="5" DispNumber="" DispName="数量" Needs="0" TableName="SUMMARY" Name="HAIKI_SUU" Format="6" />
+      <Column ID="6" DispNumber="" DispName="単位" Needs="0" TableName="SUMMARY" Name="UNIT_NAME" Format="" />
+      <Column ID="7" DispNumber="" DispName="廃棄物種類名" Needs="0" TableName="SUMMARY" Name="HAIKI_SHURUI" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+    </Group>
+    <JoinCondition TableName="">ここにJOIN句を設定します。</JoinCondition>
+  </OutputColumnSelect>
+</root>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<ArrayOfCheckMethodSettingDto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CheckMethodSettingDto>
+    <CheckMethodName>一致チェック</CheckMethodName>
+    <AssemblyName>r_framework</AssemblyName>
+    <ClassNameSpace>Logic.Validator</ClassNameSpace>
+    <MethodName>EqualsCheck</MethodName> 
+  </CheckMethodSettingDto>
+  <CheckMethodSettingDto>
+    <CheckMethodName>不一致チェック</CheckMethodName>
+    <AssemblyName>r_framework</AssemblyName>
+    <ClassNameSpace>Logic.Validator</ClassNameSpace>
+    <MethodName>NotEqualsCheck</MethodName>
+  </CheckMethodSettingDto>
+</ArrayOfCheckMethodSettingDto>

@@ -1,0 +1,5 @@
+SELECT 
+    OB.*
+FROM 
+    dbo.M_ITAKU_KEIYAKU_OBOE OB
+WHERE 1 != 1

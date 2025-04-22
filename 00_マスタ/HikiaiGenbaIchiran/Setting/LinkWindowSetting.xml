@@ -1,0 +1,8 @@
+﻿<?xml version="1.0"?>
+<ArrayOfLinkWindowSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LinkWindowSetting>
+    <LinkWindowName>現場入力</LinkWindowName>
+    <AssemblyName>GenbaHoshu.dll</AssemblyName>
+    <FormName>GenbaHoshu.APP.GenbaHoshuForm</FormName>
+  </LinkWindowSetting>
+</ArrayOfLinkWindowSetting>

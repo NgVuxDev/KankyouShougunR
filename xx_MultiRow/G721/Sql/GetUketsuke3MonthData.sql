@@ -1,0 +1,16 @@
+SELECT 
+    '‹ÆŽÒCDF' + GYOUSHA_CD AS GYOUSHA_CD
+   ,GYOUSHA_NAME
+FROM T_UKEIRE_ENTRY 
+WHERE
+    DELETE_FLG = 0
+    AND TAIRYUU_KBN = 0
+    AND DENPYOU_DATE >= CONVERT(DATETIME ,/*denpyouDateFrom*/,120)
+    AND DENPYOU_DATE <= CONVERT(DATETIME ,/*denpyouDateTo*/,120)
+    AND SHARYOU_NAME = /*sharyouName*/
+    /*IF !kyotenCd.IsNull*/
+    AND KYOTEN_CD = /*kyotenCd*/
+    /*END*/
+GROUP BY
+ GYOUSHA_CD
+,GYOUSHA_NAME

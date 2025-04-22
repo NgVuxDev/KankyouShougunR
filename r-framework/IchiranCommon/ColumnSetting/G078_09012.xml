@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9012">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="KYOTEN_CD" Format="00" />
+      <Column ID="2" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="5" DispNumber="" DispName="出金番号" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="SHUKKIN_NUMBER" Format="" />
+      <Column ID="6" DispNumber="" DispName="伝票日付" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="DENPYOU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="7" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="8" DispNumber="" DispName="取引先名" Needs="0" TableName="M_TORIHIKISAKI1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="11" DispNumber="" DispName="営業担当者CD" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="EIGYOU_TANTOUSHA_CD" Format="" />
+      <Column ID="12" DispNumber="" DispName="営業担当者名" Needs="0" TableName="M_SHAIN1" Name="SHAIN_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="" DispName="伝票備考" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="DENPYOU_BIKOU" Format="" />
+      <Column ID="14" DispNumber="" DispName="出金額合計" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="SHUKKIN_AMOUNT_TOTAL" Format="#,##0" />
+      <Column ID="15" DispNumber="" DispName="調整額合計" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="CHOUSEI_AMOUNT_TOTAL" Format="#,##0" />
+      <Column ID="20" DispNumber="" DispName="合計額" Needs="0" TableName="" Name="ISNULL(T_SHUKKIN_ENTRY.SHUKKIN_AMOUNT_TOTAL,0) +  ISNULL(T_SHUKKIN_ENTRY.CHOUSEI_AMOUNT_TOTAL,0)" Format="#,##0" />
+      <Column ID="21" DispNumber="" DispName="締処理状況" Needs="0" TableName="T_SEISAN_DETAIL1" Name="CASE T_SEISAN_DETAIL1.DENPYOU_SHURUI_CD WHEN 20 THEN '締済' ELSE '未締' END" Format="" />
+      <Column ID="22" DispNumber="" DispName="精算相殺作成区分" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="SEISAN_SOUSAI_CREATE_KBN" Format="3" />
+      <Column ID="23" DispNumber="" DispName="作成者" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="24" DispNumber="" DispName="作成日時" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="25" DispNumber="" DispName="作成PC" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="26" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="27" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="28" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="UPDATE_PC" Format="" />
+      <Column ID="29" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="DELETE_FLG" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="行番号" Needs="0" TableName="T_SHUKKIN_DETAIL" Name="ROW_NUMBER" Format="" />
+      <Column ID="2" DispNumber="" DispName="入出金区分CD" Needs="0" TableName="T_SHUKKIN_DETAIL" Name="NYUUSHUKKIN_KBN_CD" Format="" />
+      <Column ID="3" DispNumber="" DispName="入出金区分名" Needs="0" TableName="M_NYUUSHUKKIN_KBN1" Name="NYUUSHUKKIN_KBN_NAME_RYAKU" Format="" />
+      <Column ID="4" DispNumber="" DispName="金額" Needs="0" TableName="T_SHUKKIN_DETAIL" Name="KINGAKU" Format="#,##0" />
+      <Column ID="5" DispNumber="" DispName="明細備考" Needs="0" TableName="T_SHUKKIN_DETAIL" Name="MEISAI_BIKOU" Format="" />
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_SHUKKIN_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_TORIHIKISAKI1">LEFT JOIN M_TORIHIKISAKI M_TORIHIKISAKI1 ON T_SHUKKIN_ENTRY.TORIHIKISAKI_CD = M_TORIHIKISAKI1.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="M_SHUKKINSAKI1">LEFT JOIN M_SYUKKINSAKI M_SHUKKINSAKI1 ON T_SHUKKIN_ENTRY.SHUKKINSAKI_CD = M_SHUKKINSAKI1.SYUKKINSAKI_CD</JoinCondition>
+    <JoinCondition TableName="M_SHAIN1">LEFT JOIN M_SHAIN M_SHAIN1 ON T_SHUKKIN_ENTRY.EIGYOU_TANTOUSHA_CD = M_SHAIN1.SHAIN_CD</JoinCondition>
+    <JoinCondition TableName="M_NYUUSHUKKIN_KBN1">LEFT JOIN M_NYUUSHUKKIN_KBN M_NYUUSHUKKIN_KBN1 ON T_SHUKKIN_DETAIL.NYUUSHUKKIN_KBN_CD = M_NYUUSHUKKIN_KBN1.NYUUSHUKKIN_KBN_CD</JoinCondition>
+    <JoinCondition TableName="T_SEISAN_DETAIL1">LEFT JOIN T_SEISAN_DETAIL T_SEISAN_DETAIL1 ON T_SEISAN_DETAIL1.DENPYOU_SHURUI_CD = 20 AND T_SHUKKIN_ENTRY.SYSTEM_ID = T_SEISAN_DETAIL1.DENPYOU_SYSTEM_ID AND T_SHUKKIN_ENTRY.SEQ = T_SEISAN_DETAIL1.DENPYOU_SEQ AND T_SEISAN_DETAIL1.DELETE_FLG = 0</JoinCondition>
+  </OutputColumnSelect>
+</root>

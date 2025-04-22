@@ -1,0 +1,14 @@
+SELECT --20250318
+    GURUPU.*
+FROM 
+    dbo.M_GURUPU_NYURYOKU GURUPU
+WHERE
+    GURUPU.DENPYOU_KBN_CD =/*data.DENPYOU_KBN_CD*/0
+    /*IF data.GURUPU_CD != null */AND GURUPU.GURUPU_CD LIKE '%' + /*data.GURUPU_CD*/'001' + '%'/*END*/
+    /*IF data.GURUPU_NAME != null*/AND GURUPU.GURUPU_NAME LIKE '%' +  /*data.GURUPU_NAME*/ + '%'/*END*/
+    /*IF data.UPDATE_USER != null*/AND GURUPU.UPDATE_USER LIKE '%' +  /*data.UPDATE_USER*/ + '%'/*END*/
+    /*IF data.SEARCH_UPDATE_DATE != null*/AND CONVERT(nvarchar, GURUPU.UPDATE_DATE, 120) LIKE '%' +  /*data.SEARCH_UPDATE_DATE*/ + '%'/*END*/
+    /*IF data.CREATE_USER != null*/AND GURUPU.CREATE_USER LIKE '%' +  /*data.CREATE_USER*/ + '%'/*END*/
+    /*IF data.SEARCH_CREATE_DATE != null*/AND CONVERT(nvarchar, GURUPU.CREATE_DATE, 120) LIKE '%' +  /*data.SEARCH_CREATE_DATE*/ + '%'/*END*/
+    /*IF !deletechuFlg*/AND GURUPU.DELETE_FLG = 0/*END*/
+ORDER BY GURUPU.DENPYOU_KBN_CD, GURUPU.GURUPU_CD

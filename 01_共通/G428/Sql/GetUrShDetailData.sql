@@ -1,0 +1,10 @@
+﻿SELECT
+  TUD.*
+FROM
+  T_UR_SH_DETAIL AS TUD 
+WHERE
+  TUD.SYSTEM_ID = /*data.SystemID*/
+  AND TUD.SEQ = /*data.SEQ*/
+  AND TUD.DETAIL_SYSTEM_ID = /*data.DetailSystemID*/
+ORDER BY
+  TUD.ROW_NO

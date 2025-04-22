@@ -1,0 +1,6 @@
+﻿SELECT            
+RIGHT('000000' + CONVERT(nvarchar, MAX(CONVERT(int, TORIHIKISAKI_CD)) + 1), 6) AS Expr1
+FROM              
+M_HIKIAI_TORIHIKISAKI
+WHERE             
+(UPPER(TORIHIKISAKI_CD) NOT LIKE '%[A-Z]%')

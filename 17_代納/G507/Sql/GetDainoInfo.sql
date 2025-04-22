@@ -1,0 +1,444 @@
+﻿-- DAINOUU_INOUT_TYPE(1:受入請求、2:受入支払、3:出荷請求、4:出荷支払)
+
+-- 1:受入請求の区分取得
+SELECT
+    1 AS DAINOUU_INOUT_TYPE
+
+    -- テーブル更新用
+    , t.SYSTEM_ID
+    , t.SEQ
+    , t.TIME_STAMP
+
+    -- UIラジオ初期値
+    , ISNULL(t.ZEI_KEISAN_KBN_CD, 0) AS ZEI_KEISAN_KBN_CD
+    , ISNULL(t.ZEI_KBN_CD, 0) AS ZEI_KBN_CD
+	
+	-- 前回残高用(今回御請求額,開始売り掛け残高)
+	, seikyuDenpyo.KONKAI_SEIKYU_GAKU AS KONKAI_GAKU
+	, torihikisakiSeikyu.KAISHI_URIKAKE_ZANDAKA AS KAISHI_ZANDAKA
+    
+    -- 帳票に使用(ヘッダ、フッタデータ)
+	, de.DAINOU_NUMBER AS DAINOU_NUMBER
+	, de.DENPYOU_DATE AS DENPYOU_DATE
+	, t.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+	, tori.TORIHIKISAKI_NAME1 AS TORIHIKISAKI_NAME1
+	, tori.TORIHIKISAKI_NAME2 AS TORIHIKISAKI_NAME2
+	, tori.TORIHIKISAKI_KEISHOU1 AS TORIHIKISAKI_KEISHOU1
+	, tori.TORIHIKISAKI_KEISHOU2 AS TORIHIKISAKI_KEISHOU2
+	, bumon.BUMON_NAME_RYAKU AS BUMON_NAME_RYAKU
+	, genba.GENBA_NAME_RYAKU AS GENBA_NAME_RYAKU
+	, kyoten.KYOTEN_NAME_RYAKU AS KYOTEN_NAME_RYAKU
+	, kyoten.KYOTEN_POST AS KYOTEN_POST
+	, kyoten.KYOTEN_ADDRESS1 AS KYOTEN_ADDRESS1
+	, kyoten.KYOTEN_ADDRESS2 AS KYOTEN_ADDRESS2
+	, kyoten.KYOTEN_TEL AS KYOTEN_TEL
+	, kyoten.KYOTEN_FAX AS KYOTEN_FAX
+	
+-- 代納入力(親) --
+FROM T_DAINOU_ENTRY AS de 
+
+LEFT OUTER JOIN (
+
+    -- 代納入力(子) --
+	SELECT 
+		due.SYSTEM_ID AS SYSTEM_ID
+		,due.SEQ AS SEQ
+		,due.TIME_STAMP AS TIME_STAMP
+		,due.URIAGE_ZEI_KEISAN_KBN_CD AS ZEI_KEISAN_KBN_CD	-- 売上税計算区分
+		,due.URIAGE_ZEI_KBN_CD AS ZEI_KBN_CD				-- 売上税区分
+        
+        -- 帳票に使用(ヘッダ、フッタデータ)
+        ,due.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+		,due.GYOUSHA_CD AS GYOUSHA_CD
+		,due.GENBA_CD AS GENBA_CD
+		
+	FROM T_DAINOU_UKEIRE_ENTRY AS due 
+	WHERE
+		due.URIAGE_TORIHIKI_KBN_CD = 2 	-- 1:現金／2:掛け
+) AS t 
+ON
+		t.SYSTEM_ID = de.SYSTEM_ID
+		AND t.SEQ = de.SEQ
+		
+-- 帳票用：取引先マスタ
+LEFT OUTER JOIN M_TORIHIKISAKI AS tori
+ON
+	tori.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+	AND tori.DELETE_FLG = 0
+	
+-- 帳票用：部門マスタ
+LEFT OUTER JOIN M_BUMON AS bumon
+ON
+	bumon.BUMON_CD = de.BUMON_CD
+	AND bumon.DELETE_FLG = 0
+	
+-- 帳票用：現場マスタ
+LEFT OUTER JOIN M_GENBA AS genba
+ON
+	genba.GYOUSHA_CD = t.GYOUSHA_CD
+	AND genba.GENBA_CD = t.GENBA_CD
+	AND genba.DELETE_FLG = 0
+	
+-- 帳票用：拠点マスタ
+LEFT OUTER JOIN M_KYOTEN AS kyoten
+ON
+	kyoten.KYOTEN_CD = de.KYOTEN_CD
+	AND kyoten.DELETE_FLG = 0
+	
+-- 前回残高用：清算伝票から今回請求額を取得--
+LEFT OUTER JOIN T_SEIKYUU_DENPYOU AS seikyuDenpyo
+ON
+	seikyuDenpyo.SEIKYUU_NUMBER = (
+									SELECT MAX(sei.SEIKYUU_NUMBER)
+									FROM T_SEIKYUU_DENPYOU as sei 
+									WHERE 
+										sei.DELETE_FLG = 0
+										AND sei.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+									GROUP BY
+										sei.TORIHIKISAKI_CD
+									)
+
+-- 前回残高用：取引先_請求情報マスタから開始売り掛け残高を取得--
+LEFT OUTER JOIN M_TORIHIKISAKI_SEIKYUU AS torihikisakiSeikyu 
+ON
+	torihikisakiSeikyu.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+
+WHERE
+	de.DAINOU_NUMBER = /*dainouNumber*/null	-- [入力パラメータ].代納番号
+	AND de.DELETE_FLG = 0
+
+
+
+-- 2:受入支払の区分取得
+UNION
+SELECT
+    2 AS DAINOUU_INOUT_TYPE
+
+    -- テーブル更新用
+    , t.SYSTEM_ID
+    , t.SEQ
+    , t.TIME_STAMP
+
+    -- UIラジオ初期値
+    , ISNULL(t.ZEI_KEISAN_KBN_CD, 0) AS ZEI_KEISAN_KBN_CD
+    , ISNULL(t.ZEI_KBN_CD, 0) AS ZEI_KBN_CD
+	
+	-- 前回残高用(今回御請算額,開始買い掛け残高)
+	, seisanDenpyo.KONKAI_SEISAN_GAKU AS KONKAI_GAKU
+	, torihikisakiShiharai.KAISHI_KAIKAKE_ZANDAKA AS KAISHI_ZANDAKA
+    
+    -- 帳票に使用(ヘッダ、フッタデータ)
+	, de.DAINOU_NUMBER AS DAINOU_NUMBER
+	, de.DENPYOU_DATE AS DENPYOU_DATE
+	, t.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+	, tori.TORIHIKISAKI_NAME1 AS TORIHIKISAKI_NAME1
+	, tori.TORIHIKISAKI_NAME2 AS TORIHIKISAKI_NAME2
+	, tori.TORIHIKISAKI_KEISHOU1 AS TORIHIKISAKI_KEISHOU1
+	, tori.TORIHIKISAKI_KEISHOU2 AS TORIHIKISAKI_KEISHOU2
+	, bumon.BUMON_NAME_RYAKU AS BUMON_NAME_RYAKU
+	, genba.GENBA_NAME_RYAKU AS GENBA_NAME_RYAKU
+	, kyoten.KYOTEN_NAME_RYAKU AS KYOTEN_NAME_RYAKU
+	, kyoten.KYOTEN_POST AS KYOTEN_POST
+	, kyoten.KYOTEN_ADDRESS1 AS KYOTEN_ADDRESS1
+	, kyoten.KYOTEN_ADDRESS2 AS KYOTEN_ADDRESS2
+	, kyoten.KYOTEN_TEL AS KYOTEN_TEL
+	, kyoten.KYOTEN_FAX AS KYOTEN_FAX
+
+-- 代納入力(親) --
+FROM T_DAINOU_ENTRY AS de 
+
+LEFT OUTER JOIN (
+
+    -- 代納入力(子) --
+	SELECT 
+		due.SYSTEM_ID AS SYSTEM_ID
+		,due.SEQ AS SEQ
+		,due.TIME_STAMP AS TIME_STAMP
+		,due.SHIHARAI_ZEI_KEISAN_KBN_CD AS ZEI_KEISAN_KBN_CD	-- 支払税計算区分
+		,due.SHIHARAI_ZEI_KBN_CD AS ZEI_KBN_CD					-- 支払税区分
+        
+        -- 帳票に使用(ヘッダ、フッタデータ)
+        ,due.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+		,due.GYOUSHA_CD AS GYOUSHA_CD
+		,due.GENBA_CD AS GENBA_CD
+		
+	FROM T_DAINOU_UKEIRE_ENTRY AS due 
+	WHERE
+        -- 支払時は支払
+		due.SHIHARAI_TORIHIKI_KBN_CD = 2 	-- 1:現金／2:掛け
+) AS t 
+ON
+		t.SYSTEM_ID = de.SYSTEM_ID
+		AND t.SEQ = de.SEQ
+
+-- 帳票用：取引先マスタ
+LEFT OUTER JOIN M_TORIHIKISAKI AS tori
+ON
+	tori.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+	AND tori.DELETE_FLG = 0
+	
+-- 帳票用：部門マスタ
+LEFT OUTER JOIN M_BUMON AS bumon
+ON
+	bumon.BUMON_CD = de.BUMON_CD
+	AND bumon.DELETE_FLG = 0
+	
+-- 帳票用：現場マスタ
+LEFT OUTER JOIN M_GENBA AS genba
+ON
+	genba.GYOUSHA_CD = t.GYOUSHA_CD
+	AND genba.GENBA_CD = t.GENBA_CD
+	AND genba.DELETE_FLG = 0
+	
+-- 帳票用：拠点マスタ
+LEFT OUTER JOIN M_KYOTEN AS kyoten
+ON
+	kyoten.KYOTEN_CD = de.KYOTEN_CD
+	AND kyoten.DELETE_FLG = 0
+	
+-- 前回残高用：清算伝票から今回請求額を取得--
+LEFT OUTER JOIN T_SEISAN_DENPYOU AS seisanDenpyo 
+ON
+	seisanDenpyo.SEISAN_NUMBER = (
+									SELECT MAX(sei.SEISAN_NUMBER)
+									FROM T_SEISAN_DENPYOU as sei 
+									WHERE 
+										sei.DELETE_FLG = 0
+										AND sei.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+									GROUP BY
+										sei.TORIHIKISAKI_CD
+									)
+
+-- 前回残高用：取引先_請求情報マスタから開始売り掛け残高を取得--
+LEFT OUTER JOIN M_TORIHIKISAKI_SHIHARAI AS torihikisakiShiharai 
+ON
+	torihikisakiShiharai.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+
+WHERE
+	de.DAINOU_NUMBER = /*dainouNumber*/null	-- [入力パラメータ].代納番号
+	AND de.DELETE_FLG = 0
+
+
+
+-- 3:出荷請求の区分取得
+UNION
+SELECT
+    3 AS DAINOUU_INOUT_TYPE
+
+    -- テーブル更新用
+    , t.SYSTEM_ID
+    , t.SEQ
+    , t.TIME_STAMP
+
+    -- UIラジオ初期値
+    , ISNULL(t.ZEI_KEISAN_KBN_CD, 0) AS ZEI_KEISAN_KBN_CD
+    , ISNULL(t.ZEI_KBN_CD, 0) AS ZEI_KBN_CD
+	
+	-- 前回残高用(今回御請求額,開始売り掛け残高)
+	, seikyuDenpyo.KONKAI_SEIKYU_GAKU AS KONKAI_GAKU
+	, torihikisakiSeikyu.KAISHI_URIKAKE_ZANDAKA AS KAISHI_ZANDAKA
+    
+    -- 帳票に使用(ヘッダ、フッタデータ)
+	, de.DAINOU_NUMBER AS DAINOU_NUMBER
+	, de.DENPYOU_DATE AS DENPYOU_DATE
+	, t.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+	, tori.TORIHIKISAKI_NAME1 AS TORIHIKISAKI_NAME1
+	, tori.TORIHIKISAKI_NAME2 AS TORIHIKISAKI_NAME2
+	, tori.TORIHIKISAKI_KEISHOU1 AS TORIHIKISAKI_KEISHOU1
+	, tori.TORIHIKISAKI_KEISHOU2 AS TORIHIKISAKI_KEISHOU2
+	, bumon.BUMON_NAME_RYAKU AS BUMON_NAME_RYAKU
+	, genba.GENBA_NAME_RYAKU AS GENBA_NAME_RYAKU
+	, kyoten.KYOTEN_NAME_RYAKU AS KYOTEN_NAME_RYAKU
+	, kyoten.KYOTEN_POST AS KYOTEN_POST
+	, kyoten.KYOTEN_ADDRESS1 AS KYOTEN_ADDRESS1
+	, kyoten.KYOTEN_ADDRESS2 AS KYOTEN_ADDRESS2
+	, kyoten.KYOTEN_TEL AS KYOTEN_TEL
+	, kyoten.KYOTEN_FAX AS KYOTEN_FAX
+
+-- 代納入力(親) --
+FROM T_DAINOU_ENTRY AS de 
+
+LEFT OUTER JOIN (
+
+    -- 代納入力(子) --
+	SELECT 
+		dse.SYSTEM_ID AS SYSTEM_ID
+		,dse.SEQ AS SEQ
+		,dse.TIME_STAMP AS TIME_STAMP
+		,dse.URIAGE_ZEI_KEISAN_KBN_CD AS ZEI_KEISAN_KBN_CD	-- 売上税計算区分
+		,dse.URIAGE_ZEI_KBN_CD AS ZEI_KBN_CD				-- 売上税区分
+        
+        -- 帳票に使用(ヘッダ、フッタデータ)
+        ,dse.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+		,dse.GYOUSHA_CD AS GYOUSHA_CD
+		,dse.GENBA_CD AS GENBA_CD
+		
+	FROM T_DAINOU_SHUKKA_ENTRY AS dse 
+	WHERE
+		dse.URIAGE_TORIHIKI_KBN_CD = 2 	-- 1:現金／2:掛け
+) AS t 
+ON
+		t.SYSTEM_ID = de.SYSTEM_ID
+		AND t.SEQ = de.SEQ
+
+-- 帳票用：取引先マスタ
+LEFT OUTER JOIN M_TORIHIKISAKI AS tori
+ON
+	tori.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+	AND tori.DELETE_FLG = 0
+	
+-- 帳票用：部門マスタ
+LEFT OUTER JOIN M_BUMON AS bumon
+ON
+	bumon.BUMON_CD = de.BUMON_CD
+	AND bumon.DELETE_FLG = 0
+	
+-- 帳票用：現場マスタ
+LEFT OUTER JOIN M_GENBA AS genba
+ON
+	genba.GYOUSHA_CD = t.GYOUSHA_CD
+	AND genba.GENBA_CD = t.GENBA_CD
+	AND genba.DELETE_FLG = 0
+	
+-- 帳票用：拠点マスタ
+LEFT OUTER JOIN M_KYOTEN AS kyoten
+ON
+	kyoten.KYOTEN_CD = de.KYOTEN_CD
+	AND kyoten.DELETE_FLG = 0
+	
+-- 前回残高用：清算伝票から今回請求額を取得--
+LEFT OUTER JOIN T_SEIKYUU_DENPYOU AS seikyuDenpyo
+ON
+	seikyuDenpyo.SEIKYUU_NUMBER = (
+									SELECT MAX(sei.SEIKYUU_NUMBER)
+									FROM T_SEIKYUU_DENPYOU as sei 
+									WHERE 
+										sei.DELETE_FLG = 0
+										AND sei.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+									GROUP BY
+										sei.TORIHIKISAKI_CD
+									)
+
+-- 前回残高用：取引先_請求情報マスタから開始売り掛け残高を取得--
+LEFT OUTER JOIN M_TORIHIKISAKI_SEIKYUU AS torihikisakiSeikyu 
+ON
+	torihikisakiSeikyu.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+
+WHERE
+	de.DAINOU_NUMBER = /*dainouNumber*/null	-- [入力パラメータ].代納番号
+	AND de.DELETE_FLG = 0
+
+
+
+-- 4:出荷支払の区分取得
+UNION
+
+SELECT
+    4 AS DAINOUU_INOUT_TYPE
+
+    -- テーブル更新用
+    , t.SYSTEM_ID
+    , t.SEQ
+    , t.TIME_STAMP
+
+    -- UIラジオ初期値
+    , ISNULL(t.ZEI_KEISAN_KBN_CD, 0) AS ZEI_KEISAN_KBN_CD
+    , ISNULL(t.ZEI_KBN_CD, 0) AS ZEI_KBN_CD
+	
+	-- 前回残高用(今回御請算額,開始買い掛け残高)
+	, seisanDenpyo.KONKAI_SEISAN_GAKU AS KONKAI_GAKU
+	, torihikisakiShiharai.KAISHI_KAIKAKE_ZANDAKA AS KAISHI_ZANDAKA
+    
+    -- 帳票に使用(ヘッダ、フッタデータ)
+	, de.DAINOU_NUMBER AS DAINOU_NUMBER
+	, de.DENPYOU_DATE AS DENPYOU_DATE
+	, t.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+	, tori.TORIHIKISAKI_NAME1 AS TORIHIKISAKI_NAME1
+	, tori.TORIHIKISAKI_NAME2 AS TORIHIKISAKI_NAME2
+	, tori.TORIHIKISAKI_KEISHOU1 AS TORIHIKISAKI_KEISHOU1
+	, tori.TORIHIKISAKI_KEISHOU2 AS TORIHIKISAKI_KEISHOU2
+	, bumon.BUMON_NAME_RYAKU AS BUMON_NAME_RYAKU
+	, genba.GENBA_NAME_RYAKU AS GENBA_NAME_RYAKU
+	, kyoten.KYOTEN_NAME_RYAKU AS KYOTEN_NAME_RYAKU
+	, kyoten.KYOTEN_POST AS KYOTEN_POST
+	, kyoten.KYOTEN_ADDRESS1 AS KYOTEN_ADDRESS1
+	, kyoten.KYOTEN_ADDRESS2 AS KYOTEN_ADDRESS2
+	, kyoten.KYOTEN_TEL AS KYOTEN_TEL
+	, kyoten.KYOTEN_FAX AS KYOTEN_FAX
+
+-- 代納入力(親) --
+FROM T_DAINOU_ENTRY AS de 
+
+LEFT OUTER JOIN (
+
+    -- 代納入力(子) --
+	SELECT 
+		dse.SYSTEM_ID AS SYSTEM_ID
+		,dse.SEQ AS SEQ
+		,dse.TIME_STAMP AS TIME_STAMP
+		,dse.SHIHARAI_ZEI_KEISAN_KBN_CD AS ZEI_KEISAN_KBN_CD	-- 支払税計算区分
+		,dse.SHIHARAI_ZEI_KBN_CD AS ZEI_KBN_CD					-- 支払税区分
+        
+        -- 帳票に使用(ヘッダ、フッタデータ)
+        ,dse.TORIHIKISAKI_CD AS TORIHIKISAKI_CD
+		,dse.GYOUSHA_CD AS GYOUSHA_CD
+		,dse.GENBA_CD AS GENBA_CD
+		
+	FROM T_DAINOU_SHUKKA_ENTRY AS dse 
+	WHERE
+        -- 支払時は支払
+		dse.SHIHARAI_TORIHIKI_KBN_CD = 2 	-- 1:現金／2:掛け
+) AS t 
+ON
+		t.SYSTEM_ID = de.SYSTEM_ID
+		AND t.SEQ = de.SEQ
+
+-- 帳票用：取引先マスタ
+LEFT OUTER JOIN M_TORIHIKISAKI AS tori
+ON
+	tori.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+	AND tori.DELETE_FLG = 0
+	
+-- 帳票用：部門マスタ
+LEFT OUTER JOIN M_BUMON AS bumon
+ON
+	bumon.BUMON_CD = de.BUMON_CD
+	AND bumon.DELETE_FLG = 0
+	
+-- 帳票用：現場マスタ
+LEFT OUTER JOIN M_GENBA AS genba
+ON
+	genba.GYOUSHA_CD = t.GYOUSHA_CD
+	AND genba.GENBA_CD = t.GENBA_CD
+	AND genba.DELETE_FLG = 0
+	
+-- 帳票用：拠点マスタ
+LEFT OUTER JOIN M_KYOTEN AS kyoten
+ON
+	kyoten.KYOTEN_CD = de.KYOTEN_CD
+	AND kyoten.DELETE_FLG = 0
+	
+-- 前回残高用：清算伝票から今回請求額を取得--
+LEFT OUTER JOIN T_SEISAN_DENPYOU AS seisanDenpyo
+ON
+	seisanDenpyo.SEISAN_NUMBER = (
+									SELECT MAX(sei.SEISAN_NUMBER)
+									FROM T_SEISAN_DENPYOU as sei 
+									WHERE 
+										sei.DELETE_FLG = 0
+										AND sei.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+									GROUP BY
+										sei.TORIHIKISAKI_CD
+									)
+
+-- 前回残高用：取引先_請求情報マスタから開始売り掛け残高を取得--
+LEFT OUTER JOIN M_TORIHIKISAKI_SHIHARAI AS torihikisakiShiharai 
+ON
+	torihikisakiShiharai.TORIHIKISAKI_CD = t.TORIHIKISAKI_CD
+
+WHERE
+	de.DAINOU_NUMBER = /*dainouNumber*/null	-- [入力パラメータ].代納番号
+	AND de.DELETE_FLG = 0
+
+
+ORDER BY DAINOUU_INOUT_TYPE

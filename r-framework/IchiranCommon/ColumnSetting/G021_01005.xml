@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="1005">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="KYOTEN_CD" Format="00" />
+      <Column ID="2" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="5" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="UKETSUKE_NUMBER" Format="" />
+      <Column ID="6" DispNumber="" DispName="受付日" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="UKETSUKE_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="7" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="8" DispNumber="" DispName="取引先名" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="TORIHIKISAKI_NAME" Format="" />
+      <Column ID="9" DispNumber="" DispName="業者CD" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="GYOUSHA_CD" Format="" />
+      <Column ID="10" DispNumber="" DispName="業者名" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="GYOUSHA_NAME" Format="" />
+      <Column ID="11" DispNumber="" DispName="現場CD" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="GENBA_CD" Format="" />
+      <Column ID="12" DispNumber="" DispName="現場名" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="GENBA_NAME" Format="" />
+      <Column ID="13" DispNumber="" DispName="営業担当者CD" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="EIGYOU_TANTOUSHA_CD" Format="" />
+      <Column ID="14" DispNumber="" DispName="営業担当者名" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="EIGYOU_TANTOUSHA_NAME" Format="" />
+      <Column ID="15" DispNumber="" DispName="対応完了日" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="TAIOU_END__DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="16" DispNumber="" DispName="表題" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="TITLE_NAME" Format="" />
+      <Column ID="17" DispNumber="" DispName="先方問合せ者" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="SENPOU_TOIAWASE_USER" Format="" />
+      <Column ID="18" DispNumber="" DispName="内容1" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="NAIYOU_1" Format="" />
+      <Column ID="19" DispNumber="" DispName="内容2" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="NAIYOU_2" Format="" />
+      <Column ID="20" DispNumber="" DispName="内容3" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="NAIYOU_3" Format="" />
+      <Column ID="21" DispNumber="" DispName="内容4" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="NAIYOU_4" Format="" />
+      <Column ID="22" DispNumber="" DispName="内容5" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="NAIYOU_5" Format="" />
+      <Column ID="23" DispNumber="" DispName="内容6" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="NAIYOU_6" Format="" />
+      <Column ID="24" DispNumber="" DispName="内容7" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="NAIYOU_7" Format="" />
+      <Column ID="25" DispNumber="" DispName="内容8" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="NAIYOU_8" Format="" />
+      <Column ID="26" DispNumber="" DispName="作成者" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="27" DispNumber="" DispName="作成日時" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="28" DispNumber="" DispName="作成PC" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="29" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="30" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="31" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="UPDATE_PC" Format="" />
+      <Column ID="32" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_UKETSUKE_CM_ENTRY" Name="DELETE_FLG" Format="" />
+
+      <Column ID="33" DispNumber="" DispName="現場メモ" Needs="0" TableName="" Name="CASE WHEN T_GENBAMEMO_ENTRY.SYSTEM_ID IS NULL THEN '' ELSE '有' END" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_UKETSUKE_CM_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition><JoinCondition TableName="T_GENBAMEMO_ENTRY">LEFT JOIN T_GENBAMEMO_ENTRY ON T_UKETSUKE_MK_ENTRY.UKETSUKE_NUMBER = T_GENBAMEMO_ENTRY.HASSEIMOTO_NUMBER</JoinCondition>
+    <JoinCondition TableName="T_GENBAMEMO_ENTRY">LEFT JOIN T_GENBAMEMO_ENTRY ON T_UKETSUKE_CM_ENTRY.UKETSUKE_NUMBER = T_GENBAMEMO_ENTRY.HASSEIMOTO_NUMBER</JoinCondition>
+  </OutputColumnSelect>
+</root>

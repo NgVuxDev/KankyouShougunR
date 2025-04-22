@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <NewButtonName>[F2]&#xD;&#xA;新規</NewButtonName>
+    <ReferButtonName>[F2]&#xD;&#xA;新規</ReferButtonName>
+    <UpdateButtonName>[F2]&#xD;&#xA;新規</UpdateButtonName>
+    <DeleteButtonName>[F2]&#xD;&#xA;新規</DeleteButtonName>
+    <IchiranButtonName>[F2]&#xD;&#xA;新規</IchiranButtonName>
+    <DefaultHintText>新規データを追加する画面に切り替わります</DefaultHintText>
+ 
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <NewButtonName>[F3]&#xD;&#xA;修正</NewButtonName>
+    <ReferButtonName>[F3]&#xD;&#xA;修正</ReferButtonName>
+    <UpdateButtonName>[F3]&#xD;&#xA;修正</UpdateButtonName>
+    <DeleteButtonName>[F3]&#xD;&#xA;修正</DeleteButtonName>
+    <IchiranButtonName>[F3]&#xD;&#xA;修正</IchiranButtonName>
+    <DefaultHintText>既存データを修正する画面に切り替わります</DefaultHintText>
+   
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <NewButtonName>[F7]&#xD;&#xA;一覧</NewButtonName>
+    <ReferButtonName>[F7]&#xD;&#xA;一覧</ReferButtonName>
+    <UpdateButtonName>[F7]&#xD;&#xA;一覧</UpdateButtonName>
+    <DeleteButtonName>[F7]&#xD;&#xA;一覧</DeleteButtonName>
+    <IchiranButtonName>[F7]&#xD;&#xA;一覧</IchiranButtonName>
+    <DefaultHintText>伝票一覧画面に切り替わります</DefaultHintText>
+   
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;登録</NewButtonName>
+    <ReferButtonName>[F9]&#xD;&#xA;登録</ReferButtonName>
+    <UpdateButtonName>[F9]&#xD;&#xA;登録</UpdateButtonName>
+    <DeleteButtonName>[F9]&#xD;&#xA;登録</DeleteButtonName>
+    <IchiranButtonName>[F9]&#xD;&#xA;登録</IchiranButtonName>
+    <DefaultHintText>入力内容を登録します　または　表示内容を登録します</DefaultHintText>
+    
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func10</ButtonName>
+    <NewButtonName>[F10]&#xD;&#xA;行挿入</NewButtonName>
+    <ReferButtonName>[F10]&#xD;&#xA;行挿入</ReferButtonName>
+    <UpdateButtonName>[F10]&#xD;&#xA;行挿入</UpdateButtonName>
+    <IchiranButtonName>[F10]&#xD;&#xA;行挿入</IchiranButtonName>
+    <DefaultHintText>選択された行の前に１行追加します</DefaultHintText>
+    
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <NewButtonName>[F11]&#xD;&#xA;行削除</NewButtonName>
+    <ReferButtonName>[F11]&#xD;&#xA;行削除</ReferButtonName>
+    <UpdateButtonName>[F11]&#xD;&#xA;行削除</UpdateButtonName>
+    <IchiranButtonName>[F11]&#xD;&#xA;行削除</IchiranButtonName>
+    <DefaultHintText>選択された行を削除します</DefaultHintText>
+    
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <DeleteButtonName>[F12]&#xD;&#xA;閉じる</DeleteButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <DefaultHintText>画面を閉じます</DefaultHintText>
+     
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <NewButtonName>[1]運賃入力</NewButtonName>
+    <ReferButtonName>[1]運賃入力</ReferButtonName>
+    <UpdateButtonName>[1]運賃入力</UpdateButtonName>
+    <IchiranButtonName>[1]運賃入力</IchiranButtonName>
+    <DefaultHintText>運賃入力画面に切り替わります</DefaultHintText>
+    <!--
+     <IchiranButtonHintText>運賃入力画面に切り替わります</IchiranButtonHintText>
+    -->
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process2</ButtonName>
+    <NewButtonName>[2]出荷量セット</NewButtonName>
+    <ReferButtonName>[2]出荷量セット</ReferButtonName>
+    <UpdateButtonName>[2]出荷量セット</UpdateButtonName>
+    <IchiranButtonName>[2]出荷量セット</IchiranButtonName>
+    <DefaultHintText>出荷明細に出荷量設定します</DefaultHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

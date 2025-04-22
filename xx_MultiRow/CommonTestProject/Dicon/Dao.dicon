@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+
+<components>
+
+  <include path="CommonTestProject.Dicon.Tx.dicon" />
+  <!-- S2Dao.NETのDaoInterceptorとそれに必要なコンポーネント -->
+  <component class="Seasar.Extension.ADO.Impl.BasicDataReaderFactory" />
+  <component class="Seasar.Extension.ADO.Impl.BasicCommandFactory" />
+  <component class="Seasar.Dao.Impl.DaoMetaDataFactoryImpl" />
+  <component class="Seasar.Dao.Impl.FieldAnnotationReaderFactory" />
+  <component name="DaoInterceptor" class="Seasar.Dao.Interceptors.S2DaoInterceptor"/>
+
+  <!-- Dao設定 -->
+  <component class="r_framework.Dao.IM_BANKDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_BANK_SHITENDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_BUMONDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_BUNRUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_BUSHODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CHIIKIBETSU_BUNRUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CHIIKIBETSU_GYOUSHUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CHIIKIBETSU_JUUSHODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CHIIKIBETSU_KYOKADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CHIIKIBETSU_KYOKA_MEIGARADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CHIIKIBETSU_SHISETSUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CHIIKIBETSU_SHOBUNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CHIIKIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CONTENADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CONTENA_JOUKYOUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CONTENA_SHURUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CONTENA_SOUSADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CORP_CLOSEDDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_CORP_INFODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_COURSEDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_COURSE_NAMEDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENPYOU_KBNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENSHI_HAIKI_NAMEDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENSHI_HAIKI_SHURUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENSHI_HAIKI_SHURUI_SAIBUNRUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENSHI_JIGYOUJOUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENSHI_JIGYOUSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENSHI_TANTOUSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENSHI_YUUGAI_BUSSHITSUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_DENSHU_KBNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_EIGYOU_TANTOUSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ERROR_MESSAGEDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_GENBADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_GENCHAKU_TIMEDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_GENNYOURITSUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_GYOUSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_GYOUSHUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_HAIKI_KBNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_HAIKI_NAMEDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_HAIKI_SHURUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_HAISHA_JOKYODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_HINMEIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_HOUKOKUSHO_BUNRUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_KEIYAKU_BETSU1_HSTDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_KEIYAKU_BETSU1_YOTEIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_KEIYAKU_BETSU2Dao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_KEIYAKU_BETSU3Dao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_KEIYAKU_BETSU4Dao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_KEIYAKU_KIHONDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_KEIYAKU_KIHON_HST_GENBADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_KEIYAKU_OBOEDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_SBN_KYOKASHODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_ITAKU_UPN_KYOKASHODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KANSANDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KEIJOUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KEIRYOU_CHOUSEIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KEITAI_KBNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KIHON_HINMEI_TANKADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KOBETSU_HINMEI_TANKADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KONGOU_HAIKIBUTSUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KONGOU_SHURUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KONTENADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KONTENA_SHURUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_KYOTENDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_LOGIN_USER_INFODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_MANIFEST_KANSANDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_MANIFEST_SHURUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_MANIFEST_TEHAIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_MENU_AUTHDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_NISUGATADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_NYUUKINSAKIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_NYUUKINSAKI_FURIKOMIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_NYUURYOKU_TANTOUSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_NYUUSHUKKIN_KBNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_OUTPUT_PATTERNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_OUTPUT_PATTERN_COLUMNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_OUTPUT_PATTERN_KOBETSUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHAINDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHARYOUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHASHUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHIKUCHOUSONDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHOBUN_HOUHOUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHOBUN_MOKUTEKIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHOBUN_TANTOUSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHOUHIZEIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHURUIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SHUUKEI_KOUMOKUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SYS_INFODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SYUKKINSAKIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_SYUKKINSAKI_FURIKOMIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_TEGATA_HOKANSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_TODOUFUKENDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_TORIHIKISAKIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_TORIHIKISAKI_SEIKYUUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_TORIHIKISAKI_SHIHARAIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_TORIHIKI_KBNDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_UNITDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_UNPAN_HOUHOUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_UNTENSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_WORK_CLOSED_HANNYUUSAKIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_WORK_CLOSED_SHARYOUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_WORK_CLOSED_UNTENSHADao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_YOUKIDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IM_YUUGAI_BUSSHITSUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IS_CUSTOMER_HINDODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IS_HINMEI_HINDODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IS_NUMBER_DAYDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IS_NUMBER_DENSHUDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IS_NUMBER_RECEIPTDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IS_NUMBER_SYSTEMDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IS_NUMBER_YEARDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IS_ZIP_CODEDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IT_UKEIRE_DETAILDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IT_UKEIRE_ENTRYDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IT_UKETSUKE_DETAILDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IT_UKETSUKE_KONTENA_SLIPDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="r_framework.Dao.IT_UKETSUKE_SLIPDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_UKEIRE_ENTRYDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_UKEIRE_DETAILDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IS_NUMBER_DAYDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IS_NUMBER_YEARDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_URIAGE_MOTOCHODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_SHIHARAI_MOTOCHODao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_SHUKKA_ENTRYDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_SHUKKA_DETAILDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_UR_SH_ENTRYDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_UR_SH_DETAILDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+  <component class="Shougun.Function.ShougunCSCommon.Dao.IT_MANIFEST_ENTRYDao">
+    <aspect>DaoInterceptor</aspect>
+  </component>
+</components>
+

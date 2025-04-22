@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9100">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SYSTEM_ID" />
+      <Column ID="2" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SEQ" />
+      <Column ID="3" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="KYOTEN_CD" />
+      <Column ID="4" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN_11E1" Name="KYOTEN_NAME_RYAKU" />
+      <Column ID="7" DispNumber="" DispName="受付番号" Needs="1" TableName="T_UKETSUKE_SS_ENTRY" Name="UKETSUKE_NUMBER" />
+      <Column ID="8" DispNumber="" DispName="受付日" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UKETSUKE_DATE" />
+      <Column ID="9" DispNumber="" DispName="配車状況CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="HAISHA_JOKYO_CD" />
+      <Column ID="10" DispNumber="" DispName="配車状況名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="HAISHA_JOKYO_NAME" />
+      <Column ID="11" DispNumber="" DispName="配車種類CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="HAISHA_SHURUI_CD" />
+      <Column ID="12" DispNumber="" DispName="配車種類名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="HAISHA_SHURUI_NAME" />
+      <Column ID="13" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TORIHIKISAKI_CD" />
+      <Column ID="14" DispNumber="" DispName="取引先名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TORIHIKISAKI_NAME" />
+      <Column ID="15" DispNumber="" DispName="業者CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GYOUSHA_CD" />
+      <Column ID="16" DispNumber="" DispName="業者名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GYOUSHA_NAME" />
+      <Column ID="17" DispNumber="" DispName="業者電話" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GYOSHA_TEL" />
+      <Column ID="18" DispNumber="" DispName="現場CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GENBA_CD" />
+      <Column ID="19" DispNumber="" DispName="現場名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GENBA_NAME" />
+      <Column ID="20" DispNumber="" DispName="現場電話" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GENBA_TEL" />
+      <Column ID="21" DispNumber="" DispName="担当者名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TANTOSHA_NAME" />
+      <Column ID="22" DispNumber="" DispName="担当携帯" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TANTOSHA_TEL" />
+      <Column ID="23" DispNumber="" DispName="運搬業者CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UNPAN_GYOUSHA_CD" />
+      <Column ID="24" DispNumber="" DispName="運搬業者名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UNPAN_GYOUSHA_NAME" />
+      <Column ID="25" DispNumber="" DispName="荷降業者CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="NIOROSHI_GYOUSHA_CD" />
+      <Column ID="26" DispNumber="" DispName="荷降業者名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="NIOROSHI_GYOUSHA_NAME" />
+      <Column ID="27" DispNumber="" DispName="荷降現場CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="NIOROSHI_GENBA_CD" />
+      <Column ID="28" DispNumber="" DispName="荷降現場名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="NIOROSHI_GENBA_NAME" />
+      <Column ID="29" DispNumber="" DispName="営業担当者CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="EIGYOU_TANTOUSHA_CD" />
+      <Column ID="30" DispNumber="" DispName="営業担当者名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="EIGYOU_TANTOUSHA_NAME" />
+      <Column ID="31" DispNumber="" DispName="荷降日" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="NIOROSHI_DATE" />
+      <Column ID="32" DispNumber="" DispName="作業日(指定)" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SAGYOU_DATE" />
+      <Column ID="33" DispNumber="" DispName="作業日(期間(開始日))" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SAGYOU_DATE_BEGIN" />
+      <Column ID="34" DispNumber="" DispName="作業日(期間(終了日))" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SAGYOU_DATE_END" />
+      <Column ID="35" DispNumber="" DispName="現着時間CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GENCHAKU_TIME_CD" />
+      <Column ID="36" DispNumber="" DispName="現着時間名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GENCHAKU_TIME_NAME" />
+      <Column ID="37" DispNumber="" DispName="現着時間" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GENCHAKU_TIME" />
+      <Column ID="38" DispNumber="" DispName="作業時間" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SAGYOU_TIME" />
+      <Column ID="39" DispNumber="" DispName="移動時間(開始)" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SAGYOU_TIME_BEGIN" />
+      <Column ID="40" DispNumber="" DispName="移動時間(終了)" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SAGYOU_TIME_END" />
+      <Column ID="41" DispNumber="" DispName="車種台数グループNo" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SHASHU_DAISU_GROUP_NUMBER" />
+      <Column ID="42" DispNumber="" DispName="車種台数番号" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SHASHU_DAISU_NUMBER" />
+      <Column ID="43" DispNumber="" DispName="車輌CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SHARYOU_CD" />
+      <Column ID="44" DispNumber="" DispName="車輌名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SHARYOU_NAME" />
+      <Column ID="45" DispNumber="" DispName="車種CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SHASHU_CD" />
+      <Column ID="46" DispNumber="" DispName="車種名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SHASHU_NAME" />
+      <Column ID="47" DispNumber="" DispName="運転者CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UNTENSHA_CD" />
+      <Column ID="48" DispNumber="" DispName="運転者名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UNTENSHA_NAME" />
+      <Column ID="49" DispNumber="" DispName="補助員CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="HOJOIN_CD" />
+      <Column ID="50" DispNumber="" DispName="補助員名" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="HOJOIN_NAME" />
+      <Column ID="51" DispNumber="" DispName="マニフェスト種類CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="MANIFEST_SHURUI_CD" />
+      <Column ID="52" DispNumber="" DispName="マニフェスト種類名" Needs="0" TableName="M_MANIFEST_SHURUI_11E3" Name="MANIFEST_SHURUI_NAME_RYAKU" />
+      <Column ID="53" DispNumber="" DispName="マニフェスト手配CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="MANIFEST_TEHAI_CD" />
+      <Column ID="54" DispNumber="" DispName="マニフェスト手配名" Needs="0" TableName="M_MANIFEST_TEHAI_11E4" Name="MANIFEST_TEHAI_NAME_RYAKU" />
+      <Column ID="55" DispNumber="" DispName="コンテナ操作CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="CONTENA_SOUSA_CD" />
+      <Column ID="56" DispNumber="" DispName="コンテナ操作名" Needs="0" TableName="M_CONTENA_SOUSA_11E5" Name="CONTENA_SOUSA_NAME_RYAKU" />
+      <Column ID="57" DispNumber="" DispName="コース組合" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="COURSE_KUMIAI_CD" />
+      <Column ID="58" DispNumber="" DispName="コース名称CD" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="COURSE_NAME_CD" />
+      <Column ID="59" DispNumber="" DispName="コース名称" Needs="0" TableName="M_COURSE_NAME_11E6" Name="COURSE_NAME_RYAKU" />
+      <Column ID="60" DispNumber="" DispName="指示書" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="HAISHA_SIJISHO_FLG" />
+      <Column ID="61" DispNumber="" DispName="受付備考1" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UKETSUKE_BIKOU1" />
+      <Column ID="62" DispNumber="" DispName="受付備考2" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UKETSUKE_BIKOU2" />
+      <Column ID="63" DispNumber="" DispName="受付備考3" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UKETSUKE_BIKOU3" />
+      <Column ID="64" DispNumber="" DispName="運転者指示事項1" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UNTENSHA_SIJIJIKOU1" />
+      <Column ID="65" DispNumber="" DispName="運転者指示事項2" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UNTENSHA_SIJIJIKOU2" />
+      <Column ID="66" DispNumber="" DispName="運転者指示事項3" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UNTENSHA_SIJIJIKOU3" />
+      <Column ID="67" DispNumber="" DispName="金額計" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="KINGAKU_TOTAL" />
+      <Column ID="68" DispNumber="" DispName="消費税率" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SHOUHIZEI_RATE" />
+      <Column ID="69" DispNumber="" DispName="伝票毎消費税外税" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TAX_SOTO" />
+      <Column ID="70" DispNumber="" DispName="伝票毎消費税内税" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TAX_UCHI" />
+      <Column ID="71" DispNumber="" DispName="明細毎消費税外税合計" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TAX_SOTO_TOTAL" />
+      <Column ID="72" DispNumber="" DispName="明細毎消費税内税合計" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TAX_UCHI_TOTAL" />
+      <Column ID="73" DispNumber="" DispName="消費税" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="SHOUHIZEI_TOTAL" />
+      <Column ID="74" DispNumber="" DispName="合計金額" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="GOUKEI_KINGAKU_TOTAL" />
+      <Column ID="75" DispNumber="" DispName="作成者" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="CREATE_USER" />
+      <Column ID="76" DispNumber="" DispName="作成日時" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="CREATE_DATE" />
+      <Column ID="77" DispNumber="" DispName="作成PC" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="CREATE_PC" />
+      <Column ID="78" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UPDATE_USER" />
+      <Column ID="79" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UPDATE_DATE" />
+      <Column ID="80" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="UPDATE_PC" />
+      <Column ID="81" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="DELETE_FLG" />
+      <Column ID="82" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKETSUKE_SS_ENTRY" Name="TIME_STAMP" />
+      <Column ID="83" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SYSTEM_ID" />
+      <Column ID="84" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SEQ" />
+      <Column ID="85" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="KYOTEN_CD" />
+      <Column ID="86" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN_12E1" Name="KYOTEN_NAME_RYAKU" />
+      <Column ID="89" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UKETSUKE_NUMBER" />
+      <Column ID="90" DispNumber="" DispName="受付日" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UKETSUKE_DATE" />
+      <Column ID="91" DispNumber="" DispName="配車状況" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="HAISHA_JOKYO_CD" />
+      <Column ID="92" DispNumber="" DispName="配車状況名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="HAISHA_JOKYO_NAME" />
+      <Column ID="93" DispNumber="" DispName="配車種類CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="HAISHA_SHURUI_CD" />
+      <Column ID="94" DispNumber="" DispName="配車種類名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="HAISHA_SHURUI_NAME" />
+      <Column ID="95" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TORIHIKISAKI_CD" />
+      <Column ID="96" DispNumber="" DispName="取引先名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TORIHIKISAKI_NAME" />
+      <Column ID="97" DispNumber="" DispName="業者CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GYOUSHA_CD" />
+      <Column ID="98" DispNumber="" DispName="業者名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GYOUSHA_NAME" />
+      <Column ID="99" DispNumber="" DispName="業者電話" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GYOSHA_TEL" />
+      <Column ID="100" DispNumber="" DispName="現場CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GENBA_CD" />
+      <Column ID="101" DispNumber="" DispName="現場名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GENBA_NAME" />
+      <Column ID="102" DispNumber="" DispName="現場電話" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GENBA_TEL" />
+      <Column ID="103" DispNumber="" DispName="担当者名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TANTOSHA_NAME" />
+      <Column ID="104" DispNumber="" DispName="担当携帯" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TANTOSHA_TEL" />
+      <Column ID="105" DispNumber="" DispName="運搬業者CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UNPAN_GYOUSHA_CD" />
+      <Column ID="106" DispNumber="" DispName="運搬業者名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UNPAN_GYOUSHA_NAME" />
+      <Column ID="107" DispNumber="" DispName="荷積業者CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="NIZUMI_GYOUSHA_CD" />
+      <Column ID="108" DispNumber="" DispName="荷積業者名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="NIZUMI_GYOUSHA_NAME" />
+      <Column ID="109" DispNumber="" DispName="荷積現場CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="NIZUMI_GENBA_CD" />
+      <Column ID="110" DispNumber="" DispName="荷積現場名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="NIZUMI_GENBA_NAME" />
+      <Column ID="111" DispNumber="" DispName="営業担当者CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="EIGYOU_TANTOUSHA_CD" />
+      <Column ID="112" DispNumber="" DispName="営業担当者名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="EIGYOU_TANTOUSHA_NAME" />
+      <Column ID="113" DispNumber="" DispName="荷積日" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="NIZUMI_DATE" />
+      <Column ID="114" DispNumber="" DispName="作業日(指定)" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SAGYOU_DATE" />
+      <Column ID="115" DispNumber="" DispName="作業日(期間(開始日))" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SAGYOU_DATE_BEGIN" />
+      <Column ID="116" DispNumber="" DispName="作業日(期間(終了日))" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SAGYOU_DATE_END" />
+      <Column ID="117" DispNumber="" DispName="現着時間CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GENCHAKU_TIME_CD" />
+      <Column ID="118" DispNumber="" DispName="現着時間名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GENCHAKU_TIME_NAME" />
+      <Column ID="119" DispNumber="" DispName="現着時間" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GENCHAKU_TIME" />
+      <Column ID="120" DispNumber="" DispName="作業時間" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SAGYOU_TIME" />
+      <Column ID="121" DispNumber="" DispName="移動時間(開始)" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SAGYOU_TIME_BEGIN" />
+      <Column ID="122" DispNumber="" DispName="移動時間(終了)" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SAGYOU_TIME_END" />
+      <Column ID="123" DispNumber="" DispName="車種台数グループNo" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SHASHU_DAISU_GROUP_NUMBER" />
+      <Column ID="124" DispNumber="" DispName="車種台数番号" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SHASHU_DAISU_NUMBER" />
+      <Column ID="125" DispNumber="" DispName="車輌CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SHARYOU_CD" />
+      <Column ID="126" DispNumber="" DispName="車輌名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SHARYOU_NAME" />
+      <Column ID="127" DispNumber="" DispName="車種CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SHASHU_CD" />
+      <Column ID="128" DispNumber="" DispName="車種名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SHASHU_NAME" />
+      <Column ID="129" DispNumber="" DispName="運転者CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UNTENSHA_CD" />
+      <Column ID="130" DispNumber="" DispName="運転者名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UNTENSHA_NAME" />
+      <Column ID="131" DispNumber="" DispName="補助員CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="HOJOIN_CD" />
+      <Column ID="132" DispNumber="" DispName="補助員名" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="HOJOIN_NAME" />
+      <Column ID="133" DispNumber="" DispName="マニフェスト種類CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="MANIFEST_SHURUI_CD" />
+      <Column ID="134" DispNumber="" DispName="マニフェスト種類名" Needs="0" TableName="M_MANIFEST_SHURUI_12E3" Name="MANIFEST_SHURUI_NAME_RYAKU" />
+      <Column ID="135" DispNumber="" DispName="マニフェスト手配CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="MANIFEST_TEHAI_CD" />
+      <Column ID="136" DispNumber="" DispName="マニフェスト手配名" Needs="0" TableName="M_MANIFEST_TEHAI_12E4" Name="MANIFEST_TEHAI_NAME_RYAKU" />
+      <Column ID="137" DispNumber="" DispName="コース組合" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="COURSE_KUMIAI_CD" />
+      <Column ID="138" DispNumber="" DispName="コース名称CD" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="COURSE_NAME_CD" />
+      <Column ID="139" DispNumber="" DispName="コース名称" Needs="0" TableName="M_COURSE_NAME_12E5" Name="COURSE_NAME_RYAKU" />
+      <Column ID="140" DispNumber="" DispName="指示書" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="HAISHA_SIJISHO_FLG" />
+      <Column ID="141" DispNumber="" DispName="受付備考1" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UKETSUKE_BIKOU1" />
+      <Column ID="142" DispNumber="" DispName="受付備考2" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UKETSUKE_BIKOU2" />
+      <Column ID="143" DispNumber="" DispName="受付備考3" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UKETSUKE_BIKOU3" />
+      <Column ID="144" DispNumber="" DispName="運転者指示事項1" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UNTENSHA_SIJIJIKOU1" />
+      <Column ID="145" DispNumber="" DispName="運転者指示事項2" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UNTENSHA_SIJIJIKOU2" />
+      <Column ID="146" DispNumber="" DispName="運転者指示事項3" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UNTENSHA_SIJIJIKOU3" />
+      <Column ID="147" DispNumber="" DispName="金額計" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="KINGAKU_TOTAL" />
+      <Column ID="148" DispNumber="" DispName="消費税率" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SHOUHIZEI_RATE" />
+      <Column ID="149" DispNumber="" DispName="伝票毎消費税外税" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TAX_SOTO" />
+      <Column ID="150" DispNumber="" DispName="伝票毎消費税内税" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TAX_UCHI" />
+      <Column ID="151" DispNumber="" DispName="明細毎消費税外税合計" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TAX_SOTO_TOTAL" />
+      <Column ID="152" DispNumber="" DispName="明細毎消費税内税合計" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TAX_UCHI_TOTAL" />
+      <Column ID="153" DispNumber="" DispName="消費税" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="SHOUHIZEI_TOTAL" />
+      <Column ID="154" DispNumber="" DispName="合計金額" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="GOUKEI_KINGAKU_TOTAL" />
+      <Column ID="155" DispNumber="" DispName="作成者" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="CREATE_USER" />
+      <Column ID="156" DispNumber="" DispName="作成日時" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="CREATE_DATE" />
+      <Column ID="157" DispNumber="" DispName="作成PC" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="CREATE_PC" />
+      <Column ID="158" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UPDATE_USER" />
+      <Column ID="159" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UPDATE_DATE" />
+      <Column ID="160" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="UPDATE_PC" />
+      <Column ID="161" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="DELETE_FLG" />
+      <Column ID="162" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKETSUKE_SK_ENTRY" Name="TIME_STAMP" />
+      <Column ID="163" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SYSTEM_ID" />
+      <Column ID="164" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SEQ" />
+      <Column ID="165" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="KYOTEN_CD" />
+      <Column ID="166" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN_13E1" Name="KYOTEN_NAME_RYAKU" />
+      <Column ID="169" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_NUMBER" />
+      <Column ID="170" DispNumber="" DispName="受付日" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_DATE" />
+      <Column ID="171" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TORIHIKISAKI_CD" />
+      <Column ID="172" DispNumber="" DispName="取引先名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TORIHIKISAKI_NAME" />
+      <Column ID="173" DispNumber="" DispName="業者CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GYOUSHA_CD" />
+      <Column ID="174" DispNumber="" DispName="業者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GYOUSHA_NAME" />
+      <Column ID="175" DispNumber="" DispName="業者電話" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GYOSHA_TEL" />
+      <Column ID="176" DispNumber="" DispName="現場CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENBA_CD" />
+      <Column ID="177" DispNumber="" DispName="現場名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENBA_NAME" />
+      <Column ID="178" DispNumber="" DispName="現場電話" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENBA_TEL" />
+      <Column ID="179" DispNumber="" DispName="担当者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TANTOSHA_NAME" />
+      <Column ID="180" DispNumber="" DispName="担当携帯" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TANTOSHA_TEL" />
+      <Column ID="181" DispNumber="" DispName="運搬業者CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UNPAN_GYOUSHA_CD" />
+      <Column ID="182" DispNumber="" DispName="運搬業者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UNPAN_GYOUSHA_NAME" />
+      <Column ID="183" DispNumber="" DispName="荷降業者CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="NIOROSHI_GYOUSHA_CD" />
+      <Column ID="184" DispNumber="" DispName="荷降業者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="NIOROSHI_GYOUSHA_NAME" />
+      <Column ID="185" DispNumber="" DispName="荷降現場CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="NIOROSHI_GENBA_CD" />
+      <Column ID="186" DispNumber="" DispName="荷降現場名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="NIOROSHI_GENBA_NAME" />
+      <Column ID="187" DispNumber="" DispName="営業担当者CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="EIGYOU_TANTOUSHA_CD" />
+      <Column ID="188" DispNumber="" DispName="営業担当者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="EIGYOU_TANTOUSHA_NAME" />
+      <Column ID="189" DispNumber="" DispName="作業日(指定)" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SAGYOU_DATE" />
+      <Column ID="190" DispNumber="" DispName="現着時間CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENCHAKU_TIME_CD" />
+      <Column ID="191" DispNumber="" DispName="現着時間名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENCHAKU_TIME_NAME" />
+      <Column ID="192" DispNumber="" DispName="現着時間" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENCHAKU_TIME" />
+      <Column ID="193" DispNumber="" DispName="車種台数グループNo" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHASHU_DAISU_GROUP_NUMBER" />
+      <Column ID="194" DispNumber="" DispName="車種台数番号" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHASHU_DAISU_NUMBER" />
+      <Column ID="195" DispNumber="" DispName="車輌CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHARYOU_CD" />
+      <Column ID="196" DispNumber="" DispName="車輌名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHARYOU_NAME" />
+      <Column ID="197" DispNumber="" DispName="車種CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHASHU_CD" />
+      <Column ID="198" DispNumber="" DispName="車種名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHASHU_NAME" />
+      <Column ID="199" DispNumber="" DispName="受付備考1" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_BIKOU1" />
+      <Column ID="200" DispNumber="" DispName="受付備考2" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_BIKOU2" />
+      <Column ID="201" DispNumber="" DispName="受付備考3" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_BIKOU3" />
+      <Column ID="202" DispNumber="" DispName="金額計" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="KINGAKU_TOTAL" />
+      <Column ID="203" DispNumber="" DispName="消費税率" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHOUHIZEI_RATE" />
+      <Column ID="204" DispNumber="" DispName="伝票毎消費税外税" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TAX_SOTO" />
+      <Column ID="205" DispNumber="" DispName="伝票毎消費税内税" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TAX_UCHI" />
+      <Column ID="206" DispNumber="" DispName="明細毎消費税外税合計" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TAX_SOTO_TOTAL" />
+      <Column ID="207" DispNumber="" DispName="明細毎消費税内税合計" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TAX_UCHI_TOTAL" />
+      <Column ID="208" DispNumber="" DispName="消費税" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHOUHIZEI_TOTAL" />
+      <Column ID="209" DispNumber="" DispName="合計金額" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GOUKEI_KINGAKU_TOTAL" />
+      <Column ID="210" DispNumber="" DispName="作成者" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="CREATE_USER" />
+      <Column ID="211" DispNumber="" DispName="作成日時" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="CREATE_DATE" />
+      <Column ID="212" DispNumber="" DispName="作成PC" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="CREATE_PC" />
+      <Column ID="213" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UPDATE_USER" />
+      <Column ID="214" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UPDATE_DATE" />
+      <Column ID="215" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UPDATE_PC" />
+      <Column ID="216" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="DELETE_FLG" />
+      <Column ID="217" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TIME_STAMP" />
+      <Column ID="218" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SYSTEM_ID" />
+      <Column ID="219" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SEQ" />
+      <Column ID="220" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="KYOTEN_CD" />
+      <Column ID="221" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN_14E1" Name="KYOTEN_NAME_RYAKU" />
+      <Column ID="224" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UKETSUKE_NUMBER" />
+      <Column ID="225" DispNumber="" DispName="受付日" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UKETSUKE_DATE" />
+      <Column ID="226" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TORIHIKISAKI_CD" />
+      <Column ID="227" DispNumber="" DispName="取引先名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TORIHIKISAKI_NAME" />
+      <Column ID="228" DispNumber="" DispName="業者CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GYOUSHA_CD" />
+      <Column ID="229" DispNumber="" DispName="業者名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GYOUSHA_NAME" />
+      <Column ID="230" DispNumber="" DispName="業者電話" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GYOSHA_TEL" />
+      <Column ID="231" DispNumber="" DispName="現場CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GENBA_CD" />
+      <Column ID="232" DispNumber="" DispName="現場名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GENBA_NAME" />
+      <Column ID="233" DispNumber="" DispName="現場電話" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GENBA_TEL" />
+      <Column ID="234" DispNumber="" DispName="担当者名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TANTOSHA_NAME" />
+      <Column ID="235" DispNumber="" DispName="担当携帯" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TANTOSHA_TEL" />
+      <Column ID="236" DispNumber="" DispName="運搬業者CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UNPAN_GYOUSHA_CD" />
+      <Column ID="237" DispNumber="" DispName="運搬業者名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UNPAN_GYOUSHA_NAME" />
+      <Column ID="238" DispNumber="" DispName="荷降業者CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="NIOROSHI_GYOUSHA_CD" />
+      <Column ID="239" DispNumber="" DispName="荷降業者名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="NIOROSHI_GYOUSHA_NAME" />
+      <Column ID="240" DispNumber="" DispName="荷降現場CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="NIOROSHI_GENBA_CD" />
+      <Column ID="241" DispNumber="" DispName="荷降現場名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="NIOROSHI_GENBA_NAME" />
+      <Column ID="242" DispNumber="" DispName="営業担当者CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="EIGYOU_TANTOUSHA_CD" />
+      <Column ID="243" DispNumber="" DispName="営業担当者名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="EIGYOU_TANTOUSHA_NAME" />
+      <Column ID="244" DispNumber="" DispName="作業日(指定)" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SAGYOU_DATE" />
+      <Column ID="245" DispNumber="" DispName="現着時間CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GENCHAKU_TIME_CD" />
+      <Column ID="246" DispNumber="" DispName="現着時間名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GENCHAKU_TIME_NAME" />
+      <Column ID="247" DispNumber="" DispName="現着時間" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GENCHAKU_TIME" />
+      <Column ID="248" DispNumber="" DispName="車種台数グループNo" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SHASHU_DAISU_GROUP_NUMBER" />
+      <Column ID="249" DispNumber="" DispName="車種台数番号" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SHASHU_DAISU_NUMBER" />
+      <Column ID="250" DispNumber="" DispName="車輌CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SHARYOU_CD" />
+      <Column ID="251" DispNumber="" DispName="車輌名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SHARYOU_NAME" />
+      <Column ID="252" DispNumber="" DispName="車種CD" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SHASHU_CD" />
+      <Column ID="253" DispNumber="" DispName="車種名" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SHASHU_NAME" />
+      <Column ID="254" DispNumber="" DispName="受付備考1" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UKETSUKE_BIKOU1" />
+      <Column ID="255" DispNumber="" DispName="受付備考2" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UKETSUKE_BIKOU2" />
+      <Column ID="256" DispNumber="" DispName="受付備考3" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UKETSUKE_BIKOU3" />
+      <Column ID="257" DispNumber="" DispName="金額計" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="KINGAKU_TOTAL" />
+      <Column ID="258" DispNumber="" DispName="消費税率" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SHOUHIZEI_RATE" />
+      <Column ID="259" DispNumber="" DispName="伝票毎消費税外税" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TAX_SOTO" />
+      <Column ID="260" DispNumber="" DispName="伝票毎消費税内税" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TAX_UCHI" />
+      <Column ID="261" DispNumber="" DispName="明細毎消費税外税合計" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TAX_SOTO_TOTAL" />
+      <Column ID="262" DispNumber="" DispName="明細毎消費税内税合計" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TAX_UCHI_TOTAL" />
+      <Column ID="263" DispNumber="" DispName="消費税" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="SHOUHIZEI_TOTAL" />
+      <Column ID="264" DispNumber="" DispName="合計金額" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="GOUKEI_KINGAKU_TOTAL" />
+      <Column ID="265" DispNumber="" DispName="作成者" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="CREATE_USER" />
+      <Column ID="266" DispNumber="" DispName="作成日時" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="CREATE_DATE" />
+      <Column ID="267" DispNumber="" DispName="作成PC" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="CREATE_PC" />
+      <Column ID="268" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UPDATE_USER" />
+      <Column ID="269" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UPDATE_DATE" />
+      <Column ID="270" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="UPDATE_PC" />
+      <Column ID="271" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="DELETE_FLG" />
+      <Column ID="272" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKETSUKE_BP_ENTRY" Name="TIME_STAMP" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="SYSTEM_ID" />
+      <Column ID="2" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="SEQ" />
+      <Column ID="3" DispNumber="" DispName="明細システムID" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="DETAIL_SYSTEM_ID" />
+      <Column ID="4" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="UKETSUKE_NUMBER" />
+      <Column ID="5" DispNumber="" DispName="行番号" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="ROW_NO" />
+      <Column ID="6" DispNumber="" DispName="品名CD" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="HINMEI_CD" />
+      <Column ID="7" DispNumber="" DispName="品名" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="HINMEI_NAME" />
+      <Column ID="8" DispNumber="" DispName="伝票区分CD" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="DENPYOU_KBN_CD" />
+      <Column ID="9" DispNumber="" DispName="伝票区分名" Needs="0" TableName="M_DENPYOU_KBN_11D1" Name="DENPYOU_KBN_NAME_RYAKU" />
+      <Column ID="10" DispNumber="" DispName="数量" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="SUURYOU" />
+      <Column ID="11" DispNumber="" DispName="単位CD" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="UNIT_CD" />
+      <Column ID="12" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT_11D2" Name="UNIT_NAME_RYAKU" />
+      <Column ID="13" DispNumber="" DispName="単価" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="TANKA" />
+      <Column ID="14" DispNumber="" DispName="金額" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="KINGAKU" />
+      <Column ID="15" DispNumber="" DispName="消費税外税" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="TAX_SOTO" />
+      <Column ID="16" DispNumber="" DispName="消費税内税" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="TAX_UCHI" />
+      <Column ID="17" DispNumber="" DispName="品名別税区分CD" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="HINMEI_ZEI_KBN_CD" />
+      <Column ID="18" DispNumber="" DispName="消費税" Needs="0" TableName="M_SHOUHIZEI_11D3" Name="SHOUHIZEI_RATE" />
+      <Column ID="19" DispNumber="" DispName="品名別金額" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="HINMEI_KINGAKU" />
+      <Column ID="20" DispNumber="" DispName="品名別消費税外税" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="HINMEI_TAX_SOTO" />
+      <Column ID="21" DispNumber="" DispName="品名別消費税内税" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="HINMEI_TAX_UCHI" />
+      <Column ID="22" DispNumber="" DispName="明細備考" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="MEISAI_BIKOU" />
+      <Column ID="23" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKETSUKE_SS_DETAIL" Name="TIME_STAMP" />
+      <Column ID="24" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="SYSTEM_ID" />
+      <Column ID="25" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="SEQ" />
+      <Column ID="26" DispNumber="" DispName="明細システムID" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="DETAIL_SYSTEM_ID" />
+      <Column ID="27" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="UKETSUKE_NUMBER" />
+      <Column ID="28" DispNumber="" DispName="行番号" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="ROW_NO" />
+      <Column ID="29" DispNumber="" DispName="品名CD" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="HINMEI_CD" />
+      <Column ID="30" DispNumber="" DispName="品名" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="HINMEI_NAME" />
+      <Column ID="31" DispNumber="" DispName="伝票区分CD" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="DENPYOU_KBN_CD" />
+      <Column ID="32" DispNumber="" DispName="伝票区分名" Needs="0" TableName="M_DENPYOU_KBN_12D1" Name="DENPYOU_KBN_NAME_RYAKU" />
+      <Column ID="33" DispNumber="" DispName="数量" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="SUURYOU" />
+      <Column ID="34" DispNumber="" DispName="単位CD" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="UNIT_CD" />
+      <Column ID="35" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT_12D2" Name="UNIT_NAME_RYAKU" />
+      <Column ID="36" DispNumber="" DispName="単価" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="TANKA" />
+      <Column ID="37" DispNumber="" DispName="金額" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="KINGAKU" />
+      <Column ID="38" DispNumber="" DispName="消費税外税" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="TAX_SOTO" />
+      <Column ID="39" DispNumber="" DispName="消費税内税" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="TAX_UCHI" />
+      <Column ID="40" DispNumber="" DispName="品名別税区分CD" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="HINMEI_ZEI_KBN_CD" />
+      <Column ID="41" DispNumber="" DispName="消費税" Needs="0" TableName="M_SHOUHIZEI_12D3" Name="SHOUHIZEI_RATE" />
+      <Column ID="42" DispNumber="" DispName="品名別金額" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="HINMEI_KINGAKU" />
+      <Column ID="43" DispNumber="" DispName="品名別消費税外税" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="HINMEI_TAX_SOTO" />
+      <Column ID="44" DispNumber="" DispName="品名別消費税内税" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="HINMEI_TAX_UCHI" />
+      <Column ID="45" DispNumber="" DispName="明細備考" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="MEISAI_BIKOU" />
+      <Column ID="46" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKETSUKE_SK_DETAIL" Name="TIME_STAMP" />
+      <Column ID="47" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="SYSTEM_ID" />
+      <Column ID="48" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="SEQ" />
+      <Column ID="49" DispNumber="" DispName="明細システムID" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="DETAIL_SYSTEM_ID" />
+      <Column ID="50" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="UKETSUKE_NUMBER" />
+      <Column ID="51" DispNumber="" DispName="行番号" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="ROW_NO" />
+      <Column ID="52" DispNumber="" DispName="品名CD" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="HINMEI_CD" />
+      <Column ID="53" DispNumber="" DispName="品名" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="HINMEI_NAME" />
+      <Column ID="54" DispNumber="" DispName="伝票区分CD" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="DENPYOU_KBN_CD" />
+      <Column ID="55" DispNumber="" DispName="伝票区分名" Needs="0" TableName="M_DENPYOU_KBN_13D1" Name="DENPYOU_KBN_NAME_RYAKU" />
+      <Column ID="56" DispNumber="" DispName="数量" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="SUURYOU" />
+      <Column ID="57" DispNumber="" DispName="単位CD" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="UNIT_CD" />
+      <Column ID="58" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT_13D2" Name="UNIT_NAME_RYAKU" />
+      <Column ID="59" DispNumber="" DispName="単価" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="TANKA" />
+      <Column ID="60" DispNumber="" DispName="金額" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="KINGAKU" />
+      <Column ID="61" DispNumber="" DispName="消費税外税" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="TAX_SOTO" />
+      <Column ID="62" DispNumber="" DispName="消費税内税" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="TAX_UCHI" />
+      <Column ID="63" DispNumber="" DispName="品名別税区分CD" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="HINMEI_ZEI_KBN_CD" />
+      <Column ID="64" DispNumber="" DispName="消費税" Needs="0" TableName="M_SHOUHIZEI_13D3" Name="SHOUHIZEI_RATE" />
+      <Column ID="65" DispNumber="" DispName="品名別金額" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="HINMEI_KINGAKU" />
+      <Column ID="66" DispNumber="" DispName="品名別消費税外税" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="HINMEI_TAX_SOTO" />
+      <Column ID="67" DispNumber="" DispName="品名別消費税内税" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="HINMEI_TAX_UCHI" />
+      <Column ID="68" DispNumber="" DispName="明細備考" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="MEISAI_BIKOU" />
+      <Column ID="69" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="TIME_STAMP" />
+      <Column ID="70" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="SYSTEM_ID" />
+      <Column ID="71" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="SEQ" />
+      <Column ID="72" DispNumber="" DispName="明細システムID" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="DETAIL_SYSTEM_ID" />
+      <Column ID="73" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="UKETSUKE_NUMBER" />
+      <Column ID="74" DispNumber="" DispName="行番号" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="ROW_NO" />
+      <Column ID="75" DispNumber="" DispName="品名CD" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="HINMEI_CD" />
+      <Column ID="76" DispNumber="" DispName="品名" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="HINMEI_NAME" />
+      <Column ID="77" DispNumber="" DispName="伝票区分CD" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="DENPYOU_KBN_CD" />
+      <Column ID="78" DispNumber="" DispName="伝票区分名" Needs="0" TableName="M_DENPYOU_KBN_14D1" Name="DENPYOU_KBN_NAME_RYAKU" />
+      <Column ID="79" DispNumber="" DispName="数量" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="SUURYOU" />
+      <Column ID="80" DispNumber="" DispName="単位CD" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="UNIT_CD" />
+      <Column ID="81" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT_14D2" Name="UNIT_NAME_RYAKU" />
+      <Column ID="82" DispNumber="" DispName="単価" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="TANKA" />
+      <Column ID="83" DispNumber="" DispName="金額" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="KINGAKU" />
+      <Column ID="84" DispNumber="" DispName="消費税外税" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="TAX_SOTO" />
+      <Column ID="85" DispNumber="" DispName="消費税内税" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="TAX_UCHI" />
+      <Column ID="86" DispNumber="" DispName="品名別税区分CD" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="HINMEI_ZEI_KBN_CD" />
+      <Column ID="87" DispNumber="" DispName="消費税" Needs="0" TableName="M_SHOUHIZEI_14D3" Name="SHOUHIZEI_RATE" />
+      <Column ID="88" DispNumber="" DispName="品名別金額" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="HINMEI_KINGAKU" />
+      <Column ID="89" DispNumber="" DispName="品名別消費税外税" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="HINMEI_TAX_SOTO" />
+      <Column ID="90" DispNumber="" DispName="品名別消費税内税" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="HINMEI_TAX_UCHI" />
+      <Column ID="91" DispNumber="" DispName="明細備考" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="MEISAI_BIKOU" />
+      <Column ID="92" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKETSUKE_BP_DETAIL" Name="TIME_STAMP" />
+    </Group>
+    <JoinCondition TableName="T_UKETSUKE_SS_ENTRY" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN_11E1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_SHURUI_11E3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_TEHAI_11E4" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_CONTENA_SOUSA_11E5" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_COURSE_NAME_11E6" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="T_UKETSUKE_SK_ENTRY" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN_12E1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_SHURUI_12E3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_TEHAI_12E4" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_COURSE_NAME_12E5" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="T_UKETSUKE_MK_ENTRY" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN_13E1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="T_UKETSUKE_BP_ENTRY" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN_14E1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="T_UKETSUKE_SS_DETAIL" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN_11D1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_UNIT_11D2" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHOUHIZEI_11D3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="T_UKETSUKE_SK_DETAIL" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN_12D1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_UNIT_12D2" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHOUHIZEI_12D3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="T_UKETSUKE_MK_DETAIL" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN_13D1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_UNIT_13D2" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHOUHIZEI_13D3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="T_UKETSUKE_BP_DETAIL" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN_14D1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_UNIT_14D2" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHOUHIZEI_14D3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+  </OutputColumnSelect>
+</root>

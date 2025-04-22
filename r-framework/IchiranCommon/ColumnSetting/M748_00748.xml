@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="748">
+    <Group OutputKbn="1">
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="1" DispName="許可区分" Needs="0" TableName="M" Name="KYOKA_KBN" Format="" />
+      <Column ID="10" DispNumber="10" DispName="許可証" Needs="0" TableName="M" Name="CASE M.KYOKA_KBN WHEN 1 THEN '運搬' WHEN 2 THEN '中間処分' WHEN 3 THEN '最終処分' ELSE '' END" Format="" />
+      <Column ID="20" DispNumber="20" DispName="業者CD" Needs="0" TableName="M" Name="GYOUSHA_CD" Format="" />
+      <Column ID="30" DispNumber="30" DispName="業者名" Needs="0" TableName="M_GYOUSHA" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="40" DispNumber="40" DispName="現場CD" Needs="0" TableName="M" Name="GENBA_CD" Format="" />
+      <Column ID="50" DispNumber="50" DispName="現場名" Needs="0" TableName="M_GENBA" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="60" DispNumber="60" DispName="地域CD" Needs="0" TableName="M" Name="CHIIKI_CD" Format="" />
+      <Column ID="70" DispNumber="70" DispName="地域名" Needs="0" TableName="M_CHIIKI" Name="CHIIKI_NAME_RYAKU" Format="" />
+      <Column ID="80" DispNumber="80" DispName="普通許可番号" Needs="0" TableName="M" Name="FUTSUU_KYOKA_NO" Format="" />
+      <Column ID="90" DispNumber="90" DispName="有効期限開始日（普通）" Needs="0" TableName="M" Name="FUTSUU_KYOKA_BEGIN" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="100" DispNumber="100" DispName="有効期限終了日（普通）" Needs="0" TableName="M" Name="FUTSUU_KYOKA_END" Format="yyyy/MM/dd(ddd)" />
+      <!--<Column ID="110" DispNumber="110" DispName="報告書分類CD（普通）" Needs="0" TableName="" Name="CASE WHEN MOD.TOKUBETSU_KANRI_KBN = 0 THEN MOD.HOUKOKUSHO_BUNRUI_CD END" Format="" />-->
+      <Column ID="120" DispNumber="120" DispName="報告書分類（普通）" Needs="0" TableName="FUTSUU" Name="HOUKOKUSHO_BUNRUI_NAME_RYAKU" Format="" />
+      <Column ID="130" DispNumber="130" DispName="許可証ファイルパス（普通）" Needs="0" TableName="M" Name="FUTSUU_KYOKA_FILE_PATH" Format="" />
+      <Column ID="140" DispNumber="140" DispName="特管許可番号" Needs="0" TableName="M" Name="TOKUBETSU_KYOKA_NO" Format="" />
+      <Column ID="150" DispNumber="150" DispName="有効期限開始日（特管）" Needs="0" TableName="M" Name="TOKUBETSU_KYOKA_BEGIN" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="160" DispNumber="160" DispName="有効期限終了日（特管）" Needs="0" TableName="M" Name="TOKUBETSU_KYOKA_END" Format="yyyy/MM/dd(ddd)" />
+      <!--<Column ID="170" DispNumber="170" DispName="報告書分類CD（特管）" Needs="0" TableName="" Name="CASE WHEN MOD.TOKUBETSU_KANRI_KBN = 1 THEN MOD.HOUKOKUSHO_BUNRUI_CD END" Format="" />-->
+      <Column ID="180" DispNumber="180" DispName="報告書分類（特管）" Needs="0" TableName="TOKUBETSU" Name="HOUKOKUSHO_BUNRUI_NAME_RYAKU" Format="" />
+      <Column ID="190" DispNumber="190" DispName="許可証ファイルパス（特管）" Needs="0" TableName="M" Name="TOKUBETSU_KYOKA_FILE_PATH" Format="" />
+      <Column ID="200" DispNumber="200" DispName="備考" Needs="0" TableName="M" Name="CHIIKIBETSU_KYOKA_BIKOU" Format="" />
+    </Group>
+  </OutputColumnSelect>
+</root>

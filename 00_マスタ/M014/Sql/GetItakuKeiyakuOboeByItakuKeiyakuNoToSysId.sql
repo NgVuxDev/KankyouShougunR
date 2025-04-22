@@ -1,0 +1,14 @@
+﻿SELECT 
+    KI.*
+FROM 
+    dbo.M_ITAKU_KEIYAKU_OBOE KI
+/*BEGIN*/
+WHERE
+ /*IF data.ITAKU_KEIYAKU_NO != null*/
+ KI.ITAKU_KEIYAKU_NO = /*data.ITAKU_KEIYAKU_NO*/
+ /*END*/
+ /*IF data.SYSTEM_ID != null*/
+ AND KI.SYSTEM_ID = /*data.SYSTEM_ID*/
+ /*END*/
+/*END*/
+ORDER BY KI.ITAKU_KEIYAKU_NO

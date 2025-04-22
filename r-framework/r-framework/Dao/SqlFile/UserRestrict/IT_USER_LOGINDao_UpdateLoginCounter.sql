@@ -1,0 +1,15 @@
+﻿-- ロックのタイムアウト(ミリ秒で設定)
+SET LOCK_TIMEOUT 30000
+
+SELECT * FROM dbo.T_USER_LOGIN WITH(TABLOCK, HOLDLOCK)
+
+UPDATE dbo.T_USER_LOGIN SET 
+ LOGIN_COUNTER = 0,
+ LOGOUT_TIME = CURRENT_TIMESTAMP
+WHERE
+  /*IF !isTerminal*/
+  CLIENT_COMPUTER_NAME = /*computerName*/
+  /*END*/
+  /*IF isTerminal*/
+  CLIENT_USER_NAME = /*userName*/
+  /*END*/

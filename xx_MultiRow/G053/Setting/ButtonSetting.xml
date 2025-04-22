@@ -1,0 +1,100 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <NewButtonName>[F1]&#xD;&#xA;重量取込</NewButtonName>
+    <ReferButtonName>[F1]&#xD;&#xA;重量取込</ReferButtonName>
+    <UpdateButtonName>[F1]&#xD;&#xA;重量取込</UpdateButtonName>
+    <DeleteButtonName>[F1]&#xD;&#xA;重量取込</DeleteButtonName>
+    <DefaultHintText>重量取込を行います。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <NewButtonName>[F2]&#xD;&#xA;新規</NewButtonName>
+    <ReferButtonName>[F2]&#xD;&#xA;新規</ReferButtonName>
+    <UpdateButtonName>[F2]&#xD;&#xA;新規</UpdateButtonName>
+    <DeleteButtonName>[F2]&#xD;&#xA;新規</DeleteButtonName>
+    <DefaultHintText>新規データを追加する画面に切り替わります</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <NewButtonName>[F3]&#xD;&#xA;修正</NewButtonName>
+    <ReferButtonName>[F3]&#xD;&#xA;修正</ReferButtonName>
+    <UpdateButtonName>[F3]&#xD;&#xA;修正</UpdateButtonName>
+    <DeleteButtonName>[F3]&#xD;&#xA;修正</DeleteButtonName>
+    <DefaultHintText>既存データを修正する画面に切り替わります</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func5</ButtonName>
+    <NewButtonName>[F5]&#xD;&#xA;滞留登録</NewButtonName>
+    <ReferButtonName>[F5]&#xD;&#xA;滞留登録</ReferButtonName>
+    <UpdateButtonName>[F5]&#xD;&#xA;滞留登録</UpdateButtonName>
+    <DeleteButtonName>[F5]&#xD;&#xA;滞留登録</DeleteButtonName>
+    <DefaultHintText>表示されている内容を滞留登録します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <NewButtonName>[F7]&#xD;&#xA;一覧</NewButtonName>
+    <ReferButtonName>[F7]&#xD;&#xA;一覧</ReferButtonName>
+    <UpdateButtonName>[F7]&#xD;&#xA;一覧</UpdateButtonName>
+    <DeleteButtonName>[F7]&#xD;&#xA;一覧</DeleteButtonName>
+    <DefaultHintText>一覧画面に移動します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;登録</NewButtonName>
+    <ReferButtonName>[F9]&#xD;&#xA;登録</ReferButtonName>
+    <UpdateButtonName>[F9]&#xD;&#xA;登録</UpdateButtonName>
+    <DeleteButtonName>[F9]&#xD;&#xA;登録</DeleteButtonName>
+    <DefaultHintText>表示されている内容を登録します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func10</ButtonName>
+    <NewButtonName>[F10]&#xD;&#xA;行挿入</NewButtonName>
+    <ReferButtonName>[F10]&#xD;&#xA;行挿入</ReferButtonName>
+    <UpdateButtonName>[F10]&#xD;&#xA;行挿入</UpdateButtonName>
+    <DeleteButtonName>[F10]&#xD;&#xA;行挿入</DeleteButtonName>
+    <DefaultHintText>選択している明細行に1行挿入します。（空行）</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <NewButtonName>[F11]&#xD;&#xA;行削除</NewButtonName>
+    <ReferButtonName>[F11]&#xD;&#xA;行削除</ReferButtonName>
+    <UpdateButtonName>[F11]&#xD;&#xA;行削除</UpdateButtonName>
+    <DeleteButtonName>[F11]&#xD;&#xA;行削除</DeleteButtonName>
+    <DefaultHintText>選択している明細行を1行削除します。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <DeleteButtonName>[F12]&#xD;&#xA;閉じる</DeleteButtonName>
+    <DefaultHintText>画面を閉じます</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process2</ButtonName>
+    <NewButtonName>[2] 計量票発行</NewButtonName>
+    <ReferButtonName>[2] 計量票発行</ReferButtonName>
+    <UpdateButtonName>[2] 計量票発行</UpdateButtonName>
+    <DeleteButtonName>[2] 計量票発行</DeleteButtonName>
+    <DefaultHintText>画面の情報で計量票を発行します。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process4</ButtonName>
+    <NewButtonName>[4] 運賃入力</NewButtonName>
+    <ReferButtonName>[4] 運賃入力</ReferButtonName>
+    <UpdateButtonName>[4] 運賃入力</UpdateButtonName>
+    <DeleteButtonName>[4] 運賃入力</DeleteButtonName>
+    <DefaultHintText>運賃入力画面に移動します。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process5</ButtonName>
+    <NewButtonName>[5] 検収入力</NewButtonName>
+    <ReferButtonName>[5] 検収入力</ReferButtonName>
+    <UpdateButtonName>[5] 検収入力</UpdateButtonName>
+    <DeleteButtonName>[5] 検収入力</DeleteButtonName>
+    <DefaultHintText>検収入力画面に移動します。</DefaultHintText>
+  
+</ButtonSetting>
+</ArrayOfButtonSetting>

@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F590C799-343A-4B95-8245-55C363D25755}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.BusinessManagement.MitsumoriNyuryoku</RootNamespace>
+    <AssemblyName>MitsumoriNyuryoku</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\02_売上支払処理\G055\G055.csproj">
+      <Project>{B9D2F9BA-8DE2-43E6-98B6-984171082347}</Project>
+      <Name>G055</Name>
+    </ProjectReference>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\GrapeCity.Framework.InputMan.v22\2.2.2013.227__fdd90f5c44b73170\GrapeCity.Framework.InputMan.v22.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MultiRowWin7\Bin\v7.0.2013.0227\GrapeCity.Framework.MultiRow.v22.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\Accessor\DBAccessor.cs" />
+    <Compile Include="APP\G276.cs" />
+    <Compile Include="APP\HeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\HeaderForm.Designer.cs">
+      <DependentUpon>HeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\MitsumoriNyuryokuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\MitsumoriNyuryokuForm.Designer.cs">
+      <DependentUpon>MitsumoriNyuryokuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="APP\Control.designer.cs">
+      <DependentUpon>Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DAOClass.cs" />
+    <Compile Include="DAO\IM_HIKIAI_GENBADao.cs" />
+    <Compile Include="DAO\IM_HIKIAI_GYOUSHADao.cs" />
+    <Compile Include="DAO\IM_HIKIAI_TORIHIKISAKIDao.cs" />
+    <Compile Include="DAO\IT_MITSUMORI_DETAILDao.cs" />
+    <Compile Include="DAO\IT_MITSUMORI_DETAIL_2Dao.cs" />
+    <Compile Include="DAO\IT_MITSUMORI_ENTRYDao.cs" />
+    <Compile Include="DAO\IM_HIKIAI_TORIHIKISAKI_SEIKYUUDao.cs" />
+    <Compile Include="DAO\IM_HIKIAI_TORIHIKISAKI_SHIHARAIDao.cs" />
+    <Compile Include="DTO\CommonShogunData.cs" />
+    <Compile Include="DTO\DTOClass.cs" />
+    <Compile Include="Logic\LogicClass.cs" />
+    <Compile Include="Logic\ReportInfoR425_R508_R547_R548.cs" />
+    <Compile Include="MultiRowTemplate\BikoUchiwakeNyuryokuDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\BikoUchiwakeNyuryokuDetail.designer.cs">
+      <DependentUpon>BikoUchiwakeNyuryokuDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\DataBinderUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APP\Control.resx">
+      <DependentUpon>Control.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\BikoUchiwakeNyuryokuDetail.resx">
+      <DependentUpon>BikoUchiwakeNyuryokuDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\HeaderForm.resx">
+      <DependentUpon>HeaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\MitsumoriNyuryokuForm.resx">
+      <DependentUpon>MitsumoriNyuryokuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql\Sample.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonChouhyouPopup\CommonChouhyouPopup.csproj">
+      <Project>{445254EB-6A9C-4D9D-8431-3ED2658FE6DD}</Project>
+      <Name>CommonChouhyouPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HikiaiKizonKensakuPopup\HikiaiKizonKensakuPopup.csproj">
+      <Project>{F919A282-B2E4-4DC4-96A2-19AAE498AF85}</Project>
+      <Name>HikiaiKizonKensakuPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ConstClass\Const.csproj">
+      <Project>{F6EACDF2-B280-439B-A60D-C23246821B0F}</Project>
+      <Name>Const</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetShainData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetKyotenData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetTorihikisakiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetSeikyuuData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetShiharaiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetGyoushaData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetShouhizeiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetGenbaData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckHikiaiTorihikisakiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetMaxTorihikisakiCode.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckHikiaiGyoushaData.sql" />
+    <EmbeddedResource Include="Sql\GetMaxGyoushaCode.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetMaxGenbaCode.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\CheckHikiaiGenbaData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetMitsumoriEntryData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetMitsumoriDetailEntryData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetHikiaiTorihikisakiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetHikiaiGyoushaData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetHikiaiGenbaData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiTorihikisaki\IM_HIKIAI_TORIHIKISAKIDao_GetAllValidData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiTorihikisaki\IM_HIKIAI_TORIHIKISAKIDao_GetMinBlankNo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiTorihikisaki\IM_HIKIAI_TORIHIKISAKIDao_GetTorihikisakiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiGenba\IM_HIKIAI_GENBADao_GetAllValidData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiGenba\IM_HIKIAI_GENBADao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiGenba\IM_HIKIAI_GENBADao_GetKokyakuIchiranData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiGenba\IM_HIKIAI_GENBADao_GetKokyakuMasterData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiGenba\IM_HIKIAI_GENBADao_GetUserSettingData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_GetAllValidData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\IT_MITSUMORI_DETAILDao_GetDataForEntity.sql" />
+    <EmbeddedResource Include="Sql\IT_MITSUMORI_ENTRYDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetUselessGenbaCode.sql" />
+    <EmbeddedResource Include="Sql\GetUselessGyoushaCode.sql" />
+    <EmbeddedResource Include="Sql\GetUselessTorihikisakiCode.sql" />
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiTorihikisakiSeikyuu\IM_HIKIAI_TORIHIKISAKI_SEIKYUUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="DAO\SqlFile\HikiaiTorihikisakiShiharai\IM_HIKIAI_TORIHIKISAKI_SHIHARAIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Sql\IT_MITSUMORI_DETAIL_2Dao_GetDataForEntity.sql" />
+    <Content Include="Template\R425_R508_R547_R548-Form.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN" "http://www.seasar.org/dtd/components.dtd"[]>
+<components namespace="DaoFile">
+  <include path="dicon\Tx_File.dicon" />
+  <!-- S2Dao.NETのDaoInterceptorとそれに必要なコンポーネント -->
+  <component class="Seasar.Extension.ADO.Impl.BasicDataReaderFactory" />
+  <component class="Seasar.Extension.ADO.Impl.BasicCommandFactory">
+    <property name="CommandTimeout">60</property>
+  </component>
+  <component class="Seasar.Dao.Impl.DaoMetaDataFactoryImpl" />
+  <component class="Seasar.Dao.Impl.FieldAnnotationReaderFactory" />
+  <component name="DaoInterceptorFile" class="Seasar.Dao.Interceptors.S2DaoInterceptor" />
+  <!-- Dao設定 -->
+  <component class="Shougun.Core.FileUpload.FileUploadCommon.FILE_DATADAO">
+    <aspect>DaoInterceptorFile</aspect>
+  </component>
+  <component class="Shougun.Core.FileUpload.FileUploadCommon.NUMBER_FILEDAO">
+    <aspect>DaoInterceptorFile</aspect>
+  </component>
+  <component class="Shougun.Core.ExternalConnection.FileUploadIchiran.DAO.DAOClass">
+    <aspect>DaoInterceptorFile</aspect>
+  </component>
+</components>

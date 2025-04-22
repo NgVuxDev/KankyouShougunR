@@ -1,0 +1,1 @@
+﻿SELECT MIN(/*$KomokuName*/) as OLD_DATE FROM /*$TableName*/ /*$Joken*/

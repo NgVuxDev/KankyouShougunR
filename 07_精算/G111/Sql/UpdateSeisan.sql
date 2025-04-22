@@ -1,0 +1,5 @@
+﻿UPDATE
+  T_SEISAN_DENPYOU 
+SET DELETE_FLG = '1'
+ WHERE 
+ SEISAN_NUMBER = /*seisanNumber*/

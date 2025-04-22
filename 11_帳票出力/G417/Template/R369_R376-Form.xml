@@ -1,0 +1,1069 @@
+<?xml version="1.0"?>
+<Reports>
+  <!--Report *** LAYOUT1 ***-->
+  <Report version="4.6.20132.54640">
+    <Name>LAYOUT1</Name>
+    <ReportInfo>
+      <Author>CaternaRentalSystem</Author>
+    </ReportInfo>
+    <DataSource>
+      <DataProvider>1</DataProvider>
+    </DataSource>
+    <Layout>
+      <Width>16260</Width>
+      <MarginLeft>288</MarginLeft>
+      <MarginTop>288</MarginTop>
+      <MarginRight>288</MarginRight>
+      <MarginBottom>288</MarginBottom>
+      <Orientation>2</Orientation>
+      <PaperSize>9</PaperSize>
+    </Layout>
+    <Font>
+      <Name>Segoe UI</Name>
+      <Size>9</Size>
+    </Font>
+    <OnOpen>' -- style script start
+_styleCtr = 0
+' -- style script end
+</OnOpen>
+    <CompatibilityOptions />
+    <Groups>
+      <Group>
+        <Name>GROUP1</Name>
+        <GroupBy>PHN_TORIHIKISAKI_CD_VLB</GroupBy>
+      </Group>
+      <Group>
+        <Name>GROUP2</Name>
+        <GroupBy>PHN_TORIHIKISAKI_CD_VLB</GroupBy>
+      </Group>
+    </Groups>
+    <Sections>
+      <Section>
+        <Name>Detail</Name>
+        <Type>0</Type>
+        <Height>300</Height>
+        <OnPrint>' -- style script start
+detail.BackColor = iif(_styleCtr mod 2 = 0, rgb(255,255,255),rgb(255,255,255))
+_styleCtr = _styleCtr + 1
+' -- style script end
+</OnPrint>
+      </Section>
+      <Section>
+        <Name>Header</Name>
+        <Type>1</Type>
+        <Height>1560</Height>
+      </Section>
+      <Section>
+        <Name>Footer</Name>
+        <Type>2</Type>
+        <Height>15</Height>
+        <Visible>0</Visible>
+      </Section>
+      <Section>
+        <Name>PageHeader</Name>
+        <Type>3</Type>
+        <Height>375</Height>
+      </Section>
+      <Section>
+        <Name>PageFooter</Name>
+        <Type>4</Type>
+        <Height>300</Height>
+      </Section>
+      <Section>
+        <Name>GROUP1_Header</Name>
+        <Type>5</Type>
+        <Visible>0</Visible>
+      </Section>
+      <Section>
+        <Name>GROUP1_Footer</Name>
+        <Type>6</Type>
+        <Height>300</Height>
+      </Section>
+      <Section>
+        <Name>GROUP2_Header</Name>
+        <Type>7</Type>
+        <Height>300</Height>
+      </Section>
+      <Section>
+        <Name>GROUP2_Footer</Name>
+        <Type>8</Type>
+        <Visible>0</Visible>
+      </Section>
+    </Sections>
+    <Fields>
+      <Field>
+        <Name>PHY_NYUUKIN_YOTEI_BI_VLB</Name>
+        <Section>3</Section>
+        <Text>入金予定日</Text>
+        <Top>75</Top>
+        <Width>1395</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_EIGYOU_TANTOUSHA_CD_VLB</Name>
+        <Section>3</Section>
+        <Text>営業担当者CD</Text>
+        <Left>1380</Left>
+        <Top>75</Top>
+        <Width>1350</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_SHAIN_NAME_VLB</Name>
+        <Section>3</Section>
+        <Text>営業担当者名</Text>
+        <Left>2730</Left>
+        <Top>75</Top>
+        <Width>3120</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHN_TORIHIKISAKI_CD_VLB</Name>
+        <Section>3</Section>
+        <Text>取引先CD</Text>
+        <Width>1260</Width>
+        <Height>90</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Visible>0</Visible>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>Segoe UI</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHN_KONKAI_SEIKYU_GAKU_TOTAL_VLB</Name>
+        <Section>3</Section>
+        <Text>請求額計</Text>
+        <Left>2535</Left>
+        <Width>1350</Width>
+        <Height>90</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Visible>0</Visible>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>Segoe UI</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHN_KONKAI_NYUUKIN_GAKU_TOTAL_VLB</Name>
+        <Section>3</Section>
+        <Text>入金額計</Text>
+        <Left>3900</Left>
+        <Width>1643</Width>
+        <Height>90</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Visible>0</Visible>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>Segoe UI</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHN_MI_NYUUKIN_GAKU_TOTAL_VLB</Name>
+        <Section>3</Section>
+        <Text>未入金額計</Text>
+        <Left>5550</Left>
+        <Width>1210</Width>
+        <Height>90</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Visible>0</Visible>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>Segoe UI</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHN_TORIHIKISAKI_NAME_VLB</Name>
+        <Section>3</Section>
+        <Text>取引先名</Text>
+        <Left>1260</Left>
+        <Width>1275</Width>
+        <Height>90</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Visible>0</Visible>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>Segoe UI</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_KONKAI_SEIKYU_GAKU_VLB</Name>
+        <Section>3</Section>
+        <Text>請求額</Text>
+        <Left>5850</Left>
+        <Top>75</Top>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_KONKAI_NYUUKIN_GAKU_VLB</Name>
+        <Section>3</Section>
+        <Text>入金額</Text>
+        <Left>7980</Left>
+        <Top>75</Top>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_MI_NYUUKIN_GAKU_VLB</Name>
+        <Section>3</Section>
+        <Text>未入金額</Text>
+        <Left>10110</Left>
+        <Top>75</Top>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_SHIMEBI_VLB</Name>
+        <Section>3</Section>
+        <Text>締</Text>
+        <Left>12240</Left>
+        <Top>75</Top>
+        <Width>480</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_SEIKYUU_DATE_VLB</Name>
+        <Section>3</Section>
+        <Text>請求日</Text>
+        <Left>12720</Left>
+        <Top>75</Top>
+        <Width>1395</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PHY_NYUUSHUKKIN_KBN_NAME_VLB</Name>
+        <Section>3</Section>
+        <Text>回収方法</Text>
+        <Left>14115</Left>
+        <Top>75</Top>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_NYUUKIN_YOTEI_BI_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_NYUUKIN_YOTEI_BI_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Width>1395</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_EIGYOU_TANTOUSHA_CD_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_EIGYOU_TANTOUSHA_CD_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>1380</Left>
+        <Width>1350</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_SHAIN_NAME_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_SHAIN_NAME_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>2730</Left>
+        <Width>3120</Width>
+        <Height>300</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginLeft>50</MarginLeft>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_KONKAI_SEIKYU_GAKU_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_KONKAI_SEIKYU_GAKU_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Format>#,##0</Format>
+        <Left>5850</Left>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_KONKAI_NYUUKIN_GAKU_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_KONKAI_NYUUKIN_GAKU_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Format>#,##0</Format>
+        <Left>7980</Left>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_SHIMEBI_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_SHIMEBI_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>12240</Left>
+        <Width>480</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_SEIKYUU_DATE_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_SEIKYUU_DATE_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>12720</Left>
+        <Width>1395</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_NYUUSHUKKIN_KBN_NAME_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_NYUUSHUKKIN_KBN_NAME_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>14115</Left>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginLeft>50</MarginLeft>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1H_TORIHIKISAKI_CD_CTL</Name>
+        <Section>7</Section>
+        <Text>PHN_TORIHIKISAKI_CD_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Width>1395</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1H_TORIHIKISAKI_NAME_CTL</Name>
+        <Section>7</Section>
+        <Text>PHN_TORIHIKISAKI_NAME_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>1380</Left>
+        <Width>14865</Width>
+        <Height>300</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginLeft>50</MarginLeft>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_BLANK2_FLB</Name>
+        <Section>6</Section>
+        <Left>1380</Left>
+        <Width>1350</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_SEIKYUSAKI_BETSU_CTL</Name>
+        <Section>6</Section>
+        <Text>PHN_SEIKYUSAKI_BETSU_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Left>2730</Left>
+        <Width>3120</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_KONKAI_SEIKYU_GAKU_TOTAL_CTL</Name>
+        <Section>6</Section>
+        <Text>PHN_KONKAI_SEIKYU_GAKU_TOTAL_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Format>#,##0</Format>
+        <Left>5850</Left>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_KONKAI_NYUUKIN_GAKU_TOTAL_CTL</Name>
+        <Section>6</Section>
+        <Text>PHN_KONKAI_NYUUKIN_GAKU_TOTAL_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Format>#,##0</Format>
+        <Left>7980</Left>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_MI_NYUUKIN_GAKU_TOTAL_CTL</Name>
+        <Section>6</Section>
+        <Text>PHN_MI_NYUUKIN_GAKU_TOTAL_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Format>#,##0</Format>
+        <Left>10110</Left>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_BLANK7_FLB</Name>
+        <Section>6</Section>
+        <Left>12240</Left>
+        <Width>480</Width>
+        <Height>300</Height>
+        <Align>7</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_BLANK8_FLB</Name>
+        <Section>6</Section>
+        <Left>12720</Left>
+        <Width>1395</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_BLANK9_FLB</Name>
+        <Section>6</Section>
+        <Left>14115</Left>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>6</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>G1F_BLANK1_FLB</Name>
+        <Section>6</Section>
+        <Width>1395</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>DTL_MI_NYUUKIN_GAKU_CTL</Name>
+        <Section>0</Section>
+        <Text>PHY_MI_NYUUKIN_GAKU_VLB</Text>
+        <Calculated>-1</Calculated>
+        <Format>#,##0</Format>
+        <Left>10110</Left>
+        <Width>2130</Width>
+        <Height>300</Height>
+        <Align>8</Align>
+        <BackColor>16777215</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <MarginRight>50</MarginRight>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+      <Field>
+        <Name>PF_PAGE_FLB</Name>
+        <Section>4</Section>
+        <Text>[Page] &amp; " / " &amp; [Pages] &amp; " 頁"</Text>
+        <Calculated>-1</Calculated>
+        <Left>11700</Left>
+        <Width>4514.39990234375</Width>
+        <Height>300</Height>
+        <Align>2</Align>
+        <ForeColor>5594999</ForeColor>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_PRINT_DATE_VLB</Name>
+        <Section>1</Section>
+        <Text>yyyy/MM/dd hh:mm:ss 発行</Text>
+        <Left>13470</Left>
+        <Width>2760</Width>
+        <Height>285</Height>
+        <Align>2</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CHUSHUTSU_JOKEN_FLB</Name>
+        <Section>1</Section>
+        <Text>【抽出条件】</Text>
+        <Top>1170</Top>
+        <Width>1170</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_CORP_RYAKU_NAME_VLB</Name>
+        <Section>1</Section>
+        <Text>会社略称ああああああ</Text>
+        <Width>3795</Width>
+        <Height>285</Height>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_TITLE_VLB</Name>
+        <Section>1</Section>
+        <Text>帳票種類ああああ（帳票名あああああああ）</Text>
+        <Top>390</Top>
+        <Width>16230</Width>
+        <Height>600</Height>
+        <Align>7</Align>
+        <Font>
+          <Bold>-1</Bold>
+          <Underline>-1</Underline>
+          <Name>ＭＳ 明朝</Name>
+          <Size>20</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_DENPYOU_DATE_FLB</Name>
+        <Section>1</Section>
+        <Text>[伝票日付]</Text>
+        <Left>1215</Left>
+        <Top>1170</Top>
+        <Width>945</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_DENPYOU_DATE_CTL</Name>
+        <Section>1</Section>
+        <Text>9999/99/99 ～ 9999/99/99</Text>
+        <Left>2355</Left>
+        <Top>1170</Top>
+        <Width>2340</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_DENPYOU_SHURUI_FLB</Name>
+        <Section>1</Section>
+        <Text>[伝票種類]</Text>
+        <Left>8730</Left>
+        <Top>1170</Top>
+        <Width>975</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_DENPYOU_SHURUI_CTL</Name>
+        <Section>1</Section>
+        <Text>売上／支払</Text>
+        <Left>9855</Left>
+        <Top>1170</Top>
+        <Width>975</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_KYOTEN_NAME_VLB</Name>
+        <Section>1</Section>
+        <Text>拠点あああ</Text>
+        <Left>12975</Left>
+        <Top>600</Top>
+        <Width>3225</Width>
+        <Height>285</Height>
+        <Font>
+          <Bold>-1</Bold>
+          <Underline>-1</Underline>
+          <Name>ＭＳ 明朝</Name>
+          <Size>14</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_DENPYOU_KBN_FLB</Name>
+        <Section>1</Section>
+        <Text>[伝票区分]</Text>
+        <Left>12345</Left>
+        <Top>1185</Top>
+        <Width>975</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_DENPYOU_KBN_CTL</Name>
+        <Section>1</Section>
+        <Text>売上</Text>
+        <Left>13485</Left>
+        <Top>1185</Top>
+        <Width>480</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_FILL_COND_ID_1_VLB</Name>
+        <Section>1</Section>
+        <Text>[集計項目１あ]</Text>
+        <Left>1215</Left>
+        <Top>1365</Top>
+        <Width>1560</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_FILL_COND_CD_1_CTL</Name>
+        <Section>1</Section>
+        <Text>000000 ～ 000000</Text>
+        <Left>2775</Left>
+        <Top>1365</Top>
+        <Width>1650</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_FILL_COND_ID_3_VLB</Name>
+        <Section>1</Section>
+        <Text>[集計項目３あ]</Text>
+        <Left>8730</Left>
+        <Top>1365</Top>
+        <Width>1455</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_FILL_COND_ID_2_VLB</Name>
+        <Section>1</Section>
+        <Text>[集計項目２あ]</Text>
+        <Left>4965</Left>
+        <Top>1365</Top>
+        <Width>1470</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_FILL_COND_CD_2_CTL</Name>
+        <Section>1</Section>
+        <Text>000000 ～ 000000</Text>
+        <Left>6510</Left>
+        <Top>1365</Top>
+        <Width>1650</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>FH_FILL_COND_CD_3_CTL</Name>
+        <Section>1</Section>
+        <Text>000000 ～ 000000</Text>
+        <Left>10290</Left>
+        <Top>1365</Top>
+        <Width>1650</Width>
+        <Height>195</Height>
+        <Align>6</Align>
+        <Font>
+          <Name>ＭＳ 明朝</Name>
+          <Size>9</Size>
+        </Font>
+      </Field>
+      <Field>
+        <Name>PHN_SEIKYUSAKI_BETSU_VLB</Name>
+        <Section>3</Section>
+        <Text>請   求   先   計</Text>
+        <Left>6765</Left>
+        <Width>1210</Width>
+        <Height>90</Height>
+        <Align>7</Align>
+        <BackColor>15792104</BackColor>
+        <BackStyle>1</BackStyle>
+        <BorderStyle>1</BorderStyle>
+        <Visible>0</Visible>
+        <Font>
+          <Bold>-1</Bold>
+          <Name>Segoe UI</Name>
+          <Size>9</Size>
+        </Font>
+        <Shape Type="Line">
+          <LineSlant>0</LineSlant>
+        </Shape>
+      </Field>
+    </Fields>
+  </Report>
+</Reports>

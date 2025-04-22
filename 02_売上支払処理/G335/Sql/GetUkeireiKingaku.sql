@@ -1,0 +1,52 @@
+﻿SELECT
+  SUM( 
+    ISNULL(UKD.KINGAKU, 0) 
+	+ ISNULL(UKD.TAX_SOTO, 0) 
+	+ ISNULL(UKD.TAX_UCHI, 0) 
+    + ISNULL(UKD.HINMEI_KINGAKU, 0) 
+	+ ISNULL(UKD.HINMEI_TAX_SOTO, 0) 
+	+ ISNULL(UKD.HINMEI_TAX_UCHI, 0)
+  ) 
+FROM
+/*BEGIN*/
+ /*IF densyuKbn == '1'*/
+  T_UKEIRE_ENTRY UKE 
+  INNER JOIN T_UKEIRE_DETAIL UKD 
+ /*END*/
+  /*IF densyuKbn == '2'*/
+  T_SHUKKA_ENTRY UKE 
+  INNER JOIN T_SHUKKA_DETAIL UKD 
+ /*END*/
+  /*IF densyuKbn == '3'*/
+  T_UR_SH_ENTRY UKE 
+  INNER JOIN T_UR_SH_DETAIL UKD
+ /*END*/
+    ON UKE.SYSTEM_ID = UKD.SYSTEM_ID 
+    AND UKE.SEQ = UKD.SEQ
+ 
+WHERE
+  UKE.TORIHIKISAKI_CD = /*torihikiCd*/
+  AND UKE.URIAGE_TORIHIKI_KBN_CD = '2' 
+  AND UKE.DELETE_FLG = '0' 
+  AND UKD.DENPYOU_KBN_CD = /*denpyoKbn*/
+  AND NOT EXISTS ( 
+    SELECT
+      1 
+    FROM
+       /*IF seisanShiharaiKbn*/
+	  T_SEIKYUU_DETAIL 
+	  /*END*/
+	  /*IF !seisanShiharaiKbn*/
+	  T_SEISAN_DETAIL 
+	  /*END*/
+	  SED 
+    WHERE
+      SED.DENPYOU_SHURUI_CD = /*densyuKbn*/ 
+      AND SED.DENPYOU_SYSTEM_ID = UKD.SYSTEM_ID 
+      AND SED.DENPYOU_SEQ = UKD.SEQ 
+	  /*IF zeikeisanKbn == '3'*/
+	  AND SED.DETAIL_SYSTEM_ID = UKD.DETAIL_SYSTEM_ID
+	   /*END*/
+      AND SED.DELETE_FLG = '0'
+  ) 
+  /*END*/

@@ -1,0 +1,16 @@
+SELECT
+    M_SMW.*,
+    ISNULL(SHA.SHAIN_NAME_RYAKU, N'') AS SHAIN_NAME
+FROM
+    dbo.M_SHAIN_MAX_WINDOW M_SMW
+        LEFT JOIN dbo.M_SHAIN SHA ON M_SMW.SHAIN_CD = SHA.SHAIN_CD
+/*BEGIN*/WHERE
+ /*IF !deletechuFlg*/ M_SMW.DELETE_FLG = 0/*END*/
+ /*IF data.SHAIN_CD != null*/ AND M_SMW.SHAIN_CD LIKE '%' +  /*data.SHAIN_CD*/ + '%'/*END*/
+ /*IF !data.MAX_WINDOW_COUNT.IsNull*/ AND M_SMW.MAX_WINDOW_COUNT =  /*data.MAX_WINDOW_COUNT*/0/*END*/
+ /*IF data.CREATE_USER != null*/AND M_SMW.CREATE_USER LIKE '%' +  /*data.CREATE_USER*/ + '%'/*END*/
+ /*IF data.SEARCH_CREATE_DATE != null*/AND CONVERT(nvarchar, M_SMW.CREATE_DATE, 120) LIKE '%' +  /*data.SEARCH_CREATE_DATE*/ + '%'/*END*/
+ /*IF data.UPDATE_USER != null*/AND M_SMW.UPDATE_USER LIKE '%' +  /*data.UPDATE_USER*/ + '%'/*END*/
+ /*IF data.SEARCH_UPDATE_DATE != null*/AND CONVERT(nvarchar, M_SMW.UPDATE_DATE, 120) LIKE '%' +  /*data.SEARCH_UPDATE_DATE*/ + '%'/*END*/
+/*END*/
+ORDER BY M_SMW.SHAIN_CD

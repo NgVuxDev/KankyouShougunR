@@ -1,0 +1,5 @@
+﻿UPDATE
+  T_NYUUKIN_KESHIKOMI
+SET DELETE_FLG = '1'
+ WHERE 
+	SEIKYUU_NUMBER IN /*arrSeikyuuNumber*/() 

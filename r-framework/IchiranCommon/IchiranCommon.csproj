@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6429E01D-AB2A-4EA8-B9A4-3FBCD0A30D38}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.Common.IchiranCommon</RootNamespace>
+    <AssemblyName>IchiranCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\IchiranBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\IchiranBaseForm.designer.cs">
+      <DependentUpon>IchiranBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\IchiranHeader\IchiranHeaderForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\IchiranHeader\IchiranHeaderForm1.Designer.cs">
+      <DependentUpon>IchiranHeaderForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\IchiranHeader\IchiranHeaderForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\IchiranHeader\IchiranHeaderForm2.Designer.cs">
+      <DependentUpon>IchiranHeaderForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\IchiranHeader\IchiranHeaderForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\IchiranHeader\IchiranHeaderForm3.Designer.cs">
+      <DependentUpon>IchiranHeaderForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\IchiranSyuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\IchiranSyuForm.designer.cs">
+      <DependentUpon>IchiranSyuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\IchiranSyuHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\IchiranSyuHeader.designer.cs">
+      <DependentUpon>IchiranSyuHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\IchiranSuperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\IchiranSuperForm.designer.cs">
+      <DependentUpon>IchiranSuperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\PatternIchiranForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\PatternIchiranForm.Designer.cs">
+      <DependentUpon>PatternIchiranForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\PatternIchiranHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\PatternIchiranHeader.designer.cs">
+      <DependentUpon>PatternIchiranHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Const\IchiranConst.cs" />
+    <Compile Include="Const\XmlTexts.cs" />
+    <Compile Include="Dao\IchiranSyuDao.cs" />
+    <Compile Include="Dao\PatternIchiranDao.cs" />
+    <Compile Include="Dto\IchiranSyuDto.cs" />
+    <Compile Include="Dto\JoinCondition.cs" />
+    <Compile Include="Dto\OutputColumn.cs" />
+    <Compile Include="Dto\OutputGroup.cs" />
+    <Compile Include="Dto\OutputPatternDto.cs" />
+    <Compile Include="Dto\PatternIchiranDto.cs" />
+    <Compile Include="Logic\CopyEntity.cs" />
+    <Compile Include="Logic\IchiranBaseLogic.cs" />
+    <Compile Include="Logic\IchiranSyuLogic.cs" />
+    <Compile Include="Logic\PatternIchiranLogic.cs" />
+    <Compile Include="PatternManager.cs" />
+    <Compile Include="PatternSetting.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Setting\IchiranSyuButtonSetting.xml" />
+    <EmbeddedResource Include="Setting\PatternIchiranButtonSetting.xml" />
+    <EmbeddedResource Include="Sql\GetIchiranPaterndataSql.sql" />
+    <EmbeddedResource Include="Sql\GetOutPut.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APP\IchiranBaseForm.resx">
+      <DependentUpon>IchiranBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\IchiranHeader\IchiranHeaderForm1.resx">
+      <DependentUpon>IchiranHeaderForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\IchiranHeader\IchiranHeaderForm2.resx">
+      <DependentUpon>IchiranHeaderForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\IchiranHeader\IchiranHeaderForm3.resx">
+      <DependentUpon>IchiranHeaderForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\IchiranSyuForm.resx">
+      <DependentUpon>IchiranSyuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\IchiranSyuHeader.resx">
+      <DependentUpon>IchiranSyuHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\IchiranSuperForm.resx">
+      <DependentUpon>IchiranSuperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PatternIchiranForm.resx">
+      <DependentUpon>PatternIchiranForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PatternIchiranHeader.resx">
+      <DependentUpon>PatternIchiranHeader.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shougun.Core.Message\Shougun.Core.Message.csproj">
+      <Project>{DDF5B1E5-6897-48EB-A194-ECA45C8201FD}</Project>
+      <Name>Shougun.Core.Message</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G032_00120.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnSetting\G055_09101.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnSetting\G055_09102.xml" />
+    <EmbeddedResource Include="ColumnSetting\G055_09103.xml" />
+    <EmbeddedResource Include="ColumnSetting\G055_09104.xml" />
+    <EmbeddedResource Include="ColumnSetting\G055_09106.xml" />
+    <EmbeddedResource Include="ColumnSetting\G059_00908.xml" />
+    <EmbeddedResource Include="ColumnSetting\G068_00909.xml" />
+    <EmbeddedResource Include="ColumnSetting\G078_00901.xml" />
+    <EmbeddedResource Include="ColumnSetting\G078_09011.xml" />
+    <EmbeddedResource Include="ColumnSetting\G078_09012.xml" />
+    <EmbeddedResource Include="ColumnSetting\G084_00902.xml" />
+    <EmbeddedResource Include="ColumnSetting\G103_00903.xml" />
+    <EmbeddedResource Include="ColumnSetting\G112_00904.xml" />
+    <EmbeddedResource Include="ColumnSetting\G122_00926.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_00080.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_00081.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_00090.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_00905.xml" />
+    <EmbeddedResource Include="ColumnSetting\G137_00906.xml" />
+    <EmbeddedResource Include="ColumnSetting\G142_00915.xml" />
+    <EmbeddedResource Include="ColumnSetting\G144_00916.xml" />
+    <EmbeddedResource Include="ColumnSetting\G145_00917.xml" />
+    <EmbeddedResource Include="ColumnSetting\G146_00918.xml" />
+    <EmbeddedResource Include="ColumnSetting\G176_00900.xml" />
+    <EmbeddedResource Include="ColumnSetting\G290_00130.xml" />
+    <EmbeddedResource Include="ColumnSetting\G299_00907.xml" />
+    <EmbeddedResource Include="ColumnSetting\G299_00923.xml" />
+    <EmbeddedResource Include="ColumnSetting\G303_00911.xml" />
+    <EmbeddedResource Include="ColumnSetting\G413_00919.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09001.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09002.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09003.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09080.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09081.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09090.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09100.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09140.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09160.xml" />
+    <EmbeddedResource Include="ColumnSetting\G449_09170.xml" />
+    <EmbeddedResource Include="ColumnSetting\M214_00200.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnSetting\M216_00210.xml" />
+    <EmbeddedResource Include="ColumnSetting\M218_00220.xml" />
+    <EmbeddedResource Include="ColumnSetting\M420_09241.xml" />
+    <EmbeddedResource Include="ColumnSetting\M420_09242.xml" />
+    <EmbeddedResource Include="ColumnSetting\M420_09251.xml" />
+    <EmbeddedResource Include="ColumnSetting\M420_09252.xml" />
+    <EmbeddedResource Include="ColumnSetting\G021_01001.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnSetting\G021_01002.xml" />
+    <EmbeddedResource Include="ColumnSetting\G021_01003.xml" />
+    <EmbeddedResource Include="ColumnSetting\G021_01005.xml" />
+    <EmbeddedResource Include="ColumnSetting\G168_00150.xml" />
+    <EmbeddedResource Include="ColumnSetting\M484_00927.xml" />
+    <EmbeddedResource Include="ColumnSetting\M485_00913.xml" />
+    <EmbeddedResource Include="ColumnSetting\M486_00928.xml" />
+    <EmbeddedResource Include="ColumnSetting\G277_00180.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_09051.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_09052.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_09053.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_09054.xml" />
+    <EmbeddedResource Include="ColumnSetting\G126_09055.xml" />
+    <EmbeddedResource Include="ColumnSetting\M555_00250.xml" />
+    <EmbeddedResource Include="ColumnSetting\M012_00190.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnSetting\G641_09105.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M313_00240.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M310_00230.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G632_00150.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G021_01007.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G021_01008.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\XG427_00940.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M663_00271.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G673_00140.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M694_00290.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G713_09057.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G686_09320.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M683_09350.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G716_00330.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M734_00360.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G021_01001_Inxs.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColumnSetting\G021_01003_Inxs.xml" />
+    <EmbeddedResource Include="ColumnSetting\G021_01008_Inxs.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G742_00390.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G055_09107.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M748_00748.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M757_09401.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G752_09013.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\M758_00758.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ColumnSetting\G769_00410.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

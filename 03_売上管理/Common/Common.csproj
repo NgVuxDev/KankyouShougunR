@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F419462-F0FD-4CEB-AB91-62DF08E16C1B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Function.ShougunCSCommon</RootNamespace>
+    <AssemblyName>ShougunCSCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\x86\Debug\ShougunCSCommon.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\IT_KAKEKIN_ICHIRANDao.cs" />
+    <Compile Include="Dao\IT_UR_SH_ENTRYDao.cs" />
+    <Compile Include="Dao\IT_UR_SH_DETAILDao.cs" />
+    <Compile Include="Utility\CommonCalc.cs" />
+    <Compile Include="Const\SalesPaymentConstans.cs" />
+    <Compile Include="Dao\IT_SHIHARAI_MOTOCHODao.cs" />
+    <Compile Include="Dao\IT_URIAGE_MOTOCHODao.cs" />
+    <Compile Include="Dao\IT_UKEIRE_DETAILDao.cs" />
+    <Compile Include="Dao\IT_UKEIRE_ENTRYDao.cs" />
+    <Compile Include="Dao\IS_NUMBER_DAYDao.cs" />
+    <Compile Include="Dao\IS_NUMBER_YEARDao.cs" />
+    <Compile Include="Dao\IT_SHUKKA_ENTRYDao.cs" />
+    <Compile Include="Dao\IT_SHUKKA_DETAILDao.cs" />
+    <Compile Include="Dto\CommonShogunData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\DataBinderUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\UkeireDetail\IT_UKEIRE_DETAILDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\UkeireEntry\IT_UKEIRE_ENTRYDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\NumberDay\IS_NUMBER_DAYDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\NumberYear\IS_NUMBER_YEARDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\UriageMotocho\IT_URIAGE_MOTOCHODao_GetIchiranData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\UriageMotocho\IT_URIAGE_MOTOCHODao_GetTorihikisakiList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{BCF43DC3-2A2F-4510-8BFE-72CB6BFF2396}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ShukkaEntry\IT_SHUKKA_ENTRYDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ShukkaDetail\IT_SHUKKA_DETAILDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ShiharaiMotocho\IT_SHIHARAI_MOTOCHODao_GetIchiranData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ShiharaiMotocho\IT_SHIHARAI_MOTOCHODao_GetTorihikisakiList.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\UrShEntry\IT_UR_SH_ENTRYDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\UrShDetail\IT_UR_SH_DETAILDao_GetDataForEntity.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Genba\NizumiGenbaCondition.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Gyousha\NizumiGyoushaCondition.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Gyousha\UnpanGyoushaCondition.sql" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\KakekinIchiran\IT_KAKEKIN_ICHIRANDao_GetIchiranData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KakekinIchiran\IT_KAKEKIN_ICHIRANDao_GetTorihikisakiList.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

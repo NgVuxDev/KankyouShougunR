@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{788AF857-7DC9-4E7B-9BE2-C33D478B8B94}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChiikibetsuKyokaBangoHoshu</RootNamespace>
+    <AssemblyName>ChiikibetsuKyokaBangoHoshu</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170" />
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\GrapeCity.Framework.MultiRow.v22.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12" />
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\GrapeCity.Win.MultiRow.v70.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\11_帳票出力\Shougun.Printing\Common\Shougun.Printing.Common.csproj">
+      <Project>{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}</Project>
+      <Name>Shougun.Printing.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\CommunicateLib\CommunicateLib.csproj">
+      <Project>{48903edc-99cd-43e0-97b7-548dbc1da889}</Project>
+      <Name>CommunicateLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\FileUploadCommon\FileUploadCommon.csproj">
+      <Project>{A7BDC179-28A0-4565-9DE1-5901BAAFCC63}</Project>
+      <Name>FileUploadCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\G730\G730.csproj">
+      <Project>{3F7682EF-C99A-478E-8187-A2DDCB5BACC5}</Project>
+      <Name>G730</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\IchiranCommon\IchiranCommon.csproj">
+      <Project>{6429E01D-AB2A-4EA8-B9A4-3FBCD0A30D38}</Project>
+      <Name>IchiranCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\ChiikibetsuKyokaBangoHoshuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\ChiikibetsuKyokaBangoHoshuForm.Designer.cs">
+      <DependentUpon>ChiikibetsuKyokaBangoHoshuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\M237.cs" />
+    <Compile Include="Const\ChiikibetsuKyokaBangoHoshuConstans.cs" />
+    <Compile Include="Dto\INXSInfoDto.cs" />
+    <Compile Include="Logic\ChiikibetsuKyokaBangoHoshuLogic.cs" />
+    <Compile Include="MultiRowTemplate\ChiikibetsuKyokaBangoHoshuDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ChiikibetsuKyokaBangoHoshuDetail.designer.cs">
+      <DependentUpon>ChiikibetsuKyokaBangoHoshuDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ChiikibetsuKyokaBangoHoshuDetail2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\ChiikibetsuKyokaBangoHoshuDetail2.designer.cs">
+      <DependentUpon>ChiikibetsuKyokaBangoHoshuDetail2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Validator\ChiikibetsuKyokaBangoHoshuCompare.cs" />
+    <Compile Include="Validator\ChiikibetsuKyokaBangoHoshuValidator.cs" />
+    <EmbeddedResource Include="APP\ChiikibetsuKyokaBangoHoshuForm.resx">
+      <DependentUpon>ChiikibetsuKyokaBangoHoshuForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\ChiikibetsuKyokaBangoHoshuDetail.resx">
+      <DependentUpon>ChiikibetsuKyokaBangoHoshuDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MultiRowTemplate\ChiikibetsuKyokaBangoHoshuDetail2.resx">
+      <DependentUpon>ChiikibetsuKyokaBangoHoshuDetail2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetIchiranDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaBangoDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetChiikibetsuKyokaMeigaraDataSql.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ItemViewPopup\ItemViewPopup.csproj">
+      <Project>{440EBF4A-0B4F-41C4-9593-BF26DD1AB710}</Project>
+      <Name>ItemViewPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MasterCommon\MasterCommon.csproj">
+      <Project>{33456DFB-0BB4-4717-B6C7-4D91F5500C4A}</Project>
+      <Name>MasterCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

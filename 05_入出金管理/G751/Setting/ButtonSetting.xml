@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func8</ButtonName>
+    <NewButtonName>[F8]&#xD;&#xA;検索</NewButtonName>
+    <UpdateButtonName>[F8]&#xD;&#xA;検索</UpdateButtonName>
+    <ReferButtonName>[F8]&#xD;&#xA;検索</ReferButtonName>
+    <DefaultHintText>入力された条件で検索を行います</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;登録</NewButtonName>
+    <UpdateButtonName>[F9]&#xD;&#xA;登録</UpdateButtonName>
+    <ReferButtonName>[F9]&#xD;&#xA;登録</ReferButtonName>
+    <DefaultHintText>表示されている内容を登録します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <DefaultHintText>画面を閉じます</DefaultHintText>
+  
+</ButtonSetting>
+</ArrayOfButtonSetting>

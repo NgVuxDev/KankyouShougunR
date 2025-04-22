@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FA5FAB6-DB25-4958-986D-E3C604714AD7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.Allocation.MobileJoukyouIchiran</RootNamespace>
+    <AssemblyName>MobileJoukyouIchiran</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MultiRowWin7\Bin\v7.0.2013.0227\GrapeCity.Framework.MultiRow.v22.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MultiRowWin7\Bin\v7.0.2013.0227\GrapeCity.Win.MultiRow.v70.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MapboxConfidentialClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL\MapboxConfidentialClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\G667.cs" />
+    <Compile Include="APP\UIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIForm.Designer.cs">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIHeader.designer.cs">
+      <DependentUpon>UIHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Const\ConstCls.cs" />
+    <Compile Include="DAO\DAOClass.cs" />
+    <Compile Include="DTO\DTOClass.cs" />
+    <Compile Include="DTO\MobileShougunTorikomiDTOClass.cs" />
+    <Compile Include="DTO\UketsukeSsDTOClass.cs" />
+    <Compile Include="DTO\NiorosiClass.cs" />
+    <Compile Include="DTO\UketsukeSkDTOClass.cs" />
+    <Compile Include="Logic\LogicCls.cs" />
+    <Compile Include="MultiRowTemplate\TourokuSumiHaishaDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TourokuSumiHaishaDetail.designer.cs">
+      <DependentUpon>TourokuSumiHaishaDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TourokuSumiUketukeDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TourokuSumiUketukeDetail.designer.cs">
+      <DependentUpon>TourokuSumiUketukeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\MiTourokuHaishaDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\MiTourokuHaishaDetail.designer.cs">
+      <DependentUpon>MiTourokuHaishaDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\MiTourokuUketukeDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\MiTourokuUketukeDetail.designer.cs">
+      <DependentUpon>MiTourokuUketukeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TourokuSumiHaishaDetailHyouji.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TourokuSumiHaishaDetailHyouji.designer.cs">
+      <DependentUpon>TourokuSumiHaishaDetailHyouji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TourokuSumiUketukeDetailHyouji.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\TourokuSumiUketukeDetailHyouji.designer.cs">
+      <DependentUpon>TourokuSumiUketukeDetailHyouji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="APP\UIForm.resx">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIHeader.resx">
+      <DependentUpon>UIHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\TourokuSumiHaishaDetail.resx">
+      <DependentUpon>TourokuSumiHaishaDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\TourokuSumiUketukeDetail.resx">
+      <DependentUpon>TourokuSumiUketukeDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\MiTourokuHaishaDetail.resx">
+      <DependentUpon>MiTourokuHaishaDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\MiTourokuUketukeDetail.resx">
+      <DependentUpon>MiTourokuUketukeDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\TourokuSumiHaishaDetailHyouji.resx">
+      <DependentUpon>TourokuSumiHaishaDetailHyouji.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\TourokuSumiUketukeDetailHyouji.resx">
+      <DependentUpon>TourokuSumiUketukeDetailHyouji.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="Sql\GetContenaDetail.sql" />
+    <EmbeddedResource Include="Sql\GetContenaDataByMobisyo.sql" />
+    <EmbeddedResource Include="Sql\GetDetailForTourokuSumiHaishaDetail.sql" />
+    <EmbeddedResource Include="Sql\GetDetailForTourokuSumiUketukeDetail.sql" />
+    <EmbeddedResource Include="Sql\GetKaisyuuInfoForGenbaCnt.sql" />
+    <EmbeddedResource Include="Sql\GetKaisyuuInfo.sql" />
+    <EmbeddedResource Include="Sql\GetTeikiHaishaTorihikisakiUmu.sql" />
+    <EmbeddedResource Include="Sql\GetRtDataByCDM.sql" />
+    <EmbeddedResource Include="Sql\GetDenpyoKbnByUktukeNo.sql" />
+    <EmbeddedResource Include="Sql\GetRtDataByCDR.sql" />
+    <EmbeddedResource Include="Sql\GetUketsukeSkEntryData.sql" />
+    <EmbeddedResource Include="Sql\GetUketsukeSkDetailData.sql" />
+    <EmbeddedResource Include="Sql\GetShukkaUketukeDetailData.sql" />
+    <EmbeddedResource Include="Sql\GetContenaMaster.sql" />
+    <EmbeddedResource Include="Sql\GetUrShContenaData.sql" />
+    <EmbeddedResource Include="Sql\GetRtCTNDataByCD.sql" />
+    <EmbeddedResource Include="Sql\GetSyuusyuuUketukeContenaData.sql" />
+    <None Include="Resources\虫眼鏡.png" />
+    <EmbeddedResource Include="Sql\GetTeikiHaishaNo.sql" />
+    <EmbeddedResource Include="Sql\GetTeikiHaishaJissekiNo.sql" />
+    <EmbeddedResource Include="Sql\GetDeleteHannyuuDataByCD.sql" />
+    <EmbeddedResource Include="Sql\GetMobilNioroshiData.sql" />
+    <EmbeddedResource Include="Sql\GetUketsukeSsEntryData.sql" />
+    <EmbeddedResource Include="Sql\GetUketsukeSsDetailData.sql" />
+    <EmbeddedResource Include="Sql\GetKobetsuHinmeiData.sql" />
+    <EmbeddedResource Include="Sql\GetUrShDataEntity.sql" />
+    <EmbeddedResource Include="Sql\GetSyuusyuuKyouteiData.sql" />
+    <EmbeddedResource Include="Sql\GetHinmeiData.sql" />
+    <EmbeddedResource Include="Sql\GetTeikiHinmeiInfo.sql" />
+    <EmbeddedResource Include="Sql\GetKansanData.sql" />
+    <EmbeddedResource Include="Sql\GetGenbaTeikiHinmeiData.sql" />
+    <EmbeddedResource Include="Sql\GetTeikiHaishaKyouteiData.sql" />
+    <EmbeddedResource Include="Sql\GetHannyuuDataByCD.sql" />
+    <EmbeddedResource Include="Sql\GetDtlDataByCD.sql" />
+    <EmbeddedResource Include="Sql\GetRtDataByCD.sql" />
+    <EmbeddedResource Include="Sql\GetKaisyuuJissekiCount.sql" />
+    <EmbeddedResource Include="Sql\GetSyuusyuuUketukeDetailData.sql" />
+    <EmbeddedResource Include="Sql\GetTeikiHaishaNioroshiData.sql" />
+    <EmbeddedResource Include="Sql\GetDetailForMiTourokuUketuke.sql" />
+    <EmbeddedResource Include="Sql\GetDetailForMiTourokuHaisha.sql" />
+    <EmbeddedResource Include="Sql\GetDetailForTourokuSumiUketuke.sql" />
+    <EmbeddedResource Include="Sql\GetDetailForTourokuSumiHaisha.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\09_電子マニフェスト\CustomControls_Ex\CustomControls_Ex.csproj">
+      <Project>{F13062BD-BAB9-4F18-82AA-27BFC25271BE}</Project>
+      <Name>CustomControls_Ex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\20_外部接続\ExternalCommon\ExternalCommon.csproj">
+      <Project>{8E5462BC-8B85-42EC-B551-834F84B3AB25}</Project>
+      <Name>ExternalCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\IchiranCommon\IchiranCommon.csproj">
+      <Project>{6429E01D-AB2A-4EA8-B9A4-3FBCD0A30D38}</Project>
+      <Name>IchiranCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\Common\Common.csproj">
+      <Project>{7749C25E-83F6-4478-A720-92162E76FB53}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\G283\G283.csproj">
+      <Project>{8B965B9B-BB61-4D2A-A9BD-40C9AB1FFF34}</Project>
+      <Name>G283</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

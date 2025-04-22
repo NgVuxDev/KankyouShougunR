@@ -1,0 +1,6 @@
+﻿SELECT
+    *
+FROM
+    T_KARIUKE_CONTROL TKC
+WHERE
+    TKC.SHUKKINSAKI_CD = /*cd*/''

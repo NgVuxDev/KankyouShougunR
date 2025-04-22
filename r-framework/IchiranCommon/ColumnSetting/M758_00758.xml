@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="758">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1"    DispName="紐付状況"                    Needs="0" TableName=""                     Name="CASE ISNULL(ITAKU_KEIYAKU_KIHON.SYSTEM_ID, '') WHEN '' THEN '未' ELSE '済' END" Format="" />
+      <Column ID="2" DispNumber="10"   DispName="紐付SystemID"                Needs="1" TableName="ITAKU_KEIYAKU_KIHON"  Name="SYSTEM_ID" Format="" />
+      <Column ID="3" DispNumber="20"   DispName="契約状況（WAN）"             Needs="0" TableName=""                     Name="CASE WHEN WANSIGN_KEIYAKU_INFO.SIGNING_DATETIME IS NOT NULL THEN '署名済' ELSE '' END" Format="" />
+      <Column ID="4" DispNumber="30"   DispName="管理番号（WAN）"             Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="ORIGINAL_CONTROL_NUMBER" Format="" />
+      <Column ID="5" DispNumber="40"   DispName="登録者名（WAN）"             Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="REGISTERED_USER_NAME" Format="" />
+      <Column ID="6" DispNumber="50"   DispName="DocumentID（WAN）"           Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="DOCUMENT_ID" Format="" />
+      <Column ID="7" DispNumber="60"   DispName="文書名(WAN)"                 Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="DOCUMENT_NAME" Format="" />
+      <Column ID="8" DispNumber="70"   DispName="相手方1（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM" Format="" />
+      <Column ID="54" DispNumber="71"   DispName="相手方2（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM2" Format="" />
+      <Column ID="55" DispNumber="72"   DispName="相手方3（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM3" Format="" />
+      <Column ID="56" DispNumber="73"   DispName="相手方4（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM4" Format="" />
+      <Column ID="57" DispNumber="74"   DispName="相手方5（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM5" Format="" />
+      <Column ID="58" DispNumber="75"   DispName="相手方6（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM6" Format="" />
+      <Column ID="59" DispNumber="76"   DispName="相手方7（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM7" Format="" />
+      <Column ID="60" DispNumber="77"   DispName="相手方8（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM8" Format="" />
+      <Column ID="61" DispNumber="78"   DispName="相手方9（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM9" Format="" />
+      <Column ID="62" DispNumber="79"   DispName="相手方10（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM10" Format="" />
+      <Column ID="63" DispNumber="80"   DispName="相手方11（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM11" Format="" />
+      <Column ID="64" DispNumber="81"   DispName="相手方12（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM12" Format="" />
+      <Column ID="65" DispNumber="82"   DispName="相手方13（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM13" Format="" />
+      <Column ID="66" DispNumber="83"   DispName="相手方14（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM14" Format="" />
+      <Column ID="67" DispNumber="84"   DispName="相手方15（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM15" Format="" />
+      <Column ID="68" DispNumber="85"   DispName="相手方16（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="PARTNER_ORGANIZE_NM16" Format="" />
+      <Column ID="9" DispNumber="86"   DispName="関連コード（WAN）"           Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="CONTROL_NUMBER" Format="" />
+      <Column ID="10" DispNumber="90"  DispName="契約日（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="CONTRACT_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="11" DispNumber="100" DispName="契約満了日（WAN）"           Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="CONTRACT_EXPIRATION_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="12" DispNumber="110" DispName="契約自動更新（WAN）"         Needs="0" TableName=""                     Name="CASE WANSIGN_KEIYAKU_INFO.IS_AUTO_UPDATING WHEN 1 THEN '自動更新' WHEN 0 THEN '単発' ELSE '' END" Format="" />
+      <Column ID="13" DispNumber="120" DispName="更新期間（WAN）"             Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="RENEWWAL_PERIOD" Format="" />
+      <Column ID="14" DispNumber="130" DispName="更新単位（WAN）"             Needs="0" TableName=""                     Name="CASE WANSIGN_KEIYAKU_INFO.RENEWWAL_PERIOD_UNIT WHEN 1 THEN '日' WHEN 2 THEN '月' WHEN 3 THEN '年' ELSE '' END" Format="" />
+      <Column ID="15" DispNumber="140" DispName="解約通知期間（WAN）"         Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="CANCEL_PERIOD" Format="" />
+      <Column ID="16" DispNumber="150" DispName="解約通知単位（WAN）"         Needs="0" TableName=""                     Name="CASE WANSIGN_KEIYAKU_INFO.CANCEL_PERIOD_UNIT WHEN 1 THEN '日前' WHEN 2 THEN 'ヶ月前' WHEN 3 THEN '年前' ELSE '' END" Format="" />
+      <Column ID="17" DispNumber="160" DispName="リマインド通知有無（WAN）"   Needs="0" TableName=""                     Name="CASE WANSIGN_KEIYAKU_INFO.IS_REMINDER WHEN 0 THEN 'なし' WHEN 1 THEN 'あり' ELSE '' END" Format="" />
+      <Column ID="18" DispNumber="170" DispName="リマインド通知期間（WAN）"   Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="REMINDER_PERIOD" Format="" />
+      <Column ID="19" DispNumber="180" DispName="リマインド通知単位（WAN）"   Needs="0" TableName=""                     Name="CASE WANSIGN_KEIYAKU_INFO.REMINDER_PERIOD_UNIT WHEN 1 THEN '日前' WHEN 2 THEN 'ヶ月前' WHEN 3 THEN '年前' ELSE '' END" Format="" />
+      <Column ID="20" DispNumber="190" DispName="所属（WAN）"                 Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="POST_NM" Format="" />
+      <Column ID="21" DispNumber="200" DispName="担当者（WAN）"               Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="NAME_NM" Format="" />
+      <Column ID="22" DispNumber="210" DispName="契約金額（WAN）"             Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="CONTRACT_DECIMAL" Format="#,##0.#########" />
+      <Column ID="23" DispNumber="220" DispName="保管場所（WAN）"             Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="STORAGE_LOCATION" Format="" />
+      <Column ID="24" DispNumber="230" DispName="備考1（WAN）"                Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="COMMENT_1" Format="" />
+      <Column ID="25" DispNumber="240" DispName="備考2（WAN）"                Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="COMMENT_2" Format="" />
+      <Column ID="26" DispNumber="250" DispName="備考3（WAN）"                Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="COMMENT_3" Format="" />
+      <Column ID="27" DispNumber="260" DispName="フィールド1（WAN）"          Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="FIELD_1" Format="" />
+      <Column ID="28" DispNumber="270" DispName="フィールド2（WAN）"          Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="FIELD_2" Format="" />
+      <Column ID="29" DispNumber="280" DispName="フィールド3（WAN）"          Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="FIELD_3" Format="" />
+      <Column ID="30" DispNumber="290" DispName="フィールド4（WAN）"          Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="FIELD_4" Format="" />
+      <Column ID="31" DispNumber="300" DispName="フィールド5（WAN）"          Needs="0" TableName="WANSIGN_KEIYAKU_INFO" Name="FIELD_5" Format="" />
+      <Column ID="32" DispNumber="310" DispName="紐付不可理由"                Needs="0" TableName=""                     Name="''" Format="" />
+      <Column ID="33" DispNumber="320" DispName="委託契約書番号（R）"         Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="ITAKU_KEIYAKU_NO" Format="" />
+      <Column ID="34" DispNumber="330" DispName="委託契約書種類"              Needs="0" TableName=""                     Name="CASE ITAKU_KEIYAKU_KIHON.ITAKU_KEIYAKU_SHURUI WHEN 1 THEN '収集運搬契約' WHEN 2 THEN '処分契約' WHEN 3 THEN '収集運搬/処分契約' ELSE '' END" Format="" />
+      <Column ID="35" DispNumber="340" DispName="委託契約書書式"              Needs="0" TableName=""                      Name="CASE ITAKU_KEIYAKU_KIHON.ITAKU_KEIYAKU_TYPE WHEN 1 THEN '産廃' WHEN 2 THEN '建廃' ELSE '' END" Format="" />  
+      <Column ID="36" DispNumber="350" DispName="排出事業者CD"                Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="HAISHUTSU_JIGYOUSHA_CD" Format="" />
+      <Column ID="37" DispNumber="360" DispName="排出事業者名"                Needs="0" TableName="M_GYOUSHA"            Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="38" DispNumber="370" DispName="排出事業者都道府県"          Needs="0" TableName="TODOUFUKEN_GYOUSHA"   Name="TODOUFUKEN_NAME" Format="" />
+      <Column ID="39" DispNumber="380" DispName="排出事業者住所1"             Needs="0" TableName="M_GYOUSHA"            Name="GYOUSHA_ADDRESS1" Format="" />
+      <Column ID="40" DispNumber="390" DispName="排出事業者住所2"             Needs="0" TableName="M_GYOUSHA"            Name="GYOUSHA_ADDRESS2" Format="" />
+      <Column ID="41" DispNumber="400" DispName="排出事業場CD"                Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="HAISHUTSU_JIGYOUJOU_CD" Format="" />
+      <Column ID="42" DispNumber="410" DispName="排出事業場名"                Needs="0" TableName="M_GENBA"              Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="43" DispNumber="420" DispName="排出事業場都道府県"          Needs="0" TableName="TODOUFUKEN_GENBA"     Name="TODOUFUKEN_NAME" Format="" />
+      <Column ID="44" DispNumber="430" DispName="排出事業場住所1"             Needs="0" TableName="M_GENBA"              Name="GENBA_ADDRESS1" Format="" />
+      <Column ID="45" DispNumber="440" DispName="排出事業場住所2"             Needs="0" TableName="M_GENBA"              Name="GENBA_ADDRESS2" Format="" />
+      <Column ID="46" DispNumber="450" DispName="委託契約書ファイルパス（R）" Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="ITAKU_KEIYAKU_FILE_PATH" Format="" />
+      <Column ID="47" DispNumber="460" DispName="契約日（R）"                 Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="KEIYAKUSHO_KEIYAKU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="48" DispNumber="470" DispName="更新種別（R）"               Needs="0" TableName=""                     Name="CASE ITAKU_KEIYAKU_KIHON.KOUSHIN_SHUBETSU WHEN 1 THEN '自動更新' WHEN 2 THEN '単発' ELSE '' END" Format="" />
+      <Column ID="49" DispNumber="480" DispName="有効期間開始（R）"           Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="YUUKOU_BEGIN" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="50" DispNumber="490" DispName="有効期間終了（R）"           Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="YUUKOU_END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="51" DispNumber="500" DispName="自動更新終了日（R）"         Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="KOUSHIN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="52" DispNumber="510" DispName="備考１（R）"                 Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="BIKOU1" Format="" />
+      <Column ID="53" DispNumber="520" DispName="備考２（R）"                 Needs="0" TableName="ITAKU_KEIYAKU_KIHON"  Name="BIKOU2" Format="" />    
+    </Group>
+  </OutputColumnSelect>
+</root>

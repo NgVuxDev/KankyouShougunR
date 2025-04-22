@@ -1,0 +1,19 @@
+﻿SELECT * FROM dbo.M_KEITAI_KBN
+WHERE 
+/*IF data.ISNOT_NEED_DELETE_FLG.IsNull || data.ISNOT_NEED_DELETE_FLG.IsFalse*/
+ DELETE_FLG = 0
+-- ELSE
+ 1 = 1
+/*END*/
+/*IF !data.KEITAI_KBN_CD.IsNull*/AND KEITAI_KBN_CD = /*data.KEITAI_KBN_CD.Value*//*END*/
+/*IF data.KEITAI_KBN_NAME != null*/AND KEITAI_KBN_NAME = /*data.KEITAI_KBN_NAME*//*END*/
+/*IF data.KEITAI_KBN_NAME_RYAKU != null*/AND KEITAI_KBN_NAME_RYAKU = /*data.KEITAI_KBN_NAME_RYAKU*//*END*/
+/*IF !data.DENSHU_KBN_CD.IsNull*/AND DENSHU_KBN_CD = /*data.DENSHU_KBN_CD.Value*//*END*/
+/*IF !data.KENSHU_FLG.IsNull*/ AND KENSHU_FLG = /*data.KENSHU_FLG*//*END*/
+/*IF data.KEITAI_KBN_BIKOU != null*/AND KEITAI_KBN_BIKOU = /*data.KEITAI_KBN_BIKOU*//*END*/
+/*IF data.CREATE_USER != null*/AND CREATE_USER = /*data.CREATE_USER*//*END*/
+/*IF !data.CREATE_DATE.IsNull*/AND CREATE_DATE = /*data.CREATE_DATE.Value*//*END*/
+/*IF data.CREATE_PC != null*/AND CREATE_PC = /*data.CREATE_PC*//*END*/
+/*IF data.UPDATE_USER != null*/AND UPDATE_USER = /*data.UPDATE_USER*//*END*/
+/*IF !data.UPDATE_DATE.IsNull*/AND UPDATE_DATE = /*data.UPDATE_DATE.Value*//*END*/
+/*IF data.UPDATE_PC != null*/AND UPDATE_PC = /*data.UPDATE_PC*//*END*/

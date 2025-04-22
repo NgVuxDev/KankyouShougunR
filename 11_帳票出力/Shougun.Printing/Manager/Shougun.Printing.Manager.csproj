@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98462FD4-121A-4E26-B9EB-9DBE9461B260}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Printing.Manager</RootNamespace>
+    <AssemblyName>Shougun.Printing.Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\ShougunBuilder\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\ShougunBuilder\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BusinessCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="GenchakuJikanHoshu, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="r_framework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Seasar, Version=1.4.0.0, Culture=neutral, PublicKeyToken=1d0d0c484d50ca62" />
+    <Reference Include="Seasar.Dao, Version=1.4.0.0, Culture=neutral, PublicKeyToken=73a7c921d802e17e" />
+    <Reference Include="Seasar.Quill, Version=1.4.0.0, Culture=neutral, PublicKeyToken=1d0d0c484d50ca62" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrowserDto.cs" />
+    <Compile Include="PrintJobManager.cs" />
+    <Compile Include="ProcessStartHelper.cs" />
+    <Compile Include="ReportManager.cs" />
+    <Compile Include="ReportPrintingInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonitorForm.Designer.cs">
+      <DependentUpon>MonitorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreviewManager.cs" />
+    <Compile Include="WebBrowserReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MonitorForm.resx">
+      <DependentUpon>MonitorForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Shougun.Printing.Common.csproj">
+      <Project>{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}</Project>
+      <Name>Shougun.Printing.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Verup\Shougun.Printing.Verup.csproj">
+      <Project>{028B6866-58B6-4EBB-9FFF-4E259FAE2426}</Project>
+      <Name>Shougun.Printing.Verup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Viewer\Shougun.Printing.Viewer.csproj">
+      <Project>{0DA25C02-0A70-4246-8DEE-0570A8FF1668}</Project>
+      <Name>Shougun.Printing.Viewer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Print.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

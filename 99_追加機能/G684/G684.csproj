@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EA92751-201E-46EF-A243-FB07360D9EB2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.BusinessManagement.DenpyouIkkatuUpdate</RootNamespace>
+    <AssemblyName>DenpyouIkkatuUpdate</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9" />
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accessor\DBAccessor.cs" />
+    <Compile Include="APP\DgvCustom.cs" />
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\APP\ShukkaDenpyouikkatsuPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\APP\ShukkaDenpyouikkatsuPopupForm.designer.cs">
+      <DependentUpon>ShukkaDenpyouikkatsuPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIForm.Designer.cs">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIHeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIHeaderForm.Designer.cs">
+      <DependentUpon>UIHeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\G684.cs" />
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\APP\UkeireDenpyouikkatsuPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\APP\UkeireDenpyouikkatsuPopupForm.designer.cs">
+      <DependentUpon>UkeireDenpyouikkatsuPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\APP\UriageDenpyouikkatsuPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\APP\UriageDenpyouikkatsuPopupForm.designer.cs">
+      <DependentUpon>UriageDenpyouikkatsuPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Const\ConstCls.cs" />
+    <Compile Include="DAO\DAOCls.cs" />
+    <Compile Include="DTO\DTOCls.cs" />
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\DTO\NyuuryokuParamDTOCls.cs" />
+    <Compile Include="Logic\CopyEntity.cs" />
+    <Compile Include="Logic\CsvUtility.cs" />
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\Logic\LogicClassShukka.cs" />
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\Logic\LogicClassUkeire.cs" />
+    <Compile Include="DenpyouJouhouIkkatuNyuuryoku\Logic\LogicClassUriage.cs" />
+    <Compile Include="Logic\LogicCls.cs" />
+    <Compile Include="MultiRowTemplate\DetailTemplateUkeire.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\DetailTemplateUkeire.Designer.cs">
+      <DependentUpon>DetailTemplateUkeire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\DetailTemplateUrsh.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\DetailTemplateUrsh.Designer.cs">
+      <DependentUpon>DetailTemplateUrsh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\DetailTemplateShukka.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\DetailTemplateShukka.Designer.cs">
+      <DependentUpon>DetailTemplateShukka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DenpyouJouhouIkkatuNyuuryoku\APP\ShukkaDenpyouikkatsuPopupForm.resx">
+      <DependentUpon>ShukkaDenpyouikkatsuPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIForm.resx">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIHeaderForm.resx">
+      <DependentUpon>UIHeaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DenpyouJouhouIkkatuNyuuryoku\APP\UkeireDenpyouikkatsuPopupForm.resx">
+      <DependentUpon>UkeireDenpyouikkatsuPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DenpyouJouhouIkkatuNyuuryoku\APP\UriageDenpyouikkatsuPopupForm.resx">
+      <DependentUpon>UriageDenpyouikkatsuPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\DetailTemplateUkeire.resx">
+      <DependentUpon>DetailTemplateUkeire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\DetailTemplateUrsh.resx">
+      <DependentUpon>DetailTemplateUrsh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\DetailTemplateShukka.resx">
+      <DependentUpon>DetailTemplateShukka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\02_売上支払処理\G335\G335.csproj">
+      <Project>{5BD5CDA6-DFB3-4B89-B38D-2714EE79B398}</Project>
+      <Name>G335</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\Shougun.Core.Message\Shougun.Core.Message.csproj">
+      <Project>{DDF5B1E5-6897-48EB-A194-ECA45C8201FD}</Project>
+      <Name>Shougun.Core.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\Common\Common.csproj">
+      <Project>{7749C25E-83F6-4478-A720-92162E76FB53}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\G051\G051.csproj">
+      <Project>{90262CE2-242B-4880-96C7-0201DC0FF5A1}</Project>
+      <Name>G051</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\G053\G053.csproj">
+      <Project>{7A51FC9A-BFC1-4C05-A3A1-D90851B6E73D}</Project>
+      <Name>G053</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xx_MultiRow\G054\G054.csproj">
+      <Project>{EA6CA628-E9DF-47D2-866A-E735BE6EA1DB}</Project>
+      <Name>G054</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetUkeireEntryData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetUkeireDetailData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetShukkaDetailData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetShukkaEntryData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetUrshDetailData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetUrshEntryData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetUkeireZaikoInfo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetShukkaZaikoInfo.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetZaikoInfo2.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetContena.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetContenaMaster.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetContenaReserveData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetKenshuDetail.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,5 @@
+﻿SELECT * FROM dbo.S_NUMBER_DAY
+WHERE DELETE_FLG = 0
+/*IF !data.NUMBERED_DAY.IsNull*/AND NUMBERED_DAY = /*data.NUMBERED_DAY.Value*//*END*/
+/*IF !data.DENSHU_KBN_CD.IsNull*/AND DENSHU_KBN_CD = /*data.DENSHU_KBN_CD.Value*//*END*/
+/*IF !data.KYOTEN_CD.IsNull*/AND KYOTEN_CD = /*data.KYOTEN_CD.Value*//*END*/

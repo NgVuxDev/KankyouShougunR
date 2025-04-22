@@ -1,0 +1,90 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <NewButtonName>[F1]&#xD;&#xA;移行</NewButtonName>
+    <NewButtonHintText>データを移行します</NewButtonHintText>
+    <UpdateButtonName>[F1]&#xD;&#xA;移行</UpdateButtonName>
+    <UpdateButtonHintText>データを移行します</UpdateButtonHintText>
+    <DeleteButtonName>[F1]&#xD;&#xA;移行</DeleteButtonName>
+    <DeleteButtonHintText>データを移行します</DeleteButtonHintText>
+    <ReferButtonName>[F1]&#xD;&#xA;移行</ReferButtonName>
+    <ReferButtonHintText>データを移行します</ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <NewButtonName>[F2]&#xD;&#xA;新規</NewButtonName>
+    <NewButtonHintText>新規データを追加する画面に切り替わります</NewButtonHintText>
+    <UpdateButtonName>[F2]&#xD;&#xA;新規</UpdateButtonName>
+    <UpdateButtonHintText>新規データを追加する画面に切り替わります</UpdateButtonHintText>
+    <DeleteButtonName>[F2]&#xD;&#xA;新規</DeleteButtonName>
+    <DeleteButtonHintText>新規データを追加する画面に切り替わります</DeleteButtonHintText>
+    <ReferButtonName>[F2]&#xD;&#xA;新規</ReferButtonName>
+    <ReferButtonHintText>新規データを追加する画面に切り替わります</ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <NewButtonName>[F3]&#xD;&#xA;修正</NewButtonName>
+    <NewButtonHintText>既存データを修正する画面に切り替わります</NewButtonHintText>
+    <UpdateButtonName>[F3]&#xD;&#xA;修正</UpdateButtonName>
+    <UpdateButtonHintText>既存データを修正する画面に切り替わります</UpdateButtonHintText>
+    <DeleteButtonName>[F3]&#xD;&#xA;修正</DeleteButtonName>
+    <DeleteButtonHintText>既存データを修正する画面に切り替わります</DeleteButtonHintText>
+    <ReferButtonName>[F3]&#xD;&#xA;修正</ReferButtonName>
+    <ReferButtonHintText>既存データを修正する画面に切り替わります</ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <NewButtonName>[F7]&#xD;&#xA;一覧</NewButtonName>
+    <NewButtonHintText>一覧画面に移動します</NewButtonHintText>
+    <UpdateButtonName>[F7]&#xD;&#xA;一覧</UpdateButtonName>
+    <UpdateButtonHintText>一覧画面に移動します</UpdateButtonHintText>
+    <DeleteButtonName>[F7]&#xD;&#xA;一覧</DeleteButtonName>
+    <DeleteButtonHintText>一覧画面に移動します</DeleteButtonHintText>
+    <ReferButtonName>[F7]&#xD;&#xA;一覧</ReferButtonName>
+    <ReferButtonHintText>一覧画面に移動します</ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;登録</NewButtonName>
+    <NewButtonHintText>表示されている内容を登録します</NewButtonHintText>
+    <UpdateButtonName>[F9]&#xD;&#xA;登録</UpdateButtonName>
+    <UpdateButtonHintText>表示されている内容を登録します</UpdateButtonHintText>
+    <DeleteButtonName>[F9]&#xD;&#xA;登録</DeleteButtonName>
+    <DeleteButtonHintText>表示されている内容を登録します</DeleteButtonHintText>
+    <ReferButtonName>[F9]&#xD;&#xA;登録</ReferButtonName>
+    <ReferButtonHintText>表示されている内容を登録します</ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <NewButtonName>[F11]&#xD;&#xA;取消</NewButtonName>
+    <NewButtonHintText>画面の編集内容を破棄し、最新のデ－タを表示します</NewButtonHintText>
+    <UpdateButtonName>[F11]&#xD;&#xA;取消</UpdateButtonName>
+    <UpdateButtonHintText>画面の編集内容を破棄し、最新のデ－タを表示します</UpdateButtonHintText>
+    <DeleteButtonName>[F11]&#xD;&#xA;取消</DeleteButtonName>
+    <DeleteButtonHintText>画面の編集内容を破棄し、最新のデ－タを表示します</DeleteButtonHintText>
+    <ReferButtonName>[F11]&#xD;&#xA;取消</ReferButtonName>
+    <ReferButtonHintText>画面の編集内容を破棄し、最新のデ－タを表示します</ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <NewButtonHintText>画面を閉じます</NewButtonHintText>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <UpdateButtonHintText>画面を閉じます</UpdateButtonHintText>
+    <DeleteButtonName>[F12]&#xD;&#xA;閉じる</DeleteButtonName>
+    <DeleteButtonHintText>画面を閉じます</DeleteButtonHintText>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <ReferButtonHintText>画面を閉じます</ReferButtonHintText>
+  </ButtonSetting>
+
+
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <NewButtonName>[1] 返送先コピー</NewButtonName>
+    <UpdateButtonName>[1] 返送先コピー</UpdateButtonName>
+    <DeleteButtonName>[1] 返送先コピー</DeleteButtonName>
+    <ReferButtonName>[1] 返送先コピー</ReferButtonName>
+  </ButtonSetting>
+
+</ArrayOfButtonSetting>

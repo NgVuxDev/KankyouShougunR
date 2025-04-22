@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- PG内で別のグリッドに新しく列を作っている為、Formatは参照されません -->
+<root>
+  <OutputColumnSelect DenshuKbn="916">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="マニフェスト番号" Needs="" TableName="SUMMARY" Name="MANIFEST_ID" Format="" />
+      <Column ID="2" DispNumber="2" DispName="区間" Needs="" TableName="SUMMARY" Name="UPN_ROUTE_NO" Format="" />
+      <Column ID="3" DispNumber="3" DispName="引渡し日" Needs="" TableName="" Name="CASE WHEN ISDATE(SUMMARY.HIKIWATASHI_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, SUMMARY.HIKIWATASHI_DATE) END" Format="" />
+      <Column ID="4" DispNumber="4" DispName="排出事業者名" Needs="" TableName="SUMMARY" Name="HST_SHA_NAME" Format="" />
+      <Column ID="5" DispNumber="5" DispName="排出事業場名" Needs="" TableName="SUMMARY" Name="HST_JOU_NAME" Format="" />
+      <Column ID="6" DispNumber="6" DispName="数量" Needs="" TableName="SUMMARY" Name="HAIKI_SUU" Format="" />
+      <Column ID="7" DispNumber="7" DispName="単位" Needs="" TableName="SUMMARY" Name="HAIKI_UNIT_NAME" Format="" />
+      <Column ID="26" DispNumber="8" DispName="数量確定者" Needs="" TableName="SUMMARY" Name="SUU_KAKUTEI_SHA" Format="" />
+      <Column ID="27" DispNumber="9" DispName="確定数量" Needs="" TableName="SUMMARY" Name="HAIKI_KAKUTEI_SUU" Format="" />
+      <Column ID="32" DispNumber="10" DispName="確定単位" Needs="" TableName="SUMMARY" Name="HAIKI_KAKUTEI_UNIT_NAME" Format=""/>
+      <Column ID="8" DispNumber="11" DispName="廃棄物種類" Needs="" TableName="SUMMARY" Name="HAIKI_SHURUI" Format="" />
+      <Column ID="28" DispNumber="12" DispName="廃棄物名称" Needs="" TableName="SUMMARY" Name="HAIKI_NAME" Format="" />
+      <Column ID="29" DispNumber="13" DispName="処分受託者名" Needs="" TableName="SUMMARY" Name="SBN_SHA_NAME" Format="" />
+      <Column ID="30" DispNumber="14" DispName="処分事業場名" Needs="" TableName="SUMMARY" Name="UPNSAKI_JOU_NAME" Format="" />
+      <Column ID="31" DispNumber="15" DispName="処分方法名" Needs="" TableName="SUMMARY" Name="SBN_WAY_NAME" Format="" />
+      <Column ID="9" DispNumber="16" DispName="運搬終了日" Needs="1" TableName="" Name="CASE WHEN ISDATE(SUMMARY.UPN_END_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, SUMMARY.UPN_END_DATE) END" Format="" />
+      <Column ID="11" DispNumber="17" DispName="運搬担当者" Needs="1" TableName="SUMMARY" Name="UPN_TAN_NAME" Format="" />
+      <Column ID="13" DispNumber="18" DispName="報告担当者" Needs="1" TableName="SUMMARY" Name="REP_TAN_NAME" Format="" />
+      <Column ID="14" DispNumber="19" DispName="運搬量" Needs="1" TableName="SUMMARY" Name="UPN_SUU" Format="" />
+      <Column ID="15" DispNumber="20" DispName="運搬量単位CD" Needs="1" TableName="SUMMARY" Name="UPN_SUU_CODE" Format="" />
+      <Column ID="16" DispNumber="21" DispName="運搬量単位名" Needs="1" TableName="SUMMARY" Name="UPN_SUU_NAME" Format="" />
+      <Column ID="17" DispNumber="22" DispName="有価物拾集量" Needs="1" TableName="SUMMARY" Name="YUUKA_SUU" Format="" />
+      <Column ID="18" DispNumber="23" DispName="有価物拾集量単位CD" Needs="1" TableName="SUMMARY" Name="YUUKA_UNIT_CODE" Format="" />
+      <Column ID="19" DispNumber="24" DispName="有価物拾集量単位名" Needs="1" TableName="SUMMARY" Name="YUUKA_UNIT_NAME" Format="" />
+      <Column ID="20" DispNumber="26" DispName="車輌名" Needs="1" TableName="SUMMARY" Name="SHARYOU_NAME_RYAKU" Format="" />
+      <Column ID="21" DispNumber="27" DispName="備考" Needs="1" TableName="SUMMARY" Name="BIKOU" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+    </Group>
+    <JoinCondition TableName="">ここにJOIN句を設定します。</JoinCondition>
+  </OutputColumnSelect>
+</root>

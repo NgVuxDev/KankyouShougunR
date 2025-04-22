@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <NewButtonName>[F1]&#xD;&#xA;伝票参照</NewButtonName>
+    <ReferButtonName>[F1]&#xD;&#xA;伝票参照</ReferButtonName>
+    <UpdateButtonName>[F1]&#xD;&#xA;伝票参照</UpdateButtonName>
+    <DeleteButtonName>[F1]&#xD;&#xA;伝票参照</DeleteButtonName>
+    <DefaultHintText>表示している伝票番号に紐づく画面を呼び出します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;SMS送信</NewButtonName>
+    <ReferButtonName>[F9]&#xD;&#xA;SMS送信</ReferButtonName>
+    <UpdateButtonName>[F9]&#xD;&#xA;SMS送信</UpdateButtonName>
+    <DeleteButtonName>[F9]&#xD;&#xA;SMS送信</DeleteButtonName>
+    <DefaultHintText>表示されている内容でｼｮｰﾄﾒｯｾｰｼﾞを送信します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <NewButtonName>[F11]&#xD;&#xA;取消</NewButtonName>
+    <ReferButtonName>[F11]&#xD;&#xA;取消</ReferButtonName>
+    <UpdateButtonName>[F11]&#xD;&#xA;取消</UpdateButtonName>
+    <DeleteButtonName>[F11]&#xD;&#xA;取消</DeleteButtonName>
+    <DefaultHintText>画面の編集内容を破棄し、最新のデ－タを表示します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <DeleteButtonName>[F12]&#xD;&#xA;閉じる</DeleteButtonName>
+    <DefaultHintText>画面を閉じます</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <NewButtonName>[1]全文クリア</NewButtonName>
+    <UpdateButtonName>[1]全文クリア</UpdateButtonName>
+    <ReferButtonName>[1]全文クリア</ReferButtonName>
+    <DeleteButtonName>[1]全文クリア</DeleteButtonName>
+    <DefaultHintText>本文1～4を全てクリアします</DefaultHintText>
+  </ButtonSetting>
+
+</ArrayOfButtonSetting>

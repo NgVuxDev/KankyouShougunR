@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func5</ButtonName>
+    <IchiranButtonName>[F5]&#xD;&#xA;CSV</IchiranButtonName>
+    <IchiranButtonHintText>CSVファイルを出力します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <IchiranButtonName>[F7]&#xD;&#xA;表示</IchiranButtonName>
+    <IchiranButtonHintText></IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <IchiranButtonHintText></IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

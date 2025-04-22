@@ -1,0 +1,10 @@
+SELECT 
+    OB.*
+FROM 
+    dbo.M_ITAKU_KEIYAKU_OBOE OB
+/*BEGIN*/WHERE
+ /*IF data.SYSTEM_ID != null*/
+ OB.SYSTEM_ID = /*data.SYSTEM_ID*/'000001'
+ /*END*/
+/*END*/
+ORDER BY OB.SEQ

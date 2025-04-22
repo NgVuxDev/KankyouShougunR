@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E5462BC-8B85-42EC-B551-834F84B3AB25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.ExternalConnection.ExternalCommon</RootNamespace>
+    <AssemblyName>ExternalCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\dll\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\dll\Seasar.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\dll\Seasar.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\dll\Seasar.Dxo.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\dll\Seasar.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\dll\Seasar.Quill.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\dll\Seasar.Unit.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\dll\Seasar.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Const\DenshiConst.cs" />
+    <Compile Include="Const\DenshiWanSignConst.cs" />
+    <Compile Include="Const\ExternalConst.cs" />
+    <Compile Include="Const\LogiConst.cs" />
+    <Compile Include="Const\NaviConst.cs" />
+    <Compile Include="Const\MapboxConst.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\ACCESS_TOKEN_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\CONTROL_NUMBER_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\KEIYAKU_DOCUMENTS_WAN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\KEIYAKU_DOWNLOAD_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\KEIYAKU_INFO_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\LIST_CONTROL_NUMBER_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\LIST_KEIYAKU_INFO_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\PARTNER_ORGANIZE_NAME.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\PERIOD_WAN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RequestBase.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RequestControlNumber.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RequestDownLoadKeiyaku.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RequestKeiyakuInfo.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RequestKeiyakuStatus.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RESPONSE_WAN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RESULT_ACCESS_TOKEN_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RESULT_CONTROL_NUMBER_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RESULT_KEIYAKU_DOWNLOAD_WAN_SIGN.cs" />
+    <Compile Include="DTO\DenshiKeiyakuWanSign\RESULT_KEIYAKU_INFO_WAN_SIGN.cs" />
+    <Compile Include="DTO\Denshikeiyaku\ACCESS_TOKEN_MODEL.cs" />
+    <Compile Include="DTO\Denshikeiyaku\DOCUMENT_LIST_MODEL.cs" />
+    <Compile Include="DTO\Denshikeiyaku\DOCUMENT_MODEL.cs" />
+    <Compile Include="DTO\Denshikeiyaku\ERROR_MODERL.cs" />
+    <Compile Include="DTO\Denshikeiyaku\FILE_MODEL.cs" />
+    <Compile Include="DTO\Denshikeiyaku\PARTICIPANT_MODEL.cs" />
+    <Compile Include="DTO\Denshikeiyaku\REQ_COMMON.cs" />
+    <Compile Include="DTO\Denshikeiyaku\REQ_DECLINE.cs" />
+    <Compile Include="DTO\Denshikeiyaku\REQ_DOCUMENTID.cs" />
+    <Compile Include="DTO\Denshikeiyaku\REQ_DOCUMENTS.cs" />
+    <Compile Include="DTO\Denshikeiyaku\REQ_FILES.cs" />
+    <Compile Include="DTO\Denshikeiyaku\REQ_PARTICIPANTS.cs" />
+    <Compile Include="DTO\Denshikeiyaku\REQ_REPORTEES.cs" />
+    <Compile Include="DTO\Denshikeiyaku\REQ_TOKEN.cs" />
+    <Compile Include="DTO\Denshikeiyaku\WIDGET_MODEL.cs" />
+    <Compile Include="DTO\Denshikeiyaku\ATTRIBUTE_MODEL.cs" />
+    <Compile Include="DTO\IApiDto.cs" />
+    <Compile Include="DTO\Logicompass\DELIVERY_PLANS.cs" />
+    <Compile Include="DTO\Logicompass\DELIVERY_PERFORMANCES.cs" />
+    <Compile Include="DTO\Logicompass\ERROR.cs" />
+    <Compile Include="DTO\Logicompass\ERROR_REQUEST.cs" />
+    <Compile Include="DTO\Logicompass\GOODS_UNITS.cs" />
+    <Compile Include="DTO\Logicompass\INFO_ERROR.cs" />
+    <Compile Include="DTO\Logicompass\ISystecRegistDto.cs" />
+    <Compile Include="DTO\Logicompass\REQ_TOKEN.cs" />
+    <Compile Include="DTO\Logicompass\RES_TOKEN.cs" />
+    <Compile Include="DTO\Logicompass\DRIVERS.cs" />
+    <Compile Include="DTO\Logicompass\GOODS.cs" />
+    <Compile Include="DTO\Logicompass\GOODS_KINDS.cs" />
+    <Compile Include="DTO\Logicompass\CAR_GROUPS.cs" />
+    <Compile Include="DTO\Logicompass\CAR_RELATIONS.cs" />
+    <Compile Include="DTO\Logicompass\POINTS.cs" />
+    <Compile Include="DTO\Logicompass\ERROR_DELIVERY_PLANS.cs" />
+    <Compile Include="DTO\Logicompass\ERROR_DELIVERY_PLANS_DETAIL.cs" />
+    <Compile Include="DTO\Logicompass\ERROR_DELIVERY_PERFORMANCES.cs" />
+    <Compile Include="DTO\Mapbox\DirectionsAPI.cs" />
+    <Compile Include="DTO\Mapbox\RES_ERROR.cs" />
+    <Compile Include="DTO\Mapbox\GeoCodingAPI.cs" />
+    <Compile Include="DTO\Mapbox\mapboxRootDto.cs" />
+    <Compile Include="DTO\Mapbox\mapDto.cs" />
+    <Compile Include="DTO\Mapbox\mapboxRowNoDto.cs" />
+    <Compile Include="DTO\Mapbox\mapboxMarkerDto.cs" />
+    <Compile Include="DTO\Mapbox\MAP_GENBA_DTO.cs" />
+    <Compile Include="DTO\Navitime\RES_DELETE_MATTER.cs" />
+    <Compile Include="DTO\Navitime\RES_UPLOAD_USER.cs" />
+    <Compile Include="DTO\Navitime\NaviTimeDto.cs" />
+    <Compile Include="DTO\Navitime\REQ_GET_EXPERIENCE.cs" />
+    <Compile Include="DTO\Navitime\RES_GET_EXPERIENCE.cs" />
+    <Compile Include="DTO\Navitime\RES_UPLOAD_VISIT.cs" />
+    <Compile Include="DTO\Navitime\RES_CHECK_UPLOAD_VISIT.cs" />
+    <Compile Include="DTO\Navitime\REQ_CHECK_UPLOAD_VISIT.cs" />
+    <Compile Include="DTO\Navitime\RES_UPLOAD.cs" />
+    <Compile Include="DTO\Navitime\REQ_CHECK_UPLOAD.cs" />
+    <Compile Include="DTO\Navitime\RES_CHECK_UPLOAD.cs" />
+    <Compile Include="DTO\Navitime\RES_GET_ARRIVAL_TIME.cs" />
+    <Compile Include="DTO\Mapbox\MapboxArrayListDto.cs" />
+    <Compile Include="DTO\SMS\RES_LONG_SMS_SPLIT_SEND_API.cs" />
+    <Compile Include="DTO\SMS\RES_SMS_SEND_RESULT_GET_API.cs" />
+    <Compile Include="DTO\SMS\RES_SMS_SEND_TRACKING_RESULT_GET_API.cs" />
+    <Compile Include="DTO\SMS\TRACKING_LIST.cs" />
+    <Compile Include="DTO\SMS\RES_SMS_LIST_SETTING_CHANGE_API.cs" />
+    <Compile Include="DTO\SMS\ERRORS.cs" />
+    <Compile Include="Logic\DenshiLogic.cs" />
+    <Compile Include="Logic\DenshiWanSignLogic.cs" />
+    <Compile Include="Logic\HttpRequestApiWanSign.cs" />
+    <Compile Include="Logic\LogiLogic.cs" />
+    <Compile Include="Logic\SMSLogic.cs" />
+    <Compile Include="Logic\NaviLogic.cs" />
+    <Compile Include="Logic\MapboxGLJSLogic.cs" />
+    <Compile Include="Logic\MapboxAPILogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\RFC3986UriUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\" />
+    <Folder Include="Sql\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\11_帳票出力\Shougun.Printing\Common\Shougun.Printing.Common.csproj">
+      <Project>{DA7133B8-AF4B-4E35-B70B-8B39ECE575E9}</Project>
+      <Name>Shougun.Printing.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Template\Mapbox\M213_M215_M217.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Template\Mapbox\M214_M216_M218.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Template\Mapbox\G041.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Template\Mapbox\G015_G016.htm" />
+    <EmbeddedResource Include="Template\Mapbox\G021.htm" />
+    <EmbeddedResource Include="Template\Mapbox\M232_M663_G030_G031_G032.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Template\Mapbox\G026.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Template\Mapbox\G667.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

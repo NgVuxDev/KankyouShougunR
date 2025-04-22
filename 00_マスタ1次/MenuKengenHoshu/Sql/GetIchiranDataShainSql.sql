@@ -1,0 +1,11 @@
+SELECT 
+    AUT.*
+FROM 
+    dbo.M_MENU_AUTH AUT
+/*BEGIN*/WHERE 
+/*IF data.BUSHO_CD != null*/AUT.BUSHO_CD = /*data.BUSHO_CD*//*END*/
+/*IF data.SHAIN_CD != null*/AND AUT.SHAIN_CD = /*data.SHAIN_CD*//*END*/
+/*IF data.FORM_ID != null*/AND AUT.FORM_ID = /*data.FORM_ID*//*END*/
+/*IF !data.WINDOW_ID.IsNull*/AND AUT.WINDOW_ID = /*data.WINDOW_ID*//*END*/
+/*END*/
+ORDER BY AUT.BUSHO_CD, AUT.SHAIN_CD, AUT.FORM_ID, AUT.WINDOW_ID

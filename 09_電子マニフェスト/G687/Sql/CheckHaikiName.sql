@@ -1,0 +1,9 @@
+﻿SELECT EDI_MEMBER_ID,
+       HAIKI_NAME_CD,
+       HAIKI_NAME
+  FROM M_DENSHI_HAIKI_NAME (NOLOCK)
+/*BEGIN*/
+where 
+/*IF data.HAIKI_NAME_CD != null && data.HAIKI_NAME_CD != ''*/
+AND	HAIKI_NAME_CD = /*data.HAIKI_NAME_CD*//*END*/ 		
+/*END*/

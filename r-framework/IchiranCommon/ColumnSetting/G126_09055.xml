@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9055">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="廃棄物区分CD" Needs="0" TableName="SUMMARY" Name="HAIKI_KBN_CD" Format="" />
+      <Column ID="2" DispNumber="" DispName="廃棄物区分名" Needs="0" TableName="M_HAIKI_KBN1" Name="HAIKI_KBN_NAME_RYAKU" Format="" />
+      <Column ID="3" DispNumber="" DispName="一次二次区分" Needs="0" TableName="" Name="CASE SUMMARY.FIRST_MANIFEST_KBN WHEN 0 THEN '一次' WHEN 1 THEN '二次' ELSE '' END" Format="" />
+      <Column ID="4" DispNumber="" DispName="交付年月日" Needs="0" TableName="SUMMARY" Name="KOUFU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="5" DispNumber="" DispName="交付番号区分" Needs="0" TableName="" Name="CASE SUMMARY.KOUFU_KBN WHEN 1 THEN '通常' WHEN 2 THEN '特殊' ELSE '' END" Format="" />
+      <Column ID="6" DispNumber="" DispName="交付番号" Needs="0" TableName="SUMMARY" Name="MANIFEST_ID" Format="" />
+      <Column ID="7" DispNumber="" DispName="整理番号" Needs="0" TableName="SUMMARY" Name="SEIRI_ID" Format="" />
+      <Column ID="8" DispNumber="" DispName="交付担当者" Needs="0" TableName="SUMMARY" Name="KOUFU_TANTOUSHA" Format="" />
+      <Column ID="9" DispNumber="" DispName="拠点CD" Needs="0" TableName="SUMMARY" Name="KYOTEN_CD" Format="00" />
+      <Column ID="10" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="" DispName="取引先CD" Needs="0" TableName="SUMMARY" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="14" DispNumber="" DispName="取引先名" Needs="0" TableName="M_TORIHIKISAKI1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="" DispName="排出事業者CD" Needs="0" TableName="SUMMARY" Name="HST_GYOUSHA_CD" Format="" />
+      <Column ID="16" DispNumber="" DispName="排出事業者名" Needs="0" TableName="SUMMARY" Name="HST_GYOUSHA_NAME" Format="" />
+      <Column ID="17" DispNumber="" DispName="排出事業者郵便番号" Needs="0" TableName="SUMMARY" Name="HST_GYOUSHA_POST" Format="" />
+      <Column ID="18" DispNumber="" DispName="排出事業者電話番号" Needs="0" TableName="SUMMARY" Name="HST_GYOUSHA_TEL" Format="" />
+      <Column ID="19" DispNumber="" DispName="排出事業者住所" Needs="0" TableName="SUMMARY" Name="HST_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="20" DispNumber="" DispName="排出事業場CD" Needs="0" TableName="SUMMARY" Name="HST_GENBA_CD" Format="" />
+      <Column ID="21" DispNumber="" DispName="排出事業場名" Needs="0" TableName="SUMMARY" Name="HST_GENBA_NAME" Format="" />
+      <Column ID="22" DispNumber="" DispName="排出事業場郵便番号" Needs="0" TableName="SUMMARY" Name="HST_GENBA_POST" Format="" />
+      <Column ID="23" DispNumber="" DispName="排出事業場電話番号" Needs="0" TableName="SUMMARY" Name="HST_GENBA_TEL" Format="" />
+      <Column ID="24" DispNumber="" DispName="排出事業場住所" Needs="0" TableName="SUMMARY" Name="HST_GENBA_ADDRESS" Format="" />
+      <Column ID="25" DispNumber="" DispName="運搬受託者(区間1)CD" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_CD1" Format="" />
+      <Column ID="26" DispNumber="" DispName="運搬受託者(区間1)名" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_NAME1" Format="" />
+      <Column ID="27" DispNumber="" DispName="運搬受託者(区間1)郵便番号" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_POST1" Format="" />
+      <Column ID="28" DispNumber="" DispName="運搬受託者(区間1)電話番号" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_TEL1" Format="" />
+      <Column ID="29" DispNumber="" DispName="運搬受託者(区間1)住所" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_ADDRESS1" Format="" />
+      <Column ID="30" DispNumber="" DispName="運搬受託者(区間1)車種CD" Needs="0" TableName="SUMMARY" Name="SHASHU_CD1" Format="" />
+      <Column ID="31" DispNumber="" DispName="運搬受託者(区間1)車種名" Needs="0" TableName="M_SHASHU1" Name="CASE WHEN SUMMARY.HAIKI_KBN_CD = 2 THEN SUMMARY.INPUT_SHASHU_NAME1 ELSE M_SHASHU1.SHASHU_NAME_RYAKU END" Format="" />
+      <Column ID="32" DispNumber="" DispName="運搬受託者(区間1)車輌CD" Needs="0" TableName="SUMMARY" Name="SHARYOU_CD1" Format="" />
+      <Column ID="33" DispNumber="" DispName="運搬受託者(区間1)車輌名" Needs="0" TableName="SUMMARY" Name="INPUT_SHARYOU_NAME1" Format="" />
+      <Column ID="34" DispNumber="" DispName="運搬受託者(区間1)運搬方法CD" Needs="0" TableName="SUMMARY" Name="UPN_HOUHOU_CD1" Format="" />
+      <Column ID="35" DispNumber="" DispName="運搬受託者(区間1)運搬方法名" Needs="0" TableName="M_UNPAN_HOUHOU1" Name="UNPAN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="36" DispNumber="" DispName="運搬先の事業場(区間1)区分" Needs="0" TableName="" Name="CASE SUMMARY.UPN_SAKI_KBN1 WHEN 1 THEN '処分施設' WHEN 2 THEN '積替保管' ELSE '' END" Format="" />
+      <Column ID="37" DispNumber="" DispName="運搬先の事業場(区間1)業者CD" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GYOUSHA_CD1" Format="" />
+      <Column ID="38" DispNumber="" DispName="運搬先の事業場(区間1)業者名" Needs="0" TableName="SUMMARY" Name="CASE SUMMARY.UPN_SAKI_KBN1 WHEN 1 THEN SUMMARY.SBN_GYOUSHA_NAME WHEN 2 THEN SUMMARY.UPN_SAKI_GYOUSHA_NAME1 ELSE '' END" Format="" />
+      <Column ID="39" DispNumber="" DispName="運搬先の事業場(区間1)現場CD" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_CD1" Format="" />
+      <Column ID="40" DispNumber="" DispName="運搬先の事業場(区間1)現場名" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_NAME1" Format="" />
+      <Column ID="41" DispNumber="" DispName="運搬先の事業場(区間1)郵便番号" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_POST1" Format="" />
+      <Column ID="42" DispNumber="" DispName="運搬先の事業場(区間1)電話番号" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_TEL1" Format="" />
+      <Column ID="43" DispNumber="" DispName="運搬先の事業場(区間1)住所" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_ADDRESS1" Format="" />
+      <Column ID="44" DispNumber="" DispName="運搬受託者(区間2)CD" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_CD2" Format="" />
+      <Column ID="45" DispNumber="" DispName="運搬受託者(区間2)名" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_NAME2" Format="" />
+      <Column ID="46" DispNumber="" DispName="運搬受託者(区間2)郵便番号" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_POST2" Format="" />
+      <Column ID="47" DispNumber="" DispName="運搬受託者(区間2)電話番号" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_TEL2" Format="" />
+      <Column ID="48" DispNumber="" DispName="運搬受託者(区間2)住所" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_ADDRESS2" Format="" />
+      <Column ID="49" DispNumber="" DispName="運搬受託者(区間2)車種CD" Needs="0" TableName="SUMMARY" Name="SHASHU_CD2" Format="" />
+      <Column ID="50" DispNumber="" DispName="運搬受託者(区間2)車種名" Needs="0" TableName="M_SHASHU2" Name="CASE WHEN SUMMARY.HAIKI_KBN_CD = 2 THEN SUMMARY.INPUT_SHASHU_NAME2 ELSE M_SHASHU2.SHASHU_NAME_RYAKU END" Format="" />
+      <Column ID="51" DispNumber="" DispName="運搬受託者(区間2)車輌CD" Needs="0" TableName="SUMMARY" Name="SHARYOU_CD2" Format="" />
+      <Column ID="52" DispNumber="" DispName="運搬受託者(区間2)車輌名" Needs="0" TableName="SUMMARY" Name="INPUT_SHARYOU_NAME2" Format="" />
+      <Column ID="53" DispNumber="" DispName="運搬受託者(区間2)運搬方法CD" Needs="0" TableName="SUMMARY" Name="UPN_HOUHOU_CD2" Format="" />
+      <Column ID="54" DispNumber="" DispName="運搬受託者(区間2)運搬方法名" Needs="0" TableName="M_UNPAN_HOUHOU2" Name="UNPAN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="55" DispNumber="" DispName="運搬先の事業場(区間2)区分" Needs="0" TableName="" Name="CASE SUMMARY.UPN_SAKI_KBN2 WHEN 1 THEN '処分施設' WHEN 2 THEN '積替保管' ELSE '' END" Format="" />
+      <Column ID="56" DispNumber="" DispName="運搬先の事業場(区間2)業者CD" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GYOUSHA_CD2" Format="" />
+      <Column ID="57" DispNumber="" DispName="運搬先の事業場(区間2)業者名" Needs="0" TableName="SUMMARY" Name="CASE SUMMARY.UPN_SAKI_KBN2 WHEN 1 THEN SUMMARY.SBN_GYOUSHA_NAME WHEN 2 THEN SUMMARY.UPN_SAKI_GYOUSHA_NAME2 ELSE '' END" Format="" />
+      <Column ID="58" DispNumber="" DispName="運搬先の事業場(区間2)現場CD" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_CD2" Format="" />
+      <Column ID="59" DispNumber="" DispName="運搬先の事業場(区間2)現場名" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_NAME2" Format="" />
+      <Column ID="60" DispNumber="" DispName="運搬先の事業場(区間2)郵便番号" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_POST2" Format="" />
+      <Column ID="61" DispNumber="" DispName="運搬先の事業場(区間2)電話番号" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_TEL2" Format="" />
+      <Column ID="62" DispNumber="" DispName="運搬先の事業場(区間2)住所" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_ADDRESS2" Format="" />
+      <Column ID="63" DispNumber="" DispName="運搬受託者(区間3)CD" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_CD3" Format="" />
+      <Column ID="64" DispNumber="" DispName="運搬受託者(区間3)名" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_NAME3" Format="" />
+      <Column ID="65" DispNumber="" DispName="運搬受託者(区間3)郵便番号" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_POST3" Format="" />
+      <Column ID="66" DispNumber="" DispName="運搬受託者(区間3)電話番号" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_TEL3" Format="" />
+      <Column ID="67" DispNumber="" DispName="運搬受託者(区間3)住所" Needs="0" TableName="SUMMARY" Name="UPN_GYOUSHA_ADDRESS3" Format="" />
+      <Column ID="68" DispNumber="" DispName="運搬受託者(区間3)車種CD" Needs="0" TableName="SUMMARY" Name="SHASHU_CD3" Format="" />
+      <Column ID="69" DispNumber="" DispName="運搬受託者(区間3)車種名" Needs="0" TableName="M_SHASHU3" Name="SHASHU_NAME_RYAKU" Format="" />
+      <Column ID="70" DispNumber="" DispName="運搬受託者(区間3)車輌CD" Needs="0" TableName="SUMMARY" Name="SHARYOU_CD3" Format="" />
+      <Column ID="71" DispNumber="" DispName="運搬受託者(区間3)車輌名" Needs="0" TableName="SUMMARY" Name="INPUT_SHARYOU_NAME3" Format="" />
+      <Column ID="72" DispNumber="" DispName="運搬受託者(区間3)運搬方法CD" Needs="0" TableName="SUMMARY" Name="UPN_HOUHOU_CD3" Format="" />
+      <Column ID="73" DispNumber="" DispName="運搬受託者(区間3)運搬方法名" Needs="0" TableName="M_UNPAN_HOUHOU3" Name="UNPAN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="74" DispNumber="" DispName="運搬先の事業場(区間3)区分" Needs="0" TableName="" Name="CASE SUMMARY.UPN_SAKI_KBN3 WHEN 1 THEN '処分施設' WHEN 2 THEN '積替保管' ELSE '' END" Format="" />
+      <Column ID="75" DispNumber="" DispName="運搬先の事業場(区間3)業者CD" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GYOUSHA_CD3" Format="" />
+      <Column ID="76" DispNumber="" DispName="運搬先の事業場(区間3)業者名" Needs="0" TableName="SUMMARY" Name="CASE SUMMARY.UPN_SAKI_KBN3 WHEN 1 THEN SUMMARY.SBN_GYOUSHA_NAME WHEN 2 THEN SUMMARY.UPN_SAKI_GYOUSHA_NAME3 ELSE '' END" Format="" />
+      <Column ID="77" DispNumber="" DispName="運搬先の事業場(区間3)現場CD" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_CD3" Format="" />
+      <Column ID="78" DispNumber="" DispName="運搬先の事業場(区間3)現場名" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_NAME3" Format="" />
+      <Column ID="79" DispNumber="" DispName="運搬先の事業場(区間3)郵便番号" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_POST3" Format="" />
+      <Column ID="80" DispNumber="" DispName="運搬先の事業場(区間3)電話番号" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_TEL3" Format="" />
+      <Column ID="81" DispNumber="" DispName="運搬先の事業場(区間3)住所" Needs="0" TableName="SUMMARY" Name="UPN_SAKI_GENBA_ADDRESS3" Format="" />
+      <Column ID="82" DispNumber="" DispName="処分受託者CD" Needs="0" TableName="SUMMARY" Name="SBN_GYOUSHA_CD" Format="" />
+      <Column ID="83" DispNumber="" DispName="処分受託者名" Needs="0" TableName="SUMMARY" Name="SBN_GYOUSHA_NAME" Format="" />
+      <Column ID="84" DispNumber="" DispName="処分受託者郵便番号" Needs="0" TableName="SUMMARY" Name="SBN_GYOUSHA_POST" Format="" />
+      <Column ID="85" DispNumber="" DispName="処分受託者電話番号" Needs="0" TableName="SUMMARY" Name="SBN_GYOUSHA_TEL" Format="" />
+      <Column ID="86" DispNumber="" DispName="処分受託者住所" Needs="0" TableName="SUMMARY" Name="SBN_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="87" DispNumber="" DispName="積替え又は保管業者CD" Needs="0" TableName="SUMMARY" Name="TMH_GYOUSHA_CD" Format="" />
+      <Column ID="88" DispNumber="" DispName="積替え又は保管業者名" Needs="0" TableName="SUMMARY" Name="TMH_GYOUSHA_NAME" Format="" />
+      <Column ID="89" DispNumber="" DispName="積替え又は保管場CD" Needs="0" TableName="SUMMARY" Name="TMH_GENBA_CD" Format="" />
+      <Column ID="90" DispNumber="" DispName="積替え又は保管場名" Needs="0" TableName="SUMMARY" Name="TMH_GENBA_NAME" Format="" />
+      <Column ID="91" DispNumber="" DispName="積替え又は保管場郵便番号" Needs="0" TableName="SUMMARY" Name="TMH_GENBA_POST" Format="" />
+      <Column ID="92" DispNumber="" DispName="積替え又は保管場電話番号" Needs="0" TableName="SUMMARY" Name="TMH_GENBA_TEL" Format="" />
+      <Column ID="93" DispNumber="" DispName="積替え又は保管場住所" Needs="0" TableName="SUMMARY" Name="TMH_GENBA_ADDRESS" Format="" />
+      <Column ID="94" DispNumber="" DispName="運搬終了年月日(区間1)" Needs="0" TableName="SUMMARY" Name="UPN_END_DATE1" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="95" DispNumber="" DispName="運搬終了年月日(区間2)" Needs="0" TableName="SUMMARY" Name="UPN_END_DATE2" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="96" DispNumber="" DispName="運搬終了年月日(区間3)" Needs="0" TableName="SUMMARY" Name="UPN_END_DATE3" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="97" DispNumber="" DispName="処分終了日" Needs="0" TableName="SUMMARY" Name="SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="98" DispNumber="" DispName="最終処分終了日" Needs="0" TableName="SUMMARY" Name="LAST_SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="99" DispNumber="" DispName="返却日入力A票" Needs="0" TableName="SUMMARY" Name="SEND_A" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="100" DispNumber="" DispName="返却日入力B1票" Needs="0" TableName="SUMMARY" Name="SEND_B1" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="101" DispNumber="" DispName="返却日入力B2票" Needs="0" TableName="SUMMARY" Name="SEND_B2" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="102" DispNumber="" DispName="返却日入力B4票" Needs="0" TableName="SUMMARY" Name="SEND_B4" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="103" DispNumber="" DispName="返却日入力B6票" Needs="0" TableName="SUMMARY" Name="SEND_B6" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="104" DispNumber="" DispName="返却日入力C1票" Needs="0" TableName="SUMMARY" Name="SEND_C1" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="105" DispNumber="" DispName="返却日入力C2票" Needs="0" TableName="SUMMARY" Name="SEND_C2" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="106" DispNumber="" DispName="返却日入力D票" Needs="0" TableName="SUMMARY" Name="SEND_D" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="107" DispNumber="" DispName="返却日入力E票" Needs="0" TableName="SUMMARY" Name="SEND_E" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="108" DispNumber="" DispName="作成者" Needs="0" TableName="SUMMARY" Name="CREATE_USER" Format="" />
+      <Column ID="109" DispNumber="" DispName="作成日時" Needs="0" TableName="SUMMARY" Name="CREATE_DATE" Format="" />
+      <Column ID="110" DispNumber="" DispName="作成PC" Needs="0" TableName="SUMMARY" Name="CREATE_PC" Format="" />
+      <Column ID="111" DispNumber="" DispName="最終更新者" Needs="0" TableName="SUMMARY" Name="UPDATE_USER" Format="" />
+      <Column ID="112" DispNumber="" DispName="最終更新日時" Needs="0" TableName="SUMMARY" Name="UPDATE_DATE" Format="" />
+      <Column ID="113" DispNumber="" DispName="最終更新PC" Needs="0" TableName="SUMMARY" Name="UPDATE_PC" Format="" />
+      <Column ID="114" DispNumber="" DispName="削除フラグ" Needs="0" TableName="SUMMARY" Name="DELETE_FLG" Format="" />
+
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="廃棄物種類CD" Needs="0" TableName="SUMMARY" Name="DETAIL_HAIKI_SHURUI_CD" Format="" />
+      <Column ID="2" DispNumber="" DispName="廃棄物種類名" Needs="0" TableName="SUMMARY" Name="DETAIL_HAIKI_SHURUI_NAME" Format="" />
+      <Column ID="3" DispNumber="" DispName="廃棄物名称CD" Needs="0" TableName="SUMMARY" Name="DETAIL_HAIKI_NAME_CD" Format="" />
+      <Column ID="4" DispNumber="" DispName="廃棄物名称" Needs="0" TableName="SUMMARY" Name="DETAIL_HAIKI_NAME" Format="" />
+      <Column ID="5" DispNumber="" DispName="報告書分類CD" Needs="0" TableName="SUMMARY" Name="HOUKOKUSHO_BUNRUI_CD" />
+      <Column ID="6" DispNumber="" DispName="報告書分類名" Needs="0" TableName="SUMMARY" Name="HOUKOKUSHO_BUNRUI_NAME_RYAKU" />
+      <Column ID="7" DispNumber="" DispName="荷姿CD" Needs="0" TableName="SUMMARY" Name="DETAIL_NISUGATA_CD" Format="" />
+      <Column ID="8" DispNumber="" DispName="荷姿名" Needs="0" TableName="SUMMARY" Name="DETAIL_NISUGATA_NAME" Format="" />
+      <Column ID="9" DispNumber="" DispName="数量" Needs="0" TableName="SUMMARY" Name="DETAIL_HAIKI_SUU" Format="#,##0.####" />
+      <Column ID="10" DispNumber="" DispName="単位CD" Needs="0" TableName="SUMMARY" Name="DETAIL_HAIKI_UNIT_CD" Format="00" />
+      <Column ID="11" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="12" DispNumber="" DispName="換算後数量" Needs="0" TableName="SUMMARY" Name="DETAIL_KANSAN_SUU" Format="#,##0.####" />
+      <Column ID="13" DispNumber="" DispName="減容後数量" Needs="0" TableName="SUMMARY" Name="DETAIL_GENNYOU_SUU" Format="#,##0.####" />
+      <Column ID="14" DispNumber="" DispName="処分方法CD" Needs="0" TableName="SUMMARY" Name="DETAIL_SBN_HOUHOU_CD" Format="" />
+      <Column ID="15" DispNumber="" DispName="処分方法名" Needs="0" TableName="M_SHOBUN_HOUHOU1" Name="SHOBUN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="16" DispNumber="" DispName="処分終了日(明細)" Needs="0" TableName="SUMMARY" Name="DETAIL_SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="17" DispNumber="" DispName="最終処分終了日(明細)" Needs="0" TableName="SUMMARY" Name="DETAIL_LAST_SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="18" DispNumber="" DispName="最終処分業者CD" Needs="0" TableName="SUMMARY" Name="DETAIL_LAST_SBN_GYOUSHA_CD" Format="" />
+      <Column ID="19" DispNumber="" DispName="最終処分業者名" Needs="0" TableName="SUMMARY" Name="DETAIL_LAST_SBN_GYOUSHA_NAME" Format="" />
+      <Column ID="20" DispNumber="" DispName="最終処分場所CD" Needs="0" TableName="SUMMARY" Name="DETAIL_LAST_SBN_GENBA_CD" Format="" />
+      <Column ID="21" DispNumber="" DispName="最終処分場所名" Needs="0" TableName="SUMMARY" Name="DETAIL_LAST_SBN_GENBA_NAME" Format="" />
+      <Column ID="22" DispNumber="" DispName="二次マニ交付番号" Needs="0" TableName="SUMMARY" Name="DETAIL_NIJI_MANIFEST_ID" Format="" />
+    </Group>
+    <JoinCondition TableName="M_HAIKI_KBN1">LEFT JOIN M_HAIKI_KBN M_HAIKI_KBN1 ON SUMMARY.HAIKI_KBN_CD = M_HAIKI_KBN1.HAIKI_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON SUMMARY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_TORIHIKISAKI1">LEFT JOIN M_TORIHIKISAKI M_TORIHIKISAKI1 ON SUMMARY.TORIHIKISAKI_CD = M_TORIHIKISAKI1.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="M_UNPAN_HOUHOU1">LEFT JOIN M_UNPAN_HOUHOU M_UNPAN_HOUHOU1 ON SUMMARY.UPN_HOUHOU_CD1 = M_UNPAN_HOUHOU1.UNPAN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_UNPAN_HOUHOU2">LEFT JOIN M_UNPAN_HOUHOU M_UNPAN_HOUHOU2 ON SUMMARY.UPN_HOUHOU_CD2 = M_UNPAN_HOUHOU2.UNPAN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_UNPAN_HOUHOU3">LEFT JOIN M_UNPAN_HOUHOU M_UNPAN_HOUHOU3 ON SUMMARY.UPN_HOUHOU_CD3 = M_UNPAN_HOUHOU3.UNPAN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHASHU1">LEFT JOIN M_SHASHU M_SHASHU1 ON SUMMARY.SHASHU_CD1 = M_SHASHU1.SHASHU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHASHU2">LEFT JOIN M_SHASHU M_SHASHU2 ON SUMMARY.SHASHU_CD2 = M_SHASHU2.SHASHU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHASHU3">LEFT JOIN M_SHASHU M_SHASHU3 ON SUMMARY.SHASHU_CD3 = M_SHASHU3.SHASHU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHOBUN_HOUHOU1">LEFT JOIN M_SHOBUN_HOUHOU M_SHOBUN_HOUHOU1 ON SUMMARY.DETAIL_SBN_HOUHOU_CD = M_SHOBUN_HOUHOU1.SHOBUN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON SUMMARY.DETAIL_HAIKI_UNIT_CD = M_UNIT1.UNIT_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

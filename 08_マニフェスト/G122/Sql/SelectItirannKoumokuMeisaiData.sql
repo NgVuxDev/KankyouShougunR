@@ -1,0 +1,19 @@
+﻿SELECT
+    MPC.TABLE_NAME,
+    MPC.KOUMOKU_RONRI_NAME,
+    MPC.KOUMOKU_BUTSURI_NAME
+FROM
+    M_OUTPUT_PATTERN_COLUMN MPC inner join
+(SELECT
+    PATTERN.SYSTEM_ID AS SYSTEM_ID,PATTERN.SEQ AS SEQ
+FROM
+    M_OUTPUT_PATTERN PATTERN inner join M_OUTPUT_PATTERN_KOBETSU KOBETSU on PATTERN.SYSTEM_ID = KOBETSU.SYSTEM_ID
+                                    AND PATTERN.DELETE_FLG = '0'
+                                    AND PATTERN.DENSHU_KBN_CD = '926'
+                                    AND KOBETSU.SHAIN_CD = /*data.shainCd*/
+                                    AND KOBETSU.DEFAULT_KBN = '1'
+                                    AND KOBETSU.DELETE_FLG = '0') 
+									SUBQUERY on MPC.SYSTEM_ID = SUBQUERY.SYSTEM_ID
+									        AND MPC.SEQ = SUBQUERY.SEQ
+ORDER BY
+    MPC.DETAIL_SYSTEM_ID

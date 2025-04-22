@@ -1,0 +1,9 @@
+SELECT 
+  tjd.* 
+FROM 
+  dbo.T_TEIKI_JISSEKI_DETAIL AS tjd
+INNER JOIN dbo.T_TEIKI_JISSEKI_ENTRY AS tje
+  ON tje.SYSTEM_ID = tjd.SYSTEM_ID
+  AND tje.SEQ = tjd.SEQ
+  AND tje.DELETE_FLG = 0
+WHERE UR_SH_NUMBER = /*UrshNumber*/

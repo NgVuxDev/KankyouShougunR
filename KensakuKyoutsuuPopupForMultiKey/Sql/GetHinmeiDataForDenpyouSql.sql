@@ -1,0 +1,83 @@
+﻿SELECT CASE MKHT.DENPYOU_KBN_CD WHEN 1 THEN '売上' WHEN 2 THEN '支払' ELSE '' END DENPYOU_KBN_NAME 
+      ,M_HINMEI.BUNRUI_CD 
+      ,M_BUNRUI.BUNRUI_NAME_RYAKU 
+      ,M_SHURUI.SHURUI_CD 
+      ,M_SHURUI.SHURUI_NAME_RYAKU 
+      ,M_SHURUI.SHURUI_FURIGANA 
+      ,M_HINMEI.HINMEI_CD 
+      ,M_HINMEI.HINMEI_NAME_RYAKU 
+      ,M_HINMEI.HINMEI_FURIGANA 
+      ,M_UNIT.UNIT_NAME_RYAKU AS UNIT_NAME 
+      ,MKHT.TANKA 
+      ,M_HINMEI.HINMEI_NAME 
+      ,MKHT.UNIT_CD 
+      ,MKHT.DENPYOU_KBN_CD
+  FROM (SELECT ROW_NUMBER() OVER(PARTITION BY MKHT.DENPYOU_KBN_CD, MKHT.HINMEI_CD, MKHT.UNIT_CD ORDER BY MKHT.TANKA_RULE DESC) AS rowNum
+              ,MKHT.*
+         FROM (SELECT CASE WHEN MKHT.TORIHIKISAKI_CD IS NULL OR  MKHT.TORIHIKISAKI_CD = '' THEN '0' ELSE '1' END + 
+                      CASE WHEN MKHT.GYOUSHA_CD IS NULL OR  MKHT.GYOUSHA_CD = '' THEN '0' ELSE '1' END +
+                      CASE WHEN MKHT.GENBA_CD IS NULL OR  MKHT.GENBA_CD = '' THEN '0' ELSE '1' END +
+                      CASE WHEN MKHT.UNPAN_GYOUSHA_CD IS NULL OR  MKHT.UNPAN_GYOUSHA_CD = '' THEN '0' ELSE '1' END +
+                      CASE WHEN MKHT.NIOROSHI_GYOUSHA_CD IS NULL OR  MKHT.NIOROSHI_GYOUSHA_CD = '' THEN '0' ELSE '1' END +
+                      CASE WHEN MKHT.NIOROSHI_GENBA_CD IS NULL OR  MKHT.NIOROSHI_GENBA_CD = '' THEN '0' ELSE '1' END +
+                      CASE WHEN MKHT.DENSHU_KBN_CD = 9 THEN '0' ELSE '1' END
+                      AS TANKA_RULE
+                     ,*
+                 FROM M_KOBETSU_HINMEI_TANKA MKHT
+                WHERE 1 = 1
+                  /*IF !data.DENPYOU_KBN_CD.IsNull && data.DENPYOU_KBN_CD.Value != 3 */
+                  AND (MKHT.DENPYOU_KBN_CD = /*data.DENPYOU_KBN_CD.Value*/1)
+                  /*END*/
+                  AND (MKHT.TORIHIKISAKI_CD = '' OR MKHT.TORIHIKISAKI_CD = /*data.TORIHIKISAKI_CD*/'000001')
+                  AND (MKHT.GYOUSHA_CD = /*data.GYOUSHA_CD*/'000001')
+                  AND (MKHT.GENBA_CD = '' OR MKHT.GENBA_CD = /*data.GENBA_CD*/'000000')
+                  AND (MKHT.UNPAN_GYOUSHA_CD = '' OR MKHT.UNPAN_GYOUSHA_CD = /*data.UNPAN_GYOUSHA_CD*/'000003')
+                  AND (MKHT.NIOROSHI_GYOUSHA_CD = '' OR MKHT.NIOROSHI_GYOUSHA_CD = /*data.NIOROSHI_GYOUSHA_CD*/'000000')
+                  AND (MKHT.NIOROSHI_GENBA_CD = '' OR MKHT.NIOROSHI_GENBA_CD = /*data.NIOROSHI_GENBA_CD*/'000048')
+                  AND (MKHT.DENSHU_KBN_CD = 9 OR MKHT.DENSHU_KBN_CD = /*data.DENSHU_KBN_CD.Value*/3)
+                  AND ((MKHT.TEKIYOU_BEGIN <= /*data.DENPYOU_DATE.Value*/ AND /*data.DENPYOU_DATE.Value*/ <= MKHT.TEKIYOU_END)
+                       OR (MKHT.TEKIYOU_BEGIN <= /*data.DENPYOU_DATE.Value*/ AND MKHT.TEKIYOU_END IS NULL)
+                       OR (MKHT.TEKIYOU_BEGIN IS NULL AND /*data.DENPYOU_DATE.Value*/ <= MKHT.TEKIYOU_END)
+                       OR (MKHT.TEKIYOU_BEGIN IS NULL AND MKHT.TEKIYOU_END IS NULL))
+                  AND MKHT.DELETE_FLG = 0
+              ) MKHT
+       ) MKHT
+  LEFT JOIN M_HINMEI 
+  ON M_HINMEI.HINMEI_CD = MKHT.HINMEI_CD 
+  LEFT JOIN M_BUNRUI 
+  ON M_HINMEI.BUNRUI_CD = M_BUNRUI.BUNRUI_CD 
+  LEFT JOIN M_SHURUI 
+  ON M_HINMEI.SHURUI_CD = M_SHURUI.SHURUI_CD 
+  LEFT JOIN M_UNIT 
+  ON M_UNIT.UNIT_CD = MKHT.UNIT_CD 
+ WHERE MKHT.rowNum = 1
+   AND M_HINMEI.DELETE_FLG = 0
+   /*IF data.SHURUI_KBN_INFO != '' && !data.SHURUI_KBN_CD.IsNull && data.SHURUI_KBN_CD.Value == 1*/
+--   AND M_SHURUI.SHURUI_CD LIKE '%' + /*data.SHURUI_KBN_INFO*/'' + '%'
+   /*END*/
+   /*IF data.SHURUI_KBN_INFO != '' && !data.SHURUI_KBN_CD.IsNull &&  data.SHURUI_KBN_CD.Value == 2 */
+--   AND M_SHURUI.SHURUI_NAME_RYAKU LIKE '%' + /*data.SHURUI_KBN_INFO*/'' + '%'
+   /*END*/
+   /*IF data.SHURUI_KBN_INFO != '' && !data.SHURUI_KBN_CD.IsNull &&  data.SHURUI_KBN_CD.Value == 3 */
+--   AND M_SHURUI.SHURUI_FURIGANA LIKE '%' + /*data.SHURUI_KBN_INFO*/'' + '%'
+   /*END*/
+   /*IF data.SHURUI_KBN_INFO != '' && !data.SHURUI_KBN_CD.IsNull &&  data.SHURUI_KBN_CD.Value == 7 */
+--   AND ((M_SHURUI.SHURUI_CD LIKE '%' + /*data.SHURUI_KBN_INFO*/'' + '%') OR (M_SHURUI.SHURUI_NAME_RYAKU LIKE '%' + /*data.SHURUI_KBN_INFO*/'' + '%') OR (M_SHURUI.SHURUI_FURIGANA LIKE '%' + /*data.SHURUI_KBN_INFO*/'' + '%'))
+   /*END*/
+
+   /*IF data.SHURUI_KBN_INFO != ''*/
+   AND M_SHURUI.SHURUI_CD LIKE '%' + /*data.SHURUI_KBN_INFO*/'' + '%'
+   /*END*/
+
+   /*IF data.HINMEI_KBN_INFO != '' && !data.HINMEI_KBN_CD.IsNull && data.HINMEI_KBN_CD.Value == 1 */
+   AND M_HINMEI.HINMEI_CD LIKE '%' + /*data.HINMEI_KBN_INFO*/'' + '%'
+   /*END*/
+   /*IF data.HINMEI_KBN_INFO != '' &&!data.HINMEI_KBN_CD.IsNull &&  data.HINMEI_KBN_CD.Value == 2 */
+   AND M_HINMEI.HINMEI_NAME_RYAKU LIKE '%' + /*data.HINMEI_KBN_INFO*/'' + '%'
+   /*END*/
+   /*IF data.HINMEI_KBN_INFO != '' &&!data.HINMEI_KBN_CD.IsNull &&  data.HINMEI_KBN_CD.Value == 3 */
+   AND M_HINMEI.HINMEI_FURIGANA LIKE '%' + /*data.HINMEI_KBN_INFO*/'' + '%'
+   /*END*/
+   /*IF data.HINMEI_KBN_INFO != '' &&!data.HINMEI_KBN_CD.IsNull &&  data.HINMEI_KBN_CD.Value == 7 */
+   AND ((M_HINMEI.HINMEI_CD LIKE '%' + /*data.HINMEI_KBN_INFO*/'' + '%') OR (M_HINMEI.HINMEI_NAME_RYAKU LIKE '%' + /*data.HINMEI_KBN_INFO*/'' + '%') OR (M_HINMEI.HINMEI_FURIGANA LIKE '%' + /*data.HINMEI_KBN_INFO*/'' + '%'))
+   /*END*/

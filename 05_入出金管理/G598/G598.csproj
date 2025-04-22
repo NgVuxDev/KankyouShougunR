@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{081DBBF4-F0F6-495C-9CDD-B6C02A843030}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.ReceiptPayManagement.NyuukinYoteiIchiran</RootNamespace>
+    <AssemblyName>NyuukinYoteiIchiran</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Dxo">
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy">
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Unit">
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+    </Reference>
+    <Reference Include="Seasar.Windows">
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\G598.cs" />
+    <Compile Include="APP\UIForm_NyuukinYoteiIchiran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIForm_NyuukinYoteiIchiran.Designer.cs">
+      <DependentUpon>UIForm_NyuukinYoteiIchiran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Const\ConstClass.cs" />
+    <Compile Include="DAO\NyuukinYoteiIchiranDaoClass.cs" />
+    <Compile Include="DTO\NyuukinYoteiIchiranDtoClass.cs" />
+    <Compile Include="Logic\NyuukinYoteiIchiranLogicClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\NyuukinYoteiIchiranReportClass.cs" />
+    <EmbeddedResource Include="APP\UIForm_NyuukinYoteiIchiran.resx">
+      <DependentUpon>UIForm_NyuukinYoteiIchiran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\11_帳票出力\CommonChouhyouViewer\CommonChouhyouViewer.csproj">
+      <Project>{1F17CDA9-3563-43EB-ADFE-F3146FE352B4}</Project>
+      <Name>CommonChouhyouViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonChouhyouPopup\CommonChouhyouPopup.csproj">
+      <Project>{445254EB-6A9C-4D9D-8431-3ED2658FE6DD}</Project>
+      <Name>CommonChouhyouPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KensakuKyoutsuuPopupForMultiKey\KensakuKyoutsuuPopupForMultiKey.csproj">
+      <Project>{67274743-11AD-4C7F-8DE3-41207CFCE304}</Project>
+      <Name>KensakuKyoutsuuPopupForMultiKey</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KensakuKyoutsuuPopup\KensakuKyoutsuuPopup.csproj">
+      <Project>{63E64F42-8E5C-4354-945C-E595075A42BC}</Project>
+      <Name>KensakuKyoutsuuPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MasterKyoutsuPopup2\MasterKyoutsuPopup2.csproj">
+      <Project>{24A8C872-5ACF-42A5-A1AC-27E6C0C25B85}</Project>
+      <Name>MasterKyoutsuPopup2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Setting\NyuukinYoteiIchiranButtonSetting.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template\R622-Form.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Sql\GetNyuukinYoteiData.sql" />
+    <Content Include="Template\R370-Form.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetNyuukinYoteiIchiranData.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

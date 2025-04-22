@@ -1,0 +1,1 @@
+﻿SELECT * FROM T_XXXX where XXXX_NO = /*data.XXXX_NO*/

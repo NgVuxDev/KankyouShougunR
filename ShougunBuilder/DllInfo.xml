@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Path:MakeRSolution.exeから見たDLLの相対パス -->
+<root>
+  <dll Path="..\DLL\Microsoft.VisualBasic.PowerPacks.Vs.dll" />
+  <dll Path="..\DLL\Castle.Core.dll" />
+  <dll Path="..\DLL\Castle.DynamicProxy.dll" />
+  <dll Path="..\DLL\Seasar.Dao.dll" />
+  <dll Path="..\DLL\Seasar.dll" />
+  <dll Path="..\DLL\Seasar.Dxo.dll" />
+  <dll Path="..\DLL\Seasar.DynamicProxy.dll" />
+  <dll Path="..\DLL\Seasar.Quill.dll" />
+  <dll Path="..\DLL\Seasar.Unit.dll" />
+  <dll Path="..\DLL\Seasar.Windows.dll" />
+  <dll Path="..\DLL\log4net.dll" />
+</root>

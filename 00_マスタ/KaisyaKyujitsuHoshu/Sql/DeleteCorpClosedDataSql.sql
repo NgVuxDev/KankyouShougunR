@@ -1,0 +1,5 @@
+﻿DELETE FROM  dbo.M_CORP_CLOSED
+/*BEGIN*/WHERE 
+/*IF strdata.CORP_CLOSED_DATE!= null*//*strdata.CORP_CLOSED_DATE*/ <= CORP_CLOSED_DATE/*END*/
+/*IF enddata.CORP_CLOSED_DATE!= null*/AND CORP_CLOSED_DATE <= /*enddata.CORP_CLOSED_DATE*//*END*/
+/*END*/

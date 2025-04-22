@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="927">
+    <Group OutputKbn="1">
+      <!--<Column ID="1" DispNumber="1" DispName="入金先区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="NYUUKINSAKI_KBN" Format="" />
+      <Column ID="2" DispNumber="2" DispName="拠点CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_KYOTEN_CD" Format="00" />
+      <Column ID="3" DispNumber="3" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />-->
+      <Column ID="4" DispNumber="4" DispName="取引先CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="5" DispNumber="5" DispName="取引先名1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_NAME1" Format="" />
+      <Column ID="6" DispNumber="6" DispName="取引先敬称1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_KEISHOU1" Format="" />
+      <Column ID="7" DispNumber="7" DispName="取引先名2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_NAME2" Format="" />
+      <Column ID="8" DispNumber="8" DispName="取引先敬称2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_KEISHOU2" Format="" />
+      <Column ID="9" DispNumber="9" DispName="取引先略称名" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="10" DispNumber="10" DispName="取引先フリガナ" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_FURIGANA" Format="" />
+      <Column ID="11" DispNumber="11" DispName="電話番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_TEL" Format="" />
+      <Column ID="12" DispNumber="12" DispName="FAX番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_FAX" Format="" />
+      <Column ID="13" DispNumber="13" DispName="営業担当部署CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="EIGYOU_TANTOU_BUSHO_CD" Format="" />
+      <Column ID="14" DispNumber="14" DispName="営業担当部署名" Needs="0" TableName="M_BUSHO1" Name="BUSHO_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="15" DispName="営業担当者CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="EIGYOU_TANTOU_CD" Format="" />
+      <Column ID="16" DispNumber="16" DispName="営業担当者名" Needs="0" TableName="M_SHAIN1" Name="SHAIN_NAME_RYAKU" Format="" />
+      <Column ID="17" DispNumber="17" DispName="適用開始日" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TEKIYOU_BEGIN" Format="" />
+      <Column ID="18" DispNumber="18" DispName="適用終了日" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TEKIYOU_END" Format="" />
+      <Column ID="19" DispNumber="19" DispName="中止理由1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="CHUUSHI_RIYUU1" Format="" />
+      <Column ID="20" DispNumber="20" DispName="中止理由2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="CHUUSHI_RIYUU2" Format="" />
+      <Column ID="21" DispNumber="21" DispName="取引先郵便番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_POST" Format="" />
+      <Column ID="22" DispNumber="22" DispName="取引先都道府県CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_TODOUFUKEN_CD" Format="00" />
+      <Column ID="23" DispNumber="23" DispName="取引先都道府県名" Needs="0" TableName="M_TODOUFUKEN1" Name="TODOUFUKEN_NAME_RYAKU" Format="" />
+      <Column ID="24" DispNumber="24" DispName="取引先住所1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_ADDRESS1" Format="" />
+      <Column ID="25" DispNumber="25" DispName="取引先住所2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TORIHIKISAKI_ADDRESS2" Format="" />
+      <Column ID="26" DispNumber="26" DispName="取引先部署" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="BUSHO" Format="" />
+      <Column ID="27" DispNumber="27" DispName="取引先担当者" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="TANTOUSHA" Format="" />
+      <Column ID="28" DispNumber="28" DispName="集計項目CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="SHUUKEI_ITEM_CD" Format="" />
+      <Column ID="29" DispNumber="29" DispName="集計項目名" Needs="0" TableName="M_SHUUKEI_KOUMOKU1" Name="SHUUKEI_KOUMOKU_NAME_RYAKU" Format="" />
+      <Column ID="30" DispNumber="30" DispName="業種CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="GYOUSHU_CD" Format="" />
+      <Column ID="31" DispNumber="31" DispName="業種名" Needs="0" TableName="M_GYOUSHU1" Name="GYOUSHU_NAME_RYAKU" Format="" />
+      <!--<Column ID="33" DispNumber="32" DispName="代表取締役印字区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="DAIHYOU_PRINT_KBN" Format="" />-->
+      <Column ID="33" DispNumber="33" DispName="代表者印字区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI.DAIHYOU_PRINT_KBN WHEN 1 THEN '印字する' WHEN 2 THEN '印字しない' ELSE '' END" Format="" />
+      <Column ID="34" DispNumber="34" DispName="備考1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="BIKOU1" Format="" />
+      <Column ID="35" DispNumber="35" DispName="備考2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="BIKOU2" Format="" />
+      <Column ID="36" DispNumber="36" DispName="備考3" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="BIKOU3" Format="" />
+      <Column ID="37" DispNumber="37" DispName="備考4" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="BIKOU4" Format="" />
+      <Column ID="38" DispNumber="38" DispName="諸口フラグ" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="SHOKUCHI_KBN" Format="" />
+      <!--<Column ID="39" DispNumber="39" DispName="請求取引区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="TORIHIKI_KBN_CD" Format="" />-->
+      <Column ID="40" DispNumber="40" DispName="請求取引区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.TORIHIKI_KBN_CD WHEN 1 THEN '現金' WHEN 2 THEN '掛け' ELSE '' END" Format="" />
+      <Column ID="41" DispNumber="41" DispName="請求締日1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SHIMEBI1" Format="" />
+      <Column ID="42" DispNumber="42" DispName="請求締日2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SHIMEBI2" Format="" />
+      <Column ID="43" DispNumber="43" DispName="請求締日3" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SHIMEBI3" Format="" />
+      <Column ID="44" DispNumber="44" DispName="請求書必着日" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="HICCHAKUBI" Format="" />
+      <Column ID="380" DispNumber="45" DispName="回収日種別" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.KAISHUU_BETSU_KBN WHEN 1 THEN '日にち指定' WHEN 2 THEN '○日後指定'  ELSE '' END" Format="" />
+      <Column ID="390" DispNumber="46" DispName="○日後(回収日)" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KAISHUU_BETSU_NICHIGO" Format="" />
+      <Column ID="45" DispNumber="47" DispName="回収月" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.KAISHUU_MONTH WHEN 1 THEN '当月' WHEN 2 THEN '翌月' WHEN 3 THEN '翌々月' WHEN 4 THEN '3ヶ月後' WHEN 5 THEN '4ヶ月後' WHEN 6 THEN '5ヶ月後' WHEN 7 THEN '6ヶ月後' ELSE '' END" Format="" />
+      <Column ID="46" DispNumber="48" DispName="回収日" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KAISHUU_DAY" Format="" />
+      <Column ID="47" DispNumber="49" DispName="回収方法CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KAISHUU_HOUHOU" Format="" />
+      <Column ID="48" DispNumber="50" DispName="回収方法名" Needs="0" TableName="M_NYUUSHUKKIN_KBN1" Name="NYUUSHUKKIN_KBN_NAME_RYAKU" Format="" />
+      <Column ID="49" DispNumber="51" DispName="開始売掛残高" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KAISHI_URIKAKE_ZANDAKA" Format="#,##0" />
+      <!--<Column ID="50" DispNumber="50" DispName="請求書書式1CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SHOSHIKI_KBN" Format="" />-->
+      <Column ID="51" DispNumber="52" DispName="請求書書式1" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.SHOSHIKI_KBN WHEN 1 THEN '請求先別' WHEN 2 THEN '業者別' WHEN 3 THEN '現場別' ELSE '' END" Format="" />
+      <!--<Column ID="52" DispNumber="52" DispName="請求書書式2CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SHOSHIKI_MEISAI_KBN" Format="" />-->
+      <Column ID="53" DispNumber="53" DispName="請求書書式2" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.SHOSHIKI_MEISAI_KBN WHEN 1 THEN 'なし' WHEN 2 THEN '業者毎' WHEN 3 THEN '現場毎' ELSE '' END" Format="" />
+      <!--<Column ID="54" DispNumber="54" DispName="請求消費税端数CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="TAX_HASUU_CD" Format="" />-->
+      <Column ID="55" DispNumber="55" DispName="請求消費税端数" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.TAX_HASUU_CD WHEN 1 THEN '切り上げ' WHEN 2 THEN '切り捨て' WHEN 3 THEN '四捨五入' ELSE '' END" Format="" />
+      <!--<Column ID="56" DispNumber="56" DispName="請求金額端数CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KINGAKU_HASUU_CD" Format="" />-->
+      <Column ID="57" DispNumber="57" DispName="請求金額端数" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.KINGAKU_HASUU_CD WHEN 1 THEN '切り上げ' WHEN 2 THEN '切り捨て' WHEN 3 THEN '四捨五入' ELSE '' END" Format="" />
+      <!--<Column ID="58" DispNumber="58" DispName="請求形態CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_KEITAI_KBN" Format="" />-->
+      <Column ID="59" DispNumber="59" DispName="請求形態" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.SEIKYUU_KEITAI_KBN WHEN 1 THEN '単月請求' WHEN 2 THEN '繰越請求' ELSE '' END" Format="" />
+      <!--<Column ID="60" DispNumber="60" DispName="入金明細CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="NYUUKIN_MEISAI_KBN" Format="" />-->
+      <Column ID="61" DispNumber="61" DispName="入金明細" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.NYUUKIN_MEISAI_KBN WHEN 1 THEN '表示する' WHEN 2 THEN '表示しない' ELSE '' END" Format="" />
+      <!--<Column ID="62" DispNumber="62" DispName="請求用紙CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="YOUSHI_KBN" Format="" />-->
+      <Column ID="63" DispNumber="63" DispName="請求用紙" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.YOUSHI_KBN WHEN 1 THEN '自社請求書' WHEN 2 THEN '指定請求書' WHEN 3 THEN '印刷しない' ELSE '' END" Format="" />
+      <!--<Column ID="64" DispNumber="66" DispName="請求税計算区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="ZEI_KEISAN_KBN_CD" Format="" />-->
+      <Column ID="65" DispNumber="67" DispName="請求税計算区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.ZEI_KEISAN_KBN_CD WHEN 1 THEN '伝票毎' WHEN 2 THEN '請求毎' WHEN 3 THEN '明細毎' ELSE '' END" Format="" />
+      <!--<Column ID="66" DispNumber="68" DispName="請求税区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="ZEI_KBN_CD" Format="" />-->
+      <Column ID="67" DispNumber="69" DispName="請求税区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.ZEI_KBN_CD WHEN 1 THEN '外税' WHEN 2 THEN '内税' WHEN 3 THEN '非課税' ELSE '' END" Format="" />
+      <Column ID="68" DispNumber="70" DispName="振込銀行CD1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="FURIKOMI_BANK_CD" Format="" />
+      <Column ID="69" DispNumber="71" DispName="振込銀行名1" Needs="0" TableName="M_BANK1" Name="BANK_NAME_RYAKU" Format="" />
+      <Column ID="70" DispNumber="72" DispName="振込銀行支店CD1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="FURIKOMI_BANK_SHITEN_CD" Format="" />
+      <Column ID="71" DispNumber="73" DispName="振込銀行支店名1" Needs="0" TableName="M_BANK_SHITEN1" Name="BANK_SHIETN_NAME_RYAKU" Format="" />
+      <Column ID="72" DispNumber="74" DispName="口座種類1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_SHURUI" Format="" />
+      <Column ID="73" DispNumber="75" DispName="口座番号1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_NO" Format="" />
+      <Column ID="74" DispNumber="76" DispName="口座名義1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_NAME" Format="" />
+      <!--<Column ID="75" DispNumber="77" DispName="請求最終取引日時" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="LAST_TORIHIKI_DATE" Format="" />-->
+      <Column ID="76" DispNumber="220" DispName="請求情報1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_JOUHOU1" Format="" />
+      <Column ID="77" DispNumber="230" DispName="請求情報2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_JOUHOU2" Format="" />
+      <Column ID="78" DispNumber="240" DispName="請求書送付先名1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_NAME1" Format="" />
+      <Column ID="79" DispNumber="250" DispName="請求書送付先敬称1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_KEISHOU1" Format="" />
+      <Column ID="80" DispNumber="260" DispName="請求書送付先名2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_NAME2" Format="" />
+      <Column ID="81" DispNumber="270" DispName="請求書送付先敬称2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_KEISHOU2" Format="" />
+      <Column ID="82" DispNumber="280" DispName="請求書送付先郵便番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_POST" Format="" />
+      <Column ID="83" DispNumber="290" DispName="請求書送付先住所1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_ADDRESS1" Format="" />
+      <Column ID="84" DispNumber="300" DispName="請求書送付先住所2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_ADDRESS2" Format="" />
+      <Column ID="85" DispNumber="310" DispName="請求書送付先部署" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_BUSHO" Format="" />
+      <Column ID="86" DispNumber="320" DispName="請求書送付先電話番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_TEL" Format="" />
+      <Column ID="87" DispNumber="330" DispName="請求書送付先FAX番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_FAX" Format="" />
+      <Column ID="88" DispNumber="340" DispName="入金先区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI.NYUUKINSAKI_KBN WHEN 1 THEN '自社' WHEN 2 THEN '他社' ELSE '' END" Format="" />
+      <Column ID="89" DispNumber="350" DispName="入金先CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="NYUUKINSAKI_CD" Format="" />
+      <Column ID="90" DispNumber="360" DispName="入金先名" Needs="0" TableName="M_NYUUKINSAKI1" Name="NYUUKINSAKI_NAME_RYAKU" Format="" />
+      <Column ID="91" DispNumber="370" DispName="請求書送付先担当者" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_SOUFU_TANTOU" Format="" />
+      <Column ID="92" DispNumber="380" DispName="請求担当者" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_TANTOU" Format="" />
+      <!--<Column ID="93" DispNumber="390" DispName="請求先代表取締役印字区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_DAIHYOU_PRINT_KBN" Format="" />-->
+      <Column ID="94" DispNumber="400" DispName="請求先代表者印字区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.SEIKYUU_DAIHYOU_PRINT_KBN WHEN 1 THEN '印字する' WHEN 2 THEN '印字しない' ELSE '' END" Format="" />
+      <!--<Column ID="95" DispNumber="410" DispName="請求書拠点印字区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_KYOTEN_PRINT_KBN" Format="" />-->
+      <Column ID="96" DispNumber="420" DispName="請求書拠点印字区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.SEIKYUU_KYOTEN_PRINT_KBN WHEN 1 THEN '印字する' WHEN 2 THEN '印字しない' ELSE '' END" Format="" />
+      <Column ID="97" DispNumber="430" DispName="請求書拠点CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="SEIKYUU_KYOTEN_CD" Format="00" />
+      <Column ID="98" DispNumber="440" DispName="請求書拠点名" Needs="0" TableName="M_KYOTEN2" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <!--<Column ID="99" DispNumber="450" DispName="支払取引区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="TORIHIKI_KBN_CD" Format="" />-->
+      <Column ID="100" DispNumber="460" DispName="支払取引区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.TORIHIKI_KBN_CD WHEN 1 THEN '現金' WHEN 2 THEN '掛け' ELSE '' END" Format="" />
+      <Column ID="101" DispNumber="470" DispName="支払締日1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIMEBI1" Format="" />
+      <Column ID="102" DispNumber="480" DispName="支払締日2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIMEBI2" Format="" />
+      <Column ID="103" DispNumber="490" DispName="支払締日3" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIMEBI3" Format="" />
+      <Column ID="400" DispNumber="501" DispName="支払日種別" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.SHIHARAI_BETSU_KBN WHEN 1 THEN '日にち指定' WHEN 2 THEN '○日後指定'  ELSE '' END" Format="" />
+      <Column ID="410" DispNumber="502" DispName="○日後(支払日)" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_BETSU_NICHIGO" Format="" />
+      <Column ID="104" DispNumber="503" DispName="支払月" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_MONTH" Format="" />
+      <Column ID="105" DispNumber="510" DispName="支払日" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_DAY" Format="" />
+      <Column ID="106" DispNumber="520" DispName="支払方法CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_HOUHOU" Format="" />
+      <Column ID="107" DispNumber="530" DispName="支払方法名" Needs="0" TableName="M_NYUUSHUKKIN_KBN2" Name="NYUUSHUKKIN_KBN_NAME_RYAKU" Format="" />
+      <Column ID="108" DispNumber="540" DispName="開始買掛残高" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="KAISHI_KAIKAKE_ZANDAKA" Format="#,##0" />
+      <!--<Column ID="109" DispNumber="550" DispName="支払明細書書式1CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHOSHIKI_KBN" Format="" />-->
+      <Column ID="110" DispNumber="560" DispName="支払明細書書式1" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.SHOSHIKI_KBN WHEN 1 THEN '支払先別' WHEN 2 THEN '業者別' WHEN 3 THEN '現場別' ELSE '' END" Format="" />
+      <!--<Column ID="111" DispNumber="570" DispName="支払明細書書式2CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHOSHIKI_MEISAI_KBN" Format="" />-->
+      <Column ID="112" DispNumber="580" DispName="支払明細書書式2" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.SHOSHIKI_MEISAI_KBN WHEN 1 THEN 'なし' WHEN 2 THEN '業者毎' WHEN 3 THEN '現場毎' ELSE '' END" Format="" />
+      <!--<Column ID="113" DispNumber="590" DispName="支払消費税端数CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="TAX_HASUU_CD" Format="" />-->
+      <Column ID="114" DispNumber="600" DispName="支払消費税端数" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.TAX_HASUU_CD WHEN 1 THEN '切り上げ' WHEN 2 THEN '切り捨て' WHEN 3 THEN '四捨五入' ELSE '' END" Format="" />
+      <!--<Column ID="115" DispNumber="610" DispName="支払金額端数CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="KINGAKU_HASUU_CD" Format="" />-->
+      <Column ID="116" DispNumber="620" DispName="支払金額端数" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.KINGAKU_HASUU_CD WHEN 1 THEN '切り上げ' WHEN 2 THEN '切り捨て' WHEN 3 THEN '四捨五入' ELSE '' END" Format="" />
+      <!--<Column ID="117" DispNumber="630" DispName="支払形態CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_KEITAI_KBN" Format="" />-->
+      <Column ID="118" DispNumber="640" DispName="支払形態" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.SHIHARAI_KEITAI_KBN WHEN 1 THEN '単月精算' WHEN 2 THEN '繰越精算' ELSE '' END" Format="" />
+      <!--<Column ID="119" DispNumber="650" DispName="出金明細CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHUKKIN_MEISAI_KBN" Format="" />-->
+      <Column ID="120" DispNumber="660" DispName="出金明細" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.SHUKKIN_MEISAI_KBN WHEN 1 THEN '表示する' WHEN 2 THEN '表示しない' ELSE '' END" Format="" />
+      <!--<Column ID="121" DispNumber="670" DispName="支払用紙CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="YOUSHI_KBN" Format="" />-->
+      <Column ID="122" DispNumber="680" DispName="支払用紙" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.YOUSHI_KBN WHEN 1 THEN '自社支払明細書' WHEN 2 THEN '指定支払明細書' WHEN 3 THEN '印刷しない' ELSE '' END" Format="" />
+      <!--<Column ID="123" DispNumber="690" DispName="支払税計算区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="ZEI_KEISAN_KBN_CD" Format="" />-->
+      <Column ID="124" DispNumber="700" DispName="支払税計算区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.ZEI_KEISAN_KBN_CD WHEN 1 THEN '伝票毎' WHEN 2 THEN '精算毎' WHEN 3 THEN '明細毎' ELSE '' END" Format="" />
+      <!--<Column ID="125" DispNumber="710" DispName="支払税区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="ZEI_KBN_CD" Format="" />-->
+      <Column ID="126" DispNumber="720" DispName="支払税区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.ZEI_KBN_CD WHEN 1 THEN '外税' WHEN 2 THEN '内税' WHEN 3 THEN '非課税' ELSE '' END" Format="" />
+      <!--<Column ID="127" DispNumber="730" DispName="支払最終取引日時" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="LAST_TORIHIKI_DATE" Format="" />-->
+      <Column ID="128" DispNumber="740" DispName="支払情報1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_JOUHOU1" Format="" />
+      <Column ID="129" DispNumber="750" DispName="支払情報2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_JOUHOU2" Format="" />
+      <Column ID="130" DispNumber="760" DispName="支払明細書送付先1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_NAME1" Format="" />
+      <Column ID="131" DispNumber="770" DispName="支払明細書送付先敬称1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_KEISHOU1" Format="" />
+      <Column ID="132" DispNumber="780" DispName="支払明細書送付先2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_NAME2" Format="" />
+      <Column ID="133" DispNumber="790" DispName="支払明細書送付先敬称2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_KEISHOU2" Format="" />
+      <Column ID="134" DispNumber="800" DispName="支払明細書送付先郵便番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_POST" Format="" />
+      <Column ID="135" DispNumber="810" DispName="支払明細書送付先住所1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_ADDRESS1" Format="" />
+      <Column ID="136" DispNumber="820" DispName="支払明細書送付先住所2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_ADDRESS2" Format="" />
+      <Column ID="137" DispNumber="830" DispName="支払明細書送付先部署" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_BUSHO" Format="" />
+      <Column ID="138" DispNumber="840" DispName="支払明細書送付先担当者" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_TANTOU" Format="" />
+      <Column ID="139" DispNumber="850" DispName="支払明細書送付先電話番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_TEL" Format="" />
+      <Column ID="140" DispNumber="860" DispName="支払明細書送付先FAX番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_SOUFU_FAX" Format="" />
+      <!--<Column ID="141" DispNumber="870" DispName="支払明細書拠点印字区分CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_KYOTEN_PRINT_KBN" Format="" />-->
+      <Column ID="142" DispNumber="880" DispName="支払明細書拠点印字区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.SHIHARAI_KYOTEN_PRINT_KBN WHEN 1 THEN '印字する' WHEN 2 THEN '印字しない' ELSE '' END" Format="" />
+      <Column ID="143" DispNumber="890" DispName="支払明細書拠点CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="SHIHARAI_KYOTEN_CD" Format="00" />
+      <Column ID="144" DispNumber="900" DispName="支払明細書拠点名" Needs="0" TableName="M_KYOTEN3" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="145" DispNumber="917" DispName="マニフェスト返送先区分" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_KBN" Format="" />
+      <Column ID="146" DispNumber="920" DispName="マニフェスト返送先名1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_NAME1" Format="" />
+      <Column ID="147" DispNumber="930" DispName="マニフェスト返送先敬称1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_KEISHOU1" Format="" />
+      <Column ID="148" DispNumber="940" DispName="マニフェスト返送先名2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_NAME2" Format="" />
+      <Column ID="149" DispNumber="950" DispName="マニフェスト返送先敬称2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_KEISHOU2" Format="" />
+      <Column ID="150" DispNumber="960" DispName="マニフェスト返送先郵便番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_POST" Format="" />
+      <Column ID="151" DispNumber="970" DispName="マニフェスト返送先住所1" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_ADDRESS1" Format="" />
+      <Column ID="152" DispNumber="980" DispName="マニフェスト返送先住所2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_ADDRESS2" Format="" />
+      <Column ID="153" DispNumber="990" DispName="マニフェスト返送先部署" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_BUSHO" Format="" />
+      <Column ID="154" DispNumber="1000" DispName="マニフェスト返送先担当者" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="MANI_HENSOUSAKI_TANTOU" Format="" />
+      <Column ID="155" DispNumber="1010" DispName="作成者" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="CREATE_USER" Format="" />
+      <Column ID="156" DispNumber="1020" DispName="作成日時" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="CREATE_DATE" Format="" />
+      <Column ID="157" DispNumber="1030" DispName="作成PC" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="CREATE_PC" Format="" />
+      <Column ID="158" DispNumber="1040" DispName="最終更新者" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="UPDATE_USER" Format="" />
+      <Column ID="159" DispNumber="1050" DispName="最終更新日時" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="UPDATE_DATE" Format="" />
+      <Column ID="160" DispNumber="1060" DispName="最終更新PC" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="UPDATE_PC" Format="" />
+      <Column ID="161" DispNumber="1070" DispName="削除フラグ" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI" Name="DELETE_FLG" Format="" />
+      <Column ID="162" DispNumber="64" DispName="出力区分" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SEIKYUU.OUTPUT_KBN WHEN 1 THEN '紙' WHEN 2 THEN '電子CSV' ELSE '' END" Format="" />
+      <Column ID="163" DispNumber="65" DispName="発行先コード" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="HAKKOUSAKI_CD" Format="" />
+      <Column ID="164" DispNumber="1080" DispName="振込人名１" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="FURIKOMI_NAME1" Format="" />
+      <Column ID="165" DispNumber="1090" DispName="振込人名２" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="FURIKOMI_NAME2" Format="" />
+
+      <Column ID="170" DispNumber="80" DispName="振込銀行CD2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="FURIKOMI_BANK_CD_2" Format="" />
+      <Column ID="180" DispNumber="90" DispName="振込銀行名2" Needs="0" TableName="M_BANK2" Name="BANK_NAME_RYAKU" Format="" />
+      <Column ID="190" DispNumber="100" DispName="振込銀行支店CD2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="FURIKOMI_BANK_SHITEN_CD_2" Format="" />
+      <Column ID="200" DispNumber="110" DispName="振込銀行支店名2" Needs="0" TableName="M_BANK_SHITEN2" Name="BANK_SHIETN_NAME_RYAKU" Format="" />
+      <Column ID="210" DispNumber="120" DispName="口座種類2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_SHURUI_2" Format="" />
+      <Column ID="220" DispNumber="130" DispName="口座番号2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_NO_2" Format="" />
+      <Column ID="230" DispNumber="140" DispName="口座名義2" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_NAME_2" Format="" />
+
+
+      <Column ID="240" DispNumber="150" DispName="振込銀行CD3" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="FURIKOMI_BANK_CD_3" Format="" />
+      <Column ID="250" DispNumber="160" DispName="振込銀行名3" Needs="0" TableName="M_BANK3" Name="BANK_NAME_RYAKU" Format="" />
+      <Column ID="260" DispNumber="170" DispName="振込銀行支店CD3" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="FURIKOMI_BANK_SHITEN_CD_3" Format="" />
+      <Column ID="270" DispNumber="180" DispName="振込銀行支店名3" Needs="0" TableName="M_BANK_SHITEN3" Name="BANK_SHIETN_NAME_RYAKU" Format="" />
+      <Column ID="280" DispNumber="190" DispName="口座種類3" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_SHURUI_3" Format="" />
+      <Column ID="290" DispNumber="200" DispName="口座番号3" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_NO_3" Format="" />
+      <Column ID="300" DispNumber="210" DispName="口座名義3" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SEIKYUU" Name="KOUZA_NAME_3" Format="" />
+
+      <Column ID="450" DispNumber="901" DispName="振込出力" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.FURIKOMI_EXPORT_KBN WHEN 1 THEN N'する' ELSE N'しない' END" Format="" />
+      <Column ID="460" DispNumber="902" DispName="振込先銀行CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURIKOMI_SAKI_BANK_CD" Format="" />
+      <Column ID="470" DispNumber="903" DispName="振込先銀行名" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURIKOMI_SAKI_BANK_NAME" Format="" />
+      <Column ID="480" DispNumber="904" DispName="振込先支店CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURIKOMI_SAKI_BANK_SHITEN_CD" Format="" />
+      <Column ID="490" DispNumber="905" DispName="振込先支店名" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURIKOMI_SAKI_BANK_SHITEN_NAME" Format="" />
+      <Column ID="500" DispNumber="906" DispName="振込先口座種類" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURIKOMI_SAKI_BANK_KOUZA_SHURUI" Format="" />
+      <Column ID="510" DispNumber="907" DispName="振込先口座番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURIKOMI_SAKI_BANK_KOUZA_NO" Format="" />
+      <Column ID="520" DispNumber="908" DispName="振込先口座名" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURIKOMI_SAKI_BANK_KOUZA_NAME" Format="" />
+
+      <Column ID="530" DispNumber="909" DispName="手数料" Needs="0" TableName="" Name="CASE M_HIKIAI_TORIHIKISAKI_SHIHARAI.TEI_SUU_RYOU_KBN WHEN 1 THEN N'自社負担' ELSE N'先方負担' END" Format="" />
+      <Column ID="540" DispNumber="910" DispName="振込元銀行CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURI_KOMI_MOTO_BANK_CD" Format="" />
+      <Column ID="550" DispNumber="911" DispName="振込元銀行名" Needs="0" TableName="M_BANK4" Name="BANK_NAME_RYAKU" Format="" />
+      <Column ID="560" DispNumber="912" DispName="振込元支店CD" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURI_KOMI_MOTO_BANK_SHITTEN_CD" Format="" />
+      <Column ID="570" DispNumber="913" DispName="振込元支店名" Needs="0" TableName="M_BANK_SHITEN4" Name="BANK_SHIETN_NAME_RYAKU" Format="" />
+      <Column ID="580" DispNumber="914" DispName="振込元口座種類" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURI_KOMI_MOTO_SHURUI" Format="" />
+      <Column ID="590" DispNumber="915" DispName="振込元口座番号" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURI_KOMI_MOTO_NO" Format="" />
+      <Column ID="600" DispNumber="916" DispName="振込元口座名" Needs="0" TableName="M_HIKIAI_TORIHIKISAKI_SHIHARAI" Name="FURI_KOMI_MOTO_NAME" Format="" />
+
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON M_HIKIAI_TORIHIKISAKI.TORIHIKISAKI_KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_BUSHO1">LEFT JOIN M_BUSHO M_BUSHO1 ON M_HIKIAI_TORIHIKISAKI.EIGYOU_TANTOU_BUSHO_CD = M_BUSHO1.BUSHO_CD</JoinCondition>
+    <JoinCondition TableName="M_SHAIN1">LEFT JOIN M_SHAIN M_SHAIN1 ON M_HIKIAI_TORIHIKISAKI.EIGYOU_TANTOU_CD = M_SHAIN1.SHAIN_CD</JoinCondition>
+    <JoinCondition TableName="M_TODOUFUKEN1">LEFT JOIN M_TODOUFUKEN M_TODOUFUKEN1 ON M_HIKIAI_TORIHIKISAKI.TORIHIKISAKI_TODOUFUKEN_CD = M_TODOUFUKEN1.TODOUFUKEN_CD</JoinCondition>
+    <JoinCondition TableName="M_SHUUKEI_KOUMOKU1">LEFT JOIN M_SHUUKEI_KOUMOKU M_SHUUKEI_KOUMOKU1 ON M_HIKIAI_TORIHIKISAKI.SHUUKEI_ITEM_CD = M_SHUUKEI_KOUMOKU1.SHUUKEI_KOUMOKU_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHU1">LEFT JOIN M_GYOUSHU M_GYOUSHU1 ON M_HIKIAI_TORIHIKISAKI.GYOUSHU_CD = M_GYOUSHU1.GYOUSHU_CD</JoinCondition>
+    <JoinCondition TableName="M_NYUUSHUKKIN_KBN1">LEFT JOIN M_NYUUSHUKKIN_KBN M_NYUUSHUKKIN_KBN1 ON M_HIKIAI_TORIHIKISAKI_SEIKYUU.KAISHUU_HOUHOU = M_NYUUSHUKKIN_KBN1.NYUUSHUKKIN_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_NYUUKINSAKI1">LEFT JOIN M_NYUUKINSAKI M_NYUUKINSAKI1 ON M_HIKIAI_TORIHIKISAKI_SEIKYUU.NYUUKINSAKI_CD = M_NYUUKINSAKI1.NYUUKINSAKI_CD</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN2">LEFT JOIN M_KYOTEN M_KYOTEN2 ON M_HIKIAI_TORIHIKISAKI_SEIKYUU.SEIKYUU_KYOTEN_CD = M_KYOTEN2.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_NYUUSHUKKIN_KBN2">LEFT JOIN M_NYUUSHUKKIN_KBN M_NYUUSHUKKIN_KBN2 ON M_HIKIAI_TORIHIKISAKI_SHIHARAI.SHIHARAI_HOUHOU = M_NYUUSHUKKIN_KBN2.NYUUSHUKKIN_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN3">LEFT JOIN M_KYOTEN M_KYOTEN3 ON M_HIKIAI_TORIHIKISAKI_SHIHARAI.SHIHARAI_KYOTEN_CD = M_KYOTEN3.KYOTEN_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

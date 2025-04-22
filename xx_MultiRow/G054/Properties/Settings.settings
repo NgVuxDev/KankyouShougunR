@@ -1,0 +1,65 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Shougun.Core.SalesPayment.UriageShiharaiNyuuryoku.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DenpyouCtrl" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DetailCtrl" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ApDenpyouCtrl" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;KYOTEN_CD:拠点CD:True:0&lt;/string&gt;
+  &lt;string&gt;NYUURYOKU_TANTOUSHA_CD:入力担当者:True:1&lt;/string&gt;
+  &lt;string&gt;ENTRY_NUMBER:売上/支払番号:True:5&lt;/string&gt;
+  &lt;string&gt;RENBAN:年連番/日連番:True:6&lt;/string&gt;
+  &lt;string&gt;KAKUTEI_KBN:確定区分:True:7&lt;/string&gt;
+  &lt;string&gt;UKETSUKE_NUMBER:受付番号:True:8&lt;/string&gt;
+  &lt;string&gt;DENPYOU_DATE:伝票日付:True:10&lt;/string&gt;
+  &lt;string&gt;URIAGE_DATE:売上日付:True:11&lt;/string&gt;
+  &lt;string&gt;SHIHARAI_DATE:支払日付:True:12&lt;/string&gt;
+  &lt;string&gt;GYOUSHA_CD:業者CD:True:13&lt;/string&gt;
+  &lt;string&gt;GYOUSHA_NAME_RYAKU:業者名:True:14&lt;/string&gt;
+  &lt;string&gt;GENBA_CD:現場CD:True:15&lt;/string&gt;
+  &lt;string&gt;GENBA_NAME_RYAKU:現場名:True:16&lt;/string&gt;
+  &lt;string&gt;TORIHIKISAKI_CD:取引先CD:True:17&lt;/string&gt;
+  &lt;string&gt;TORIHIKISAKI_NAME_RYAKU:取引先名:True:18&lt;/string&gt;
+  &lt;string&gt;NIZUMI_GYOUSHA_CD:荷積業者CD:True:19&lt;/string&gt;
+  &lt;string&gt;NIZUMI_GYOUSHA_NAME:荷積業者名:True:20&lt;/string&gt;
+  &lt;string&gt;NIZUMI_GENBA_CD:荷積現場CD:True:21&lt;/string&gt;
+  &lt;string&gt;NIZUMI_GENBA_NAME:荷積現場名:True:22&lt;/string&gt;
+  &lt;string&gt;NIOROSHI_GYOUSHA_CD:荷降業者CD:True:23&lt;/string&gt;
+  &lt;string&gt;NIOROSHI_GYOUSHA_NAME:荷降業者名:True:24&lt;/string&gt;
+  &lt;string&gt;NIOROSHI_GENBA_CD:荷降現場CD:True:25&lt;/string&gt;
+  &lt;string&gt;NIOROSHI_GENBA_NAME:荷降現場名:True:26&lt;/string&gt;
+  &lt;string&gt;UNPAN_GYOUSHA_CD:運搬業者CD:True:27&lt;/string&gt;
+  &lt;string&gt;UNPAN_GYOUSHA_NAME:運搬業者名:True:28&lt;/string&gt;
+  &lt;string&gt;SHASHU_CD:車種CD:True:29&lt;/string&gt;
+  &lt;string&gt;SHARYOU_CD:車輌CD:True:31&lt;/string&gt;
+  &lt;string&gt;SHARYOU_NAME_RYAKU:車輌名:True:32&lt;/string&gt;
+  &lt;string&gt;UNTENSHA_CD:運転者CD:True:33&lt;/string&gt;
+  &lt;string&gt;NINZUU_CNT:人数:True:35&lt;/string&gt;
+  &lt;string&gt;KEITAI_KBN_CD:形態区分CD:True:36&lt;/string&gt;
+  &lt;string&gt;MANIFEST_SHURUI_CD:マニ種類CD:True:38&lt;/string&gt;
+  &lt;string&gt;MANIFEST_TEHAI_CD:マニ手配CD:True:40&lt;/string&gt;
+  &lt;string&gt;EIGYOU_TANTOUSHA_CD:営業担当者CD:True:42&lt;/string&gt;
+  &lt;string&gt;DENPYOU_BIKOU:伝票備考:True:44&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="ApDetailCtrl" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;HINMEI_CD:品名CD:True:3&lt;/string&gt;
+  &lt;string&gt;HINMEI_NAME:品名:True:4&lt;/string&gt;
+  &lt;string&gt;SUURYOU:数量:True:7&lt;/string&gt;
+  &lt;string&gt;UNIT_CD:単位CD:True:8&lt;/string&gt;
+  &lt;string&gt;TANKA:単価:True:10&lt;/string&gt;
+  &lt;string&gt;KINGAKU:金額:True:11&lt;/string&gt;
+  &lt;string&gt;MANIFEST_ID:ﾏﾆﾌｪｽﾄ番号:True:13&lt;/string&gt;
+  &lt;string&gt;MEISAI_BIKOU:備考:True:14&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

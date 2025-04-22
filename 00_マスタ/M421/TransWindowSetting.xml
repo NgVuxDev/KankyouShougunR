@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<ArrayOfTransWindowSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TransWindowSetting>
+    <TransWindowName>覚書一括入力</TransWindowName>
+    <AssemblyName>OboegakiIkkatuHoshu.dll</AssemblyName>
+    <FormName>Shougun.Core.Master.OboegakiIkkatuHoshu.APP.F00_G014Form</FormName>
+  </TransWindowSetting>
+  <TransWindowSetting>
+    <TransWindowName>覚書一括入力</TransWindowName>
+    <AssemblyName>OboegakiIkkatuHoshu.dll</AssemblyName>
+    <FormName>Shougun.Core.Master.OboegakiIkkatuHoshu.APP.F00_G014Header</FormName>
+  </TransWindowSetting>
+</ArrayOfTransWindowSetting>

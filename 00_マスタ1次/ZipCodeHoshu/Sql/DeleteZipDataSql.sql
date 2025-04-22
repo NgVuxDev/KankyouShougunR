@@ -1,0 +1,1 @@
+DELETE FROM dbo.S_ZIP_CODE

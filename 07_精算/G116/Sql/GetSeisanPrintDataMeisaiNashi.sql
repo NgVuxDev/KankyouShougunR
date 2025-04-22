@@ -1,0 +1,339 @@
+SELECT
+    TSD.SEISAN_NUMBER                              --ê∏éZî‘çÜ
+  , TSDKE.KAGAMI_NUMBER                            --ä”î‘çÜ
+  , TSDKE.ROW_NUMBER                               --çsî‘çÜ
+  , TSDKE.DENPYOU_SHURUI_CD                        --ì`ï[éÌóﬁCD
+  , TSDKE.DENPYOU_SYSTEM_ID                        --ì`ï[ÉVÉXÉeÉÄID
+  , TSDKE.DENPYOU_SEQ                              --ì`ï[é}î‘
+  , TSDKE.DETAIL_SYSTEM_ID                         --ñæç◊ÉVÉXÉeÉÄID
+  , TSDKE.DENPYOU_NUMBER                           --ì`ï[î‘çÜ
+  , TSDKE.DENPYOU_DATE                             --ì`ï[ì˙ït
+  , TSDKE.TORIHIKISAKI_CD                          --éÊà¯êÊCD
+  , TSDKE.GYOUSHA_CD                               --ã∆é“CD
+  , TSDKE.GYOUSHA_NAME1                            --ã∆é“ñº1
+  , TSDKE.GYOUSHA_NAME2                            --ã∆é“ñº2
+  , TSDKE.GENBA_CD                                 --åªèÍCD
+  , TSDKE.GENBA_NAME1                              --åªèÍñº1
+  , TSDKE.GENBA_NAME2                              --åªèÍñº2
+  , TSDKE.HINMEI_CD                                --ïiñºCD
+  , TSDKE.HINMEI_NAME                              --ïiñº
+  , TSDKE.SUURYOU                                  --êîó 
+  , TSDKE.UNIT_CD                                  --íPà CD
+  , TSDKE.UNIT_NAME                                --íPà ñº
+  , TSDKE.TANKA						               --íPâø
+  , ISNULL(TSDKE.KINGAKU,0) AS KINGAKU             --ã‡äz
+  , ISNULL(TSDKE.UCHIZEI_GAKU,0) AS UCHIZEI_GAKU   --ì‡ê≈äz
+  , ISNULL(TSDKE.SOTOZEI_GAKU,0) AS SOTOZEI_GAKU   --äOê≈äz
+  , ISNULL(TSDKE.DENPYOU_UCHIZEI_GAKU,0) AS DENPYOU_UCHIZEI_GAKU   --ì`ï[ì‡ê≈äz
+  , ISNULL(TSDKE.DENPYOU_SOTOZEI_GAKU,0) AS DENPYOU_SOTOZEI_GAKU   --ì`ï[äOê≈äz
+  , TSDKE.DENPYOU_ZEI_KBN_CD                       --ì`ï[ê≈ãÊï™CD
+  , TSDKE.MEISAI_ZEI_KBN_CD                        --ñæç◊ê≈ãÊï™CD
+  , TSDKE.MEISAI_BIKOU                             --ñæç◊îıçl
+  , TSDKE.DENPYOU_ZEI_KEISAN_KBN_CD                --ì`ï[ê≈åvéZãÊï™
+  , TSDKE.TORIHIKISAKI_CD                          --éÊà¯êÊCD
+  , TSDKE.GYOUSHA_CD                               --ã∆é“CD
+  , TSDKE.GENBA_CD                                 --åªèÍCD
+  , TSDKE.DAIHYOU_PRINT_KBN                        --ë„ï\é“àÛéöãÊï™
+  , TSDKE.CORP_NAME                                --âÔé–ñº
+  , TSDKE.CORP_DAIHYOU                             --ë„ï\é“ñº
+  , TSDKE.KYOTEN_NAME_PRINT_KBN                    --ãíì_ñºàÛéöãÊï™
+  , TSDKE.TSDK_KYOTEN_CD AS TSDK_KYOTEN_CD         --ãíì_CD
+  , TSDKE.KYOTEN_NAME                              --ãíì_ñº
+  , TSDKE.KYOTEN_DAIHYOU                           --ãíì_ë„ï\é“ñº
+  , TSDKE.KYOTEN_POST                              --ãíì_óXï÷î‘çÜ
+  , TSDKE.KYOTEN_ADDRESS1                          --ãíì_èZèä1
+  , TSDKE.KYOTEN_ADDRESS2                          --ãíì_èZèä2
+  , TSDKE.KYOTEN_TEL                               --ãíì_TEL
+  , TSDKE.KYOTEN_FAX                               --ãíì_FAX
+  , TSDKE.SHIHARAI_SOUFU_NAME1                     --éxï•ñæç◊èëëóïtêÊ1
+  , TSDKE.SHIHARAI_SOUFU_NAME2                     --éxï•ñæç◊èëëóïtêÊ2
+  , TSDKE.SHIHARAI_SOUFU_KEISHOU1                  --éxï•ñæç◊èëëóïtêÊåhèÃ1
+  , TSDKE.SHIHARAI_SOUFU_KEISHOU2                  --éxï•ñæç◊èëëóïtêÊåhèÃ2
+  , TSDKE.SHIHARAI_SOUFU_POST                      --éxï•ñæç◊èëëóïtêÊóXï÷î‘çÜ
+  , TSDKE.SHIHARAI_SOUFU_ADDRESS1                  --éxï•ñæç◊èëëóïtêÊèZèä1
+  , TSDKE.SHIHARAI_SOUFU_ADDRESS2                  --éxï•ñæç◊èëëóïtêÊèZèä2
+  , TSDKE.SHIHARAI_SOUFU_BUSHO                     --éxï•ñæç◊èëëóïtêÊïîèê
+  , TSDKE.SHIHARAI_SOUFU_TANTOU                    --éxï•ñæç◊èëëóïtêÊíSìñé“
+  , TSDKE.SHIHARAI_SOUFU_TEL                       --éxï•ñæç◊èëëóïtêÊTEL
+  , TSDKE.SHIHARAI_SOUFU_FAX                       --éxï•ñæç◊èëëóïtêÊFAX
+  , ISNULL(TSDKE.KONKAI_SHIHARAI_GAKU,0) AS TSDK_KONKAI_SHIHARAI_GAKU        --ç°âÒéxï•äz
+  , ISNULL(TSDKE.KONKAI_SEI_UTIZEI_GAKU,0) AS TSDK_KONKAI_SEI_UTIZEI_GAKU    --ç°âÒêøì‡ê≈äz
+  , ISNULL(TSDKE.KONKAI_SEI_SOTOZEI_GAKU,0) AS TSDK_KONKAI_SEI_SOTOZEI_GAKU  --ç°âÒêøäOê≈äz
+  , ISNULL(TSDKE.KONKAI_DEN_UTIZEI_GAKU,0) AS TSDK_KONKAI_DEN_UTIZEI_GAKU    --ç°âÒì`ì‡ê≈äz
+  , ISNULL(TSDKE.KONKAI_DEN_SOTOZEI_GAKU,0) AS TSDK_KONKAI_DEN_SOTOZEI_GAKU  --ç°âÒì`äOê≈äz
+  , ISNULL(TSDKE.KONKAI_MEI_UTIZEI_GAKU,0) AS TSDK_KONKAI_MEI_UTIZEI_GAKU    --ç°âÒñæì‡ê≈äz
+  , ISNULL(TSDKE.KONKAI_MEI_SOTOZEI_GAKU,0) AS TSDK_KONKAI_MEI_SOTOZEI_GAKU  --ç°âÒñæäOê≈äz
+  , TSD.KYOTEN_CD                                 --ãíì_CD
+  , TSD.SHIMEBI                                   --í˜ì˙
+  , TSD.TORIHIKISAKI_CD AS TSD_TORIHIKISAKI_CD    --éÊà¯êÊCD
+  , TSD.SHOSHIKI_KBN                              --èëéÆãÊï™
+  , TSD.SHOSHIKI_MEISAI_KBN                       --èëéÆñæç◊ãÊï™
+  , TSD.SHOSHIKI_GENBA_KBN						  --éxï•ñæç◊èëèëéÆ3
+  , TSD.SHIHARAI_KEITAI_KBN                       --éxï•å`ë‘ãÊï™
+  , TSD.SHUKKIN_MEISAI_KBN                        --ì¸ã‡ñæç◊ãÊï™
+  , TSD.YOUSHI_KBN                                --ópéÜãÊï™
+  , TSD.SEISAN_DATE                               --ê∏éZì˙ït
+  , TSD.SHUKKIN_YOTEI_BI                          --èoã‡ó\íËì˙
+  , TSDKE.BIKOU_1								  --îıçl1
+  , TSDKE.BIKOU_2								  --îıçl2
+  , ISNULL(TSD.ZENKAI_KURIKOSI_GAKU,0) AS ZENKAI_KURIKOSI_GAKU              --ëOâÒåJâzäz
+  , ISNULL(TSD.KONKAI_SHUKKIN_GAKU,0) AS KONKAI_SHUKKIN_GAKU                --ç°âÒèoã‡äz
+  , ISNULL(TSD.KONKAI_CHOUSEI_GAKU,0) AS KONKAI_CHOUSEI_GAKU                --ç°âÒí≤êÆäz
+  , ISNULL(TSD.KONKAI_SHIHARAI_GAKU,0) AS TSD_KONKAI_SHIHARAI_GAKU          --ç°âÒéxï•äz
+  , ISNULL(TSD.KONKAI_SEI_UTIZEI_GAKU,0) AS TSD_KONKAI_SEI_UTIZEI_GAKU      --ç°âÒêøì‡ê≈äz
+  , ISNULL(TSD.KONKAI_SEI_SOTOZEI_GAKU,0) AS TSD_KONKAI_SEI_SOTOZEI_GAKU    --ç°âÒêøäOê≈äz
+  , ISNULL(TSD.KONKAI_DEN_UTIZEI_GAKU,0) AS TSD_KONKAI_DEN_UTIZEI_GAKU      --ç°âÒì`ì‡ê≈äz
+  , ISNULL(TSD.KONKAI_DEN_SOTOZEI_GAKU,0) AS TSD_KONKAI_DEN_SOTOZEI_GAKU    --ç°âÒì`äOê≈äz
+  , ISNULL(TSD.KONKAI_MEI_UTIZEI_GAKU,0) AS TSD_KONKAI_MEI_UTIZEI_GAKU      --ç°âÒñæì‡ê≈äz
+  , ISNULL(TSD.KONKAI_MEI_SOTOZEI_GAKU,0) AS TSD_KONKAI_MEI_SOTOZEI_GAKU    --ç°âÒñæäOê≈äz
+  , ISNULL(TSD.KONKAI_SEISAN_GAKU,0) AS KONKAI_SEISAN_GAKU                  --ç°âÒå‰ê∏éZäz
+  , TSD.HAKKOU_KBN                                --î≠çsãÊï™
+  , TSD.SHIME_JIKKOU_NO                           --í˜é¿çsî‘çÜ
+  , (ISNULL(TSD.ZENKAI_KURIKOSI_GAKU,0) - ISNULL(TSD.KONKAI_SHUKKIN_GAKU,0) - ISNULL(TSD.KONKAI_CHOUSEI_GAKU,0)) AS SASIHIKIGAKU --ç∑à¯åJâzäz
+  , (ISNULL(TSDKE.KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(TSDKE.KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(TSDKE.KONKAI_DEN_UTIZEI_GAKU,0) 
+        + ISNULL(TSDKE.KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(TSDKE.KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(TSDKE.KONKAI_MEI_SOTOZEI_GAKU,0)) AS SYOUHIZEIGAKU--è¡îÔê≈äz
+  , (ISNULL(TSDKE.UCHIZEI_GAKU,0) + ISNULL(TSDKE.SOTOZEI_GAKU,0)) AS MEISEI_SYOHIZEI
+  , RANK() OVER (ORDER BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD,TSDKE.GENBA_CD,TSDKE.DENPYOU_DATE,TSDKE.DENPYOU_SHURUI_CD,TSDKE.DENPYOU_NUMBER) AS RANK_DENPYO_1 --ì`ï[ÉâÉìÉN
+  , SUM(ISNULL(TSDKE.UCHIZEI_GAKU,0) + ISNULL(TSDKE.SOTOZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD,TSDKE.GENBA_CD,TSDKE.DENPYOU_DATE,TSDKE.DENPYOU_SHURUI_CD,TSDKE.DENPYOU_NUMBER) AS DENPYO_SYOHIZEI_1 --ì`ï[è¡îÔê≈çáåv
+  , SUM(TSDKE.KINGAKU) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD,TSDKE.GENBA_CD,TSDKE.DENPYOU_DATE,TSDKE.DENPYOU_SHURUI_CD,TSDKE.DENPYOU_NUMBER) AS DENPYO_KINGAKU_1 --ì`ï[ã‡äzçáåv
+  , RANK() OVER (ORDER BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD,TSDKE.GENBA_CD) AS RANK_GENBA_1 --åªèÍÉâÉìÉN
+  , SUM(ISNULL(TSDKE.UCHIZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD,TSDKE.GENBA_CD) AS GENBA_UCHIZEI --åªèÍì‡ê≈è¡îÔê≈çáåv
+  , SUM(ISNULL(TSDKE.SOTOZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD,TSDKE.GENBA_CD) AS GENBA_SOTOZEI --åªèÍäOê≈è¡îÔê≈çáåv
+  , SUM(ISNULL(TSDKE.UCHIZEI_GAKU,0) + ISNULL(TSDKE.SOTOZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD,TSDKE.GENBA_CD) AS GENBA_SYOHIZEI_1 --åªèÍè¡îÔê≈çáåv
+  , SUM(TSDKE.KINGAKU) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD,TSDKE.GENBA_CD) AS GENBA_KINGAKU_1 --åªèÍã‡äzçáåv
+  , RANK() OVER (ORDER BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD) AS RANK_GYOUSHA_1 --ã∆é“ÉâÉìÉN
+  , SUM(ISNULL(TSDKE.UCHIZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD) AS GYOUSHA_UCHIZEI --ã∆é“ì‡ê≈è¡îÔê≈çáåv
+  , SUM(ISNULL(TSDKE.SOTOZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD) AS GYOUSHA_SOTOZEI --ã∆é“äOê≈è¡îÔê≈çáåv
+  , SUM(ISNULL(TSDKE.UCHIZEI_GAKU,0) + ISNULL(TSDKE.SOTOZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD) AS GYOUSHA_SYOHIZEI_1 --ã∆é“è¡îÔê≈çáåv
+  , SUM(TSDKE.KINGAKU) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER,TSDKE.GYOUSHA_CD) AS GYOUSHA_KINGAKU_1 --ã∆é“ã‡äzçáåv
+  , RANK() OVER (ORDER BY TSDKE.KAGAMI_NUMBER) AS RANK_SEISAN_1 --ê∏éZÉâÉìÉN
+  , SUM(ISNULL(TSDKE.UCHIZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER) AS SEISAN_UCHIZEI_1 --ê∏éZè¡îÔê≈çáåv(ì‡)
+  , SUM(ISNULL(TSDKE.SOTOZEI_GAKU,0)) OVER (PARTITION BY TSDKE.KAGAMI_NUMBER) AS SEISAN_SOTOZEI_1 --ê∏éZè¡îÔê≈çáåv(äO)
+  , TSDKE.TSDK_GYOUSHA_CD                         -- ã∆é“CD
+  , TSD.TOUROKU_NO
+  , TSD.INVOICE_KBN
+  , ISNULL(TSDKE.KONKAI_KAZEI_KBN_1,0) AS KONKAI_KAZEI_KBN_1            --ç°âÒâ€ê≈ãÊï™ÇP
+  , ISNULL(TSDKE.KONKAI_KAZEI_RATE_1,0) AS KONKAI_KAZEI_RATE_1          --ç°âÒâ€ê≈ó¶ÇP
+  , ISNULL(TSDKE.KONKAI_KAZEI_GAKU_1,0) AS KONKAI_KAZEI_GAKU_1          --ç°âÒâ€ê≈ê≈î≤ã‡äzÇP
+  , ISNULL(TSDKE.KONKAI_KAZEI_ZEIGAKU_1,0) AS KONKAI_KAZEI_ZEIGAKU_1    --ç°âÒâ€ê≈ê≈äzÇP
+  , ISNULL(TSDKE.KONKAI_KAZEI_KBN_2,0) AS KONKAI_KAZEI_KBN_2            --ç°âÒâ€ê≈ãÊï™ÇQ
+  , ISNULL(TSDKE.KONKAI_KAZEI_RATE_2,0) AS KONKAI_KAZEI_RATE_2          --ç°âÒâ€ê≈ó¶ÇQ
+  , ISNULL(TSDKE.KONKAI_KAZEI_GAKU_2,0) AS KONKAI_KAZEI_GAKU_2          --ç°âÒâ€ê≈ê≈î≤ã‡äzÇQ
+  , ISNULL(TSDKE.KONKAI_KAZEI_ZEIGAKU_2,0) AS KONKAI_KAZEI_ZEIGAKU_2    --ç°âÒâ€ê≈ê≈äzÇQ
+  , ISNULL(TSDKE.KONKAI_KAZEI_KBN_3,0) AS KONKAI_KAZEI_KBN_3            --ç°âÒâ€ê≈ãÊï™ÇR
+  , ISNULL(TSDKE.KONKAI_KAZEI_RATE_3,0) AS KONKAI_KAZEI_RATE_3          --ç°âÒâ€ê≈ó¶ÇR
+  , ISNULL(TSDKE.KONKAI_KAZEI_GAKU_3,0) AS KONKAI_KAZEI_GAKU_3          --ç°âÒâ€ê≈ê≈î≤ã‡äzÇR
+  , ISNULL(TSDKE.KONKAI_KAZEI_ZEIGAKU_3,0) AS KONKAI_KAZEI_ZEIGAKU_3    --ç°âÒâ€ê≈ê≈äzÇR
+  , ISNULL(TSDKE.KONKAI_KAZEI_KBN_4,0) AS KONKAI_KAZEI_KBN_4            --ç°âÒâ€ê≈ãÊï™ÇS
+  , ISNULL(TSDKE.KONKAI_KAZEI_RATE_4,0) AS KONKAI_KAZEI_RATE_4          --ç°âÒâ€ê≈ó¶ÇS
+  , ISNULL(TSDKE.KONKAI_KAZEI_GAKU_4,0) AS KONKAI_KAZEI_GAKU_4          --ç°âÒâ€ê≈ê≈î≤ã‡äzÇS
+  , ISNULL(TSDKE.KONKAI_KAZEI_ZEIGAKU_4,0) AS KONKAI_KAZEI_ZEIGAKU_4    --ç°âÒâ€ê≈ê≈äzÇS
+  , ISNULL(TSDKE.KONKAI_HIKAZEI_KBN,0) AS KONKAI_HIKAZEI_KBN            --ç°âÒîÒâ€ê≈ãÊï™
+  , ISNULL(TSDKE.KONKAI_HIKAZEI_GAKU,0) AS KONKAI_HIKAZEI_GAKU          --ç°âÒîÒâ€ê≈äz
+  , ISNULL(TSDKE.SHOUHIZEI_RATE,0) AS SHOUHIZEI_RATE                    --è¡îÔê≈ó¶
+FROM
+  T_SEISAN_DENPYOU TSD 
+  INNER JOIN (
+    SELECT
+      TSDK.SEISAN_NUMBER                              --ê∏éZî‘çÜ
+      , TSDK.KAGAMI_NUMBER                            --ä”î‘çÜ
+      , TSDE.ROW_NUMBER                               --çsî‘çÜ
+      , TSDE.DENPYOU_SHURUI_CD                        --ì`ï[éÌóﬁCD
+      , TSDE.DENPYOU_SYSTEM_ID                        --ì`ï[ÉVÉXÉeÉÄID
+      , TSDE.DENPYOU_SEQ                              --ì`ï[é}î‘
+      , TSDE.DETAIL_SYSTEM_ID                         --ñæç◊ÉVÉXÉeÉÄID
+      , TSDE.DENPYOU_NUMBER                           --ì`ï[î‘çÜ
+      , TSDE.DENPYOU_DATE                             --ì`ï[ì˙ït
+      , TSDE.GYOUSHA_CD                               --ã∆é“CD
+      , TSDE.GYOUSHA_NAME1                            --ã∆é“ñº1
+      , TSDE.GYOUSHA_NAME2                            --ã∆é“ñº2
+      , TSDE.GENBA_CD                                 --åªèÍCD
+      , TSDE.GENBA_NAME1                              --åªèÍñº1
+      , TSDE.GENBA_NAME2                              --åªèÍñº2
+      , TSDE.HINMEI_CD                                --ïiñºCD
+      , TSDE.HINMEI_NAME                              --ïiñº
+      , TSDE.SUURYOU                                  --êîó 
+      , TSDE.UNIT_CD                                  --íPà CD
+      , TSDE.UNIT_NAME                                --íPà ñº
+      , TSDE.TANKA						              --íPâø
+      , TSDE.KINGAKU                                  --ã‡äz
+      , ISNULL(TSDE.UCHIZEI_GAKU,0) AS UCHIZEI_GAKU   --ì‡ê≈äz
+      , ISNULL(TSDE.SOTOZEI_GAKU,0) AS SOTOZEI_GAKU   --äOê≈äz
+      , ISNULL(TSDE.DENPYOU_UCHIZEI_GAKU,0) AS DENPYOU_UCHIZEI_GAKU   --ì`ï[ì‡ê≈äz
+      , ISNULL(TSDE.DENPYOU_SOTOZEI_GAKU,0) AS DENPYOU_SOTOZEI_GAKU   --ì`ï[äOê≈äz
+      , TSDE.DENPYOU_ZEI_KBN_CD                       --ì`ï[ê≈ãÊï™CD
+      , TSDE.MEISAI_ZEI_KBN_CD                        --ñæç◊ê≈ãÊï™CD
+      , TSDE.MEISAI_BIKOU                             --ñæç◊îıçl
+      , TSDE.DENPYOU_ZEI_KEISAN_KBN_CD                --ì`ï[ê≈åvéZãÊï™
+      , TSDK.TORIHIKISAKI_CD                          --éÊà¯êÊCD
+      , TSDK.DAIHYOU_PRINT_KBN                        --ë„ï\é“àÛéöãÊï™
+      , TSDK.CORP_NAME                                --âÔé–ñº
+      , TSDK.CORP_DAIHYOU                             --ë„ï\é“ñº
+      , TSDK.KYOTEN_NAME_PRINT_KBN                    --ãíì_ñºàÛéöãÊï™
+      , TSDK.KYOTEN_CD AS TSDK_KYOTEN_CD              --ãíì_CD
+      , TSDK.KYOTEN_NAME                              --ãíì_ñº
+      , TSDK.KYOTEN_DAIHYOU                           --ãíì_ë„ï\é“ñº
+      , TSDK.KYOTEN_POST                              --ãíì_óXï÷î‘çÜ
+      , TSDK.KYOTEN_ADDRESS1                          --ãíì_èZèä1
+      , TSDK.KYOTEN_ADDRESS2                          --ãíì_èZèä2
+      , TSDK.KYOTEN_TEL                               --ãíì_TEL
+      , TSDK.KYOTEN_FAX                               --ãíì_FAX
+      , TSDK.SHIHARAI_SOUFU_NAME1                     --éxï•ñæç◊èëëóïtêÊ1
+      , TSDK.SHIHARAI_SOUFU_NAME2                     --éxï•ñæç◊èëëóïtêÊ2
+      , TSDK.SHIHARAI_SOUFU_KEISHOU1                  --éxï•ñæç◊èëëóïtêÊåhèÃ1
+      , TSDK.SHIHARAI_SOUFU_KEISHOU2                  --éxï•ñæç◊èëëóïtêÊåhèÃ2
+      , TSDK.SHIHARAI_SOUFU_POST                      --éxï•ñæç◊èëëóïtêÊóXï÷î‘çÜ
+      , TSDK.SHIHARAI_SOUFU_ADDRESS1                  --éxï•ñæç◊èëëóïtêÊèZèä1
+      , TSDK.SHIHARAI_SOUFU_ADDRESS2                  --éxï•ñæç◊èëëóïtêÊèZèä2
+      , TSDK.SHIHARAI_SOUFU_BUSHO                     --éxï•ñæç◊èëëóïtêÊïîèê
+      , TSDK.SHIHARAI_SOUFU_TANTOU                    --éxï•ñæç◊èëëóïtêÊíSìñé“
+      , TSDK.SHIHARAI_SOUFU_TEL                       --éxï•ñæç◊èëëóïtêÊTEL
+      , TSDK.SHIHARAI_SOUFU_FAX                       --éxï•ñæç◊èëëóïtêÊFAX
+      , ISNULL(TSDK.KONKAI_SHIHARAI_GAKU,0) AS KONKAI_SHIHARAI_GAKU        --ç°âÒéxï•äz
+      , ISNULL(TSDK.KONKAI_SEI_UTIZEI_GAKU,0) AS KONKAI_SEI_UTIZEI_GAKU    --ç°âÒêøì‡ê≈äz
+      , ISNULL(TSDK.KONKAI_SEI_SOTOZEI_GAKU,0) AS KONKAI_SEI_SOTOZEI_GAKU  --ç°âÒêøäOê≈äz
+      , ISNULL(TSDK.KONKAI_DEN_UTIZEI_GAKU,0) AS KONKAI_DEN_UTIZEI_GAKU    --ç°âÒì`ì‡ê≈äz
+      , ISNULL(TSDK.KONKAI_DEN_SOTOZEI_GAKU,0) AS KONKAI_DEN_SOTOZEI_GAKU  --ç°âÒì`äOê≈äz
+      , ISNULL(TSDK.KONKAI_MEI_UTIZEI_GAKU,0) AS KONKAI_MEI_UTIZEI_GAKU    --ç°âÒñæì‡ê≈äz
+      , ISNULL(TSDK.KONKAI_MEI_SOTOZEI_GAKU,0) AS KONKAI_MEI_SOTOZEI_GAKU  --ç°âÒñæäOê≈äz
+      , TSDK.GYOUSHA_CD AS TSDK_GYOUSHA_CD            --ã∆é“CD
+	  , TSDK.BIKOU_1								  --îıçl1
+	  , TSDK.BIKOU_2								  --îıçl2
+      , ISNULL(TSDK.KONKAI_KAZEI_KBN_1,0) AS KONKAI_KAZEI_KBN_1            --ç°âÒâ€ê≈ãÊï™ÇP
+	  , ISNULL(TSDK.KONKAI_KAZEI_RATE_1,0) AS KONKAI_KAZEI_RATE_1          --ç°âÒâ€ê≈ó¶ÇP
+	  , ISNULL(TSDK.KONKAI_KAZEI_GAKU_1,0) AS KONKAI_KAZEI_GAKU_1          --ç°âÒâ€ê≈ê≈î≤ã‡äzÇP
+	  , ISNULL(TSDK.KONKAI_KAZEI_ZEIGAKU_1,0) AS KONKAI_KAZEI_ZEIGAKU_1    --ç°âÒâ€ê≈ê≈äzÇP
+      , ISNULL(TSDK.KONKAI_KAZEI_KBN_2,0) AS KONKAI_KAZEI_KBN_2            --ç°âÒâ€ê≈ãÊï™ÇQ
+	  , ISNULL(TSDK.KONKAI_KAZEI_RATE_2,0) AS KONKAI_KAZEI_RATE_2          --ç°âÒâ€ê≈ó¶ÇQ
+	  , ISNULL(TSDK.KONKAI_KAZEI_GAKU_2,0) AS KONKAI_KAZEI_GAKU_2          --ç°âÒâ€ê≈ê≈î≤ã‡äzÇQ
+	  , ISNULL(TSDK.KONKAI_KAZEI_ZEIGAKU_2,0) AS KONKAI_KAZEI_ZEIGAKU_2    --ç°âÒâ€ê≈ê≈äzÇQ
+      , ISNULL(TSDK.KONKAI_KAZEI_KBN_3,0) AS KONKAI_KAZEI_KBN_3            --ç°âÒâ€ê≈ãÊï™ÇR
+	  , ISNULL(TSDK.KONKAI_KAZEI_RATE_3,0) AS KONKAI_KAZEI_RATE_3          --ç°âÒâ€ê≈ó¶ÇR
+	  , ISNULL(TSDK.KONKAI_KAZEI_GAKU_3,0) AS KONKAI_KAZEI_GAKU_3          --ç°âÒâ€ê≈ê≈î≤ã‡äzÇR
+	  , ISNULL(TSDK.KONKAI_KAZEI_ZEIGAKU_3,0) AS KONKAI_KAZEI_ZEIGAKU_3    --ç°âÒâ€ê≈ê≈äzÇR
+      , ISNULL(TSDK.KONKAI_KAZEI_KBN_4,0) AS KONKAI_KAZEI_KBN_4            --ç°âÒâ€ê≈ãÊï™ÇS
+	  , ISNULL(TSDK.KONKAI_KAZEI_RATE_4,0) AS KONKAI_KAZEI_RATE_4          --ç°âÒâ€ê≈ó¶ÇS
+	  , ISNULL(TSDK.KONKAI_KAZEI_GAKU_4,0) AS KONKAI_KAZEI_GAKU_4          --ç°âÒâ€ê≈ê≈î≤ã‡äzÇS
+	  , ISNULL(TSDK.KONKAI_KAZEI_ZEIGAKU_4,0) AS KONKAI_KAZEI_ZEIGAKU_4    --ç°âÒâ€ê≈ê≈äzÇS
+	  , ISNULL(TSDK.KONKAI_HIKAZEI_KBN,0) AS KONKAI_HIKAZEI_KBN            --ç°âÒîÒâ€ê≈ãÊï™
+	  , ISNULL(TSDK.KONKAI_HIKAZEI_GAKU,0) AS KONKAI_HIKAZEI_GAKU          --ç°âÒîÒâ€ê≈äz
+	  , ISNULL(TSDE.SHOUHIZEI_RATE,0) AS SHOUHIZEI_RATE					 --è¡îÔê≈ó¶
+    FROM
+        T_SEISAN_DENPYOU_KAGAMI TSDK 
+        LEFT OUTER JOIN (
+            /*IF shukkinMeisaiKbn != '2'*/
+            SELECT
+                SEISAN_NUMBER
+                ,KAGAMI_NUMBER
+                ,MAX(ROW_NUMBER) AS ROW_NUMBER
+                ,DENPYOU_SHURUI_CD
+                ,MAX(DENPYOU_SYSTEM_ID) AS DENPYOU_SYSTEM_ID
+                ,MAX(DENPYOU_SEQ) AS DENPYOU_SEQ
+                ,MAX(DETAIL_SYSTEM_ID) AS DETAIL_SYSTEM_ID
+                ,DENPYOU_NUMBER
+                ,DENPYOU_DATE
+                ,TORIHIKISAKI_CD
+                ,NULL AS GYOUSHA_CD
+                ,NULL AS GYOUSHA_NAME1
+                ,NULL AS GYOUSHA_NAME2
+                ,NULL AS GENBA_CD
+                ,NULL AS GENBA_NAME1
+                ,NULL AS GENBA_NAME2
+                ,HINMEI_CD
+                ,HINMEI_NAME
+                ,0 AS SUURYOU
+                ,NULL AS UNIT_CD
+                ,'' AS UNIT_NAME
+                ,0 AS TANKA
+                ,SUM(KINGAKU) AS KINGAKU
+                ,0.00 AS UCHIZEI_GAKU
+                ,0.00 AS SOTOZEI_GAKU
+                ,0.00 AS DENPYOU_UCHIZEI_GAKU
+                ,0.00 AS DENPYOU_SOTOZEI_GAKU
+                ,NULL AS DENPYOU_ZEI_KBN_CD
+                ,NULL AS MEISAI_ZEI_KBN_CD
+                ,'' AS MEISAI_BIKOU
+                ,DELETE_FLG
+                ,NULL AS DENPYOU_ZEI_KEISAN_KBN_CD
+				,NULL AS SHOUHIZEI_RATE
+            FROM
+                T_SEISAN_DETAIL TSD_SHUKKIN
+            WHERE
+                TSD_SHUKKIN.DENPYOU_SHURUI_CD = 20
+            GROUP BY TSD_SHUKKIN.SEISAN_NUMBER,TSD_SHUKKIN.KAGAMI_NUMBER,TSD_SHUKKIN.DENPYOU_SHURUI_CD,TSD_SHUKKIN.DENPYOU_NUMBER,TSD_SHUKKIN.DENPYOU_DATE,TSD_SHUKKIN.TORIHIKISAKI_CD,TSD_SHUKKIN.HINMEI_CD,TSD_SHUKKIN.HINMEI_NAME,TSD_SHUKKIN.DELETE_FLG
+            UNION
+            /*END*/ 
+            SELECT
+                SEISAN_NUMBER
+                ,KAGAMI_NUMBER
+                ,ROW_NUMBER
+                ,DENPYOU_SHURUI_CD
+                ,DENPYOU_SYSTEM_ID
+                ,DENPYOU_SEQ
+                ,DETAIL_SYSTEM_ID
+                ,DENPYOU_NUMBER
+                ,DENPYOU_DATE
+                ,TORIHIKISAKI_CD
+                ,GYOUSHA_CD
+                ,GYOUSHA_NAME1
+                ,GYOUSHA_NAME2
+                ,GENBA_CD
+                ,GENBA_NAME1
+                ,GENBA_NAME2
+                ,HINMEI_CD
+                ,HINMEI_NAME
+                ,SUURYOU
+                ,UNIT_CD
+                ,UNIT_NAME
+                ,TANKA
+                ,KINGAKU
+                ,UCHIZEI_GAKU
+                ,SOTOZEI_GAKU
+                ,DENPYOU_UCHIZEI_GAKU
+                ,DENPYOU_SOTOZEI_GAKU
+                ,DENPYOU_ZEI_KBN_CD
+                ,MEISAI_ZEI_KBN_CD
+                ,MEISAI_BIKOU
+                ,DELETE_FLG
+                ,DENPYOU_ZEI_KEISAN_KBN_CD
+				,SHOUHIZEI_RATE
+            FROM
+                T_SEISAN_DETAIL TSDE_A
+            WHERE
+                (TSDE_A.DENPYOU_SHURUI_CD <> 20 OR TSDE_A.DENPYOU_SHURUI_CD IS NULL)
+        ) TSDE ON TSDE.SEISAN_NUMBER = TSDK.SEISAN_NUMBER AND TSDE.KAGAMI_NUMBER = TSDK.KAGAMI_NUMBER
+  ) TSDKE ON TSD.SEISAN_NUMBER = TSDKE.SEISAN_NUMBER
+WHERE
+  TSD.SEISAN_NUMBER = /*seisanNumber*/
+  AND TSD.DELETE_FLG = 0
+  /*IF IsZeroKingakuTaishogai*/
+  AND (
+		 (TSD.SHOSHIKI_KBN != 1 
+		 AND (ISNULL(TSDKE.KONKAI_SHIHARAI_GAKU,0) + 
+			  ISNULL(TSDKE.KONKAI_SEI_UTIZEI_GAKU,0) + 
+			  ISNULL(TSDKE.KONKAI_SEI_SOTOZEI_GAKU,0) + 
+			  ISNULL(TSDKE.KONKAI_DEN_UTIZEI_GAKU,0) + 
+			  ISNULL(TSDKE.KONKAI_DEN_SOTOZEI_GAKU,0) + 
+			  ISNULL(TSDKE.KONKAI_MEI_UTIZEI_GAKU,0) + 
+			  ISNULL(TSDKE.KONKAI_MEI_SOTOZEI_GAKU,0) <> 0))
+		OR
+		(TSD.SHOSHIKI_KBN = 1
+		 AND (CASE TSD.SHIHARAI_KEITAI_KBN 
+				WHEN 2 THEN ISNULL(TSD.KONKAI_SEISAN_GAKU, 0)
+				ELSE (ISNULL(TSD.KONKAI_SHIHARAI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_SEI_UTIZEI_GAKU,0)+ 
+					  ISNULL(TSD.KONKAI_SEI_SOTOZEI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_DEN_UTIZEI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_DEN_SOTOZEI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_MEI_UTIZEI_GAKU,0) + 
+					  ISNULL(TSD.KONKAI_MEI_SOTOZEI_GAKU,0))
+				END) <> 0))
+ /*END*/
+ ORDER BY
+   TSDKE.KAGAMI_NUMBER
+   /*$orderBy*/
+  , TSDKE.DENPYOU_DATE
+  , TSDKE.DENPYOU_SHURUI_CD
+  , TSDKE.DENPYOU_NUMBER
+  , TSDKE.ROW_NUMBER
+  

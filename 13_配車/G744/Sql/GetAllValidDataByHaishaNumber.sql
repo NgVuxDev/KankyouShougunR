@@ -1,0 +1,10 @@
+﻿SELECT
+T_THE.* 
+FROM 
+dbo.T_TEIKI_HAISHA_ENTRY AS T_THE
+WHERE 
+T_THE.DELETE_FLG = 0
+AND T_THE.TEIKI_HAISHA_NUMBER = /*data.TEIKI_HAISHA_NUMBER*/
+/*IF !data.SAGYOU_DATE.IsNull*/
+AND convert(varchar(10),T_THE.SAGYOU_DATE,111) = convert(varchar(10),/*data.SAGYOU_DATE.Value*/,111)
+/*END*/

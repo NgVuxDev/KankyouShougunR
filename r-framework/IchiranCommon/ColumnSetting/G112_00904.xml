@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="904">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="精算番号" Needs="1" TableName="T_SEISAN_DENPYOU" Name="SEISAN_NUMBER" Format="" />
+      <Column ID="4" DispNumber="4" DispName="拠点CD" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KYOTEN_CD" Format="00" />
+      <Column ID="5" DispNumber="5" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="6" DispNumber="6" DispName="取引先CD" Needs="0" TableName="T_SEISAN_DENPYOU" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="7" DispNumber="7" DispName="取引先名" Needs="0" TableName="M_TORIHIKISAKI1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="8" DispNumber="8" DispName="締日" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SHIMEBI" Format="" />
+      <!--<Column ID="9" DispNumber="" DispName="書式区分" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SHOSHIKI_KBN" Format="" />-->
+      <Column ID="10" DispNumber="9" DispName="支払明細書書式1" Needs="0" TableName="" Name="CASE T_SEISAN_DENPYOU.SHOSHIKI_KBN WHEN  1 THEN '支払先別' WHEN 2 THEN '業者別' WHEN 3 THEN '現場別' ELSE '' END" Format="" />
+      <!--<Column ID="11" DispNumber="" DispName="書式明細区分" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SHOSHIKI_MEISAI_KBN" Format="" />-->
+      <Column ID="12" DispNumber="10" DispName="支払明細書書式2" Needs="0" TableName="" Name="CASE T_SEISAN_DENPYOU.SHOSHIKI_MEISAI_KBN WHEN  1 THEN 'なし' WHEN 2 THEN '業者毎' WHEN 3 THEN '現場毎' ELSE '' END" Format="" />
+      <Column ID="58" DispNumber="11" DispName="支払明細書書式3" Needs="0" TableName="" Name="CASE T_SEISAN_DENPYOU.SHOSHIKI_GENBA_KBN WHEN  1 THEN '現場名あり' WHEN 2 THEN '現場名なし' ELSE '' END" Format="" />
+      <!--<Column ID="13" DispNumber="" DispName="支払形態区分" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SHIHARAI_KEITAI_KBN" Format="" />-->
+      <Column ID="14" DispNumber="12" DispName="支払形態" Needs="0" TableName="" Name="CASE T_SEISAN_DENPYOU.SHIHARAI_KEITAI_KBN WHEN  1 THEN '単月精算' WHEN 2 THEN '繰越精算' ELSE '' END" Format="" />
+      <!--<Column ID="15" DispNumber="" DispName="出金明細区分" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SHUKKIN_MEISAI_KBN" Format="" />-->
+      <Column ID="16" DispNumber="13" DispName="出金明細" Needs="0" TableName="" Name="CASE T_SEISAN_DENPYOU.SHUKKIN_MEISAI_KBN WHEN  1 THEN '表示する' WHEN 2 THEN '表示なし' ELSE '' END" Format="" />
+      <!--<Column ID="17" DispNumber="" DispName="用紙区分" Needs="0" TableName="T_SEISAN_DENPYOU" Name="YOUSHI_KBN" Format="" />-->
+      <Column ID="18" DispNumber="14" DispName="支払用紙" Needs="0" TableName="" Name="CASE T_SEISAN_DENPYOU.YOUSHI_KBN WHEN  1 THEN '自社支払書' WHEN 2 THEN '指定支払書' WHEN 3 THEN '印刷しない' ELSE '' END" Format="" />
+      <Column ID="19" DispNumber="15" DispName="精算日付" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SEISAN_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="20" DispNumber="16" DispName="出金予定日(変更前)" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SHUKKIN_YOTEI_BI" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="21" DispNumber="17" DispName="前回精算額" Needs="0" TableName="" Name="CASE SHIHARAI_KEITAI_KBN WHEN 1 THEN NULL ELSE T_SEISAN_DENPYOU.ZENKAI_KURIKOSI_GAKU END" Format="#,##0" />
+      <Column ID="22" DispNumber="18" DispName="今回出金額" Needs="0" TableName="" Name="CASE SHIHARAI_KEITAI_KBN WHEN 1 THEN NULL ELSE T_SEISAN_DENPYOU.KONKAI_SHUKKIN_GAKU END" Format="#,##0" />
+      <Column ID="23" DispNumber="19" DispName="調整額" Needs="0" TableName="" Name="CASE SHIHARAI_KEITAI_KBN WHEN 1 THEN NULL ELSE T_SEISAN_DENPYOU.KONKAI_CHOUSEI_GAKU END" Format="#,##0" />
+      <Column ID="24" DispNumber="21" DispName="今回取引額(税抜)" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_SHIHARAI_GAKU" Format="#,##0" />
+      <!--<Column ID="25" DispNumber="" DispName="今回精内税額" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_SEI_UTIZEI_GAKU" Format="#,##0" />-->
+      <Column ID="26" DispNumber="25" DispName="精算毎外税合計" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_SEI_SOTOZEI_GAKU" Format="#,##0" />
+      <!--<Column ID="27" DispNumber="" DispName="今回伝内税額" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_DEN_UTIZEI_GAKU" Format="#,##0" />-->
+      <Column ID="28" DispNumber="26" DispName="伝票毎外税合計" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_DEN_SOTOZEI_GAKU" Format="#,##0" />
+      <Column ID="29" DispNumber="27" DispName="明細毎内税合計" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_MEI_UTIZEI_GAKU" Format="#,##0" />
+      <Column ID="30" DispNumber="28" DispName="明細毎外税合計" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_MEI_SOTOZEI_GAKU" Format="#,##0" />
+      <Column ID="31" DispNumber="24" DispName="今回精算額" Needs="0" TableName="" Name="CASE SHIHARAI_KEITAI_KBN WHEN 1 THEN (ISNULL(KONKAI_SHIHARAI_GAKU,0) + ISNULL(KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_MEI_SOTOZEI_GAKU,0)) ELSE T_SEISAN_DENPYOU.KONKAI_SEISAN_GAKU END" Format="#,##0" />
+      <Column ID="32" DispNumber="29" DispName="発行区分" Needs="0" TableName="T_SEISAN_DENPYOU" Name="HAKKOU_KBN" Format="" />
+      <Column ID="33" DispNumber="30" DispName="締実行番号" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SHIME_JIKKOU_NO" Format="" />
+      <Column ID="34" DispNumber="31" DispName="作成者" Needs="0" TableName="T_SEISAN_DENPYOU" Name="CREATE_USER" Format="" />
+      <Column ID="35" DispNumber="32" DispName="作成日時" Needs="0" TableName="T_SEISAN_DENPYOU" Name="CREATE_DATE" Format="" />
+      <Column ID="36" DispNumber="33" DispName="作成PC" Needs="0" TableName="T_SEISAN_DENPYOU" Name="CREATE_PC" Format="" />
+      <Column ID="45" DispNumber="35" DispName="最終更新者" Needs="0" TableName="T_SEISAN_DENPYOU" Name="UPDATE_USER" Format="" />
+      <Column ID="50" DispNumber="40" DispName="最終更新日時" Needs="0" TableName="T_SEISAN_DENPYOU" Name="UPDATE_DATE" Format="" />
+      <Column ID="55" DispNumber="45" DispName="最終更新PC" Needs="0" TableName="T_SEISAN_DENPYOU" Name="UPDATE_PC" Format="" />
+      <Column ID="38" DispNumber="20" DispName="繰越額" Needs="0" TableName="" Name="CASE SHIHARAI_KEITAI_KBN WHEN 1 THEN NULL ELSE (ISNULL(ZENKAI_KURIKOSI_GAKU,0) - ISNULL(KONKAI_SHUKKIN_GAKU,0) - (ISNULL(KONKAI_CHOUSEI_GAKU,0))) END" Format="#,##0" />
+      <Column ID="39" DispNumber="22" DispName="消費税" Needs="0" TableName="" Name="(ISNULL(KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_MEI_SOTOZEI_GAKU,0))" Format="#,##0" />
+      <Column ID="40" DispNumber="23" DispName="今回取引額" Needs="0" TableName="" Name="(ISNULL(KONKAI_SHIHARAI_GAKU,0) + ISNULL(KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_MEI_SOTOZEI_GAKU,0))" Format="#,##0" />
+      <Column ID="56" DispNumber="46" DispName="アップロード状況" Needs="0" TableName="" Name="CASE TORIHIKISAKI_SHIHARAI.INXS_SHIHARAI_KBN WHEN 1 THEN CASE T_SEISAN_DENPYOU_INXS.UPLOAD_STATUS WHEN 1 THEN N'未' WHEN 2 THEN N'済' WHEN 3 THEN N'取消' WHEN 4 THEN N'エラー' WHEN 5 THEN N'中' ELSE N'未' END ELSE '' END" Format="" />
+      <Column ID="57" DispNumber="47" DispName="ダウンロード状況" Needs="0" TableName="" Name="CASE TORIHIKISAKI_SHIHARAI.INXS_SHIHARAI_KBN WHEN 1 THEN CASE T_SEISAN_DENPYOU_INXS.DOWNLOAD_STATUS WHEN 1 THEN N'未' WHEN 2 THEN N'済' ELSE N'未' END ELSE '' END" Format="" />
+      <Column ID="60" DispNumber="60" DispName="消込額" Needs="0" TableName="" Name="ISNULL(SHUKKIN.SUM_KESHIKOMI_GAKU,0)" Format="#,##0" />
+      <Column ID="65" DispNumber="65" DispName="出金－消込差額" Needs="0" TableName="" Name="(ISNULL(KONKAI_SHIHARAI_GAKU,0) + ISNULL(KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_MEI_SOTOZEI_GAKU,0)) - ISNULL(SHUKKIN.SUM_KESHIKOMI_GAKU,0)" Format="#,##0" />
+      <Column ID="70" DispNumber="70" DispName="出金予定日(変更後)" Needs="1" TableName="" Name="CAST(NULL AS DATETIME)" Format="yyyy/MM/dd(ddd)" />
+    </Group>
+    <Group OutputKbn="2">
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_SEISAN_DENPYOU.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_TORIHIKISAKI1">LEFT JOIN M_TORIHIKISAKI M_TORIHIKISAKI1 ON T_SEISAN_DENPYOU.TORIHIKISAKI_CD = M_TORIHIKISAKI1.TORIHIKISAKI_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

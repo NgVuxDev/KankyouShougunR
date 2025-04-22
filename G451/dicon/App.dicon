@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE components PUBLIC "-//SEASAR2.1//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components21.dtd">
+
+<components namespace="App">
+  <include path="dicon\Dao.dicon" />
+  <include path="dicon\Dao_File.dicon" />
+  <include path="dicon\Dao_Log.dicon" />
+</components>

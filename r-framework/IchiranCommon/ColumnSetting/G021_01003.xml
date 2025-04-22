@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="1003">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="拠点CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="KYOTEN_CD" Format="00" />
+      <Column ID="2" DispNumber="2" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="5" DispNumber="5" DispName="受付番号" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_NUMBER" Format="" />
+      <Column ID="6" DispNumber="6" DispName="受付日" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="7" DispNumber="7" DispName="取引先CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="8" DispNumber="8" DispName="取引先名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TORIHIKISAKI_NAME" Format="" />
+      <Column ID="9" DispNumber="9" DispName="業者CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GYOUSHA_CD" Format="" />
+      <Column ID="10" DispNumber="10" DispName="業者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GYOUSHA_NAME" Format="" />
+      <Column ID="11" DispNumber="11" DispName="業者電話" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GYOSHA_TEL" Format="" />
+      <Column ID="12" DispNumber="12" DispName="現場CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENBA_CD" Format="" />
+      <Column ID="13" DispNumber="13" DispName="現場名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENBA_NAME" Format="" />
+      <Column ID="14" DispNumber="14" DispName="現場電話" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENBA_TEL" Format="" />
+      <Column ID="15" DispNumber="15" DispName="担当者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TANTOSHA_NAME" Format="" />
+      <Column ID="16" DispNumber="16" DispName="担当携帯" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="TANTOSHA_TEL" Format="" />
+      <Column ID="17" DispNumber="17" DispName="運搬業者CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UNPAN_GYOUSHA_CD" Format="" />
+      <Column ID="18" DispNumber="18" DispName="運搬業者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UNPAN_GYOUSHA_NAME" Format="" />
+      <Column ID="19" DispNumber="19" DispName="荷降業者CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="NIOROSHI_GYOUSHA_CD" Format="" />
+      <Column ID="20" DispNumber="20" DispName="荷降業者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="NIOROSHI_GYOUSHA_NAME" Format="" />
+      <Column ID="21" DispNumber="21" DispName="荷降現場CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="NIOROSHI_GENBA_CD" Format="" />
+      <Column ID="22" DispNumber="22" DispName="荷降現場名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="NIOROSHI_GENBA_NAME" Format="" />
+      <Column ID="23" DispNumber="23" DispName="営業担当者CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="EIGYOU_TANTOUSHA_CD" Format="" />
+      <Column ID="24" DispNumber="24" DispName="営業担当者名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="EIGYOU_TANTOUSHA_NAME" Format="" />
+      <Column ID="25" DispNumber="25" DispName="作業日(指定)" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SAGYOU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="26" DispNumber="26" DispName="現着時間CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENCHAKU_TIME_CD" Format="000" />
+      <Column ID="27" DispNumber="27" DispName="現着時間名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="GENCHAKU_TIME_NAME" Format="" />
+      <Column ID="28" DispNumber="28" DispName="現着時間" Needs="0" TableName="" Name="CONVERT(CHAR(5), T_UKETSUKE_MK_ENTRY.GENCHAKU_TIME)" Format="" />
+      <Column ID="29" DispNumber="29" DispName="車種台数グループNo" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHASHU_DAISU_GROUP_NUMBER" Format="" />
+      <Column ID="30" DispNumber="30" DispName="車種台数番号" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHASHU_DAISU_NUMBER" Format="" />
+      <Column ID="31" DispNumber="31" DispName="車輌CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHARYOU_CD" Format="" />
+      <Column ID="32" DispNumber="32" DispName="車輌名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHARYOU_NAME" Format="" />
+      <Column ID="33" DispNumber="33" DispName="車種CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHASHU_CD" Format="" />
+      <Column ID="34" DispNumber="34" DispName="車種名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="SHASHU_NAME" Format="" />
+      <Column ID="35" DispNumber="35" DispName="マニフェスト種類CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="MANIFEST_SHURUI_CD" Format="" />
+      <Column ID="36" DispNumber="36" DispName="マニフェスト種類名" Needs="0" TableName="M_MANIFEST_SHURUI1" Name="MANIFEST_SHURUI_NAME_RYAKU" Format="" />
+      <Column ID="37" DispNumber="37" DispName="マニフェスト手配CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="MANIFEST_TEHAI_CD" Format="" />
+      <Column ID="38" DispNumber="38" DispName="マニフェスト手配名" Needs="0" TableName="M_MANIFEST_TEHAI1" Name="MANIFEST_TEHAI_NAME_RYAKU" Format="" />      
+      <Column ID="39" DispNumber="39" DispName="受付備考1" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_BIKOU1" Format="" />
+      <Column ID="40" DispNumber="40" DispName="受付備考2" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_BIKOU2" Format="" />
+      <Column ID="41" DispNumber="41" DispName="受付備考3" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UKETSUKE_BIKOU3" Format="" />
+      <Column ID="46" DispNumber="46" DispName="売上金額合計" Needs="0" TableName="URIAGE" Name="ISNULL(URIAGE.KINGAKU_TOTAL, 0)" Format="#,##0" />
+      <Column ID="47" DispNumber="47" DispName="支払金額合計" Needs="0" TableName="SHIHARAI" Name="ISNULL(SHIHARAI.KINGAKU_TOTAL, 0)" Format="#,##0" />
+      <Column ID="48" DispNumber="48" DispName="差引額" Needs="0" TableName="" Name="ISNULL(T_UKETSUKE_MK_ENTRY.KINGAKU_TOTAL, 0)" Format="#,##0" />
+      <Column ID="49" DispNumber="51" DispName="作成者" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="50" DispNumber="52" DispName="作成日時" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="51" DispNumber="53" DispName="作成PC" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="52" DispNumber="54" DispName="最終更新者" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="53" DispNumber="55" DispName="最終更新日時" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="54" DispNumber="56" DispName="最終更新PC" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="UPDATE_PC" Format="" />
+      <Column ID="55" DispNumber="57" DispName="削除フラグ" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="DELETE_FLG" Format="" />
+
+      <Column ID="56" DispNumber="49" DispName="現場メモ" Needs="0" TableName="" Name="CASE WHEN T_GENBAMEMO_ENTRY.SYSTEM_ID IS NULL THEN '' ELSE '有' END" Format="" />
+      <Column ID="57" DispNumber="57" DispName="予約状況CD" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="YOYAKU_JOKYO_CD" Format="" />
+      <Column ID="58" DispNumber="58" DispName="予約状況名" Needs="0" TableName="T_UKETSUKE_MK_ENTRY" Name="YOYAKU_JOKYO_NAME" Format="" />
+      <Column ID="59" DispNumber="59" DispName="SMS送信" Needs="0" TableName="" Name="CASE WHEN T_SMS.SYSTEM_ID IS NULL THEN '' ELSE '済' END" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="行番号" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="ROW_NO" Format="" />
+      <Column ID="2" DispNumber="" DispName="品名CD" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="HINMEI_CD" Format="" />
+      <Column ID="3" DispNumber="" DispName="品名" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="HINMEI_NAME" Format="" />
+      <Column ID="4" DispNumber="" DispName="伝票区分CD" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="DENPYOU_KBN_CD" Format="" />
+      <Column ID="5" DispNumber="" DispName="伝票区分名" Needs="0" TableName="M_DENPYOU_KBN1" Name="DENPYOU_KBN_NAME_RYAKU" Format="" />
+      <Column ID="6" DispNumber="" DispName="数量" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="SUURYOU" Format="1" />
+      <Column ID="7" DispNumber="" DispName="単位CD" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="UNIT_CD" Format="00" />
+      <Column ID="8" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="9" DispNumber="" DispName="単価" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="TANKA" Format="3" />
+      <Column ID="10" DispNumber="" DispName="金額" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="KINGAKU" Format="#,##0" />
+      <Column ID="13" DispNumber="" DispName="明細備考" Needs="0" TableName="T_UKETSUKE_MK_DETAIL" Name="MEISAI_BIKOU" Format="" />
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_UKETSUKE_MK_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN1">LEFT JOIN M_DENPYOU_KBN M_DENPYOU_KBN1 ON T_UKETSUKE_MK_DETAIL.DENPYOU_KBN_CD = M_DENPYOU_KBN1.DENPYOU_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON T_UKETSUKE_MK_DETAIL.UNIT_CD = M_UNIT1.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="URIAGE">
+      LEFT JOIN
+      (
+      SELECT
+      E.SYSTEM_ID,
+      E.SEQ,
+      SUM(D.KINGAKU) AS KINGAKU_TOTAL
+      FROM
+      T_UKETSUKE_MK_ENTRY E,
+      T_UKETSUKE_MK_DETAIL D
+      WHERE
+      E.DELETE_FLG = 0 AND
+      E.SYSTEM_ID = D.SYSTEM_ID AND
+      E.SEQ = D.SEQ AND
+      D.DENPYOU_KBN_CD = 1
+      GROUP BY
+      E.SYSTEM_ID,
+      E.SEQ
+      ) URIAGE ON
+      T_UKETSUKE_MK_ENTRY.SYSTEM_ID = URIAGE.SYSTEM_ID AND
+      T_UKETSUKE_MK_ENTRY.SEQ = URIAGE.SEQ
+    </JoinCondition>
+    <JoinCondition TableName="SHIHARAI">
+      LEFT JOIN
+      (
+      SELECT
+      E.SYSTEM_ID,
+      E.SEQ,
+      SUM(D.KINGAKU) AS KINGAKU_TOTAL
+      FROM
+      T_UKETSUKE_MK_ENTRY E,
+      T_UKETSUKE_MK_DETAIL D
+      WHERE
+      E.DELETE_FLG = 0 AND
+      E.SYSTEM_ID = D.SYSTEM_ID AND
+      E.SEQ = D.SEQ AND
+      D.DENPYOU_KBN_CD = 2
+      GROUP BY
+      E.SYSTEM_ID,
+      E.SEQ
+      ) SHIHARAI ON
+      T_UKETSUKE_MK_ENTRY.SYSTEM_ID = SHIHARAI.SYSTEM_ID AND
+      T_UKETSUKE_MK_ENTRY.SEQ = SHIHARAI.SEQ
+    </JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_SHURUI1">LEFT JOIN M_MANIFEST_SHURUI M_MANIFEST_SHURUI1 ON T_UKETSUKE_MK_ENTRY.MANIFEST_SHURUI_CD = M_MANIFEST_SHURUI1.MANIFEST_SHURUI_CD</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_TEHAI1">LEFT JOIN M_MANIFEST_TEHAI M_MANIFEST_TEHAI1 ON T_UKETSUKE_MK_ENTRY.MANIFEST_TEHAI_CD = M_MANIFEST_TEHAI1.MANIFEST_TEHAI_CD</JoinCondition>
+    <JoinCondition TableName="T_GENBAMEMO_ENTRY">LEFT JOIN T_GENBAMEMO_ENTRY ON T_UKETSUKE_MK_ENTRY.UKETSUKE_NUMBER = T_GENBAMEMO_ENTRY.HASSEIMOTO_NUMBER</JoinCondition>
+    <JoinCondition TableName="T_SMS">LEFT JOIN T_SMS ON T_UKETSUKE_MK_ENTRY.UKETSUKE_NUMBER = T_SMS.DENPYOU_NUMBER</JoinCondition>
+  </OutputColumnSelect>
+</root>

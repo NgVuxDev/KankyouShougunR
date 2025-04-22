@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE components PUBLIC "-//SEASAR//DTD S2Container//EN"
+"http://www.seasar.org/dtd/components.dtd">
+
+
+<components>
+
+  <!-- Ado.dicon -->
+  <include path="CommonTestProject.Dicon.Ado.dicon" />
+
+  <!-- トランザクション用のDataSource -->
+  <component name="DataSource" class="Seasar.Extension.Tx.Impl.TxDataSource">
+    <property name="DataProvider">SqlClient</property>
+    <property name="ConnectionString">
+      "Data Source=SW08SQL02\\SQL2008r2;Initial Catalog=KankyouShougunR;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=203388;Connect Timeout=20"
+    </property>
+  </component>
+
+  <!-- ローカルトランザクション用のインターセプターで使用します -->
+  <component name="TransactionContext"
+      class="Seasar.Extension.Tx.Impl.TransactionContext">
+    <property name="IsolationLevel">
+      System.Data.IsolationLevel.ReadCommitted
+    </property>
+  </component>
+
+</components>
+
+

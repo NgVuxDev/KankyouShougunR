@@ -1,0 +1,5 @@
+﻿SELECT * FROM dbo.M_HIKIAI_GENBA
+WHERE 
+DELETE_FLG = 0
+/*IF data.GYOUSHA_CD != null*/AND GYOUSHA_CD = /*data.GYOUSHA_CD*/0/*END*/
+/*IF data.GENBA_CD != null*/AND GENBA_CD = /*data.GENBA_CD*/0/*END*/

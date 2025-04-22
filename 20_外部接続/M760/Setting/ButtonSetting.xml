@@ -1,0 +1,55 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <NewButtonName>[F3]電子&#xD;&#xA;契約修正</NewButtonName>
+    <NewButtonHintText></NewButtonHintText>
+    <UpdateButtonName>[F3]電子&#xD;&#xA;契約修正</UpdateButtonName>
+    <UpdateButtonHintText></UpdateButtonHintText>
+    <DeleteButtonName>[F3]電子&#xD;&#xA;契約修正</DeleteButtonName>
+    <DeleteButtonHintText></DeleteButtonHintText>
+    <ReferButtonName>[F3]電子&#xD;&#xA;契約修正</ReferButtonName>
+    <ReferButtonHintText></ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func5</ButtonName>
+    <NewButtonName>[F5]&#xD;&#xA;契約参照</NewButtonName>
+    <NewButtonHintText></NewButtonHintText>
+    <UpdateButtonName>[F5]&#xD;&#xA;契約参照</UpdateButtonName>
+    <UpdateButtonHintText></UpdateButtonHintText>
+    <DeleteButtonName>[F5]&#xD;&#xA;契約参照</DeleteButtonName>
+    <DeleteButtonHintText></DeleteButtonHintText>
+    <ReferButtonName>[F5]&#xD;&#xA;契約参照</ReferButtonName>
+    <ReferButtonHintText></ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;登録</NewButtonName>
+    <NewButtonHintText></NewButtonHintText>
+    <UpdateButtonName>[F9]&#xD;&#xA;登録</UpdateButtonName>
+    <UpdateButtonHintText></UpdateButtonHintText>
+    <DeleteButtonName>[F9]&#xD;&#xA;登録</DeleteButtonName>
+    <DeleteButtonHintText></DeleteButtonHintText>
+    <ReferButtonName>[F9]&#xD;&#xA;登録</ReferButtonName>
+    <ReferButtonHintText></ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <NewButtonHintText></NewButtonHintText>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <UpdateButtonHintText></UpdateButtonHintText>
+    <DeleteButtonName>[F12]&#xD;&#xA;閉じる</DeleteButtonName>
+    <DeleteButtonHintText></DeleteButtonHintText>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <ReferButtonHintText></ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process2</ButtonName>
+    <NewButtonName>[2] 契約書ﾀﾞｳﾝﾛｰﾄﾞ</NewButtonName>
+    <ReferButtonName>[2] 契約書ﾀﾞｳﾝﾛｰﾄﾞ</ReferButtonName>
+    <UpdateButtonName>[2] 契約書ﾀﾞｳﾝﾛｰﾄﾞ</UpdateButtonName>
+    <DeleteButtonName>[2] 契約書ﾀﾞｳﾝﾛｰﾄﾞ</DeleteButtonName>
+    <DefaultHintText></DefaultHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

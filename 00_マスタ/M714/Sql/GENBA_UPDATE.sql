@@ -1,0 +1,20 @@
+﻿/*IF ChiikiMasterName != null && ChiikiMasterName != '' && ChiikiMasterName == '2'*/
+  UPDATE M_GENBA SET CHIIKI_CD = /*CHIIKI_CD*/'000000', UPN_HOUKOKUSHO_TEISHUTSU_CHIIKI_CD = /*UPN_HOUKOKUSHO_TEISHUTSU_CHIIKI_CD*/'000000'
+  
+  WHERE GYOUSHA_CD = /*GYOUSHA_CD*/'000000' AND GENBA_CD = /*GENBA_CD*/'000000'
+
+/*END*/
+
+/*IF ChiikiMasterName != null && ChiikiMasterName != '' && ChiikiMasterName == '4'*/
+  UPDATE M_HIKIAI_GENBA SET CHIIKI_CD = /*CHIIKI_CD*/'000000', UPN_HOUKOKUSHO_TEISHUTSU_CHIIKI_CD = /*UPN_HOUKOKUSHO_TEISHUTSU_CHIIKI_CD*/'000000'
+  
+  WHERE GYOUSHA_CD = /*GYOUSHA_CD*/'000000' AND GENBA_CD = /*GENBA_CD*/'000000'
+
+/*END*/
+
+/*IF ChiikiMasterName != null && ChiikiMasterName != '' && ChiikiMasterName == '6'*/
+  UPDATE M_KARI_GENBA SET CHIIKI_CD = /*CHIIKI_CD*/'000000'
+  
+  WHERE GYOUSHA_CD = /*GYOUSHA_CD*/'000000' AND GENBA_CD = /*GENBA_CD*/'000000'
+
+/*END*/

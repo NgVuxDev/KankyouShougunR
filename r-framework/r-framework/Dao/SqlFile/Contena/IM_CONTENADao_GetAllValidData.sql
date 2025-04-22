@@ -1,0 +1,28 @@
+﻿SELECT * FROM dbo.M_CONTENA
+WHERE 
+/*IF data.ISNOT_NEED_DELETE_FLG.IsNull || data.ISNOT_NEED_DELETE_FLG.IsFalse*/
+ DELETE_FLG = 0
+-- ELSE
+ 1 = 1
+/*END*/
+/*IF data.CONTENA_SHURUI_CD != null*/AND CONTENA_SHURUI_CD = /*data.CONTENA_SHURUI_CD*//*END*/
+/*IF data.CONTENA_CD != null*/AND CONTENA_CD = /*data.CONTENA_CD*//*END*/
+/*IF data.CONTENA_NAME != null*/AND CONTENA_NAME = /*data.CONTENA_NAME*//*END*/
+/*IF data.CONTENA_NAME_RYAKU != null*/AND CONTENA_NAME_RYAKU = /*data.CONTENA_NAME_RYAKU*//*END*/
+/*IF data.GYOUSHA_CD != null*/AND GYOUSHA_CD = /*data.GYOUSHA_CD*//*END*/
+/*IF data.GENBA_CD != null*/AND GENBA_CD = /*data.GENBA_CD*//*END*/
+/*IF !data.KYOTEN_CD.IsNull*/AND KYOTEN_CD = /*data.KYOTEN_CD.Value*//*END*/
+/*IF data.SHARYOU_GYOUSHA_CD != null*/AND SHARYOU_GYOUSHA_CD = /*data.SHARYOU_GYOUSHA_CD*//*END*/
+/*IF data.SHARYOU_CD != null*/AND SHARYOU_CD = /*data.SHARYOU_CD*//*END*/
+/*IF !data.SECCHI_DATE.IsNull*/AND SECCHI_DATE = /*data.SECCHI_DATE.Value*//*END*/
+/*IF !data.HIKIAGE_DATE.IsNull*/AND HIKIAGE_DATE = /*data.HIKIAGE_DATE.Value*//*END*/
+/*IF !data.JOUKYOU_KBN.IsNull*/AND JOUKYOU_KBN = /*data.JOUKYOU_KBN.Value*//*END*/
+/*IF !data.KOUNYUU_DATE.IsNull*/AND KOUNYUU_DATE = /*data.KOUNYUU_DATE.Value*//*END*/
+/*IF !data.LAST_SHUUFUKU_DATE.IsNull*/AND LAST_SHUUFUKU_DATE = /*data.LAST_SHUUFUKU_DATE.Value*//*END*/
+/*IF data.CONTENA_BIKOU != null*/AND CONTENA_BIKOU = /*data.CONTENA_BIKOU*//*END*/
+/*IF data.CREATE_USER != null*/AND CREATE_USER = /*data.CREATE_USER*//*END*/
+/*IF !data.CREATE_DATE.IsNull*/AND CREATE_DATE = /*data.CREATE_DATE.Value*//*END*/
+/*IF data.CREATE_PC != null*/AND CREATE_PC = /*data.CREATE_PC*//*END*/
+/*IF data.UPDATE_USER != null*/AND UPDATE_USER = /*data.UPDATE_USER*//*END*/
+/*IF !data.UPDATE_DATE.IsNull*/AND UPDATE_DATE = /*data.UPDATE_DATE.Value*//*END*/
+/*IF data.UPDATE_PC != null*/AND UPDATE_PC = /*data.UPDATE_PC*//*END*/

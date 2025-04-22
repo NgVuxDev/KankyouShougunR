@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F17CDA9-3563-43EB-ADFE-F3146FE352B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.ReportOutput.CommonChouhyouViewer</RootNamespace>
+    <AssemblyName>CommonChouhyouViewer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL" />
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL" />
+    <Reference Include="log4net" >
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar" >
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao" >
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo" >
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy" >
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill" >
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit" >
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows" >
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\G537.cs" />
+    <Compile Include="APP\G538.cs" />
+    <Compile Include="APP\G539.cs" />
+    <Compile Include="APP\ReportBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\ReportBaseForm.Designer.cs">
+      <DependentUpon>ReportBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIFormG536_G537_G538.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIFormG536_G537_G538.Designer.cs">
+      <DependentUpon>UIFormG536_G537_G538.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIFormG539.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIFormG539.Designer.cs">
+      <DependentUpon>UIFormG539.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIHeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIHeaderForm.Designer.cs">
+      <DependentUpon>UIHeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIFormG533.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIFormG533.Designer.cs">
+      <DependentUpon>UIFormG533.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIFormG534.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIFormG534.Designer.cs">
+      <DependentUpon>UIFormG534.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\UIFormG535.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIFormG535.Designer.cs">
+      <DependentUpon>UIFormG535.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\G533.cs" />
+    <Compile Include="APP\G534.cs" />
+    <Compile Include="APP\G535.cs" />
+    <Compile Include="APP\G536.cs" />
+    <Compile Include="Const\ConstClass.cs" />
+    <Compile Include="DAO\DAOClass.cs" />
+    <Compile Include="DTO\DTOClass.cs" />
+    <Compile Include="Logic\G536_G537_G538_LogicClass.cs" />
+    <Compile Include="MultiRowTemplate\juniMeisai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\juniMeisai.designer.cs">
+      <DependentUpon>juniMeisai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\LogicClass.cs" />
+    <Compile Include="Logic\G533_LogicClass.cs" />
+    <Compile Include="Logic\G534_LogicClass.cs" />
+    <Compile Include="Logic\G535_LogicClass.cs" />
+    <Compile Include="Logic\G539_LogicClass.cs" />
+    <Compile Include="MultiRowTemplate\KeiryoSyukeihyou.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\KeiryoSyukeihyou.designer.cs">
+      <DependentUpon>KeiryoSyukeihyou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\Suiihyou.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\Suiihyou.designer.cs">
+      <DependentUpon>Suiihyou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiRowTemplate\Zennentaihihyou.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\Zennentaihihyou.Designer.cs">
+      <DependentUpon>Zennentaihihyou.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MultiRowTemplate\UketsukeMeisai.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiRowTemplate\UketsukeMeisai.designer.cs">
+      <DependentUpon>UketsukeMeisai.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="APP\UIFormG533.resx">
+      <DependentUpon>UIFormG533.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIFormG534.resx">
+      <DependentUpon>UIFormG534.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIFormG535.resx">
+      <DependentUpon>UIFormG535.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIFormG536_G537_G538.resx">
+      <DependentUpon>UIFormG536_G537_G538.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\juniMeisai.resx">
+      <DependentUpon>juniMeisai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\KeiryoSyukeihyou.resx">
+      <DependentUpon>KeiryoSyukeihyou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\Suiihyou.resx">
+      <DependentUpon>Suiihyou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\Zennentaihihyou.resx">
+      <DependentUpon>Zennentaihihyou.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml" />
+    <EmbeddedResource Include="APP\UIFormG539.resx">
+      <DependentUpon>UIFormG539.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIHeaderForm.resx">
+      <DependentUpon>UIHeaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiRowTemplate\UketsukeMeisai.resx">
+      <DependentUpon>UketsukeMeisai.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonChouhyouPopup\CommonChouhyouPopup.csproj">
+      <Project>{445254EB-6A9C-4D9D-8431-3ED2658FE6DD}</Project>
+      <Name>CommonChouhyouPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

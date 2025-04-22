@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="290">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="外部地点CD" Needs="0" TableName="MGD" Name="POINT_ID" Format="" />
+      <Column ID="2" DispNumber="2" DispName="外部地点名" Needs="0" TableName="MGD" Name="POINT_NAME" Format="" />
+      <Column ID="3" DispNumber="3" DispName="外部地点名カナ" Needs="0" TableName="MGD" Name="POINT_KANA_NAME" Format="" />
+      <Column ID="4" DispNumber="4" DispName="外部地図表示名" Needs="0" TableName="MGD" Name="MAP_NAME" Format="" />
+      <Column ID="5" DispNumber="5" DispName="地点範囲半径" Needs="0" TableName="MGD" Name="RANGE_RADIUS" Format="" />
+      <Column ID="6" DispNumber="6" DispName="運転者指示事項1(外部)" Needs="0" TableName="MGD" Name="UNTENSHA_SHIJI_JIKOU1" Format="" />
+      <Column ID="7" DispNumber="7" DispName="運転者指示事項2(外部)" Needs="0" TableName="MGD" Name="UNTENSHA_SHIJI_JIKOU2" Format="" />
+      <Column ID="8" DispNumber="8" DispName="運転者指示事項3(外部)" Needs="0" TableName="MGD" Name="UNTENSHA_SHIJI_JIKOU3" Format="" />
+      <Column ID="9" DispNumber="9" DispName="郵便番号(連携)" Needs="0" TableName="MGD" Name="POST_CODE" Format="" />
+      <Column ID="10" DispNumber="10" DispName="都道府県CD(連携)" Needs="0" TableName="MGD" Name="GENBA_TODOUFUKEN_CD" Format="" />
+      <Column ID="11" DispNumber="11" DispName="都道府県名(連携)" Needs="0" TableName="MGTO" Name="TODOUFUKEN_NAME" Format="" />
+      <Column ID="12" DispNumber="12" DispName="住所1(連携)" Needs="0" TableName="MGD" Name="ADDRESS1" Format="" />
+      <Column ID="13" DispNumber="13" DispName="住所2(連携)" Needs="0" TableName="MGD" Name="ADDRESS2" Format="" />
+      <Column ID="14" DispNumber="14" DispName="電話番号(連携)" Needs="0" TableName="MGD" Name="TEL_NO" Format="" />
+      <Column ID="15" DispNumber="15" DispName="FAX番号" Needs="0" TableName="MGD" Name="FAX_NO" Format="" />
+      <Column ID="16" DispNumber="16" DispName="担当者(連携)" Needs="0" TableName="MGD" Name="CONTACT_NAME" Format="" />
+      <Column ID="17" DispNumber="17" DispName="取引先CD" Needs="0" TableName="MG" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="18" DispNumber="18" DispName="取引先名1" Needs="0" TableName="MT" Name="TORIHIKISAKI_NAME1" Format="" />
+      <Column ID="19" DispNumber="19" DispName="取引先名2" Needs="0" TableName="MT" Name="TORIHIKISAKI_NAME2" Format="" />
+      <Column ID="20" DispNumber="20" DispName="略称(取引先)" Needs="0" TableName="MT" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="21" DispNumber="21" DispName="業者CD" Needs="0" TableName="MG" Name="GYOUSHA_CD" Format="" />
+      <Column ID="22" DispNumber="22" DispName="業者名1" Needs="0" TableName="MGYO" Name="GYOUSHA_NAME1" Format="" />
+      <Column ID="23" DispNumber="23" DispName="業者名2" Needs="0" TableName="MGYO" Name="GYOUSHA_NAME2" Format="" />
+      <Column ID="24" DispNumber="24" DispName="略称(業者)" Needs="0" TableName="MGYO" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="25" DispNumber="25" DispName="現場CD" Needs="0" TableName="MG" Name="GENBA_CD" Format="" />
+      <Column ID="26" DispNumber="26" DispName="現場名1" Needs="0" TableName="MG" Name="GENBA_NAME1" Format="" />
+      <Column ID="27" DispNumber="27" DispName="現場名2" Needs="0" TableName="MG" Name="GENBA_NAME2" Format="" />
+      <Column ID="28" DispNumber="28" DispName="略称(現場)" Needs="0" TableName="MG" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="29" DispNumber="29" DispName="郵便番号(現場)" Needs="0" TableName="MG" Name="GENBA_POST" Format="" />
+      <Column ID="30" DispNumber="30" DispName="都道府県CD(現場)" Needs="0" TableName="MG" Name="GENBA_TODOUFUKEN_CD" Format="" />
+      <Column ID="31" DispNumber="31" DispName="都道府県名(現場)" Needs="0" TableName="MTO" Name="TODOUFUKEN_NAME" Format="" />
+      <Column ID="32" DispNumber="32" DispName="住所1(現場)" Needs="0" TableName="MG" Name="GENBA_ADDRESS1" Format="" />
+      <Column ID="33" DispNumber="33" DispName="住所2(現場)" Needs="0" TableName="MG" Name="GENBA_ADDRESS2" Format="" />
+      <Column ID="34" DispNumber="34" DispName="電話番号(現場)" Needs="0" TableName="MG" Name="GENBA_TEL" Format="" />
+      <Column ID="35" DispNumber="35" DispName="FAX番号(現場)" Needs="0" TableName="MG" Name="GENBA_FAX" Format="" />
+      <Column ID="36" DispNumber="36" DispName="担当者(現場)" Needs="0" TableName="MG" Name="TANTOUSHA" Format="" />
+      <Column ID="37" DispNumber="37" DispName="作成者(連携)" Needs="0" TableName="MGD" Name="CREATE_USER" Format="" />
+      <Column ID="38" DispNumber="38" DispName="作成日時(連携)" Needs="0" TableName="MGD" Name="CREATE_DATE" Format="" />
+      <Column ID="39" DispNumber="39" DispName="作成PC(連携)" Needs="0" TableName="MGD" Name="CREATE_PC" Format="" />
+      <Column ID="40" DispNumber="40" DispName="最終更新者(連携)" Needs="0" TableName="MGD" Name="UPDATE_USER" Format="" />
+      <Column ID="41" DispNumber="41" DispName="最終更新日時(連携)" Needs="0" TableName="MGD" Name="UPDATE_DATE" Format="" />
+      <Column ID="42" DispNumber="42" DispName="最終更新PC(連携)" Needs="0" TableName="MGD" Name="UPDATE_PC" Format="" />
+      <Column ID="43" DispNumber="43" DispName="外部連携担当者(連携)" Needs="0" TableName="MDOG" Name="OUTPUT_USER" Format="" />
+      <Column ID="44" DispNumber="44" DispName="外部連携日時(連携)" Needs="0" TableName="MDOG" Name="OUTPUT_DATE" Format="" />
+      <Column ID="45" DispNumber="45" DispName="外部連携PC(連携)" Needs="0" TableName="MDOG" Name="OUTPUT_PC" Format="" />
+      <Column ID="46" DispNumber="46" DispName="最終更新者(現場)" Needs="0" TableName="MG" Name="UPDATE_USER" Format="" />
+      <Column ID="47" DispNumber="47" DispName="最終更新日時(現場)" Needs="0" TableName="MG" Name="UPDATE_DATE" Format="" />
+      <Column ID="48" DispNumber="48" DispName="最終更新PC(現場)" Needs="0" TableName="MG" Name="UPDATE_PC" Format="" />
+    </Group>
+    <!--<JoinCondition TableName="MGD">LEFT JOIN M_GENBA_DIGI MGD ON MG.GYOUSHA_CD = MGD.GYOUSHA_CD AND MG.GENBA_CD = MGD.GENBA_CD</JoinCondition>-->
+    <!--<JoinCondition TableName="MDOG">LEFT JOIN M_DIGI_OUTPUT_GENBA MDOG ON MG.GYOUSHA_CD = MDOG.GYOUSHA_CD AND MG.GENBA_CD = MDOG.GENBA_CD</JoinCondition>-->
+  </OutputColumnSelect>
+</root>

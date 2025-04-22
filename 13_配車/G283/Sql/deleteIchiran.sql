@@ -1,0 +1,3 @@
+﻿DELETE FROM T_MOBILE_SYOGUN_DATA_INSERT
+ where DELETE_FLG = 0
+ /*IF data.EDABAN != null*/ AND EDABAN = /*data.EDABAN*//*END*/

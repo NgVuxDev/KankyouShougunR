@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="915">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="マニフェスト／予約番号" Needs="1" TableName="DT_R18" Name="MANIFEST_ID" Format="" />
+      <Column ID="2" DispNumber="2" DispName="引渡し日" Needs="0" TableName="" Name="CASE WHEN ISDATE(DT_R18.HIKIWATASHI_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, DT_R18.HIKIWATASHI_DATE) END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="3" DispNumber="3" DispName="排出事業者名称" Needs="0" TableName="DT_R18" Name="HST_SHA_NAME" Format="" />
+      <Column ID="4" DispNumber="4" DispName="排出事業場名称" Needs="0" TableName="DT_R18" Name="HST_JOU_NAME" Format="" />
+      <Column ID="5" DispNumber="5" DispName="廃棄物の数量" Needs="0" TableName="DT_R18" Name="HAIKI_SUU" Format="" />
+      <Column ID="6" DispNumber="6" DispName="廃棄物の単位" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="7" DispNumber="7" DispName="廃棄物の種類" Needs="0" TableName="DT_R18" Name="HAIKI_SHURUI" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+    </Group>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON DT_R18.HAIKI_UNIT_CODE = M_UNIT1.UNIT_CD AND M_UNIT1.DENSHI_USE_KBN = 1</JoinCondition>
+  </OutputColumnSelect>
+</root>

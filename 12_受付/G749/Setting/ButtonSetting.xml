@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <PopupButtonName>[F1]&#xD;&#xA;前月</PopupButtonName>
+    <DefaultHintText>作業日カレンダーを1ヶ月前に変更します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <PopupButtonName>[F2]&#xD;&#xA;次月</PopupButtonName>
+    <DefaultHintText>作業日カレンダーを1ヶ月後に変更します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <PopupButtonName>[F7]&#xD;&#xA;クリア</PopupButtonName>
+    <DefaultHintText>選択した作業日を初期化します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <PopupButtonName>[F9]&#xD;&#xA;確定</PopupButtonName>
+    <DefaultHintText>選択した作業日を呼び出し画面にセットします</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <PopupButtonName>[F12]&#xD;&#xA;閉じる</PopupButtonName>
+    <DefaultHintText>画面を閉じます</DefaultHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

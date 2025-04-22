@@ -1,0 +1,5 @@
+﻿SELECT SHARYOU_CD ,SHARYOU_NAME_RYAKU 
+FROM M_SHARYOU 
+WHERE DELETE_FLG = 0 
+/*IF data.SHARYOU_CD != null &&  data.SHARYOU_CD !='' */AND SHARYOU_CD = /*data.SHARYOU_CD*//*END*/
+/*IF data.GYOUSHA_CD != null &&  data.GYOUSHA_CD !='' */AND GYOUSHA_CD = /*data.GYOUSHA_CD*//*END*/

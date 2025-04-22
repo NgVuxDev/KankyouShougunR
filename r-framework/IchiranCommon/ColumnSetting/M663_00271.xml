@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="271">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="コースCD" Needs="0" TableName="MC" Name="COURSE_NAME_CD" Format="" />
+      <Column ID="2" DispNumber="2" DispName="コース名" Needs="0" TableName="MCNAME" Name="COURSE_NAME_RYAKU" Format="" />
+      <Column ID="3" DispNumber="4" DispName="曜日" Needs="0" TableName="" Name="CASE MC.DAY_CD WHEN 1 THEN '月' WHEN 2 THEN '火' WHEN 3 THEN '水' WHEN 4 THEN '木' WHEN 5 THEN '金' WHEN 6 THEN '土' WHEN 7 THEN '日' ELSE '' END" Format="" />
+      <Column ID="28" DispNumber="5" DispName="順番" Needs="0" TableName="MCD" Name="ROW_NO" Format="" />
+      <Column ID="4" DispNumber="6" DispName="回数" Needs="0" TableName="MCD" Name="ROUND_NO" Format="" />
+      <Column ID="5" DispNumber="7" DispName="業者CD" Needs="0" TableName="MCD" Name="GYOUSHA_CD" Format="" />
+      <Column ID="6" DispNumber="8" DispName="業者名" Needs="0" TableName="MGY" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="7" DispNumber="9" DispName="現場CD" Needs="0" TableName="MCD" Name="GENBA_CD" Format="" />
+      <Column ID="8" DispNumber="10" DispName="現場名" Needs="0" TableName="MGE" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="9" DispNumber="11" DispName="入力区分" Needs="0" TableName="" Name="CASE MCDI.INPUT_KBN WHEN 1 THEN '直接入力' WHEN 2 THEN '組込' ELSE '' END" Format="" />
+      <Column ID="10" DispNumber="12" DispName="荷降No" Needs="0" TableName="MCDI" Name="NIOROSHI_NO" Format="" />
+      <Column ID="11" DispNumber="13" DispName="品名CD" Needs="0" TableName="MCDI" Name="HINMEI_CD" Format="" />
+      <Column ID="12" DispNumber="14" DispName="品名" Needs="0" TableName="MH" Name="HINMEI_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="15" DispName="伝票区分" Needs="0" TableName="MDK" Name="DENPYOU_KBN_NAME_RYAKU" Format="" />
+      <Column ID="14" DispNumber="16" DispName="単位" Needs="0" TableName="MU" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="17" DispName="換算値" Needs="0" TableName="MCDI" Name="KANSANCHI" Format="#,##0.000" />
+      <Column ID="16" DispNumber="18" DispName="換算後単位" Needs="0" TableName="MUK" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="17" DispNumber="19" DispName="要記入" Needs="0" TableName="MCDI" Name="KANSAN_UNIT_MOBILE_OUTPUT_FLG" Format="" />
+      <Column ID="18" DispNumber="20" DispName="実数" Needs="0" TableName="MCDI" Name="ANBUN_FLG" Format="" />
+      <Column ID="19" DispNumber="21" DispName="契約区分" Needs="0" TableName="MCDI" Name="CASE MCDI.KEIYAKU_KBN WHEN 1 THEN '定期' WHEN 2 THEN '単価' WHEN 3 THEN '回収のみ' END" Format="" />
+      <Column ID="20" DispNumber="22" DispName="集計単位" Needs="0" TableName="MCDI" Name="CASE MCDI.KEIJYOU_KBN WHEN 1 THEN '伝票' WHEN 2 THEN '合算' END" Format="" />
+      <Column ID="21" DispNumber="23" DispName="適用開始日" Needs="0" TableName="MCDI" Name="TEKIYOU_BEGIN" Format="" />
+      <Column ID="22" DispNumber="24" DispName="適用終了日" Needs="0" TableName="MCDI" Name="TEKIYOU_END" Format="" />
+      <Column ID="23" DispNumber="25" DispName="荷降業者CD" Needs="0" TableName="MCN" Name="NIOROSHI_GYOUSHA_CD" Format="" />
+      <Column ID="24" DispNumber="26" DispName="荷降業者名" Needs="0" TableName="GYN" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="25" DispNumber="27" DispName="荷降現場CD" Needs="0" TableName="MCN" Name="NIOROSHI_GENBA_CD" Format="" />
+      <Column ID="26" DispNumber="28" DispName="荷降現場名" Needs="0" TableName="GEN" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="27" DispNumber="3" DispName="曜日CD" Needs="0" TableName="MC" Name="DAY_CD" Format="" />
+    </Group>
+    <JoinCondition TableName="MGY">LEFT JOIN M_GYOUSHA MGY ON MCD.GYOUSHA_CD = MGY.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE">LEFT JOIN M_GENBA MGE ON MCD.GYOUSHA_CD = MGE.GYOUSHA_CD AND MCD.GENBA_CD = MGE.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MH">LEFT JOIN M_HINMEI MH ON MCDI.HINMEI_CD = MH.HINMEI_CD</JoinCondition>
+    <JoinCondition TableName="MDK">LEFT JOIN M_DENPYOU_KBN MDK ON MCDI.DENPYOU_KBN_CD = MDK.DENPYOU_KBN_CD</JoinCondition>
+    <JoinCondition TableName="MU">LEFT JOIN M_UNIT MU ON MCDI.UNIT_CD = MU.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="MUK">LEFT JOIN M_UNIT MUK ON MCDI.KANSAN_UNIT_CD = MUK.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="GYN">LEFT JOIN M_GYOUSHA GYN ON MCN.NIOROSHI_GYOUSHA_CD = GYN.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="GEN">LEFT JOIN M_GENBA GEN ON MCN.NIOROSHI_GYOUSHA_CD = GEN.GYOUSHA_CD AND MCN.NIOROSHI_GENBA_CD = GEN.GENBA_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

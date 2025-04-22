@@ -1,0 +1,11 @@
+﻿SELECT
+BUSHO_CD,
+BUSHO_NAME_RYAKU
+FROM
+M_BUSHO
+/*BEGIN*/WHERE
+/*IF !deletechuFlg*/ DELETE_FLG = 0/*END*/
+/*IF data.BUSHO_CD != null*/
+AND BUSHO_CD = /*data.BUSHO_CD*//*END*/
+/*END*/
+ORDER BY BUSHO_CD

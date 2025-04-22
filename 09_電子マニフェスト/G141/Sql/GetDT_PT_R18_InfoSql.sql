@@ -1,0 +1,2 @@
+﻿SELECT * FROM DT_PT_R18 
+WHERE SYSTEM_ID = /*data.SYSTEM_ID*/ AND SEQ = /*data.SEQ*/

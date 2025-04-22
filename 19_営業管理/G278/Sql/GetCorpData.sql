@@ -1,0 +1,9 @@
+﻿SELECT
+KISHU_MONTH
+FROM
+M_CORP_INFO
+/*BEGIN*/WHERE
+/*IF data.SYS_ID != null*/
+AND SYS_ID = /*data.SYS_ID*//*END*/
+/*END*/
+ORDER BY SYS_ID

@@ -1,0 +1,8 @@
+SELECT 
+MIN(TKE.KEIRYOU_NUMBER) AS nextKeiryouNumber 
+FROM 
+T_KEIRYOU_ENTRY AS TKE 
+WHERE 
+TKE.DELETE_FLG = 0 
+/*IF !KyotenCD.IsNull && KyotenCD != ''*/AND TKE.KYOTEN_CD = /*KyotenCD*//*END*/
+AND TKE.KEIRYOU_NUMBER > /*KeiryouNumber*/

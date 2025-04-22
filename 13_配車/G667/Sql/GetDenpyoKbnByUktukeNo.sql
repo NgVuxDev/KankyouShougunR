@@ -1,0 +1,36 @@
+SELECT 
+      AA.DENPYOU_KBN_CD
+FROM
+      (
+       SELECT 
+             CASE WHEN DET.DENPYOU_KBN_CD =9 THEN 1
+			      ELSE ISNULL(DET.DENPYOU_KBN_CD, '1')
+			 END  DENPYOU_KBN_CD  -- ì`ï[ãÊï™ÅFéxï•à»äOÇÕëSÇƒîÑè„Ç∆ÇµÇƒàµÇ§
+       FROM 
+             T_UKETSUKE_SS_ENTRY ENT
+       	  LEFT JOIN T_UKETSUKE_SS_DETAIL DET ON ENT.SYSTEM_ID = DET.SYSTEM_ID AND ENT.SEQ = DET.SEQ
+       WHERE 
+             ENT.DELETE_FLG = 0
+       	     AND DET.HINMEI_CD = /*HINMEI_CD*/
+			 AND ENT.UKETSUKE_NUMBER = /*UKETSUKE_NUMBER*/
+			 /*IF !DTL_EDABAN.IsNull*/
+			 AND DET.ROW_NO = /*DTL_EDABAN*/
+			 /*END*/
+       UNION ALL
+       SELECT 
+             CASE WHEN DET.DENPYOU_KBN_CD =9 THEN 1
+			      ELSE ISNULL(DET.DENPYOU_KBN_CD, '1')
+			 END  DENPYOU_KBN_CD  -- ì`ï[ãÊï™ÅFéxï•à»äOÇÕëSÇƒîÑè„Ç∆ÇµÇƒàµÇ§
+       FROM 
+             T_UKETSUKE_SK_ENTRY ENT
+       	  LEFT JOIN T_UKETSUKE_SK_DETAIL DET ON ENT.SYSTEM_ID = DET.SYSTEM_ID AND ENT.SEQ = DET.SEQ
+       WHERE 
+             ENT.DELETE_FLG = 0
+       	     AND DET.HINMEI_CD = /*HINMEI_CD*/
+			 AND ENT.UKETSUKE_NUMBER = /*UKETSUKE_NUMBER*/
+			 /*IF !DTL_EDABAN.IsNull*/
+			 AND DET.ROW_NO = /*DTL_EDABAN*/
+			 /*END*/
+	   ) AS AA
+ORDER BY 
+       AA.DENPYOU_KBN_CD

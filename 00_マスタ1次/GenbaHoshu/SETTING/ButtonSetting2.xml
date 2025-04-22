@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;申請</NewButtonName>
+    <NewButtonHintText>表示されている内容を元に電子申請します</NewButtonHintText>
+    <UpdateButtonName>[F9]&#xD;&#xA;申請</UpdateButtonName>
+    <UpdateButtonHintText>表示されている内容を元に電子申請します</UpdateButtonHintText>
+    <DeleteButtonName>[F9]&#xD;&#xA;申請</DeleteButtonName>
+    <DeleteButtonHintText>表示されている内容を元に電子申請します</DeleteButtonHintText>
+    <ReferButtonName>[F9]&#xD;&#xA;申請</ReferButtonName>
+    <ReferButtonHintText>表示されている内容を元に電子申請します</ReferButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <NewButtonHintText>画面を閉じます</NewButtonHintText>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <UpdateButtonHintText>画面を閉じます</UpdateButtonHintText>
+    <DeleteButtonName>[F12]&#xD;&#xA;閉じる</DeleteButtonName>
+    <DeleteButtonHintText>画面を閉じます</DeleteButtonHintText>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <ReferButtonHintText>画面を閉じます</ReferButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfPatternSettingDto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PatternSettingDto>
+    <DisplayColumnName>NYUUKINSAKI_CD</DisplayColumnName>
+    <DisplayJapaneseName>入金先CD</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>NYUUKINSAKI_NAME_RYAKU</DisplayColumnName>
+    <DisplayJapaneseName>入金先名</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>NYUUKINSAKI_POST</DisplayColumnName>
+    <DisplayJapaneseName>郵便番号</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>NYUUKINSAKI_TEL</DisplayColumnName>
+    <DisplayJapaneseName>電話番号</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>NYUUKINSAKI_FAX</DisplayColumnName>
+    <DisplayJapaneseName>FAX番号</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>TODOUFUKEN_NAME_RYAKU</DisplayColumnName>
+    <DisplayJapaneseName>都道府県</DisplayJapaneseName>
+    <JoinTableName>M_TODOUFUKEN</JoinTableName>
+    <SendColumnName>
+      <string>M_NYUUKINSAKI.NYUUKINSAKI_TODOUFUKEN_CD</string>
+    </SendColumnName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>NYUUKINSAKI_ADDRESS1</DisplayColumnName>
+    <DisplayJapaneseName>住所1</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+  <PatternSettingDto>
+    <DisplayColumnName>NYUUKINSAKI_ADDRESS2</DisplayColumnName>
+    <DisplayJapaneseName>住所2</DisplayJapaneseName>
+    <JoinTableName></JoinTableName>
+  </PatternSettingDto>
+</ArrayOfPatternSettingDto>

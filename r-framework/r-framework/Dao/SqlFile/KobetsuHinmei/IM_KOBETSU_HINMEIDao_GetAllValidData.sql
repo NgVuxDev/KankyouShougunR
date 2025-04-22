@@ -1,0 +1,11 @@
+﻿SELECT * FROM dbo.M_KOBETSU_HINMEI
+WHERE
+/*IF data.ISNOT_NEED_DELETE_FLG.IsNull || data.ISNOT_NEED_DELETE_FLG.IsFalse*/
+ DELETE_FLG = 0
+-- ELSE
+ 1 = 1
+/*END*/
+/*IF data.GYOUSHA_CD != null*/AND GYOUSHA_CD = /*data.GYOUSHA_CD*/''/*END*/
+/*IF data.GENBA_CD != null*/AND GENBA_CD = /*data.GENBA_CD*/''/*END*/
+/*IF data.HINMEI_CD != null*/AND HINMEI_CD = /*data.HINMEI_CD*/''/*END*/
+/*IF data.SEIKYUU_HINMEI_NAME != null*/AND SEIKYUU_HINMEI_NAME = /*data.SEIKYUU_HINMEI_NAME*/''/*END*/

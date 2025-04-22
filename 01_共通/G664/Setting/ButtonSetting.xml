@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <IchiranButtonName>[F1]&#xD;&#xA;一括設定</IchiranButtonName>
+    <DefaultHintText>同品名一括設定で入力された品名に荷降Noを一括設定します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <IchiranButtonName>[F9]&#xD;&#xA;確定</IchiranButtonName>
+    <DefaultHintText>設定された荷降Noを確定します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <DefaultHintText>画面を閉じます</DefaultHintText>  
+</ButtonSetting>
+</ArrayOfButtonSetting>

@@ -1,0 +1,969 @@
+﻿SELECT
+    ICHIRAN_DATA.*
+	,CAST(0 AS BIT) AS MATCH_MEMBER_ID_FLG
+FROM
+(
+SELECT
+  R18.KANRI_ID,
+  --マニフェスト情報.引渡し日
+  R18.HIKIWATASHI_DATE,
+  --マニフェスト情報.引渡し日
+  SUBSTRING(DATENAME(WEEKDAY, CONVERT(DATETIME, ISNULL(R18.HIKIWATASHI_DATE, GETDATE()), 112)),1,1) AS HIKIWATASHI_DAY,
+  --マニフェスト情報.マニフェスト／予約番号
+  R18.MANIFEST_ID,
+  R18.UPN_ROUTE_CNT,
+  R18.HAIKI_KAKUTEI_SUU,
+  R18.HAIKI_KAKUTEI_UNIT_CODE,
+  R18.NISUGATA_CODE,
+  R18.HAIKI_DAI_CODE,
+  R18.HAIKI_CHU_CODE,
+  R18.HAIKI_SHO_CODE,
+  R18.HAIKI_SAI_CODE,
+
+  --マニフェスト情報.排出事業者名称
+  R18.HST_SHA_NAME,
+  R18.HST_SHA_EDI_MEMBER_ID,
+  R18.HST_SHA_POST,
+  R18.HST_SHA_ADDRESS1,
+  R18.HST_SHA_ADDRESS2,
+  R18.HST_SHA_ADDRESS3,
+  R18.HST_SHA_ADDRESS4,
+  R18.HST_SHA_TEL,
+  R18.HST_SHA_FAX,
+  R18.HAIKI_SHURUI,
+  R18.HAIKI_NAME,
+  R18.SBN_WAY_CODE,
+  --電子事業者マスタ(排出).事業者名
+  JIGYOUSHA_HS.JIGYOUSHA_NAME,
+  --電子事業者マスタ(排出).加入者番号
+  JIGYOUSHA_HS.EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_HS.TIME_STAMP AS INT) AS JIGYOUSHA_HS_TIME_STAMP,
+  --業者マスタ(排出).業者略称名
+  GYOUSHA_HS.GYOUSHA_NAME_RYAKU,
+  --業者マスタ(排出).業者CD
+  GYOUSHA_HS.GYOUSHA_CD,
+  --マニフェスト情報.排出事業場名称
+  R18.HST_JOU_NAME,
+  R18.HST_JOU_POST_NO,
+  R18.HST_JOU_ADDRESS1,
+  R18.HST_JOU_ADDRESS2,
+  R18.HST_JOU_ADDRESS3,
+  R18.HST_JOU_ADDRESS4,
+  R18.HST_JOU_TEL,
+  (R18.HST_SHA_EDI_MEMBER_ID + '/' + 
+   R18.HST_JOU_NAME + '/' + 
+   ISNULL(R18.HST_JOU_ADDRESS1,'') + 
+   ISNULL(R18.HST_JOU_ADDRESS2,'') + 
+   ISNULL(R18.HST_JOU_ADDRESS3,'') + 
+   ISNULL(R18.HST_JOU_ADDRESS4,'')) AS HST_JOU_INFO,
+  --電子事業場マスタ(排出).事業場名
+  JIGYOUJOU_HS.JIGYOUJOU_NAME,
+  --電子事業場マスタ(排出).事業場CD
+  JIGYOUJOU_HS.JIGYOUJOU_CD,
+  CAST(JIGYOUJOU_HS.TIME_STAMP AS INT) AS JIGYOUJOU_HS_TIME_STAMP,
+  --現場マスタ(排出).現場略称名
+  GENBA_HS.GENBA_NAME_RYAKU,
+  --現場マスタ(排出).現場CD
+  GENBA_HS.GENBA_CD,
+
+  --収集運搬情報(収集運搬1).収集運搬業者名
+  R19_SU1.KANRI_ID AS SU1_KANRI_ID,
+  R19_SU1.UPN_SHA_NAME AS SU1_UPN_SHA_NAME,
+  R19_SU1.UPN_SHA_EDI_MEMBER_ID AS SU1_UPN_SHA_EDI_MEMBER_ID,
+  R19_SU1.UPN_SHA_POST AS SU1_UPN_SHA_POST,
+  R19_SU1.UPN_SHA_ADDRESS1 AS SU1_UPN_SHA_ADDRESS1,
+  R19_SU1.UPN_SHA_ADDRESS2 AS SU1_UPN_SHA_ADDRESS2,
+  R19_SU1.UPN_SHA_ADDRESS3 AS SU1_UPN_SHA_ADDRESS3,
+  R19_SU1.UPN_SHA_ADDRESS4 AS SU1_UPN_SHA_ADDRESS4,
+  R19_SU1.UPN_SHA_TEL AS SU1_UPN_SHA_TEL,
+  R19_SU1.UPN_SHA_FAX AS SU1_UPN_SHA_FAX,
+  --電子事業者マスタ(収集運搬1).事業者名
+  JIGYOUSHA_SU1.JIGYOUSHA_NAME AS SU1_JIGYOUSHA_NAME,
+  --電子事業者マスタ(収集運搬1).加入者番号
+  JIGYOUSHA_SU1.EDI_MEMBER_ID AS SU1_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_SU1.TIME_STAMP AS INT) AS JIGYOUSHA_SU1_TIME_STAMP,
+  -- 加入者情報マスタ(収集運搬1).EDI_EDI_PASSWORD
+  MEMBER_SU1.EDI_PASSWORD AS SU1_UPN_SHA_EDI_PASSWORD,
+  --業者マスタ(収集運搬1).業者略称名
+  GYOUSHA_SU1.GYOUSHA_NAME_RYAKU AS SU1_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(収集運搬1).業者CD
+  GYOUSHA_SU1.GYOUSHA_CD AS SU1_GYOUSHA_CD,
+
+  --収集運搬情報(収集運搬1).運搬先加入者名
+  R19_SU1.UPNSAKI_NAME AS SU1_UPNSAKI_NAME,
+  --電子事業者マスタ(運搬先1).事業者名
+  JIGYOUSHA_US1.JIGYOUSHA_NAME AS US1_JIGYOUSHA_NAME,
+  --電子事業者マスタ(運搬先1).加入者番号
+  JIGYOUSHA_US1.EDI_MEMBER_ID AS US1_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_US1.TIME_STAMP AS INT) AS JIGYOUSHA_US1_TIME_STAMP,
+  --業者マスタ(運搬先1).業者略称名
+  GYOUSHA_US1.GYOUSHA_NAME_RYAKU AS US1_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(運搬先1).業者CD
+  GYOUSHA_US1.GYOUSHA_CD AS US1_GYOUSHA_CD,
+
+  --収集運搬情報(収集運搬1).運搬先事業場名
+  R19_SU1.UPNSAKI_JOU_NAME AS SU1_UPNSAKI_JOU_NAME,
+  R19_SU1.UPNSAKI_EDI_MEMBER_ID AS SU1_UPNSAKI_EDI_MEMBER_ID,
+  R19_SU1.UPNSAKI_JOU_POST AS SU1_UPNSAKI_JOU_POST,
+  R19_SU1.UPNSAKI_JOU_ADDRESS1 AS SU1_UPNSAKI_JOU_ADDRESS1,
+  R19_SU1.UPNSAKI_JOU_ADDRESS2 AS SU1_UPNSAKI_JOU_ADDRESS2,
+  R19_SU1.UPNSAKI_JOU_ADDRESS3 AS SU1_UPNSAKI_JOU_ADDRESS3,
+  R19_SU1.UPNSAKI_JOU_ADDRESS4 AS SU1_UPNSAKI_JOU_ADDRESS4,
+  R19_SU1.UPNSAKI_JOU_TEL AS SU1_UPNSAKI_JOU_TEL,
+  (R19_SU1.UPNSAKI_EDI_MEMBER_ID + '/' + 
+   R19_SU1.UPNSAKI_JOU_NAME + '/' + 
+   ISNULL(R19_SU1.UPNSAKI_JOU_ADDRESS1,'') + 
+   ISNULL(R19_SU1.UPNSAKI_JOU_ADDRESS2,'') + 
+   ISNULL(R19_SU1.UPNSAKI_JOU_ADDRESS3,'') + 
+   ISNULL(R19_SU1.UPNSAKI_JOU_ADDRESS4,'')) AS SU1_UPNSAKI_JOU_INFO,
+  --電子事業場マスタ(運搬先1).事業場名
+  JIGYOUJOU_US1.JIGYOUJOU_NAME AS US1_JIGYOUJOU_NAME,
+  --電子事業場マスタ(運搬先1).事業場CD
+  JIGYOUJOU_US1.JIGYOUJOU_CD AS US1_JIGYOUJOU_CD,
+  CAST(JIGYOUJOU_US1.TIME_STAMP AS INT) AS JIGYOUJOU_US1_TIME_STAMP,
+  --現場マスタ(運搬先1).現場略称名
+  GENBA_US1.GENBA_NAME_RYAKU AS US1_GENBA_NAME_RYAKU,
+  --現場マスタ(運搬先1).現場CD
+  GENBA_US1.GENBA_CD AS US1_GENBA_CD,
+
+  --収集運搬情報(収集運搬2).収集運搬業者名
+  R19_SU2.KANRI_ID AS SU2_KANRI_ID,
+  R19_SU2.UPN_SHA_NAME AS SU2_UPN_SHA_NAME,
+  R19_SU2.UPN_SHA_EDI_MEMBER_ID AS SU2_UPN_SHA_EDI_MEMBER_ID,
+  R19_SU2.UPN_SHA_POST AS SU2_UPN_SHA_POST,
+  R19_SU2.UPN_SHA_ADDRESS1 AS SU2_UPN_SHA_ADDRESS1,
+  R19_SU2.UPN_SHA_ADDRESS2 AS SU2_UPN_SHA_ADDRESS2,
+  R19_SU2.UPN_SHA_ADDRESS3 AS SU2_UPN_SHA_ADDRESS3,
+  R19_SU2.UPN_SHA_ADDRESS4 AS SU2_UPN_SHA_ADDRESS4,
+  R19_SU2.UPN_SHA_TEL AS SU2_UPN_SHA_TEL,
+  R19_SU2.UPN_SHA_FAX AS SU2_UPN_SHA_FAX,
+  --電子事業者マスタ(収集運搬2).事業者名
+  JIGYOUSHA_SU2.JIGYOUSHA_NAME AS SU2_JIGYOUSHA_NAME,
+  --電子事業者マスタ(収集運搬2).加入者番号
+  JIGYOUSHA_SU2.EDI_MEMBER_ID AS SU2_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_SU2.TIME_STAMP AS INT) AS JIGYOUSHA_SU2_TIME_STAMP,
+  -- 加入者情報マスタ(収集運搬2).EDI_EDI_PASSWORD
+  MEMBER_SU2.EDI_PASSWORD AS SU2_UPN_SHA_EDI_PASSWORD,
+  --業者マスタ(収集運搬2).業者略称名
+  GYOUSHA_SU2.GYOUSHA_NAME_RYAKU AS SU2_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(収集運搬2).業者CD
+  GYOUSHA_SU2.GYOUSHA_CD AS SU2_GYOUSHA_CD,
+
+  --収集運搬情報(収集運搬2).運搬先加入者名
+  R19_SU2.UPNSAKI_NAME AS SU2_UPNSAKI_NAME,
+  --電子事業者マスタ(運搬先2).事業者名
+  JIGYOUSHA_US2.JIGYOUSHA_NAME AS US2_JIGYOUSHA_NAME,
+  --電子事業者マスタ(運搬先2).加入者番号
+  JIGYOUSHA_US2.EDI_MEMBER_ID AS US2_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_US2.TIME_STAMP AS INT) AS JIGYOUSHA_US2_TIME_STAMP,
+  --業者マスタ(運搬先2).業者略称名
+  GYOUSHA_US2.GYOUSHA_NAME_RYAKU AS US2_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(運搬先2).業者CD
+  GYOUSHA_US2.GYOUSHA_CD AS US2_GYOUSHA_CD,
+
+  --収集運搬情報(収集運搬2).運搬先事業場名
+  R19_SU2.UPNSAKI_JOU_NAME AS SU2_UPNSAKI_JOU_NAME,
+  R19_SU2.UPNSAKI_EDI_MEMBER_ID AS SU2_UPNSAKI_EDI_MEMBER_ID,
+  R19_SU2.UPNSAKI_JOU_POST AS SU2_UPNSAKI_JOU_POST,
+  R19_SU2.UPNSAKI_JOU_ADDRESS1 AS SU2_UPNSAKI_JOU_ADDRESS1,
+  R19_SU2.UPNSAKI_JOU_ADDRESS2 AS SU2_UPNSAKI_JOU_ADDRESS2,
+  R19_SU2.UPNSAKI_JOU_ADDRESS3 AS SU2_UPNSAKI_JOU_ADDRESS3,
+  R19_SU2.UPNSAKI_JOU_ADDRESS4 AS SU2_UPNSAKI_JOU_ADDRESS4,
+  R19_SU2.UPNSAKI_JOU_TEL AS SU2_UPNSAKI_JOU_TEL,
+  (R19_SU2.UPNSAKI_EDI_MEMBER_ID + '/' + 
+   R19_SU2.UPNSAKI_JOU_NAME + '/' + 
+   ISNULL(R19_SU2.UPNSAKI_JOU_ADDRESS1,'') + 
+   ISNULL(R19_SU2.UPNSAKI_JOU_ADDRESS2,'') + 
+   ISNULL(R19_SU2.UPNSAKI_JOU_ADDRESS3,'') + 
+   ISNULL(R19_SU2.UPNSAKI_JOU_ADDRESS4,'')) AS SU2_UPNSAKI_JOU_INFO,
+  --電子事業場マスタ(運搬先2).事業場名
+  JIGYOUJOU_US2.JIGYOUJOU_NAME AS US2_JIGYOUJOU_NAME,
+  --電子事業場マスタ(運搬先2).事業場CD
+  JIGYOUJOU_US2.JIGYOUJOU_CD AS US2_JIGYOUJOU_CD,
+  CAST(JIGYOUJOU_US2.TIME_STAMP AS INT) AS JIGYOUJOU_US2_TIME_STAMP,
+  --現場マスタ(運搬先2).現場略称名
+  GENBA_US2.GENBA_NAME_RYAKU AS US2_GENBA_NAME_RYAKU,
+  --現場マスタ(運搬先2).現場CD
+  GENBA_US2.GENBA_CD AS US2_GENBA_CD,
+
+  --収集運搬情報(収集運搬3).収集運搬業者名
+  R19_SU3.KANRI_ID AS SU3_KANRI_ID,
+  R19_SU3.UPN_SHA_NAME AS SU3_UPN_SHA_NAME,
+  R19_SU3.UPN_SHA_EDI_MEMBER_ID AS SU3_UPN_SHA_EDI_MEMBER_ID,
+  R19_SU3.UPN_SHA_POST AS SU3_UPN_SHA_POST,
+  R19_SU3.UPN_SHA_ADDRESS1 AS SU3_UPN_SHA_ADDRESS1,
+  R19_SU3.UPN_SHA_ADDRESS2 AS SU3_UPN_SHA_ADDRESS2,
+  R19_SU3.UPN_SHA_ADDRESS3 AS SU3_UPN_SHA_ADDRESS3,
+  R19_SU3.UPN_SHA_ADDRESS4 AS SU3_UPN_SHA_ADDRESS4,
+  R19_SU3.UPN_SHA_TEL AS SU3_UPN_SHA_TEL,
+  R19_SU3.UPN_SHA_FAX AS SU3_UPN_SHA_FAX,
+  --電子事業者マスタ(収集運搬3).事業者名
+  JIGYOUSHA_SU3.JIGYOUSHA_NAME AS SU3_JIGYOUSHA_NAME,
+  --電子事業者マスタ(収集運搬3).加入者番号
+  JIGYOUSHA_SU3.EDI_MEMBER_ID AS SU3_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_SU3.TIME_STAMP AS INT) AS JIGYOUSHA_SU3_TIME_STAMP,
+  -- 加入者情報マスタ(収集運搬3).EDI_EDI_PASSWORD
+  MEMBER_SU3.EDI_PASSWORD AS SU3_UPN_SHA_EDI_PASSWORD,
+  --業者マスタ(収集運搬3).業者略称名
+  GYOUSHA_SU3.GYOUSHA_NAME_RYAKU AS SU3_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(収集運搬3).業者CD
+  GYOUSHA_SU3.GYOUSHA_CD AS SU3_GYOUSHA_CD,
+
+  --収集運搬情報(収集運搬3).運搬先加入者名
+  R19_SU3.UPNSAKI_NAME AS SU3_UPNSAKI_NAME,
+  --電子事業者マスタ(運搬先3).事業者名
+  JIGYOUSHA_US3.JIGYOUSHA_NAME AS US3_JIGYOUSHA_NAME,
+  --電子事業者マスタ(運搬先3).加入者番号
+  JIGYOUSHA_US3.EDI_MEMBER_ID AS US3_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_US3.TIME_STAMP AS INT) AS JIGYOUSHA_US3_TIME_STAMP,
+  --業者マスタ(運搬先3).業者略称名
+  GYOUSHA_US3.GYOUSHA_NAME_RYAKU AS US3_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(運搬先3).業者CD
+  GYOUSHA_US3.GYOUSHA_CD AS US3_GYOUSHA_CD,
+
+  --収集運搬情報(収集運搬3).運搬先事業場名
+  R19_SU3.UPNSAKI_JOU_NAME AS SU3_UPNSAKI_JOU_NAME,
+  R19_SU3.UPNSAKI_EDI_MEMBER_ID AS SU3_UPNSAKI_EDI_MEMBER_ID,
+  R19_SU3.UPNSAKI_JOU_POST AS SU3_UPNSAKI_JOU_POST,
+  R19_SU3.UPNSAKI_JOU_ADDRESS1 AS SU3_UPNSAKI_JOU_ADDRESS1,
+  R19_SU3.UPNSAKI_JOU_ADDRESS2 AS SU3_UPNSAKI_JOU_ADDRESS2,
+  R19_SU3.UPNSAKI_JOU_ADDRESS3 AS SU3_UPNSAKI_JOU_ADDRESS3,
+  R19_SU3.UPNSAKI_JOU_ADDRESS4 AS SU3_UPNSAKI_JOU_ADDRESS4,
+  R19_SU3.UPNSAKI_JOU_TEL AS SU3_UPNSAKI_JOU_TEL,
+  (R19_SU3.UPNSAKI_EDI_MEMBER_ID + '/' + 
+   R19_SU3.UPNSAKI_JOU_NAME + '/' + 
+   ISNULL(R19_SU3.UPNSAKI_JOU_ADDRESS1,'') + 
+   ISNULL(R19_SU3.UPNSAKI_JOU_ADDRESS2,'') + 
+   ISNULL(R19_SU3.UPNSAKI_JOU_ADDRESS3,'') + 
+   ISNULL(R19_SU3.UPNSAKI_JOU_ADDRESS4,'')) AS SU3_UPNSAKI_JOU_INFO,
+  --電子事業場マスタ(運搬先3).事業場名
+  JIGYOUJOU_US3.JIGYOUJOU_NAME AS US3_JIGYOUJOU_NAME,
+  --電子事業場マスタ(運搬先3).事業場CD
+  JIGYOUJOU_US3.JIGYOUJOU_CD AS US3_JIGYOUJOU_CD,
+  CAST(JIGYOUJOU_US3.TIME_STAMP AS INT) AS JIGYOUJOU_US3_TIME_STAMP,
+  --現場マスタ(運搬先3).現場略称名
+  GENBA_US3.GENBA_NAME_RYAKU AS US3_GENBA_NAME_RYAKU,
+  --現場マスタ(運搬先3).現場CD
+  GENBA_US3.GENBA_CD AS US3_GENBA_CD,
+
+  --収集運搬情報(収集運搬4).収集運搬業者名
+  R19_SU4.KANRI_ID AS SU4_KANRI_ID,
+  R19_SU4.UPN_SHA_NAME AS SU4_UPN_SHA_NAME,
+  R19_SU4.UPN_SHA_EDI_MEMBER_ID AS SU4_UPN_SHA_EDI_MEMBER_ID,
+  R19_SU4.UPN_SHA_POST AS SU4_UPN_SHA_POST,
+  R19_SU4.UPN_SHA_ADDRESS1 AS SU4_UPN_SHA_ADDRESS1,
+  R19_SU4.UPN_SHA_ADDRESS2 AS SU4_UPN_SHA_ADDRESS2,
+  R19_SU4.UPN_SHA_ADDRESS3 AS SU4_UPN_SHA_ADDRESS3,
+  R19_SU4.UPN_SHA_ADDRESS4 AS SU4_UPN_SHA_ADDRESS4,
+  R19_SU4.UPN_SHA_TEL AS SU4_UPN_SHA_TEL,
+  R19_SU4.UPN_SHA_FAX AS SU4_UPN_SHA_FAX,
+  --電子事業者マスタ(収集運搬4).事業者名
+  JIGYOUSHA_SU4.JIGYOUSHA_NAME AS SU4_JIGYOUSHA_NAME,
+  --電子事業者マスタ(収集運搬4).加入者番号
+  JIGYOUSHA_SU4.EDI_MEMBER_ID AS SU4_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_SU4.TIME_STAMP AS INT) AS JIGYOUSHA_SU4_TIME_STAMP,
+  -- 加入者情報マスタ(収集運搬4).EDI_EDI_PASSWORD
+  MEMBER_SU4.EDI_PASSWORD AS SU4_UPN_SHA_EDI_PASSWORD,
+  --業者マスタ(収集運搬4).業者略称名
+  GYOUSHA_SU4.GYOUSHA_NAME_RYAKU AS SU4_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(収集運搬4).業者CD
+  GYOUSHA_SU4.GYOUSHA_CD AS SU4_GYOUSHA_CD,
+
+  --収集運搬情報(収集運搬4).運搬先加入者名
+  R19_SU4.UPNSAKI_NAME AS SU4_UPNSAKI_NAME,
+  --電子事業者マスタ(運搬先4).事業者名
+  JIGYOUSHA_US4.JIGYOUSHA_NAME AS US4_JIGYOUSHA_NAME,
+  --電子事業者マスタ(運搬先4).加入者番号
+  JIGYOUSHA_US4.EDI_MEMBER_ID AS US4_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_US4.TIME_STAMP AS INT) AS JIGYOUSHA_US4_TIME_STAMP,
+  --業者マスタ(運搬先4).業者略称名
+  GYOUSHA_US4.GYOUSHA_NAME_RYAKU AS US4_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(運搬先4).業者CD
+  GYOUSHA_US4.GYOUSHA_CD AS US4_GYOUSHA_CD,
+
+  --収集運搬情報(収集運搬4).運搬先事業場名
+  R19_SU4.UPNSAKI_JOU_NAME AS SU4_UPNSAKI_JOU_NAME,
+  R19_SU4.UPNSAKI_EDI_MEMBER_ID AS SU4_UPNSAKI_EDI_MEMBER_ID,
+  R19_SU4.UPNSAKI_JOU_POST AS SU4_UPNSAKI_JOU_POST,
+  R19_SU4.UPNSAKI_JOU_ADDRESS1 AS SU4_UPNSAKI_JOU_ADDRESS1,
+  R19_SU4.UPNSAKI_JOU_ADDRESS2 AS SU4_UPNSAKI_JOU_ADDRESS2,
+  R19_SU4.UPNSAKI_JOU_ADDRESS3 AS SU4_UPNSAKI_JOU_ADDRESS3,
+  R19_SU4.UPNSAKI_JOU_ADDRESS4 AS SU4_UPNSAKI_JOU_ADDRESS4,
+  R19_SU4.UPNSAKI_JOU_TEL AS SU4_UPNSAKI_JOU_TEL,
+  (R19_SU4.UPNSAKI_EDI_MEMBER_ID + '/' + 
+   R19_SU4.UPNSAKI_JOU_NAME + '/' + 
+   ISNULL(R19_SU4.UPNSAKI_JOU_ADDRESS1,'') + 
+   ISNULL(R19_SU4.UPNSAKI_JOU_ADDRESS2,'') + 
+   ISNULL(R19_SU4.UPNSAKI_JOU_ADDRESS3,'') + 
+   ISNULL(R19_SU4.UPNSAKI_JOU_ADDRESS4,'')) AS SU4_UPNSAKI_JOU_INFO,
+  --電子事業場マスタ(運搬先4).事業場名
+  JIGYOUJOU_US4.JIGYOUJOU_NAME AS US4_JIGYOUJOU_NAME,
+  --電子事業場マスタ(運搬先4).事業場CD
+  JIGYOUJOU_US4.JIGYOUJOU_CD AS US4_JIGYOUJOU_CD,
+  CAST(JIGYOUJOU_US4.TIME_STAMP AS INT) AS JIGYOUJOU_US4_TIME_STAMP,
+  --現場マスタ(運搬先4).現場略称名
+  GENBA_US4.GENBA_NAME_RYAKU AS US4_GENBA_NAME_RYAKU,
+  --現場マスタ(運搬先4).現場CD
+  GENBA_US4.GENBA_CD AS US4_GENBA_CD,
+
+  --収集運搬情報(収集運搬5).収集運搬業者名
+  R19_SU5.KANRI_ID AS SU5_KANRI_ID,
+  R19_SU5.UPN_SHA_NAME AS SU5_UPN_SHA_NAME,
+  R19_SU5.UPN_SHA_EDI_MEMBER_ID AS SU5_UPN_SHA_EDI_MEMBER_ID,
+  R19_SU5.UPN_SHA_POST AS SU5_UPN_SHA_POST,
+  R19_SU5.UPN_SHA_ADDRESS1 AS SU5_UPN_SHA_ADDRESS1,
+  R19_SU5.UPN_SHA_ADDRESS2 AS SU5_UPN_SHA_ADDRESS2,
+  R19_SU5.UPN_SHA_ADDRESS3 AS SU5_UPN_SHA_ADDRESS3,
+  R19_SU5.UPN_SHA_ADDRESS4 AS SU5_UPN_SHA_ADDRESS4,
+  R19_SU5.UPN_SHA_TEL AS SU5_UPN_SHA_TEL,
+  R19_SU5.UPN_SHA_FAX AS SU5_UPN_SHA_FAX,
+  --電子事業者マスタ(収集運搬5).事業者名
+  JIGYOUSHA_SU5.JIGYOUSHA_NAME AS SU5_JIGYOUSHA_NAME,
+  --電子事業者マスタ(収集運搬5).加入者番号
+  JIGYOUSHA_SU5.EDI_MEMBER_ID AS SU5_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_SU5.TIME_STAMP AS INT) AS JIGYOUSHA_SU5_TIME_STAMP,
+  -- 加入者情報マスタ(収集運搬5).EDI_EDI_PASSWORD
+  MEMBER_SU5.EDI_PASSWORD AS SU5_UPN_SHA_EDI_PASSWORD,
+  --業者マスタ(収集運搬5).業者略称名
+  GYOUSHA_SU5.GYOUSHA_NAME_RYAKU AS SU5_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(収集運搬5).業者CD
+  GYOUSHA_SU5.GYOUSHA_CD AS SU5_GYOUSHA_CD,
+
+  --収集運搬情報(処分).運搬先加入者名
+  R19_SYOBUNN.KANRI_ID AS SB_KANRI_ID,
+  R19_SYOBUNN.UPNSAKI_NAME AS SB_UPNSAKI_NAME,
+  R18.SBN_SHA_MEMBER_ID AS SB_SBN_SHA_MEMBER_ID,
+  R18.SBN_SHA_NAME AS SB_SBN_SHA_NAME,
+  R18.SBN_SHA_POST AS SB_SBN_SHA_POST,
+  R18.SBN_SHA_ADDRESS1 AS SB_SBN_SHA_ADDRESS1,
+  R18.SBN_SHA_ADDRESS2 AS SB_SBN_SHA_ADDRESS2,
+  R18.SBN_SHA_ADDRESS3 AS SB_SBN_SHA_ADDRESS3,
+  R18.SBN_SHA_ADDRESS4 AS SB_SBN_SHA_ADDRESS4,
+  R18.SBN_SHA_TEL AS SB_SBN_SHA_TEL,
+  R18.SBN_SHA_FAX AS SB_SBN_SHA_FAX,
+  --電子事業者マスタ(処分).事業者名
+  JIGYOUSHA_SYOBUNN.JIGYOUSHA_NAME AS SB_JIGYOUSHA_NAME,
+  --電子事業者マスタ(処分).加入者番号
+  JIGYOUSHA_SYOBUNN.EDI_MEMBER_ID AS SB_EDI_MEMBER_ID,
+  CAST(JIGYOUSHA_SYOBUNN.TIME_STAMP AS INT) AS JIGYOUSHA_SYOBUNN_TIME_STAMP,
+  --業者マスタ(処分).業者略称名
+  GYOUSHA_SYOBUNN.GYOUSHA_NAME_RYAKU AS SB_GYOUSHA_NAME_RYAKU,
+  --業者マスタ(処分).業者CD
+  GYOUSHA_SYOBUNN.GYOUSHA_CD AS SB_GYOUSHA_CD,
+
+  --収集運搬情報(処分).運搬先事業場名
+  R19_SYOBUNN.UPNSAKI_JOU_NAME AS SB_UPNSAKI_JOU_NAME,
+  R19_SYOBUNN.UPNSAKI_EDI_MEMBER_ID AS SB_UPNSAKI_EDI_MEMBER_ID,
+  R19_SYOBUNN.UPNSAKI_JOU_POST AS SB_UPNSAKI_JOU_POST,
+  R19_SYOBUNN.UPNSAKI_JOU_ADDRESS1 AS SB_UPNSAKI_JOU_ADDRESS1,
+  R19_SYOBUNN.UPNSAKI_JOU_ADDRESS2 AS SB_UPNSAKI_JOU_ADDRESS2,
+  R19_SYOBUNN.UPNSAKI_JOU_ADDRESS3 AS SB_UPNSAKI_JOU_ADDRESS3,
+  R19_SYOBUNN.UPNSAKI_JOU_ADDRESS4 AS SB_UPNSAKI_JOU_ADDRESS4,
+  R19_SYOBUNN.UPNSAKI_JOU_TEL AS SB_UPNSAKI_JOU_TEL,
+  (R19_SYOBUNN.UPNSAKI_EDI_MEMBER_ID + '/' + 
+   R19_SYOBUNN.UPNSAKI_JOU_NAME + '/' + 
+   ISNULL(R19_SYOBUNN.UPNSAKI_JOU_ADDRESS1,'') + 
+   ISNULL(R19_SYOBUNN.UPNSAKI_JOU_ADDRESS2,'') + 
+   ISNULL(R19_SYOBUNN.UPNSAKI_JOU_ADDRESS3,'') + 
+   ISNULL(R19_SYOBUNN.UPNSAKI_JOU_ADDRESS4,'')) AS SB_UPNSAKI_JOU_INFO,
+  --電子事業場マスタ(処分).事業場名
+  JIGYOUJOU_SYOBUNN.JIGYOUJOU_NAME AS SB_JIGYOUJOU_NAME,
+  --電子事業場マスタ(処分).事業場CD
+  JIGYOUJOU_SYOBUNN.JIGYOUJOU_CD AS SB_JIGYOUJOU_CD,
+  CAST(JIGYOUJOU_SYOBUNN.TIME_STAMP AS INT) AS JIGYOUJOU_SYOBUNN_TIME_STAMP,
+  --現場マスタ(処分).現場略称名
+  GENBA_SYOBUNN.GENBA_NAME_RYAKU AS SB_GENBA_NAME_RYAKU,
+  --現場マスタ(処分).現場CD
+  GENBA_SYOBUNN.GENBA_CD AS SB_GENBA_CD,
+  R04.REC_SEQ_COUNT AS R04_REC_SEQ_COUNT,
+  R08.REC_SEQ_COUNT AS R08_REC_SEQ_COUNT,
+  R13.REC_SEQ_COUNT AS R13_REC_SEQ_COUNT,
+  ISNULL(R18_EX.KANRI_ID, '') AS EX_KANRI_ID,
+  ISNULL(R18_EX.SBN_HOUHOU_CD, '') AS EX_SBN_HOUHOU_CD,
+  R18.HAIKI_SUU,
+  R18.HAIKI_UNIT_CODE,
+  R18.SUU_KAKUTEI_CODE,
+  R18.RECEPT_SUU,
+  R18.RECEPT_UNIT_CODE,
+  R19_SU1.UPN_SUU AS SU1_UPN_SUU,
+  R19_SU1.UPN_UNIT_CODE AS SU1_UPN_UNIT_CODE,
+  R19_SU2.UPN_SUU AS SU2_UPN_SUU,
+  R19_SU2.UPN_UNIT_CODE AS SU2_UPN_UNIT_CODE,
+  R19_SU3.UPN_SUU AS SU3_UPN_SUU,
+  R19_SU3.UPN_UNIT_CODE AS SU3_UPN_UNIT_CODE,
+  R19_SU4.UPN_SUU AS SU4_UPN_SUU,
+  R19_SU4.UPN_UNIT_CODE AS SU4_UPN_UNIT_CODE,
+  R19_SU5.UPN_SUU AS SU5_UPN_SUU,
+  R19_SU5.UPN_UNIT_CODE AS SU5_UPN_UNIT_CODE,
+  DT_MF_MEMBER.HST_MEMBER_ID,
+  DT_MF_MEMBER.UPN1_MEMBER_ID,
+  DT_MF_MEMBER.UPN2_MEMBER_ID,
+  DT_MF_MEMBER.UPN3_MEMBER_ID,
+  DT_MF_MEMBER.UPN4_MEMBER_ID,
+  DT_MF_MEMBER.UPN5_MEMBER_ID,
+  DT_MF_MEMBER.SBN_MEMBER_ID
+  FROM
+  --マニフェスト目次情報
+  DT_MF_TOC TOC
+  --INNER JOIN マニフェスト情報
+  --  ON マニフェスト目次情報.管理番号　＝　マニフェスト情報.管理番号
+  --  AND マニフェスト目次情報.最新SEQ　＝　マニフェスト情報.枝番
+  INNER JOIN DT_R18 R18 ON TOC.KANRI_ID = R18.KANRI_ID
+                      AND TOC.LATEST_SEQ = R18.SEQ
+                      /*IF data.hstEdiMemberId != null && data.hstEdiMemberId != ''*/AND R18.HST_SHA_EDI_MEMBER_ID = /*data.hstEdiMemberId*//*END*/
+                      /*IF data.hstJouName != null && data.hstJouName != ''*/AND R18.HST_JOU_NAME = /*data.hstJouName*//*END*/
+                      /*IF data.hstJouAddress != null && data.hstJouAddress != ''*/AND ISNULL(HST_JOU_ADDRESS1, '') + ISNULL(HST_JOU_ADDRESS2, '') + ISNULL(HST_JOU_ADDRESS3, '') + ISNULL(HST_JOU_ADDRESS4, '') = /*data.hstJouAddress*//*END*/
+  LEFT JOIN DT_R18_EX AS R18_EX ON R18.KANRI_ID = R18_EX.KANRI_ID AND R18_EX.DELETE_FLG = 0
+  --LEFT JOIN 電子事業者マスタ(排出)
+  --  ON マニフェスト情報.排出事業者の加入者番号　＝　電子事業者マスタ(排出).加入者番号
+  --  AND 電子事業者マスタ(排出).排出事業者区分　＝　1(排出事業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_HS ON R18.HST_SHA_EDI_MEMBER_ID = JIGYOUSHA_HS.EDI_MEMBER_ID
+                                           AND (JIGYOUSHA_HS.HST_KBN = 'True' 
+                                               OR (JIGYOUSHA_HS.SBN_KBN = 'True'
+                                                   AND (JIGYOUSHA_HS.EDI_MEMBER_ID LIKE '3%' OR JIGYOUSHA_HS.EDI_MEMBER_ID LIKE 'D3%')
+                                               )
+                                           )
+
+  --LEFT JOIN 業者マスタ(排出)
+  --  ON 電子事業者マスタ(排出).業者CD　＝　業者マスタ(排出).業者CD
+  --  AND 業者マスタ(排出).排出事業者区分　＝　1(排出事業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_HS ON JIGYOUSHA_HS.GYOUSHA_CD = GYOUSHA_HS.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業場マスタ(排出)
+  --  ON マニフェスト情報.排出事業者の加入者番号　＝　電子事業場マスタ(排出).加入者番号
+  --  AND 電子事業場マスタ(排出).事業者区分　＝　1(排出事業者)
+  --  AND 電子事業場マスタ(排出).事業場区分　＝　1(排出事業場)
+  --  AND マニフェスト情報.排出事業場名称　＝　電子事業場マスタ(排出).事業場名
+  --  AND マニフェスト情報.排出事業場所在地1　＝　電子事業場マスタ(排出).都道府県
+  --  AND マニフェスト情報.排出事業場所在地2　＝　電子事業場マスタ(排出).市区町村
+  --  AND マニフェスト情報.排出事業場所在地3　＝　電子事業場マスタ(排出).町域
+  --  AND マニフェスト情報.排出事業場所在地4　＝　電子事業場マスタ(排出).詳細住所
+  LEFT JOIN M_DENSHI_JIGYOUJOU JIGYOUJOU_HS ON R18.HST_SHA_EDI_MEMBER_ID = JIGYOUJOU_HS.EDI_MEMBER_ID
+                                           AND ((JIGYOUJOU_HS.JIGYOUSHA_KBN = 1
+										           AND JIGYOUJOU_HS.JIGYOUJOU_KBN = 1)
+										       OR (JIGYOUJOU_HS.JIGYOUSHA_KBN = 3 AND JIGYOUJOU_HS.JIGYOUJOU_KBN = 3 AND (JIGYOUJOU_HS.EDI_MEMBER_ID LIKE '3%' OR JIGYOUJOU_HS.EDI_MEMBER_ID LIKE 'D3%'))
+                                               OR (ISNULL(R18.FIRST_MANIFEST_FLAG, '') <> '' AND JIGYOUJOU_HS.JIGYOUSHA_KBN = 3 AND JIGYOUJOU_HS.JIGYOUJOU_KBN = 3)
+										   )
+										   AND R18.HST_JOU_NAME = JIGYOUJOU_HS.JIGYOUJOU_NAME
+										   AND ISNULL(R18.HST_JOU_ADDRESS1,'') + ISNULL(R18.HST_JOU_ADDRESS2,'') + ISNULL(R18.HST_JOU_ADDRESS3,'') + ISNULL(R18.HST_JOU_ADDRESS4,'')
+										     = ISNULL(JIGYOUJOU_HS.JIGYOUJOU_ADDRESS1,'') + ISNULL(JIGYOUJOU_HS.JIGYOUJOU_ADDRESS2,'') + ISNULL(JIGYOUJOU_HS.JIGYOUJOU_ADDRESS3,'') + ISNULL(JIGYOUJOU_HS.JIGYOUJOU_ADDRESS4,'')
+
+  --LEFT JOIN 現場マスタ(排出)
+  --  ON 電子事業場マスタ(排出).業者CD　＝　現場マスタ(排出).業者CD
+  --  AND 電子事業場マスタ(排出).現場CD　＝　現場マスタ(排出).現場CD
+  --  AND 現場マスタ(排出).排出事業場区分　＝　1(排出事業場)
+  LEFT JOIN M_GENBA GENBA_HS ON JIGYOUJOU_HS.GYOUSHA_CD = GENBA_HS.GYOUSHA_CD
+                            AND JIGYOUJOU_HS.GENBA_CD = GENBA_HS.GENBA_CD
+
+  --LEFT JOIN 収集運搬情報(収集運搬1)
+  --  ON マニフェスト情報.管理番号　＝　収集運搬情報(収集運搬1).管理番号
+  --  AND マニフェスト情報.枝番　＝　収集運搬情報(収集運搬1).枝番
+  --  AND 収集運搬情報(収集運搬1).区間番号　＝　1(区間1)
+  LEFT JOIN DT_R19 R19_SU1 ON R18.KANRI_ID = R19_SU1.KANRI_ID
+                          AND R18.SEQ = R19_SU1.SEQ
+					      AND R19_SU1.UPN_ROUTE_NO = 1
+
+  --LEFT JOIN 電子事業者マスタ(収集運搬1)
+  --  ON 収集運搬情報(収集運搬1).収集運搬業者加入者番号　＝　電子事業者マスタ(収集運搬1).加入者番号
+  --  AND 電子事業者マスタ(収集運搬1).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA  JIGYOUSHA_SU1 ON R19_SU1.UPN_SHA_EDI_MEMBER_ID = JIGYOUSHA_SU1.EDI_MEMBER_ID
+                                             AND JIGYOUSHA_SU1.UPN_KBN = 'True'
+
+  -- LEFT JOIN 加入者情報マスタ(収集運搬1)
+  LEFT JOIN MS_JWNET_MEMBER MEMBER_SU1 ON JIGYOUSHA_SU1.EDI_MEMBER_ID = MEMBER_SU1.EDI_MEMBER_ID
+
+  --LEFT JOIN 業者マスタ(収集運搬1)
+  --  ON 電子事業者マスタ(収集運搬1).業者CD　＝　業者マスタ(収集運搬1).業者CD
+  --  AND 業者マスタ(収集運搬1).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_SU1 ON JIGYOUSHA_SU1.GYOUSHA_CD = GYOUSHA_SU1.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業者マスタ(運搬先1)
+  --  ON 収集運搬情報(収集運搬1).運搬先加入者番号　＝　電子事業者マスタ(運搬先1).加入者番号
+  --  AND 電子事業者マスタ(運搬先1).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_US1 ON R19_SU1.UPNSAKI_EDI_MEMBER_ID = JIGYOUSHA_US1.EDI_MEMBER_ID
+                                            AND JIGYOUSHA_US1.UPN_KBN = 'True'
+
+  --LEFT JOIN 業者マスタ(運搬先1)
+  --  ON 電子事業者マスタ(運搬先1).業者CD　＝　業者マスタ(運搬先1).業者CD
+  --  AND 業者マスタ(運搬先1).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_US1 ON JIGYOUSHA_US1.GYOUSHA_CD = GYOUSHA_US1.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業場マスタ(運搬先1)
+  --  ON 収集運搬情報(収集運搬1).運搬先加入者番号　＝　電子事業場マスタ(運搬先1).加入者番号
+  --  AND 電子事業場マスタ(運搬先1).事業者区分　＝　2(収集運搬業者)
+  --  AND 電子事業場マスタ(運搬先1).事業場区分　＝　2(収集運搬事業場)
+  --  AND 収集運搬情報(収集運搬1).運搬先事業場名　＝　電子事業場マスタ(運搬先1).事業場名
+  --  AND 収集運搬情報(収集運搬1).運搬先事業場所在地1　＝　電子事業場マスタ(運搬先1).都道府県
+  --  AND 収集運搬情報(収集運搬1).運搬先事業場所在地2　＝　電子事業場マスタ(運搬先1).市区町村
+  --  AND 収集運搬情報(収集運搬1).運搬先事業場所在地3　＝　電子事業場マスタ(運搬先1).町域
+  --  AND 収集運搬情報(収集運搬1).運搬先事業場所在地4　＝　電子事業場マスタ(運搬先1).詳細住所
+  LEFT JOIN M_DENSHI_JIGYOUJOU JIGYOUJOU_US1 ON R19_SU1.UPNSAKI_EDI_MEMBER_ID = JIGYOUJOU_US1.EDI_MEMBER_ID
+                                            AND JIGYOUJOU_US1.JIGYOUSHA_KBN = 2
+											AND JIGYOUJOU_US1.JIGYOUJOU_KBN = 2
+											AND R19_SU1.UPNSAKI_JOU_NAME = JIGYOUJOU_US1.JIGYOUJOU_NAME
+											AND ISNULL(R19_SU1.UPNSAKI_JOU_ADDRESS1,'') + ISNULL(R19_SU1.UPNSAKI_JOU_ADDRESS2,'') + ISNULL(R19_SU1.UPNSAKI_JOU_ADDRESS3,'') + ISNULL(R19_SU1.UPNSAKI_JOU_ADDRESS4,'')
+											  = ISNULL(JIGYOUJOU_US1.JIGYOUJOU_ADDRESS1,'') + ISNULL(JIGYOUJOU_US1.JIGYOUJOU_ADDRESS2,'') + ISNULL(JIGYOUJOU_US1.JIGYOUJOU_ADDRESS3,'') + ISNULL(JIGYOUJOU_US1.JIGYOUJOU_ADDRESS4,'')
+
+  --LEFT JOIN 現場マスタ(運搬先1)
+  --  ON 電子事業場マスタ(運搬先1).業者CD　＝　現場マスタ(運搬先1).業者CD
+  --  AND 電子事業場マスタ(運搬先1).現場CD　＝　現場マスタ(運搬先1).現場CD
+  --  AND 現場マスタ(運搬先1).積替保管区分　＝　1(収集運搬事業場)
+  LEFT JOIN M_GENBA GENBA_US1 ON JIGYOUJOU_US1.GYOUSHA_CD = GENBA_US1.GYOUSHA_CD
+                             AND JIGYOUJOU_US1.GENBA_CD = GENBA_US1.GENBA_CD
+
+  --LEFT JOIN 収集運搬情報(収集運搬2)
+  --  ON マニフェスト情報.管理番号　＝　収集運搬情報(収集運搬2).管理番号
+  --  AND マニフェスト情報.枝番　＝　収集運搬情報(収集運搬2).枝番
+  --  AND 収集運搬情報(収集運搬2).区間番号　＝　2(区間2)
+  LEFT JOIN DT_R19 R19_SU2 ON R18.KANRI_ID = R19_SU2.KANRI_ID
+                          AND R18.SEQ = R19_SU2.SEQ
+					      AND R19_SU2.UPN_ROUTE_NO = 2
+
+  --LEFT JOIN 電子事業者マスタ(収集運搬2)
+  --  ON 収集運搬情報(収集運搬2).収集運搬業者加入者番号　＝　電子事業者マスタ(収集運搬2).加入者番号
+  --  AND 電子事業者マスタ(収集運搬2).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA  JIGYOUSHA_SU2 ON R19_SU2.UPN_SHA_EDI_MEMBER_ID = JIGYOUSHA_SU2.EDI_MEMBER_ID
+                                             AND JIGYOUSHA_SU2.UPN_KBN = 'True'
+
+  -- LEFT JOIN 加入者情報マスタ(収集運搬2)
+  LEFT JOIN MS_JWNET_MEMBER MEMBER_SU2 ON JIGYOUSHA_SU2.EDI_MEMBER_ID = MEMBER_SU2.EDI_MEMBER_ID
+
+  --LEFT JOIN 業者マスタ(収集運搬2)
+  --  ON 電子事業者マスタ(収集運搬2).業者CD　＝　業者マスタ(収集運搬2).業者CD
+  --  AND 業者マスタ(収集運搬2).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_SU2 ON JIGYOUSHA_SU2.GYOUSHA_CD = GYOUSHA_SU2.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業者マスタ(運搬先2)
+  --  ON 収集運搬情報(収集運搬2).運搬先加入者番号　＝　電子事業者マスタ(運搬先2).加入者番号
+  --  AND 電子事業者マスタ(運搬先2).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_US2 ON R19_SU2.UPNSAKI_EDI_MEMBER_ID = JIGYOUSHA_US2.EDI_MEMBER_ID
+                                            AND JIGYOUSHA_US2.UPN_KBN = 'True'
+
+  --LEFT JOIN 業者マスタ(運搬先2)
+  --  ON 電子事業者マスタ(運搬先2).業者CD　＝　業者マスタ(運搬先2).業者CD
+  --  AND 業者マスタ(運搬先2).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_US2 ON JIGYOUSHA_US2.GYOUSHA_CD = GYOUSHA_US2.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業場マスタ(運搬先2)
+  --  ON 収集運搬情報(収集運搬2).運搬先加入者番号　＝　電子事業場マスタ(運搬先2).加入者番号
+  --  AND 電子事業場マスタ(運搬先2).事業者区分　＝　2(収集運搬業者)
+  --  AND 電子事業場マスタ(運搬先2).事業場区分　＝　2(収集運搬事業場)
+  --  AND 収集運搬情報(収集運搬2).運搬先事業場名　＝　電子事業場マスタ(運搬先2).事業場名
+  --  AND 収集運搬情報(収集運搬2).運搬先事業場所在地1　＝　電子事業場マスタ(運搬先2).都道府県
+  --  AND 収集運搬情報(収集運搬2).運搬先事業場所在地2　＝　電子事業場マスタ(運搬先2).市区町村
+  --  AND 収集運搬情報(収集運搬2).運搬先事業場所在地3　＝　電子事業場マスタ(運搬先2).町域
+  --  AND 収集運搬情報(収集運搬2).運搬先事業場所在地4　＝　電子事業場マスタ(運搬先2).詳細住所
+  LEFT JOIN M_DENSHI_JIGYOUJOU JIGYOUJOU_US2 ON R19_SU2.UPNSAKI_EDI_MEMBER_ID = JIGYOUJOU_US2.EDI_MEMBER_ID
+                                            AND JIGYOUJOU_US2.JIGYOUSHA_KBN = 2
+											AND JIGYOUJOU_US2.JIGYOUJOU_KBN = 2
+											AND R19_SU2.UPNSAKI_JOU_NAME = JIGYOUJOU_US2.JIGYOUJOU_NAME
+											AND ISNULL(R19_SU2.UPNSAKI_JOU_ADDRESS1,'') + ISNULL(R19_SU2.UPNSAKI_JOU_ADDRESS2,'') + ISNULL(R19_SU2.UPNSAKI_JOU_ADDRESS3,'') + ISNULL(R19_SU2.UPNSAKI_JOU_ADDRESS4,'')
+											  = ISNULL(JIGYOUJOU_US2.JIGYOUJOU_ADDRESS1,'') + ISNULL(JIGYOUJOU_US2.JIGYOUJOU_ADDRESS2,'') + ISNULL(JIGYOUJOU_US2.JIGYOUJOU_ADDRESS3,'') + ISNULL(JIGYOUJOU_US2.JIGYOUJOU_ADDRESS4,'')
+
+  --LEFT JOIN 現場マスタ(運搬先2)
+  --  ON 電子事業場マスタ(運搬先2).業者CD　＝　現場マスタ(運搬先2).業者CD
+  --  AND 電子事業場マスタ(運搬先2).現場CD　＝　現場マスタ(運搬先2).現場CD
+  --  AND 現場マスタ(運搬先2).積替保管区分　＝　1(収集運搬事業場)
+  LEFT JOIN M_GENBA GENBA_US2 ON JIGYOUJOU_US2.GYOUSHA_CD = GENBA_US2.GYOUSHA_CD
+                             AND JIGYOUJOU_US2.GENBA_CD = GENBA_US2.GENBA_CD
+
+  --LEFT JOIN 収集運搬情報(収集運搬3)
+  --  ON マニフェスト情報.管理番号　＝　収集運搬情報(収集運搬3).管理番号
+  --  AND マニフェスト情報.枝番　＝　収集運搬情報(収集運搬3).枝番
+  --  AND 収集運搬情報(収集運搬3).区間番号　＝　3(区間3)
+  LEFT JOIN DT_R19 R19_SU3 ON R18.KANRI_ID = R19_SU3.KANRI_ID
+                          AND R18.SEQ = R19_SU3.SEQ
+					      AND R19_SU3.UPN_ROUTE_NO = 3
+
+  --LEFT JOIN 電子事業者マスタ(収集運搬3)
+  --  ON 収集運搬情報(収集運搬3).収集運搬業者加入者番号　＝　電子事業者マスタ(収集運搬3).加入者番号
+  --  AND 電子事業者マスタ(収集運搬3).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_SU3 ON R19_SU3.UPN_SHA_EDI_MEMBER_ID = JIGYOUSHA_SU3.EDI_MEMBER_ID
+                                            AND JIGYOUSHA_SU3.UPN_KBN = 'True'
+
+
+  -- LEFT JOIN 加入者情報マスタ(収集運搬3)
+  LEFT JOIN MS_JWNET_MEMBER MEMBER_SU3 ON JIGYOUSHA_SU3.EDI_MEMBER_ID = MEMBER_SU3.EDI_MEMBER_ID
+
+  --LEFT JOIN 業者マスタ(収集運搬3)
+  --  ON 電子事業者マスタ(収集運搬3).業者CD　＝　業者マスタ(収集運搬3).業者CD
+  --  AND 業者マスタ(収集運搬3).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_SU3 ON JIGYOUSHA_SU3.GYOUSHA_CD = GYOUSHA_SU3.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業者マスタ(運搬先3)
+  --  ON 収集運搬情報(収集運搬3).運搬先加入者番号　＝　電子事業者マスタ(運搬先3).加入者番号
+  --  AND 電子事業者マスタ(運搬先3).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_US3 ON R19_SU3.UPNSAKI_EDI_MEMBER_ID = JIGYOUSHA_US3.EDI_MEMBER_ID
+                                            AND JIGYOUSHA_US3.UPN_KBN = 'True'
+
+  --LEFT JOIN 業者マスタ(運搬先3)
+  --  ON 電子事業者マスタ(運搬先3).業者CD　＝　業者マスタ(運搬先3).業者CD
+  --  AND 業者マスタ(運搬先3).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_US3 ON JIGYOUSHA_US3.GYOUSHA_CD = GYOUSHA_US3.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業場マスタ(運搬先3)
+  --  ON 収集運搬情報(収集運搬3).運搬先加入者番号　＝　電子事業場マスタ(運搬先3).加入者番号
+  --  AND 電子事業場マスタ(運搬先3).事業者区分　＝　2(収集運搬業者)
+  --  AND 電子事業場マスタ(運搬先3).事業場区分　＝　2(収集運搬事業場)
+  --  AND 収集運搬情報(収集運搬3).運搬先事業場名　＝　電子事業場マスタ(運搬先3).事業場名
+  --  AND 収集運搬情報(収集運搬3).運搬先事業場所在地1　＝　電子事業場マスタ(運搬先3).都道府県
+  --  AND 収集運搬情報(収集運搬3).運搬先事業場所在地2　＝　電子事業場マスタ(運搬先3).市区町村
+  --  AND 収集運搬情報(収集運搬3).運搬先事業場所在地3　＝　電子事業場マスタ(運搬先3).町域
+  --  AND 収集運搬情報(収集運搬3).運搬先事業場所在地4　＝　電子事業場マスタ(運搬先3).詳細住所
+  LEFT JOIN M_DENSHI_JIGYOUJOU JIGYOUJOU_US3 ON R19_SU3.UPNSAKI_EDI_MEMBER_ID = JIGYOUJOU_US3.EDI_MEMBER_ID
+                                            AND JIGYOUJOU_US3.JIGYOUSHA_KBN = 2
+											AND JIGYOUJOU_US3.JIGYOUJOU_KBN = 2
+											AND R19_SU3.UPNSAKI_JOU_NAME = JIGYOUJOU_US3.JIGYOUJOU_NAME
+											AND ISNULL(R19_SU3.UPNSAKI_JOU_ADDRESS1,'') + ISNULL(R19_SU3.UPNSAKI_JOU_ADDRESS2,'') + ISNULL(R19_SU3.UPNSAKI_JOU_ADDRESS3,'') + ISNULL(R19_SU3.UPNSAKI_JOU_ADDRESS4,'')
+											  = ISNULL(JIGYOUJOU_US3.JIGYOUJOU_ADDRESS1,'') + ISNULL(JIGYOUJOU_US3.JIGYOUJOU_ADDRESS2,'') + ISNULL(JIGYOUJOU_US3.JIGYOUJOU_ADDRESS3,'') + ISNULL(JIGYOUJOU_US3.JIGYOUJOU_ADDRESS4,'')
+
+  --LEFT JOIN 現場マスタ(運搬先3)
+  --  ON 電子事業場マスタ(運搬先3).業者CD　＝　現場マスタ(運搬先3).業者CD
+  --  AND 電子事業場マスタ(運搬先3).現場CD　＝　現場マスタ(運搬先3).現場CD
+  --  AND 現場マスタ(運搬先3).積替保管区分　＝　1(収集運搬事業場)
+  LEFT JOIN M_GENBA GENBA_US3 ON JIGYOUJOU_US3.GYOUSHA_CD = GENBA_US3.GYOUSHA_CD
+                             AND JIGYOUJOU_US3.GENBA_CD = GENBA_US3.GENBA_CD
+
+  --LEFT JOIN 収集運搬情報(収集運搬4)
+  --  ON マニフェスト情報.管理番号　＝　収集運搬情報(収集運搬4).管理番号
+  --  AND マニフェスト情報.枝番　＝　収集運搬情報(収集運搬4).枝番
+  --  AND 収集運搬情報(収集運搬4).区間番号　＝　4(区間4)
+  LEFT JOIN DT_R19 R19_SU4 ON R18.KANRI_ID = R19_SU4.KANRI_ID
+                          AND R18.SEQ = R19_SU4.SEQ
+					      AND R19_SU4.UPN_ROUTE_NO = 4
+
+  --LEFT JOIN 電子事業者マスタ(収集運搬4)
+  --  ON 収集運搬情報(収集運搬4).収集運搬業者加入者番号　＝　電子事業者マスタ(収集運搬4).加入者番号
+  --  AND 電子事業者マスタ(収集運搬4).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_SU4 ON R19_SU4.UPN_SHA_EDI_MEMBER_ID = JIGYOUSHA_SU4.EDI_MEMBER_ID
+                                            AND JIGYOUSHA_SU4.UPN_KBN = 'True'
+
+  -- LEFT JOIN 加入者情報マスタ(収集運搬4)
+  LEFT JOIN MS_JWNET_MEMBER MEMBER_SU4 ON JIGYOUSHA_SU4.EDI_MEMBER_ID = MEMBER_SU4.EDI_MEMBER_ID
+
+  --LEFT JOIN 業者マスタ(収集運搬4)
+  --  ON 電子事業者マスタ(収集運搬4).業者CD　＝　業者マスタ(収集運搬4).業者CD
+  --  AND 業者マスタ(収集運搬4).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_SU4 ON JIGYOUSHA_SU4.GYOUSHA_CD = GYOUSHA_SU4.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業者マスタ(運搬先4)
+  --  ON 収集運搬情報(収集運搬4).運搬先加入者番号　＝　電子事業者マスタ(運搬先4).加入者番号
+  --  AND 電子事業者マスタ(運搬先4).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_US4 ON R19_SU4.UPNSAKI_EDI_MEMBER_ID = JIGYOUSHA_US4.EDI_MEMBER_ID
+                                            AND JIGYOUSHA_US4.UPN_KBN = 'True'
+
+  --LEFT JOIN 業者マスタ(運搬先4)
+  --  ON 電子事業者マスタ(運搬先4).業者CD　＝　業者マスタ(運搬先4).業者CD
+  --  AND 業者マスタ(運搬先4).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_US4 ON JIGYOUSHA_US4.GYOUSHA_CD = GYOUSHA_US4.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業場マスタ(運搬先4)
+  --  ON 収集運搬情報(収集運搬4).運搬先加入者番号　＝　電子事業場マスタ(運搬先4).加入者番号
+  --  AND 電子事業場マスタ(運搬先4).事業者区分　＝　2(収集運搬業者)
+  --  AND 電子事業場マスタ(運搬先4).事業場区分　＝　2(収集運搬事業場)
+  --  AND 収集運搬情報(収集運搬4).運搬先事業場名　＝　電子事業場マスタ(運搬先4).事業場名
+  --  AND 収集運搬情報(収集運搬4).運搬先事業場所在地1　＝　電子事業場マスタ(運搬先4).都道府県
+  --  AND 収集運搬情報(収集運搬4).運搬先事業場所在地2　＝　電子事業場マスタ(運搬先4).市区町村
+  --  AND 収集運搬情報(収集運搬4).運搬先事業場所在地3　＝　電子事業場マスタ(運搬先4).町域
+  --  AND 収集運搬情報(収集運搬4).運搬先事業場所在地4　＝　電子事業場マスタ(運搬先4).詳細住所
+  LEFT JOIN M_DENSHI_JIGYOUJOU JIGYOUJOU_US4 ON R19_SU4.UPNSAKI_EDI_MEMBER_ID = JIGYOUJOU_US4.EDI_MEMBER_ID
+                                            AND JIGYOUJOU_US4.JIGYOUSHA_KBN = 2
+											AND JIGYOUJOU_US4.JIGYOUJOU_KBN = 2
+											AND R19_SU4.UPNSAKI_JOU_NAME = JIGYOUJOU_US4.JIGYOUJOU_NAME
+											AND ISNULL(R19_SU4.UPNSAKI_JOU_ADDRESS1,'') + ISNULL(R19_SU4.UPNSAKI_JOU_ADDRESS2,'') + ISNULL(R19_SU4.UPNSAKI_JOU_ADDRESS3,'') + ISNULL(R19_SU4.UPNSAKI_JOU_ADDRESS4,'')
+											  = ISNULL(JIGYOUJOU_US4.JIGYOUJOU_ADDRESS1,'') + ISNULL(JIGYOUJOU_US4.JIGYOUJOU_ADDRESS2,'') + ISNULL(JIGYOUJOU_US4.JIGYOUJOU_ADDRESS3,'') + ISNULL(JIGYOUJOU_US4.JIGYOUJOU_ADDRESS4,'')
+
+  --LEFT JOIN 現場マスタ(運搬先4)
+  --  ON 電子事業場マスタ(運搬先4).業者CD　＝　現場マスタ(運搬先4).業者CD
+  --  AND 電子事業場マスタ(運搬先4).現場CD　＝　現場マスタ(運搬先4).現場CD
+  --  AND 現場マスタ(運搬先4).積替保管区分　＝　1(収集運搬事業場)
+  LEFT JOIN M_GENBA GENBA_US4 ON JIGYOUJOU_US4.GYOUSHA_CD = GENBA_US4.GYOUSHA_CD
+                             AND JIGYOUJOU_US4.GENBA_CD = GENBA_US4.GENBA_CD
+
+  --LEFT JOIN 収集運搬情報(収集運搬5)
+  --  ON マニフェスト情報.管理番号　＝　収集運搬情報(収集運搬5).管理番号
+  --  AND マニフェスト情報.枝番　＝　収集運搬情報(収集運搬5).枝番
+  --  AND 収集運搬情報(収集運搬5).区間番号　＝　5(区間5)
+  LEFT JOIN DT_R19 R19_SU5 ON R18.KANRI_ID = R19_SU5.KANRI_ID
+                          AND R18.SEQ = R19_SU5.SEQ
+					      AND R19_SU5.UPN_ROUTE_NO = 5
+
+  --LEFT JOIN 電子事業者マスタ(収集運搬5)
+  --  ON 収集運搬情報(収集運搬5).収集運搬業者加入者番号　＝　電子事業者マスタ(収集運搬5).加入者番号
+  --  AND 電子事業者マスタ(収集運搬5).運搬業者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_SU5 ON R19_SU5.UPN_SHA_EDI_MEMBER_ID = JIGYOUSHA_SU5.EDI_MEMBER_ID
+                                            AND JIGYOUSHA_SU5.UPN_KBN = 'True'
+
+  -- LEFT JOIN 加入者情報マスタ(収集運搬5)
+  LEFT JOIN MS_JWNET_MEMBER MEMBER_SU5 ON JIGYOUSHA_SU5.EDI_MEMBER_ID = MEMBER_SU5.EDI_MEMBER_ID
+
+  --LEFT JOIN 業者マスタ(収集運搬5)
+  --  ON 電子事業者マスタ(収集運搬5).業者CD　＝　業者マスタ(収集運搬5).業者CD
+  --  AND 業者マスタ(収集運搬5).運搬受託者区分　＝　1(収集運搬業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_SU5 ON JIGYOUSHA_SU5.GYOUSHA_CD = GYOUSHA_SU5.GYOUSHA_CD
+
+  --LEFT JOIN 収集運搬情報(処分)
+  --  ON マニフェスト情報.管理番号　＝　収集運搬情報(処分).管理番号
+  --  AND マニフェスト情報.枝番　＝　収集運搬情報(処分).枝番
+  --  AND 収集運搬情報(処分).区間番号　＝　マニフェスト情報.収集運搬情報件数(最終区間の区間番号とみなす)
+  LEFT JOIN DT_R19 R19_SYOBUNN ON R18.KANRI_ID = R19_SYOBUNN.KANRI_ID
+                              AND R18.SEQ = R19_SYOBUNN.SEQ
+							  AND R19_SYOBUNN.UPN_ROUTE_NO = R18.UPN_ROUTE_CNT
+
+  --LEFT JOIN 電子事業者マスタ(処分)
+  --  ON 収集運搬情報(処分).運搬先加入者番号　＝　電子事業者マスタ(処分).加入者番号
+  --  AND 電子事業者マスタ(処分).処分業者区分　＝　1(処分業者)
+  LEFT JOIN M_DENSHI_JIGYOUSHA JIGYOUSHA_SYOBUNN ON R19_SYOBUNN.UPNSAKI_EDI_MEMBER_ID = JIGYOUSHA_SYOBUNN.EDI_MEMBER_ID
+                                                AND JIGYOUSHA_SYOBUNN.SBN_KBN = 'True'
+
+  --LEFT JOIN 業者マスタ(処分)
+  --  ON 電子事業者マスタ(処分).業者CD　＝　業者マスタ(処分).業者CD
+  --  AND 業者マスタ(処分).処分受託者区分　＝　1(処分業者)
+  LEFT JOIN M_GYOUSHA GYOUSHA_SYOBUNN ON JIGYOUSHA_SYOBUNN.GYOUSHA_CD = GYOUSHA_SYOBUNN.GYOUSHA_CD
+
+  --LEFT JOIN 電子事業場マスタ(処分)
+  --  ON 収集運搬情報(処分).運搬先加入者番号　＝　電子事業者マスタ(処分).加入者番号
+  --  AND 電子事業場マスタ(処分).事業者区分　＝　3(処分業者)
+  --  AND 電子事業場マスタ(処分).事業場区分　＝　3(処分事業場)
+  --  AND 収集運搬情報(処分).運搬先事業場名　＝　電子事業場マスタ(処分).事業場名
+  --  AND 収集運搬情報(処分).運搬先事業場所在地1　＝　電子事業場マスタ(処分).都道府県
+  --  AND 収集運搬情報(処分).運搬先事業場所在地2　＝　電子事業場マスタ(処分).市区町村
+  --  AND 収集運搬情報(処分).運搬先事業場所在地3　＝　電子事業場マスタ(処分).町域
+  --  AND 収集運搬情報(処分).運搬先事業場所在地4　＝　電子事業場マスタ(処分).詳細住所
+  LEFT JOIN M_DENSHI_JIGYOUJOU JIGYOUJOU_SYOBUNN ON (CASE WHEN R19_SYOBUNN.UPNSAKI_EDI_MEMBER_ID = '0000000' THEN ISNULL(R18_EX.NO_REP_SBN_EDI_MEMBER_ID, '') ELSE R19_SYOBUNN.UPNSAKI_EDI_MEMBER_ID END) = JIGYOUJOU_SYOBUNN.EDI_MEMBER_ID
+                                                AND JIGYOUJOU_SYOBUNN.JIGYOUSHA_KBN = 3
+												AND JIGYOUJOU_SYOBUNN.JIGYOUJOU_KBN = 3
+												AND R19_SYOBUNN.UPNSAKI_JOU_NAME = JIGYOUJOU_SYOBUNN.JIGYOUJOU_NAME
+											    AND ISNULL(R19_SYOBUNN.UPNSAKI_JOU_ADDRESS1,'') + ISNULL(R19_SYOBUNN.UPNSAKI_JOU_ADDRESS2,'') + ISNULL(R19_SYOBUNN.UPNSAKI_JOU_ADDRESS3,'') + ISNULL(R19_SYOBUNN.UPNSAKI_JOU_ADDRESS4,'')
+											      = ISNULL(JIGYOUJOU_SYOBUNN.JIGYOUJOU_ADDRESS1,'') + ISNULL(JIGYOUJOU_SYOBUNN.JIGYOUJOU_ADDRESS2,'') + ISNULL(JIGYOUJOU_SYOBUNN.JIGYOUJOU_ADDRESS3,'') + ISNULL(JIGYOUJOU_SYOBUNN.JIGYOUJOU_ADDRESS4,'')
+
+  --LEFT JOIN 現場マスタ(処分)
+  --  ON 電子事業場マスタ(処分).業者CD　＝　現場マスタ(処分).業者CD
+  --  AND 電子事業場マスタ(処分).現場CD　＝　現場マスタ(処分).現場CD
+  --  AND (現場マスタ(処分).処分事業場区分　＝　1(処分事業場)
+  --          OR 現場マスタ(処分).最終処分場区分　＝　1(最終処分場))
+  LEFT JOIN M_GENBA GENBA_SYOBUNN ON JIGYOUJOU_SYOBUNN.GYOUSHA_CD = GENBA_SYOBUNN.GYOUSHA_CD
+                                 AND JIGYOUJOU_SYOBUNN.GENBA_CD = GENBA_SYOBUNN.GENBA_CD
+
+  LEFT JOIN (SELECT COUNT(REC_SEQ) AS REC_SEQ_COUNT,KANRI_ID,SEQ FROM DT_R04 GROUP BY KANRI_ID,SEQ) AS R04 
+  ON R18.KANRI_ID = R04.KANRI_ID
+  AND R18.SEQ = R04.SEQ
+  LEFT JOIN (SELECT COUNT(REC_SEQ) AS REC_SEQ_COUNT,KANRI_ID,SEQ FROM DT_R08 GROUP BY KANRI_ID,SEQ) AS R08 
+  ON R18.KANRI_ID = R08.KANRI_ID
+  AND R18.SEQ = R08.SEQ
+  LEFT JOIN (SELECT COUNT(REC_SEQ) AS REC_SEQ_COUNT,KANRI_ID,SEQ FROM DT_R13 GROUP BY KANRI_ID,SEQ) AS R13 
+  ON R18.KANRI_ID = R13.KANRI_ID
+  AND R18.SEQ = R13.SEQ
+  --マニフェスト目次情報.状態フラグ　＝　4(登録)
+  --  AND マニフェスト目次情報.状態詳細フラグ　＝　0(通常)
+  -- 代行登録確認用
+  INNER JOIN DT_MF_MEMBER
+    ON R18.KANRI_ID = DT_MF_MEMBER.KANRI_ID
+ WHERE TOC.STATUS_FLAG = 4
+   AND TOC.STATUS_DETAIL = 0
+   AND ISDATE(R18.HIKIWATASHI_DATE) <> 0
+   /*IF data.hikiWatashiDateFrom != null && data.hikiWatashiDateFrom != ''*/
+   AND R18.HIKIWATASHI_DATE >= /*data.hikiWatashiDateFrom*/ /*END*/
+   /*IF data.hikiWatashiDateTo != null && data.hikiWatashiDateTo != ''*/
+   AND R18.HIKIWATASHI_DATE <= /*data.hikiWatashiDateTo*/ /*END*/
+   /*IF data.manifestIdFrom != null*/
+   AND R18.MANIFEST_ID >= /*data.manifestIdFrom*/ /*END*/
+   /*IF data.manifestIdTo != null*/
+   AND R18.MANIFEST_ID <= /*data.manifestIdTo*/ /*END*/
+) AS ICHIRAN_DATA
+WHERE
+    1 = 1
+    /*IF data.upnEdiMemberId != null && data.upnEdiMemberId != ''*/
+    AND (
+        ICHIRAN_DATA.SU1_UPN_SHA_EDI_MEMBER_ID = /*data.upnEdiMemberId*/
+        OR ICHIRAN_DATA.SU2_UPN_SHA_EDI_MEMBER_ID = /*data.upnEdiMemberId*/
+        OR ICHIRAN_DATA.SU3_UPN_SHA_EDI_MEMBER_ID = /*data.upnEdiMemberId*/
+        OR ICHIRAN_DATA.SU4_UPN_SHA_EDI_MEMBER_ID = /*data.upnEdiMemberId*/
+        OR ICHIRAN_DATA.SU5_UPN_SHA_EDI_MEMBER_ID = /*data.upnEdiMemberId*/
+    )
+    /*END*/
+    /*IF data.sbnEdiMemberId != null && data.sbnEdiMemberId != ''*/
+    AND ICHIRAN_DATA.SB_UPNSAKI_EDI_MEMBER_ID = /*data.sbnEdiMemberId*/
+    /*END*/
+    /*IF data.sbnJouName != null && data.sbnJouName != ''*/
+    AND ICHIRAN_DATA.SB_UPNSAKI_JOU_NAME = /*data.sbnJouName*/
+    /*END*/
+    /*IF data.sbnJouAddress != null && data.sbnJouAddress != ''*/
+    AND ISNULL(ICHIRAN_DATA.SB_UPNSAKI_JOU_ADDRESS1, '') + ISNULL(ICHIRAN_DATA.SB_UPNSAKI_JOU_ADDRESS2, '') + ISNULL(ICHIRAN_DATA.SB_UPNSAKI_JOU_ADDRESS3, '') + ISNULL(ICHIRAN_DATA.SB_UPNSAKI_JOU_ADDRESS4, '')
+        = /*data.sbnJouAddress*/
+    /*END*/
+    /*IF !data.dataCondition.IsNull && (data.dataCondition == 1)*/
+    AND ICHIRAN_DATA.EX_KANRI_ID <> ''
+    /*END*/
+    /*IF !data.dataCondition.IsNull && (data.dataCondition == 2)*/
+    AND ICHIRAN_DATA.EX_KANRI_ID = ''
+    /*END*/
+    /*IF !data.masterSettingCondition.IsNull && (data.masterSettingCondition == 1)*/
+    -- マスタ設定の条件を変更する場合、UIForm#SetIchiranBackColorメソッドにも修正が必要か確認。(色変更に影響があるかどうか確認)
+    AND NOT (
+        (
+            -- 排出
+            ISNULL(ICHIRAN_DATA.KANRI_ID, '') <> ''
+            AND (
+                ISNULL(ICHIRAN_DATA.EDI_MEMBER_ID, '') = ''
+                OR ISNULL(ICHIRAN_DATA.GYOUSHA_CD, '') = ''
+                OR ISNULL(ICHIRAN_DATA.JIGYOUJOU_CD, '') = ''
+                OR ISNULL(ICHIRAN_DATA.GENBA_CD, '') = ''
+            )
+        )
+        OR (
+            -- 運搬1
+            ISNULL(ICHIRAN_DATA.SU1_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SU1_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU1_GYOUSHA_CD, '') = '' )
+                OR (
+                    ISNULL(ICHIRAN_DATA.UPN_ROUTE_CNT, 0) > 1
+                    AND (
+                        ( ISNULL(ICHIRAN_DATA.US1_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.US1_GYOUSHA_CD, '') = '' )
+                        OR ( ISNULL(ICHIRAN_DATA.US1_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.US1_GENBA_CD, '') = '' )
+                    )
+                )
+            )
+        )
+        OR (
+            -- 運搬2
+            ISNULL(ICHIRAN_DATA.SU2_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SU2_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU2_GYOUSHA_CD, '') = '' )
+                OR (
+                    ISNULL(ICHIRAN_DATA.UPN_ROUTE_CNT, 0) > 2
+                    AND (
+                        ( ISNULL(ICHIRAN_DATA.US2_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.US2_GYOUSHA_CD, '') = '' )
+                        OR ( ISNULL(ICHIRAN_DATA.US2_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.US2_GENBA_CD, '') = '' )
+                    )
+                )
+            )
+        )
+        OR (
+            -- 運搬3
+            ISNULL(ICHIRAN_DATA.SU3_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SU3_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU3_GYOUSHA_CD, '') = '' )
+                OR (
+                    ISNULL(ICHIRAN_DATA.UPN_ROUTE_CNT, 0) > 3
+                    AND (
+                        ( ISNULL(ICHIRAN_DATA.US3_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.US3_GYOUSHA_CD, '') = '' )
+                        OR ( ISNULL(ICHIRAN_DATA.US3_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.US3_GENBA_CD, '') = '' )
+                    )
+                )
+            )
+        )
+        OR (
+            -- 運搬4
+            ISNULL(ICHIRAN_DATA.SU4_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SU4_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU4_GYOUSHA_CD, '') = '' )
+                OR (
+                    ISNULL(ICHIRAN_DATA.UPN_ROUTE_CNT, 0) > 4
+                    AND (
+                        ( ISNULL(ICHIRAN_DATA.US4_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.US4_GYOUSHA_CD, '') = '' )
+                        OR ( ISNULL(ICHIRAN_DATA.US4_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.US4_GENBA_CD, '') = '' )
+                    )
+                )
+            )
+        )
+        OR (
+            -- 運搬5
+            ISNULL(ICHIRAN_DATA.SU5_KANRI_ID, '') <> ''
+            AND ( ( ISNULL(ICHIRAN_DATA.SU5_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU5_GYOUSHA_CD, '') = '' ) )
+        )
+        OR (
+            -- 処分
+            ISNULL(ICHIRAN_DATA.SB_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SB_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SB_GYOUSHA_CD, '') = '' )
+                OR ( ISNULL(ICHIRAN_DATA.SB_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.SB_GENBA_CD, '') = '' )
+            )
+        )
+    )
+    /*END*/
+    /*IF !data.masterSettingCondition.IsNull && (data.masterSettingCondition == 2)*/
+    AND (
+        (
+            -- 排出
+            ISNULL(ICHIRAN_DATA.KANRI_ID, '') <> ''
+            AND (
+                ISNULL(ICHIRAN_DATA.EDI_MEMBER_ID, '') = ''
+                OR ISNULL(ICHIRAN_DATA.GYOUSHA_CD, '') = ''
+                OR ISNULL(ICHIRAN_DATA.JIGYOUJOU_CD, '') = ''
+                OR ISNULL(ICHIRAN_DATA.GENBA_CD, '') = ''
+            )
+        )
+        OR (
+            -- 運搬1
+            ISNULL(ICHIRAN_DATA.SU1_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SU1_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU1_GYOUSHA_CD, '') = '' )
+                OR (
+                    ISNULL(ICHIRAN_DATA.UPN_ROUTE_CNT, 0) > 1
+                    AND (
+                        ( ISNULL(ICHIRAN_DATA.US1_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.US1_GYOUSHA_CD, '') = '' )
+                        OR ( ISNULL(ICHIRAN_DATA.US1_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.US1_GENBA_CD, '') = '' )
+                    )
+                )
+            )
+        )
+        OR (
+            -- 運搬2
+            ISNULL(ICHIRAN_DATA.SU2_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SU2_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU2_GYOUSHA_CD, '') = '' )
+                OR (
+                    ISNULL(ICHIRAN_DATA.UPN_ROUTE_CNT, 0) > 2
+                    AND (
+                        ( ISNULL(ICHIRAN_DATA.US2_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.US2_GYOUSHA_CD, '') = '' )
+                        OR ( ISNULL(ICHIRAN_DATA.US2_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.US2_GENBA_CD, '') = '' )
+                    )
+                )
+            )
+        )
+        OR (
+            -- 運搬3
+            ISNULL(ICHIRAN_DATA.SU3_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SU3_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU3_GYOUSHA_CD, '') = '' )
+                OR (
+                    ISNULL(ICHIRAN_DATA.UPN_ROUTE_CNT, 0) > 3
+                    AND (
+                        ( ISNULL(ICHIRAN_DATA.US3_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.US3_GYOUSHA_CD, '') = '' )
+                        OR ( ISNULL(ICHIRAN_DATA.US3_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.US3_GENBA_CD, '') = '' )
+                    )
+                )
+            )
+        )
+        OR (
+            -- 運搬4
+            ISNULL(ICHIRAN_DATA.SU4_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SU4_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU4_GYOUSHA_CD, '') = '' )
+                OR (
+                    ISNULL(ICHIRAN_DATA.UPN_ROUTE_CNT, 0) > 4
+                    AND (
+                        ( ISNULL(ICHIRAN_DATA.US4_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.US4_GYOUSHA_CD, '') = '' )
+                        OR ( ISNULL(ICHIRAN_DATA.US4_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.US4_GENBA_CD, '') = '' )
+                    )
+                )
+            )
+        )
+        OR (
+            -- 運搬5
+            ISNULL(ICHIRAN_DATA.SU5_KANRI_ID, '') <> ''
+            AND ( ( ISNULL(ICHIRAN_DATA.SU5_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SU5_GYOUSHA_CD, '') = '' ) )
+        )
+        OR (
+            -- 処分
+            ISNULL(ICHIRAN_DATA.SB_KANRI_ID, '') <> ''
+            AND (
+                ( ISNULL(ICHIRAN_DATA.SB_EDI_MEMBER_ID, '') = '' OR ISNULL(ICHIRAN_DATA.SB_GYOUSHA_CD, '') = '' )
+                OR ( ISNULL(ICHIRAN_DATA.SB_JIGYOUJOU_CD, '') = '' OR ISNULL(ICHIRAN_DATA.SB_GENBA_CD, '') = '' )
+            )
+        )
+    )
+    /*END*/
+ORDER BY
+   ICHIRAN_DATA.HIKIWATASHI_DATE, ICHIRAN_DATA.MANIFEST_ID

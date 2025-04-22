@@ -1,0 +1,5 @@
+﻿UPDATE
+  T_SEIKYUU_DENPYOU 
+SET DELETE_FLG = '1'
+ WHERE 
+ SEIKYUU_NUMBER = /*seikyuNumber*/

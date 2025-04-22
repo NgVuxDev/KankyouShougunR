@@ -1,0 +1,34 @@
+﻿ SELECT 
+     TTSH.INPUT_KBN
+	,TTHD.GYOUSHA_CD
+	,TTHD.GENBA_CD
+	,TTSH.HINMEI_CD
+	,TTSH.UNIT_CD
+	,UNIT.UNIT_NAME_RYAKU
+	,TTSH.KANSANCHI
+	,TTSH.KANSAN_UNIT_CD
+	,UNITKANSAN.UNIT_NAME_RYAKU  AS UNITKANSAN_NAME
+	,TTSH.KANSAN_UNIT_MOBILE_OUTPUT_FLG
+ FROM T_TEIKI_HAISHA_SHOUSAI TTSH
+ INNER JOIN T_TEIKI_HAISHA_ENTRY TTHE
+ ON TTHE.SYSTEM_ID = TTSH.SYSTEM_ID
+ AND TTHE.SEQ = TTSH.SEQ
+ AND TTHE.DELETE_FLG = 0
+ INNER JOIN T_TEIKI_HAISHA_DETAIL TTHD
+ ON TTHD.SYSTEM_ID = TTSH.SYSTEM_ID
+ AND TTHD.SEQ = TTSH.SEQ
+ AND TTHD.DETAIL_SYSTEM_ID = TTSH.DETAIL_SYSTEM_ID
+LEFT JOIN M_UNIT AS UNIT
+ON TTSH.UNIT_CD = UNIT.UNIT_CD
+LEFT JOIN M_UNIT AS UNITKANSAN
+ON TTSH.KANSAN_UNIT_CD = UNITKANSAN.UNIT_CD
+ /*BEGIN*/WHERE
+ /*IF data.TeikiHaishaNumber != null && data.TeikiHaishaNumber != ''*/ TTHE.TEIKI_HAISHA_NUMBER = /*data.TeikiHaishaNumber*/ /*END*/
+ /*IF data.GyoushaCd != null && data.GyoushaCd != ''*/ AND TTHD.GYOUSHA_CD = /*data.GyoushaCd*/ /*END*/
+ /*IF data.GenbaCd != null && data.GenbaCd != ''*/ AND  TTHD.GENBA_CD = /*data.GenbaCd*/ /*END*/
+ /*IF data.HinmeiCd != null && data.HinmeiCd != ''*/ AND TTSH.HINMEI_CD = /*data.HinmeiCd*/ /*END*/
+ /*IF data.UnitCd != null && data.UnitCd != 0 */ AND TTSH.UNIT_CD = /*data.UnitCd*/ /*END*/
+ /*IF data.DenpyouKbnCd != null && data.DenpyouKbnCd != 0 */ AND TTSH.DENPYOU_KBN_CD = /*data.DenpyouKbnCd*/ /*END*/
+ /*IF data.RoundNo != null && data.RoundNo != 0 */ AND TTHD.ROUND_NO = /*data.RoundNo*/ /*END*/
+ /*END*/
+ ORDER BY TTHD.GYOUSHA_CD,TTHD.GENBA_CD

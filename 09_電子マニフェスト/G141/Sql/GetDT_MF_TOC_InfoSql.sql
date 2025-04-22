@@ -1,0 +1,2 @@
+﻿SELECT * FROM DT_MF_TOC
+WHERE KANRI_ID = /*data.KANRI_ID*/

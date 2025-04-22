@@ -1,0 +1,17 @@
+SELECT 
+    SHA.*
+FROM 
+        dbo.M_DENPYOU_KBN SHA
+/*BEGIN*/WHERE
+ /*IF !data.DENPYOU_KBN_CD.IsNull */CAST(SHA.DENPYOU_KBN_CD AS varchar(5)) LIKE '%' + CAST(/*data.DENPYOU_KBN_CD*/0 AS varchar(5)) + '%'/*END*/
+ /*IF data.DENPYOU_KBN_NAME != null*/AND SHA.DENPYOU_KBN_NAME LIKE '%' +  /*data.DENPYOU_KBN_NAME*/ + '%'/*END*/
+ /*IF data.DENPYOU_KBN_NAME_RYAKU != null*/AND SHA.DENPYOU_KBN_NAME_RYAKU LIKE '%' +  /*data.DENPYOU_KBN_NAME_RYAKU*/ + '%'/*END*/
+ /*IF data.DENPYOU_KBN_BIKOU != null*/AND SHA.DENPYOU_KBN_BIKOU LIKE '%' +  /*data.DENPYOU_KBN_BIKOU*/ + '%'/*END*/
+ /*IF data.DENPYOU_KBN_FURIGANA != null*/AND SHA.DENPYOU_KBN_FURIGANA LIKE '%' +  /*data.DENPYOU_KBN_FURIGANA*/ + '%'/*END*/
+ /*IF data.CREATE_USER != null*/AND SHA.CREATE_USER LIKE '%' +  /*data.CREATE_USER*/ + '%'/*END*/
+ /*IF data.SEARCH_CREATE_DATE != null*/AND CONVERT(nvarchar, SHA.CREATE_DATE, 120) LIKE '%' +  /*data.SEARCH_CREATE_DATE*/ + '%'/*END*/
+ /*IF data.UPDATE_USER != null*/AND SHA.UPDATE_USER LIKE '%' +  /*data.UPDATE_USER*/ + '%'/*END*/
+ /*IF data.SEARCH_UPDATE_DATE != null*/AND CONVERT(nvarchar, SHA.UPDATE_DATE, 120) LIKE '%' +  /*data.SEARCH_UPDATE_DATE*/ + '%'/*END*/
+ /*IF !deletechuFlg*/AND SHA.DELETE_FLG = 0/*END*/
+/*END*/
+ORDER BY SHA.DENPYOU_KBN_CD

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<ArrayOfMenuCategory xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ArrayOfMenuSetting>
+    <MenuSetting>
+      <MenuName>UketsukeShushu</MenuName>
+      <AssemblyName>UketsukeShushu.dll</AssemblyName>
+      <ClassFullName>UketsukeShushu.APP.UketsukeShushuForm</ClassFullName>
+      <ButtonImage>image.UketsukeButton</ButtonImage>
+      <ButtonName>受付（収集）</ButtonName>
+    </MenuSetting>
+    <MenuSetting>
+      <MenuName></MenuName>
+      <AssemblyName></AssemblyName>
+      <ClassName></ClassName>
+      <ButtonImage></ButtonImage>
+      <ButtonName></ButtonName>
+    </MenuSetting>
+    <MenuSetting>
+      <MenuName></MenuName>
+      <AssemblyName></AssemblyName>
+      <ClassName></ClassName>
+      <ButtonImage></ButtonImage>
+      <ButtonName></ButtonName>
+    </MenuSetting>
+  </ArrayOfMenuSetting>
+</ArrayOfMenuCategory>

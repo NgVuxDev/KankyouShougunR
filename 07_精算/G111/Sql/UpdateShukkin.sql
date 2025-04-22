@@ -1,0 +1,5 @@
+﻿UPDATE
+  T_SHUKKIN_KESHIKOMI
+SET DELETE_FLG = '1'
+ WHERE 
+ SEISAN_NUMBER = /*seisanNumber*/

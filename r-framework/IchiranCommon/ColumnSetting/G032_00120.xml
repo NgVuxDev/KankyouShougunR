@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="120">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="拠点CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="KYOTEN_CD" Format="00" />
+      <Column ID="2" DispNumber="2" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="5" DispNumber="3" DispName="定期配車番号" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="TEIKI_HAISHA_NUMBER" Format="" />
+      <Column ID="6" DispNumber="4" DispName="作業日" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="SAGYOU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="7" DispNumber="5" DispName="作業開始時間" Needs="0" TableName="" Name="RIGHT('00' + CONVERT(VARCHAR, T_TEIKI_HAISHA_ENTRY.SAGYOU_BEGIN_HOUR), 2) + ':' + RIGHT('00' + CONVERT(VARCHAR, T_TEIKI_HAISHA_ENTRY.SAGYOU_BEGIN_MINUTE), 2)" Format="" />
+      <Column ID="8" DispNumber="6" DispName="作業終了時間" Needs="0" TableName="" Name="RIGHT('00' + CONVERT(VARCHAR, T_TEIKI_HAISHA_ENTRY.SAGYOU_END_HOUR), 2) + ':' + RIGHT('00' + CONVERT(VARCHAR, T_TEIKI_HAISHA_ENTRY.SAGYOU_END_MINUTE), 2)" Format="" />
+      <Column ID="9" DispNumber="7" DispName="コース名称CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="COURSE_NAME_CD" Format="" />
+      <Column ID="10" DispNumber="8" DispName="コース名称" Needs="0" TableName="M_COURSE_NAME1" Name="COURSE_NAME_RYAKU" Format="" />
+      <Column ID="28" DispNumber="9" DispName="振替配車" Needs="0" TableName="" Name="CASE T_TEIKI_HAISHA_ENTRY.FURIKAE_HAISHA_KBN WHEN 1 THEN '通常' WHEN 2 THEN '振替' ELSE '' END" Format="" />
+      <Column ID="11" DispNumber="10" DispName="車輌CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="SHARYOU_CD" Format="" />
+      <Column ID="12" DispNumber="11" DispName="車輌名" Needs="0" TableName="M_SHARYOU1" Name="SHARYOU_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="12" DispName="車種CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="SHASHU_CD" Format="" />
+      <Column ID="14" DispNumber="13" DispName="車種名" Needs="0" TableName="M_SHASHU1" Name="SHASHU_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="14" DispName="運転者CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="UNTENSHA_CD" Format="" />
+      <Column ID="16" DispNumber="15" DispName="運転者名" Needs="0" TableName="M_SHAIN1" Name="SHAIN_NAME_RYAKU" Format="" />
+      <Column ID="17" DispNumber="16" DispName="補助員CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="HOJOIN_CD" Format="" />
+      <Column ID="18" DispNumber="17" DispName="補助員名" Needs="0" TableName="M_SHAIN2" Name="SHAIN_NAME_RYAKU" Format="" />
+      <Column ID="19" DispNumber="18" DispName="運搬業者CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="UNPAN_GYOUSHA_CD" Format="" />
+      <Column ID="20" DispNumber="19" DispName="運搬業者名" Needs="0" TableName="M_GYOUSHA1" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="29" DispNumber="20" DispName="配送No" Needs="0" TableName="T_LOGI_DELIVERY_DETAIL" Name="DELIVERY_NO" Format="" />
+      <Column ID="30" DispNumber="21" DispName="出発業者CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="SHUPPATSU_GYOUSHA_CD" Format="" />
+      <Column ID="31" DispNumber="22" DispName="出発業者名" Needs="0" TableName="M_GYOUSHA4" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="32" DispNumber="23" DispName="出発現場CD" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="SHUPPATSU_GENBA_CD" Format="" />
+      <Column ID="33" DispNumber="24" DispName="出発現場名" Needs="0" TableName="M_GENBA3" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="21" DispNumber="25" DispName="作成者" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="22" DispNumber="26" DispName="作成日時" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="23" DispNumber="27" DispName="作成PC" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="24" DispNumber="28" DispName="最終更新者" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="25" DispNumber="29" DispName="最終更新日時" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="26" DispNumber="30" DispName="最終更新PC" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="UPDATE_PC" Format="" />
+      <Column ID="27" DispNumber="31" DispName="削除フラグ" Needs="0" TableName="T_TEIKI_HAISHA_ENTRY" Name="DELETE_FLG" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="行番号" Needs="0" TableName="T_TEIKI_HAISHA_DETAIL" Name="ROW_NUMBER" Format="" />
+      <Column ID="3" DispNumber="" DispName="回数" Needs="0" TableName="T_TEIKI_HAISHA_DETAIL" Name="ROUND_NO" Format="" />
+      <Column ID="4" DispNumber="" DispName="荷降業者CD" Needs="0" TableName="T_TEIKI_HAISHA_NIOROSHI" Name="NIOROSHI_GYOUSHA_CD" Format="" />
+      <Column ID="5" DispNumber="" DispName="荷降業者名" Needs="0" TableName="M_GYOUSHA2" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="6" DispNumber="" DispName="荷降現場CD" Needs="0" TableName="T_TEIKI_HAISHA_NIOROSHI" Name="NIOROSHI_GENBA_CD" Format="" />
+      <Column ID="7" DispNumber="" DispName="荷降現場名" Needs="0" TableName="M_GENBA1" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="8" DispNumber="" DispName="業者CD" Needs="0" TableName="T_TEIKI_HAISHA_DETAIL" Name="GYOUSHA_CD" Format="" />
+      <Column ID="9" DispNumber="" DispName="業者名" Needs="0" TableName="M_GYOUSHA3" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="10" DispNumber="" DispName="現場CD" Needs="0" TableName="T_TEIKI_HAISHA_DETAIL" Name="GENBA_CD" Format="" />
+      <Column ID="11" DispNumber="" DispName="現場名" Needs="0" TableName="M_GENBA2" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="31" DispNumber="" DispName="希望時間" Needs="0" TableName="" Name="CONVERT(CHAR(5), T_TEIKI_HAISHA_DETAIL.KIBOU_TIME)" Format="" />
+      <Column ID="32" DispNumber="" DispName="作業時間(分)" Needs="0" TableName="T_TEIKI_HAISHA_DETAIL" Name="SAGYOU_TIME_MINUTE" Format="" />
+      <Column ID="13" DispNumber="" DispName="明細備考" Needs="0" TableName="T_TEIKI_HAISHA_DETAIL" Name="MEISAI_BIKOU" Format="" />
+      <Column ID="14" DispNumber="" DispName="受付番号" Needs="0" TableName="T_TEIKI_HAISHA_DETAIL" Name="UKETSUKE_NUMBER" Format="" />
+      <Column ID="15" DispNumber="" DispName="入力区分" Needs="0" TableName="" Name="CASE T_TEIKI_HAISHA_SHOUSAI.INPUT_KBN WHEN 1 THEN '直接入力' WHEN 2 THEN '組込' END" Format="" />
+      <Column ID="16" DispNumber="" DispName="荷降No" Needs="0" TableName="T_TEIKI_HAISHA_SHOUSAI" Name="NIOROSHI_NUMBER" Format="" />
+      <Column ID="17" DispNumber="" DispName="品名CD" Needs="0" TableName="T_TEIKI_HAISHA_SHOUSAI" Name="HINMEI_CD" Format="" />
+      <Column ID="18" DispNumber="" DispName="品名" Needs="0" TableName="M_HINMEI1" Name="HINMEI_NAME_RYAKU" Format="" />
+      <Column ID="19" DispNumber="" DispName="伝票区分CD" Needs="0" TableName="T_TEIKI_HAISHA_SHOUSAI" Name="DENPYOU_KBN_CD" Format="" />
+      <Column ID="20" DispNumber="" DispName="伝票区分名" Needs="0" TableName="M_DENPYOU_KBN1" Name="DENPYOU_KBN_NAME_RYAKU" Format="" />
+      <Column ID="21" DispNumber="" DispName="単位CD" Needs="0" TableName="T_TEIKI_HAISHA_SHOUSAI" Name="UNIT_CD" Format="" />
+      <Column ID="22" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="23" DispNumber="" DispName="換算値" Needs="0" TableName="T_TEIKI_HAISHA_SHOUSAI" Name="KANSANCHI" Format="" />
+      <Column ID="24" DispNumber="" DispName="換算後単位CD" Needs="0" TableName="T_TEIKI_HAISHA_SHOUSAI" Name="KANSAN_UNIT_CD" Format="" />
+      <Column ID="25" DispNumber="" DispName="換算後単位名" Needs="0" TableName="M_UNIT2" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="26" DispNumber="" DispName="要記入" Needs="0" TableName="T_TEIKI_HAISHA_SHOUSAI" Name="KANSAN_UNIT_MOBILE_OUTPUT_FLG" Format="" />
+      <Column ID="27" DispNumber="" DispName="実数" Needs="0" TableName="T_TEIKI_HAISHA_SHOUSAI" Name="ANBUN_FLG" Format="" />
+      <Column ID="28" DispNumber="" DispName="契約区分" Needs="0" TableName="" Name="CASE T_TEIKI_HAISHA_SHOUSAI.KEIYAKU_KBN WHEN 1 THEN '定期' WHEN 2 THEN '単価' WHEN 3 THEN '回収のみ' ELSE '' END" Format="" />
+      <Column ID="29" DispNumber="" DispName="集計単位" Needs="0" TableName="" Name="CASE T_TEIKI_HAISHA_SHOUSAI.KEIJYOU_KBN WHEN 1 THEN '伝票' WHEN 2 THEN '合算' ELSE '' END" Format="" />
+      <Column ID="30" DispNumber="" DispName="訪問順" Needs="0" TableName="T_LOGI_DELIVERY_DETAIL" Name="DELIVERY_ORDER" Format="" />
+
+      <Column ID="33" DispNumber="" DispName="現場メモ" Needs="0" TableName="" Name="CASE WHEN T_GENBAMEMO_ENTRY.SYSTEM_ID IS NULL THEN '' ELSE '有' END" Format="" />
+      <Column ID="34" DispNumber="" DispName="SMS送信" Needs="0" TableName="" Name="CASE WHEN T_SMS.SYSTEM_ID IS NULL THEN '' ELSE '済' END" Format="" />
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_TEIKI_HAISHA_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA1">LEFT JOIN M_GYOUSHA M_GYOUSHA1 ON T_TEIKI_HAISHA_ENTRY.UNPAN_GYOUSHA_CD = M_GYOUSHA1.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA2">LEFT JOIN M_GYOUSHA M_GYOUSHA2 ON T_TEIKI_HAISHA_NIOROSHI.NIOROSHI_GYOUSHA_CD = M_GYOUSHA2.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA3">LEFT JOIN M_GYOUSHA M_GYOUSHA3 ON T_TEIKI_HAISHA_DETAIL.GYOUSHA_CD = M_GYOUSHA3.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA4">LEFT JOIN M_GYOUSHA M_GYOUSHA4 ON T_TEIKI_HAISHA_ENTRY.SHUPPATSU_GYOUSHA_CD = M_GYOUSHA4.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA1">LEFT JOIN M_GENBA M_GENBA1 ON T_TEIKI_HAISHA_NIOROSHI.NIOROSHI_GYOUSHA_CD = M_GENBA1.GYOUSHA_CD AND T_TEIKI_HAISHA_NIOROSHI.NIOROSHI_GENBA_CD = M_GENBA1.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA2">LEFT JOIN M_GENBA M_GENBA2 ON T_TEIKI_HAISHA_DETAIL.GYOUSHA_CD = M_GENBA2.GYOUSHA_CD AND T_TEIKI_HAISHA_DETAIL.GENBA_CD = M_GENBA2.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA3">LEFT JOIN M_GENBA M_GENBA3 ON T_TEIKI_HAISHA_ENTRY.SHUPPATSU_GYOUSHA_CD = M_GENBA3.GYOUSHA_CD AND T_TEIKI_HAISHA_ENTRY.SHUPPATSU_GENBA_CD = M_GENBA3.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="M_COURSE_NAME1">LEFT JOIN M_COURSE_NAME M_COURSE_NAME1 ON T_TEIKI_HAISHA_ENTRY.COURSE_NAME_CD = M_COURSE_NAME1.COURSE_NAME_CD</JoinCondition>
+    <JoinCondition TableName="M_SHARYOU1">LEFT JOIN M_SHARYOU M_SHARYOU1 ON T_TEIKI_HAISHA_ENTRY.UNPAN_GYOUSHA_CD = M_SHARYOU1.GYOUSHA_CD AND T_TEIKI_HAISHA_ENTRY.SHARYOU_CD = M_SHARYOU1.SHARYOU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHASHU1">LEFT JOIN M_SHASHU M_SHASHU1 ON T_TEIKI_HAISHA_ENTRY.SHASHU_CD = M_SHASHU1.SHASHU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHAIN1">LEFT JOIN M_SHAIN M_SHAIN1 ON T_TEIKI_HAISHA_ENTRY.UNTENSHA_CD = M_SHAIN1.SHAIN_CD</JoinCondition>
+    <JoinCondition TableName="M_SHAIN2">LEFT JOIN M_SHAIN M_SHAIN2 ON T_TEIKI_HAISHA_ENTRY.HOJOIN_CD = M_SHAIN2.SHAIN_CD</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN1">LEFT JOIN M_DENPYOU_KBN M_DENPYOU_KBN1 ON T_TEIKI_HAISHA_SHOUSAI.DENPYOU_KBN_CD = M_DENPYOU_KBN1.DENPYOU_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON T_TEIKI_HAISHA_SHOUSAI.UNIT_CD = M_UNIT1.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT2">LEFT JOIN M_UNIT M_UNIT2 ON T_TEIKI_HAISHA_SHOUSAI.KANSAN_UNIT_CD = M_UNIT2.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_HINMEI1">LEFT JOIN M_HINMEI M_HINMEI1 ON T_TEIKI_HAISHA_SHOUSAI.HINMEI_CD = M_HINMEI1.HINMEI_CD</JoinCondition>
+    <JoinCondition TableName="T_SMS">LEFT JOIN T_SMS ON T_TEIKI_HAISHA_ENTRY.TEIKI_HAISHA_NUMBER = T_SMS.DENPYOU_NUMBER</JoinCondition>
+  </OutputColumnSelect>
+</root>

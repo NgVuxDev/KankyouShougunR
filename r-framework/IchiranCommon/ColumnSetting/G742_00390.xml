@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="390">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="非表示フラグ" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="HIHYOUJI_FLG" Format="" />
+      <Column ID="2" DispNumber="2" DispName="非表示登録者" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="HIHYOUJI_TOUROKUSHA_NAME" Format="" />
+      <Column ID="3" DispNumber="3" DispName="非表示日" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="HIHYOUJI_DATE" Format="" />
+      <Column ID="4" DispNumber="4" DispName="現場メモ番号" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="GENBAMEMO_NUMBER" Format="" />
+      <Column ID="5" DispNumber="5" DispName="修正制限" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="HENKOU_KANOU_FLG" Format="" />
+      <Column ID="6" DispNumber="6" DispName="現場メモ分類CD" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="GENBAMEMO_BUNRUI_CD" Format="" />
+      <Column ID="7" DispNumber="7" DispName="現場メモ分類名" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="GENBAMEMO_BUNRUI_NAME" Format="" />
+      <Column ID="8" DispNumber="8" DispName="取引先CD" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="9" DispNumber="9" DispName="取引先名" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="TORIHIKISAKI_NAME" Format="" />
+      <Column ID="10" DispNumber="10" DispName="業者CD" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="GYOUSHA_CD" Format="" />
+      <Column ID="11" DispNumber="11" DispName="業者名" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="GYOUSHA_NAME" Format="" />
+      <Column ID="12" DispNumber="12" DispName="現場CD" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="GENBA_CD" Format="" />
+      <Column ID="13" DispNumber="13" DispName="現場名" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="GENBA_NAME" Format="" />
+      <Column ID="14" DispNumber="14" DispName="表題" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="HYOUDAI" Format="" />
+      <Column ID="15" DispNumber="15" DispName="内容" Needs="0" TableName="" Name="T_GENBAMEMO_ENTRY.NAIYOU1 + T_GENBAMEMO_ENTRY.NAIYOU2" Format="" />
+      <Column ID="16" DispNumber="16" DispName="発生元CD" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="HASSEIMOTO_CD" Format="" />
+      <Column ID="17" DispNumber="17" DispName="発生元名" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="HASSEIMOTO_NAME" Format="" />
+      <Column ID="18" DispNumber="18" DispName="発生元番号" Needs="0" TableName="" Name="CASE WHEN T_GENBAMEMO_ENTRY.HASSEIMOTO_CD = 2 THEN T_UKETSUKE_SS_ENTRY.UKETSUKE_NUMBER  WHEN T_GENBAMEMO_ENTRY.HASSEIMOTO_CD = 3 THEN T_UKETSUKE_SK_ENTRY.UKETSUKE_NUMBER WHEN T_GENBAMEMO_ENTRY.HASSEIMOTO_CD = 4 THEN T_UKETSUKE_MK_ENTRY.UKETSUKE_NUMBER WHEN T_GENBAMEMO_ENTRY.HASSEIMOTO_CD = 5 THEN TEIKI_DATA.TEIKI_HAISHA_NUMBER ELSE null END" Format="" />
+      <Column ID="19" DispNumber="19" DispName="発生元明細No" Needs="0" TableName="" Name="CASE WHEN T_GENBAMEMO_ENTRY.HASSEIMOTO_CD = 5 THEN TEIKI_DATA.ROW_NUMBER ELSE null END" Format="" />
+      <Column ID="27" DispNumber="20" DispName="添付ファイル" Needs="0" TableName="" Name="CASE WHEN FLGenbamemo.FILE_ID is not NULL OR FLGenbamemo.FILE_ID != '' THEN '有' ELSE '' END" Format="" />
+      <Column ID="20" DispNumber="21" DispName="作成者" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="21" DispNumber="22" DispName="作成日時" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="22" DispNumber="23" DispName="作成PC" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="23" DispNumber="24" DispName="最終更新者" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="24" DispNumber="25" DispName="最終更新日時" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="25" DispNumber="26" DispName="最終更新PC" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="UPDATE_PC" Format="" />
+      <Column ID="26" DispNumber="27" DispName="削除フラグ" Needs="0" TableName="T_GENBAMEMO_ENTRY" Name="DELETE_FLG" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="1" DispName="コメント" Needs="0" TableName="T_GENBAMEMO_DETAIL" Name="COMMENT" Format="" />
+      <Column ID="2" DispNumber="2" DispName="コメント登録者" Needs="0" TableName="T_GENBAMEMO_DETAIL" Name="TOUROKUSHA_NAME" Format="" />
+      <Column ID="3" DispNumber="3" DispName="コメント登録日時" Needs="0" TableName="T_GENBAMEMO_DETAIL" Name="TOUROKU_DATE" Format="" />
+      
+    </Group>  
+  </OutputColumnSelect>
+</root>

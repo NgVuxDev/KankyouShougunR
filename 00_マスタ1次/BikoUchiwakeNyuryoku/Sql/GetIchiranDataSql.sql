@@ -1,0 +1,12 @@
+SELECT 
+    BIKO.*, 
+    BIKO_S.BIKO_NOTE 
+FROM 
+    dbo.M_BIKO_UCHIWAKE_NYURYOKU BIKO
+    LEFT JOIN M_BIKO_SENTAKUSHI_NYURYOKU BIKO_S ON BIKO_S.BIKO_CD = BIKO.BIKO_CD
+/*BEGIN*/WHERE
+ /*IF data.BIKO_KBN_CD != null*/BIKO.BIKO_KBN_CD LIKE '%' +  /*data.BIKO_KBN_CD*/ + '%'/*END*/
+ /*IF data.BIKO_CD != null*/ AND BIKO.BIKO_CD LIKE '%' + /*data.BIKO_CD*/'001' + '%'/*END*/
+ /*IF data.BIKO_NOTE != null && data.BIKO_NOTE != ''*/AND BIKO.BIKO_NOTE LIKE '%' +  /*data.BIKO_NOTE*/ + '%'/*END*/
+/*END*/
+ORDER BY BIKO.BIKO_CD

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="902">
+    <Group OutputKbn="1">
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="KYOTEN_CD" Format="00" />
+      <Column ID="2" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="5" DispNumber="" DispName="出金番号" Needs="0" TableName="T_SHUKKIN_KESHIKOMI" Name="SHUKKIN_NUMBER" Format="" />
+      <Column ID="6" DispNumber="" DispName="伝票日付" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="DENPYOU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="7" DispNumber="" DispName="出金先CD" Needs="0" TableName="T_SHUKKIN_ENTRY" Name="SHUKKINSAKI_CD" Format="" />
+      <Column ID="8" DispNumber="" DispName="出金先名" Needs="0" TableName="M_SYUKKINSAKI1" Name="SYUKKINSAKI_NAME_RYAKU" Format="" />
+      <Column ID="9" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_SHUKKIN_KESHIKOMI" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="10" DispNumber="" DispName="取引先名" Needs="0" TableName="M_TORIHIKISAKI1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="11" DispNumber="" DispName="業者CD" Needs="0" TableName="M_GYOUSHA1" Name="GYOUSHA_CD" Format="" />
+      <Column ID="12" DispNumber="" DispName="業者名" Needs="0" TableName="M_GYOUSHA1" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="" DispName="現場CD" Needs="0" TableName="M_GENBA1" Name="GENBA_CD" Format="" />
+      <Column ID="14" DispNumber="" DispName="現場名" Needs="0" TableName="M_GENBA1" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="" DispName="精算番号" Needs="0" TableName="T_SHUKKIN_KESHIKOMI" Name="SEISAN_NUMBER" Format="" />
+      <Column ID="16" DispNumber="" DispName="精算日付" Needs="0" TableName="T_SEISAN_DENPYOU" Name="SEISAN_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="17" DispNumber="" DispName="精算額" Needs="0" TableName="" Name="CASE WHEN T_SHUKKIN_KESHIKOMI.SEISAN_NUMBER > 0 THEN ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_SHIHARAI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_MEI_SOTOZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_MEI_UTIZEI_GAKU,0) ELSE ISNULL(M_TORIHIKISAKI_SHIHARAI.KAISHI_KAIKAKE_ZANDAKA,0) END" Format="#,##0" />
+      <Column ID="18" DispNumber="" DispName="消込額" Needs="0" TableName="T_SHUKKIN_KESHIKOMI" Name="KESHIKOMI_GAKU" Format="#,##0" />
+      <Column ID="19" DispNumber="" DispName="未消込額" Needs="0" TableName="" Name="CASE WHEN T_SHUKKIN_KESHIKOMI.SEISAN_NUMBER > 0 THEN ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_SHIHARAI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_MEI_SOTOZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_MEI_UTIZEI_GAKU,0) - ISNULL(T_SHUKKIN_KESHIKOMI.KESHIKOMI_GAKU,0) ELSE ISNULL(M_TORIHIKISAKI_SHIHARAI.KAISHI_KAIKAKE_ZANDAKA,0) - ISNULL(T_SHUKKIN_KESHIKOMI3.KESHIKOMI_GAKU_TOTAL,0) END" Format="#,##0" />
+      <Column ID="20" DispNumber="" DispName="消込備考" Needs="0" TableName="T_SHUKKIN_KESHIKOMI" Name="KESHIKOMI_BIKOU" Format="" />
+      <Column ID="21" DispNumber="" DispName="前回精算額" Needs="0" TableName="T_SEISAN_DENPYOU" Name="ZENKAI_KURIKOSI_GAKU" Format="#,##0" />
+      <Column ID="22" DispNumber="" DispName="今回出金額" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_SHUKKIN_GAKU" Format="#,##0" />
+      <Column ID="23" DispNumber="" DispName="調整額" Needs="0" TableName="T_SEISAN_DENPYOU" Name="KONKAI_CHOUSEI_GAKU" Format="#,##0" />
+      <Column ID="24" DispNumber="" DispName="繰越額" Needs="0" TableName="" Name="(ISNULL (T_SEISAN_DENPYOU.ZENKAI_KURIKOSI_GAKU, 0) - ISNULL (T_SEISAN_DENPYOU.KONKAI_SHUKKIN_GAKU, 0) - (ISNULL (T_SEISAN_DENPYOU.KONKAI_CHOUSEI_GAKU, 0)))" Format="#,##0" />
+      <Column ID="25" DispNumber="" DispName="今回取引額(税抜)" Needs="0" TableName="T_SEISAN_DENPYOU_KAGAMI" Name="KONKAI_SHIHARAI_GAKU" Format="#,##0" />
+      <Column ID="26" DispNumber="" DispName="消費税" Needs="0" TableName="" Name="(ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(T_SEISAN_DENPYOU_KAGAMI.KONKAI_MEI_SOTOZEI_GAKU,0))" Format="#,##0" />
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_SHUKKIN_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_TORIHIKISAKI1">LEFT JOIN M_TORIHIKISAKI M_TORIHIKISAKI1 ON T_SHUKKIN_KESHIKOMI.TORIHIKISAKI_CD = M_TORIHIKISAKI1.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="M_SYUKKINSAKI1">LEFT JOIN M_SYUKKINSAKI M_SYUKKINSAKI1 ON T_SHUKKIN_ENTRY.SHUKKINSAKI_CD = M_SYUKKINSAKI1.SYUKKINSAKI_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA1">LEFT JOIN M_GYOUSHA M_GYOUSHA1 ON T_SEISAN_DENPYOU_KAGAMI.GYOUSHA_CD = M_GYOUSHA1.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA1">LEFT JOIN M_GENBA M_GENBA1 ON T_SEISAN_DENPYOU_KAGAMI.GYOUSHA_CD = M_GENBA1.GYOUSHA_CD AND T_SEISAN_DENPYOU_KAGAMI.GENBA_CD = M_GENBA1.GENBA_CD </JoinCondition>
+  </OutputColumnSelect>
+</root>

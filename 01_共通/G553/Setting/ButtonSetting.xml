@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <IchiranButtonName>[F1]&#xD;&#xA;重量読込</IchiranButtonName>
+    <IchiranButtonHintText>重量読込</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process3</ButtonName>
+    <IchiranButtonName>[処理No.3] 手入力</IchiranButtonName>
+    <IchiranButtonHintText>手入力</IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

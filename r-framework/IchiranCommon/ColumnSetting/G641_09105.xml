@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9105">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="KYOTEN_CD" Format="00" />
+      <Column ID="2" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="5" DispNumber="" DispName="伝種区分CD" Needs="0" TableName="" Name="CONVERT(NVARCHAR, T_UNCHIN_ENTRY.DENSHU_KBN_CD)" Format="" />
+      <Column ID="6" DispNumber="" DispName="伝種区分名" Needs="0" TableName="M_DENSHU_KBN1" Name="DENSHU_KBN_NAME_RYAKU" Format="" />
+      <Column ID="7" DispNumber="" DispName="連携番号" Needs="0" TableName="T_UNCHIN_ENTRY" Name="RENKEI_NUMBER" Format="" />
+      <Column ID="8" DispNumber="" DispName="伝票日付" Needs="0" TableName="T_UNCHIN_ENTRY" Name="DENPYOU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="9" DispNumber="" DispName="伝票番号" Needs="0" TableName="T_UNCHIN_ENTRY" Name="DENPYOU_NUMBER" Format="" />
+      <Column ID="10" DispNumber="" DispName="運搬業者CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="UNPAN_GYOUSHA_CD" Format="" />
+      <Column ID="11" DispNumber="" DispName="運搬業者名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="UNPAN_GYOUSHA_NAME" Format="" />
+      <Column ID="12" DispNumber="" DispName="車輌CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="SHARYOU_CD" Format="" />
+      <Column ID="13" DispNumber="" DispName="車輌名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="SHARYOU_NAME" Format="" />
+      <Column ID="14" DispNumber="" DispName="車種CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="SHASHU_CD" Format="" />
+      <Column ID="15" DispNumber="" DispName="車種名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="SHASHU_NAME" Format="" />
+      <Column ID="16" DispNumber="" DispName="運転者CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="UNTENSHA_CD" Format="" />
+      <Column ID="17" DispNumber="" DispName="運転者名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="UNTENSHA_NAME" Format="" />
+      <Column ID="18" DispNumber="" DispName="形態区分CD" Needs="0" TableName="" Name="CONVERT(NVARCHAR, T_UNCHIN_ENTRY.KEITAI_KBN_CD)" Format="" />
+      <Column ID="19" DispNumber="" DispName="形態区分名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="KEITAI_KBN_NAME" Format="" />
+      <Column ID="20" DispNumber="" DispName="荷積業者CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NIZUMI_GYOUSHA_CD" Format="" />
+      <Column ID="21" DispNumber="" DispName="荷積業者名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NIZUMI_GYOUSHA_NAME" Format="" />
+      <Column ID="22" DispNumber="" DispName="荷積現場CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NIZUMI_GENBA_CD" Format="" />
+      <Column ID="23" DispNumber="" DispName="荷積現場名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NIZUMI_GENBA_NAME" Format="" />
+      <Column ID="24" DispNumber="" DispName="荷降業者CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NIOROSHI_GYOUSHA_CD" Format="" />
+      <Column ID="25" DispNumber="" DispName="荷降業者名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NIOROSHI_GYOUSHA_NAME" Format="" />
+      <Column ID="26" DispNumber="" DispName="荷降現場CD" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NIOROSHI_GENBA_CD" Format="" />
+      <Column ID="27" DispNumber="" DispName="荷降現場名" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NIOROSHI_GENBA_NAME" Format="" />
+      <Column ID="28" DispNumber="" DispName="伝票備考" Needs="0" TableName="T_UNCHIN_ENTRY" Name="DENPYOU_BIKOU" Format="" />
+      <Column ID="29" DispNumber="" DispName="正味合計" Needs="0" TableName="T_UNCHIN_ENTRY" Name="NET_TOTAL" Format="#,##0" />
+      <Column ID="30" DispNumber="" DispName="金額合計" Needs="0" TableName="T_UNCHIN_ENTRY" Name="KINGAKU_TOTAL" Format="#,##0" />
+      <Column ID="31" DispNumber="" DispName="作成者" Needs="0" TableName="T_UNCHIN_ENTRY" Name="CREATE_USER" Format="" />
+      <Column ID="32" DispNumber="" DispName="作成日時" Needs="0" TableName="T_UNCHIN_ENTRY" Name="CREATE_DATE" Format="" />
+      <Column ID="33" DispNumber="" DispName="作成PC" Needs="0" TableName="T_UNCHIN_ENTRY" Name="CREATE_PC" Format="" />
+      <Column ID="34" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_UNCHIN_ENTRY" Name="UPDATE_USER" Format="" />
+      <Column ID="35" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_UNCHIN_ENTRY" Name="UPDATE_DATE" Format="" />
+      <Column ID="36" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_UNCHIN_ENTRY" Name="UPDATE_PC" Format="" />
+      <Column ID="37" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_UNCHIN_ENTRY" Name="DELETE_FLG" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="行番号" Needs="0" TableName="T_UNCHIN_DETAIL" Name="ROW_NO" Format="" />
+      <Column ID="2" DispNumber="" DispName="運賃品名CD" Needs="0" TableName="T_UNCHIN_DETAIL" Name="UNCHIN_HINMEI_CD" Format="" />
+      <Column ID="3" DispNumber="" DispName="運賃品名" Needs="0" TableName="T_UNCHIN_DETAIL" Name="UNCHIN_HINMEI_NAME" Format="" />
+      <Column ID="4" DispNumber="" DispName="正味重量" Needs="0" TableName="T_UNCHIN_DETAIL" Name="NET_JYUURYOU" Format="2" />
+      <Column ID="5" DispNumber="" DispName="数量" Needs="0" TableName="T_UNCHIN_DETAIL" Name="SUURYOU" Format="1" />
+      <Column ID="6" DispNumber="" DispName="単位CD" Needs="0" TableName="T_UNCHIN_DETAIL" Name="UNIT_CD" Format="00" />
+      <Column ID="7" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="8" DispNumber="" DispName="単価" Needs="0" TableName="T_UNCHIN_DETAIL" Name="TANKA" Format="3" />
+      <Column ID="9" DispNumber="" DispName="金額" Needs="0" TableName="T_UNCHIN_DETAIL" Name="KINGAKU" Format="#,##0" />
+      <Column ID="10" DispNumber="" DispName="備考" Needs="0" TableName="T_UNCHIN_DETAIL" Name="MEISAI_BIKOU" Format="" />
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_UNCHIN_ENTRY.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_DENSHU_KBN1">LEFT JOIN M_DENSHU_KBN M_DENSHU_KBN1 ON T_UNCHIN_ENTRY.DENSHU_KBN_CD = M_DENSHU_KBN1.DENSHU_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON T_UNCHIN_DETAIL.UNIT_CD = M_UNIT1.UNIT_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

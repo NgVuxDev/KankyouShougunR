@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+環境将軍R印刷管理/帳票設定項目定義XMLファイル(埋め込み/読み取り専用) 
+「印刷設定」画面に表示される「帳票名」の一覧とそれらの属性を定義する。
+-->
+<ArrayOfReportSettingsItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ReportSettingsItem>
+    <SettingID>R493S</SettingID>
+    <ReportIDs>R493</ReportIDs>
+    <Caption>産廃(直行)マニフェスト(単票)</Caption>
+    <Type>Manifest</Type>
+    <Mode>Single</Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R493M</SettingID>
+    <ReportIDs>R493</ReportIDs>
+    <Caption>産廃(直行)マニフェスト(連票)</Caption>
+    <Type>Manifest</Type>
+    <Mode>Multi</Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R494S</SettingID>
+    <ReportIDs>R494</ReportIDs>
+    <Caption>産廃(積替)マニフェスト(単票)</Caption>
+    <Type>Manifest</Type>
+    <Mode>Single</Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R494M</SettingID>
+    <ReportIDs>R494</ReportIDs>
+    <Caption>産廃(積替)マニフェスト(連票)</Caption>
+    <Type>Manifest</Type>
+    <Mode>Multi</Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R495S</SettingID>
+    <ReportIDs>R495</ReportIDs>
+    <Caption>建廃マニフェスト(単票)</Caption>
+    <Type>Manifest</Type>
+    <Mode>Single</Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R495M</SettingID>
+    <ReportIDs>R495</ReportIDs>
+    <Caption>建廃マニフェスト(連票)</Caption>
+    <Type>Manifest</Type>
+    <Mode>Multi</Mode>
+  </ReportSettingsItem>
+  
+  <ReportSettingsItem>
+    <SettingID>R691S</SettingID>
+    <ReportIDs>R691</ReportIDs>
+    <Caption>産廃（直行）水銀マニ（単票）</Caption>
+    <Type>Manifest</Type>
+    <Mode>Single</Mode>
+  </ReportSettingsItem>
+  
+  <ReportSettingsItem>
+    <SettingID>R691M</SettingID>
+    <ReportIDs>R691</ReportIDs>
+    <Caption>産廃（直行）水銀マニ（連票）</Caption>
+    <Type>Manifest</Type>
+    <Mode>Multi</Mode>
+  </ReportSettingsItem>
+  
+  <ReportSettingsItem>
+    <SettingID>R692S</SettingID>
+    <ReportIDs>R692</ReportIDs>
+    <Caption>建廃水銀マニ（単票）</Caption>
+    <Type>Manifest</Type>
+    <Mode>Single</Mode>
+  </ReportSettingsItem>
+  <ReportSettingsItem>
+    <SettingID>R692M</SettingID>
+    <ReportIDs>R692</ReportIDs>
+    <Caption>建廃水銀マニ（連票）</Caption>
+    <Type>Manifest</Type>
+    <Mode>Multi</Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R336</SettingID>
+    <ReportIDs>R336</ReportIDs>
+    <Caption>請求書</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R337</SettingID>
+    <ReportIDs>R337</ReportIDs>
+    <Caption>支払明細書</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R338</SettingID>
+    <ReportIDs>R338</ReportIDs>
+    <Caption>仕切書</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R339</SettingID>
+    <ReportIDs>R339</ReportIDs>
+    <Caption>領収書</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R350</SettingID>
+    <ReportIDs>R350</ReportIDs>
+    <Caption>指示書</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R354</SettingID>
+    <ReportIDs>R354,R549,R550,R680,R681</ReportIDs>
+    <Caption>計量票</Caption>
+    <Type></Type>
+    <Mode></Mode>
+    <!--  
+      R354	計量票(A4縦三つ切り)
+      R549	計量票(三つ切り　複数品目)
+      R550	計量票(三つ切り　単品目)
+      R680	計量票(三つ切り　取引先無　複数品目)
+      R681	計量票(三つ切り　取引先無　単品目)
+      将軍のシステム設定でどれか1種類しか出力されないので設定としても1種類でよい。
+    -->
+    </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R548</SettingID>
+    <ReportIDs>R548</ReportIDs>
+    <Caption>単価見積書(横)</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R547</SettingID>
+    <ReportIDs>R547</ReportIDs>
+    <Caption>単価見積書(縦)</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R508</SettingID>
+    <ReportIDs>R508</ReportIDs>
+    <Caption>見積書(横)</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R425</SettingID>
+    <ReportIDs>R425</ReportIDs>
+    <Caption>見積書(縦)</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+
+  <ReportSettingsItem>
+    <SettingID>R383</SettingID>
+    <ReportIDs>R383</ReportIDs>
+    <Caption>宛名ラベル</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+  <ReportSettingsItem>
+    <SettingID>R657</SettingID>
+    <ReportIDs>R657</ReportIDs>
+    <Caption>配車割当表</Caption>
+    <Type></Type>
+    <Mode></Mode>
+  </ReportSettingsItem>
+</ArrayOfReportSettingsItem>

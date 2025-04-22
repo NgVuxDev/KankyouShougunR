@@ -1,0 +1,57 @@
+﻿
+<Window x:Class="Shougun.Printing.Viewer.ViewerWindow"
+    Title="Viewer Window" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ShougunRPrint.Viewer="clr-namespace:Shougun.Printing.Viewer" WindowStyle="SingleBorderWindow" ShowInTaskbar="True" Activated="Window_Activated" Icon="/Shougun.Printing.Viewer;component/Images/Shougun.Printing.ico" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="511" d:DesignWidth="1003" FontFamily="MS Gothic" FontSize="14" PreviewKeyDown="Window_PreviewKeyDown" KeyUp="Window_KeyUp">
+        <Grid Name="grid1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <ShougunRPrint.Viewer:CustomDocumentViewer x:Name="docViewer" Background="#FFE8F7F0" ClipToBounds="False" BorderBrush="Black" PageViewsChanged="docViewer_PageViewsChanged" />
+            <Label Content="page/page  " Height="30" HorizontalAlignment="Right" Name="pageLabel" VerticalAlignment="Bottom" Width="173" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="Meiryo UI" FontSize="16" FontWeight="Bold" />
+        </Grid>
+            <Grid Grid.Row="1" Background="#FFE8F7F0" ShowGridLines="True">
+                <StackPanel HorizontalAlignment="Right" Name="stackPanel1" VerticalAlignment="Stretch" Orientation="Horizontal" FlowDirection="LeftToRight">
+                <Button Height="35" Name="F1Button" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" IsEnabled="True" Click="prevPageButton_Click">
+                    <TextBlock>[F1]<LineBreak/>前ページ</TextBlock>
+                </Button>
+                <Button Height="35" Name="F2Button" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" IsEnabled="True" Click="nextPageButton_Click">
+                    <TextBlock>[F2]<LineBreak/>次ページ</TextBlock>
+                </Button>
+                <Button Height="35" Name="prevButton" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" Click="prevContentButton_Click">
+                    <TextBlock>[F3]<LineBreak/>前の帳票</TextBlock>
+                </Button>
+                <Button Height="35" Name="nextButton" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2,10,10,10" Click="nextContentButton_Click">
+                    <TextBlock>[F4]<LineBreak/>次の帳票</TextBlock>
+                </Button>
+                <Button Height="35" Name="F5Button" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" IsEnabled="False">
+                    <TextBlock>[F5]<LineBreak/></TextBlock>
+                </Button>
+                <Button Height="35" Name="F6Button" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" IsEnabled="False">
+                    <TextBlock>[F6]<LineBreak/></TextBlock>
+                </Button>
+                <Button Height="35" Name="deleteButton" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" Click="deleteButton_Click">
+                    <TextBlock>[F7]<LineBreak/>削除</TextBlock>
+                </Button>
+                <Button Height="35" Name="F8Button" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2,10,10,10" IsEnabled="False">
+                    <TextBlock>[F8]<LineBreak/></TextBlock>
+                </Button>
+                <Button Height="35" Name="printButton" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" Click="printButton_Click">
+                    <TextBlock>[F9]<LineBreak/>印刷</TextBlock>
+                </Button>
+                <Button Height="35" Name="F10Button" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" IsEnabled="False">
+                    <TextBlock>[F10]<LineBreak/></TextBlock>
+                </Button>
+                <Button Height="35" Name="F11Button" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="2" IsEnabled="False">
+                    <TextBlock>[F11]<LineBreak/></TextBlock>
+                </Button>
+                <Button Height="35" Name="closeButton" Width="75" HorizontalContentAlignment="Left" HorizontalAlignment="Right" Margin="5" Click="closeButton_Click" IsCancel="True">
+                    <TextBlock>[F12]<LineBreak/>閉じる</TextBlock>
+                </Button>
+            </StackPanel>
+            </Grid>
+        </Grid>
+</Window>

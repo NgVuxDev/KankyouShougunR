@@ -1,0 +1,2468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>r_framework</RootNamespace>
+    <AssemblyName>r_framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Framework.InputMan.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.MultiRow.v22, Version=2.2.2013.227, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Win.MultiRow.v70, Version=7.0.2013.227, Culture=neutral, PublicKeyToken=0f7a722ee3c2bdd9, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Seasar">
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao">
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill">
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Transactions" />
+    <ProjectReference Include="..\..\20_外部接続\CommunicateLib\CommunicateLib.csproj">
+      <Project>{48903EDC-99CD-43E0-97B7-548DBC1DA889}</Project>
+      <Name>CommunicateLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shougun.Core.Message\Shougun.Core.Message.csproj">
+      <Project>{DDF5B1E5-6897-48EB-A194-ECA45C8201FD}</Project>
+      <Name>Shougun.Core.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shougun.UserRestrict.URXmlDocument\Shougun.UserRestrict.URXmlDocument.csproj">
+      <Project>{068C3215-12CD-4DF9-9B2D-C54A2FE88752}</Project>
+      <Name>Shougun.UserRestrict.URXmlDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms.Ribbon\System.Windows.Forms.Ribbon35.csproj">
+      <Project>{2BBF4FC0-4169-4EA5-8947-9C421F0B2CDF}</Project>
+      <Name>System.Windows.Forms.Ribbon35</Name>
+    </ProjectReference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Access\NumberDayAccess.cs" />
+    <Compile Include="Access\NumberDenshuAccess.cs" />
+    <Compile Include="Access\NumberReceiptAccess.cs" />
+    <Compile Include="Access\NumberSystemAccess.cs" />
+    <Compile Include="Access\NumberYearAccess.cs" />
+    <Compile Include="Access\UketsukeSlipAccess.cs" />
+    <Compile Include="APP\Base\BaseBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\BusinessBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\BusinessBaseForm.designer.cs">
+      <DependentUpon>BusinessBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\DetailedHeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\DetailedHeaderForm.designer.cs">
+      <DependentUpon>DetailedHeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\IchiranBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\IchiranBaseForm.Designer.cs">
+      <DependentUpon>IchiranBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\IchiranHeader\IchiranHeaderForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\IchiranHeader\IchiranHeaderForm1.Designer.cs">
+      <DependentUpon>IchiranHeaderForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\IchiranHeader\IchiranHeaderForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\IchiranHeader\IchiranHeaderForm2.Designer.cs">
+      <DependentUpon>IchiranHeaderForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\IchiranHeader\IchiranHeaderForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\IchiranHeader\IchiranHeaderForm3.Designer.cs">
+      <DependentUpon>IchiranHeaderForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\IchiranSuperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\IchiranSuperForm.Designer.cs">
+      <DependentUpon>IchiranSuperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\ListHeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\ListHeaderForm.designer.cs">
+      <DependentUpon>ListHeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\RibbonMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\RibbonMainMenu.Designer.cs">
+      <DependentUpon>RibbonMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\SuperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\SuperForm.designer.cs">
+      <DependentUpon>SuperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\MasterHeaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\MasterHeaderForm.designer.cs">
+      <DependentUpon>MasterHeaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\MasterBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\MasterBaseForm.designer.cs">
+      <DependentUpon>MasterBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\Base\HeaderBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\Base\HeaderBaseForm.designer.cs">
+      <DependentUpon>HeaderBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="APP\PopUp\Base\SuperPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\PopUp\Base\SuperPopupForm.designer.cs">
+      <DependentUpon>SuperPopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authority\Manager.cs" />
+    <Compile Include="BrowseForFolder\BrowseForFolder.cs" />
+    <Compile Include="BrowseForFolder\FolderSelectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseForFolder\FolderSelectPopup.Designer.cs">
+      <DependentUpon>FolderSelectPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommunicateApp\InxsLauncher.cs" />
+    <Compile Include="CommunicateApp\LauncherDto.cs" />
+    <Compile Include="Configuration\AppConfig.cs" />
+    <Compile Include="Configuration\AppOptions.cs" />
+    <Compile Include="Configuration\VersionInfo.cs" />
+    <Compile Include="Const\ConditionOperator.cs" />
+    <Compile Include="Const\Constans.cs" />
+    <Compile Include="Const\CustomAttribute.cs" />
+    <Compile Include="Const\DateFormat.cs" />
+    <Compile Include="Const\DBType.cs" />
+    <Compile Include="Const\DB_FLAG.cs" />
+    <Compile Include="Const\DenshuKbn.cs" />
+    <Compile Include="Const\JoinMethod.cs" />
+    <Compile Include="Const\JuggmentCondition.cs" />
+    <Compile Include="Const\LoginStatus.cs" />
+    <Compile Include="Const\MessageKubun.cs" />
+    <Compile Include="Const\ProcessKbn.cs" />
+    <Compile Include="Const\SortNo.cs" />
+    <Compile Include="Const\WindowId.cs" />
+    <Compile Include="Const\WindowType.cs" />
+    <Compile Include="Converter\CheckMethodConverter.cs" />
+    <Compile Include="Converter\PopupWindowConverter.cs" />
+    <Compile Include="Converter\RunCheckMethodConverter.cs" />
+    <Compile Include="Converter\FormatConverter.cs" />
+    <Compile Include="CustomControl\CustomNumericTextBox2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomNumericTextBox2.designer.cs">
+      <DependentUpon>CustomNumericTextBox2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomPopupCalendarButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomPopupCalendarButton.Designer.cs">
+      <DependentUpon>CustomPopupCalendarButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomPanel.Designer.cs">
+      <DependentUpon>CustomPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomPostalCodeTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomPostalCodeTextBox.Designer.cs">
+      <DependentUpon>CustomPostalCodeTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomPhoneNumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomPhoneNumberTextBox.Designer.cs">
+      <DependentUpon>CustomPhoneNumberTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomAlphaNumTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomCheckBoxHeaderCell.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomComboBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomPhoneNumberTextBoxCell.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomPhoneNumberTextBoxColumn.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomPhoneNumberTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomPostalCodeTextBoxCell.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomPostalCodeTextBoxColumn.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomPostalCodeTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomNumericTextBox2Cell.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomNumericTextBox2EditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomNumericTextBox2Column.cs" />
+    <Compile Include="CustomControl\DataGridCustomSearchHeader\CustomSearchHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomSearchHeader\CustomSearchHeader.Designer.cs">
+      <DependentUpon>CustomSearchHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomSearchHeader\SearchSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomSearchHeader\SearchSettingForm.Designer.cs">
+      <DependentUpon>SearchSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomSearchHeader\SearchSettingHelper.cs.cs" />
+    <Compile Include="CustomControl\DataGridCustomSortHeader\CustomSortHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomSortHeader\CustomSortHeader.Designer.cs">
+      <DependentUpon>CustomSortHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomSortHeader\SortSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomSortHeader\SortSettingForm.designer.cs">
+      <DependentUpon>SortSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomSortHeader\SortSettingHelper.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomDataTimeCell.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomDataTimeColumn.cs" />
+    <Compile Include="CustomControl\CustomAddressSearchButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomAddressSearchButton.Designer.cs">
+      <DependentUpon>CustomAddressSearchButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomButton.Designer.cs">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomCheckBox.Designer.cs">
+      <DependentUpon>CustomCheckBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomComboBox.designer.cs">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomDataTimeEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\CustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\CustomDataGridView.Designer.cs">
+      <DependentUpon>CustomDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomDateInputTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomDateInputTextBox.Designer.cs">
+      <DependentUpon>CustomDateInputTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomAlphaNumTextBoxColumn.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomCheckBoxCell.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomCheckBoxColumn.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomComboBoxCell.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomComboBoxColumn.cs" />
+    <Compile Include="CustomControl\CustomPostSearchButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomPostSearchButton.Designer.cs">
+      <DependentUpon>CustomPostSearchButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomAlphaNumTextBoxCell.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomTextBoxColumn.cs" />
+    <Compile Include="CustomControl\DataGridCustomControl\DgvCustomTextBoxCell.cs" />
+    <Compile Include="CustomControl\GcCustomAlphaNumTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomColumnHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomColumnHeader.Designer.cs">
+      <DependentUpon>GcCustomColumnHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomDataTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomDataTimePicker.Designer.cs">
+      <DependentUpon>GcCustomDataTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomNumericTextBox2Cell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomNumericTextBox2Cell.Designer.cs">
+      <DependentUpon>GcCustomNumericTextBox2Cell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomNumericTextBox2EditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPopupOpenButtonCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPopupOpenButtonCell.Designer.cs">
+      <DependentUpon>GcCustomPopupOpenButtonCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPopupOpenButtonCell_Ex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPopupOpenButtonCell_Ex.Designer.cs">
+      <DependentUpon>GcCustomPopupOpenButtonCell_Ex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomSortComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomSortComboBox.Designer.cs">
+      <DependentUpon>GcCustomSortComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomDateTimePicker.designer.cs">
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomHourComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomHourComboBox.Designer.cs">
+      <DependentUpon>CustomHourComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomListBox.Designer.cs">
+      <DependentUpon>CustomListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomMinuteComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomMinuteComboBox.Designer.cs">
+      <DependentUpon>CustomMinuteComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomPopupOpenButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomPopupOpenButton.Designer.cs">
+      <DependentUpon>CustomPopupOpenButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomRadioButton.Designer.cs">
+      <DependentUpon>CustomRadioButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomTextBox.designer.cs">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CustomWindowTypeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomWindowTypeLabel.Designer.cs">
+      <DependentUpon>CustomWindowTypeLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomCheckBoxCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomCheckBoxCell.Designer.cs">
+      <DependentUpon>GcCustomCheckBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomDataTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomDataTime.Designer.cs">
+      <DependentUpon>GcCustomDataTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomMultiRow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomMultiRow.Designer.cs">
+      <DependentUpon>GcCustomMultiRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomTextBoxCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomTextBoxCell.Designer.cs">
+      <DependentUpon>GcCustomTextBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\ICustomControl.cs" />
+    <Compile Include="CustomControl\CustomAlphaNumTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CustomAlphaNumTextBox.Designer.cs">
+      <DependentUpon>CustomAlphaNumTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\DataGridCustomControl\ICustomDataGridControl.cs" />
+    <Compile Include="CustomControl\ICustomNumericTextBox.cs" />
+    <Compile Include="CustomControl\ICustomTextBox.cs" />
+    <Compile Include="CustomControl\GcCustomComboBoxCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomComboBoxCell.Designer.cs">
+      <DependentUpon>GcCustomComboBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomAlphaNumTextBoxCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomAlphaNumTextBoxCell.Designer.cs">
+      <DependentUpon>GcCustomAlphaNumTextBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPhoneNumberTextBoxCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPhoneNumberTextBoxCell.Designer.cs">
+      <DependentUpon>GcCustomPhoneNumberTextBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPhoneNumberTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPostalCodeTextBoxCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPostalCodeTextBoxCell.Designer.cs">
+      <DependentUpon>GcCustomPostalCodeTextBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\GcCustomPostalCodeTextBoxEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ICustomCell.cs" />
+    <Compile Include="Dao\BaseDao.cs" />
+    <Compile Include="Dao\IM_BIKO_PATAN_NYURYOKUDao.cs" />
+    <Compile Include="Dao\IM_BIKO_SENTAKUSHI_NYURYOKUDao.cs" />
+    <Compile Include="Dao\IM_BIKO_UCHIWAKE_NYURYOKUDao.cs" />
+    <Compile Include="Dao\IM_GURUPU_NYURYOKUDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_LINK_WANSIGN_KEIYAKUDAO.cs" />
+    <Compile Include="Dao\IM_SYS_PREV_VALUEDao.cs" />
+    <Compile Include="Dao\IMS_JWNET_MEMBERDao.cs" />
+    <Compile Include="Dao\IM_CONTENA_KEIKA_DATEDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_MANIFEST_KANSANDao.cs" />
+    <Compile Include="Dao\IM_FILE_LINK_CHIIKIBETSU_KYOKADao.cs" />
+    <Compile Include="Dao\IM_FILE_LINK_ITAKU_KEIYAKU_KIHONDao.cs" />
+    <Compile Include="Dao\IM_GENBA_DIGIDao.cs" />
+    <Compile Include="Dao\IM_GENBA_TEIKI_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_GENBA_TSUKI_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_HIKIAI_TORIHIKISAKI_SEIKYUUDao.cs" />
+    <Compile Include="Dao\IM_HIKIAI_TORIHIKISAKI_SHIHARAIDao.cs" />
+    <Compile Include="Dao\IM_INXS_TANTOUSHADao.cs" />
+    <Compile Include="Dao\IM_JISSEKI_BUNRUIDao.cs" />
+    <Compile Include="Dao\IM_KAISHI_ZAIKO_INFODao.cs" />
+    <Compile Include="Dao\IM_BUNRUIDao.cs" />
+    <Compile Include="Dao\IM_CHIIKIBETSU_BUNRUIDao.cs" />
+    <Compile Include="Dao\IM_CHIIKIBETSU_GYOUSHUDao.cs" />
+    <Compile Include="Dao\IM_CHIIKIBETSU_JUUSHODao.cs" />
+    <Compile Include="Dao\IM_CHIIKIBETSU_KYOKADao.cs" />
+    <Compile Include="Dao\IM_CHIIKIBETSU_KYOKA_MEIGARADao.cs" />
+    <Compile Include="Dao\IM_CHIIKIBETSU_SHISETSUDao.cs" />
+    <Compile Include="Dao\IM_CHIIKIBETSU_SHOBUNDao.cs" />
+    <Compile Include="Dao\IM_CHIIKIDao.cs" />
+    <Compile Include="Dao\IM_CONTENADao.cs" />
+    <Compile Include="Dao\IM_CONTENA_JOUKYOUDao.cs" />
+    <Compile Include="Dao\IM_CONTENA_SHURUIDao.cs" />
+    <Compile Include="Dao\IM_CONTENA_SOUSADao.cs" />
+    <Compile Include="Dao\IM_CORP_CLOSEDDao.cs" />
+    <Compile Include="Dao\IM_CORP_INFODao.cs" />
+    <Compile Include="Dao\IM_COURSEDao.cs" />
+    <Compile Include="Dao\IM_COURSE_NAMEDao.cs" />
+    <Compile Include="Dao\IM_CUSTOMER_KEYDao.cs" />
+    <Compile Include="Dao\IM_DENPYOU_KBNDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_HAIKI_NAMEDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_HAIKI_SHURUIDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_HAIKI_SHURUI_SAIBUNRUIDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_JIGYOUJOUDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_JIGYOUSHADao.cs" />
+    <Compile Include="Dao\IM_DENSHI_SHINSEI_JYUYOUDODao.cs" />
+    <Compile Include="Dao\IM_DENSHI_SHINSEI_NAIYOUDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_SHINSEI_ROUTEDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_SHINSEI_ROUTE_NAMEDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_TANTOUSHADao.cs" />
+    <Compile Include="Dao\IM_DENSHI_YUUGAI_BUSSHITSUDao.cs" />
+    <Compile Include="Dao\IM_DENSHU_KBNDao.cs" />
+    <Compile Include="Dao\IM_ERROR_MESSAGEDao.cs" />
+    <Compile Include="Dao\IM_GENCHAKU_TIMEDao.cs" />
+    <Compile Include="Dao\IM_GENNYOURITSUDao.cs" />
+    <Compile Include="Dao\IM_HAIKI_KBNDao.cs" />
+    <Compile Include="Dao\IM_HAIKI_NAMEDao.cs" />
+    <Compile Include="Dao\IM_HAIKI_SHURUIDao.cs" />
+    <Compile Include="Dao\IM_HIKIAI_GENBADao.cs" />
+    <Compile Include="Dao\IM_HIKIAI_GENBA_TEIKI_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_HIKIAI_GENBA_TSUKI_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_HIKIAI_GYOUSHADao.cs" />
+    <Compile Include="Dao\IM_HIKIAI_TORIHIKISAKIDao.cs" />
+    <Compile Include="Dao\IM_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_HOUKOKUSHO_BUNRUIDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_BETSU1_HSTDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_BETSU1_YOTEIDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_BETSU2Dao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_BETSU3Dao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_BETSU4Dao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_KIHONDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_KIHON_HST_GENBADao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_OBOEDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_SAISEIHINMDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_KEIYAKU_TSUMIKAEDao.cs" />
+    <Compile Include="Dao\IM_ITAKU_SBN_KYOKASHODao.cs" />
+    <Compile Include="Dao\IM_ITAKU_UPN_KYOKASHODao.cs" />
+    <Compile Include="Dao\IM_KANSANDao.cs" />
+    <Compile Include="Dao\IM_KARI_GENBADao.cs" />
+    <Compile Include="Dao\IM_KARI_GENBA_TEIKI_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_KARI_GENBA_TSUKI_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_KARI_GYOUSHADao.cs" />
+    <Compile Include="Dao\IM_KARI_TORIHIKISAKIDao.cs" />
+    <Compile Include="Dao\IM_KARI_TORIHIKISAKI_SEIKYUUDao.cs" />
+    <Compile Include="Dao\IM_KARI_TORIHIKISAKI_SHIHARAIDao.cs" />
+    <Compile Include="Dao\IM_KEIJOUDao.cs" />
+    <Compile Include="Dao\IM_KEIRYOU_CHOUSEIDao.cs" />
+    <Compile Include="Dao\IM_KEITAI_KBNDao.cs" />
+    <Compile Include="Dao\IM_KIHON_HINMEI_TANKADao.cs" />
+    <Compile Include="Dao\IM_KOBETSU_HINMEI_TANKADao.cs" />
+    <Compile Include="Dao\IM_KONGOU_HAIKIBUTSUDao.cs" />
+    <Compile Include="Dao\IM_KONGOU_SHURUIDao.cs" />
+    <Compile Include="Dao\IM_MANIFEST_KANSANDao.cs" />
+    <Compile Include="Dao\IM_MANIFEST_SHURUIDao.cs" />
+    <Compile Include="Dao\IM_MANIFEST_TEHAIDao.cs" />
+    <Compile Include="Dao\IM_MENU_AUTHDao.cs" />
+    <Compile Include="Dao\IM_MENU_AUTH_PT_DETAILDao.cs" />
+    <Compile Include="Dao\IM_MENU_AUTH_PT_ENTRYDao.cs" />
+    <Compile Include="Dao\IM_MY_FAVORITEDao.cs" />
+    <Compile Include="Dao\IM_NISUGATADao.cs" />
+    <Compile Include="Dao\IM_NYUUKINSAKIDao.cs" />
+    <Compile Include="Dao\IM_NYUUKINSAKI_FURIKOMIDao.cs" />
+    <Compile Include="Dao\IM_NYUURYOKU_TANTOUSHADao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_CSV_PATTERNDao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_CSV_PATTERN_COLUMNDao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_CSV_PATTERN_HANBAIKANRIDao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_CSV_PATTERN_NYUUSHUKKINDao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_PATTERNDao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_PATTERN_COLUMNDao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_PATTERN_COLUMN_INXSDao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_PATTERN_INXSDao.cs" />
+    <Compile Include="Dao\IM_OUTPUT_PATTERN_KOBETSUDao.cs" />
+    <Compile Include="Dao\IM_RAKU_RAKUDao.cs" />
+    <Compile Include="Dao\IM_SBNB_PATTERNDao.cs" />
+    <Compile Include="Dao\IM_SHAIN_MAX_WINDOWDao.cs" />
+    <Compile Include="Dao\IM_SHARYOUDao.cs" />
+    <Compile Include="Dao\IM_SHIKUCHOUSONDao.cs" />
+    <Compile Include="Dao\IM_SHOBUN_HOUHOUDao.cs" />
+    <Compile Include="Dao\IM_SHOBUN_MOKUTEKIDao.cs" />
+    <Compile Include="Dao\IM_SHURUIDao.cs" />
+    <Compile Include="Dao\IM_SHUUKEI_KOUMOKUDao.cs" />
+    <Compile Include="Dao\IM_SYS_INFODao.cs" />
+    <Compile Include="Dao\IM_SYS_INFO_CHANGE_LOGDao.cs" />
+    <Compile Include="Dao\IM_SYUKKINSAKIDao.cs" />
+    <Compile Include="Dao\IM_TEGATA_HOKANSHADao.cs" />
+    <Compile Include="Dao\IM_TORIHIKISAKI_SEIKYUUDao.cs" />
+    <Compile Include="Dao\IM_TORIHIKISAKI_SHIHARAIDao.cs" />
+    <Compile Include="Dao\IM_TORIHIKI_KBNDao.cs" />
+    <Compile Include="Dao\IM_UNPAN_HOUHOUDao.cs" />
+    <Compile Include="Dao\IM_UNTENSHADao.cs" />
+    <Compile Include="Dao\IM_USER_RESTRICTDao.cs" />
+    <Compile Include="Dao\IM_WANSIGN_KEIYAKU_INFODAO.cs" />
+    <Compile Include="Dao\IM_WORK_CLOSED_HANNYUUSAKIDao.cs" />
+    <Compile Include="Dao\IM_WORK_CLOSED_SHARYOUDao.cs" />
+    <Compile Include="Dao\IM_WORK_CLOSED_UNTENSHADao.cs" />
+    <Compile Include="Dao\IM_YOUKIDao.cs" />
+    <Compile Include="Dao\IM_YUUGAI_BUSSHITSUDao.cs" />
+    <Compile Include="Dao\IS_CUSTOMER_HINDODao.cs" />
+    <Compile Include="Dao\IS_DEFAULTMARGINSETTINGSDao.cs" />
+    <Compile Include="Dao\IS_DENSHI_CONNECTDao.cs" />
+    <Compile Include="Dao\IS_HINMEI_HINDODao.cs" />
+    <Compile Include="Dao\IS_LOGI_CONNECTDao.cs" />
+    <Compile Include="Dao\IS_NAVI_CONNECTDao.cs" />
+    <Compile Include="Dao\IS_NUMBER_DAYDao.cs" />
+    <Compile Include="Dao\IS_NUMBER_DENSHUDao.cs" />
+    <Compile Include="Dao\IS_NUMBER_RECEIPTDao.cs" />
+    <Compile Include="Dao\IS_NUMBER_SYSTEMDao.cs" />
+    <Compile Include="Dao\IS_NUMBER_YEARDao.cs" />
+    <Compile Include="Dao\IS_REPORTLISTPRINTERSETTINGSDao.cs" />
+    <Compile Include="Dao\IS_SYSTEC_TOKENDao.cs" />
+    <Compile Include="Dao\IS_ZIP_CODEDao.cs" />
+    <Compile Include="Dao\IT_KEIRYOU_DETAILDao.cs" />
+    <Compile Include="Dao\IT_KEIRYOU_ENTRYDao.cs" />
+    <Compile Include="Dao\IT_NYUUKIN_DATA_TORIKOMIDao.cs" />
+    <Compile Include="Dao\IT_OPERATE_LOGDao.cs" />
+    <Compile Include="Dao\IT_UKEIRE_DETAILDao.cs" />
+    <Compile Include="Dao\IT_UKEIRE_ENTRYDao.cs" />
+    <Compile Include="Dao\IM_BANK_SHITEN_FOR_CODECHECKDao.cs" />
+    <Compile Include="Dao\IM_ZAIKO_HINMEIDao.cs" />
+    <Compile Include="Dao\IT_USER_LOGINDao.cs" />
+    <Compile Include="Dao\IM_UNCHIN_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_UNCHIN_TANKADao.cs" />
+    <Compile Include="Dao\GET_SYSDATEDao.cs" />
+    <Compile Include="Dao\IM_KOBETSU_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_COURSE_DETAILDao.cs" />
+    <Compile Include="Dao\ICHANGE_LOG_M_COURSE_DETAIL_ITEMSDao.cs" />
+    <Compile Include="Dao\ICHANGE_LOG_M_COURSE_NIOROSHIDao.cs" />
+    <Compile Include="Dao\ICHANGE_LOG_M_COURSEDao.cs" />
+    <Compile Include="Dao\ICHANGE_LOG_M_COURSE_DETAILDao.cs" />
+    <Compile Include="Dao\IT_MOBISYO_RTDao.cs" />
+    <Compile Include="Dao\IT_MOBISYO_RT_DTLDao.cs" />
+    <Compile Include="Dao\IT_MOBISYO_RT_HANNYUUDao.cs" />
+    <Compile Include="Dao\IT_MOBISYO_RT_CONTENADao.cs" />
+    <Compile Include="Dao\IM_DIGI_OUTPUT_SHASHUDao.cs" />
+    <Compile Include="Dao\IM_DIGI_OUTPUT_SHARYOUDao.cs" />
+    <Compile Include="Dao\IM_DIGI_OUTPUT_SHURUIDao.cs" />
+    <Compile Include="Dao\IM_DIGI_OUTPUT_UNITDao.cs" />
+    <Compile Include="Dao\IM_DIGI_OUTPUT_HINMEIDao.cs" />
+    <Compile Include="Dao\IM_DIGI_OUTPUT_SHAINDao.cs" />
+    <Compile Include="Dao\IM_DIGI_OUTPUT_GENBADao.cs" />
+    <Compile Include="Dao\IM_NAVI_OUTPUT_SHAINDao.cs" />
+    <Compile Include="Dao\IM_NAVI_OUTPUT_GENBADao.cs" />
+    <Compile Include="Dao\IM_NAVI_OUTPUT_SHUPPATSU_NIOROSHI_GENBADao.cs" />
+    <Compile Include="Dao\IM_NAVI_OUTPUT_SHASHUDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_KEIYAKU_SHANAI_KEIRO_NAMEDao.cs" />
+    <Compile Include="Dao\IM_DENSHI_KEIYAKU_SHANAI_KEIRODao.cs" />
+    <Compile Include="Dao\IM_GENBAMEMO_HYOUDAIDao.cs" />
+    <Compile Include="Dao\IM_FILE_LINK_UKEIRE_JISSEKI_ENTRYDao.cs" />
+    <Compile Include="Dao\IM_SMS_RECEIVERDao.cs" />
+    <Compile Include="Dao\IM_SMS_RECEIVER_LINK_GENBADao.cs" />
+    <Compile Include="Dao\IM_FILE_LINK_SYS_INFODao.cs" />
+    <Compile Include="Dto\CloseFormDto.cs" />
+    <Compile Include="Dao\IS_MAPBOX_ACCESS_COUNTDao.cs" />
+    <Compile Include="Dao\IM_OLD_DATA_DEL.cs" />
+    <Compile Include="Dao\IM_GENBAMEMO_BUNRUIDao.cs" />
+    <Compile Include="Dao\IM_FILE_LINK_GENBAMEMO_ENTRYDao.cs" />
+    <Compile Include="Dto\CommonInformation.cs" />
+    <Compile Include="Dto\CommunicateAppDto.cs" />
+    <Compile Include="Dto\CommunicateTokenDto.cs" />
+    <Compile Include="Dto\DBConnectionDTO.cs" />
+    <Compile Include="Dto\ExecuteCommandDto.cs" />
+    <Compile Include="Dto\HeaderCheckboxDto.cs" />
+    <Compile Include="Dto\JoinMethodDto.cs" />
+    <Compile Include="Dto\MenuAuthDto.cs" />
+    <Compile Include="Dto\MultiRowLocationDto.cs" />
+    <Compile Include="Dto\OutputPatternDto.cs" />
+    <Compile Include="Dto\PetternSettingDto\JoinSettingDto.cs" />
+    <Compile Include="Dto\PetternSettingDto\PatternSettingDto.cs" />
+    <Compile Include="Dto\PopupReturnParam.cs" />
+    <Compile Include="Dto\PopupSearchSendParamDto.cs" />
+    <Compile Include="Dto\RangeSettingDto.cs" />
+    <Compile Include="Dto\GcMultiRowZeroPaddingDto.cs" />
+    <Compile Include="Dto\GcMultiRowFuriganaDto.cs" />
+    <Compile Include="Dto\GcMultiRowCopySetDto.cs" />
+    <Compile Include="Dto\SearchConditionsDto.cs" />
+    <Compile Include="Dto\SelectRunCheckDto.cs" />
+    <Compile Include="Dto\SystemProperty.cs" />
+    <Compile Include="Dto\FormatSettingDto.cs" />
+    <Compile Include="Editor\CheckCollectionEditor.cs" />
+    <Compile Include="Dao\IS2Dao.cs" />
+    <Compile Include="Dao\IchiranBaseDao.cs" />
+    <Compile Include="Dao\IM_BANKDao.cs" />
+    <Compile Include="Dao\IM_BANK_SHITENDao.cs" />
+    <Compile Include="Dao\IM_BUSHODao.cs" />
+    <Compile Include="Dao\IM_EIGYOU_TANTOUSHADao.cs" />
+    <Compile Include="Dao\IM_GENBADao.cs" />
+    <Compile Include="Dao\IM_GYOUSHADao.cs" />
+    <Compile Include="Dao\IM_GYOUSHUDao.cs" />
+    <Compile Include="Dao\IM_HAISHA_JOKYODao.cs" />
+    <Compile Include="Dao\IM_KONTENADao.cs" />
+    <Compile Include="Dao\IM_KONTENA_SHURUIDao.cs" />
+    <Compile Include="Dao\IM_KYOTENDao.cs" />
+    <Compile Include="Dao\IM_LOGIN_USER_INFODao.cs" />
+    <Compile Include="Dao\IM_NYUUSHUKKIN_KBNDao.cs" />
+    <Compile Include="Dao\IM_SHAINDao.cs" />
+    <Compile Include="Dao\IM_SHASHUDao.cs" />
+    <Compile Include="Dao\IM_SHOBUN_TANTOUSHADao.cs" />
+    <Compile Include="Dao\IM_SHOUHIZEIDao.cs" />
+    <Compile Include="Dao\IM_TODOUFUKENDao.cs" />
+    <Compile Include="Dao\IM_TORIHIKISAKIDao.cs" />
+    <Compile Include="Dao\IM_UNITDao.cs" />
+    <Compile Include="Dao\IT_UKETSUKE_DETAILDao.cs" />
+    <Compile Include="Dao\IT_UKETSUKE_KONTENA_SLIPDao.cs" />
+    <Compile Include="Dao\IT_UKETSUKE_SLIPDao.cs" />
+    <Compile Include="Dto\CheckMethodSettingDto.cs" />
+    <Compile Include="Dto\CheckMethodSettingDtoCollection.cs" />
+    <Compile Include="Dto\PopupSettingDto.cs" />
+    <Compile Include="Dto\SortConditionDto.cs" />
+    <Compile Include="Dto\SelectCheckDto.cs" />
+    <Compile Include="Editor\RunCheckCollectionEditor.cs" />
+    <Compile Include="Entity\M_BIKO_PATAN_NYURYOKU.cs" />
+    <Compile Include="Entity\M_BIKO_SENTAKUSHI_NYURYOKU.cs" />
+    <Compile Include="Entity\M_BIKO_UCHIWAKE_NYURYOKU.cs" />
+    <Compile Include="Entity\M_GURUPU_NYURYOKU.cs" />
+    <Compile Include="Entity\M_ITAKU_LINK_WANSIGN_KEIYAKU.cs" />
+    <Compile Include="Entity\M_SYS_PREV_VALUE.cs" />
+    <Compile Include="Entity\M_DENSHI_MANIFEST_KANSAN.cs" />
+    <Compile Include="Entity\M_FILE_LINK_CHIIKIBETSU_KYOKA.cs" />
+    <Compile Include="Entity\M_FILE_LINK_ITAKU_KEIYAKU_KIHON.cs" />
+    <Compile Include="Entity\M_GENBA_DIGI.cs" />
+    <Compile Include="Entity\M_INXS_TANTOUSHA.cs" />
+    <Compile Include="Entity\M_JISSEKI_BUNRUI.cs" />
+    <Compile Include="Entity\M_KAISHI_ZAIKO_INFO.cs" />
+    <Compile Include="Entity\DT_D09.cs" />
+    <Compile Include="Entity\DT_D09_MOD.cs" />
+    <Compile Include="Entity\DT_D10.cs" />
+    <Compile Include="Entity\DT_D10_MOD.cs" />
+    <Compile Include="Entity\DT_D12.cs" />
+    <Compile Include="Entity\DT_D13.cs" />
+    <Compile Include="Entity\DT_MF_MEMBER.cs" />
+    <Compile Include="Entity\DT_MF_TOC.cs" />
+    <Compile Include="Entity\DT_PT_R02.cs" />
+    <Compile Include="Entity\DT_PT_R04.cs" />
+    <Compile Include="Entity\DT_PT_R05.cs" />
+    <Compile Include="Entity\DT_PT_R06.cs" />
+    <Compile Include="Entity\DT_PT_R13.cs" />
+    <Compile Include="Entity\DT_PT_R18.cs" />
+    <Compile Include="Entity\DT_PT_R19.cs" />
+    <Compile Include="Entity\DT_R02.cs" />
+    <Compile Include="Entity\DT_R04.cs" />
+    <Compile Include="Entity\DT_R04_EX.cs" />
+    <Compile Include="Entity\DT_R05.cs" />
+    <Compile Include="Entity\DT_R06.cs" />
+    <Compile Include="Entity\DT_R08.cs" />
+    <Compile Include="Entity\DT_R08_EX.cs" />
+    <Compile Include="Entity\DT_R13.cs" />
+    <Compile Include="Entity\DT_R13_EX.cs" />
+    <Compile Include="Entity\DT_R18.cs" />
+    <Compile Include="Entity\DT_R18_EX.cs" />
+    <Compile Include="Entity\DT_R18_MIX.cs" />
+    <Compile Include="Entity\DT_R19.cs" />
+    <Compile Include="Entity\DT_R19_EX.cs" />
+    <Compile Include="Entity\DT_R24.cs" />
+    <Compile Include="Entity\IMPORT_MEMBER_FILTER.cs" />
+    <Compile Include="Entity\JWNET_SEND_LOG.cs" />
+    <Compile Include="Entity\MS_JWNET_MEMBER.cs" />
+    <Compile Include="Entity\M_BANK.cs" />
+    <Compile Include="Entity\M_BANK_SHITEN.cs" />
+    <Compile Include="Entity\M_BUNRUI.cs" />
+    <Compile Include="Entity\M_CHIIKI.cs" />
+    <Compile Include="Entity\M_CHIIKIBETSU_BUNRUI.cs" />
+    <Compile Include="Entity\M_CHIIKIBETSU_GYOUSHU.cs" />
+    <Compile Include="Entity\M_CHIIKIBETSU_JUUSHO.cs" />
+    <Compile Include="Entity\M_CHIIKIBETSU_KYOKA.cs" />
+    <Compile Include="Entity\M_CHIIKIBETSU_KYOKA_MEIGARA.cs" />
+    <Compile Include="Entity\M_CHIIKIBETSU_SHISETSU.cs" />
+    <Compile Include="Entity\M_CHIIKIBETSU_SHOBUN.cs" />
+    <Compile Include="Entity\M_CONTENA.cs" />
+    <Compile Include="Entity\M_CONTENA_JOUKYOU.cs" />
+    <Compile Include="Entity\M_CONTENA_SHURUI.cs" />
+    <Compile Include="Entity\M_CONTENA_SOUSA.cs" />
+    <Compile Include="Entity\M_CORP_CLOSED.cs" />
+    <Compile Include="Entity\M_CORP_INFO.cs" />
+    <Compile Include="Entity\M_COURSE.cs" />
+    <Compile Include="Entity\M_COURSE_DETAIL.cs" />
+    <Compile Include="Entity\M_COURSE_DETAIL_ITEMS.cs" />
+    <Compile Include="Entity\M_COURSE_NAME.cs" />
+    <Compile Include="Entity\M_COURSE_NIOROSHI.cs" />
+    <Compile Include="Entity\M_CUSTOMER_KEY.cs" />
+    <Compile Include="Entity\M_DENPYOU_KBN.cs" />
+    <Compile Include="Entity\M_DENSHI_HAIKI_NAME.cs" />
+    <Compile Include="Entity\M_DENSHI_HAIKI_SHURUI.cs" />
+    <Compile Include="Entity\M_DENSHI_HAIKI_SHURUI_SAIBUNRUI.cs" />
+    <Compile Include="Entity\M_DENSHI_JIGYOUJOU.cs" />
+    <Compile Include="Entity\M_DENSHI_JIGYOUSHA.cs" />
+    <Compile Include="Entity\M_DENSHI_SHINSEI_JYUYOUDO.cs" />
+    <Compile Include="Entity\M_DENSHI_SHINSEI_NAIYOU.cs" />
+    <Compile Include="Entity\M_DENSHI_SHINSEI_ROUTE.cs" />
+    <Compile Include="Entity\M_DENSHI_SHINSEI_ROUTE_NAME.cs" />
+    <Compile Include="Entity\M_DENSHI_TANTOUSHA.cs" />
+    <Compile Include="Entity\M_DENSHI_YUUGAI_BUSSHITSU.cs" />
+    <Compile Include="Entity\M_DENSHU_KBN.cs" />
+    <Compile Include="Entity\M_EIGYOU_TANTOUSHA.cs" />
+    <Compile Include="Entity\M_ERROR_MESSAGE.cs" />
+    <Compile Include="Entity\M_GENBA.cs" />
+    <Compile Include="Entity\M_GENBA_TEIKI_HINMEI.cs" />
+    <Compile Include="Entity\M_GENBA_TSUKI_HINMEI.cs" />
+    <Compile Include="Entity\M_GENCHAKU_TIME.cs" />
+    <Compile Include="Entity\M_GENNYOURITSU.cs" />
+    <Compile Include="Entity\M_GYOUSHA.cs" />
+    <Compile Include="Entity\M_GYOUSHU.cs" />
+    <Compile Include="Entity\M_HAIKI_KBN.cs" />
+    <Compile Include="Entity\M_HAIKI_NAME.cs" />
+    <Compile Include="Entity\M_HAIKI_SHURUI.cs" />
+    <Compile Include="Entity\M_HAISHA_JOKYO.cs" />
+    <Compile Include="Entity\M_HIKIAI_GENBA.cs" />
+    <Compile Include="Entity\M_HIKIAI_GENBA_TEIKI_HINMEI.cs" />
+    <Compile Include="Entity\M_HIKIAI_GENBA_TSUKI_HINMEI.cs" />
+    <Compile Include="Entity\M_HIKIAI_GYOUSHA.cs" />
+    <Compile Include="Entity\M_HIKIAI_TORIHIKISAKI.cs" />
+    <Compile Include="Entity\M_HIKIAI_TORIHIKISAKI_SEIKYUU.cs" />
+    <Compile Include="Entity\M_HIKIAI_TORIHIKISAKI_SHIHARAI.cs" />
+    <Compile Include="Entity\M_HINMEI.cs" />
+    <Compile Include="Entity\M_HOUKOKUSHO_BUNRUI.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_BETSU1_HST.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_BETSU1_YOTEI.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_BETSU2.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_BETSU3.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_BETSU4.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_HINMEI.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_KIHON.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_KIHON_HST_GENBA.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_OBOE.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_SAISEIHINM.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_TSUMIKAE.cs" />
+    <Compile Include="Entity\M_ITAKU_SBN_KYOKASHO.cs" />
+    <Compile Include="Entity\M_ITAKU_UPN_KYOKASHO.cs" />
+    <Compile Include="Entity\M_JW_NOTIFICATION.cs" />
+    <Compile Include="Entity\M_KANSAN.cs" />
+    <Compile Include="Entity\M_KARI_GENBA.cs" />
+    <Compile Include="Entity\M_KARI_GENBA_TEIKI_HINMEI.cs" />
+    <Compile Include="Entity\M_KARI_GENBA_TSUKI_HINMEI.cs" />
+    <Compile Include="Entity\M_KARI_GYOUSHA.cs" />
+    <Compile Include="Entity\M_KEIJOU.cs" />
+    <Compile Include="Entity\M_KEIRYOU_CHOUSEI.cs" />
+    <Compile Include="Entity\M_KEITAI_KBN.cs" />
+    <Compile Include="Entity\M_KIHON_HINMEI_TANKA.cs" />
+    <Compile Include="Entity\M_KOBETSU_HINMEI_TANKA.cs" />
+    <Compile Include="Entity\M_KONGOU_HAIKIBUTSU.cs" />
+    <Compile Include="Entity\M_KONGOU_SHURUI.cs" />
+    <Compile Include="Entity\M_KYOTEN.cs" />
+    <Compile Include="Entity\M_KYOYUSAKI.cs" />
+    <Compile Include="Entity\M_LIST_PATTERN.cs" />
+    <Compile Include="Entity\M_LIST_PATTERN_COLUMN.cs" />
+    <Compile Include="Entity\M_LIST_PATTERN_FILL_COND.cs" />
+    <Compile Include="Entity\M_LOGIN_USER_INFO.cs" />
+    <Compile Include="Entity\M_MANIFEST_KANSAN.cs" />
+    <Compile Include="Entity\M_MANIFEST_SHURUI.cs" />
+    <Compile Include="Entity\M_MANIFEST_TEHAI.cs" />
+    <Compile Include="Entity\M_MENU_AUTH.cs" />
+    <Compile Include="Entity\M_MENU_AUTH_PT_DETAIL.cs" />
+    <Compile Include="Entity\M_MENU_AUTH_PT_ENTRY.cs" />
+    <Compile Include="Entity\M_MY_FAVORITE.cs" />
+    <Compile Include="Entity\M_NISUGATA.cs" />
+    <Compile Include="Entity\M_NYUUKINSAKI.cs" />
+    <Compile Include="Entity\M_NYUUKINSAKI_FURIKOMI.cs" />
+    <Compile Include="Entity\M_NYUURYOKU_TANTOUSHA.cs" />
+    <Compile Include="Entity\M_NYUUSHUKKIN_KBN.cs" />
+    <Compile Include="Entity\M_OUTPUT_CSV_PATTERN.cs" />
+    <Compile Include="Entity\M_OUTPUT_PATTERN.cs" />
+    <Compile Include="Entity\M_OUTPUT_PATTERN_COLUMN.cs" />
+    <Compile Include="Entity\M_OUTPUT_PATTERN_COLUMN_HIMO.cs" />
+    <Compile Include="Entity\M_OUTPUT_PATTERN_COLUMN_INXS.cs" />
+    <Compile Include="Entity\M_OUTPUT_PATTERN_HIMO.cs" />
+    <Compile Include="Entity\M_OUTPUT_PATTERN_INXS.cs" />
+    <Compile Include="Entity\M_OUTPUT_PATTERN_KOBETSU.cs" />
+    <Compile Include="Entity\M_OUTPUT_PATTERN_KOBETSU_HIMO.cs" />
+    <Compile Include="Entity\M_RAKU_RAKU.cs" />
+    <Compile Include="Entity\M_SBNB_PATTERN.cs" />
+    <Compile Include="Entity\M_SHAIN_MAX_WINDOW.cs" />
+    <Compile Include="Entity\M_SHARYOU.cs" />
+    <Compile Include="Entity\M_SHASHU.cs" />
+    <Compile Include="Entity\M_SHIKUCHOUSON.cs" />
+    <Compile Include="Entity\M_SHOBUN_HOUHOU.cs" />
+    <Compile Include="Entity\M_SHOBUN_MOKUTEKI.cs" />
+    <Compile Include="Entity\M_SHOBUN_TANTOUSHA.cs" />
+    <Compile Include="Entity\M_SHOUHIZEI.cs" />
+    <Compile Include="Entity\M_SHURUI.cs" />
+    <Compile Include="Entity\M_SHUUKEI_KOUMOKU.cs" />
+    <Compile Include="Entity\M_SMS_RECEIVER.cs" />
+    <Compile Include="Entity\M_SYS_INFO.cs" />
+    <Compile Include="Entity\M_SYS_INFO_CHANGE_LOG.cs" />
+    <Compile Include="Entity\M_SYS_INFO_MAIL.cs" />
+    <Compile Include="Entity\M_SYUKKINSAKI.cs" />
+    <Compile Include="Entity\M_TEGATA_HOKANSHA.cs" />
+    <Compile Include="Entity\M_TODOUFUKEN.cs" />
+    <Compile Include="Entity\M_TORIHIKISAKI.cs" />
+    <Compile Include="Entity\M_TORIHIKISAKI_SEIKYUU.cs" />
+    <Compile Include="Entity\M_TORIHIKISAKI_SHIHARAI.cs" />
+    <Compile Include="Entity\M_TORIHIKI_KBN.cs" />
+    <Compile Include="Entity\M_UNCHIN_HINMEI.cs" />
+    <Compile Include="Entity\M_UNCHIN_TANKA.cs" />
+    <Compile Include="Entity\M_UNIT.cs" />
+    <Compile Include="Entity\M_UNPAN_HOUHOU.cs" />
+    <Compile Include="Entity\M_UNTENSHA.cs" />
+    <Compile Include="Entity\M_USER_RESTRICT.cs" />
+    <Compile Include="Entity\M_WANSIGN_KEIYAKU_INFO.cs" />
+    <Compile Include="Entity\M_WORK_CLOSED_HANNYUUSAKI.cs" />
+    <Compile Include="Entity\M_WORK_CLOSED_SHARYOU.cs" />
+    <Compile Include="Entity\M_WORK_CLOSED_UNTENSHA.cs" />
+    <Compile Include="Entity\M_YOUKI.cs" />
+    <Compile Include="Entity\M_YUUGAI_BUSSHITSU.cs" />
+    <Compile Include="Entity\M_ZAIKO_HINMEI.cs" />
+    <Compile Include="Entity\M_ZAIKO_HIRITSU.cs" />
+    <Compile Include="Entity\QUE_INFO.cs" />
+    <Compile Include="Entity\S_CUSTOMER_HINDO.cs" />
+    <Compile Include="Entity\S_DEFAULTMARGINSETTINGS.cs" />
+    <Compile Include="Entity\S_DENSHI_CONNECT.cs" />
+    <Compile Include="Entity\S_HINMEI_HINDO.cs" />
+    <Compile Include="Entity\S_LIST_COLUMN_SELECT.cs" />
+    <Compile Include="Entity\S_LIST_COLUMN_SELECT_DETAIL.cs" />
+    <Compile Include="Entity\S_LOGI_CONNECT.cs" />
+    <Compile Include="Entity\S_NAVI_CONNECT.cs" />
+    <Compile Include="Entity\S_NUMBER_DAY.cs" />
+    <Compile Include="Entity\S_NUMBER_DENSHU.cs" />
+    <Compile Include="Entity\S_NUMBER_FILE.cs" />
+    <Compile Include="Entity\S_NUMBER_RECEIPT.cs" />
+    <Compile Include="Entity\S_NUMBER_RECEIPT_YEAR.cs" />
+    <Compile Include="Entity\S_NUMBER_SYSTEM.cs" />
+    <Compile Include="Entity\S_NUMBER_YEAR.cs" />
+    <Compile Include="Entity\S_OUTPUT_COLUMN_SELECT.cs" />
+    <Compile Include="Entity\S_OUTPUT_COLUMN_SELECT_DETAIL.cs" />
+    <Compile Include="Entity\S_REPORTLISTPRINTERSETTINGS.cs" />
+    <Compile Include="Entity\S_SYSTEC_TOKEN.cs" />
+    <Compile Include="Entity\S_ZIP_CODE.cs" />
+    <Compile Include="Entity\T_CONTENA_RESERVE.cs" />
+    <Compile Include="Entity\T_CONTENA_RESULT.cs" />
+    <Compile Include="Entity\T_DAINOU_ENTRY.cs" />
+    <Compile Include="Entity\T_DAINOU_SHUKKA_DETAIL.cs" />
+    <Compile Include="Entity\T_DAINOU_SHUKKA_ENTRY.cs" />
+    <Compile Include="Entity\T_DAINOU_UKEIRE_DETAIL.cs" />
+    <Compile Include="Entity\T_DAINOU_UKEIRE_ENTRY.cs" />
+    <Compile Include="Entity\T_DENSHI_KEIYAKU_KYOYUSAKI.cs" />
+    <Compile Include="Entity\T_DENSHI_SHINSEI_DETAIL.cs" />
+    <Compile Include="Entity\T_DENSHI_SHINSEI_DETAIL_ACTION.cs" />
+    <Compile Include="Entity\T_DENSHI_SHINSEI_ENTRY.cs" />
+    <Compile Include="Entity\T_DENSHI_SHINSEI_STATUS.cs" />
+    <Compile Include="Entity\T_EIGYO_YOSAN.cs" />
+    <Compile Include="Entity\T_HAISHA_MEMO.cs" />
+    <Compile Include="Entity\T_HAISHA_WARIATE_DAY.cs" />
+    <Compile Include="Entity\T_ITAKU_MEMO_IKKATSU_DETAIL.cs" />
+    <Compile Include="Entity\T_ITAKU_MEMO_IKKATSU_ENTRY.cs" />
+    <Compile Include="Entity\T_JISSEKI_HOUKOKU_ENTRY.cs" />
+    <Compile Include="Entity\T_JISSEKI_HOUKOKU_MANIFEST_DETAIL.cs" />
+    <Compile Include="Entity\T_JISSEKI_HOUKOKU_SBN_DETAIL.cs" />
+    <Compile Include="Entity\T_JISSEKI_HOUKOKU_SHORI_DETAIL.cs" />
+    <Compile Include="Entity\T_JISSEKI_HOUKOKU_UPN_DETAIL.cs" />
+    <Compile Include="Entity\T_JUCHU_M_KENSU.cs" />
+    <Compile Include="Entity\T_KARIUKE_CHOUSEI.cs" />
+    <Compile Include="Entity\T_KARIUKE_CONTROL.cs" />
+    <Compile Include="Entity\T_KEIRYOU_DETAIL.cs" />
+    <Compile Include="Entity\T_KEIRYOU_ENTRY.cs" />
+    <Compile Include="Entity\T_KENSHU_DETAIL.cs" />
+    <Compile Include="Entity\T_LAST_SBN_SUSPEND.cs" />
+    <Compile Include="Entity\T_LOGI_DELIVERY.cs" />
+    <Compile Include="Entity\T_LOGI_DELIVERY_DETAIL.cs" />
+    <Compile Include="Entity\T_LOGI_LINK_STATUS.cs" />
+    <Compile Include="Entity\T_LOGI_TO_TEIKI.cs" />
+    <Compile Include="Entity\T_LOGI_TO_URSH.cs" />
+    <Compile Include="Entity\T_MANIFEST_DETAIL.cs" />
+    <Compile Include="Entity\T_MANIFEST_DETAIL_PRT.cs" />
+    <Compile Include="Entity\T_MANIFEST_ENTRY.cs" />
+    <Compile Include="Entity\T_MANIFEST_KP_KEIJYOU.cs" />
+    <Compile Include="Entity\T_MANIFEST_KP_NISUGATA.cs" />
+    <Compile Include="Entity\T_MANIFEST_KP_SBN_HOUHOU.cs" />
+    <Compile Include="Entity\T_MANIFEST_PRT.cs" />
+    <Compile Include="Entity\T_MANIFEST_PT_DETAIL.cs" />
+    <Compile Include="Entity\T_MANIFEST_PT_DETAIL_PRT.cs" />
+    <Compile Include="Entity\T_MANIFEST_PT_ENTRY.cs" />
+    <Compile Include="Entity\T_MANIFEST_PT_KP_KEIJYOU.cs" />
+    <Compile Include="Entity\T_MANIFEST_PT_KP_NISUGATA.cs" />
+    <Compile Include="Entity\T_MANIFEST_PT_KP_SBN_HOUHOU.cs" />
+    <Compile Include="Entity\T_MANIFEST_PT_PRT.cs" />
+    <Compile Include="Entity\T_MANIFEST_PT_UPN.cs" />
+    <Compile Include="Entity\T_MANIFEST_RELATION.cs" />
+    <Compile Include="Entity\T_MANIFEST_RET_DATE.cs" />
+    <Compile Include="Entity\T_MANIFEST_UPN.cs" />
+    <Compile Include="Entity\T_MITSUMORI_DETAIL.cs" />
+    <Compile Include="Entity\T_MITSUMORI_DETAIL_2.cs" />
+    <Compile Include="Entity\T_MITSUMORI_ENTRY.cs" />
+    <Compile Include="Entity\T_MOBILE_SYOGUN_DATA_INSERT.cs" />
+    <Compile Include="Entity\T_MONTHLY_ADJUST_SH.cs" />
+    <Compile Include="Entity\T_MONTHLY_ADJUST_UR.cs" />
+    <Compile Include="Entity\T_MONTHLY_LOCK_SH.cs" />
+    <Compile Include="Entity\T_MONTHLY_LOCK_UR.cs" />
+    <Compile Include="Entity\T_NYUUKIN_DATA_TORIKOMI.cs" />
+    <Compile Include="Entity\T_NYUUKIN_DETAIL.cs" />
+    <Compile Include="Entity\T_NYUUKIN_ENTRY.cs" />
+    <Compile Include="Entity\T_NYUUKIN_KESHIKOMI.cs" />
+    <Compile Include="Entity\T_NYUUKIN_SUM_DETAIL.cs" />
+    <Compile Include="Entity\T_NYUUKIN_SUM_ENTRY.cs" />
+    <Compile Include="Entity\T_OPERATE_LOG.cs" />
+    <Compile Include="Entity\T_SALES_ZAIKO_DETAIL.cs" />
+    <Compile Include="Entity\T_SEIKYUU_DENPYOU.cs" />
+    <Compile Include="Entity\T_SEIKYUU_DENPYOU_INXS.cs" />
+    <Compile Include="Entity\T_SEIKYUU_DENPYOU_KAGAMI.cs" />
+    <Compile Include="Entity\T_SEIKYUU_DENPYOU_KAGAMI_INXS.cs" />
+    <Compile Include="Entity\T_SEIKYUU_DENPYOU_KAGAMI_USER_INXS.cs" />
+    <Compile Include="Entity\T_SEIKYUU_DETAIL.cs" />
+    <Compile Include="Entity\T_SEISAN_DENPYOU.cs" />
+    <Compile Include="Entity\T_SEISAN_DENPYOU_INXS.cs" />
+    <Compile Include="Entity\T_SEISAN_DENPYOU_KAGAMI.cs" />
+    <Compile Include="Entity\T_SEISAN_DENPYOU_KAGAMI_INXS.cs" />
+    <Compile Include="Entity\T_SEISAN_DENPYOU_KAGAMI_USER_INXS.cs" />
+    <Compile Include="Entity\T_SEISAN_DETAIL.cs" />
+    <Compile Include="Entity\T_SHIHARAI_TEGATA_ENTRY.cs" />
+    <Compile Include="Entity\T_SHIME_JIKKOU_RIREKI.cs" />
+    <Compile Include="Entity\T_SHIME_JIKKOU_RIREKI_TORIHIKISAKI.cs" />
+    <Compile Include="Entity\T_SHIME_SHORI_CHUU.cs" />
+    <Compile Include="Entity\T_SHIME_SHORI_ERROR.cs" />
+    <Compile Include="Entity\T_SHUKKA_DETAIL.cs" />
+    <Compile Include="Entity\T_SHUKKA_ENTRY.cs" />
+    <Compile Include="Entity\T_SHUKKIN_DETAIL.cs" />
+    <Compile Include="Entity\T_SHUKKIN_ENTRY.cs" />
+    <Compile Include="Entity\T_SHUKKIN_KESHIKOMI.cs" />
+    <Compile Include="Entity\T_TEIKI_HAISHA_DETAIL.cs" />
+    <Compile Include="Entity\T_TEIKI_HAISHA_ENTRY.cs" />
+    <Compile Include="Entity\T_TEIKI_HAISHA_NIOROSHI.cs" />
+    <Compile Include="Entity\T_TEIKI_HAISHA_SHOUSAI.cs" />
+    <Compile Include="Entity\T_TEIKI_JISSEKI_DETAIL.cs" />
+    <Compile Include="Entity\T_TEIKI_JISSEKI_ENTRY.cs" />
+    <Compile Include="Entity\T_TEIKI_JISSEKI_NIOROSHI.cs" />
+    <Compile Include="Entity\T_UKEIRE_DETAIL.cs" />
+    <Compile Include="Entity\T_UKEIRE_ENTRY.cs" />
+    <Compile Include="Entity\T_UKETORI_TEGATA_ENTRY.cs" />
+    <Compile Include="Entity\T_UKETSUKE_BP_DETAIL.cs" />
+    <Compile Include="Entity\T_UKETSUKE_BP_ENTRY.cs" />
+    <Compile Include="Entity\T_UKETSUKE_CM_ENTRY.cs" />
+    <Compile Include="Entity\T_UKETSUKE_DETAIL.cs" />
+    <Compile Include="Entity\T_UKETSUKE_KONTENA_SLIP.cs" />
+    <Compile Include="Entity\T_UKETSUKE_MK_DETAIL.cs" />
+    <Compile Include="Entity\T_UKETSUKE_MK_ENTRY.cs" />
+    <Compile Include="Entity\T_UKETSUKE_SK_DETAIL.cs" />
+    <Compile Include="Entity\T_UKETSUKE_SK_ENTRY.cs" />
+    <Compile Include="Entity\T_UKETSUKE_SLIP.cs" />
+    <Compile Include="Entity\T_UKETSUKE_SS_DETAIL.cs" />
+    <Compile Include="Entity\T_UKETSUKE_SS_ENTRY.cs" />
+    <Compile Include="Entity\T_UNCHIN_DETAIL.cs" />
+    <Compile Include="Entity\T_UNCHIN_ENTRY.cs" />
+    <Compile Include="Entity\T_UR_SH_DETAIL.cs" />
+    <Compile Include="Entity\T_UR_SH_ENTRY.cs" />
+    <Compile Include="Entity\M_BANK_SHITEN_FOR_CODECHECK.cs" />
+    <Compile Include="Entity\T_USER_LOGIN.cs" />
+    <Compile Include="Entity\T_ZAIKO_TYOUSEI_DETAIL.cs" />
+    <Compile Include="Entity\T_ZAIKO_TYOUSEI_ENTRY.cs" />
+    <Compile Include="Entity\T_ZAIKO_HINMEI_HURIWAKE.cs" />
+    <Compile Include="Entity\T_ZAIKO_SHUKKA_DETAIL.cs" />
+    <Compile Include="Entity\T_ZAIKO_TANK.cs" />
+    <Compile Include="Entity\T_ZAIKO_TANK_DETAIL.cs" />
+    <Compile Include="Entity\T_ZAIKO_UKEIRE_DETAIL.cs" />
+    <Compile Include="Entity\M_KARI_TORIHIKISAKI.cs" />
+    <Compile Include="Entity\M_KARI_TORIHIKISAKI_SEIKYUU.cs" />
+    <Compile Include="Entity\M_KARI_TORIHIKISAKI_SHIHARAI.cs" />
+    <Compile Include="Entity\T_GETSUJI_SHORI_CHU.cs" />
+    <Compile Include="Entity\T_CASHERDATA.cs" />
+    <Compile Include="Entity\T_TIMESTAMP.cs" />
+    <Compile Include="Entity\T_ZAIKO_IDOU_ENTRY.cs" />
+    <Compile Include="Entity\T_ZAIKO_IDOU_DETAIL.cs" />
+    <Compile Include="Entity\T_MONTHLY_LOCK_ZAIKO.cs" />
+    <Compile Include="Entity\M_KOBETSU_HINMEI.cs" />
+    <Compile Include="Entity\CHANGE_LOG_M_COURSE.cs" />
+    <Compile Include="Entity\CHANGE_LOG_M_COURSE_DETAIL.cs" />
+    <Compile Include="Entity\CHANGE_LOG_M_COURSE_DETAIL_ITEMS.cs" />
+    <Compile Include="Entity\CHANGE_LOG_M_COURSE_NIOROSHI.cs" />
+    <Compile Include="Entity\M_OUTPUT_CSV_PATTERN_COLUMN.cs" />
+    <Compile Include="Entity\M_OUTPUT_CSV_PATTERN_HANBAIKANRI.cs" />
+    <Compile Include="Entity\M_OUTPUT_CSV_PATTERN_NYUUSHUKKIN.cs" />
+    <Compile Include="Entity\T_MOBISYO_RT.cs" />
+    <Compile Include="Entity\T_MOBISYO_RT_DTL.cs" />
+    <Compile Include="Entity\T_MOBISYO_RT_HANNYUU.cs" />
+    <Compile Include="Entity\T_MOBISYO_RT_CONTENA.cs" />
+    <Compile Include="Entity\M_DIGI_OUTPUT_SHASHU.cs" />
+    <Compile Include="Entity\M_DIGI_OUTPUT_SHARYOU.cs" />
+    <Compile Include="Entity\M_DIGI_OUTPUT_SHURUI.cs" />
+    <Compile Include="Entity\M_DIGI_OUTPUT_UNIT.cs" />
+    <Compile Include="Entity\M_DIGI_OUTPUT_HINMEI.cs" />
+    <Compile Include="Entity\M_DIGI_OUTPUT_SHAIN.cs" />
+    <Compile Include="Entity\M_DIGI_OUTPUT_GENBA.cs" />
+    <Compile Include="Entity\T_NAVI_DELIVERY.cs" />
+    <Compile Include="Entity\T_NAVI_LINK_STATUS.cs" />
+    <Compile Include="Entity\T_NAVI_COLLABORATION_EVENTS.cs" />
+    <Compile Include="Entity\M_NAVI_OUTPUT_SHAIN.cs" />
+    <Compile Include="Entity\M_NAVI_OUTPUT_GENBA.cs" />
+    <Compile Include="Entity\M_NAVI_OUTPUT_SHUPPATSU_NIOROSHI_GENBA.cs" />
+    <Compile Include="Entity\M_NAVI_OUTPUT_SHASHU.cs" />
+    <Compile Include="Entity\M_DENSHI_KEIYAKU_CLIENT_ID.cs" />
+    <Compile Include="Entity\M_DENSHI_KEIYAKU_SHANAI_KEIRO_NAME.cs" />
+    <Compile Include="Entity\M_DENSHI_KEIYAKU_SHANAI_KEIRO.cs" />
+    <Compile Include="Entity\T_DENSHI_KEIYAKU_KIHON.cs" />
+    <Compile Include="Entity\M_ITAKU_KEIYAKU_DENSHI_SOUHUSAKI.cs" />
+    <Compile Include="Entity\T_DENSHI_KEIYAKU_SOUHUINFO.cs" />
+    <Compile Include="Entity\T_DENSHI_KEIYAKU_SOUHUSAKI.cs" />
+    <Compile Include="Entity\T_DENSHI_KEIYAKU_KEIYAKUINFO.cs" />
+    <Compile Include="Entity\DT_PT_R18_EX.cs" />
+    <Compile Include="Entity\S_MAPBOX_ACCESS_COUNT.cs" />
+    <Compile Include="Entity\T_FILE_DATA.cs" />
+    <Compile Include="Entity\T_DENSHI_KEIYAKU_KARI_ENTRY.cs" />
+    <Compile Include="Entity\T_DENSHI_KEIYAKU_KARI_DETAIL.cs" />
+    <Compile Include="Entity\M_DENSHI_KEIYAKU_SHORUI_INFO.cs" />
+    <Compile Include="Entity\M_OLD_DATA_DEL.cs" />
+    <Compile Include="Entity\M_CONTENA_KEIKA_DATE.cs" />
+    <Compile Include="Entity\T_UKEIRE_JISSEKI_ENTRY.cs" />
+    <Compile Include="Entity\T_UKEIRE_JISSEKI_DETAIL.cs" />
+    <Compile Include="Entity\T_MOBISYO_RT_KADOUJYOUKYOU.cs" />
+    <Compile Include="Entity\M_GENBAMEMO_BUNRUI.cs" />
+    <Compile Include="Entity\T_GENBAMEMO_ENTRY.cs" />
+    <Compile Include="Entity\T_GENBAMEMO_DETAIL.cs" />
+    <Compile Include="Entity\M_FILE_LINK_GENBAMEMO_ENTRY.cs" />
+    <Compile Include="Entity\M_GENBAMEMO_HYOUDAI.cs" />
+    <Compile Include="Entity\M_FILE_LINK_UKEIRE_JISSEKI_ENTRY.cs" />
+    <Compile Include="Entity\M_SMS_RECEIVER_LINK_GENBA.cs" />
+    <Compile Include="Entity\T_SMS.cs" />
+    <Compile Include="Entity\M_FILE_LINK_SYS_INFO.cs" />
+    <Compile Include="Event\ConvertedEventArgs.cs" />
+    <Compile Include="Event\RegistCheckEventArgs.cs" />
+    <Compile Include="FormManager\FormInfo.cs" />
+    <Compile Include="FormManager\FormAssembly.cs" />
+    <Compile Include="FormManager\FormManager.cs" />
+    <Compile Include="FormManager\IShougunForm.cs" />
+    <Compile Include="Logic\AutoCheckLogic.cs" />
+    <Compile Include="Logic\AutoFocusOutCheckLogic.cs" />
+    <Compile Include="Logic\CertificationLogic.cs" />
+    <Compile Include="Logic\CSVFileLogic.cs" />
+    <Compile Include="Logic\CSVFileLogicCustom.cs" />
+    <Compile Include="Logic\CustomControlExtLogic.cs" />
+    <Compile Include="Logic\DBConnectionLogLogic.cs" />
+    <Compile Include="Logic\FractionLogic.cs" />
+    <Compile Include="Logic\IchiranBaseLogic.cs" />
+    <Compile Include="Logic\MultiRowCreateLogic.cs" />
+    <Compile Include="Logic\CustomControlLogic.cs" />
+    <Compile Include="Logic\CustomTextBoxLogic.cs" />
+    <Compile Include="Logic\FormControlLogic.cs" />
+    <Compile Include="Logic\HolidayCheckLogic.cs" />
+    <Compile Include="Components\ImeStatus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Logic\JushoSearchLogic.cs" />
+    <Compile Include="Logic\MessageBoxShowLogic.cs" />
+    <Compile Include="Logic\MultiRowControlLogic.cs" />
+    <Compile Include="Logic\MultiRowIndexCreateLogic.cs" />
+    <Compile Include="Logic\CustomNumericTextBox2Logic.cs" />
+    <Compile Include="Logic\CustomPhoneNumberTextBoxLogic.cs" />
+    <Compile Include="Logic\CustomPostalCodeTextBoxLogic.cs" />
+    <Compile Include="MasterAccess\Base\AbstractMasterAcess.cs" />
+    <Compile Include="MasterAccess\Base\IMasterAccessDao.cs" />
+    <Compile Include="MasterAccess\Base\IMasterDataAccess.cs" />
+    <Compile Include="MasterAccess\DenshiShinseiJyuyoudoMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiShinseiNaiyoMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiShinseiRouteNameMasterAccess.cs" />
+    <Compile Include="MasterAccess\Impl\SharyouMasterAccess.cs" />
+    <Compile Include="MasterAccess\BushoMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiHaikiShuruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshuKbnMasterAccess.cs" />
+    <Compile Include="MasterAccess\HaishaJokyoMasterAccess.cs" />
+    <Compile Include="MasterAccess\Impl\BankShitenMasterAccess.cs" />
+    <Compile Include="MasterAccess\Impl\GenbaMasterAccess.cs" />
+    <Compile Include="MasterAccess\Impl\TorihikisakiMasterAccess.cs" />
+    <Compile Include="MasterAccess\Impl\NisugataMasterAccess.cs" />
+    <Compile Include="MasterAccess\ItakuKeiyakuKihonMasterAccess.cs" />
+    <Compile Include="MasterAccess\JissekiBunruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\KensakuKyoutsuuMasterAccess.cs" />
+    <Compile Include="MasterAccess\MasterKyoutsuMasterAccess.cs" />
+    <Compile Include="MasterAccess\NyuukinsakiMasterAccess.cs" />
+    <Compile Include="MasterAccess\PopupSettingMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShashuMasterAccess.cs" />
+    <Compile Include="MasterAccess\BankMasterAccess.cs" />
+    <Compile Include="MasterAccess\BankShitenMasterAccess.cs" />
+    <Compile Include="MasterAccess\GyoushuMasterAccess.cs" />
+    <Compile Include="MasterAccess\ContenaMasterAccess.cs" />
+    <Compile Include="MasterAccess\ContenaShuruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\KyotenMasterAccess.cs" />
+    <Compile Include="MasterAccess\NyuushukkinKbnMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShouhizeiMasterAccess.cs" />
+    <Compile Include="MasterAccess\TodoufukenMasterAccess.cs" />
+    <Compile Include="MasterAccess\UnitMasterAccess.cs" />
+    <Compile Include="MasterAccess\EigyouTantoushaMasterAccess.cs" />
+    <Compile Include="MasterAccess\BunruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\ChiikiMasterAccess.cs" />
+    <Compile Include="MasterAccess\KongouShuruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShobunHouhouMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShobunMokutekiMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShuruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\UnpanHouhouMasterAccess.cs" />
+    <Compile Include="MasterAccess\YoukiMasterAccess.cs" />
+    <Compile Include="MasterAccess\KeitaiKbnMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenpyouKbnMasterAccess.cs" />
+    <Compile Include="MasterAccess\ManifestShuruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\ManifestTehaiMasterAccess.cs" />
+    <Compile Include="MasterAccess\GenchakuTimeMasterAccess.cs" />
+    <Compile Include="MasterAccess\ContenaJoukyouMasterAccess.cs" />
+    <Compile Include="MasterAccess\ContenaSousaMasterAccess.cs" />
+    <Compile Include="MasterAccess\KeiryouChouseiMasterAccess.cs" />
+    <Compile Include="MasterAccess\KansanMasterAccess.cs" />
+    <Compile Include="MasterAccess\SharyouMasterAccess.cs" />
+    <Compile Include="MasterAccess\ManifestKansanMasterAccess.cs" />
+    <Compile Include="MasterAccess\KeijouMasterAccess.cs" />
+    <Compile Include="MasterAccess\NisugataMasterAccess.cs" />
+    <Compile Include="MasterAccess\HaikiKbnMasterAccess.cs" />
+    <Compile Include="MasterAccess\HaikiShuruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\UntenshaMasterAccess.cs" />
+    <Compile Include="MasterAccess\TegataHokanshaMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShobunTantoushaMasterAccess.cs" />
+    <Compile Include="MasterAccess\NyuuryokuTantoushaMasterAccess.cs" />
+    <Compile Include="MasterAccess\HinmeiMasterAccess.cs" />
+    <Compile Include="MasterAccess\KihonHinmeiTankaMasterAccess.cs" />
+    <Compile Include="MasterAccess\KobetsuHinmeiTankaMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShikuchousonMasterAccess.cs" />
+    <Compile Include="MasterAccess\HaikiNameMasterAccess.cs" />
+    <Compile Include="MasterAccess\HoukokushoBunruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\YuugaiBusshitsuMasterAccess.cs" />
+    <Compile Include="MasterAccess\TorihikiKbnMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShuukeiKoumokuMasterAccess.cs" />
+    <Compile Include="MasterAccess\ShukkinsakiMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiJigyoushaMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiJigyoujoMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiTantoushaMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiYuugaiBusshitsuMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiHaikiShuruiSaibunruiMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiHaikiNameMasterAccess.cs" />
+    <Compile Include="MasterAccess\ZaikoHinmeiMasterAccess.cs" />
+    <Compile Include="MasterAccess\DenshiKeiyakuShanaiKeiroNameMasterAccess.cs" />
+    <Compile Include="Menu\AssemblyItem.cs" />
+    <Compile Include="Menu\GroupItem.cs" />
+    <Compile Include="Menu\MenuIndexNoComparer.cs" />
+    <Compile Include="Menu\MenuItemComm.cs" />
+    <Compile Include="Menu\SubItem.cs" />
+    <Compile Include="OriginalException\EdisonException.cs" />
+    <Compile Include="Entity\M_BUSHO.cs" />
+    <Compile Include="Entity\M_SHAIN.cs" />
+    <Compile Include="Entity\SuperEntity.cs" />
+    <Compile Include="Logic\AutoRegistCheckLogic.cs" />
+    <Compile Include="Setting\ButtonSetting.cs" />
+    <Compile Include="Setting\CheckMethodSetting.cs" />
+    <Compile Include="Setting\GridSetting.cs" />
+    <Compile Include="Setting\MappingFileSetting.cs" />
+    <Compile Include="Setting\MasterDataSetting.cs" />
+    <Compile Include="Setting\PetternSetting\PatternJoinSetting.cs" />
+    <Compile Include="Setting\PetternSetting\PatternSetting.cs" />
+    <Compile Include="Setting\RunCheckMethodSetting.cs" />
+    <Compile Include="Setting\PopupSetting.cs" />
+    <Compile Include="Setting\FormatSetting.cs" />
+    <Compile Include="Configuration\AppData.cs" />
+    <Compile Include="Setting\SettingFile.cs" />
+    <Compile Include="Setting\SettingFileReadLogic.cs" />
+    <Compile Include="Setting\TablePrimaryKeySetting.cs" />
+    <Compile Include="Setting\TransWindowSetting.cs" />
+    <Compile Include="UserControls\CalenderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CalenderControl.designer.cs">
+      <DependentUpon>CalenderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility\ButtonControlUtility.cs" />
+    <Compile Include="Utility\ControlUtility.cs" />
+    <Compile Include="Logic\DataBinderLogic.cs" />
+    <Compile Include="MasterAccess\GenbaMasterAccess.cs" />
+    <Compile Include="MasterAccess\GyoushaMasterAccess.cs" />
+    <Compile Include="Logic\IBuisinessLogic.cs" />
+    <Compile Include="MasterAccess\IMasterDataAccess.cs" />
+    <Compile Include="Utility\CorpInfoUtility.cs" />
+    <Compile Include="Utility\CsvUtility.cs" />
+    <Compile Include="Utility\DaoInitUtility.cs" />
+    <Compile Include="Logic\ImeLanguageLogic.cs" />
+    <Compile Include="Utility\DaoInitUtilityLOG.cs" />
+    <Compile Include="Utility\DataTableUtility.cs" />
+    <Compile Include="Utility\EncryptionUtility.cs" />
+    <Compile Include="Utility\EntityUtility.cs" />
+    <Compile Include="Utility\ImeUtility.cs" />
+    <Compile Include="Utility\LogUtility.cs" />
+    <Compile Include="Utility\MessageUtility.cs" />
+    <Compile Include="MasterAccess\ShainMasterAccess.cs" />
+    <Compile Include="MasterAccess\TorihikisakiMasterAccess.cs" />
+    <Compile Include="Logic\Validator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\NativeWindowContorol.cs" />
+    <Compile Include="Utility\PdfFileUtility.cs" />
+    <Compile Include="Utility\PropertyUtility.cs" />
+    <Compile Include="Utility\SortUtility.cs" />
+    <Compile Include="Utility\SqlCreateUtility.cs" />
+    <Compile Include="Utility\StringUtility.cs" />
+    <Compile Include="Utility\TransactionUtility.cs" />
+    <Compile Include="Xml\CurrentUserCustomConfigProfile.cs" />
+    <EmbeddedResource Include="APP\Base\BaseBaseForm.resx">
+      <DependentUpon>BaseBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\BusinessBaseForm.resx">
+      <DependentUpon>BusinessBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\DetailedHeaderForm.resx">
+      <DependentUpon>DetailedHeaderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\IchiranBaseForm.resx">
+      <DependentUpon>IchiranBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\IchiranHeader\IchiranHeaderForm1.resx">
+      <DependentUpon>IchiranHeaderForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\IchiranHeader\IchiranHeaderForm2.resx">
+      <DependentUpon>IchiranHeaderForm2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\IchiranHeader\IchiranHeaderForm3.resx">
+      <DependentUpon>IchiranHeaderForm3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\IchiranSuperForm.resx">
+      <DependentUpon>IchiranSuperForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\ListHeaderForm.resx">
+      <DependentUpon>ListHeaderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\RibbonMainMenu.resx">
+      <DependentUpon>RibbonMainMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\SuperForm.resx">
+      <DependentUpon>SuperForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\MasterHeaderForm.resx">
+      <DependentUpon>MasterHeaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\MasterBaseForm.resx">
+      <DependentUpon>MasterBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\Base\HeaderBaseForm.resx">
+      <DependentUpon>HeaderBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\PopUp\Base\SuperPopupForm.resx">
+      <DependentUpon>SuperPopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseForFolder\FolderSelectPopup.resx">
+      <DependentUpon>FolderSelectPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomButton.resx">
+      <DependentUpon>CustomButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomNumericTextBox2.resx">
+      <DependentUpon>CustomNumericTextBox2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomPopupCalendarButton.resx">
+      <DependentUpon>CustomPopupCalendarButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomComboBox.resx">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\DataGridCustomControl\CustomDataGridView.resx">
+      <DependentUpon>CustomDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\DataGridCustomSearchHeader\CustomSearchHeader.resx">
+      <DependentUpon>CustomSearchHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\DataGridCustomSearchHeader\SearchSettingForm.resx">
+      <DependentUpon>SearchSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\DataGridCustomSortHeader\CustomSortHeader.resx">
+      <DependentUpon>CustomSortHeader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\DataGridCustomSortHeader\SortSettingForm.resx">
+      <DependentUpon>SortSettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\GcCustomColumnHeader.resx">
+      <DependentUpon>GcCustomColumnHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\GcCustomDataTimePicker.resx">
+      <DependentUpon>GcCustomDataTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\GcCustomMultiRow.resx">
+      <DependentUpon>GcCustomMultiRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\GcCustomSortComboBox.resx">
+      <DependentUpon>GcCustomSortComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomDateTimePicker.resx">
+      <DependentUpon>CustomDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomHourComboBox.resx">
+      <DependentUpon>CustomHourComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomMinuteComboBox.resx">
+      <DependentUpon>CustomMinuteComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomPopupOpenButton.resx">
+      <DependentUpon>CustomPopupOpenButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomTextBox.resx">
+      <DependentUpon>CustomTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CustomWindowTypeLabel.resx">
+      <DependentUpon>CustomWindowTypeLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\GcCustomDataTime.resx">
+      <DependentUpon>GcCustomDataTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\CalenderControl.resx">
+      <DependentUpon>CalenderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dao\SqlFile\OutputCsvPatternColumn\" />
+    <Folder Include="Dao\SqlFile\OutputCsvPattern\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Genba\IM_GENBADao_GetKokyakuIchiranData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genba\IM_GENBADao_GetKokyakuMasterData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Torihikisaki\IM_TORIHIKISAKIDao_GetTorihikisakiData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Shain\IM_SHAINDao_GetTantoushaDate.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\UketsukeSlip\IT_UKETSUKE_SLIPDao_GetAfterDaisuu.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UketsukeSlip\IT_UKETSUKE_SLIPDao_GetBeforeDaisuu.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\BankShiten\IM_BANK_SHITENDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Bank\IM_BANKDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Bunrui\IM_BUNRUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Busho\IM_BUSHODao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuBunrui\IM_CHIIKIBETSU_BUNRUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuGyoushu\IM_CHIIKIBETSU_GYOUSHUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuJuusho\IM_CHIIKIBETSU_JUUSHODao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuKyokaMeigara\IM_CHIIKIBETSU_KYOKA_MEIGARADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuKyoka\IM_CHIIKIBETSU_KYOKADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuShisetsu\IM_CHIIKIBETSU_SHISETSUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuShobun\IM_CHIIKIBETSU_SHOBUNDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Chiiki\IM_CHIIKIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ContenaJoukyou\IM_CONTENA_JOUKYOUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ContenaShurui\IM_CONTENA_SHURUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ContenaSousa\IM_CONTENA_SOUSADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Contena\IM_CONTENADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\CorpClosed\IM_CORP_CLOSEDDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\CorpInfo\IM_CORP_INFODao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\CourseName\IM_COURSE_NAMEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Course\IM_COURSEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenpyouKbn\IM_DENPYOU_KBNDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshuKbn\IM_DENSHU_KBNDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genba\IM_GENBADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\EigyouTantousha\IM_EIGYOU_TANTOUSHADao_GetAllMasterDataForPopup.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\EigyouTantousha\IM_EIGYOU_TANTOUSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genba\IM_GENBADao_GetUserSettingData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\GenchakuTime\IM_GENCHAKU_TIMEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Gennyouritsu\IM_GENNYOURITSUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Gyousha\IM_GYOUSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Gyoushu\IM_GYOUSHUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HaikiKbn\IM_HAIKI_KBNDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HaikiName\IM_HAIKI_NAMEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HaikiShurui\IM_HAIKI_SHURUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Hinmei\IM_HINMEIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HoukokushoBunrui\IM_HOUKOKUSHO_BUNRUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ItakuKeiyakuKihon\IM_ITAKU_KEIYAKU_KIHONDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Kansan\IM_KANSANDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Keijou\IM_KEIJOUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KeiryouChousei\IM_KEIRYOU_CHOUSEIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KeitaiKbn\IM_KEITAI_KBNDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KihonHinmeiTanka\IM_KIHON_HINMEI_TANKADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KobetsuHinmeiTanka\IM_KOBETSU_HINMEI_TANKADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KongouHaikibutsu\IM_KONGOU_HAIKIBUTSUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KongouShurui\IM_KONGOU_SHURUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Kyoten\IM_KYOTENDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ManifestKansan\IM_MANIFEST_KANSANDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ManifestShurui\IM_MANIFEST_SHURUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ManifestTehai\IM_MANIFEST_TEHAIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\MenuAuth\IM_MENU_AUTHDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Nisugata\IM_NISUGATADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Nyuukinsaki\IM_NYUUKINSAKIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\NyuuryokuTantousha\IM_NYUURYOKU_TANTOUSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\NyuushukkinKbn\IM_NYUUSHUKKIN_KBNDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Shain\IM_SHAINDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Sharyou\IM_SHARYOUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Shashu\IM_SHASHUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Shikuchouson\IM_SHIKUCHOUSONDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ShobunHouhou\IM_SHOBUN_HOUHOUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ShobunMokuteki\IM_SHOBUN_MOKUTEKIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ShobunTantousha\IM_SHOBUN_TANTOUSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Shouhizei\IM_SHOUHIZEIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Shurui\IM_SHURUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ShuukeiKoumoku\IM_SHUUKEI_KOUMOKUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\SysInfo\IM_SYS_INFODao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Syukkinsaki\IM_SYUKKINSAKIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\TegataHokansha\IM_TEGATA_HOKANSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Todoufuken\IM_TODOUFUKENDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\TorihikiKbn\IM_TORIHIKI_KBNDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Torihikisaki\IM_TORIHIKISAKIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Unit\IM_UNITDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UnpanHouhou\IM_UNPAN_HOUHOUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Untensha\IM_UNTENSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\WorkClosedSharyou\IM_WORK_CLOSED_SHARYOUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\WorkClosedUntensha\IM_WORK_CLOSED_UNTENSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Youki\IM_YOUKIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\YuugaiBusshitsu\IM_YUUGAI_BUSSHITSUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Setting\RunCheckMethodSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dao\SqlFile\UketsukeSlip\IT_UKETSUKE_SLIPDao_GetMaxDate.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UketsukeSlip\IT_UKETSUKE_SLIPDao_GetMaxDateForGroup.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UketsukeSlip\IT_UKETSUKE_SLIPDao_GetMinDate.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UketsukeSlip\IT_UKETSUKE_SLIPDao_GetMinDateForGroup.sql" />
+    <EmbeddedResource Include="Setting\PopupSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\CheckMethodSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\WorkClosedHannyuusaki\IM_WORK_CLOSED_HANNYUUSAKIDao_GetAllValidData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Bank\IM_BANKDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\BankShiten\IM_BANK_SHITENDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Bunrui\IM_BUNRUIDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Busho\IM_BUSHODao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Chiiki\IM_CHIIKIDao_GetAllValidDataForPopUP.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuBunrui\IM_CHIIKIBETSU_BUNRUIDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuGyoushu\IM_CHIIKIBETSU_GYOUSHUDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuJuusho\IM_CHIIKIBETSU_JUUSHODao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuKyoka\IM_CHIIKIBETSU_KYOKADao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuKyokaMeigara\IM_CHIIKIBETSU_KYOKA_MEIGARADao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuShisetsu\IM_CHIIKIBETSU_SHISETSUDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ChiikibetsuShobun\IM_CHIIKIBETSU_SHOBUNDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Contena\IM_CONTENADao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ContenaJoukyou\IM_CONTENA_JOUKYOUDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ContenaShurui\IM_CONTENA_SHURUIDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\ContenaSousa\IM_CONTENA_SOUSADao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\CorpClosed\IM_CORP_CLOSEDDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\CorpInfo\IM_CORP_INFODao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Course\IM_COURSEDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\CourseName\IM_COURSE_NAMEDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\DenpyouKbn\IM_DENPYOU_KBNDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\DenshuKbn\IM_DENSHU_KBNDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genba\IM_GENBADao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\GenchakuTime\IM_GENCHAKU_TIMEDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Gennyouritsu\IM_GENNYOURITSUDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Gyousha\IM_GYOUSHADao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Gyoushu\IM_GYOUSHUDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\HaikiKbn\IM_HAIKI_KBNDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\HaikiName\IM_HAIKI_NAMEDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\HaikiShurui\IM_HAIKI_SHURUIDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Hinmei\IM_HINMEIDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\Kansan\IM_KANSANDao_GetAllValidDataForPopUp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\OutputPattern\IM_OUTPUT_PATTERNDao_GetAllValidData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\OutputPatternColumn\IM_OUTPUT_PATTERN_COLUMNDao_GetAllValidData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\OutputPatternKobetsu\IM_OUTPUT_PATTERN_KOBETSUDao_GetAllValidData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Setting\FormatSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dao\SqlFile\SysInfo\GetMaxId.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ShainMaxWindow\IM_SHAIN_MAX_WINDOWDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="MasterAccess\Sql\GetGenbaDataSql.sql" />
+    <EmbeddedResource Include="MasterAccess\Sql\GetGyoushaDataSql.sql" />
+    <EmbeddedResource Include="MasterAccess\Sql\GetHinmeiDataSql.sql" />
+    <EmbeddedResource Include="MasterAccess\Sql\GetSharyouData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Shouhizei\IT_IM_SHOUHIZEIDao_GetDataBySqlFile.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KobetsuHinmei\IM_KOBETSU_HINMEIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KobetsuHinmei\IM_KOBETSU_HINMEIDao_GetDataByCd.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KobetsuHinmei\IM_KOBETSU_HINMEIDao_GetDataByHinmei.sql" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_27_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_27_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\CourseDetail\IM_COURSE_DETAILDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genba\IM_GENBADao_GetCtiRenkeiData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Gyousha\IM_GYOUSHADao_GetCtiRenkeiData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Torihikisaki\IM_TORIHIKISAKIDao_GetCtiRenkeiData.sql" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_07_16.png" />
+    <EmbeddedResource Include="Dao\SqlFile\MobisyoRt\GetRenkeiData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\MobisyoRt\GetRenkeiDataForTeikiHaisha.sql" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_97_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_97_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\Sharyou\IM_SHARYOUDao_GetAllValidDataForGyoushaKbn.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\CourseDetail\IM_COURSE_DETAILDao_GetCourseDetailItemsData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\GenbaDigi\IM_GENBA_DIGIDao_GetMinBlankNo.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Sharyou\IM_SHARYOUDao_GetAllValidDataMod.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiKeiyakuShanaiKeiroName\IM_DENSHI_KEIYAKU_SHANAI_KEIRO_NAMEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiKeiyakuShanaiKeiro\IM_DENSHI_KEIYAKU_SHANAI_KEIRODao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KobetsuHinmeiTanka\IM_KOBETSU_HINMEI_TANKADao_GetDataByHinmei.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KobetsuHinmeiTanka\IM_KOBETSU_HINMEI_TANKADao_GetDataForHinmei.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\InxsTantousha\IM_INXS_TANTOUSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\OutputPatternColumnInxs\IM_OUTPUT_PATTERN_COLUMN_INXSDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\OutputPatternInxs\IM_OUTPUT_PATTERN_INXSDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ContenaKeikaDate\IM_CONTENA_KEIKA_DATE_Dao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ContenaKeikaDate\IM_CONTENA_KEIKA_DATE_Dao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genbamemo_Bunrui\IM_GENBAMEMO_BUNRUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genbamemo_Bunrui\IM_GENBAMEMO_BUNRUIDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genbamemo_Hyoudai\IM_GENBAMEMO_HYOUDAIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genbamemo_Hyoudai\IM_GENBAMEMO_HYOUDAIDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Torihikisaki\GetAllRakurakuCustomerCode.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Torihikisaki\GetMaxPlusRakurakuCustomerCode.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Torihikisaki\GetMinBlankRakurakuCustomerCode.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\GurupuNyuryoku\IM_GURUPU_NYURYOKUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\GurupuNyuryoku\IM_GURUPU_NYURYOKUDao_GetAllValidDataForPopUP.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\GurupuNyuryoku\IM_GURUPU_SHIHARAIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\GurupuNyuryoku\IM_GURUPU_URIAGEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\BikoPatanNyuryoku\IM_BIKO_PATAN_NYURYOKUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\BikoPatanNyuryoku\IM_BIKO_PATAN_NYURYOKUDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\BikoSentakushiNyuryoku\IM_BIKO_SENTAKUSHI_NYURYOKUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\BikoSentakushiNyuryoku\IM_BIKO_SENTAKUSHI_NYURYOKUDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\BikoUchiwakeNyuryoku\IM_BIKO_UCHIWAKE_NYURYOKUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\BikoUchiwakeNyuryoku\IM_BIKO_UCHIWAKE_NYURYOKUDao_GetAllValidDataForPopUp.sql" />
+    <Content Include="Dao\SqlFile\RakuRaku\IM_RAKU_RAKUDao_GetAllValidData.sql" />
+    <Content Include="Setting\TablePrimaryKeySetting.xml" />
+    <EmbeddedResource Include="Dao\SqlFile\KihonHinmeiTanka\IM_KIHON_HINMEI_TANKADao_GetAllValidDataSpecifyDate.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KobetsuHinmeiTanka\IM_KOBETSU_HINMEI_TANKADao_GetAllValidDataSpecifyDate.sql" />
+    <EmbeddedResource Include="MenuIcon\G17keisan\G17keisan_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G17keisan\G17keisan_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_26_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_26_32.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_25_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_25_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\JissekiBunrui\GetIchiranDataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\JissekiBunrui\GetJissekiBunruiDataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\JissekiBunrui\IM_JISSEKI_BUNRUIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\JissekiBunrui\IM_JISSEKI_BUNRUIDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="MenuIcon\M11mymenu\M11mymenu_sentaku_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M11mymenu\M11mymenu_sentaku_01_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\MyFavorite\IM_MY_FAVORITEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_25_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_25_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_26_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_26_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_27_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_27_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_28_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_28_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_29_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_29_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_30_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_30_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_59_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_59_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_60_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_60_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_61_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_61_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_62_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_62_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_63_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_63_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_21_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_21_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_22_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_22_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_23_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_23_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_24_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_24_32.png" />
+    <EmbeddedResource Include="MenuIcon\M06okane\M06okane_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M06okane\M06okane_03_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiManifestKansan\IM_DENSHI_MANIFEST_KANSANDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Gyousha\IM_GYOUSHADao_GetUnpanGyoushaData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UnchinTanka\IM_UNCHIN_TANKADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UnchinHinmei\IM_UNCHIN_HINMEIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ZaikoHinmei\IM_KAISHI_ZAIKO_INFODao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Gyousha\IM_GYOUSHADao_GetDainouUnpanGyoushaData.sql" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_58_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_58_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_23_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_23_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_24_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_24_32.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\G16key\G16key_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G16key\G16key_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_28_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_28_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\UserRestrict\IT_USER_LOGINDao_UpdateLoginCounter.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UserRestrict\IT_USER_LOGINDao_UpdOrInsLoginInfo.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\MenuAuthPtDetail\IM_MENU_AUTH_PT_DETAILDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\MenuAuthPtEntry\IM_MENU_AUTH_PT_ENTRYDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Genba\IM_GENBADao_GetMinBlankNo.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Gyousha\IM_GYOUSHADao_GetMinBlankNo.sql" />
+    <EmbeddedResource Include="FormManager\FormMapOfOptions.txt" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_24_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_24_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_22_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_22_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_26_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_26_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_27_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_27_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_09_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGenba\GetChiikiDataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGenba\GetHikiaiGenbaAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGenba\GetHikiaiGenbaData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGenba\GetHinmeiUriageShiharaiDataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGenba\GetPopupDataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGenba\InsertGenbaTeikiHinmeiData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGenba\InsertGenbaTsukiHinmeiData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGenba\UpdateMitsumoriEntryData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_GetChiikidataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_GetHikiaiGyoushaAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_GetHikiaiGyoushaData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_GetIchiranGenbaDataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_GetPopupdataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_UpdateGyoushaCD.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiGyousha\IM_HIKIAI_GYOUSHADao_UpdateMitsumoriEntryData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiTorihikisaki\IM_HIKIAI_TORIHIKISAKIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiTorihikisaki\IM_HIKIAI_TORIHIKISAKIDao_GetIchiranHikiaiGyoushaDataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiTorihikisaki\IM_HIKIAI_TORIHIKISAKIDao_GetInputCddataHikiaiTorihikisakiSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiTorihikisaki\IM_HIKIAI_TORIHIKISAKIDao_UpdateGenbaCD.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\HikiaiTorihikisaki\IM_HIKIAI_TORIHIKISAKIDao_UpdateGyoushaCD.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiShinseiRoute\IM_DENSHI_SHINSEI_ROUTEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiShinseiNaiyou\IM_DENSHI_SHINSEI_NAIYOUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiShinseiRouteName\IM_DENSHI_SHINSEI_ROUTE_NAMEDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiShinseiJyuyoudo\IM_DENSHI_SHINSEI_JYUYOUDODao_GetAllValidData.sql" />
+    <EmbeddedResource Include="MenuIcon\G12mobile\G12mobile_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G12mobile\G12mobile_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_25_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_25_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_21_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_21_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_23_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_23_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_24_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_24_32.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M10rireki\M10rireki_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M10rireki\M10rireki_01_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\HaikiShurui\IM_HAIKI_SHURUIDao_GetHaikiShuruiDataSql.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Nyuukinsaki\IM_NYUUKINSAKIDao_GetMinBlankNo.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Syukkinsaki\IM_SYUKKINSAKIDao_GetMinBlankNo.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Torihikisaki\IM_TORIHIKISAKIDao_GetMinBlankNo.sql" />
+    <EmbeddedResource Include="FormManager\FormAssembly.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dao\SqlFile\ZaikoHinmei\IM_ZAIKO_HINMEIDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ZaikoHinmei\IM_ZAIKO_HINMEIDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_12_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_12_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_13_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_13_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_14_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_14_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_15_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_15_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_16_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_16_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_17_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_17_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_18_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_18_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_19_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_19_32.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_20_16.png" />
+    <EmbeddedResource Include="MenuIcon\G01nyuryoku\G01nyuryoku_20_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_12_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_12_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_13_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_13_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_14_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_14_32.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_15_16.png" />
+    <EmbeddedResource Include="MenuIcon\G02ikkatsu\G02ikkatsu_nyuryoku_15_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_12_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_12_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_13_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_13_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_14_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_14_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_15_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_15_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_16_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_16_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_17_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_17_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_18_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_18_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_19_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_19_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_20_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_20_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_21_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_21_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_12_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_12_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_13_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_13_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_14_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_14_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_15_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_15_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_16_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_16_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_17_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_17_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_18_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_18_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_19_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_19_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_20_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_20_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_21_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_21_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_22_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_22_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_23_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_23_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_24_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_24_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_25_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_25_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_26_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_26_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_27_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_27_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_28_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_28_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_29_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_29_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_30_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_30_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_31_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_31_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_32_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_32_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_33_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_33_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_34_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_34_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_35_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_35_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_36_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_36_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_37_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_37_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_38_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_38_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_39_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_39_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_40_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_40_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_41_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_41_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_42_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_42_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_43_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_43_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_44_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_44_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_45_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_45_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_46_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_46_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_47_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_47_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_48_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_48_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_49_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_49_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_50_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_50_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_51_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_51_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_52_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_52_32.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\G05rirekikei\G05rirekikei_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G06sonota\G06sonota_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G07wariate\G07wariate_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G07wariate\G07wariate_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G07wariate\G07wariate_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G07wariate\G07wariate_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G07wariate\G07wariate_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G07wariate\G07wariate_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G08container\G08container_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G08container\G08container_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G08container\G08container_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G08container\G08container_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G09simesyori\G09simesyori_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G09simesyori\G09simesyori_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G09simesyori\G09simesyori_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G09simesyori\G09simesyori_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G09simesyori\G09simesyori_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G09simesyori\G09simesyori_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G10keiryo\G10keiryo_syukka_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G10keiryo\G10keiryo_syukka_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G10keiryo\G10keiryo_syukka_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G10keiryo\G10keiryo_syukka_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G10keiryo\G10keiryo_syukka_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G10keiryo\G10keiryo_syukka_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G11kokyaku\G11kokyaku_karte_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G11kokyaku\G11kokyaku_karte_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G12mobile\G12mobile_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G12mobile\G12mobile_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G12mobile\G12mobile_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G12mobile\G12mobile_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G13online\G13online_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G13online\G13online_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G13online\G13online_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G13online\G13online_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G14zaimu\G14zaimu_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G14zaimu\G14zaimu_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\G15manifest\G15manifest_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_12_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_12_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_13_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_13_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_14_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_14_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_15_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_15_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_16_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_16_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_17_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_17_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_18_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_18_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_19_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_19_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_20_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_20_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_21_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_21_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_22_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_22_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_23_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_23_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_24_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_24_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_25_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_25_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_26_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_26_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_27_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_27_32.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_28_16.png" />
+    <EmbeddedResource Include="MenuIcon\M01kubun\M01kubun_28_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\M02hito\M02hito_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_12_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_12_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_13_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_13_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_14_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_14_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_15_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_15_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_16_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_16_32.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_17_16.png" />
+    <EmbeddedResource Include="MenuIcon\M03kaisya\M03kaisya_17_32.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\M04busyo\M04busyo_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_12_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_12_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_13_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_13_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_14_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_14_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_15_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_15_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_16_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_16_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_17_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_17_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_18_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_18_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_19_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_19_32.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_20_16.png" />
+    <EmbeddedResource Include="MenuIcon\M05shinamono\M05shinamono_20_32.png" />
+    <EmbeddedResource Include="MenuIcon\M06okane\M06okane_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M06okane\M06okane_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M06okane\M06okane_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M06okane\M06okane_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\M07kyokakeiyaku\M07kyokakeiyaku_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\M08syaryo\M08syaryo_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_01_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_01_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_02_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_02_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_03_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_03_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_04_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_04_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_05_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_05_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_06_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_06_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_07_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_07_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_08_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_08_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_09_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_09_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_10_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_10_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_11_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_11_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_12_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_12_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_13_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_13_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_14_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_14_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_15_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_15_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_16_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_16_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_17_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_17_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_18_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_18_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_19_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_19_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_20_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_20_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_21_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_21_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_22_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_22_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_99_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_99_32.png" />
+    <Content Include="CustomControl\CustomPopupCalendarImg.png" />
+    <None Include="Properties\AssemblyInfo.Template.txt" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_54_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_54_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_98_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_98_32.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_22_16.png" />
+    <EmbeddedResource Include="MenuIcon\G03ichiran\G03ichiran_22_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_53_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_53_32.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_23_16.png" />
+    <EmbeddedResource Include="MenuIcon\M09sonota\M09sonota_23_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_55_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_55_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_56_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_56_32.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_57_16.png" />
+    <EmbeddedResource Include="MenuIcon\G04chohyo\G04chohyo_57_32.png" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiHaikiName\M_DENSHI_HAIKI_NAME_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiHaikiShuruiSaibunrui\M_DENSHI_HAIKI_SHURUI_SAIBUNRUI_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiJigyousha\IM_DENSHI_JIGYOUSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiHaikiShurui\M_DENSHI_HAIKI_SHURUI_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\BankShiten\IM_BANK_SHITENDao_GetAllValidDataForCodeCheck.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiJigyoujo\IM_DENSHI_JIGYOUJOUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiTantousha\IM_DENSHI_TANTOUSHADao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\DenshiYuugaiBusshitsu\IM_DENSHI_YUUGAI_BUSSHITSUDao_GetAllValidData.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KeiryouChousei\IM_KEIRYOU_CHOUSEIDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\KongouShurui\IM_KONGOU_SHURUIDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\ManifestKansan\IM_MANIFEST_KANSANDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\Sharyou\IM_SHARYOUDao_GetAllValidDataForPopUp.sql" />
+    <EmbeddedResource Include="Dao\SqlFile\UketsukeEntry\IT_UKEIRE_ENTRYDao_DataByStringSql.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

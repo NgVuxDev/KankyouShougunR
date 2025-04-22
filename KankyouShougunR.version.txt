@@ -1,0 +1,23 @@
+﻿[Base Version]
+Product Name = "環境将軍R"
+Product Info = "Ver2.0"
+Vender Name = "株式会社JEMS"
+Vender Info = "お問い合わせ: 0120-857-493"
+Major Version = 2
+Minor Version = 26
+Build Number = 6
+Revision = 215427
+Build Date = 2022/08/17 10:05
+
+[Customize Version]
+Customer Name = "株式会社クリーンサービス"
+Major Version = 2
+Minor Version = 0
+Build Number = 0
+Revision = 0
+Build Date = 2014/01/01 00:00
+
+[Note]
+Build Number、Revision、Build Dateは専用ツールによって自動的に更新されます。
+それ以外は手動で更新すること。
+

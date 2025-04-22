@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<ArrayOfLinkWindowSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LinkWindowSetting>
+    <LinkWindowName>覚書一括入力一覧</LinkWindowName>
+    <AssemblyName>OboeGakiIkktuImputIchiran.dll</AssemblyName>
+    <FormName>OboeGakiIkktuImputIchiran.M421Form</FormName>
+  </LinkWindowSetting>
+  <LinkWindowSetting>
+    <LinkWindowName>覚書一括入力一覧</LinkWindowName>
+    <AssemblyName>OboeGakiIkktuImputIchiran.dll</AssemblyName>
+    <FormName>OboeGakiIkktuImputIchiran.M421HeaderForm</FormName>
+  </LinkWindowSetting>
+</ArrayOfLinkWindowSetting>

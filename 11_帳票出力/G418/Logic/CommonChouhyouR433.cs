@@ -1,0 +1,1715 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using r_framework.Const;
+using r_framework.Utility;
+
+namespace Shougun.Core.Common.MeisaihyoSyukeihyoJokenShiteiPopup
+{
+    #region - Classes -
+
+    #region - CommonChouhyouR433 -
+
+    /// <summary>順位表を表すクラス・コントロール</summary>
+    public class CommonChouhyouR433 : CommonChouhyouBase
+    {
+        #region - Constructors -
+
+        /// <summary>Initializes a new instance of the <see cref="CommonChouhyouR433"/> class.</summary>
+        /// <param name="windowID">画面ＩＤ</param>
+        public CommonChouhyouR433(WINDOW_ID windowID)
+            : base(windowID)
+        {
+            // 帳票出力フルパスフォーム名
+            this.OutputFormFullPathName = CommonChouhyouBase.TemplatePath + "R433-Form.xml";
+
+            // 帳票出力フォームレイアウト名
+            this.OutputFormLayout = "LAYOUT1";
+
+            // 選択可能な集計項目グループ数
+            this.SelectEnableSyuukeiKoumokuGroupCount = 4;
+
+            // 選択可能な集計項目
+            if (windowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU ||
+                windowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU ||
+                windowID == WINDOW_ID.R_URIAGE_SHIHARAI_JYUNNIHYOU)
+            {   // R433(売上順位表・支払順位表・売上/支払順位表)
+
+                this.SelectEnableSyuukeiKoumokuList = new List<int>()
+                {
+                    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, /*11,*/ 12, 13, 14, 15, 16, 17, 19
+                };
+
+                // 対象テーブルリスト
+                this.TaishouTableList = new List<TaishouTable>()
+                {
+                    new TaishouTable("T_UKEIRE_ENTRY", "T_UKEIRE_DETAIL"),      // 受入
+                    new TaishouTable("T_SHUKKA_ENTRY", "T_SHUKKA_DETAIL"),      // 出荷
+                    new TaishouTable("T_UR_SH_ENTRY", "T_UR_SH_DETAIL"),        // 売上／支払
+                };
+            }
+            else if (windowID == WINDOW_ID.R_KEIRYOU_JYUNNIHYOU)
+            {   // R433(計量順位表)
+
+                this.SelectEnableSyuukeiKoumokuList = new List<int>()
+                {
+                    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, /*11,*/ 12, 13, 14, 15, 16, 17, 18, 19
+                };
+
+                // 対象テーブルリスト
+                this.TaishouTableList = new List<TaishouTable>()
+                {
+                    new TaishouTable("T_KEIRYOU_ENTRY", "T_KEIRYOU_DETAIL"),    // 計量
+                };
+            }
+
+            // 出力可能項目（伝票）の有効・無効
+            this.OutEnableKoumokuDenpyou = false;
+
+            // 出力可能項目（明細）の有効・無効
+            this.OutEnableKoumokuMeisai = false;
+
+            // 入力関連テーブル名
+            this.InKanrenTable = new List<string>()
+            {
+                string.Empty,
+            };
+
+            // 入力関連データテーブルから取得したデータテーブルリスト
+            this.InDataTable = new List<DataTable>();
+
+            // 出力関連テーブル名
+            this.OutKanrenTable = new List<string>()
+            {
+                string.Empty,
+            };
+
+            // 出力関連データテーブルから取得したデータテーブルリスト
+            this.OutDataTable = new DataTable();
+        }
+
+        #endregion - Constructors -
+
+        #region - Methods -
+
+        /// <summary>初期化処理理を実行する</summary>
+        public override void Initialize()
+        {
+            try
+            {
+                // 初期化処理理
+                base.Initialize();
+            }
+            catch (Exception e)
+            {
+                LogUtility.Error(e.Message, e);
+            }
+        }
+
+        /// <summary>帳票出力用データーテーブルの取得処理を実行する</summary>
+        public override void GetOutDataTable()
+        {
+            try
+            {
+                // 初期化処理理
+                this.Initialize();
+
+                // 入力関連データテーブルから取得したデータテーブルリスト
+                base.GetOutDataTable();
+
+                // 出力帳票用データーテーブル作成処理
+                this.MakeOutDataTable();
+            }
+            catch (Exception e)
+            {
+                LogUtility.Error(e.Message, e);
+            }
+        }
+
+        /// <summary>出力帳票用データーテーブル作成処理を実行する</summary>
+        private void MakeOutDataTable()
+        {
+            try
+            {
+                if (this.InputDataTable == null || this.InputDataTable.Length == 0)
+                {
+                    return;
+                }
+
+                // 受け渡し用データーテーブル（明細）フィールド名の設定処理
+                this.SetDetailFieldNameForUkewatashi();
+
+                string tmp;
+                DataRow dataRow;
+                DataRow dataRowSort;
+
+                // 複数テーブルの並べ替え処理(テーブルインデックス・伝票区分ソート)
+                this.MultiSortTableDenpyouKubun();
+
+                this.ChouhyouDataTable = new DataTable();
+
+                SyuukeiKoumoku syuukeiKoumoku;
+
+                #region - テーブルカラム作成 -
+
+                // No.
+                this.ChouhyouDataTable.Columns.Add("PHY_ROW_NO_LABEL_FLB");
+
+                // 集計項目領域
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_1_VLB");
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_2_VLB");
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_3_VLB");
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_4_VLB");
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_5_VLB");
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_6_VLB");
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_7_VLB");
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_8_VLB");
+
+                // 換算数量
+                this.ChouhyouDataTable.Columns.Add("PHY_KAHEN1_9_VLB");
+
+                // 売上-受入等々
+                this.ChouhyouDataTable.Columns.Add("G2H_KAHEN1_1_VLB");
+                this.ChouhyouDataTable.Columns.Add("GROUP2_CHANGE");
+
+                // 総合計
+                this.ChouhyouDataTable.Columns.Add("G1F_KINGAKU_TOTAL_VLB");
+
+                #endregion - テーブルカラム作成 -
+
+                string sql = string.Empty;
+                int itemColumnIndex = 0;
+
+                string tableName = string.Empty;
+                string fieldName = string.Empty;
+
+                int index = 0;
+                int indexTmp = 0;
+                object code = null;
+                object codeData = null;
+
+                // 有効な集計項目グループ数
+                int syuukeiKoumokuEnableGroupCount = this.SelectEnableSyuukeiKoumokuGroupCount;
+
+                // 金額
+                decimal goukeiM = 0;
+                decimal goukeiTotalM = 0;
+                decimal goukeiAllTotalM = 0;
+                decimal goukeiTmpM = 0;
+                decimal hinmeiGoukeiTmpM = 0;
+
+                // 重量
+                decimal goukeiT = 0;
+                decimal goukeiTotalT = 0;
+                decimal goukeiAllTotalT = 0;
+                decimal goukeiTmpT = 0;
+                decimal hinmeiGoukeiTmpT = 0;
+
+                int indexTable;
+                int indexTableRow;
+                int denpyouKubunCode;
+
+                DateTime denpyouDate;
+                int denpyouKubunCD;
+                string hinmeiCD;
+                int unitCD;
+                bool isTon = false;
+                bool isKansanShikiUse = false;
+                int kansanShiki = 0;
+                decimal kansanValue = 0;
+
+                DataRow dataRowNew;
+
+                // 受渡用DataRow作成
+                DataRow dataRowUkewatashi;
+
+                string[] syuukeiKoumokuPrevN = new string[syuukeiKoumokuEnableGroupCount];
+                string[] syuukeiKoumokuNextN = new string[syuukeiKoumokuEnableGroupCount];
+
+                int indexTablePrev = -1;
+                int denpyouKubunPrev = -1;
+                int rowNo = 1;
+
+                for (int rowCount = 0; rowCount < this.DataTableMultiSort.DefaultView.Count; rowCount++, rowNo++)
+                {
+                    dataRowSort = this.DataTableMultiSort.DefaultView[rowCount].Row;
+                    dataRow = this.DataTableMultiSort.DefaultView[rowCount].Row;
+
+                    dataRowNew = this.ChouhyouDataTable.NewRow();
+
+                    // 受渡用DataRow作成
+                    dataRowUkewatashi = this.DataTableUkewatashi.NewRow();
+
+                    indexTable = int.Parse((string)dataRowSort.ItemArray[this.SelectSyuukeiKoumokuList.Count]);
+                    indexTableRow = int.Parse((string)dataRowSort.ItemArray[this.SelectSyuukeiKoumokuList.Count + 1]);
+
+                    if (dataRowSort.ItemArray[this.SelectSyuukeiKoumokuList.Count + 2].ToString().Equals(string.Empty))
+                    {
+                        denpyouKubunCode = -1;
+                    }
+                    else
+                    {
+                        denpyouKubunCode = int.Parse((string)dataRowSort.ItemArray[this.SelectSyuukeiKoumokuList.Count + 2]);
+                    }
+
+                    if (denpyouKubunPrev != denpyouKubunCode || indexTablePrev != indexTable)
+                    {   // グループ名表示
+
+                        denpyouKubunPrev = denpyouKubunCode;
+                        indexTablePrev = indexTable;
+
+                        if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                        {   // 売上順位表・支払順位表
+
+                            #region - 売上順位表・支払順位表 -
+
+                            if (this.DenpyouSyurui == DENPYOU_SYURUI.Subete)
+                            {   // 全て
+
+                                if (this.IsDenpyouSyuruiGroupKubun)
+                                {   // グループ区分有
+                                    rowNo = 1;
+
+                                    indexTmp = this.DataTableUkewatashi.Columns.IndexOf("GROUP_LABEL");
+
+                                    if (indexTable == 0)
+                                    {   // 受入
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "受入";
+                                        dataRowUkewatashi[indexTmp] = "受入";
+                                    }
+                                    else if (indexTable == 1)
+                                    {   // 出荷
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "出荷";
+                                        dataRowUkewatashi[indexTmp] = "出荷";
+                                    }
+                                    else if (indexTable == 2)
+                                    {   // 売上／支払
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "売上／支払";
+                                        dataRowUkewatashi[indexTmp] = "売上／支払";
+                                    }
+                                }
+                            }
+
+                            #endregion - 売上順位表・支払順位表 -
+                        }
+                        else if (this.WindowID == WINDOW_ID.R_URIAGE_SHIHARAI_JYUNNIHYOU)
+                        {   // 売上／支払順位表
+
+                            #region - 売上／支払順位表 -
+
+                            if (this.IsDenpyouSyuruiGroupKubun)
+                            {   // グループ区分有
+                                rowNo = 1;
+
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("GROUP_LABEL");
+
+                                if (indexTable == 0)
+                                {   // 受入
+                                    if (denpyouKubunCode == (int)DENPYOU_KUBUN.Uriage)
+                                    {   // 売上
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "受入・売上";
+                                        dataRowUkewatashi[indexTmp] = "受入・売上";
+                                    }
+                                    else if (denpyouKubunCode == (int)DENPYOU_KUBUN.Shiharai)
+                                    {   // 支払
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "受入・支払";
+                                        dataRowUkewatashi[indexTmp] = "受入・支払";
+                                    }
+                                }
+                                else if (indexTable == 1)
+                                {   // 出荷
+                                    if (denpyouKubunCode == (int)DENPYOU_KUBUN.Uriage)
+                                    {   // 売上
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "出荷・売上";
+                                        dataRowUkewatashi[indexTmp] = "出荷・売上";
+                                    }
+                                    else if (denpyouKubunCode == (int)DENPYOU_KUBUN.Shiharai)
+                                    {   // 支払
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "出荷・支払";
+                                        dataRowUkewatashi[indexTmp] = "出荷・支払";
+                                    }
+                                }
+                                else if (indexTable == 2)
+                                {   // 売上／支払
+                                    if (denpyouKubunCode == (int)DENPYOU_KUBUN.Uriage)
+                                    {   // 売上
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "売上／支払・売上";
+                                        dataRowUkewatashi[indexTmp] = "売上／支払・売上";
+                                    }
+                                    else if (denpyouKubunCode == (int)DENPYOU_KUBUN.Shiharai)
+                                    {   // 支払
+                                        dataRowNew["G2H_KAHEN1_1_VLB"] = "売上／支払・支払";
+                                        dataRowUkewatashi[indexTmp] = "売上／支払・支払";
+                                    }
+                                }
+                            }
+
+                            #endregion - 売上／支払順位表 -
+                        }
+                        else if (this.WindowID == WINDOW_ID.R_KEIRYOU_JYUNNIHYOU)
+                        {   // 計量順位表
+
+                            #region - 計量順位表 -
+
+                            if (this.DenpyouSyurui == DENPYOU_SYURUI.Subete && this.IsDenpyouSyuruiGroupKubun)
+                            {   // 伝票種類が全てかつグループ区分有
+
+                                rowNo = 1;
+
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("GROUP_LABEL");
+
+                                if (denpyouKubunCode == (int)DENPYOU_KUBUN.Uriage)
+                                {   // 売上
+                                    dataRowNew["G2H_KAHEN1_1_VLB"] = "売上";
+                                    dataRowUkewatashi[indexTmp] = "売上";
+                                }
+                                else if (denpyouKubunCode == (int)DENPYOU_KUBUN.Shiharai)
+                                {   // 支払
+                                    dataRowNew["G2H_KAHEN1_1_VLB"] = "支払";
+                                    dataRowUkewatashi[indexTmp] = "支払";
+                                }
+                            }
+
+                            #endregion - 計量順位表 -
+                        }
+                    }
+
+                    // 行番号
+                    dataRowNew["PHY_ROW_NO_LABEL_FLB"] = rowNo.ToString();
+                    indexTmp = this.DataTableUkewatashi.Columns.IndexOf("ROW_NO");
+                    dataRowUkewatashi[indexTmp] = rowNo.ToString();
+
+                    if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                    {   // 売上順位表・支払順位表
+                        dataRowNew["GROUP2_CHANGE"] = indexTable;
+                    }
+                    else
+                    {   // 売上／支払順位表・計量順位表
+                        dataRowNew["GROUP2_CHANGE"] = denpyouKubunCode;
+                    }
+
+                    string[] targetFieldData = new string[4];
+
+                    #region - 集計項目用タイトルカラム -
+
+                    for (itemColumnIndex = 0; itemColumnIndex < syuukeiKoumokuEnableGroupCount; itemColumnIndex++)
+                    {
+                        int itemIndex = this.SelectSyuukeiKoumokuList[itemColumnIndex];
+                        syuukeiKoumoku = this.SyuukeiKomokuList[itemIndex];
+
+                        if (syuukeiKoumoku.MasterTableID == WINDOW_ID.NONE)
+                        {
+                            continue;
+                        }
+
+                        // マスターテーブル名取得
+                        tableName = Enum.GetName(typeof(WINDOW_ID), syuukeiKoumoku.MasterTableID);
+
+                        // マスターテーブルの該当フィールド名取得
+                        fieldName = syuukeiKoumoku.FieldCDName;
+
+                        // コード
+                        if (syuukeiKoumoku.FieldCD == "SHAIN_CD")
+                        {   // 営業担当者別
+                            // FieldCDが社員CDの場合は営業担当者CDを抽出対象とする
+                            // TODO:そもそもSyuukeiKomokuListの営業担当者CD項目のFieldCDが社員CDになってしまっているため
+                            // 根本対応はSyuukeiKomokuListを直すべき。だが、対症療法的な修正をしている箇所が複数あるため
+                            // 根本対応を行う場合は全て対応する必要あり
+                            index = this.InputDataTable[indexTable].Columns.IndexOf("EIGYOU_TANTOUSHA_CD");
+
+                            if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow]))
+                            {
+                                code = this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                            }
+                            else
+                            {
+                                code = string.Empty;
+                            }
+                        }
+                        else
+                        {   // その他
+                            switch (syuukeiKoumoku.Type)
+                            {
+                                case SYUKEUKOMOKU_TYPE.DensyuKubunBetsu:    // 伝種区分別
+                                    code = (indexTable + 1).ToString();
+
+                                    break;
+                                case SYUKEUKOMOKU_TYPE.NioroshiGyoshaBetsu: // 荷卸業者別
+
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("NIOROSHI_GYOUSHA_CD");
+                                    if (index == -1)
+                                    {
+                                        code = string.Empty;
+                                    }
+                                    else
+                                    {
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            code = this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            code = string.Empty;
+                                        }
+                                    }
+
+                                    break;
+                                case SYUKEUKOMOKU_TYPE.NioroshiGenbaBetsu:  // 荷卸現場別
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("NIOROSHI_GENBA_CD");
+                                    if (index == -1)
+                                    {
+                                        code = string.Empty;
+                                    }
+                                    else
+                                    {
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            code = this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            code = string.Empty;
+                                        }
+                                    }
+
+                                    break;
+                                case SYUKEUKOMOKU_TYPE.NizumiGyoshaBetsu:   // 荷積業者別
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("NIZUMI_GYOUSHA_CD");
+                                    if (index == -1)
+                                    {
+                                        code = string.Empty;
+                                    }
+                                    else
+                                    {
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            code = this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            code = string.Empty;
+                                        }
+                                    }
+
+                                    break;
+                                case SYUKEUKOMOKU_TYPE.NizumiGenbaBetsu:    // 荷積現場別
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("NIZUMI_GENBA_CD");
+                                    if (index == -1)
+                                    {
+                                        code = string.Empty;
+                                    }
+                                    else
+                                    {
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            code = this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            code = string.Empty;
+                                        }
+                                    }
+
+                                    break;
+                                default:
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf(syuukeiKoumoku.FieldCD);
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        code = this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        code = string.Empty;
+                                    }
+
+                                    break;
+                            }
+                        }
+
+                        if (code.GetType() == typeof(string))
+                        {
+                            code = ((string)code).Replace(" ", string.Empty);
+
+                            if (syuukeiKoumoku.Type == SYUKEUKOMOKU_TYPE.DensyuKubunBetsu)
+                            {   // 伝種区分別
+                                switch (indexTable)
+                                {
+                                    case 0: // 収集
+                                        codeData = "収集";
+
+                                        break;
+                                    case 1: // 出荷
+                                        codeData = "出荷";
+
+                                        break;
+                                    case 2: // 持込
+                                        codeData = "持込";
+
+                                        break;
+                                }
+                            }
+                            else
+                            {
+                                // コード名称
+                                if ((string)code != string.Empty)
+                                {
+                                    DataTable dataTableTmp;
+
+                                    if (syuukeiKoumoku.FieldCD.Equals("UNTENSHA_CD"))
+                                    {
+                                        sql = string.Format("SELECT {0}.{1} FROM {2} WHERE {3}.{4} = '{5}'", tableName, fieldName, tableName, "M_SHAIN", "SHAIN_CD", code);
+                                        dataTableTmp = this.MasterTorihikisakiDao.GetDateForStringSql(sql);
+                                        index = dataTableTmp.Columns.IndexOf(fieldName);
+                                        if (dataTableTmp.Rows.Count != 0)
+                                        {
+                                            codeData = dataTableTmp.Rows[0].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            codeData = string.Empty;
+                                        }
+                                    }
+                                    else if (syuukeiKoumoku.FieldCD.Equals("GENBA_CD") || syuukeiKoumoku.FieldCD.Equals("NIOROSHI_GENBA_CD") || syuukeiKoumoku.FieldCD.Equals("NIZUMI_GENBA_CD"))
+                                    {
+                                        var gyoushaCd = String.Empty;
+
+                                        var columnName = String.Empty;
+                                        if (syuukeiKoumoku.FieldCD.Equals("GENBA_CD"))
+                                        {
+                                            columnName = "GYOUSHA_CD";
+                                        }
+                                        else if (syuukeiKoumoku.FieldCD.Equals("NIOROSHI_GENBA_CD"))
+                                        {
+                                            columnName = "NIOROSHI_GYOUSHA_CD";
+                                        }
+                                        else if (syuukeiKoumoku.FieldCD.Equals("NIZUMI_GENBA_CD"))
+                                        {
+                                            columnName = "NIZUMI_GYOUSHA_CD";
+                                        }
+                                        var value = this.InputDataTable[indexTable].Rows[indexTableRow][columnName];
+                                        if (null != value)
+                                        {
+                                            gyoushaCd = value.ToString();
+                                        }
+
+                                        sql = string.Format("SELECT M_GENBA.GENBA_NAME_RYAKU FROM M_GENBA WHERE M_GENBA.GYOUSHA_CD = '{0}' AND M_GENBA.GENBA_CD = '{1}'", gyoushaCd, code);
+                                        dataTableTmp = this.MasterTorihikisakiDao.GetDateForStringSql(sql);
+                                        index = dataTableTmp.Columns.IndexOf(fieldName);
+                                        if (dataTableTmp.Rows.Count != 0)
+                                        {
+                                            codeData = dataTableTmp.Rows[0].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            codeData = string.Empty;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        sql = string.Format("SELECT {0}.{1} FROM {2} WHERE {3}.{4} = '{5}'", tableName, fieldName, tableName, tableName, syuukeiKoumoku.FieldCD, code);
+                                        dataTableTmp = this.MasterTorihikisakiDao.GetDateForStringSql(sql);
+                                        index = dataTableTmp.Columns.IndexOf(fieldName);
+                                        if (dataTableTmp.Rows.Count != 0)
+                                        {
+                                            codeData = dataTableTmp.Rows[0].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            codeData = string.Empty;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    codeData = string.Empty;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (!this.IsDBNull(code) && !code.Equals(string.Empty))
+                            {
+                                // コード名称
+                                sql = string.Format("SELECT {0}.{1} FROM {2} WHERE {3}.{4} = {5}", tableName, fieldName, tableName, tableName, syuukeiKoumoku.FieldCD, code);
+                                DataTable dataTableTmp = this.MasterTorihikisakiDao.GetDateForStringSql(sql);
+                                index = dataTableTmp.Columns.IndexOf(fieldName);
+                                if (dataTableTmp.Rows.Count != 0)
+                                {
+                                    codeData = dataTableTmp.Rows[0].ItemArray[index];
+                                }
+                                else
+                                {
+                                    codeData = string.Empty;
+                                }
+                            }
+                            else
+                            {
+                                codeData = string.Empty;
+                            }
+                        }
+
+                        if (syuukeiKoumoku.FieldCD == "SHAIN_CD")
+                        {
+                            // FieldCDが社員CDの場合は営業担当者CDを抽出対象とする
+                            // TODO:そもそもSyuukeiKomokuListの営業担当者CD項目のFieldCDが社員CDになってしまっているため
+                            // 根本対応はSyuukeiKomokuListを直すべき。だが、対症療法的な修正をしている箇所が複数あるため
+                            // 根本対応を行う場合は全て対応する必要あり
+                            targetFieldData[itemColumnIndex] = "EIGYOU_TANTOUSHA_CD";
+                        }
+                        else
+                        {
+                            targetFieldData[itemColumnIndex] = syuukeiKoumoku.FieldCD;
+                        }
+
+                        switch (itemColumnIndex + 1)
+                        {
+                            case 1: // 集計項目１
+                                dataRowNew["PHY_KAHEN1_1_VLB"] = code.ToString();
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("FILL_COND_1_CD");
+                                dataRowUkewatashi[indexTmp] = code.ToString();
+
+                                dataRowNew["PHY_KAHEN1_2_VLB"] = codeData.ToString();
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("FILL_COND_1_NAME");
+                                dataRowUkewatashi[indexTmp] = codeData.ToString();
+
+                                break;
+                            case 2: // 集計項目２
+                                dataRowNew["PHY_KAHEN1_3_VLB"] = code.ToString();
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("FILL_COND_2_CD");
+                                dataRowUkewatashi[indexTmp] = code.ToString();
+
+                                dataRowNew["PHY_KAHEN1_4_VLB"] = codeData.ToString();
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("FILL_COND_2_NAME");
+                                dataRowUkewatashi[indexTmp] = codeData.ToString();
+
+                                break;
+                            case 3: // 集計項目３
+                                dataRowNew["PHY_KAHEN1_5_VLB"] = code.ToString();
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("FILL_COND_3_CD");
+                                dataRowUkewatashi[indexTmp] = code.ToString();
+
+                                dataRowNew["PHY_KAHEN1_6_VLB"] = codeData.ToString();
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("FILL_COND_3_NAME");
+                                dataRowUkewatashi[indexTmp] = codeData.ToString();
+
+                                break;
+                            case 4: // 集計項目４
+                                dataRowNew["PHY_KAHEN1_7_VLB"] = code.ToString();
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("FILL_COND_4_CD");
+                                dataRowUkewatashi[indexTmp] = code.ToString();
+
+                                dataRowNew["PHY_KAHEN1_8_VLB"] = codeData.ToString();
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("FILL_COND_4_NAME");
+                                dataRowUkewatashi[indexTmp] = codeData.ToString();
+
+                                break;
+                        }
+                    }
+
+                    #endregion - 集計項目用タイトルカラムテキスト -
+
+                    for (; rowCount < this.DataTableMultiSort.DefaultView.Count; rowCount++)
+                    {
+                        dataRowSort = this.DataTableMultiSort.DefaultView[rowCount].Row;
+                        dataRow = this.DataTableMultiSort.DefaultView[rowCount].Row;
+
+                        indexTable = int.Parse((string)dataRowSort.ItemArray[this.SelectSyuukeiKoumokuList.Count]);
+                        indexTableRow = int.Parse((string)dataRowSort.ItemArray[this.SelectSyuukeiKoumokuList.Count + 1]);
+
+                        for (itemColumnIndex = 0; itemColumnIndex < syuukeiKoumokuEnableGroupCount; itemColumnIndex++)
+                        {
+                            int itemIndex = this.SelectSyuukeiKoumokuList[itemColumnIndex];
+                            syuukeiKoumoku = this.SyuukeiKomokuList[itemIndex];
+
+                            if (syuukeiKoumoku.MasterTableID == WINDOW_ID.NONE)
+                            {
+                                continue;
+                            }
+
+                            index = this.InputDataTable[indexTable].Columns.IndexOf(targetFieldData[itemColumnIndex]);
+                            if (targetFieldData[itemColumnIndex].Equals("KYOTEN_CD"))
+                            {
+                                if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index].ToString()))
+                                {
+                                    syuukeiKoumokuNextN[itemColumnIndex] = ((short)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]).ToString();
+                                }
+                                else
+                                {
+                                    syuukeiKoumokuNextN[itemColumnIndex] = string.Empty;
+                                }
+                            }
+                            else
+                            {
+                                if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                {
+                                    syuukeiKoumokuNextN[itemColumnIndex] = (string)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                }
+                                else
+                                {
+                                    syuukeiKoumokuNextN[itemColumnIndex] = string.Empty;
+                                }
+                            }
+                        }
+
+                        bool isChange = false;
+                        for (itemColumnIndex = 0; itemColumnIndex < syuukeiKoumokuEnableGroupCount; itemColumnIndex++)
+                        {
+                            int itemIndex = this.SelectSyuukeiKoumokuList[itemColumnIndex];
+                            syuukeiKoumoku = this.SyuukeiKomokuList[itemIndex];
+
+                            if (syuukeiKoumoku.MasterTableID == WINDOW_ID.NONE)
+                            {
+                                continue;
+                            }
+
+                            if (syuukeiKoumokuNextN[itemColumnIndex] != syuukeiKoumokuPrevN[itemColumnIndex])
+                            {
+                                syuukeiKoumokuPrevN[itemColumnIndex] = syuukeiKoumokuNextN[itemColumnIndex];
+                                isChange = true;
+                            }
+                        }
+
+                        if (isChange && rowCount != 0)
+                        {   // 変化あり
+
+                            if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                            {   // 売上順位表・支払順位表
+
+                                #region - 売上順位表・支払順位表 -
+
+                                dataRowNew["PHY_KAHEN1_9_VLB"] = goukeiM.ToString("#,0");
+
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("OUTPUT_ITEM_1");
+                                dataRowUkewatashi[indexTmp] = goukeiM.ToString("#,0");
+
+                                goukeiM = 0;
+
+                                #endregion - 売上順位表・支払順位表 -
+                            }
+                            else
+                            {   // 売上／支払順位表・計量順位表
+
+                                #region - 売上／支払順位表・計量順位表 -
+
+                                dataRowNew["PHY_KAHEN1_9_VLB"] = goukeiT.ToString("#,0");
+
+                                indexTmp = this.DataTableUkewatashi.Columns.IndexOf("OUTPUT_ITEM_1");
+                                dataRowUkewatashi[indexTmp] = goukeiT.ToString("#,0");
+
+                                goukeiT = 0;
+
+                                #endregion - 売上／支払順位表・計量順位表 -
+                            }
+
+                            rowCount--;
+
+                            break;
+                        }
+
+                        isChange = false;
+
+                        switch (this.DenpyouSyurui)
+                        {
+                            case DENPYOU_SYURUI.Ukeire:         // 受入
+
+                                #region - 受入 -
+
+                                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上順位表・支払順位表
+
+                                    #region - 売上順位表・支払順位表 -
+
+                                    // 金額
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("KINGAKU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        goukeiTmpM = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        goukeiTmpM = 0;
+                                    }
+
+                                    // 品名別金額
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("HINMEI_KINGAKU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        hinmeiGoukeiTmpM = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        hinmeiGoukeiTmpM = 0;
+                                    }
+
+                                    #endregion - 売上順位表・支払順位表 -
+                                }
+                                else if (this.WindowID == WINDOW_ID.R_URIAGE_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上／支払順位表
+
+                                    #region - 売上／支払順位表 -
+
+                                    // 正味重量
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("NET_JYUURYOU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        //goukeiTmpT = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        goukeiTmpT = 0;
+                                    }
+                                    else
+                                    {
+                                        goukeiTmpT = 0;
+                                    }
+
+                                    // 品名別金額
+                                    hinmeiGoukeiTmpT = 0;
+
+                                    #endregion - 売上／支払順位表 -
+                                }
+                                else
+                                {   // 計量順位表
+                                }
+
+                                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上順位表・支払順位表
+
+                                    goukeiTmpM = goukeiTmpM + hinmeiGoukeiTmpM;
+                                    goukeiM += goukeiTmpM;
+                                    goukeiTotalM += goukeiTmpM;
+
+                                    goukeiAllTotalM += goukeiTmpM;
+                                }
+                                else
+                                {   // 売上／支払順位表・計量順位表
+                                    goukeiTmpT = goukeiTmpT + hinmeiGoukeiTmpT;
+                                    goukeiT += goukeiTmpT;
+                                    goukeiTotalT += goukeiTmpT;
+
+                                    goukeiAllTotalT += goukeiTmpT;
+                                }
+
+                                #endregion - 受入 -
+
+                                break;
+                            case DENPYOU_SYURUI.Syutsuka:       // 出荷
+
+                                #region - 出荷 -
+
+                                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上順位表・支払順位表
+
+                                    #region - 売上順位表・支払順位表 -
+
+                                    // 金額
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("KINGAKU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        goukeiTmpM = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        goukeiTmpM = 0;
+                                    }
+
+                                    // 品名別金額
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("HINMEI_KINGAKU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        hinmeiGoukeiTmpM = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        hinmeiGoukeiTmpM = 0;
+                                    }
+
+                                    #endregion - 売上順位表・支払順位表 -
+                                }
+                                else if (this.WindowID == WINDOW_ID.R_URIAGE_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上／支払順位表
+
+                                    #region - 売上／支払順位表 -
+
+                                    // 正味重量
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("NET_JYUURYOU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                       // goukeiTmpT = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        goukeiTmpT = 0;
+                                    }
+                                    else
+                                    {
+                                        goukeiTmpT = 0;
+                                    }
+
+                                    // 品名別金額
+                                    hinmeiGoukeiTmpT = 0;
+
+                                    #endregion - 売上／支払順位表 -
+                                }
+                                else if (this.WindowID == WINDOW_ID.R_KEIRYOU_JYUNNIHYOU)
+                                {   // 計量順位表
+                                }
+
+                                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上順位表・支払順位表
+                                    goukeiTmpM = goukeiTmpM + hinmeiGoukeiTmpM;
+                                    goukeiM += goukeiTmpM;
+                                    goukeiTotalM += goukeiTmpM;
+
+                                    goukeiAllTotalM += goukeiTmpM;
+                                }
+                                else
+                                {   // 売上／支払順位表・計量順位表
+                                    goukeiTmpT = goukeiTmpT + hinmeiGoukeiTmpT;
+                                    goukeiT += goukeiTmpT;
+                                    goukeiTotalT += goukeiTmpT;
+
+                                    goukeiAllTotalT += goukeiTmpT;
+                                }
+
+                                #endregion - 出荷 -
+
+                                break;
+                            case DENPYOU_SYURUI.UriageShiharai: // 売上／支払
+
+                                #region - 売上／支払 -
+
+                                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上順位表・支払順位表
+
+                                    #region - 売上順位表・支払順位表 -
+
+                                    // 金額
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("KINGAKU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        goukeiTmpM = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        goukeiTmpM = 0;
+                                    }
+
+                                    // 品名別金額
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("HINMEI_KINGAKU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        hinmeiGoukeiTmpM = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        hinmeiGoukeiTmpM = 0;
+                                    }
+
+                                    #endregion - 売上順位表・支払順位表 -
+                                }
+                                else if (this.WindowID == WINDOW_ID.R_URIAGE_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上／支払順位表
+
+                                    #region - 売上／支払順位表 -
+
+                                    // 正味重量
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("SUURYOU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        goukeiTmpT = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        goukeiTmpT = 0;
+                                    }
+
+                                    // 伝票日付
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("DENPYOU_DATE");
+                                    denpyouDate = (DateTime)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+
+                                    // 伝票区分コード
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("DENPYOU_KBN_CD");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        denpyouKubunCD = (short)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {   // 集計対象外
+                                        continue;
+                                    }
+
+                                    // 品名コード
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("HINMEI_CD");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        hinmeiCD = (string)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {   // 集計対象外
+                                        continue;
+                                    }
+
+                                    // 単位コード
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("UNIT_CD");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        unitCD = (short)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {   // 集計対象外
+                                        continue;
+                                    }
+
+                                    // 対象データーか否か
+                                    if (!this.IsTaishou(denpyouDate, denpyouKubunCD, hinmeiCD, unitCD, ref isTon, ref isKansanShikiUse, ref kansanShiki, ref kansanValue))
+                                    {   // 集計対象外
+                                        continue;
+                                    }
+
+                                    if (isTon)
+                                    {   // t
+                                        if (isKansanShikiUse)
+                                        {   // 換算式を使用する
+                                            if (kansanShiki == 0)
+                                            {   // 乗算
+                                                goukeiTmpT *= kansanValue;
+                                            }
+                                            else
+                                            {   // 除算
+                                                goukeiTmpT /= kansanValue;
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {   // kg
+                                        if (isKansanShikiUse)
+                                        {   // 換算式を使用する
+                                            if (kansanShiki == 0)
+                                            {   // 乗算
+                                                goukeiTmpT *= kansanValue;
+                                            }
+                                            else
+                                            {   // 除算
+                                                goukeiTmpT /= kansanValue;
+                                            }
+                                        }
+                                    }
+
+                                    // 品名別金額
+                                    hinmeiGoukeiTmpT = 0;
+
+                                    #endregion - 売上／支払順位表 -
+                                }
+                                else if (this.WindowID == WINDOW_ID.R_KEIRYOU_JYUNNIHYOU)
+                                {   // 計量順位表
+                                }
+
+                                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上順位表・支払順位表
+                                    goukeiTmpM = goukeiTmpM + hinmeiGoukeiTmpM;
+                                    goukeiM += goukeiTmpM;
+                                    goukeiTotalM += goukeiTmpM;
+
+                                    goukeiAllTotalM += goukeiTmpM;
+                                }
+                                else
+                                {   // 売上／支払順位表・計量順位表
+                                    goukeiTmpT = (goukeiTmpT + hinmeiGoukeiTmpT) * 0.001m;
+                                    goukeiT += goukeiTmpT;
+                                    goukeiTotalT += goukeiTmpT;
+
+                                    goukeiAllTotalT += goukeiTmpT;
+                                }
+
+                                #endregion - 売上／支払 -
+
+                                break;
+                            case DENPYOU_SYURUI.Subete:         // 全て
+
+                                #region - 全て -
+
+                                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上順位表・支払順位表
+
+                                    #region - 売上順位表・支払順位表 -
+
+                                    // 金額
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("KINGAKU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        goukeiTmpM = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        goukeiTmpM = 0;
+                                    }
+
+                                    // 品名別金額
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("HINMEI_KINGAKU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        hinmeiGoukeiTmpM = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        hinmeiGoukeiTmpM = 0;
+                                    }
+
+                                    #endregion - 売上順位表・支払順位表 -
+                                }
+                                else if (this.WindowID == WINDOW_ID.R_URIAGE_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上／支払順位表
+
+                                    #region - 売上／支払順位表 -
+
+                                    if (indexTable == 0 || indexTable == 1)
+                                    {   // 受入・出荷
+
+                                        #region - 受入・出荷 -
+
+                                        // 正味重量
+                                        index = this.InputDataTable[indexTable].Columns.IndexOf("NET_JYUURYOU");
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            goukeiTmpT = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            goukeiTmpT = 0;
+                                        }
+
+                                        // 品名別金額
+                                        hinmeiGoukeiTmpT = 0;
+
+                                        #endregion - 受入・出荷 -
+                                    }
+                                    else
+                                    {   // 売上／支払
+
+                                        #region - 売上／支払 -
+
+                                        // 正味重量
+                                        index = this.InputDataTable[indexTable].Columns.IndexOf("SUURYOU");
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            goukeiTmpT = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {
+                                            goukeiTmpT = 0;
+                                        }
+
+                                        // 伝票日付
+                                        index = this.InputDataTable[indexTable].Columns.IndexOf("DENPYOU_DATE");
+                                        denpyouDate = (DateTime)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+
+                                        // 伝票区分コード
+                                        index = this.InputDataTable[indexTable].Columns.IndexOf("DENPYOU_KBN_CD");
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            denpyouKubunCD = (short)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {   // 集計対象外
+                                            continue;
+                                        }
+
+                                        // 品名コード
+                                        index = this.InputDataTable[indexTable].Columns.IndexOf("HINMEI_CD");
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            hinmeiCD = (string)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {   // 集計対象外
+                                            continue;
+                                        }
+
+                                        // 単位コード
+                                        index = this.InputDataTable[indexTable].Columns.IndexOf("UNIT_CD");
+                                        if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                        {
+                                            unitCD = (short)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                        }
+                                        else
+                                        {   // 集計対象外
+                                            continue;
+                                        }
+
+                                        // 対象データーか否か
+                                        if (!this.IsTaishou(denpyouDate, denpyouKubunCD, hinmeiCD, unitCD, ref isTon, ref isKansanShikiUse, ref kansanShiki, ref kansanValue))
+                                        {   // 集計対象外
+                                            continue;
+                                        }
+
+                                        if (isTon)
+                                        {   // t
+                                            if (isKansanShikiUse)
+                                            {   // 換算式を使用する
+                                                if (kansanShiki == 0)
+                                                {   // 乗算
+                                                    goukeiTmpT *= kansanValue;
+                                                }
+                                                else
+                                                {   // 除算
+                                                    goukeiTmpT /= kansanValue;
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {   // kg
+                                            if (isKansanShikiUse)
+                                            {   // 換算式を使用する
+                                                if (kansanShiki == 0)
+                                                {   // 乗算
+                                                    goukeiTmpT *= kansanValue;
+                                                }
+                                                else
+                                                {   // 除算
+                                                    goukeiTmpT /= kansanValue;
+                                                }
+                                            }
+                                        }
+
+                                        // 品名別金額
+                                        hinmeiGoukeiTmpT = 0;
+
+                                        #endregion - 売上／支払 -
+                                    }
+
+                                    #endregion - 売上／支払順位表 -
+                                }
+                                else
+                                {   // 計量順位表
+
+                                    #region - 計量順位表 -
+
+                                    // 正味重量
+                                    index = this.InputDataTable[indexTable].Columns.IndexOf("NET_JYUURYOU");
+                                    if (!this.IsDBNull(this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index]))
+                                    {
+                                        goukeiTmpT = (decimal)this.InputDataTable[indexTable].Rows[indexTableRow].ItemArray[index];
+                                    }
+                                    else
+                                    {
+                                        goukeiTmpT = 0;
+                                    }
+
+                                    // 品名別金額
+                                    hinmeiGoukeiTmpT = 0;
+
+                                    #endregion - 計量順位表 -
+                                }
+
+                                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                                {   // 売上順位表・支払順位表
+                                    goukeiTmpM = goukeiTmpM + hinmeiGoukeiTmpM;
+                                    goukeiM += goukeiTmpM;
+                                    goukeiTotalM += goukeiTmpM;
+
+                                    goukeiAllTotalM += goukeiTmpM;
+                                }
+                                else
+                                {   // 売上／支払順位表・計量順位表
+                                    goukeiTmpT = (goukeiTmpT + hinmeiGoukeiTmpT) * 0.001m;
+                                    goukeiT += goukeiTmpT;
+                                    goukeiTotalT += goukeiTmpT;
+
+                                    goukeiAllTotalT += goukeiTmpT;
+                                }
+
+                                #endregion - 全て -
+
+                                break;
+                        }
+                    }
+
+                    if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                    {   // 売上順位表・支払順位表
+
+                        #region - 売上順位表・支払順位表 -
+
+                        if (rowCount == this.DataTableMultiSort.DefaultView.Count)
+                        {
+                            dataRowNew["PHY_KAHEN1_9_VLB"] = goukeiM.ToString("#,0");
+
+                            indexTmp = this.DataTableUkewatashi.Columns.IndexOf("OUTPUT_ITEM_1");
+                            dataRowUkewatashi[indexTmp] = goukeiM.ToString("#,0");
+                        }
+
+                        if (goukeiAllTotalM != 0)
+                        {
+                            dataRowNew["G1F_KINGAKU_TOTAL_VLB"] = goukeiAllTotalM.ToString("#,0");
+
+                            indexTmp = this.DataTableUkewatashi.Columns.IndexOf("ALL_TOTAL_1");
+                            dataRowUkewatashi[indexTmp] = goukeiAllTotalM.ToString("#,0");
+                        }
+                        else
+                        {
+                            dataRowNew["G1F_KINGAKU_TOTAL_VLB"] = string.Empty;
+                        }
+
+                        #endregion - 売上順位表・支払順位表 -
+                    }
+                    else
+                    {   // 売上／支払順位表・計量順位表
+
+                        #region - 売上／支払順位表・計量順位表 -
+
+                        if (rowCount == this.DataTableMultiSort.DefaultView.Count)
+                        {
+                            dataRowNew["PHY_KAHEN1_9_VLB"] = goukeiT.ToString("#,0");
+
+                            indexTmp = this.DataTableUkewatashi.Columns.IndexOf("OUTPUT_ITEM_1");
+                            dataRowUkewatashi[indexTmp] = goukeiT.ToString("#,0");
+                        }
+
+                        if (goukeiAllTotalT != 0)
+                        {
+                            dataRowNew["G1F_KINGAKU_TOTAL_VLB"] = goukeiAllTotalT.ToString("#,0");
+
+                            indexTmp = this.DataTableUkewatashi.Columns.IndexOf("ALL_TOTAL_1");
+                            dataRowUkewatashi[indexTmp] = goukeiAllTotalT.ToString("#,0");
+                        }
+                        else
+                        {
+                            dataRowNew["G1F_KINGAKU_TOTAL_VLB"] = string.Empty;
+                        }
+
+                        #endregion - 売上／支払順位表・計量順位表 -
+                    }
+
+                    this.ChouhyouDataTable.Rows.Add(dataRowNew);
+                    this.DataTableUkewatashi.Rows.Add(dataRowUkewatashi);
+                }
+
+                /* 
+                 * 合計金額が各Row毎にその時点の合計額で設定されているため、テーブル作成後に入れなおす。
+                 * 全て同じ値にしない場合テンプレートの仕様上DataTableの並び順に左右されてしまうため全て同じ値にする。
+                 */
+                if (this.WindowID == WINDOW_ID.R_URIAGE_JYUNNIHYOU || this.WindowID == WINDOW_ID.R_SHIHARAI_JYUNNIHYOU)
+                {
+                    foreach (DataRow row in DataTableUkewatashi.Rows)
+                    {
+                        row["ALL_TOTAL_1"] = goukeiAllTotalM.ToString("#,0");
+                    }
+
+                    foreach (DataRow row in ChouhyouDataTable.Rows)
+                    {
+                        if (goukeiAllTotalM != 0)
+                        {
+                            row["G1F_KINGAKU_TOTAL_VLB"] = goukeiAllTotalM.ToString("#,0");
+                        }
+                        else
+                        {
+                            row["G1F_KINGAKU_TOTAL_VLB"] = string.Empty;
+                        }
+                    }
+                }
+
+                //if (this.WindowID == WINDOW_ID.R_KEIRYOU_JYUNNIHYOU)
+                //{
+                    // 画面表示データの再ソート
+                    this.DataTableUkewatashi.Columns.Add(new DataColumn("OUTPUT_ITEM_1_SORT", typeof(System.Decimal)));
+                    foreach (DataRow dataRowDataTableUkewatashi in this.DataTableUkewatashi.Rows)
+                    {
+                        dataRowDataTableUkewatashi["OUTPUT_ITEM_1_SORT"] = dataRowDataTableUkewatashi["OUTPUT_ITEM_1"].ToString().Replace(",", string.Empty);
+                    }
+                    DataTable DataTableUkewatashiForSort = this.DataTableUkewatashi.Clone();
+                    DataView dataViewDataTableUkewatashi = new DataView(this.DataTableUkewatashi);
+                    dataViewDataTableUkewatashi.Sort = "OUTPUT_ITEM_1_SORT DESC";
+                    for (int i = 0; i < this.SelectSyuukeiKoumokuList.Count; i++)
+                    {
+                        int item = this.SelectSyuukeiKoumokuList[i];
+
+                        syuukeiKoumoku = this.SyuukeiKomokuList[item];
+
+                        if (syuukeiKoumoku.Type == SYUKEUKOMOKU_TYPE.None)
+                        {
+                            continue;
+                        }
+
+                        dataViewDataTableUkewatashi.Sort += string.Format(", FILL_COND_{0}_CD ASC", (i + 1));
+                    }
+                    int replaceRowNo = 0;
+                    foreach (DataRowView dataRowViewDataTableUkewatashi in dataViewDataTableUkewatashi)
+                    {
+                        replaceRowNo++;
+                        dataRowViewDataTableUkewatashi.Row["ROW_NO"] = replaceRowNo;
+                        DataTableUkewatashiForSort.ImportRow(dataRowViewDataTableUkewatashi.Row);
+                    }
+                    this.DataTableUkewatashi = DataTableUkewatashiForSort;
+                    this.DataTableUkewatashi.Columns.Remove("OUTPUT_ITEM_1_SORT");
+
+                    // 帳票データの再ソート
+                    this.ChouhyouDataTable.Columns.Add(new DataColumn("PHY_KAHEN1_9_VLB_SORT", typeof(System.Decimal)));
+                    foreach (DataRow dataRowChouhyouDataTable in this.ChouhyouDataTable.Rows)
+                    {
+                        dataRowChouhyouDataTable["PHY_KAHEN1_9_VLB_SORT"] = dataRowChouhyouDataTable["PHY_KAHEN1_9_VLB"].ToString().Replace(",", string.Empty);
+                    }
+                    DataTable ChouhyouDataTableForSort = this.ChouhyouDataTable.Clone();
+                    DataView dataViewChouhyouDataTable = new DataView(this.ChouhyouDataTable);
+                    dataViewChouhyouDataTable.Sort = "PHY_KAHEN1_9_VLB_SORT DESC";
+                    for (int i = 0; i < this.SelectSyuukeiKoumokuList.Count; i++)
+                    {
+                        int item = this.SelectSyuukeiKoumokuList[i];
+
+                        syuukeiKoumoku = this.SyuukeiKomokuList[item];
+
+                        if (syuukeiKoumoku.Type == SYUKEUKOMOKU_TYPE.None)
+                        {
+                            continue;
+                        }
+
+                        dataViewChouhyouDataTable.Sort += string.Format(", PHY_KAHEN1_{0}_VLB ASC", (i + 1));
+                    }
+                    replaceRowNo = 0;
+                    foreach (DataRowView dataRowViewChouhyouDataTable in dataViewChouhyouDataTable)
+                    {
+                        replaceRowNo++;
+                        dataRowViewChouhyouDataTable.Row["PHY_ROW_NO_LABEL_FLB"] = replaceRowNo;
+                        ChouhyouDataTableForSort.ImportRow(dataRowViewChouhyouDataTable.Row);
+                    }
+                    this.ChouhyouDataTable = ChouhyouDataTableForSort;
+                    this.ChouhyouDataTable.Columns.Remove("PHY_KAHEN1_9_VLB_SORT");
+                //}
+            }
+            catch (Exception e)
+            {
+                LogUtility.Error(e.Message, e);
+            }
+        }
+
+        /// <summary>複数テーブルの並べ替え処理(テーブルインデックス・伝票区分ソート)を実行する</summary>
+        private void MultiSortTableDenpyouKubun()
+        {
+            try
+            {
+                DataGrid dataGrid = new DataGrid();
+                DataSet dataSet = new DataSet("MultiSort");
+                this.DataTableMultiSort = dataSet.Tables.Add("MultiSortTable");
+
+                for (int k = 0; k < this.SelectSyuukeiKoumokuList.Count; k++)
+                {
+                    this.DataTableMultiSort.Columns.Add(string.Format("Field{0}", k));
+                }
+
+                this.DataTableMultiSort.Columns.Add("TableIndex");
+                this.DataTableMultiSort.Columns.Add("RowIndex");
+                this.DataTableMultiSort.Columns.Add("DenpyouKubun");
+
+                SyuukeiKoumoku syuukeiKoumoku;
+                int item;
+                int index;
+                int denpyouKubunCode;
+                for (int i = 0; i < this.InputDataTable.Length; i++)
+                {
+                    if (this.InputDataTable[i] == null)
+                    {
+                        continue;
+                    }
+
+                    if (this.DenpyouSyurui == DENPYOU_SYURUI.Ukeire)
+                    {   // 受入のみ
+                        if (i != ((int)DENPYOU_SYURUI.Ukeire - 1))
+                        {
+                            continue;
+                        }
+                    }
+                    else if (this.DenpyouSyurui == DENPYOU_SYURUI.Syutsuka)
+                    {   // 出荷のみ
+                        if (i != ((int)DENPYOU_SYURUI.Syutsuka - 1))
+                        {
+                            continue;
+                        }
+                    }
+                    else if (this.DenpyouSyurui == DENPYOU_SYURUI.UriageShiharai)
+                    {   // 売上／支払のみ
+                        if (i != ((int)DENPYOU_SYURUI.UriageShiharai - 1))
+                        {
+                            continue;
+                        }
+                    }
+
+                    object code;
+                    for (int j = 0; j < this.InputDataTable[i].Rows.Count; j++)
+                    {
+                        if (this.SelectSyuukeiKoumokuList.Count > 0)
+                        {
+                            DataRow dataRowNew = this.DataTableMultiSort.NewRow();
+
+                            for (int k = 0; k < this.SelectSyuukeiKoumokuList.Count; k++)
+                            {
+                                item = this.SelectSyuukeiKoumokuList[k];
+
+                                syuukeiKoumoku = this.SyuukeiKomokuList[item];
+
+                                if (syuukeiKoumoku.Type == SYUKEUKOMOKU_TYPE.None)
+                                {
+                                    continue;
+                                }
+
+                                switch (syuukeiKoumoku.Type)
+                                {
+                                    case SYUKEUKOMOKU_TYPE.DensyuKubunBetsu:    // 伝種区分別
+                                        code = i;
+
+                                        break;
+                                    case SYUKEUKOMOKU_TYPE.NioroshiGyoshaBetsu: // 荷卸業者別
+                                        index = this.InputDataTable[i].Columns.IndexOf("NIOROSHI_GYOUSHA_CD");
+                                        if (index == -1)
+                                        {
+                                            code = string.Empty;
+                                        }
+                                        else
+                                        {
+                                            code = this.InputDataTable[i].Rows[j].ItemArray[index];
+                                        }
+
+                                        break;
+                                    case SYUKEUKOMOKU_TYPE.NioroshiGenbaBetsu:  // 荷卸現場別
+                                        index = this.InputDataTable[i].Columns.IndexOf("NIOROSHI_GENBA_CD");
+                                        if (index == -1)
+                                        {
+                                            code = string.Empty;
+                                        }
+                                        else
+                                        {
+                                            code = this.InputDataTable[i].Rows[j].ItemArray[index];
+                                        }
+
+                                        break;
+                                    case SYUKEUKOMOKU_TYPE.NizumiGyoshaBetsu:   // 荷積業者別
+                                        index = this.InputDataTable[i].Columns.IndexOf("NIZUMI_GYOUSHA_CD");
+                                        if (index == -1)
+                                        {
+                                            code = string.Empty;
+                                        }
+                                        else
+                                        {
+                                            code = this.InputDataTable[i].Rows[j].ItemArray[index];
+                                        }
+
+                                        break;
+                                    case SYUKEUKOMOKU_TYPE.NizumiGenbaBetsu:    // 荷積現場別
+                                        index = this.InputDataTable[i].Columns.IndexOf("NIZUMI_GENBA_CD");
+                                        if (index == -1)
+                                        {
+                                            code = string.Empty;
+                                        }
+                                        else
+                                        {
+                                            code = this.InputDataTable[i].Rows[j].ItemArray[index];
+                                        }
+
+                                        break;
+                                    case SYUKEUKOMOKU_TYPE.EigyoTantoshaBetsu:    // 営業担当者別
+                                        index = this.InputDataTable[i].Columns.IndexOf("EIGYOU_TANTOU_CD");
+                                        if (index == -1)
+                                        {
+                                            code = string.Empty;
+                                        }
+                                        else
+                                        {
+                                            code = this.InputDataTable[i].Rows[j].ItemArray[index];
+                                        }
+
+                                        break;
+                                    default:
+                                        index = this.InputDataTable[i].Columns.IndexOf(syuukeiKoumoku.FieldCD);
+                                        code = this.InputDataTable[i].Rows[j].ItemArray[index];
+
+                                        break;
+                                }
+
+                                dataRowNew[string.Format("Field{0}", k)] = code;
+                            }
+
+                            dataRowNew["TableIndex"] = i.ToString();
+                            dataRowNew["RowIndex"] = j.ToString();
+
+                            index = this.InputDataTable[i].Columns.IndexOf("DENPYOU_KBN_CD");
+                            if (!this.IsDBNull(this.InputDataTable[i].Rows[j].ItemArray[index]))
+                            {
+                                denpyouKubunCode = (short)this.InputDataTable[i].Rows[j].ItemArray[index];
+                                dataRowNew["DenpyouKubun"] = denpyouKubunCode.ToString();
+                            }
+                            else
+                            {
+                                dataRowNew["DenpyouKubun"] = string.Empty;
+                            }
+
+                            this.DataTableMultiSort.Rows.Add(dataRowNew);
+                        }
+                    }
+                }
+
+                // 並べ替え条件
+                string sortJyouken = string.Empty;
+                if (this.IsDenpyouSyuruiGroupKubun)
+                {   // グループ区分有
+                    sortJyouken = "TableIndex ASC,";
+                    sortJyouken += "DenpyouKubun ASC,";
+                }
+                else
+                {   // グループ区分無
+                    if (this.DenpyouSyurui == DENPYOU_SYURUI.Subete)
+                    {   // 全て
+                    }
+                    else
+                    {   // 受入・出荷・売上／支払
+                        sortJyouken = "TableIndex ASC,";
+                    }
+                }
+
+                for (int i = 0; i < this.SelectSyuukeiKoumokuList.Count; i++)
+                {
+                    item = this.SelectSyuukeiKoumokuList[i];
+
+                    syuukeiKoumoku = this.SyuukeiKomokuList[item];
+
+                    if (syuukeiKoumoku.Type == SYUKEUKOMOKU_TYPE.None)
+                    {
+                        continue;
+                    }
+
+                    sortJyouken += string.Format("Field{0} ", i) + "ASC,";
+                }
+
+                if (this.IsDenpyouSyuruiGroupKubun)
+                {   // グループ区分有
+                }
+                else
+                {   // グループ区分無
+                    if (this.DenpyouSyurui == DENPYOU_SYURUI.Subete)
+                    {   // 全て
+                        sortJyouken += "TableIndex ASC,";
+                        sortJyouken += "DenpyouKubun ASC,";
+                    }
+                    else
+                    {   // 受入・出荷・売上／支払
+                        sortJyouken += "DenpyouKubun ASC,";
+                    }
+                }
+
+                if (sortJyouken.Length != 0)
+                {
+                    sortJyouken = sortJyouken.Substring(0, sortJyouken.Length - 1);
+
+                    // 並べ替え
+                    this.DataTableMultiSort.DefaultView.Sort = sortJyouken;
+                    dataGrid.SetDataBinding(this.DataTableMultiSort.DefaultView, string.Empty);
+                }
+            }
+            catch (Exception e)
+            {
+                LogUtility.Error(e.Message, e);
+            }
+        }
+
+        #endregion - Methods -
+    }
+
+    #endregion - CommonChouhyouR433 -
+
+    #endregion - Classes -
+}

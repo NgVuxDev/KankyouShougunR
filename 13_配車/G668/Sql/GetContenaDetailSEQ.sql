@@ -1,0 +1,5 @@
+﻿SELECT SEQ_NO 
+FROM T_MOBISYO_RT
+WHERE DELETE_FLG = 0 
+AND HAISHA_DENPYOU_NO = /*haishaDenpyouNo*/0
+AND HAISHA_KBN =  /*haishaKbn*/0;

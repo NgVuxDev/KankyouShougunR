@@ -1,0 +1,97 @@
+﻿SELECT ENTRY.UNPAN_GYOUSHA_CD,
+       UPNGYOUSHA.GYOUSHA_NAME_RYAKU AS UNPAN_GYOUSHA_NAME,
+       ENTRY.DENPYOU_DATE,
+       ENTRY.DENSHU_KBN_CD,
+       CASE ENTRY.DENSHU_KBN_CD
+         WHEN 170 THEN 4
+         WHEN 160 THEN 5
+         ELSE ENTRY.DENSHU_KBN_CD
+       END DENSHU_KBN_ORDER,
+       MDK.DENSHU_KBN_NAME_RYAKU,
+	   -- 20150522 車種、車輌、運転者、品名の4項目出力内容修正(運賃不具合一覧77) Start
+       ENTRY.SHASHU_CD,
+       --SHASHU.SHASHU_NAME_RYAKU,
+       ENTRY.SHASHU_NAME SHASHU_NAME_RYAKU,
+       ENTRY.SHARYOU_CD,
+       --SHARYOU.SHARYOU_NAME_RYAKU,
+       ENTRY.SHARYOU_NAME SHARYOU_NAME_RYAKU,
+       ENTRY.UNTENSHA_CD,
+       --SHAIN.SHAIN_NAME_RYAKU AS UNTENSHA_NAME,
+       ENTRY.UNTENSHA_NAME UNTENSHA_NAME,
+       DETAIL.UNCHIN_HINMEI_CD,
+       --HINMEI.UNCHIN_HINMEI_NAME,
+       DETAIL.UNCHIN_HINMEI_NAME,
+	   -- 20150522 車種、車輌、運転者、品名の4項目出力内容修正(運賃不具合一覧77) End
+       DETAIL.UNIT_CD,
+       UNIT.UNIT_NAME_RYAKU,
+       DETAIL.NET_JYUURYOU,
+       DETAIL.SUURYOU,
+       DETAIL.TANKA,
+       DETAIL.KINGAKU,
+       ENTRY.DENPYOU_NUMBER
+   FROM T_UNCHIN_ENTRY ENTRY
+  LEFT JOIN M_GYOUSHA AS UPNGYOUSHA
+    ON ENTRY.UNPAN_GYOUSHA_CD = UPNGYOUSHA.GYOUSHA_CD
+  LEFT JOIN M_DENSHU_KBN AS MDK
+    ON ENTRY.DENSHU_KBN_CD = MDK.DENSHU_KBN_CD
+  -- 20150522 車種、車輌、運転者、品名の4項目出力内容修正(運賃不具合一覧77) Start
+  --LEFT JOIN M_SHASHU AS SHASHU
+  --  ON ENTRY.SHASHU_CD = SHASHU.SHASHU_CD
+  --LEFT JOIN M_SHARYOU AS SHARYOU
+  --  ON ENTRY.UNPAN_GYOUSHA_CD = SHARYOU.GYOUSHA_CD
+  -- AND ENTRY.SHARYOU_CD = SHARYOU.SHARYOU_CD
+  --LEFT JOIN M_SHAIN AS SHAIN
+  --  ON ENTRY.UNTENSHA_CD = SHAIN.SHAIN_CD
+  -- 20150522 車種、車輌、運転者、品名の4項目出力内容修正(運賃不具合一覧77) End
+  LEFT JOIN T_UNCHIN_DETAIL DETAIL
+    ON ENTRY.SYSTEM_ID = DETAIL.SYSTEM_ID
+   AND ENTRY.SEQ = DETAIL.SEQ
+  -- 20150522 車種、車輌、運転者、品名の4項目出力内容修正(運賃不具合一覧77) Start
+  --LEFT JOIN M_UNCHIN_HINMEI HINMEI
+  --  ON DETAIL.UNCHIN_HINMEI_CD = HINMEI.UNCHIN_HINMEI_CD
+  -- 20150522 車種、車輌、運転者、品名の4項目出力内容修正(運賃不具合一覧77) End
+  LEFT JOIN M_UNIT UNIT
+    ON DETAIL.UNIT_CD = UNIT.UNIT_CD
+WHERE
+    ENTRY.DELETE_FLG = 0
+    -- 拠点
+    /*IF dto.KyotenCd != null && dto.KyotenCd != 99 */AND ENTRY.KYOTEN_CD = /*dto.KyotenCd*/'99'/*END*/
+    -- 形態区分
+    /*IF dto.KeitaiKbnCd != null && dto.KeitaiKbnCd != ''*/AND ENTRY.KEITAI_KBN_CD = /*dto.KeitaiKbnCd*/'99'/*END*/
+    -- 伝種区分
+    /*IF dto.DenshuKbn != '6'*/AND ENTRY.DENSHU_KBN_CD = /*dto.DenshuKbn*/6/*END*/
+    -- 伝票日付
+    /*IF dto.DateShuruiCd != null && dto.DateShuruiCd == 1*/AND CONVERT(VARCHAR, ENTRY.DENPYOU_DATE, 111) >= /*dto.DateFrom*/'2014/01/01' AND CONVERT(VARCHAR, ENTRY.DENPYOU_DATE, 111) <= /*dto.DateTo*/'2014/01/01'/*END*/
+    -- 入力日付
+    /*IF dto.DateShuruiCd != null && dto.DateShuruiCd == 2*/AND CONVERT(VARCHAR, ENTRY.UPDATE_DATE, 111) >= /*dto.DateFrom*/'2014/01/01' AND CONVERT(VARCHAR, ENTRY.UPDATE_DATE, 111) <= /*dto.DateTo*/'2014/01/01'/*END*/
+    -- 運搬業者
+    /*IF dto.UnpanGyoushaCdFrom != null && dto.UnpanGyoushaCdFrom != ''*/AND ENTRY.UNPAN_GYOUSHA_CD >= /*dto.UnpanGyoushaCdFrom*/'000000'/*END*/
+    /*IF dto.UnpanGyoushaCdTo != null && dto.UnpanGyoushaCdTo != ''*/AND ENTRY.UNPAN_GYOUSHA_CD <= /*dto.UnpanGyoushaCdTo*/'000000'/*END*/
+ORDER BY
+    -- 運搬業者CD順
+    /*IF dto.Order == 1*/
+    ENTRY.UNPAN_GYOUSHA_CD,
+    ENTRY.DENPYOU_DATE,
+    ENTRY.DENPYOU_NUMBER,
+    DETAIL.ROW_NO
+    /*END*/
+    -- 運搬業者のフリガナ順
+    /*IF dto.Order == 2*/
+    UPNGYOUSHA.GYOUSHA_FURIGANA,
+    ENTRY.DENPYOU_DATE,
+    ENTRY.DENPYOU_NUMBER,
+    DETAIL.ROW_NO
+    /*END*/
+    -- 伝票日付順
+    /*IF dto.Order == 3*/
+    ENTRY.DENPYOU_DATE,
+    DENSHU_KBN_ORDER,
+    ENTRY.DENPYOU_NUMBER,
+    DETAIL.ROW_NO
+    /*END*/
+    -- 伝票番号順
+    /*IF dto.Order == 4*/
+    DENSHU_KBN_ORDER,
+    ENTRY.DENPYOU_NUMBER,
+    DETAIL.ROW_NO
+    /*END*/

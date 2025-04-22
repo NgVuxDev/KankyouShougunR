@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="940">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="作成" Needs="1" TableName="" Name="SAKUSEI" Format="" />
+      <Column ID="2" DispNumber="" DispName="削除" Needs="1" TableName="" Name="SAKUJO" Format="" />
+      <Column ID="3" DispNumber="" DispName="伝票作成" Needs="1" TableName="" Name="SAKUSEI_KBN" Format="" />
+      <Column ID="4" DispNumber="" DispName="預入日" Needs="1" TableName="" Name="YONYUU_BI" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="5" DispNumber="" DispName="取引先CD" Needs="1" TableName="" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="6" DispNumber="" DispName="取引先名" Needs="1" TableName="" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="7" DispNumber="" DispName="入金先CD" Needs="1" TableName="" Name="NYUUKINSAKI_CD" Format="" />
+      <Column ID="8" DispNumber="" DispName="入金先名" Needs="1" TableName="" Name="NYUUKINSAKI_NAME_RYAKU" Format="" />
+      <Column ID="9" DispNumber="" DispName="入金額" Needs="1" TableName="" Name="KINGAKU" Format="" />
+      <Column ID="10" DispNumber="" DispName="振込人名" Needs="1" TableName="" Name="FURIKOMI_JINMEI" Format="" />
+      <Column ID="11" DispNumber="" DispName="銀行CD" Needs="1" TableName="" Name="BANK_CD" Format="" />
+      <Column ID="12" DispNumber="" DispName="銀行名" Needs="1" TableName="" Name="BANK_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="" DispName="銀行支店CD" Needs="1" TableName="" Name="BANK_SHITEN_CD" Format="" />
+      <Column ID="14" DispNumber="" DispName="銀行支店名" Needs="1" TableName="" Name="BANK_SHITEN_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="" DispName="口座種類" Needs="1" TableName="" Name="KOUZA_SHURUI" Format="" />
+      <Column ID="16" DispNumber="" DispName="口座番号" Needs="1" TableName="" Name="KOUZA_NUMBER" Format="" />      
+      <Column ID="17" DispNumber="" DispName="作成不可理由" Needs="1" TableName="" Name="SAKUSEI_FUKA_RIYUU" Format="" />
+    </Group>
+  </OutputColumnSelect>
+</root>

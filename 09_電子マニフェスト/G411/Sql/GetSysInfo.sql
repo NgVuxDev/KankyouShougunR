@@ -1,0 +1,10 @@
+﻿SELECT TOP 1
+CONVERT(VARCHAR(12),DATEADD(DAY,- CASE WHEN M_SYS_INFO.MANIFEST_TUUCHI_BEGIN IS NULL THEN 0 
+                                        ELSE M_SYS_INFO.MANIFEST_TUUCHI_BEGIN
+                                        END ,GETDATE()),111) AS TUUCHI_BEGIN,
+                                       
+CONVERT(VARCHAR(12),DATEADD(DAY,- CASE WHEN M_SYS_INFO.MANIFEST_TUUCHI_END IS NULL THEN 0 
+                                        ELSE M_SYS_INFO.MANIFEST_TUUCHI_END
+                                        END ,GETDATE()),111) AS TUUCHI_END
+FROM M_SYS_INFO
+WHERE DELETE_FLG = 0 OR DELETE_FLG IS NULL

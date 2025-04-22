@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9401">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="楽楽顧客コード" Needs="0" TableName="M_RAKU" Name="RAKURAKU_CUSTOMER_CD" Format="" />
+      <Column ID="2" DispNumber="2" DispName="請求書書式１" Needs="0" TableName="" Name="CASE WHEN M_RAKU.SHOSHIKI_KBN = 1 THEN N'請求先別' WHEN M_RAKU.SHOSHIKI_KBN = 2 THEN N'業者別' WHEN M_RAKU.SHOSHIKI_KBN = 3 THEN N'現場別' END" Format="" />
+      <Column ID="3" DispNumber="3" DispName="取引先CD" Needs="0" TableName="M_RAKU" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="4" DispNumber="4" DispName="取引先名" Needs="0" TableName="M_RAKU" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="5" DispNumber="5" DispName="請求書送付先" Needs="0" TableName="" Name="M_RAKU.SEIKYUU_SOUFU_NAME1 + M_RAKU.SEIKYUU_SOUFU_NAME2" Format="" />
+      <Column ID="6" DispNumber="6" DispName="送付先部署" Needs="0" TableName="M_RAKU" Name="SEIKYUU_SOUFU_BUSHO" Format="" />
+      <Column ID="7" DispNumber="7" DispName="送付先担当者" Needs="0" TableName="M_RAKU" Name="SEIKYUU_SOUFU_TANTOU" Format="" />
+      <Column ID="8" DispNumber="8" DispName="敬称" Needs="0" TableName="" Name="CASE WHEN M_RAKU.SEIKYUU_SOUFU_KEISHOU2 = '' THEN M_RAKU.SEIKYUU_SOUFU_KEISHOU1 ELSE M_RAKU.SEIKYUU_SOUFU_KEISHOU2 END" Format="" />
+      <Column ID="9" DispNumber="9" DispName="送付先郵便番号" Needs="0" TableName="M_RAKU" Name="SEIKYUU_SOUFU_POST" Format="" />
+      <Column ID="10" DispNumber="10" DispName="送付先住所１" Needs="0" TableName="M_RAKU" Name="SEIKYUU_SOUFU_ADDRESS1" Format="" />
+      <Column ID="11" DispNumber="11" DispName="送付先住所２" Needs="0" TableName="M_RAKU" Name="SEIKYUU_SOUFU_ADDRESS2" Format="" />
+      <Column ID="12" DispNumber="12" DispName="メールアドレス" Needs="0" TableName="M_RAKU" Name="EMAIL" Format="" />
+      <Column ID="13" DispNumber="13" DispName="サブメールアドレス１" Needs="0" TableName="M_RAKU" Name="EMAIL_ADDRESS1" Format="" />
+      <Column ID="14" DispNumber="14" DispName="サブメールアドレス２" Needs="0" TableName="M_RAKU" Name="EMAIL_ADDRESS2" Format="" />
+      <Column ID="15" DispNumber="15" DispName="サブメールアドレス３" Needs="0" TableName="M_RAKU" Name="EMAIL_ADDRESS3" Format="" />
+      <Column ID="16" DispNumber="16" DispName="業者CD" Needs="0" TableName="M_RAKU" Name="GYOUSHA_CD" Format="" />
+      <Column ID="17" DispNumber="17" DispName="業者名" Needs="0" TableName="M_RAKU" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="18" DispNumber="18" DispName="現場CD" Needs="0" TableName="M_RAKU" Name="GENBA_CD" Format="" />
+      <Column ID="19" DispNumber="19" DispName="現場名" Needs="0" TableName="M_RAKU" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="20" DispNumber="20" DispName="請求書送付先（楽楽）" Needs="0" TableName="M_RAKU" Name="SEIKYUU_SHO_SOUFU_SAKI" Format="" />
+      <Column ID="21" DispNumber="21" DispName="送付先部署（楽楽）" Needs="0" TableName="M_RAKU" Name="SOUFU_SAKI_BUSHO" Format="" />
+      <Column ID="22" DispNumber="22" DispName="送付先担当者（楽楽）" Needs="0" TableName="M_RAKU" Name="SOUFU_SAKI_TANTOUSHA" Format="" />
+      <Column ID="23" DispNumber="23" DispName="敬称（楽楽）" Needs="0" TableName="M_RAKU" Name="KEISHOU" Format="" />
+      <Column ID="24" DispNumber="24" DispName="送付先郵便番号（楽楽）" Needs="0" TableName="M_RAKU" Name="SOUFU_SAKI_POST" Format="" />
+      <Column ID="25" DispNumber="25" DispName="送付先住所１（楽楽）" Needs="0" TableName="M_RAKU" Name="SOUFU_SAKI_ADDRESS1" Format="" />
+      <Column ID="26" DispNumber="26" DispName="送付先住所２（楽楽）" Needs="0" TableName="M_RAKU" Name="SOUFU_SAKI_ADDRESS2" Format="" />
+
+      <Column ID="33" DispNumber="27" DispName="締日1" Needs="0" TableName="M_RAKU" Name="SHIMEBI1" Format="" />
+      <Column ID="34" DispNumber="28" DispName="締日2" Needs="0" TableName="M_RAKU" Name="SHIMEBI2" Format="" />
+      <Column ID="35" DispNumber="29" DispName="締日3" Needs="0" TableName="M_RAKU" Name="SHIMEBI3" Format="" />
+      <Column ID="36" DispNumber="30" DispName="請求書必着日" Needs="0" TableName="M_RAKU" Name="HICCHAKUBI" Format="" />
+      <Column ID="37" DispNumber="31" DispName="回収月" Needs="0" TableName="" Name="CASE M_RAKU.KAISHUU_MONTH WHEN 1 THEN '当月' WHEN 2 THEN '翌月' WHEN 3 THEN '翌々月' WHEN 4 THEN '3ヶ月後' WHEN 5 THEN '4ヶ月後' WHEN 6 THEN '5ヶ月後' WHEN 7 THEN '6ヶ月後' ELSE '' END" Format="" />
+      <Column ID="38" DispNumber="32" DispName="回収日" Needs="0" TableName="M_RAKU" Name="KAISHUU_DAY" Format="" />
+      <Column ID="39" DispNumber="33" DispName="回収方法" Needs="0" TableName="M_NYUUSHUKKIN_KBN1" Name="NYUUSHUKKIN_KBN_NAME_RYAKU" Format="" />
+      <Column ID="40" DispNumber="34" DispName="請求書書式２" Needs="0" TableName="" Name="CASE M_RAKU.SHOSHIKI_MEISAI_KBN WHEN 1 THEN 'なし' WHEN 2 THEN '業者毎' WHEN 3 THEN '現場毎' ELSE '' END" Format="" />
+      <Column ID="41" DispNumber="35" DispName="請求形態" Needs="0" TableName="" Name="CASE M_RAKU.SEIKYUU_KEITAI_KBN WHEN 1 THEN '単月請求' WHEN 2 THEN '繰越請求' ELSE '' END" Format="" />
+      <Column ID="42" DispNumber="36" DispName="入金明細" Needs="0" TableName="" Name="CASE M_RAKU.NYUUKIN_MEISAI_KBN WHEN 1 THEN '表示する' WHEN 2 THEN '表示しない' ELSE '' END" Format="" />
+      
+      <Column ID="27" DispNumber="37" DispName="作成者" Needs="0" TableName="M_RAKU" Name="CREATE_USER" Format="" />
+      <Column ID="28" DispNumber="38" DispName="作成日時" Needs="0" TableName="M_RAKU" Name="CREATE_DATE" Format="" />
+      <Column ID="29" DispNumber="39" DispName="作成PC" Needs="0" TableName="M_RAKU" Name="CREATE_PC" Format="" />
+      <Column ID="30" DispNumber="40" DispName="最終更新者" Needs="0" TableName="M_RAKU" Name="UPDATE_USER" Format="" />
+      <Column ID="31" DispNumber="41" DispName="最終更新日時" Needs="0" TableName="M_RAKU" Name="UPDATE_DATE" Format="" />
+      <Column ID="32" DispNumber="42" DispName="最終更新PC" Needs="0" TableName="M_RAKU" Name="UPDATE_PC" Format="" />
+    </Group>
+    <JoinCondition TableName="M_NYUUSHUKKIN_KBN1">LEFT JOIN M_NYUUSHUKKIN_KBN M_NYUUSHUKKIN_KBN1 ON M_RAKU.KAISHUU_HOUHOU = M_NYUUSHUKKIN_KBN1.NYUUSHUKKIN_KBN_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

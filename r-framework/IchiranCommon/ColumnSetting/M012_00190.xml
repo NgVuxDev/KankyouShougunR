@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="190">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="委託契約書番号" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="ITAKU_KEIYAKU_NO" Format="" />
+      <Column ID="2" DispNumber="2" DispName="委託契約書種類" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_KIHON.ITAKU_KEIYAKU_SHURUI WHEN 1 THEN '収集運搬契約' WHEN 2 THEN '処分契約' WHEN 3 THEN '収集運搬/処分契約' ELSE '' END" Format="" />
+      <Column ID="3" DispNumber="3" DispName="委託契約書書式" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_KIHON.ITAKU_KEIYAKU_TYPE WHEN 1 THEN '産廃' WHEN 2 THEN '建廃' ELSE '' END" Format="" />
+      <Column ID="4" DispNumber="4" DispName="委託契約書状況" Needs="0" TableName="" Name="CASE WHEN M_ITAKU_KEIYAKU_KIHON.YUUKOU_END IS NOT NULL AND ISNULL(M_ITAKU_KEIYAKU_KIHON.KOUSHIN_SHUBETSU, 0) = 2 AND CONVERT(date, M_ITAKU_KEIYAKU_KIHON.YUUKOU_END) &lt; CONVERT(date, GETDATE())  THEN '解約済'  ELSE   CASE WHEN M_ITAKU_KEIYAKU_KIHON.KOUSHIN_END_DATE IS NOT NULL AND ISNULL(M_ITAKU_KEIYAKU_KIHON.KOUSHIN_SHUBETSU, 0) = 1 AND CONVERT(date, M_ITAKU_KEIYAKU_KIHON.KOUSHIN_END_DATE) &lt; CONVERT(date, GETDATE())    THEN '解約済'    ELSE      CASE WHEN M_ITAKU_KEIYAKU_KIHON.KEIYAKUSHO_END_DATE IS NOT NULL      THEN '保管'      ELSE       CASE WHEN M_ITAKU_KEIYAKU_KIHON.KEIYAKUSHO_RETURN_DATE IS NOT NULL        THEN '返送'        ELSE         CASE WHEN M_ITAKU_KEIYAKU_KIHON.KEIYAKUSHO_SEND_DATE IS NOT NULL          THEN '送付'          ELSE            CASE WHEN M_ITAKU_KEIYAKU_KIHON.KEIYAKUSHO_CREATE_DATE IS NOT NULL            THEN '作成'            ELSE ''           END         END       END     END   END END" Format="" />
+      <Column ID="5" DispNumber="5" DispName="排出事業者CD" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="HAISHUTSU_JIGYOUSHA_CD" Format="" />
+      <Column ID="6" DispNumber="6" DispName="排出事業者名" Needs="0" TableName="M_GYOUSHA1" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="7" DispNumber="7" DispName="排出事業者郵便番号" Needs="0" TableName="M_GYOUSHA1" Name="GYOUSHA_POST" Format="" />
+      <Column ID="8" DispNumber="8" DispName="排出事業者都道府県" Needs="0" TableName="M_TODOUFUKEN_GYOUSHA1" Name="TODOUFUKEN_NAME" Format="" />
+      <Column ID="9" DispNumber="9" DispName="排出事業者住所１" Needs="0" TableName="M_GYOUSHA1" Name="ISNULL(M_GYOUSHA1.GYOUSHA_ADDRESS1, '')" Format="" />
+      <Column ID="10" DispNumber="10" DispName="排出事業者住所２" Needs="0" TableName="M_GYOUSHA1" Name="ISNULL(M_GYOUSHA1.GYOUSHA_ADDRESS2, '')" Format="" />
+      <Column ID="11" DispNumber="11" DispName="排出事業場CD" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON_HST_GENBA" Name="HAISHUTSU_JIGYOUJOU_CD" Format="" />
+      <Column ID="12" DispNumber="12" DispName="排出事業場名" Needs="0" TableName="M_GENBA1" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="13" DispName="排出事業場郵便番号" Needs="0" TableName="M_GENBA1" Name="GENBA_POST" Format="" />
+      <Column ID="14" DispNumber="14" DispName="排出事業場都道府県" Needs="0" TableName="M_TODOUFUKEN_GENBA1" Name="TODOUFUKEN_NAME" Format="" />
+      <Column ID="15" DispNumber="15" DispName="排出事業場住所１" Needs="0" TableName="M_GENBA1" Name="ISNULL(M_GENBA1.GENBA_ADDRESS1, '')" Format="" />
+      <Column ID="16" DispNumber="16" DispName="排出事業場住所２" Needs="0" TableName="M_GENBA1" Name="ISNULL(M_GENBA1.GENBA_ADDRESS2, '')" Format="" />
+      <Column ID="17" DispNumber="17" DispName="委託契約ファイルパス" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="ITAKU_KEIYAKU_FILE_PATH" Format="" />
+      <Column ID="18" DispNumber="18" DispName="契約日" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="KEIYAKUSHO_KEIYAKU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="19" DispNumber="19" DispName="作成日" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="KEIYAKUSHO_CREATE_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="20" DispNumber="20" DispName="送付日" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="KEIYAKUSHO_SEND_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="21" DispNumber="21" DispName="返送日" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="KEIYAKUSHO_RETURN_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="22" DispNumber="22" DispName="保管日" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="KEIYAKUSHO_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="23" DispNumber="23" DispName="更新種別" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_KIHON.KOUSHIN_SHUBETSU WHEN 1 THEN '自動更新' WHEN 2 THEN '単発' ELSE '' END" Format="" />
+      <Column ID="24" DispNumber="24" DispName="有効期間開始" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="YUUKOU_BEGIN" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="25" DispNumber="25" DispName="有効期間終了" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="YUUKOU_END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="26" DispNumber="26" DispName="自動更新終了日" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="KOUSHIN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="27" DispNumber="27" DispName="事前協議" Needs="0" TableName="" Name="CASE WHEN M_ITAKU_KEIYAKU_KIHON.JIZEN_KYOUGI = 1 THEN '要'   WHEN M_ITAKU_KEIYAKU_KIHON.JIZEN_KYOUGI = 2 THEN '否' ELSE '' END" Format="" />
+      <Column ID="29" DispNumber="29" DispName="備考1" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="BIKOU1" Format="" />
+      <Column ID="30" DispNumber="30" DispName="備考2" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="BIKOU2" Format="" />
+      <Column ID="31" DispNumber="31" DispName="個別指定" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="KOBETSU_SHITEI_CHECK" Format="" />
+      <Column ID="32" DispNumber="32" DispName="作成者" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="CREATE_USER" Format="" />
+      <Column ID="33" DispNumber="33" DispName="作成日時" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="CREATE_DATE" Format="" />
+      <Column ID="34" DispNumber="34" DispName="最終更新者" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="UPDATE_USER" Format="" />
+      <Column ID="35" DispNumber="35" DispName="最終更新日時" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="UPDATE_DATE" Format="" />
+      <Column ID="36" DispNumber="36" DispName="削除フラグ" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="DELETE_FLG" Format="" />
+      <Column ID="37" DispNumber="37" DispName="アクセスコード(電子契約OP)" Needs="0" TableName="SOUHUSAKI" Name="ACCESS_CD" Format="" />
+      <Column ID="38" DispNumber="38" DispName="登録方法" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON" Name="CASE M_ITAKU_KEIYAKU_KIHON.ITAKU_KEIYAKU_TOUROKU_HOUHOU WHEN 1 THEN '詳細登録' WHEN 2 THEN '基本登録' ELSE '' END" Format="" />
+      <Column ID="39" DispNumber="39" DispName="社内経路" Needs="0" TableName="SOUHUSAKI" Name="CASE SOUHUSAKI.DENSHI_KEIYAKU_SHANAI_KEIRO WHEN 1 THEN '有' WHEN 2 THEN '無' ELSE '' END" Format="" />
+      <Column ID="40" DispNumber="40" DispName="社内経路名CD(電子契約OP)" Needs="0" TableName="SOUHUSAKI" Name="DENSHI_KEIYAKU_SHANAI_KEIRO_NAME_CD" Format="" />
+      <Column ID="41" DispNumber="41" DispName="社内経路名(電子契約OP)" Needs="0" TableName="SOUHUSAKI" Name="DENSHI_KEIYAKU_SHANAI_KEIRO_NAME" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <!-- 重すぎるので封印 -->
+      <!--<Column ID="1" DispNumber="1" DispName="排出事業場CD(明細)" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON_HST_GENBA" Name="HAISHUTSU_JIGYOUJOU_CD" Format="" />
+      <Column ID="2" DispNumber="2" DispName="排出事業場名(明細)" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON_HST_GENBA" Name="HAISHUTSU_JIGYOUJOU_NAME" Format="" />
+      <Column ID="3" DispNumber="3" DispName="排出事業場住所(明細)" Needs="0" TableName="M_ITAKU_KEIYAKU_KIHON_HST_GENBA" Name="HAISHUTSU_JIGYOUJOU_ADDRESS" Format="" />
+      <Column ID="4" DispNumber="4" DispName="(排出)報告書分類CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_HST" Name="HOUKOKUSHO_BUNRUI_CD" Format="" />
+      <Column ID="5" DispNumber="5" DispName="(排出)報告書分類名" Needs="0" TableName="M_HOUKOKUSHO_BUNRUI1" Name="HOUKOKUSHO_BUNRUI_NAME_RYAKU" Format="" />
+      <Column ID="6" DispNumber="6" DispName="(排出)廃棄物区分CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_HST" Name="HAIKI_KBN_CD" Format="" />
+      <Column ID="7" DispNumber="7" DispName="(排出)廃棄物区分名" Needs="0" TableName="M_HAIKI_KBN1" Name="HAIKI_KBN_NAME_RYAKU" Format="" />
+      <Column ID="8" DispNumber="8" DispName="(排出)処分方法CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_HST" Name="SHOBUN_HOUHOU_CD" Format="" />
+      <Column ID="9" DispNumber="9" DispName="(排出)処分方法名" Needs="0" TableName="M_SHOBUN_HOUHOU1" Name="SHOBUN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="11" DispNumber="11" DispName="(予定)排出事業場CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_YOTEI" Name="HAISHUTSU_JIGYOUJOU_CD" Format="" />
+      <Column ID="12" DispNumber="12" DispName="(予定)排出事業場名" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_YOTEI" Name="HAISHUTSU_JIGYOUJOU_NAME" Format="" />
+      <Column ID="13" DispNumber="13" DispName="(予定)報告書分類CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_YOTEI" Name="HOUKOKUSHO_BUNRUI_CD" Format="" />
+      <Column ID="14" DispNumber="14" DispName="(予定)報告書分類名" Needs="0" TableName="M_HOUKOKUSHO_BUNRUI2" Name="HOUKOKUSHO_BUNRUI_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="15" DispName="(予定)予定数量" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_YOTEI" Name="YOTEI_SUU" Format="4" />
+      <Column ID="16" DispNumber="16" DispName="(予定)単位CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_YOTEI" Name="YOTEI_SUU_UNIT_CD" Format="00" />
+      <Column ID="17" DispNumber="17" DispName="(予定)単位名" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="18" DispNumber="18" DispName="(予定)期間" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_BETSU1_YOTEI.YOTEI_KIKAN WHEN 1 THEN '年' WHEN 2 THEN '月' ELSE '' END" Format="" />
+      <Column ID="19" DispNumber="19" DispName="(予定)委託単価" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_YOTEI" Name="ITAKU_TANKA" Format="5" />
+      <Column ID="20" DispNumber="20" DispName="(予定)運搬単価" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_YOTEI" Name="UPN_TANKA" Format="5" />
+      <Column ID="21" DispNumber="21" DispName="(予定)処分単価" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU1_YOTEI" Name="SBN_TANKA" Format="5" />
+      <Column ID="22" DispNumber="22" DispName="(運搬)運搬事業者CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU2" Name="UNPAN_GYOUSHA_CD" Format="" />
+      <Column ID="23" DispNumber="23" DispName="(運搬)運搬事業者名" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU2" Name="UNPAN_GYOUSHA_NAME" Format="" />
+      <Column ID="24" DispNumber="24" DispName="(運搬)運搬事業者住所" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU2" Name="UNPAN_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="25" DispNumber="25" DispName="(運搬)許可車両台数" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU2" Name="KYOKA_SHARYOU_SUU" Format="#,##0" />
+      <Column ID="26" DispNumber="26" DispName="(処分)処分業者CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="SHOBUN_GYOUSHA_CD" Format="" />
+      <Column ID="27" DispNumber="27" DispName="(処分)処分業者名" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="SHOBUN_GYOUSHA_NAME" Format="" />
+      <Column ID="28" DispNumber="28" DispName="(処分)処分業者住所" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="SHOBUN_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="29" DispNumber="29" DispName="(処分)処分事業場CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="SHOBUN_JIGYOUJOU_CD" Format="" />
+      <Column ID="30" DispNumber="30" DispName="(処分)処分事業場名" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="SHOBUN_JIGYOUJOU_NAME" Format="" />
+      <Column ID="31" DispNumber="31" DispName="(処分)処分事業場住所" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="SHOBUN_JIGYOUJOU_ADDRESS" Format="" />
+      <Column ID="32" DispNumber="32" DispName="(処分)処分方法CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="SHOBUN_HOUHOU_CD" Format="" />
+      <Column ID="33" DispNumber="33" DispName="(処分)処分方法名" Needs="0" TableName="M_SHOBUN_HOUHOU2" Name="SHOBUN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="34" DispNumber="34" DispName="(処分)保管上限" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="HOKAN_JOGEN" Format="4" />
+      <Column ID="35" DispNumber="35" DispName="(処分)単位CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="HOKAN_JOGEN_UNIT_CD" Format="" />
+      <Column ID="36" DispNumber="36" DispName="(処分)単位名" Needs="0" TableName="M_UNIT2" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="37" DispNumber="37" DispName="(処分)施設処理能力(t／日)" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU3" Name="SHISETSU_CAPACITY" Format="" />
+      <Column ID="38" DispNumber="38" DispName="(処分)運搬区間(From)" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_BETSU3.UNPAN_FROM WHEN 1 THEN '排出場所' WHEN 2 THEN '積替・保管施設' ELSE '' END" Format="" />
+      <Column ID="39" DispNumber="39" DispName="(処分)運搬区間(To)" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_BETSU3.UNPAN_FROM WHEN 1 THEN '積替・保管施設' WHEN 2 THEN '処分施設' ELSE '' END" Format="" />
+      <Column ID="40" DispNumber="40" DispName="(処分)混合" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_BETSU3.KONGOU WHEN 1 THEN '許' WHEN 2 THEN '否' ELSE '' END" Format="" />
+      <Column ID="41" DispNumber="41" DispName="(処分)手選別" Needs="0" TableName="\" Name="CASE M_ITAKU_KEIYAKU_BETSU3.SHUSENBETU WHEN 1 THEN '許' WHEN 2 THEN '否' ELSE '' END" Format="" />
+      <Column ID="42" DispNumber="42" DispName="(最終)処分業者CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="LAST_SHOBUN_GYOUSHA_CD" Format="" />
+      <Column ID="43" DispNumber="43" DispName="(最終)処分業者名" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="LAST_SHOBUN_GYOUSHA_NAME" Format="" />
+      <Column ID="44" DispNumber="44" DispName="(最終)処分業者住所" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="LAST_SHOBUN_GYOUSHA_ADDRESS" Format="" />
+      <Column ID="45" DispNumber="45" DispName="(最終)最終処分場CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="LAST_SHOBUN_JIGYOUJOU_CD" Format="" />
+      <Column ID="46" DispNumber="46" DispName="(最終)最終処分場名" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="LAST_SHOBUN_JIGYOUJOU_NAME" Format="" />
+      <Column ID="47" DispNumber="47" DispName="(最終)最終処分場住所" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="LAST_SHOBUN_JIGYOUJOU_ADDRESS" Format="" />
+      <Column ID="48" DispNumber="48" DispName="(最終)処分方法CD" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="SHOBUN_HOUHOU_CD" Format="" />
+      <Column ID="49" DispNumber="49" DispName="(最終)処分方法名" Needs="0" TableName="M_SHOBUN_HOUHOU3" Name="SHOBUN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="50" DispNumber="50" DispName="(最終)施設処理能力(t／日)" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="SHORI_SPEC" Format="" />
+      <Column ID="51" DispNumber="51" DispName="(最終)その他(再生方法等)" Needs="0" TableName="M_ITAKU_KEIYAKU_BETSU4" Name="OTHER" Format="" />
+      <Column ID="52" DispNumber="52" DispName="(最終)分類" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_BETSU4.BUNRUI WHEN 1 THEN 'なし' WHEN 2 THEN '再生先' WHEN 3 THEN '最終処分先' WHEN 4 THEN '再中間処理先' ELSE '' END" Format="" />
+      <Column ID="53" DispNumber="53" DispName="(最終)中間・最終区分" Needs="0" TableName="" Name="CASE M_ITAKU_KEIYAKU_BETSU4.END_KUBUN WHEN 1 THEN 'なし' WHEN 2 THEN '中間' WHEN 3 THEN '最終' ELSE '' END" Format="" />
+      <Column ID="54" DispNumber="54" DispName="(覚書)更新日" Needs="0" TableName="M_ITAKU_KEIYAKU_OBOE" Name="UPDATE_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="55" DispNumber="55" DispName="(覚書)内容" Needs="0" TableName="M_ITAKU_KEIYAKU_OBOE" Name="MEMO" Format="" />
+      <Column ID="56" DispNumber="56" DispName="(運搬許可)業者CD" Needs="0" TableName="M_ITAKU_UPN_KYOKASHO" Name="GYOUSHA_CD" Format="" />
+      <Column ID="57" DispNumber="57" DispName="(運搬許可)業者名" Needs="0" TableName="M_GYOUSHA2" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="58" DispNumber="58" DispName="(運搬許可)現場CD" Needs="0" TableName="M_ITAKU_UPN_KYOKASHO" Name="GENBA_CD" Format="" />
+      <Column ID="59" DispNumber="59" DispName="(運搬許可)現場名" Needs="0" TableName="M_GENBA2" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="60" DispNumber="60" DispName="(運搬許可)地域CD" Needs="0" TableName="M_ITAKU_UPN_KYOKASHO" Name="CHIIKI_CD" Format="" />
+      <Column ID="61" DispNumber="61" DispName="(運搬許可)地域名" Needs="0" TableName="M_CHIIKI1" Name="CHIIKI_NAME_RYAKU" Format="" />
+      <Column ID="62" DispNumber="62" DispName="(運搬許可)行政許可区分" Needs="0" TableName="" Name="CASE M_ITAKU_UPN_KYOKASHO.KYOKA_KBN WHEN 1 THEN '普通産廃運搬' WHEN 2 THEN '特別産廃運搬' WHEN 3 THEN '普通中間処理' WHEN 4 THEN '特別中間処分' WHEN 5 THEN '普通最終処理' WHEN 6 THEN '特別最終処分' ELSE '' END" Format="" />
+      <Column ID="63" DispNumber="63" DispName="(運搬許可)許可番号" Needs="0" TableName="M_ITAKU_UPN_KYOKASHO" Name="KYOKA_NO" Format="" />
+      <Column ID="64" DispNumber="64" DispName="(運搬許可)有効期限" Needs="0" TableName="M_CHIIKIBETSU_KYOKA1" Name="CASE M_ITAKU_UPN_KYOKASHO.KYOKA_KBN%2 WHEN 1 THEN M_CHIIKIBETSU_KYOKA1.FUTSUU_KYOKA_END WHEN 0 THEN M_CHIIKIBETSU_KYOKA1.TOKUBETSU_KYOKA_END ELSE NULL END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="65" DispNumber="65" DispName="(処分許可)業者CD" Needs="0" TableName="M_ITAKU_SBN_KYOKASHO" Name="GYOUSHA_CD" Format="" />
+      <Column ID="66" DispNumber="66" DispName="(処分許可)業者名" Needs="0" TableName="M_GYOUSHA2" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="67" DispNumber="67" DispName="(処分許可)現場CD" Needs="0" TableName="M_ITAKU_SBN_KYOKASHO" Name="GENBA_CD" Format="" />
+      <Column ID="68" DispNumber="68" DispName="(処分許可)現場名" Needs="0" TableName="M_GENBA2" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="69" DispNumber="69" DispName="(処分許可)地域CD" Needs="0" TableName="M_ITAKU_SBN_KYOKASHO" Name="CHIIKI_CD" Format="" />
+      <Column ID="70" DispNumber="70" DispName="(処分許可)地域名" Needs="0" TableName="M_CHIIKI1" Name="CHIIKI_NAME_RYAKU" Format="" />
+      <Column ID="71" DispNumber="71" DispName="(処分許可)行政許可区分" Needs="0" TableName="" Name="CASE M_ITAKU_SBN_KYOKASHO.KYOKA_KBN WHEN 1 THEN '普通産廃運搬' WHEN 2 THEN '特別産廃運搬' WHEN 3 THEN '普通中間処理' WHEN 4 THEN '特別中間処分' WHEN 5 THEN '普通最終処理' WHEN 6 THEN '特別最終処分' ELSE '' END" Format="" />
+      <Column ID="72" DispNumber="72" DispName="(処分許可)許可番号" Needs="0" TableName="M_ITAKU_SBN_KYOKASHO" Name="KYOKA_NO" Format="" />
+      <Column ID="73" DispNumber="73" DispName="(処分許可)有効期限" Needs="0" TableName="M_CHIIKIBETSU_KYOKA2" Name="CASE M_ITAKU_SBN_KYOKASHO.KYOKA_KBN%2 WHEN 1 THEN M_CHIIKIBETSU_KYOKA2.FUTSUU_KYOKA_END WHEN 0 THEN M_CHIIKIBETSU_KYOKA2.TOKUBETSU_KYOKA_END ELSE NULL END" Format="yyyy/MM/dd(ddd)" />-->
+    </Group>
+    <JoinCondition TableName="M_GYOUSHA2">LEFT JOIN M_GYOUSHA M_GYOUSHA2 ON M_ITAKU_UPN_KYOKASHO.GYOUSHA_CD = M_GYOUSHA2.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA3">LEFT JOIN M_GYOUSHA M_GYOUSHA3 ON M_ITAKU_SBN_KYOKASHO.GYOUSHA_CD = M_GYOUSHA3.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA2">LEFT JOIN M_GENBA M_GENBA2 ON M_ITAKU_UPN_KYOKASHO.GYOUSHA_CD = M_GENBA2.GYOUSHA_CD AND M_ITAKU_UPN_KYOKASHO.GENBA_CD = M_GENBA2.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA3">LEFT JOIN M_GENBA M_GENBA3 ON M_ITAKU_SBN_KYOKASHO.GYOUSHA_CD = M_GENBA3.GYOUSHA_CD AND M_ITAKU_SBN_KYOKASHO.GENBA_CD = M_GENBA3.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="M_CHIIKI1">LEFT JOIN M_CHIIKI M_CHIIKI1 ON M_ITAKU_UPN_KYOKASHO.CHIIKI_CD = M_CHIIKI1.CHIIKI_CD</JoinCondition>
+    <JoinCondition TableName="M_CHIIKI2">LEFT JOIN M_CHIIKI M_CHIIKI2 ON M_ITAKU_SBN_KYOKASHO.CHIIKI_CD = M_CHIIKI2.CHIIKI_CD</JoinCondition>
+    <JoinCondition TableName="M_HOUKOKUSHO_BUNRUI1">LEFT JOIN M_HOUKOKUSHO_BUNRUI M_HOUKOKUSHO_BUNRUI1 ON M_ITAKU_KEIYAKU_BETSU1_HST.HOUKOKUSHO_BUNRUI_CD = M_HOUKOKUSHO_BUNRUI1.HOUKOKUSHO_BUNRUI_CD</JoinCondition>
+    <JoinCondition TableName="M_HOUKOKUSHO_BUNRUI2">LEFT JOIN M_HOUKOKUSHO_BUNRUI M_HOUKOKUSHO_BUNRUI2 ON M_ITAKU_KEIYAKU_BETSU1_YOTEI.HOUKOKUSHO_BUNRUI_CD = M_HOUKOKUSHO_BUNRUI2.HOUKOKUSHO_BUNRUI_CD</JoinCondition>
+    <JoinCondition TableName="M_HAIKI_KBN1">LEFT JOIN M_HAIKI_KBN M_HAIKI_KBN1 ON M_ITAKU_KEIYAKU_BETSU1_HST.HAIKI_KBN_CD = M_HAIKI_KBN1.HAIKI_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_SHOBUN_HOUHOU1">LEFT JOIN M_SHOBUN_HOUHOU M_SHOBUN_HOUHOU1 ON M_ITAKU_KEIYAKU_BETSU1_HST.SHOBUN_HOUHOU_CD = M_SHOBUN_HOUHOU1.SHOBUN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHOBUN_HOUHOU2">LEFT JOIN M_SHOBUN_HOUHOU M_SHOBUN_HOUHOU2 ON M_ITAKU_KEIYAKU_BETSU3.SHOBUN_HOUHOU_CD = M_SHOBUN_HOUHOU2.SHOBUN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_SHOBUN_HOUHOU3">LEFT JOIN M_SHOBUN_HOUHOU M_SHOBUN_HOUHOU3 ON M_ITAKU_KEIYAKU_BETSU4.SHOBUN_HOUHOU_CD = M_SHOBUN_HOUHOU3.SHOBUN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON M_ITAKU_KEIYAKU_BETSU1_YOTEI.YOTEI_SUU_UNIT_CD = M_UNIT1.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT2">LEFT JOIN M_UNIT M_UNIT2 ON M_ITAKU_KEIYAKU_BETSU3.HOKAN_JOGEN_UNIT_CD = M_UNIT2.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_CHIIKIBETSU_KYOKA1">LEFT JOIN M_CHIIKIBETSU_KYOKA M_CHIIKIBETSU_KYOKA1 ON M_ITAKU_UPN_KYOKASHO.CHIIKI_CD = M_CHIIKIBETSU_KYOKA1.CHIIKI_CD AND M_ITAKU_UPN_KYOKASHO.GYOUSHA_CD = M_CHIIKIBETSU_KYOKA1.GYOUSHA_CD AND M_ITAKU_UPN_KYOKASHO.GENBA_CD = M_CHIIKIBETSU_KYOKA1.GENBA_CD AND M_ITAKU_UPN_KYOKASHO.KYOKA_NO = (CASE M_ITAKU_UPN_KYOKASHO.KYOKA_KBN%2 WHEN 1 THEN M_CHIIKIBETSU_KYOKA1.FUTSUU_KYOKA_NO WHEN 0 THEN M_CHIIKIBETSU_KYOKA1.TOKUBETSU_KYOKA_NO ELSE NULL END)</JoinCondition>
+    <JoinCondition TableName="M_CHIIKIBETSU_KYOKA2">LEFT JOIN M_CHIIKIBETSU_KYOKA M_CHIIKIBETSU_KYOKA2 ON M_ITAKU_SBN_KYOKASHO.CHIIKI_CD = M_CHIIKIBETSU_KYOKA2.CHIIKI_CD AND M_ITAKU_SBN_KYOKASHO.GYOUSHA_CD = M_CHIIKIBETSU_KYOKA2.GYOUSHA_CD AND M_ITAKU_SBN_KYOKASHO.GENBA_CD = M_CHIIKIBETSU_KYOKA2.GENBA_CD AND M_ITAKU_SBN_KYOKASHO.KYOKA_NO = (CASE M_ITAKU_SBN_KYOKASHO.KYOKA_KBN%2 WHEN 1 THEN M_CHIIKIBETSU_KYOKA2.FUTSUU_KYOKA_NO WHEN 0 THEN M_CHIIKIBETSU_KYOKA2.TOKUBETSU_KYOKA_NO ELSE NULL END)</JoinCondition>
+  </OutputColumnSelect>
+</root>

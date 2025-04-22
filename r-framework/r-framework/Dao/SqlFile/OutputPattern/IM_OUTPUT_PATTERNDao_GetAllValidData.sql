@@ -1,0 +1,12 @@
+﻿SELECT * FROM dbo.M_OUTPUT_PATTERN
+WHERE 
+/*IF data.ISNOT_NEED_DELETE_FLG.IsNull || data.ISNOT_NEED_DELETE_FLG.IsFalse*/
+ DELETE_FLG = 0
+-- ELSE
+ 1 = 1
+/*END*/
+/*IF !data.SYSTEM_ID.IsNull*/AND SYSTEM_ID = /*data.SYSTEM_ID.Value*//*END*/
+/*IF !data.SEQ.IsNull*/AND SEQ = /*data.SEQ.Value*//*END*/
+/*IF !data.DENSHU_KBN_CD.IsNull*/AND DENSHU_KBN_CD = /*data.DENSHU_KBN_CD.Value*//*END*/
+/*IF data.PATTERN_NAME!=null*/AND PATTERN_NAME = /*data.PATTERN_NAME*//*END*/
+ORDER BY SYSTEM_ID, SEQ, DENSHU_KBN_CD

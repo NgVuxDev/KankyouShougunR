@@ -1,0 +1,8 @@
+﻿SELECT
+COUNT(*)
+FROM
+T_SEISAN_DENPYOU
+WHERE
+DELETE_FLG = 0
+AND TORIHIKISAKI_CD = /*torihikisakiCd*/
+AND SEISAN_NUMBER > /*seisanNumber*/

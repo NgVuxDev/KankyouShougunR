@@ -1,0 +1,162 @@
+﻿<?xml version="1.0"?>
+<CurrentUserCustomConfigProfile>
+  <Settings>
+    <!--ログイン時の設定情報-->
+    <LoginInfo>
+      <!--ログインごとに書き換える-->
+      <User Code="123456" Pwd="abcd1234" PwdSaved="1"/>
+    </LoginInfo>
+    <!--初期値の設定情報-->
+    <DefaultValue>
+      <ItemSettings>
+        <Name>拠点CD</Name>
+        <Value>0</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>終了日警告</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>契約アラート</Name>
+        <Value>1</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>キャッシャ連動</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>更新CSV出力</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>マスタ単価更新</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>CSV保管先</Name>
+        <Value></Value>
+      </ItemSettings>
+      <!--PhuocLoc 2020/04/03 #134980 -Start-->
+      <ItemSettings>
+        <Name>売上支払請求伝票</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>売上支払支払伝票</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>売上支払仕切書出力区分</Name>
+        <Value>1</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>出荷請求伝票</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>出荷支払伝票</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>出荷仕切書出力区分</Name>
+        <Value>1</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>出荷計量票出力区分</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>受入請求伝票</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>受入支払伝票</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>受入仕切書出力区分</Name>
+        <Value>1</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>受入計量票出力区分</Name>
+        <Value>2</Value>
+      </ItemSettings>
+    <!--PhuocLoc 2020/04/03 #134980 -End-->
+    <!--PhuocLoc 2020/12/01 #136217 -Start-->
+    <ItemSettings>
+      <Name>滞留タブ表示</Name>
+      <Value>1</Value>
+    </ItemSettings>
+    <!--PhuocLoc 2020/12/01 #136217 -End-->
+      <ItemSettings>
+        <Name>電子契約社内経路</Name>
+        <Value>2</Value>
+      </ItemSettings>
+      <ItemSettings>
+        <Name>電子契約社内経路CD</Name>
+        <Value></Value>
+      </ItemSettings>
+    </DefaultValue>
+    <!--帳票関連のプリンタ設定情報-->
+    <PrintReport>
+      <PrintSettings>
+        <!-- Report：出力帳票名 Printer：出力プリンタ名 -->
+        <Name Report="産廃マニフェスト（単票）" Printer="EPSON VP-4300" />
+        <!-- Size：出力用紙 Source：出力デバイス Landscape：用紙向き(true=横 false=縦) Color：(true=カラー false=白黒) -->
+        <Paper Size="産廃単票" Source="手差し" Landscape="false" Color="false" />
+        <!-- 余白設定 -->
+        <Margin Top="0" Bottom="0" Left="0" Right="0" />
+      </PrintSettings>
+      <PrintSettings>
+        <Name Report="産廃マニフェスト（連票）" Printer="EPSON VP-4300" />
+        <Paper Size="産廃連票" Source="ﾌﾟｯｼｭﾄﾗｸﾀ" Landscape="true" Color="false" />
+        <Margin Top="0" Bottom="0" Left="0" Right="0" />
+      </PrintSettings>
+      <PrintSettings>
+        <Name Report="積替マニフェスト（単票）" Printer="EPSON VP-4300" />
+        <Paper Size="積替単票" Source="手差し" Landscape="false" Color="false" />
+        <Margin Top="0" Bottom="0" Left="0" Right="0" />
+      </PrintSettings>
+      <PrintSettings>
+        <Name Report="積替マニフェスト（連票）" Printer="EPSON VP-4300" />
+        <Paper Size="積替連票" Source="ﾌﾟｯｼｭﾄﾗｸﾀ" Landscape="true" Color="false" />
+        <Margin Top="0" Bottom="0" Left="0" Right="0" />
+      </PrintSettings>
+      <PrintSettings>
+        <Name Report="建廃マニフェスト（単票）" Printer="EPSON VP-4300" />
+        <Paper Size="建廃単票" Source="手差し" Landscape="false" Color="false" />
+        <Margin Top="0" Bottom="0" Left="0" Right="0" />
+      </PrintSettings>
+      <PrintSettings>
+        <Name Report="建廃マニフェスト（連票）" Printer="EPSON VP-4300" />
+        <Paper Size="建廃連票" Source="ﾌﾟｯｼｭﾄﾗｸﾀ" Landscape="true" Color="false" />
+        <Margin Top="0" Bottom="0" Left="0" Right="0" />
+      </PrintSettings>
+    </PrintReport>
+    <!--重量値関連の設定情報-->
+    <TScaleSettings>
+      <!--Use：1.使用する　2.使用しない-->
+      <!--WeightDisplaySwitch：1.自動表示　2.手動表示-->
+      <!--FilePath：重量ファイルのフルパス-->
+      <!--FileNoReactTime：無反応検出間隔。設定値より大きい時間、更新時間の差分が得られない場合は無反応とする時間間隔。単位は秒-->
+      <!--FileDetectTime：ファイル検出間隔。設定値の時間でファイルを検出しにいく時間間隔。単位はミリ秒-->
+      <!--DetectAllowWeight：検出重量。設定値より大きい値の時に、データを許容する。単位はkg-->
+      <!--STWeightCount：安定重量回数。ファイル検出間隔で検出したデータが、この回数分同じだった場合、安定とみなす。単位は回-->
+      <Scale Use="1" WeightDisplaySwitch="1" FilePath="TruckScale1.txt" FileNoReactTime="120" FileDetectTime="1200" DetectAllowWeight="300" STWeightCount="2" />
+    </TScaleSettings>
+    <CtiSettings>
+      <!--Use：1.使用する　2.使用しない-->
+      <!--FilePath：連動テキストファイルののフルパス-->
+      <!--FileDetectTime：ファイル検出間隔。設定値の時間でファイルを検出しにいく時間間隔。単位はミリ秒-->
+      <Values Use = "" FilePath = "" FileDetectTime=""/>
+    </CtiSettings>
+    <!--外部プログラム起動の設定情報-->
+    <ExternalProgram>
+      <!--Name：プログラム名。ProgramsInfoEnumのメンバー名と一致させる事-->
+      <!--FilePath：外部プログラムのパス。相対パス・絶対パス両方可-->
+      <!--Argument：外部プログラム起動時の引数-->
+      <!--<ProgramInfos Name ="SAMPLE" FilePath ="C:\sample\sample\sample.exe" Argument="" />-->
+      <ProgramInfos Name ="NENJI_HOKOKU" FilePath =".\AnnualReportCSVOutput\AnnualReportCSVOutput.exe" Argument="" />
+    </ExternalProgram>
+  </Settings>
+</CurrentUserCustomConfigProfile>

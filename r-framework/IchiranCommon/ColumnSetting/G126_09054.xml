@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9054">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="一次二次区分" Needs="0" TableName="" Name="CASE WHEN DT_R18.FIRST_MANIFEST_FLAG IS NULL THEN '一次' WHEN DT_R18.FIRST_MANIFEST_FLAG = '' THEN '一次' WHEN ISNULL(HST_GYOUSHA.JISHA_KBN, 0) = 0 THEN '一次' ELSE '二次' END" Format="" />
+      <Column ID="2" DispNumber="" DispName="登録情報承認待ち" Needs="0" TableName="" Name="CASE WHEN (DT_MF_TOC.APPROVAL_SEQ != 0 OR DT_MF_TOC.APPROVAL_SEQ IS NOT NULL) THEN '承認待ち'  ELSE '待ちなし' END" Format="" />
+      <Column ID="3" DispNumber="" DispName="運搬終了報告済" Needs="0" TableName="" Name="CASE WHEN DT_R19.UPN_SHA_EDI_MEMBER_ID = '0000000' THEN CAST(1 AS BIT) ELSE (CASE DT_R18.UPN_ENDREP_FLAG WHEN 1 THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END) END" Format="" />
+      <Column ID="4" DispNumber="" DispName="処分終了報告済" Needs="0" TableName="" Name="CASE WHEN DT_R18.SBN_SHA_MEMBER_ID = '0000000' THEN CAST(1 AS BIT) ELSE (CASE DT_R18.SBN_ENDREP_FLAG WHEN 1 THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END) END" Format="" />
+      <Column ID="5" DispNumber="" DispName="最終処分終了報告済" Needs="0" TableName="" Name="CASE WHEN DT_R18.SBN_SHA_MEMBER_ID = '0000000' THEN CAST(1 AS BIT) ELSE (CASE DT_R18.LAST_SBN_ENDREP_FLAG WHEN 1 THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END) END" Format="" />
+      <Column ID="6" DispNumber="" DispName="マニフェスト区分" Needs="0" TableName="" Name="CASE DT_R18.MANIFEST_KBN WHEN 1 THEN '予約' WHEN 2 THEN 'マニフェスト' ELSE '' END" Format="" />
+      <Column ID="7" DispNumber="" DispName="予約修正権限" Needs="0" TableName="" Name="CASE DT_R18.KENGEN_CODE WHEN 1 THEN '非許可' WHEN 2 THEN '収集のみ' WHEN 3 THEN '処分のみ' WHEN 4 THEN '収集処分' ELSE '' END" Format="" />
+      <Column ID="8" DispNumber="" DispName="入力区分" Needs="0" TableName="" Name="CASE DT_MF_TOC.KIND WHEN 5 THEN '手動' ELSE '自動' END" Format="" />
+      <Column ID="9" DispNumber="" DispName="引渡日" Needs="0" TableName="" Name="CASE WHEN ISDATE(DT_R18.HIKIWATASHI_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, DT_R18.HIKIWATASHI_DATE) END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="10" DispNumber="" DispName="引渡担当者" Needs="0" TableName="DT_R18" Name="HIKIWATASHI_TAN_NAME" Format="" />
+      <Column ID="11" DispNumber="" DispName="登録担当者" Needs="0" TableName="DT_R18" Name="REGI_TAN" Format="" />
+      <Column ID="12" DispNumber="" DispName="マニフェスト番号" Needs="0" TableName="DT_R18" Name="MANIFEST_ID" Format="" />
+      <Column ID="13" DispNumber="" DispName="連絡番号1" Needs="0" TableName="DT_R05_1" Name="RENRAKU_ID" Format="" />
+      <Column ID="14" DispNumber="" DispName="連絡番号2" Needs="0" TableName="DT_R05_2" Name="RENRAKU_ID" Format="" />
+      <Column ID="15" DispNumber="" DispName="連絡番号3" Needs="0" TableName="DT_R05_3" Name="RENRAKU_ID" Format="" />
+      <Column ID="16" DispNumber="" DispName="排出事業者CD" Needs="0" TableName="DT_R18_EX" Name="HST_GYOUSHA_CD" Format="" />
+      <Column ID="17" DispNumber="" DispName="排出事業者名" Needs="0" TableName="DT_R18" Name="HST_SHA_NAME" Format="" />
+      <Column ID="18" DispNumber="" DispName="排出事業者郵便番号" Needs="0" TableName="DT_R18" Name="HST_SHA_POST" Format="" />
+      <Column ID="19" DispNumber="" DispName="排出事業者電話番号" Needs="0" TableName="DT_R18" Name="HST_SHA_TEL" Format="" />
+      <Column ID="20" DispNumber="" DispName="排出事業者住所" Needs="0" TableName="" Name="ISNULL(DT_R18.HST_SHA_ADDRESS1, '') + ISNULL(DT_R18.HST_SHA_ADDRESS2, '') + ISNULL(DT_R18.HST_SHA_ADDRESS3, '') + ISNULL(DT_R18.HST_SHA_ADDRESS4, '')" Format="" />
+      <Column ID="21" DispNumber="" DispName="排出事業者加入者番号" Needs="0" TableName="DT_R18" Name="HST_SHA_EDI_MEMBER_ID" Format="" />
+      <Column ID="22" DispNumber="" DispName="排出事業場CD" Needs="0" TableName="DT_R18_EX" Name="HST_GENBA_CD" Format="" />
+      <Column ID="23" DispNumber="" DispName="排出事業場名" Needs="0" TableName="DT_R18" Name="HST_JOU_NAME" Format="" />
+      <Column ID="24" DispNumber="" DispName="排出事業場郵便番号" Needs="0" TableName="DT_R18" Name="HST_JOU_POST_NO" Format="" />
+      <Column ID="25" DispNumber="" DispName="排出事業場電話番号" Needs="0" TableName="DT_R18" Name="HST_JOU_TEL" Format="" />
+      <Column ID="26" DispNumber="" DispName="排出事業場住所" Needs="0" TableName="DT_R18" Name="ISNULL(DT_R18.HST_JOU_ADDRESS1, '') + ISNULL(DT_R18.HST_JOU_ADDRESS2, '') + ISNULL(DT_R18.HST_JOU_ADDRESS3, '') + ISNULL(DT_R18.HST_JOU_ADDRESS4, '')" Format="" />
+      <Column ID="27" DispNumber="" DispName="排出事業場事業場番号" Needs="0" TableName="M_DENSHI_JIGYOUJOU1" Name="JIGYOUJOU_CD" Format="" />
+      <Column ID="28" DispNumber="" DispName="中間処理産業廃棄物区分" Needs="0" TableName="" Name="CASE DT_R18.FIRST_MANIFEST_FLAG WHEN 1 THEN '当欄指定のとおり' WHEN 2 THEN '1次不要' WHEN 3 THEN '帳簿記載のとおり' ELSE '' END" Format="" />
+      <Column ID="29" DispNumber="" DispName="最終処分の場所(予定)区分" Needs="0" TableName="" Name="CASE DT_R18.LAST_SBN_JOU_KISAI_FLAG WHEN 0 THEN '委託契約書記載のとおり' WHEN 1 THEN '当欄指定のとおり' ELSE '' END" Format="" />
+      <Column ID="30" DispNumber="" DispName="処分受託者CD" Needs="0" TableName="DT_R18_EX" Name="SBN_GYOUSHA_CD" Format="" />
+      <Column ID="31" DispNumber="" DispName="処分受託者名" Needs="0" TableName="DT_R18" Name="SBN_SHA_NAME" Format="" />
+      <Column ID="32" DispNumber="" DispName="処分受託者郵便番号" Needs="0" TableName="DT_R18" Name="SBN_SHA_POST" Format="00" />
+      <Column ID="33" DispNumber="" DispName="処分受託者電話番号" Needs="0" TableName="DT_R18" Name="SBN_SHA_TEL" Format="" />
+      <Column ID="34" DispNumber="" DispName="処分受託者住所" Needs="0" TableName="" Name="ISNULL(DT_R18.SBN_SHA_ADDRESS1, '') + ISNULL(DT_R18.SBN_SHA_ADDRESS2, '') + ISNULL(DT_R18.SBN_SHA_ADDRESS3, '') + ISNULL(DT_R18.SBN_SHA_ADDRESS4, '')" Format="" />
+      <Column ID="35" DispNumber="" DispName="処分受託者加入者番号" Needs="0" TableName="DT_R18" Name="CASE WHEN ((DT_R18.SBN_SHA_MEMBER_ID = '0000000') and (DT_R18_EX.NO_REP_SBN_EDI_MEMBER_ID is not null)) THEN DT_R18_EX.NO_REP_SBN_EDI_MEMBER_ID ELSE DT_R18.SBN_SHA_MEMBER_ID END" Format="" />
+      <Column ID="36" DispNumber="" DispName="処分受託者許可番号" Needs="0" TableName="DT_R18" Name="SBN_SHA_KYOKA_ID" Format="" />
+      <Column ID="37" DispNumber="" DispName="処分事業場CD" Needs="0" TableName="DT_R18_EX" Name="SBN_GENBA_CD" Format="" />
+      <Column ID="38" DispNumber="" DispName="処分事業場名" Needs="0" TableName="DT_R19_LAST" Name="UPNSAKI_JOU_NAME" Format="" />
+      <Column ID="39" DispNumber="" DispName="処分事業場郵便番号" Needs="0" TableName="DT_R19_LAST" Name="UPNSAKI_JOU_POST" Format="00" />
+      <Column ID="40" DispNumber="" DispName="処分事業場電話番号" Needs="0" TableName="DT_R19_LAST" Name="UPNSAKI_JOU_TEL" Format="" />
+      <Column ID="41" DispNumber="" DispName="処分事業場住所" Needs="0" TableName="" Name="ISNULL(DT_R19_LAST.UPNSAKI_JOU_ADDRESS1, '') + ISNULL(DT_R19_LAST.UPNSAKI_JOU_ADDRESS2, '') + ISNULL(DT_R19_LAST.UPNSAKI_JOU_ADDRESS3, '') + ISNULL(DT_R19_LAST.UPNSAKI_JOU_ADDRESS4, '')" Format="" />
+      <Column ID="42" DispNumber="" DispName="処分事業場事業場番号" Needs="0" TableName="M_DENSHI_JIGYOUJOU2" Name="JIGYOUJOU_CD" Format="" />
+      <Column ID="43" DispNumber="" DispName="処分事業場処分方法CD" Needs="0" TableName="DT_R18" Name="SBN_WAY_CODE" Format="000" />
+      <Column ID="44" DispNumber="" DispName="処分事業場処分方法名" Needs="0" TableName="DT_R18" Name="SBN_WAY_NAME" Format="" />
+      <Column ID="45" DispNumber="" DispName="処分事業場(将軍)処分方法CD" Needs="0" TableName="DT_R18_EX" Name="SBN_HOUHOU_CD" Format="" />
+      <Column ID="46" DispNumber="" DispName="処分事業場(将軍)処分方法名" Needs="0" TableName="M_SHOBUN_HOUHOU1" Name="SHOBUN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="47" DispNumber="" DispName="処分受託者報告区分" Needs="0" TableName="" Name="CASE DT_R18.SBN_ENDREP_KBN WHEN 1 THEN '中間' WHEN 2 THEN '最終' ELSE '' END" Format="" />
+      <Column ID="48" DispNumber="" DispName="処分受託者処分終了日" Needs="0" TableName="" Name="CASE WHEN ISDATE(DT_R18.SBN_END_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, DT_R18.SBN_END_DATE) END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="49" DispNumber="" DispName="処分受託者廃棄物受領日" Needs="0" TableName="" Name="CASE WHEN ISDATE(DT_R18.HAIKI_IN_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, DT_R18.HAIKI_IN_DATE) END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="50" DispNumber="" DispName="処分受託者報告担当者CD" Needs="0" TableName="DT_R18_EX" Name="HOUKOKU_TANTOUSHA_CD" Format="" />
+      <Column ID="51" DispNumber="" DispName="処分受託者報告担当者名" Needs="0" TableName="DT_R18" Name="REP_TAN_NAME" Format="" />
+      <Column ID="52" DispNumber="" DispName="処分受託者処分担当者CD" Needs="0" TableName="DT_R18_EX" Name="SBN_TANTOUSHA_CD" Format="" />
+      <Column ID="53" DispNumber="" DispName="処分受託者処分担当者名" Needs="0" TableName="DT_R18" Name="SBN_TAN_NAME" Format="" />
+      <Column ID="54" DispNumber="" DispName="処分受託者運搬担当者CD" Needs="0" TableName="DT_R18_EX" Name="UPN_TANTOUSHA_CD" Format="" />
+      <Column ID="55" DispNumber="" DispName="処分受託者運搬担当者名" Needs="0" TableName="DT_R18" Name="UPN_TAN_NAME" Format="" />
+      <Column ID="56" DispNumber="" DispName="処分受託者車輌番号CD" Needs="0" TableName="DT_R18_EX" Name="SHARYOU_CD" Format="" />
+      <Column ID="57" DispNumber="" DispName="処分受託者車輌番号名" Needs="0" TableName="DT_R18" Name="CAR_NO" Format="" />
+      <Column ID="58" DispNumber="" DispName="処分受託者受入量" Needs="0" TableName="DT_R18" Name="RECEPT_SUU" Format="#,##0.####" />
+      <Column ID="59" DispNumber="" DispName="処分受託者受入単位CD" Needs="0" TableName="" Name="CAST(DT_R18.RECEPT_UNIT_CODE AS SMALLINT)" Format="00" />
+      <Column ID="60" DispNumber="" DispName="処分受託者受入単位名" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="61" DispNumber="" DispName="処分受託者最終処分終了日" Needs="0" TableName="" Name="CASE WHEN ISDATE(DT_R18.LAST_SBN_END_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, DT_R18.LAST_SBN_END_DATE) END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="62" DispNumber="" DispName="処分受託者備考" Needs="0" TableName="DT_R18" Name="SBN_REP_BIKOU" Format="" />
+      <Column ID="63" DispNumber="" DispName="備考1" Needs="0" TableName="DT_R06_1" Name="BIKOU" Format="" />
+      <Column ID="64" DispNumber="" DispName="備考2" Needs="0" TableName="DT_R06_2" Name="BIKOU" Format="" />
+      <Column ID="65" DispNumber="" DispName="備考3" Needs="0" TableName="DT_R06_3" Name="BIKOU" Format="" />
+      <Column ID="66" DispNumber="" DispName="備考4" Needs="0" TableName="DT_R06_4" Name="BIKOU" Format="" />
+      <Column ID="67" DispNumber="" DispName="備考5" Needs="0" TableName="DT_R06_5" Name="BIKOU" Format="" />
+      <Column ID="68" DispNumber="" DispName="作成者" Needs="0" TableName="DT_R18_EX" Name="CREATE_USER" Format="" />
+      <Column ID="69" DispNumber="" DispName="作成日時" Needs="0" TableName="DT_MF_TOC" Name="CREATE_DATE" Format="" />
+      <Column ID="70" DispNumber="" DispName="作成PC" Needs="0" TableName="DT_R18_EX" Name="CREATE_PC" Format="" />
+      <Column ID="71" DispNumber="" DispName="最終更新者" Needs="0" TableName="DT_R18_EX" Name="UPDATE_USER" Format="" />
+      <Column ID="72" DispNumber="" DispName="最終更新日時" Needs="0" TableName="DT_R18_EX" Name="UPDATE_DATE" Format="" />
+      <Column ID="73" DispNumber="" DispName="最終更新PC" Needs="0" TableName="DT_R18_EX" Name="UPDATE_PC" Format="" />
+      <Column ID="74" DispNumber="" DispName="削除フラグ" Needs="0" TableName="DT_R18_EX" Name="DELETE_FLG" Format="" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="廃棄物種類CD" Needs="0" TableName="" Name="ISNULL(DT_R18.HAIKI_DAI_CODE, '') + ISNULL(DT_R18.HAIKI_CHU_CODE, '') + ISNULL(DT_R18.HAIKI_SHO_CODE, '') + ISNULL(DT_R18.HAIKI_SAI_CODE, '')" Format="" />
+      <Column ID="2" DispNumber="" DispName="廃棄物種類名" Needs="0" TableName="DT_R18" Name="HAIKI_SHURUI" Format="" />
+      <Column ID="3" DispNumber="" DispName="廃棄物名称CD" Needs="0" TableName="DT_R18_EX" Name="HAIKI_NAME_CD" Format="" />
+      <Column ID="4" DispNumber="" DispName="廃棄物名称" Needs="0" TableName="DT_R18" Name="HAIKI_NAME" Format="" />
+      <Column ID="5" DispNumber="" DispName="報告書分類CD" Needs="0" TableName="M_DENSHI_HAIKI_SHURUI" Name="HOUKOKUSHO_BUNRUI_CD" Format="" />
+      <Column ID="6" DispNumber="" DispName="報告書分類名" Needs="0" TableName="M_HOUKOKUSHO_BUNRUI" Name="HOUKOKUSHO_BUNRUI_NAME_RYAKU" Format="" />
+      <Column ID="7" DispNumber="" DispName="数量" Needs="0" TableName="DT_R18" Name="HAIKI_SUU" Format="#,##0.####" />
+      <Column ID="8" DispNumber="" DispName="廃棄物の数量単位CD" Needs="0" TableName="" Name="CAST(DT_R18.HAIKI_UNIT_CODE AS SMALLINT)" Format="00" />
+      <Column ID="9" DispNumber="" DispName="廃棄物の数量単位名" Needs="0" TableName="M_UNIT2" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="10" DispNumber="" DispName="換算後数量" Needs="0" TableName="DT_R18_EX" Name="KANSAN_SUU" Format="#,##0.####" />
+      <Column ID="11" DispNumber="" DispName="減容後数量" Needs="0" TableName="DT_R18_EX" Name="GENNYOU_SUU" Format="#,##0.####" />
+      <Column ID="12" DispNumber="" DispName="廃棄物の確定数量" Needs="0" TableName="DT_R18" Name="HAIKI_KAKUTEI_SUU" Format="#,##0.####" />
+      <Column ID="13" DispNumber="" DispName="廃棄物の確定数量単位CD" Needs="0" TableName="" Name="CAST(DT_R18.HAIKI_KAKUTEI_UNIT_CODE AS SMALLINT)" Format="00" />
+      <Column ID="14" DispNumber="" DispName="廃棄物の確定数量単位名" Needs="0" TableName="M_UNIT3" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="" DispName="荷姿CD" Needs="0" TableName="DT_R18" Name="NISUGATA_CODE" Format="" />
+      <Column ID="16" DispNumber="" DispName="荷姿名" Needs="0" TableName="DT_R18" Name="NISUGATA_NAME" Format="" />
+      <Column ID="17" DispNumber="" DispName="荷姿数量" Needs="0" TableName="DT_R18" Name="NISUGATA_SUU" Format="#,##0.####" />
+      <Column ID="18" DispNumber="" DispName="数量確定者CD" Needs="0" TableName="DT_R18" Name="SUU_KAKUTEI_CODE" Format="" />
+      <Column ID="19" DispNumber="" DispName="数量確定者名" Needs="0" TableName="DT_R18" Name="CASE DT_R18.SUU_KAKUTEI_CODE WHEN 1 THEN '排出事業者' WHEN 2 THEN '処分業者' WHEN 3 THEN '収集運搬業者(区間1)' WHEN 4 THEN '収集運搬業者(区間2)' WHEN 5 THEN '収集運搬業者(区間3)' WHEN 6 THEN '収集運搬業者(区間4)' WHEN 7 THEN '収集運搬業者(区間5)' ELSE '' END" Format="" />
+      <Column ID="20" DispNumber="" DispName="有害物質CD1" Needs="0" TableName="DT_R02_1" Name="YUUGAI_CODE" Format="" />
+      <Column ID="21" DispNumber="" DispName="有害物質名1" Needs="0" TableName="DT_R02_1" Name="YUUGAI_NAME" Format="" />
+      <Column ID="22" DispNumber="" DispName="有害物質CD2" Needs="0" TableName="DT_R02_2" Name="YUUGAI_CODE" Format="" />
+      <Column ID="23" DispNumber="" DispName="有害物質名2" Needs="0" TableName="DT_R02_2" Name="YUUGAI_NAME" Format="" />
+      <Column ID="24" DispNumber="" DispName="有害物質CD3" Needs="0" TableName="DT_R02_3" Name="YUUGAI_CODE" Format="" />
+      <Column ID="25" DispNumber="" DispName="有害物質名3" Needs="0" TableName="DT_R02_3" Name="YUUGAI_NAME" Format="" />
+      <Column ID="26" DispNumber="" DispName="有害物質CD4" Needs="0" TableName="DT_R02_4" Name="YUUGAI_CODE" Format="" />
+      <Column ID="27" DispNumber="" DispName="有害物質名4" Needs="0" TableName="DT_R02_4" Name="YUUGAI_NAME" Format="" />
+      <Column ID="28" DispNumber="" DispName="有害物質CD5" Needs="0" TableName="DT_R02_5" Name="YUUGAI_CODE" Format="" />
+      <Column ID="29" DispNumber="" DispName="有害物質名5" Needs="0" TableName="DT_R02_5" Name="YUUGAI_NAME" Format="" />
+      <Column ID="30" DispNumber="" DispName="有害物質CD6" Needs="0" TableName="DT_R02_6" Name="YUUGAI_CODE" Format="" />
+      <Column ID="31" DispNumber="" DispName="有害物質名6" Needs="0" TableName="DT_R02_6" Name="YUUGAI_NAME" Format="" />
+      <!--<Column ID="32" DispNumber="" DispName="中間処理産業廃棄物マニフェスト種類" Needs="0" TableName="" Name="CASE DT_R08.MEDIA_TYPE WHEN 1 THEN '紙' WHEN 2 THEN '電子' ELSE '' END" Format="" />
+      <Column ID="33" DispNumber="" DispName="中間処理産業廃棄物マニフェスト番号/交付番号" Needs="0" TableName="DT_R08" Name="FIRST_MANIFEST_ID" Format="" />
+      <Column ID="34" DispNumber="" DispName="中間処理産業廃棄物連絡番号1" Needs="0" TableName="DT_R05_1" Name="RENRAKU_ID" Format="" />
+      <Column ID="35" DispNumber="" DispName="中間処理産業廃棄物連絡番号2" Needs="0" TableName="DT_R05_2" Name="RENRAKU_ID" Format="" />
+      <Column ID="36" DispNumber="" DispName="中間処理産業廃棄物連絡番号3" Needs="0" TableName="DT_R05_3" Name="RENRAKU_ID" Format="" />
+      <Column ID="37" DispNumber="" DispName="中間処理産業廃棄物排出事業者CD" Needs="0" TableName="DT_R08_EX" Name="HST_GYOUSHA_CD" Format="" />
+      <Column ID="38" DispNumber="" DispName="中間処理産業廃棄物排出事業者名" Needs="0" TableName="DT_R08" Name="HST_SHA_NAME" Format="" />
+      <Column ID="39" DispNumber="" DispName="中間処理産業廃棄物排出事業場CD" Needs="0" TableName="DT_R08_EX" Name="HST_GENBA_CD" Format="" />
+      <Column ID="40" DispNumber="" DispName="中間処理産業廃棄物排出事業場名" Needs="0" TableName="DT_R08" Name="HST_JOU_NAME" Format="" />
+      <Column ID="41" DispNumber="" DispName="中間処理産業廃棄物引渡日/交付年月日" Needs="0" TableName="" Name="CASE WHEN ISDATE(DT_R08.KOUHU_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, DT_R08.KOUHU_DATE) END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="42" DispNumber="" DispName="中間処理産業廃棄物廃棄物種類CD" Needs="0" TableName="DT_R08_EX" Name="HAIKI_SHURUI_CD" Format="" />
+      <Column ID="43" DispNumber="" DispName="中間処理産業廃棄物廃棄物種類名" Needs="0" TableName="DT_R08" Name="HAIKI_SHURUI" Format="" />
+      <Column ID="44" DispNumber="" DispName="中間処理産業廃棄物数量" Needs="0" TableName="DT_R08" Name="HAIKI_SUU" Format="#,##0.####" />
+      <Column ID="45" DispNumber="" DispName="中間処理産業廃棄物単位CD" Needs="0" TableName="" Name="CAST(DT_R08.HAIKI_SUU_UNIT AS SMALLINT)" Format="00" />
+      <Column ID="46" DispNumber="" DispName="中間処理産業廃棄物単位名" Needs="0" TableName="M_UNIT4" Name="UNIT_NAME_RYAKU" Format="" />-->
+      <Column ID="47" DispNumber="" DispName="最終処分の場所(予定)No." Needs="0" TableName="DT_R04" Name="REC_SEQ" Format="" />
+      <Column ID="48" DispNumber="" DispName="最終処分の場所(予定)最終処分業者CD" Needs="0" TableName="DT_R04_EX" Name="LAST_SBN_GYOUSHA_CD" Format="" />
+      <Column ID="49" DispNumber="" DispName="最終処分の場所(予定)最終処分業者名" Needs="0" TableName="M_DENSHI_JIGYOUSHA1" Name="JIGYOUSHA_NAME" Format="" />
+      <Column ID="50" DispNumber="" DispName="最終処分の場所(予定)最終処分事業場CD" Needs="0" TableName="DT_R04_EX" Name="LAST_SBN_GENBA_CD" Format="" />
+      <Column ID="51" DispNumber="" DispName="最終処分の場所(予定)最終処分事業場名" Needs="0" TableName="DT_R04" Name="LAST_SBN_JOU_NAME" Format="" />
+      <Column ID="52" DispNumber="" DispName="最終処分の場所(予定)郵便番号" Needs="0" TableName="DT_R04" Name="LAST_SBN_JOU_POST" Format="" />
+      <Column ID="53" DispNumber="" DispName="最終処分の場所(予定)電話番号" Needs="0" TableName="DT_R04" Name="LAST_SBN_JOU_TEL" Format="" />
+      <Column ID="54" DispNumber="" DispName="最終処分の場所(予定)住所" Needs="0" TableName="" Name="ISNULL(DT_R04.LAST_SBN_JOU_ADDRESS1, '') + ISNULL(DT_R04.LAST_SBN_JOU_ADDRESS2, '') + ISNULL(DT_R04.LAST_SBN_JOU_ADDRESS3, '') + ISNULL(DT_R04.LAST_SBN_JOU_ADDRESS4, '')" Format="" />
+      <Column ID="55" DispNumber="" DispName="運搬情報区間" Needs="0" TableName="DT_R19" Name="UPN_ROUTE_NO" Format="" />
+      <Column ID="56" DispNumber="" DispName="運搬情報収集運搬業者CD" Needs="0" TableName="DT_R19_EX" Name="UPN_GYOUSHA_CD" Format="" />
+      <Column ID="57" DispNumber="" DispName="運搬情報収集運搬業者名" Needs="0" TableName="DT_R19" Name="UPN_SHA_NAME" Format="" />
+      <Column ID="58" DispNumber="" DispName="運搬情報加入者番号" Needs="0" TableName="DT_R19" Name="CASE WHEN ((DT_R19.UPN_SHA_EDI_MEMBER_ID = '0000000') and (DT_R19_EX.NO_REP_UPN_EDI_MEMBER_ID is not null)) THEN DT_R19_EX.NO_REP_UPN_EDI_MEMBER_ID ELSE DT_R19.UPN_SHA_EDI_MEMBER_ID END" Format="" />
+      <Column ID="59" DispNumber="" DispName="運搬情報運搬先業者CD" Needs="0" TableName="DT_R19_EX" Name="UPNSAKI_GYOUSHA_CD" Format="" />
+      <Column ID="60" DispNumber="" DispName="運搬情報運搬先業者名" Needs="0" TableName="DT_R19" Name="UPNSAKI_NAME" Format="" />
+      <Column ID="61" DispNumber="" DispName="運搬情報運搬先事業場CD" Needs="0" TableName="DT_R19_EX" Name="UPNSAKI_GENBA_CD" Format="" />
+      <Column ID="62" DispNumber="" DispName="運搬情報運搬先事業場名" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_NAME" Format="" />
+      <Column ID="63" DispNumber="" DispName="運搬情報事業場番号" Needs="0" TableName="M_DENSHI_JIGYOUJOU3" Name="JIGYOUJOU_CD" Format="" />
+      <Column ID="64" DispNumber="" DispName="運搬情報運搬方法CD" Needs="0" TableName="DT_R19" Name="UPN_WAY_CODE" Format="" />
+      <Column ID="65" DispNumber="" DispName="運搬情報運搬方法名" Needs="0" TableName="M_UNPAN_HOUHOU1" Name="UNPAN_HOUHOU_NAME_RYAKU" Format="" />
+      <Column ID="66" DispNumber="" DispName="運搬情報運搬担当者CD" Needs="0" TableName="DT_R19_EX" Name="UPN_TANTOUSHA_CD" Format="" />
+      <Column ID="67" DispNumber="" DispName="運搬情報運搬担当者名" Needs="0" TableName="DT_R19" Name="UPN_TAN_NAME" Format="" />
+      <Column ID="68" DispNumber="" DispName="運搬情報車輌CD" Needs="0" TableName="DT_R19_EX" Name="SHARYOU_CD" Format="" />
+      <Column ID="69" DispNumber="" DispName="運搬情報車輌名" Needs="0" TableName="DT_R19" Name="CAR_NO" Format="" />
+      <Column ID="70" DispNumber="" DispName="運搬情報運搬終了日" Needs="0" TableName="" Name="CASE WHEN DT_MF_TOC.STATUS_FLAG != 4 THEN NULL WHEN ISDATE(ROUTE_DATA.UPN_END_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, ROUTE_DATA.UPN_END_DATE) END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="71" DispNumber="" DispName="運搬情報実績車輌CD" Needs="0" TableName="DT_R19_EX" Name="UPNREP_SHARYOU_CD" Format="" />
+      <Column ID="72" DispNumber="" DispName="運搬情報実績車輌名" Needs="0" TableName="DT_R19" Name="UPNREP_CAR_NO" Format="" />
+      <Column ID="73" DispNumber="" DispName="運搬情報実績運搬担当者CD" Needs="0" TableName="DT_R19_EX" Name="UPNREP_UPN_TANTOUSHA_CD" Format="" />
+      <Column ID="74" DispNumber="" DispName="運搬情報実績運搬担当者名" Needs="0" TableName="DT_R19" Name="UPNREP_UPN_TAN_NAME" Format="" />
+      <Column ID="75" DispNumber="" DispName="運搬情報報告担当者CD" Needs="0" TableName="DT_R19_EX" Name="HOUKOKU_TANTOUSHA_CD" Format="" />
+      <Column ID="76" DispNumber="" DispName="運搬情報報告担当者名" Needs="0" TableName="DT_R19" Name="REP_TAN_NAME" Format="" />
+      <Column ID="77" DispNumber="" DispName="運搬情報運搬量" Needs="0" TableName="DT_R19" Name="UPN_SUU" Format="#,##0.####" />
+      <Column ID="78" DispNumber="" DispName="運搬情報運搬単位CD" Needs="0" TableName="" Name="CAST(DT_R19.UPN_UNIT_CODE AS SMALLINT)" Format="00" />
+      <Column ID="79" DispNumber="" DispName="運搬情報運搬単位名" Needs="0" TableName="M_UNIT5" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="80" DispNumber="" DispName="運搬情報有価物収拾量" Needs="0" TableName="DT_R19" Name="YUUKA_SUU" Format="#,##0.####" />
+      <Column ID="81" DispNumber="" DispName="運搬情報有価物収拾単位CD" Needs="0" TableName="DT_R19" Name="CAST(DT_R19.YUUKA_UNIT_CODE AS SMALLINT)" Format="00" />
+      <Column ID="82" DispNumber="" DispName="運搬情報有価物収拾単位名" Needs="0" TableName="M_UNIT6" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="83" DispNumber="" DispName="運搬情報備考" Needs="0" TableName="DT_R19" Name="BIKOU" Format="" />
+      <Column ID="84" DispNumber="" DispName="最終処分事業場(実績)No." Needs="0" TableName="DT_R13" Name="REC_SEQ" Format="" />
+      <Column ID="85" DispNumber="" DispName="最終処分事業場(実績)最終処分終了日" Needs="0" TableName="" Name="CASE WHEN ISDATE(DT_R13.LAST_SBN_END_DATE) = 0 THEN NULL ELSE CONVERT(DATETIME, DT_R13.LAST_SBN_END_DATE) END" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="86" DispNumber="" DispName="最終処分事業場(実績)最終処分業者CD" Needs="0" TableName="DT_R13_EX" Name="LAST_SBN_GYOUSHA_CD" Format="" />
+      <Column ID="87" DispNumber="" DispName="最終処分の場所(実績)最終処分業者名" Needs="0" TableName="M_DENSHI_JIGYOUSHA2" Name="JIGYOUSHA_NAME" Format="" />
+      <Column ID="88" DispNumber="" DispName="最終処分の場所(実績)最終処分事業場CD" Needs="0" TableName="DT_R13_EX" Name="LAST_SBN_GENBA_CD" Format="" />
+      <Column ID="89" DispNumber="" DispName="最終処分の場所(実績)最終処分事業場名" Needs="0" TableName="DT_R13" Name="LAST_SBN_JOU_NAME" Format="" />
+      <Column ID="90" DispNumber="" DispName="最終処分の場所(実績)郵便番号" Needs="0" TableName="DT_R13" Name="LAST_SBN_JOU_POST" Format="" />
+      <Column ID="91" DispNumber="" DispName="最終処分の場所(実績)電話番号" Needs="0" TableName="DT_R13" Name="LAST_SBN_JOU_TEL" Format="" />
+      <Column ID="92" DispNumber="" DispName="最終処分の場所(実績)住所" Needs="0" TableName="" Name="DT_R13.LAST_SBN_JOU_ADDRESS1 + DT_R13.LAST_SBN_JOU_ADDRESS2 + DT_R13.LAST_SBN_JOU_ADDRESS3 + DT_R13.LAST_SBN_JOU_ADDRESS4" Format="" />
+      <!--<Column ID="93" DispNumber="" DispName="備考No." Needs="0" TableName="DT_R06" Name="BIKOU_NO" Format="" />-->
+      <!--<Column ID="94" DispNumber="" DispName="備考" Needs="0" TableName="DT_R06" Name="BIKOU" Format="" />-->
+    </Group>
+    <JoinCondition TableName="DT_R05_1">LEFT JOIN DT_R05 DT_R05_1 ON DT_R18.KANRI_ID = DT_R05_1.KANRI_ID AND DT_R18.SEQ = DT_R05_1.SEQ AND DT_R05_1.RENRAKU_ID_NO = 1</JoinCondition>
+    <JoinCondition TableName="DT_R05_2">LEFT JOIN DT_R05 DT_R05_2 ON DT_R18.KANRI_ID = DT_R05_2.KANRI_ID AND DT_R18.SEQ = DT_R05_2.SEQ AND DT_R05_2.RENRAKU_ID_NO = 2</JoinCondition>
+    <JoinCondition TableName="DT_R05_3">LEFT JOIN DT_R05 DT_R05_3 ON DT_R18.KANRI_ID = DT_R05_3.KANRI_ID AND DT_R18.SEQ = DT_R05_3.SEQ AND DT_R05_3.RENRAKU_ID_NO = 3</JoinCondition>
+    <JoinCondition TableName="DT_R02_1">LEFT JOIN DT_R02 DT_R02_1 ON DT_R18.KANRI_ID = DT_R02_1.KANRI_ID AND DT_R18.SEQ = DT_R02_1.SEQ AND DT_R02_1.REC_SEQ = 1</JoinCondition>
+    <JoinCondition TableName="DT_R02_2">LEFT JOIN DT_R02 DT_R02_2 ON DT_R18.KANRI_ID = DT_R02_2.KANRI_ID AND DT_R18.SEQ = DT_R02_2.SEQ AND DT_R02_2.REC_SEQ = 2</JoinCondition>
+    <JoinCondition TableName="DT_R02_3">LEFT JOIN DT_R02 DT_R02_3 ON DT_R18.KANRI_ID = DT_R02_3.KANRI_ID AND DT_R18.SEQ = DT_R02_3.SEQ AND DT_R02_3.REC_SEQ = 3</JoinCondition>
+    <JoinCondition TableName="DT_R02_4">LEFT JOIN DT_R02 DT_R02_4 ON DT_R18.KANRI_ID = DT_R02_4.KANRI_ID AND DT_R18.SEQ = DT_R02_4.SEQ AND DT_R02_4.REC_SEQ = 4</JoinCondition>
+    <JoinCondition TableName="DT_R02_5">LEFT JOIN DT_R02 DT_R02_5 ON DT_R18.KANRI_ID = DT_R02_5.KANRI_ID AND DT_R18.SEQ = DT_R02_5.SEQ AND DT_R02_5.REC_SEQ = 5</JoinCondition>
+    <JoinCondition TableName="DT_R02_6">LEFT JOIN DT_R02 DT_R02_6 ON DT_R18.KANRI_ID = DT_R02_6.KANRI_ID AND DT_R18.SEQ = DT_R02_6.SEQ AND DT_R02_6.REC_SEQ = 6</JoinCondition>
+    <JoinCondition TableName="M_DENSHI_JIGYOUJOU1">
+      LEFT JOIN M_DENSHI_JIGYOUJOU M_DENSHI_JIGYOUJOU1 ON DT_R18.HST_SHA_EDI_MEMBER_ID = M_DENSHI_JIGYOUJOU1.EDI_MEMBER_ID
+      AND DT_R18.HST_JOU_NAME = M_DENSHI_JIGYOUJOU1.JIGYOUJOU_NAME COLLATE Japanese_CS_AS_KS_WS
+      AND ISNULL(DT_R18.HST_JOU_ADDRESS1,'') + ISNULL(DT_R18.HST_JOU_ADDRESS2,'') + ISNULL(DT_R18.HST_JOU_ADDRESS3,'') + ISNULL(DT_R18.HST_JOU_ADDRESS4,'')
+      = ISNULL(M_DENSHI_JIGYOUJOU1.JIGYOUJOU_ADDRESS1,'') + ISNULL(M_DENSHI_JIGYOUJOU1.JIGYOUJOU_ADDRESS2,'') + ISNULL(M_DENSHI_JIGYOUJOU1.JIGYOUJOU_ADDRESS3,'') + ISNULL(M_DENSHI_JIGYOUJOU1.JIGYOUJOU_ADDRESS4,'')
+      AND DT_R18_EX.HST_GYOUSHA_CD = M_DENSHI_JIGYOUJOU1.GYOUSHA_CD
+      AND DT_R18_EX.HST_GENBA_CD = M_DENSHI_JIGYOUJOU1.GENBA_CD
+    </JoinCondition>
+    <JoinCondition TableName="M_DENSHI_JIGYOUJOU2">
+      LEFT JOIN M_DENSHI_JIGYOUJOU M_DENSHI_JIGYOUJOU2 ON DT_R19_LAST.UPNSAKI_EDI_MEMBER_ID = M_DENSHI_JIGYOUJOU2.EDI_MEMBER_ID
+      AND DT_R19_LAST.UPNSAKI_JOU_NAME = M_DENSHI_JIGYOUJOU2.JIGYOUJOU_NAME COLLATE Japanese_CS_AS_KS_WS
+      AND ISNULL(DT_R19_LAST.UPNSAKI_JOU_ADDRESS1,'') + ISNULL(DT_R19_LAST.UPNSAKI_JOU_ADDRESS2,'') + ISNULL(DT_R19_LAST.UPNSAKI_JOU_ADDRESS3,'') + ISNULL(DT_R19_LAST.UPNSAKI_JOU_ADDRESS4,'')
+      = ISNULL(M_DENSHI_JIGYOUJOU2.JIGYOUJOU_ADDRESS1,'') + ISNULL(M_DENSHI_JIGYOUJOU2.JIGYOUJOU_ADDRESS2,'') + ISNULL(M_DENSHI_JIGYOUJOU2.JIGYOUJOU_ADDRESS3,'') + ISNULL(M_DENSHI_JIGYOUJOU2.JIGYOUJOU_ADDRESS4,'')
+    </JoinCondition>
+    <JoinCondition TableName="M_DENSHI_JIGYOUJOU3">
+      LEFT JOIN M_DENSHI_JIGYOUJOU M_DENSHI_JIGYOUJOU3 ON DT_R19.UPNSAKI_EDI_MEMBER_ID = M_DENSHI_JIGYOUJOU3.EDI_MEMBER_ID
+      AND DT_R19.UPNSAKI_JOU_NAME = M_DENSHI_JIGYOUJOU3.JIGYOUJOU_NAME COLLATE Japanese_CS_AS_KS_WS
+      AND ISNULL(DT_R19.UPNSAKI_JOU_ADDRESS1,'') + ISNULL(DT_R19.UPNSAKI_JOU_ADDRESS2,'') + ISNULL(DT_R19.UPNSAKI_JOU_ADDRESS3,'') + ISNULL(DT_R19.UPNSAKI_JOU_ADDRESS4,'')
+      = ISNULL(M_DENSHI_JIGYOUJOU3.JIGYOUJOU_ADDRESS1,'') + ISNULL(M_DENSHI_JIGYOUJOU3.JIGYOUJOU_ADDRESS2,'') + ISNULL(M_DENSHI_JIGYOUJOU3.JIGYOUJOU_ADDRESS3,'') + ISNULL(M_DENSHI_JIGYOUJOU3.JIGYOUJOU_ADDRESS4,'')
+    </JoinCondition>
+    <JoinCondition TableName="M_DENSHI_JIGYOUSHA1">LEFT JOIN M_DENSHI_JIGYOUSHA M_DENSHI_JIGYOUSHA1 ON DT_R04_EX.LAST_SBN_GYOUSHA_CD = M_DENSHI_JIGYOUSHA1.GYOUSHA_CD AND M_DENSHI_JIGYOUSHA1.SBN_KBN = 1</JoinCondition>
+    <JoinCondition TableName="M_DENSHI_JIGYOUSHA2">LEFT JOIN M_DENSHI_JIGYOUSHA M_DENSHI_JIGYOUSHA2 ON DT_R13_EX.LAST_SBN_GYOUSHA_CD = M_DENSHI_JIGYOUSHA2.GYOUSHA_CD AND M_DENSHI_JIGYOUSHA2.SBN_KBN = 1</JoinCondition>
+    <JoinCondition TableName="M_SHOBUN_HOUHOU1">LEFT JOIN M_SHOBUN_HOUHOU M_SHOBUN_HOUHOU1 ON DT_R18_EX.SBN_HOUHOU_CD = M_SHOBUN_HOUHOU1.SHOBUN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_UNPAN_HOUHOU1">LEFT JOIN M_UNPAN_HOUHOU M_UNPAN_HOUHOU1 ON DT_R19.UPN_WAY_CODE = M_UNPAN_HOUHOU1.UNPAN_HOUHOU_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON DT_R18.RECEPT_UNIT_CODE = M_UNIT1.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT2">LEFT JOIN M_UNIT M_UNIT2 ON DT_R18.HAIKI_UNIT_CODE = M_UNIT2.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT3">LEFT JOIN M_UNIT M_UNIT3 ON DT_R18.HAIKI_KAKUTEI_UNIT_CODE = M_UNIT3.UNIT_CD</JoinCondition>
+    <!--<JoinCondition TableName="M_UNIT4">LEFT JOIN M_UNIT M_UNIT4 ON DT_R08.HAIKI_SUU_UNIT = M_UNIT4.UNIT_CD</JoinCondition>-->
+    <JoinCondition TableName="M_UNIT5">LEFT JOIN M_UNIT M_UNIT5 ON DT_R19.UPN_UNIT_CODE = M_UNIT5.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT6">LEFT JOIN M_UNIT M_UNIT6 ON DT_R19.YUUKA_UNIT_CODE = M_UNIT6.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="DT_R06_1">LEFT JOIN DT_R06 DT_R06_1 ON DT_MF_TOC.KANRI_ID = DT_R06_1.KANRI_ID AND DT_MF_TOC.LATEST_SEQ = DT_R06_1.SEQ AND DT_R06_1.BIKOU_NO = 1</JoinCondition>
+    <JoinCondition TableName="DT_R06_2">LEFT JOIN DT_R06 DT_R06_2 ON DT_MF_TOC.KANRI_ID = DT_R06_2.KANRI_ID AND DT_MF_TOC.LATEST_SEQ = DT_R06_2.SEQ AND DT_R06_2.BIKOU_NO = 2</JoinCondition>
+    <JoinCondition TableName="DT_R06_3">LEFT JOIN DT_R06 DT_R06_3 ON DT_MF_TOC.KANRI_ID = DT_R06_3.KANRI_ID AND DT_MF_TOC.LATEST_SEQ = DT_R06_3.SEQ AND DT_R06_3.BIKOU_NO = 3</JoinCondition>
+    <JoinCondition TableName="DT_R06_4">LEFT JOIN DT_R06 DT_R06_4 ON DT_MF_TOC.KANRI_ID = DT_R06_4.KANRI_ID AND DT_MF_TOC.LATEST_SEQ = DT_R06_4.SEQ AND DT_R06_4.BIKOU_NO = 4</JoinCondition>
+    <JoinCondition TableName="DT_R06_5">LEFT JOIN DT_R06 DT_R06_5 ON DT_MF_TOC.KANRI_ID = DT_R06_5.KANRI_ID AND DT_MF_TOC.LATEST_SEQ = DT_R06_5.SEQ AND DT_R06_5.BIKOU_NO = 5</JoinCondition>
+  </OutputColumnSelect>
+</root>

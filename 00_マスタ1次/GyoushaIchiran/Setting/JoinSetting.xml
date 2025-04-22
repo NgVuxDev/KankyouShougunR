@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfJoinSettingDto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <JoinSettingDto>
+    <TableName>M_TORIHIKISAKI</TableName>
+    <KeyColumn>
+      <string>TORIHIKISAKI_CD</string>
+    </KeyColumn>
+  </JoinSettingDto>
+  <JoinSettingDto>
+    <TableName>M_SHAIN</TableName>
+    <KeyColumn>
+      <string>SHAIN_CD</string>
+    </KeyColumn>
+  </JoinSettingDto>
+</ArrayOfJoinSettingDto>

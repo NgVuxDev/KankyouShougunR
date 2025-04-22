@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <NewButtonName>[F2]&#xD;&#xA;新規</NewButtonName>
+    <ReferButtonName>[F2]&#xD;&#xA;新規</ReferButtonName>
+    <DefaultHintText>新規データを追加する画面に切り替わります。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <NewButtonName>[F7]&#xD;&#xA;一覧</NewButtonName>
+    <ReferButtonName>[F7]&#xD;&#xA;一覧</ReferButtonName>
+    <UpdateButtonName>[F7]&#xD;&#xA;一覧</UpdateButtonName>
+    <DeleteButtonName>[F7]&#xD;&#xA;一覧</DeleteButtonName>
+    <DefaultHintText>在庫調整一覧画面に移動します。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;登録</NewButtonName>
+    <ReferButtonName>[F9]&#xD;&#xA;登録</ReferButtonName>
+    <DefaultHintText>表示されている内容を登録します。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <NewButtonName>[F11]&#xD;&#xA;行削除</NewButtonName>
+    <ReferButtonName>[F11]&#xD;&#xA;行削除</ReferButtonName>
+    <DefaultHintText>選択している明細行を1行削除します。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <DefaultHintText>画面を閉じます。</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <NewButtonName>[1] 在庫品名読込</NewButtonName>
+    <DefaultHintText>在庫品名マスタの読み込みを行います。</DefaultHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

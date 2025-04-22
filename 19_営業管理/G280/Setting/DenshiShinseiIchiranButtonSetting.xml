@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <PopupButtonName>[F3]&#xD;&#xA;内容確認</PopupButtonName>
+    <PopupButtonHintText></PopupButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <PopupButtonName>[F7]&#xD;&#xA;条件ｸﾘｱ</PopupButtonName>
+    <PopupButtonHintText>検索条件と表示条件を初期化します</PopupButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func8</ButtonName>
+    <PopupButtonName>[F8]&#xD;&#xA;検索</PopupButtonName>
+    <PopupButtonHintText>検索条件に設定した内容にて明細を再表示します</PopupButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <PopupButtonName>[F9]&#xD;&#xA;申請表示</PopupButtonName>
+    <PopupButtonHintText>選択した申請データを表示します</PopupButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func10</ButtonName>
+    <PopupButtonName>[F10]&#xD;&#xA;並び替え</PopupButtonName>
+    <PopupButtonHintText>並び順の設定を表示します</PopupButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <PopupButtonName>[F12]&#xD;&#xA;閉じる</PopupButtonName>
+    <PopupButtonHintText>画面を閉じます</PopupButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

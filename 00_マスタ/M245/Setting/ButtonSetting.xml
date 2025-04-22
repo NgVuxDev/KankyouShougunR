@@ -1,0 +1,43 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func4</ButtonName>
+    <IchiranButtonName>[F4]&#xD;&#xA;削除</IchiranButtonName>
+    <IchiranButtonHintText>チェックしたデータを削除します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func6</ButtonName>
+    <IchiranButtonName>[F6]&#xD;&#xA;CSV出力</IchiranButtonName>
+    <IchiranButtonHintText>画面に表示された内容をCSVファイルにて出力します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <IchiranButtonName>[F7]&#xD;&#xA;条件ｸﾘｱ</IchiranButtonName>
+    <IchiranButtonHintText>検索条件をクリアします</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func8</ButtonName>
+    <IchiranButtonName>[F8]&#xD;&#xA;検索</IchiranButtonName>
+    <IchiranButtonHintText>検索を実行します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <IchiranButtonName>[F9]&#xD;&#xA;登録</IchiranButtonName>
+    <IchiranButtonHintText>入力内容を登録します　または　表示内容を登録します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <IchiranButtonName>[F11]&#xD;&#xA;取消</IchiranButtonName>
+    <IchiranButtonHintText>画面の編集内容を破棄し、最新のデ－タを表示します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <IchiranButtonHintText>画面を閉じます</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <IchiranButtonName>[1]出荷</IchiranButtonName>
+    <IchiranButtonHintText>出荷が伝票毎を対象とする場合チェックを付けてください</IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

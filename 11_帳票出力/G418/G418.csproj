@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A70494E-9671-4AAD-AC69-826D75441AEC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shougun.Core.Common.MeisaihyoSyukeihyoJokenShiteiPopup</RootNamespace>
+    <AssemblyName>MeisaihyoSyukeihyoJokenShiteiPopup</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\ShougunBuilder\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\ShougunBuilder\Release</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net" >
+      <HintPath>..\..\DLL\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar" >
+      <HintPath>..\..\DLL\Seasar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dao" >
+      <HintPath>..\..\DLL\Seasar.Dao.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Dxo" >
+      <HintPath>..\..\DLL\Seasar.Dxo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.DynamicProxy" >
+      <HintPath>..\..\DLL\Seasar.DynamicProxy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Quill" >
+      <HintPath>..\..\DLL\Seasar.Quill.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Unit" >
+      <HintPath>..\..\DLL\Seasar.Unit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Seasar.Windows" >
+      <HintPath>..\..\DLL\Seasar.Windows.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\UIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APP\UIForm.Designer.cs">
+      <DependentUpon>UIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\ChouhyouOutKoumokuGroup.cs" />
+    <Compile Include="DAO\DAOClass.cs" />
+    <Compile Include="DTO\DTOClass.cs" />
+    <Compile Include="Logic\CommonChouhyouR342.cs" />
+    <Compile Include="Logic\CommonChouhyouR351.cs" />
+    <Compile Include="Logic\CommonChouhyouR352.cs" />
+    <Compile Include="Logic\CommonChouhyouR367_R374.cs" />
+    <Compile Include="Logic\CommonChouhyouR398.cs" />
+    <Compile Include="Logic\CommonChouhyouR432.cs" />
+    <Compile Include="Logic\CommonChouhyouR433.cs" />
+    <Compile Include="Logic\CommonChouhyouR434.cs" />
+    <Compile Include="Logic\LogicClass.cs" />
+    <Compile Include="Logic\ReportInfoN.cs" />
+    <Compile Include="Logic\ReportInfoR342.cs" />
+    <Compile Include="Logic\ReportInfoR351.cs" />
+    <Compile Include="Logic\ReportInfoR352.cs" />
+    <Compile Include="Logic\ReportInfoR367_R374.cs" />
+    <Compile Include="Logic\ReportInfoR370_R377.cs" />
+    <Compile Include="Logic\ReportInfoR369_R376.cs" />
+    <Compile Include="Logic\ReportInfoR379_R384.cs" />
+    <Compile Include="Logic\ReportInfoR358_R362_R355.cs" />
+    <Compile Include="Logic\ReportInfoR359_R363_R356.cs" />
+    <Compile Include="Logic\ReportInfoR366_R373.cs" />
+    <Compile Include="Logic\ReportInfoR398.cs" />
+    <Compile Include="Logic\ReportInfoR432.cs" />
+    <Compile Include="Logic\ReportInfoR433.cs" />
+    <Compile Include="Logic\ReportInfoR434.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\ChouhyouOutKoumoku.cs" />
+    <Compile Include="Logic\CommonChouhyouBase.cs" />
+    <Compile Include="Logic\CommonChouhyouR369_R376.cs" />
+    <Compile Include="Logic\SyuukeiKoumoku.cs" />
+    <Compile Include="Logic\SyuukeiKoumokuHani.cs" />
+    <Compile Include="Logic\CommonChouhyouR370_R377.cs" />
+    <Compile Include="Logic\CommonChouhyouR379_R384.cs" />
+    <Compile Include="Logic\CommonChouhyouR355_R358_R362.cs" />
+    <Compile Include="Logic\CommonChouhyouR356_R359_R363.cs" />
+    <Compile Include="Logic\CommonChouhyouR366_R373.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Setting\ButtonSetting.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APP\UIForm.resx">
+      <DependentUpon>UIForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql\Sample.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\MListPatternCount.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\MListPatternData.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sql\GetOutputSelectEnableItems.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="虫眼鏡.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\01_共通\BusinessCommon\BusinessCommon.csproj">
+      <Project>{2F97B9B6-44A3-46BE-A83E-5D4936EC936C}</Project>
+      <Name>BusinessCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CommonChouhyouPopup\CommonChouhyouPopup.csproj">
+      <Project>{445254EB-6A9C-4D9D-8431-3ED2658FE6DD}</Project>
+      <Name>CommonChouhyouPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KensakuKyoutsuuPopupForMultiKey\KensakuKyoutsuuPopupForMultiKey.csproj">
+      <Project>{67274743-11AD-4C7F-8DE3-41207CFCE304}</Project>
+      <Name>KensakuKyoutsuuPopupForMultiKey</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KensakuKyoutsuuPopup\KensakuKyoutsuuPopup.csproj">
+      <Project>{63E64F42-8E5C-4354-945C-E595075A42BC}</Project>
+      <Name>KensakuKyoutsuuPopup</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MasterKyoutsuPopup2\MasterKyoutsuPopup2.csproj">
+      <Project>{24A8C872-5ACF-42A5-A1AC-27E6C0C25B85}</Project>
+      <Name>MasterKyoutsuPopup2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\r-framework\r-framework\r-framework.csproj">
+      <Project>{0A3BD473-8713-46E9-97F2-8E79A222F6B1}</Project>
+      <Name>r-framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonChouhyouViewer\CommonChouhyouViewer.csproj">
+      <Project>{1F17CDA9-3563-43EB-ADFE-F3146FE352B4}</Project>
+      <Name>CommonChouhyouViewer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

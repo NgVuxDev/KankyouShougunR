@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfJoinSettingDto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <JoinSettingDto>
+    <TableName>M_DENSHI_JIGYOUSHA</TableName>
+    <KeyColumn>
+      <string>EDI_MEMBER_ID</string>
+    </KeyColumn>
+  </JoinSettingDto>
+  <JoinSettingDto>
+    <TableName>M_GYOUSHA</TableName>
+    <KeyColumn>
+      <string>GYOUSHA_CD</string>
+    </KeyColumn>
+  </JoinSettingDto>
+  <JoinSettingDto>
+    <TableName>M_GENBA</TableName>
+    <KeyColumn>
+      <string>GYOUSHA_CD</string>
+    </KeyColumn>
+    <KeyColumn>
+      <string>GENBA_CD</string>
+    </KeyColumn>
+  </JoinSettingDto>
+</ArrayOfJoinSettingDto>

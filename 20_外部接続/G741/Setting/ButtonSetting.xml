@@ -1,0 +1,52 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <NewButtonName>[F2]&#xD;&#xA;新規</NewButtonName>
+    <ReferButtonName>[F2]&#xD;&#xA;新規</ReferButtonName>
+    <UpdateButtonName>[F2]&#xD;&#xA;新規</UpdateButtonName>
+    <DeleteButtonName>[F2]&#xD;&#xA;新規</DeleteButtonName>
+    <DefaultHintText>新規データを追加する画面に切り替わります</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func3</ButtonName>
+    <NewButtonName>[F3]&#xD;&#xA;修正</NewButtonName>
+    <ReferButtonName>[F3]&#xD;&#xA;修正</ReferButtonName>
+    <UpdateButtonName>[F3]&#xD;&#xA;修正</UpdateButtonName>
+    <DeleteButtonName>[F3]&#xD;&#xA;修正</DeleteButtonName>
+    <DefaultHintText>既存データを修正する画面に切り替わります</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <NewButtonName>[F7]&#xD;&#xA;一覧</NewButtonName>
+    <ReferButtonName>[F7]&#xD;&#xA;一覧</ReferButtonName>
+    <UpdateButtonName>[F7]&#xD;&#xA;一覧</UpdateButtonName>
+    <DeleteButtonName>[F7]&#xD;&#xA;一覧</DeleteButtonName>
+    <DefaultHintText>一覧画面に移動します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]&#xD;&#xA;登録</NewButtonName>
+    <ReferButtonName>[F9]&#xD;&#xA;登録</ReferButtonName>
+    <UpdateButtonName>[F9]&#xD;&#xA;登録</UpdateButtonName>
+    <DeleteButtonName>[F9]&#xD;&#xA;登録</DeleteButtonName>
+    <DefaultHintText>表示されている内容を登録します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]&#xD;&#xA;閉じる</NewButtonName>
+    <ReferButtonName>[F12]&#xD;&#xA;閉じる</ReferButtonName>
+    <UpdateButtonName>[F12]&#xD;&#xA;閉じる</UpdateButtonName>
+    <DeleteButtonName>[F12]&#xD;&#xA;閉じる</DeleteButtonName>
+    <DefaultHintText>画面を閉じます</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <NewButtonName>[1] ﾌｧｲﾙｱｯﾌﾟﾛｰﾄﾞ</NewButtonName>
+    <UpdateButtonName>[1] ﾌｧｲﾙｱｯﾌﾟﾛｰﾄﾞ</UpdateButtonName>
+    <ReferButtonName>[1] ﾌｧｲﾙｱｯﾌﾟﾛｰﾄﾞ</ReferButtonName>
+    <DeleteButtonName>[1] ﾌｧｲﾙｱｯﾌﾟﾛｰﾄﾞ</DeleteButtonName>
+    <DefaultHintText>ファイルアップロード画面を開きます</DefaultHintText>
+  </ButtonSetting>
+
+</ArrayOfButtonSetting>

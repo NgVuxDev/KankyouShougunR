@@ -1,0 +1,24 @@
+﻿SELECT * FROM dbo.M_COURSE_NAME
+WHERE
+/*IF data.ISNOT_NEED_DELETE_FLG.IsNull || data.ISNOT_NEED_DELETE_FLG.IsFalse*/
+ DELETE_FLG = 0
+-- ELSE
+ 1 = 1
+/*END*/
+/*IF data.COURSE_NAME_CD != null*/AND COURSE_NAME_CD = /*data.COURSE_NAME_CD*//*END*/
+/*IF data.COURSE_NAME != null*/AND COURSE_NAME = /*data.COURSE_NAME*//*END*/
+/*IF data.COURSE_NAME_RYAKU != null*/AND COURSE_NAME_RYAKU = /*data.COURSE_NAME_RYAKU*//*END*/
+/*IF data.COURSE_NAME_FURIGANA != null*/AND COURSE_NAME_FURIGANA = /*data.COURSE_NAME_FURIGANA*//*END*/
+/*IF !data.MONDAY.IsNull*/ AND MONDAY = /*data.MONDAY*//*END*/
+/*IF !data.TUESDAY.IsNull*/ AND TUESDAY = /*data.TUESDAY*//*END*/
+/*IF !data.WEDNESDAY.IsNull*/ AND WEDNESDAY = /*data.WEDNESDAY*//*END*/
+/*IF !data.THURSDAY.IsNull*/ AND THURSDAY = /*data.THURSDAY*//*END*/
+/*IF !data.FRIDAY.IsNull*/ AND FRIDAY = /*data.FRIDAY*//*END*/
+/*IF !data.SATURDAY.IsNull*/ AND SATURDAY = /*data.SATURDAY*//*END*/
+/*IF !data.SUNDAY.IsNull*/ AND SUNDAY = /*data.SUNDAY*//*END*/
+/*IF data.CREATE_USER != null*/AND CREATE_USER = /*data.CREATE_USER*//*END*/
+/*IF !data.CREATE_DATE.IsNull*/AND CREATE_DATE = /*data.CREATE_DATE.Value*//*END*/
+/*IF data.CREATE_PC != null*/AND CREATE_PC = /*data.CREATE_PC*//*END*/
+/*IF data.UPDATE_USER != null*/AND UPDATE_USER = /*data.UPDATE_USER*//*END*/
+/*IF !data.UPDATE_DATE.IsNull*/AND UPDATE_DATE = /*data.UPDATE_DATE.Value*//*END*/
+/*IF data.UPDATE_PC != null*/AND UPDATE_PC = /*data.UPDATE_PC*//*END*/

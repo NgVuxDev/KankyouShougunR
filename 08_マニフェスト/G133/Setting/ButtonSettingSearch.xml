@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <NewButtonName>[F9]     保存</NewButtonName>
+    <UpdateButtonName>[F9]     保存</UpdateButtonName>
+    <DeleteButtonName>[F9]     保存</DeleteButtonName>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <NewButtonName>[F12]    閉じる</NewButtonName>
+    <ReferButtonName>[F12]    閉じる</ReferButtonName>
+    <UpdateButtonName>[F12]    閉じる</UpdateButtonName>
+    <DeleteButtonName>[F12]    閉じる</DeleteButtonName>
+  </ButtonSetting>
+  <ButtonSettingSearch>
+    <ButtonName>bt_process1</ButtonName>
+    <NewButtonName>[1] 登録</NewButtonName>
+    <UpdateButtonName>[1] 登録</UpdateButtonName>
+  </ButtonSettingSearch>
+</ArrayOfButtonSetting>

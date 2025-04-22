@@ -1,0 +1,65 @@
+﻿SELECT CAST(0 AS BIT) AS HENKOU_FLG
+    , M_GENBA.GYOUSHA_CD
+	, M_GYOUSHA.GYOUSHA_NAME_RYAKU AS GYOUSHA_NAME1
+	, M_GENBA.GENBA_CD
+	, M_GENBA.GENBA_NAME_RYAKU AS GENBA_NAME1
+	, ISNULL(TODO.TODOUFUKEN_NAME,'') + ISNULL(M_GENBA.GENBA_ADDRESS1,'') + ISNULL(M_GENBA.GENBA_ADDRESS2,'') AS GENBA_ADDRESS1
+	, M_GENBA.GENBA_TEL
+	, M_GENBA.EIGYOU_TANTOU_BUSHO_CD
+	, M_BUSHO.BUSHO_NAME_RYAKU
+	, M_GENBA.EIGYOU_TANTOU_CD
+	, M_SHAIN.SHAIN_NAME_RYAKU
+	, M_GENBA.EIGYOU_TANTOU_BUSHO_CD EIGYOU_TANTOU_BUSHO_CD_AFTER
+	, M_BUSHO.BUSHO_NAME_RYAKU BUSHO_NAME_RYAKU_AFTER
+	, M_GENBA.EIGYOU_TANTOU_CD EIGYOU_TANTOU_CD_AFTER
+	, M_SHAIN.SHAIN_NAME_RYAKU SHAIN_NAME_RYAKU_AFTER
+	, M_GENBA.EIGYOU_TANTOU_CD EIGYOU_TANTOU_CD_AFTER_OLD
+FROM M_GENBA
+INNER JOIN M_GYOUSHA
+ON M_GENBA.GYOUSHA_CD = M_GYOUSHA.GYOUSHA_CD
+INNER JOIN M_BUSHO
+ON M_GENBA.EIGYOU_TANTOU_BUSHO_CD = M_BUSHO.BUSHO_CD
+INNER JOIN M_SHAIN
+ON M_GENBA.EIGYOU_TANTOU_CD = M_SHAIN.SHAIN_CD
+
+LEFT JOIN M_TODOUFUKEN TODO
+ON TODO.TODOUFUKEN_CD = M_GENBA.GENBA_TODOUFUKEN_CD
+
+WHERE M_GENBA.DELETE_FLG = 0
+AND M_BUSHO.DELETE_FLG = 0
+AND M_SHAIN.DELETE_FLG = 0
+AND M_SHAIN.EIGYOU_TANTOU_KBN = 1
+/*IF data.EigyouTantouBushoCd != null && data.EigyouTantouBushoCd != ''*/
+AND M_GENBA.EIGYOU_TANTOU_BUSHO_CD = /*data.EigyouTantouBushoCd*/
+/*END*/
+/*IF data.EigyouTantouCd != null && data.EigyouTantouCd != ''*/
+AND M_GENBA.EIGYOU_TANTOU_CD = /*data.EigyouTantouCd*/
+/*END*/
+/*IF data.GyoushaCd != null && data.GyoushaCd != ''*/
+AND M_GENBA.GYOUSHA_CD LIKE '%' + /*data.GyoushaCd*/ + '%'
+/*END*/
+/*IF data.GyoushaName != null && data.GyoushaName != ''*/
+AND M_GYOUSHA.GYOUSHA_NAME_RYAKU LIKE '%' + /*data.GyoushaName*/ + '%'
+/*END*/
+/*IF data.GenbaCd != null && data.GenbaCd != ''*/
+AND M_GENBA.GENBA_CD LIKE '%' + /*data.GenbaCd*/ + '%'
+/*END*/
+/*IF data.GenbaName != null && data.GenbaName != ''*/
+AND M_GENBA.GENBA_NAME_RYAKU LIKE '%' + /*data.GenbaName*/ + '%'
+/*END*/
+/*IF data.Address != null && data.Address != ''*/
+AND (ISNULL(TODO.TODOUFUKEN_NAME,'') + ISNULL(M_GENBA.GENBA_ADDRESS1,'') + ISNULL(M_GENBA.GENBA_ADDRESS1,'')) LIKE '%' + /*data.Address*/ + '%'
+/*END*/
+/*IF data.Tel != null && data.Tel != ''*/
+AND M_GENBA.GENBA_TEL LIKE '%' + /*data.Tel*/ + '%'
+/*END*/
+/*IF data.BushoCdBf != null && data.BushoCdBf != ''*/
+AND M_GENBA.EIGYOU_TANTOU_BUSHO_CD LIKE '%' + /*data.BushoCdBf*/ + '%'
+/*END*/
+/*IF data.BushoNameBf != null && data.BushoNameBf != ''*/
+AND M_BUSHO.BUSHO_NAME_RYAKU LIKE '%' + /*data.BushoNameBf*/ + '%'
+/*END*/
+/*IF data.TantoushaCdBf != null && data.TantoushaCdBf != ''*/
+AND M_GENBA.EIGYOU_TANTOU_CD LIKE '%' + /*data.TantoushaCdBf*/ + '%'
+/*END*/
+ORDER BY M_GENBA.GYOUSHA_CD

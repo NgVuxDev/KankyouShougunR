@@ -1,0 +1,5 @@
+﻿DELETE
+M_ITAKU_KEIYAKU_BETSU3 
+/*BEGIN*/WHERE
+ /*IF data.SYSTEM_ID != null*/AND  SYSTEM_ID = /*data.SYSTEM_ID*/ /*END*/
+/*END*/

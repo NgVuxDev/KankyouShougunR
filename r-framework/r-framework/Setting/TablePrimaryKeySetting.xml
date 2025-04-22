@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ArrayOfTableSettingDto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TableSettingDto>
+    <TableName>M_TORIHIKISAKI</TableName>
+    <ArrayOfstring>
+      <PrimaryKey>TORIHIKISAKI_CD</PrimaryKey>
+    </ArrayOfstring>
+  </TableSettingDto>
+  <TableSettingDto>
+    <TableName>M_GYOUSHA</TableName>
+    <ArrayOfstring>
+      <PrimaryKey>GYOUSHA_CD</PrimaryKey>
+      <PrimaryKey>TORIHIKISAKI_CD</PrimaryKey>
+    </ArrayOfstring>
+  </TableSettingDto>
+</ArrayOfTableSettingDto>

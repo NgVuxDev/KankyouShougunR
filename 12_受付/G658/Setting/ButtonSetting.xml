@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func5</ButtonName>
+    <PopupButtonName>[F5]&#xD;&#xA;CSV</PopupButtonName>
+    <DefaultHintText>CSVファイルを出力します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <PopupButtonName>[F7]&#xD;&#xA;表示</PopupButtonName>
+    <DefaultHintText>表示されている内容で、受付明細表を印刷します</DefaultHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <PopupButtonName>[F12]&#xD;&#xA;閉じる</PopupButtonName>
+    <DefaultHintText>画面を閉じます</DefaultHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

@@ -1,0 +1,7 @@
+﻿SELECT 
+    *
+FROM
+    T_MOBISYO_RT_CONTENA
+WHERE 
+    DELETE_FLG = 0
+    AND SEQ_NO = /*SEQ_NO*/

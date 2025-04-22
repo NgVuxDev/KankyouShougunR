@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="240">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="加入者番号" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="EDI_MEMBER_ID" Format="" />
+      <Column ID="2" DispNumber="2" DispName="事業者名称" Needs="0" TableName="M_DENSHI_JIGYOUSHA" Name="JIGYOUSHA_NAME" Format="" />
+      <Column ID="3" DispNumber="3" DispName="排出事業者区分" Needs="0" TableName="M_DENSHI_JIGYOUSHA" Name="HST_KBN" Format="" />
+      <Column ID="4" DispNumber="4" DispName="収集運搬事業者区分" Needs="0" TableName="M_DENSHI_JIGYOUSHA" Name="UPN_KBN" Format="" />
+      <Column ID="5" DispNumber="5" DispName="処分事業者区分" Needs="0" TableName="M_DENSHI_JIGYOUSHA" Name="SBN_KBN" Format="" />
+      <Column ID="6" DispNumber="6" DispName="事業場コード" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="JIGYOUJOU_CD" Format="" />
+      <Column ID="7" DispNumber="7" DispName="事業場名称" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="JIGYOUJOU_NAME" Format="" />
+      <Column ID="8" DispNumber="8" DispName="郵便番号" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="JIGYOUJOU_POST" Format="" />
+      <Column ID="9" DispNumber="9" DispName="住所" Needs="0" TableName="" Name="ISNULL(M_DENSHI_JIGYOUJOU.JIGYOUJOU_ADDRESS1, '') + ISNULL(M_DENSHI_JIGYOUJOU.JIGYOUJOU_ADDRESS2, '') + ISNULL(M_DENSHI_JIGYOUJOU.JIGYOUJOU_ADDRESS3, '') + ISNULL(M_DENSHI_JIGYOUJOU.JIGYOUJOU_ADDRESS4, '')" Format="" />
+      <Column ID="10" DispNumber="10" DispName="都道府県" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="JIGYOUJOU_ADDRESS1" Format="" />
+      <Column ID="11" DispNumber="11" DispName="市区町村" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="JIGYOUJOU_ADDRESS2" Format="" />
+      <Column ID="12" DispNumber="12" DispName="町域" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="JIGYOUJOU_ADDRESS3" Format="" />
+      <Column ID="13" DispNumber="13" DispName="詳細住所" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="JIGYOUJOU_ADDRESS4" Format="" />
+      <Column ID="14" DispNumber="14" DispName="電話番号" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="JIGYOUJOU_TEL" Format="" />
+      <Column ID="15" DispNumber="15" DispName="業者CD(将軍)" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="GYOUSHA_CD" Format="" />
+      <Column ID="16" DispNumber="16" DispName="業者名(将軍)" Needs="0" TableName="M_GYOUSHA1" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="17" DispNumber="17" DispName="現場CD(将軍)" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="GENBA_CD" Format="" />
+      <Column ID="18" DispNumber="18" DispName="現場名(将軍)" Needs="0" TableName="M_GENBA1" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="30" DispNumber="30" DispName="作成者" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="CREATE_USER" Format="" />
+      <Column ID="31" DispNumber="31" DispName="作成日時" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="CREATE_DATE" Format="" />
+      <Column ID="32" DispNumber="32" DispName="作成PC" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="CREATE_PC" Format="" />
+      <Column ID="33" DispNumber="33" DispName="最終更新者" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="UPDATE_USER" Format="" />
+      <Column ID="34" DispNumber="34" DispName="最終更新日時" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="UPDATE_DATE" Format="" />
+      <Column ID="35" DispNumber="35" DispName="最終更新PC" Needs="0" TableName="M_DENSHI_JIGYOUJOU" Name="UPDATE_PC" Format="" />
+    </Group>
+    <JoinCondition TableName="M_GYOUSHA1">LEFT JOIN M_GYOUSHA M_GYOUSHA1 ON M_DENSHI_JIGYOUJOU.GYOUSHA_CD = M_GYOUSHA1.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="M_GENBA1">LEFT JOIN M_GENBA M_GENBA1 ON M_DENSHI_JIGYOUJOU.GYOUSHA_CD = M_GENBA1.GYOUSHA_CD AND M_DENSHI_JIGYOUJOU.GENBA_CD = M_GENBA1.GENBA_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

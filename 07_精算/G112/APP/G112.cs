@@ -1,0 +1,80 @@
+﻿using System.Windows.Forms;
+using r_framework.APP.Base;
+using r_framework.Const;
+
+namespace Shougun.Core.Adjustment.Shiharaiichiran
+{
+    /// <summary>
+    /// G112 支払一覧
+    /// </summary>
+    class G112 : r_framework.FormManager.IShougunForm
+    {
+        /// <summary>
+        /// フォーム作成
+        /// </summary>
+        /// <param name=args>SgFormManager.OpenForm()の可変引数</param>
+        /// <return>作成したフォーム。失敗時はnull</return>
+        public Form CreateForm(params object[] args)
+        {
+            DTOClass dto = new DTOClass();
+            if (args != null && args.Length > 0)
+            {
+                // 拠点CD
+                dto.InitKyotenCd = args[0].ToString();
+                // 取引先CD
+                dto.InitTorihiksiakiCd = args[1].ToString();
+                // 伝票日付
+                dto.InitDenpyouHiduke = args[2].ToString();
+            }
+            else
+            {
+                dto = null;
+            }
+
+            var HeaderForm = new Shougun.Core.Adjustment.Shiharaiichiran.UIHeader();
+
+            if (dto != null)
+            {
+                var callForm = new Shougun.Core.Adjustment.Shiharaiichiran.UIForm(DENSHU_KBN.SHIHARAI_ICHIRAN, HeaderForm, dto);
+                var bbf = new BusinessBaseForm(callForm, HeaderForm) { IsInFormResizable = true };
+                return bbf;
+            }
+            else
+            {
+                var callForm = new Shougun.Core.Adjustment.Shiharaiichiran.UIForm(DENSHU_KBN.SHIHARAI_ICHIRAN, HeaderForm);
+                var bbf = new BusinessBaseForm(callForm, HeaderForm) { IsInFormResizable = true };
+                return bbf;
+            }
+        }
+
+        /// <summary>
+        /// 同内容フォーム問い合わせ
+        /// </summary>
+        /// <param name="form">現在表示されている画面</param>
+        /// <param name="args">表示を要求されたSgFormManager.OpenForm()の可変引数</param>
+        /// <return>true：同じ false:異なる</return>
+        public bool IsSameContentForm(Form form, params object[] args)
+        {
+            // 一覧画面のためtrueを返却
+            return true;
+        }
+
+        /// <summary>
+        /// フォーム更新
+        /// </summary>
+        /// <param name=form>表示を更新するフォーム</param>
+        /// リスト表示や他の画面で変更される内容を表示している場合は最新の情報を表示すること。
+        public void UpdateForm(Form form)
+        {
+            BusinessBaseForm businessBaseForm = form as BusinessBaseForm;
+            if (businessBaseForm != null)
+            {
+                Shougun.Core.Adjustment.Shiharaiichiran.UIForm uiForm = businessBaseForm.inForm as Shougun.Core.Adjustment.Shiharaiichiran.UIForm;
+                if (uiForm != null)
+                {
+                    uiForm.UpdateDataGridView(true);
+                }
+            }
+        }
+    }
+}

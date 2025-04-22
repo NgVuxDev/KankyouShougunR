@@ -1,0 +1,15 @@
+﻿SELECT
+top 1 *
+FROM
+T_SEISAN_DENPYOU
+WHERE
+TORIHIKISAKI_CD =  /*shiharaCd*/
+/*IF selectFlg */
+AND SEISAN_DATE = CONVERT(DATETIME ,/*shiharaDate*/,120)
+/*END*/
+/*IF !selectFlg */
+AND SEISAN_DATE < CONVERT(DATETIME ,/*shiharaDate*/,120)
+/*END*/
+AND DELETE_FLG = 0
+ORDER BY
+SEISAN_DATE DESC

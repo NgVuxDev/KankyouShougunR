@@ -1,0 +1,6 @@
+﻿SELECT * FROM dbo.M_OUTPUT_PATTERN_HIMO
+WHERE 
+DELETE_FLG = 0
+/*IF !data.SYSTEM_ID.IsNull*/AND SYSTEM_ID = /*data.SYSTEM_ID.Value*//*END*/
+/*IF !data.SEQ.IsNull*/AND SEQ = /*data.SEQ.Value*//*END*/
+/*IF data.PATTERN_NAME!=null*/AND PATTERN_NAME = /*data.PATTERN_NAME*//*END*/

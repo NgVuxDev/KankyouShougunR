@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]    閉じる</IchiranButtonName>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <IchiranButtonName>パターン一覧</IchiranButtonName>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process2</ButtonName>
+    <IchiranButtonName>検索条件設定</IchiranButtonName>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process3</ButtonName>
+    <IchiranButtonName>ソート実行</IchiranButtonName>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process4</ButtonName>
+    <IchiranButtonName>テスト実行</IchiranButtonName>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

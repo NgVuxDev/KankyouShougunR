@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="9001">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SYSTEM_ID" />
+      <Column ID="2" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SEQ" />
+      <Column ID="3" DispNumber="" DispName="滞留登録区分" Needs="0" TableName="T_UKEIRE_ENTRY" Name="TAIRYUU_KBN" />
+      <Column ID="4" DispNumber="" DispName="拠点CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="KYOTEN_CD" />
+      <Column ID="5" DispNumber="" DispName="拠点名" Needs="0" TableName="M_KYOTEN_3E1" Name="KYOTEN_NAME_RYAKU" />
+      <Column ID="8" DispNumber="" DispName="受入番号" Needs="1" TableName="T_UKEIRE_ENTRY" Name="UKEIRE_NUMBER" />
+      <Column ID="9" DispNumber="" DispName="日連番" Needs="0" TableName="T_UKEIRE_ENTRY" Name="DATE_NUMBER" />
+      <Column ID="10" DispNumber="" DispName="年連番" Needs="0" TableName="T_UKEIRE_ENTRY" Name="YEAR_NUMBER" />
+      <Column ID="11" DispNumber="" DispName="確定区分" Needs="0" TableName="T_UKEIRE_ENTRY" Name="KAKUTEI_KBN" />
+      <Column ID="12" DispNumber="" DispName="伝票日付" Needs="0" TableName="T_UKEIRE_ENTRY" Name="DENPYOU_DATE" />
+      <Column ID="13" DispNumber="" DispName="売上日付" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_DATE" />
+      <Column ID="14" DispNumber="" DispName="支払日付" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_DATE" />
+      <Column ID="15" DispNumber="" DispName="取引先CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="TORIHIKISAKI_CD" />
+      <Column ID="16" DispNumber="" DispName="取引先名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="TORIHIKISAKI_NAME" />
+      <Column ID="17" DispNumber="" DispName="業者CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="GYOUSHA_CD" />
+      <Column ID="18" DispNumber="" DispName="業者名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="GYOUSHA_NAME" />
+      <Column ID="19" DispNumber="" DispName="現場CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="GENBA_CD" />
+      <Column ID="20" DispNumber="" DispName="現場名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="GENBA_NAME" />
+      <Column ID="21" DispNumber="" DispName="荷降業者CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="NIOROSHI_GYOUSHA_CD" />
+      <Column ID="22" DispNumber="" DispName="荷降業者名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="NIOROSHI_GYOUSHA_NAME" />
+      <Column ID="23" DispNumber="" DispName="荷降現場CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="NIOROSHI_GENBA_CD" />
+      <Column ID="24" DispNumber="" DispName="荷降現場名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="NIOROSHI_GENBA_NAME" />
+      <Column ID="25" DispNumber="" DispName="営業担当者CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="EIGYOU_TANTOUSHA_CD" />
+      <Column ID="26" DispNumber="" DispName="営業担当者名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="EIGYOU_TANTOUSHA_NAME" />
+      <Column ID="27" DispNumber="" DispName="入力担当者CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="NYUURYOKU_TANTOUSHA_CD" />
+      <Column ID="28" DispNumber="" DispName="入力担当者名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="NYUURYOKU_TANTOUSHA_NAME" />
+      <Column ID="29" DispNumber="" DispName="車輌CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHARYOU_CD" />
+      <Column ID="30" DispNumber="" DispName="車輌名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHARYOU_NAME" />
+      <Column ID="31" DispNumber="" DispName="車種CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHASHU_CD" />
+      <Column ID="32" DispNumber="" DispName="車種名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHASHU_NAME" />
+      <Column ID="33" DispNumber="" DispName="運搬業者CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="UNPAN_GYOUSHA_CD" />
+      <Column ID="34" DispNumber="" DispName="運搬業者名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="UNPAN_GYOUSHA_NAME" />
+      <Column ID="35" DispNumber="" DispName="運転者CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="UNTENSHA_CD" />
+      <Column ID="36" DispNumber="" DispName="運転者名" Needs="0" TableName="T_UKEIRE_ENTRY" Name="UNTENSHA_NAME" />
+      <Column ID="37" DispNumber="" DispName="人数" Needs="0" TableName="T_UKEIRE_ENTRY" Name="NINZUU_CNT" />
+      <Column ID="38" DispNumber="" DispName="形態区分CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="KEITAI_KBN_CD" />
+      <Column ID="39" DispNumber="" DispName="形態区分名" Needs="0" TableName="M_KEITAI_KBN_3E3" Name="KEITAI_KBN_NAME_RYAKU" />
+      <Column ID="40" DispNumber="" DispName="台貫区分" Needs="0" TableName="T_UKEIRE_ENTRY" Name="DAIKAN_KBN" />
+      <Column ID="41" DispNumber="" DispName="コンテナ操作CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="CONTENA_SOUSA_CD" />
+      <Column ID="42" DispNumber="" DispName="コンテナ操作名" Needs="0" TableName="M_CONTENA_SOUSA_3E4" Name="CONTENA_SOUSA_NAME_RYAKU" />
+      <Column ID="43" DispNumber="" DispName="マニフェスト種類CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="MANIFEST_SHURUI_CD" />
+      <Column ID="44" DispNumber="" DispName="マニフェスト種類名" Needs="0" TableName="M_MANIFEST_SHURUI_3E5" Name="MANIFEST_SHURUI_NAME_RYAKU" />
+      <Column ID="45" DispNumber="" DispName="マニフェスト手配CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="MANIFEST_TEHAI_CD" />
+      <Column ID="46" DispNumber="" DispName="マニフェスト手配名" Needs="0" TableName="M_MANIFEST_TEHAI_3E6" Name="MANIFEST_TEHAI_NAME_RYAKU" />
+      <Column ID="47" DispNumber="" DispName="伝票備考" Needs="0" TableName="T_UKEIRE_ENTRY" Name="DENPYOU_BIKOU" />
+      <Column ID="48" DispNumber="" DispName="滞留備考" Needs="0" TableName="T_UKEIRE_ENTRY" Name="TAIRYUU_BIKOU" />
+      <Column ID="49" DispNumber="" DispName="受付番号" Needs="0" TableName="T_UKEIRE_ENTRY" Name="UKETSUKE_NUMBER" />
+      <Column ID="50" DispNumber="" DispName="計量番号" Needs="0" TableName="T_UKEIRE_ENTRY" Name="KEIRYOU_NUMBER" />
+      <Column ID="51" DispNumber="" DispName="領収書番号" Needs="0" TableName="T_UKEIRE_ENTRY" Name="RECEIPT_NUMBER" />
+      <Column ID="52" DispNumber="" DispName="正味合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="NET_TOTAL" />
+      <Column ID="53" DispNumber="" DispName="売上消費税率" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_SHOUHIZEI_RATE" />
+      <Column ID="54" DispNumber="" DispName="売上金額合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_KINGAKU_TOTAL" />
+      <Column ID="55" DispNumber="" DispName="売上伝票毎消費税外税" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_TAX_SOTO" />
+      <Column ID="56" DispNumber="" DispName="売上伝票毎消費税内税" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_TAX_UCHI" />
+      <Column ID="57" DispNumber="" DispName="売上明細毎消費税外税合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_TAX_SOTO_TOTAL" />
+      <Column ID="58" DispNumber="" DispName="売上明細毎消費税内税合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_TAX_UCHI_TOTAL" />
+      <Column ID="59" DispNumber="" DispName="品名別売上金額合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="HINMEI_URIAGE_KINGAKU_TOTAL" />
+      <Column ID="60" DispNumber="" DispName="品名別売上消費税外税合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="HINMEI_URIAGE_TAX_SOTO_TOTAL" />
+      <Column ID="61" DispNumber="" DispName="品名別売上消費税内税合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="HINMEI_URIAGE_TAX_UCHI_TOTAL" />
+      <Column ID="62" DispNumber="" DispName="支払消費税率" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_SHOUHIZEI_RATE" />
+      <Column ID="63" DispNumber="" DispName="支払金額合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_KINGAKU_TOTAL" />
+      <Column ID="64" DispNumber="" DispName="支払伝票毎消費税外税" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_TAX_SOTO" />
+      <Column ID="65" DispNumber="" DispName="支払伝票毎消費税内税" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_TAX_UCHI" />
+      <Column ID="66" DispNumber="" DispName="支払明細毎消費税外税合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_TAX_SOTO_TOTAL" />
+      <Column ID="67" DispNumber="" DispName="支払明細毎消費税内税合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_TAX_UCHI_TOTAL" />
+      <Column ID="68" DispNumber="" DispName="品名別支払金額合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="HINMEI_SHIHARAI_KINGAKU_TOTAL" />
+      <Column ID="69" DispNumber="" DispName="品名別支払消費税外税合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="HINMEI_SHIHARAI_TAX_SOTO_TOTAL" />
+      <Column ID="70" DispNumber="" DispName="品名別支払消費税内税合計" Needs="0" TableName="T_UKEIRE_ENTRY" Name="HINMEI_SHIHARAI_TAX_UCHI_TOTAL" />
+      <Column ID="71" DispNumber="" DispName="売上税計算区分CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_ZEI_KEISAN_KBN_CD" />
+      <Column ID="72" DispNumber="" DispName="売上税区分CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_ZEI_KBN_CD" />
+      <Column ID="73" DispNumber="" DispName="消費税" Needs="0" TableName="M_SHOUHIZEI_3E7" Name="SHOUHIZEI_RATE" />
+      <Column ID="74" DispNumber="" DispName="売上取引区分CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="URIAGE_TORIHIKI_KBN_CD" />
+      <Column ID="75" DispNumber="" DispName="支払税計算区分CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_ZEI_KEISAN_KBN_CD" />
+      <Column ID="76" DispNumber="" DispName="支払税区分CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_ZEI_KBN_CD" />
+      <Column ID="77" DispNumber="" DispName="消費税" Needs="0" TableName="M_SHOUHIZEI_3E8" Name="SHOUHIZEI_RATE" />
+      <Column ID="78" DispNumber="" DispName="支払取引区分CD" Needs="0" TableName="T_UKEIRE_ENTRY" Name="SHIHARAI_TORIHIKI_KBN_CD" />
+      <Column ID="79" DispNumber="" DispName="作成者" Needs="0" TableName="T_UKEIRE_ENTRY" Name="CREATE_USER" />
+      <Column ID="80" DispNumber="" DispName="作成日時" Needs="0" TableName="T_UKEIRE_ENTRY" Name="CREATE_DATE" />
+      <Column ID="81" DispNumber="" DispName="作成PC" Needs="0" TableName="T_UKEIRE_ENTRY" Name="CREATE_PC" />
+      <Column ID="82" DispNumber="" DispName="最終更新者" Needs="0" TableName="T_UKEIRE_ENTRY" Name="UPDATE_USER" />
+      <Column ID="83" DispNumber="" DispName="最終更新日時" Needs="0" TableName="T_UKEIRE_ENTRY" Name="UPDATE_DATE" />
+      <Column ID="84" DispNumber="" DispName="最終更新PC" Needs="0" TableName="T_UKEIRE_ENTRY" Name="UPDATE_PC" />
+      <Column ID="85" DispNumber="" DispName="削除フラグ" Needs="0" TableName="T_UKEIRE_ENTRY" Name="DELETE_FLG" />
+      <Column ID="86" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKEIRE_ENTRY" Name="TIME_STAMP" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="システムID" Needs="0" TableName="T_UKEIRE_DETAIL" Name="SYSTEM_ID" />
+      <Column ID="2" DispNumber="" DispName="枝番" Needs="0" TableName="T_UKEIRE_DETAIL" Name="SEQ" />
+      <Column ID="3" DispNumber="" DispName="明細システムID" Needs="0" TableName="T_UKEIRE_DETAIL" Name="DETAIL_SYSTEM_ID" />
+      <Column ID="4" DispNumber="" DispName="受入番号" Needs="0" TableName="T_UKEIRE_DETAIL" Name="UKEIRE_NUMBER" />
+      <Column ID="5" DispNumber="" DispName="行番号" Needs="0" TableName="T_UKEIRE_DETAIL" Name="ROW_NO" />
+      <Column ID="6" DispNumber="" DispName="確定区分" Needs="0" TableName="T_UKEIRE_DETAIL" Name="KAKUTEI_KBN" />
+      <Column ID="7" DispNumber="" DispName="売上支払日付" Needs="0" TableName="T_UKEIRE_DETAIL" Name="URIAGESHIHARAI_DATE" />
+      <Column ID="8" DispNumber="" DispName="総重量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="STACK_JYUURYOU" />
+      <Column ID="9" DispNumber="" DispName="空車重量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="EMPTY_JYUURYOU" />
+      <Column ID="10" DispNumber="" DispName="割振重量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="WARIFURI_JYUURYOU" />
+      <Column ID="11" DispNumber="" DispName="割振割合" Needs="0" TableName="T_UKEIRE_DETAIL" Name="WARIFURI_PERCENT" />
+      <Column ID="12" DispNumber="" DispName="調整重量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="CHOUSEI_JYUURYOU" />
+      <Column ID="13" DispNumber="" DispName="調整割合" Needs="0" TableName="T_UKEIRE_DETAIL" Name="CHOUSEI_PERCENT" />
+      <Column ID="14" DispNumber="" DispName="容器CD" Needs="0" TableName="T_UKEIRE_DETAIL" Name="YOUKI_CD" />
+      <Column ID="15" DispNumber="" DispName="容器数量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="YOUKI_SUURYOU" />
+      <Column ID="16" DispNumber="" DispName="容器重量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="YOUKI_JYUURYOU" />
+      <Column ID="17" DispNumber="" DispName="伝票区分CD" Needs="0" TableName="T_UKEIRE_DETAIL" Name="DENPYOU_KBN_CD" />
+      <Column ID="18" DispNumber="" DispName="伝票区分名" Needs="0" TableName="M_DENPYOU_KBN_3D1" Name="DENPYOU_KBN_NAME_RYAKU" />
+      <Column ID="19" DispNumber="" DispName="品名CD" Needs="0" TableName="T_UKEIRE_DETAIL" Name="HINMEI_CD" />
+      <Column ID="20" DispNumber="" DispName="品名" Needs="0" TableName="T_UKEIRE_DETAIL" Name="HINMEI_NAME" />
+      <Column ID="21" DispNumber="" DispName="正味重量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="NET_JYUURYOU" />
+      <Column ID="22" DispNumber="" DispName="数量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="SUURYOU" />
+      <Column ID="23" DispNumber="" DispName="単位CD" Needs="0" TableName="T_UKEIRE_DETAIL" Name="UNIT_CD" />
+      <Column ID="24" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT_3D2" Name="UNIT_NAME_RYAKU" />
+      <Column ID="25" DispNumber="" DispName="単価" Needs="0" TableName="T_UKEIRE_DETAIL" Name="TANKA" />
+      <Column ID="26" DispNumber="" DispName="金額" Needs="0" TableName="T_UKEIRE_DETAIL" Name="KINGAKU" />
+      <Column ID="27" DispNumber="" DispName="消費税外税" Needs="0" TableName="T_UKEIRE_DETAIL" Name="TAX_SOTO" />
+      <Column ID="28" DispNumber="" DispName="消費税内税" Needs="0" TableName="T_UKEIRE_DETAIL" Name="TAX_UCHI" />
+      <Column ID="29" DispNumber="" DispName="品名別税区分CD" Needs="0" TableName="T_UKEIRE_DETAIL" Name="HINMEI_ZEI_KBN_CD" />
+      <Column ID="30" DispNumber="" DispName="消費税" Needs="0" TableName="M_SHOUHIZEI_3D3" Name="SHOUHIZEI_RATE" />
+      <Column ID="31" DispNumber="" DispName="品名別金額" Needs="0" TableName="T_UKEIRE_DETAIL" Name="HINMEI_KINGAKU" />
+      <Column ID="32" DispNumber="" DispName="品名別消費税外税" Needs="0" TableName="T_UKEIRE_DETAIL" Name="HINMEI_TAX_SOTO" />
+      <Column ID="33" DispNumber="" DispName="品名別消費税内税" Needs="0" TableName="T_UKEIRE_DETAIL" Name="HINMEI_TAX_UCHI" />
+      <Column ID="34" DispNumber="" DispName="明細備考" Needs="0" TableName="T_UKEIRE_DETAIL" Name="MEISAI_BIKOU" />
+      <Column ID="35" DispNumber="" DispName="荷姿数量" Needs="0" TableName="T_UKEIRE_DETAIL" Name="NISUGATA_SUURYOU" />
+      <Column ID="36" DispNumber="" DispName="荷姿単位CD" Needs="0" TableName="T_UKEIRE_DETAIL" Name="NISUGATA_UNIT_CD" />
+      <Column ID="37" DispNumber="" DispName="単位名" Needs="0" TableName="M_UNIT_3D4" Name="UNIT_NAME_RYAKU" />
+      <Column ID="38" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="T_UKEIRE_DETAIL" Name="TIME_STAMP" />
+    </Group>
+    <JoinCondition TableName="T_UKEIRE_ENTRY" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN_3E1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_KEITAI_KBN_3E3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_CONTENA_SOUSA_3E4" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_SHURUI_3E5" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_TEHAI_3E6" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHOUHIZEI_3E7" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHOUHIZEI_3E8" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="T_UKEIRE_DETAIL" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN_3D1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_UNIT_3D2" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHOUHIZEI_3D3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_UNIT_3D4" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+  </OutputColumnSelect>
+</root>

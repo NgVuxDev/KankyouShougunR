@@ -1,0 +1,14 @@
+SELECT 
+    TAN.*
+FROM 
+    dbo.M_DENSHI_TANTOUSHA TAN
+WHERE TAN.EDI_MEMBER_ID = /*data.EDI_MEMBER_ID*/'0000001'
+  AND TAN.TANTOUSHA_KBN = /*data.TANTOUSHA_KBN*/'0'
+  /*IF data.TANTOUSHA_CD != null*/AND TAN.TANTOUSHA_CD LIKE '%' + /*data.TANTOUSHA_CD*/'' + '%'/*END*/
+  /*IF data.TANTOUSHA_NAME != null*/AND TAN.TANTOUSHA_NAME LIKE '%' + /*data.TANTOUSHA_NAME*/'' + '%'/*END*/
+  /*IF data.CREATE_USER != null*/AND TAN.CREATE_USER LIKE '%' + /*data.CREATE_USER*/'' + '%'/*END*/
+  /*IF !data.CREATE_DATE.IsNull*/AND TAN.CREATE_DATE LIKE '%' + /*data.CREATE_DATE*/'' + '%'/*END*/
+  /*IF data.UPDATE_USER != null*/AND TAN.UPDATE_USER LIKE '%' + /*data.UPDATE_USER*/'' + '%'/*END*/
+  /*IF !data.UPDATE_DATE.IsNull*/AND TAN.UPDATE_DATE LIKE '%' + /*data.UPDATE_DATE*/'' + '%'/*END*/
+  /*IF !deletechuFlg*/AND TAN.DELETE_FLG = /*deletechuFlg*/0/*END*/
+ORDER BY TAN.EDI_MEMBER_ID, TAN.TANTOUSHA_KBN, TAN.TANTOUSHA_CD

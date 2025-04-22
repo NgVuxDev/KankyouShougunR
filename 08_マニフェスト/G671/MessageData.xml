@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <Message id="0101">1行目が見出しか確認する。</Message>
+  <Message id="0102">取込データの項目数が正しいか確認する。</Message>
+  <Message id="0201">項目が入力されているか確認する。</Message>
+  <Message id="0202">取込データが{0}の書式で入力されているか確認する。</Message>
+  <Message id="0301">紐付け解除されているか確認する。</Message>
+  <Message id="0302">マスタに登録されているか確認する。</Message>
+  <Message id="0303">交付番号が正しいか確認する。</Message>
+  <Message id="0304">{0}の範囲で入力されているか確認する。</Message>
+  <Message id="0305">{0}が入力されているか確認する。</Message>
+  <Message id="0306">{0}が全て入力済み(又は未入力)か確認する。</Message>
+  <Message id="0307">交付番号に該当する最大の行番号か確認する。</Message>
+  <Message id="0308">交付番号に該当する連番か確認する。</Message>
+  <Message id="0309">チェック有の場合、CD項目が入力されているか確認する。</Message>
+  <Message id="9998">{0}件以上のエラーを検出したため、処理を中止</Message>
+  <Message id="9999">処理を中止</Message>
+</root>

@@ -1,0 +1,20 @@
+﻿SELECT KANRI_ID
+      ,SEQ
+      ,REC_SEQ
+      ,MANIFEST_ID
+      ,MEDIA_TYPE
+      ,FIRST_MANIFEST_ID
+      ,RENRAKU_ID
+      ,KOUHU_DATE
+      ,SBN_END_DATE
+      ,HST_SHA_NAME
+      ,HST_JOU_NAME
+      ,HAIKI_SHURUI
+      ,HAIKI_SUU
+      ,HAIKI_SUU_UNIT
+      ,CREATE_DATE
+      ,UPDATE_TS
+FROM DT_R08
+WHERE KANRI_ID = /*data.KANRI_ID*/ 
+  AND SEQ = /*data.SEQ*/ 
+ORDER BY REC_SEQ

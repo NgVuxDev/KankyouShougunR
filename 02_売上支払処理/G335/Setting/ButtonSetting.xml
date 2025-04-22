@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func1</ButtonName>
+    <PopupButtonName>[F1]&#xD;&#xA;残高取得</PopupButtonName>
+    <PopupButtonHintText>前回残高を取得して再計算をします</PopupButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <PopupButtonName>[F9]&#xD;&#xA;実行</PopupButtonName>
+    <PopupButtonHintText>表示されている内容で伝票発行します</PopupButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <PopupButtonName>[F12]&#xD;&#xA;閉じる</PopupButtonName>
+    <PopupButtonHintText>画面を閉じます</PopupButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

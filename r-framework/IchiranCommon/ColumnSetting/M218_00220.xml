@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="220">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="業者CD" Needs="0" TableName="M_GENBA" Name="GYOUSHA_CD" Format="" />
+      <Column ID="2" DispNumber="2" DispName="業者名1" Needs="0" TableName="M_GYOUSHA" Name="GYOUSHA_NAME1" Format="" />
+      <Column ID="3" DispNumber="3" DispName="業者名2" Needs="0" TableName="M_GYOUSHA" Name="GYOUSHA_NAME2" Format="" />
+      <Column ID="4" DispNumber="4" DispName="取引先CD" Needs="0" TableName="M_GENBA" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="5" DispNumber="5" DispName="取引先名1" Needs="0" TableName="M_TORIHIKISAKI" Name="TORIHIKISAKI_NAME1" Format="" />
+      <Column ID="6" DispNumber="6" DispName="取引先名2" Needs="0" TableName="M_TORIHIKISAKI" Name="TORIHIKISAKI_NAME2" Format="" />
+      <Column ID="7" DispNumber="7" DispName="現場CD" Needs="0" TableName="M_GENBA" Name="GENBA_CD" Format="" />
+      <Column ID="8" DispNumber="8" DispName="現場名1" Needs="0" TableName="M_GENBA" Name="GENBA_NAME1" Format="" />
+      <Column ID="9" DispNumber="9" DispName="現場敬称1" Needs="0" TableName="M_GENBA" Name="GENBA_KEISHOU1" Format="" />
+      <Column ID="10" DispNumber="10" DispName="現場名2" Needs="0" TableName="M_GENBA" Name="GENBA_NAME2" Format="" />
+      <Column ID="11" DispNumber="11" DispName="現場敬称2" Needs="0" TableName="M_GENBA" Name="GENBA_KEISHOU2" Format="" />
+      <Column ID="12" DispNumber="12" DispName="現場略称名" Needs="0" TableName="M_GENBA" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="13" DispNumber="13" DispName="現場フリガナ" Needs="0" TableName="M_GENBA" Name="GENBA_FURIGANA" Format="" />
+      <Column ID="14" DispNumber="14" DispName="電話番号" Needs="0" TableName="M_GENBA" Name="GENBA_TEL" Format="" />
+      <Column ID="15" DispNumber="15" DispName="携帯番号" Needs="0" TableName="M_GENBA" Name="GENBA_KEITAI_TEL" Format="" />
+      <Column ID="16" DispNumber="16" DispName="FAX番号" Needs="0" TableName="M_GENBA" Name="GENBA_FAX" Format="" />
+      <Column ID="17" DispNumber="17" DispName="営業担当部署CD" Needs="0" TableName="M_GENBA" Name="EIGYOU_TANTOU_BUSHO_CD" Format="" />
+      <Column ID="18" DispNumber="18" DispName="営業担当部署名" Needs="0" TableName="M_BUSHO1" Name="BUSHO_NAME_RYAKU" Format="" />
+      <Column ID="19" DispNumber="19" DispName="営業担当者CD" Needs="0" TableName="M_GENBA" Name="EIGYOU_TANTOU_CD" Format="" />
+      <Column ID="20" DispNumber="20" DispName="営業担当者名" Needs="0" TableName="M_SHAIN1" Name="SHAIN_NAME_RYAKU" Format="" />
+      <Column ID="21" DispNumber="21" DispName="適用開始日" Needs="0" TableName="M_GENBA" Name="TEKIYOU_BEGIN" Format="" />
+      <Column ID="22" DispNumber="22" DispName="適用終了日" Needs="0" TableName="M_GENBA" Name="TEKIYOU_END" Format="" />
+      <Column ID="23" DispNumber="23" DispName="中止理由1" Needs="0" TableName="M_GENBA" Name="CHUUSHI_RIYUU1" Format="" />
+      <Column ID="24" DispNumber="24" DispName="中止理由2" Needs="0" TableName="M_GENBA" Name="CHUUSHI_RIYUU2" Format="" />
+      <Column ID="25" DispNumber="25" DispName="諸口フラグ" Needs="0" TableName="M_GENBA" Name="SHOKUCHI_KBN" Format="" />
+      <!--<Column ID="26" DispNumber="26" DispName="電子マニ照会フラグ" Needs="0" TableName="M_GENBA" Name="DEN_MANI_SHOUKAI_KBN" Format="" />-->
+      <Column ID="26" DispNumber="27" DispName="検収要否" Needs="0" TableName="M_GENBA" Name="KENSHU_YOUHI" Format="" />
+      <Column ID="27" DispNumber="28" DispName="自社区分" Needs="0" TableName="M_GENBA" Name="JISHA_KBN" Format="" />
+      <Column ID="28" DispNumber="29" DispName="現場郵便番号" Needs="0" TableName="M_GENBA" Name="GENBA_POST" Format="" />
+      <Column ID="29" DispNumber="30" DispName="現場都道府県CD" Needs="0" TableName="M_GENBA" Name="GENBA_TODOUFUKEN_CD" Format="00" />
+      <Column ID="30" DispNumber="31" DispName="現場都道府県名" Needs="0" TableName="M_TODOUFUKEN1" Name="TODOUFUKEN_NAME_RYAKU" Format="" />
+      <Column ID="31" DispNumber="32" DispName="現場住所1" Needs="0" TableName="M_GENBA" Name="GENBA_ADDRESS1" Format="" />
+      <Column ID="32" DispNumber="33" DispName="現場住所2" Needs="0" TableName="M_GENBA" Name="GENBA_ADDRESS2" Format="" />
+      <Column ID="33" DispNumber="34" DispName="現場地域CD" Needs="0" TableName="M_GENBA" Name="CHIIKI_CD" Format="" />
+      <Column ID="34" DispNumber="35" DispName="現場地域名" Needs="0" TableName="M_CHIIKI1" Name="CHIIKI_NAME_RYAKU" Format="" />
+      <Column ID="35" DispNumber="36" DispName="運搬報告書用地域CD" Needs="0" TableName="M_GENBA" Name="UPN_HOUKOKUSHO_TEISHUTSU_CHIIKI_CD" Format="" />
+      <Column ID="36" DispNumber="37" DispName="運搬報告書用地域名" Needs="0" TableName="M_CHIIKI2" Name="CHIIKI_NAME_RYAKU" Format="" />
+      <Column ID="37" DispNumber="38" DispName="現場部署" Needs="0" TableName="M_GENBA" Name="BUSHO" Format="" />
+      <Column ID="38" DispNumber="39" DispName="現場担当者" Needs="0" TableName="M_GENBA" Name="TANTOUSHA" Format="" />
+      <Column ID="39" DispNumber="40" DispName="交付担当者" Needs="0" TableName="M_GENBA" Name="KOUFU_TANTOUSHA" Format="" />
+      <Column ID="40" DispNumber="41" DispName="集計項目CD" Needs="0" TableName="M_GENBA" Name="SHUUKEI_ITEM_CD" Format="" />
+      <Column ID="41" DispNumber="42" DispName="集計項目名" Needs="0" TableName="M_SHUUKEI_KOUMOKU1" Name="SHUUKEI_KOUMOKU_NAME_RYAKU" Format="" />
+      <Column ID="42" DispNumber="43" DispName="業種CD" Needs="0" TableName="M_GENBA" Name="GYOUSHU_CD" Format="" />
+      <Column ID="43" DispNumber="44" DispName="業種名" Needs="0" TableName="M_GYOUSHU1" Name="GYOUSHU_NAME_RYAKU" Format="" />
+      <Column ID="44" DispNumber="45" DispName="備考1" Needs="0" TableName="M_GENBA" Name="BIKOU1" Format="" />
+      <Column ID="45" DispNumber="46" DispName="備考2" Needs="0" TableName="M_GENBA" Name="BIKOU2" Format="" />
+      <Column ID="46" DispNumber="47" DispName="備考3" Needs="0" TableName="M_GENBA" Name="BIKOU3" Format="" />
+      <Column ID="47" DispNumber="48" DispName="備考4" Needs="0" TableName="M_GENBA" Name="BIKOU4" Format="" />
+      <Column ID="48" DispNumber="49" DispName="運転者指示事項１" Needs="0" TableName="M_GENBA" Name="UNTENSHA_SHIJI_JIKOU1" Format="" />
+      <Column ID="49" DispNumber="50" DispName="運転者指示事項２" Needs="0" TableName="M_GENBA" Name="UNTENSHA_SHIJI_JIKOU2" Format="" />
+      <Column ID="50" DispNumber="51" DispName="運転者指示事項３" Needs="0" TableName="M_GENBA" Name="UNTENSHA_SHIJI_JIKOU3" Format="" />
+      <Column ID="51" DispNumber="52" DispName="請求書送付先名1" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_NAME1" Format="" />
+      <Column ID="52" DispNumber="53" DispName="請求書送付先敬称1" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_KEISHOU1" Format="" />
+      <Column ID="53" DispNumber="54" DispName="請求書送付先名2" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_NAME2" Format="" />
+      <Column ID="54" DispNumber="55" DispName="請求書送付先敬称2" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_KEISHOU2" Format="" />
+      <Column ID="55" DispNumber="56" DispName="請求書送付先郵便番号" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_POST" Format="" />
+      <Column ID="56" DispNumber="57" DispName="請求書送付先住所1" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_ADDRESS1" Format="" />
+      <Column ID="57" DispNumber="58" DispName="請求書送付先住所2" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_ADDRESS2" Format="" />
+      <Column ID="58" DispNumber="59" DispName="請求書送付先部署" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_BUSHO" Format="" />
+      <Column ID="59" DispNumber="60" DispName="請求書送付先担当者" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_TANTOU" Format="" />
+      <Column ID="60" DispNumber="61" DispName="請求書送付先電話番号" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_TEL" Format="" />
+      <Column ID="61" DispNumber="62" DispName="請求書送付先FAX番号" Needs="0" TableName="M_GENBA" Name="SEIKYUU_SOUFU_FAX" Format="" />
+      <Column ID="62" DispNumber="63" DispName="請求担当者" Needs="0" TableName="M_GENBA" Name="SEIKYUU_TANTOU" Format="" />
+      <Column ID="63" DispNumber="64" DispName="請求先代表者印字区分" Needs="0" TableName="" Name="CASE M_GENBA.SEIKYUU_DAIHYOU_PRINT_KBN WHEN 1 THEN '印字する' WHEN 2 THEN '印字しない' ELSE '' END" Format="" />
+      <Column ID="64" DispNumber="65" DispName="請求書拠点印字区分" Needs="0" TableName="" Name="CASE M_GENBA.SEIKYUU_KYOTEN_PRINT_KBN WHEN 1 THEN '印字する' WHEN 2 THEN '印字しない' ELSE '' END" Format="" />
+      <Column ID="65" DispNumber="66" DispName="請求書拠点CD" Needs="0" TableName="M_GENBA" Name="SEIKYUU_KYOTEN_CD" Format="00" />
+      <Column ID="66" DispNumber="67" DispName="請求書拠点名" Needs="0" TableName="M_KYOTEN2" Name="KYOTEN_NAME_RYAKU" Format="" />
+	  <Column ID="67" DispNumber="70" DispName="支払明細書送付先名1" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_NAME1" Format="" />
+	  <Column ID="68" DispNumber="71" DispName="支払明細書送付先敬称1" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_KEISHOU1" Format="" />
+	  <Column ID="69" DispNumber="72" DispName="支払明細書送付先名2" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_NAME2" Format="" />
+	  <Column ID="70" DispNumber="73" DispName="支払明細書送付先敬称2" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_KEISHOU2" Format="" />
+	  <Column ID="71" DispNumber="74" DispName="支払明細書送付先郵便番号" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_POST" Format="" />
+	  <Column ID="72" DispNumber="75" DispName="支払明細書送付先住所1" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_ADDRESS1" Format="" />
+	  <Column ID="73" DispNumber="76" DispName="支払明細書送付先住所2" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_ADDRESS2" Format="" />
+	  <Column ID="74" DispNumber="77" DispName="支払明細書送付先部署" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_BUSHO" Format="" />
+	  <Column ID="75" DispNumber="78" DispName="支払明細書送付先担当者" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_TANTOU" Format="" />
+	  <Column ID="76" DispNumber="79" DispName="支払明細書送付先電話番号" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_TEL" Format="" />
+	  <Column ID="77" DispNumber="80" DispName="支払明細書送付先FAX番号" Needs="0" TableName="M_GENBA" Name="SHIHARAI_SOUFU_FAX" Format="" />
+	  <Column ID="78" DispNumber="81" DispName="支払明細書拠点印字区分" Needs="0" TableName="" Name="CASE M_GENBA.SHIHARAI_KYOTEN_PRINT_KBN WHEN 1 THEN '印字する' WHEN 2 THEN '印字しない' ELSE '' END" Format="" />
+	  <Column ID="79" DispNumber="82" DispName="支払明細書拠点CD" Needs="0" TableName="M_GENBA" Name="SHIHARAI_KYOTEN_CD" Format="00" />
+	  <Column ID="80" DispNumber="83" DispName="支払明細書拠点名" Needs="0" TableName="M_KYOTEN3" Name="KYOTEN_NAME_RYAKU" Format="" />
+	  <Column ID="81" DispNumber="84" DispName="排出事業場/荷積現場区分" Needs="0" TableName="M_GENBA" Name="HAISHUTSU_NIZUMI_GENBA_KBN" Format="" />
+	  <Column ID="82" DispNumber="85" DispName="積み替え保管区分" Needs="0" TableName="M_GENBA" Name="TSUMIKAEHOKAN_KBN" Format="" />
+	  <Column ID="83" DispNumber="86" DispName="処分事業場/荷降現場区分" Needs="0" TableName="M_GENBA" Name="SHOBUN_NIOROSHI_GENBA_KBN" Format="" />
+	  <Column ID="84" DispNumber="87" DispName="最終処分場区分" Needs="0" TableName="M_GENBA" Name="SAISHUU_SHOBUNJOU_KBN" Format="" />
+	  <Column ID="85" DispNumber="88" DispName="マニフェスト返送先区分" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_KBN" Format="" />
+      <!--<Column ID="85" DispNumber="88" DispName="荷積降現場区分" Needs="0" TableName="M_GENBA" Name="NIOROSHI_GENBA_KBN" Format="" />-->
+      <Column ID="86" DispNumber="89" DispName="マニフェスト種類CD" Needs="0" TableName="M_GENBA" Name="MANIFEST_SHURUI_CD" Format="" />
+      <Column ID="87" DispNumber="90" DispName="マニフェスト種類名" Needs="0" TableName="M_MANIFEST_SHURUI1" Name="MANIFEST_SHURUI_NAME_RYAKU" Format="" />
+      <Column ID="88" DispNumber="91" DispName="マニフェスト手配CD" Needs="0" TableName="M_GENBA" Name="MANIFEST_TEHAI_CD" Format="" />
+      <Column ID="89" DispNumber="92" DispName="マニフェスト手配名" Needs="0" TableName="M_MANIFEST_TEHAI1" Name="MANIFEST_TEHAI_NAME_RYAKU" Format="" />
+      <Column ID="90" DispNumber="93" DispName="処分先No" Needs="0" TableName="M_GENBA" Name="SHOBUNSAKI_NO" Format="" />
+      <Column ID="91" DispNumber="94" DispName="委託契約利用区分" Needs="0" TableName="" Name="CASE M_GENBA.ITAKU_KEIYAKU_USE_KBN WHEN 1 THEN 'する' WHEN 2 THEN 'しない' ELSE '' END" Format="" />
+      <Column ID="92" DispNumber="95" DispName="マニフェスト返送先名1" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_NAME1" Format="" />
+      <Column ID="93" DispNumber="96" DispName="マニフェスト返送先敬称1" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_KEISHOU1" Format="" />
+      <Column ID="94" DispNumber="97" DispName="マニフェスト返送先名2" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_NAME2" Format="" />
+      <Column ID="95" DispNumber="98" DispName="マニフェスト返送先敬称2" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_KEISHOU2" Format="" />
+      <Column ID="96" DispNumber="99" DispName="マニフェスト返送先郵便番号" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_POST" Format="" />
+      <Column ID="97" DispNumber="100" DispName="マニフェスト返送先住所1" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_ADDRESS1" Format="" />
+      <Column ID="98" DispNumber="101" DispName="マニフェスト返送先住所2" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_ADDRESS2" Format="" />
+      <Column ID="99" DispNumber="102" DispName="マニフェスト返送先部署" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_BUSHO" Format="" />
+      <Column ID="100" DispNumber="103" DispName="マニフェスト返送先担当者" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TANTOU" Format="" />
+      <Column ID="101" DispNumber="106" DispName="マニフェストA票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_A" Format="" />
+      <Column ID="102" DispNumber="107" DispName="マニフェストA票返送先取引先名" Needs="0" TableName="MT_A" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="103" DispNumber="108" DispName="マニフェストA票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_A" Format="" />
+      <Column ID="104" DispNumber="109" DispName="マニフェストA票返送先業者名" Needs="0" TableName="MGY_A" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="105" DispNumber="110" DispName="マニフェストA票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_A" Format="" />
+      <Column ID="106" DispNumber="111" DispName="マニフェストA票返送先現場名" Needs="0" TableName="MGE_A" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="107" DispNumber="114" DispName="マニフェストB1票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_B1" Format="" />
+      <Column ID="108" DispNumber="115" DispName="マニフェストB1票返送先取引先名" Needs="0" TableName="MT_B1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="109" DispNumber="116" DispName="マニフェストB1票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_B1" Format="" />
+      <Column ID="110" DispNumber="117" DispName="マニフェストB1票返送先業者名" Needs="0" TableName="MGY_B1" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="111" DispNumber="118" DispName="マニフェストB1票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_B1" Format="" />
+      <Column ID="112" DispNumber="119" DispName="マニフェストB1票返送先現場名" Needs="0" TableName="MGE_B1" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="113" DispNumber="122" DispName="マニフェストB2票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_B2" Format="" />
+      <Column ID="114" DispNumber="123" DispName="マニフェストB2票返送先取引先名" Needs="0" TableName="MT_B2" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="115" DispNumber="124" DispName="マニフェストB2票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_B2" Format="" />
+      <Column ID="116" DispNumber="125" DispName="マニフェストB2票返送先業者名" Needs="0" TableName="MGY_B2" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="117" DispNumber="126" DispName="マニフェストB2票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_B2" Format="" />
+      <Column ID="118" DispNumber="127" DispName="マニフェストB2票返送先現場名" Needs="0" TableName="MGE_B2" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="119" DispNumber="130" DispName="マニフェストB4票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_B4" Format="" />
+      <Column ID="120" DispNumber="131" DispName="マニフェストB4票返送先取引先名" Needs="0" TableName="MT_B4" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="121" DispNumber="132" DispName="マニフェストB4票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_B4" Format="" />
+      <Column ID="122" DispNumber="133" DispName="マニフェストB4票返送先業者名" Needs="0" TableName="MGY_B4" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="123" DispNumber="134" DispName="マニフェストB4票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_B4" Format="" />
+      <Column ID="124" DispNumber="135" DispName="マニフェストB4票返送先現場名" Needs="0" TableName="MGE_B4" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="125" DispNumber="138" DispName="マニフェストB6票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_B6" Format="" />
+      <Column ID="126" DispNumber="139" DispName="マニフェストB6票返送先取引先名" Needs="0" TableName="MT_B6" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="127" DispNumber="140" DispName="マニフェストB6票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_B6" Format="" />
+      <Column ID="128" DispNumber="141" DispName="マニフェストB6票返送先業者名" Needs="0" TableName="MGY_B6" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="129" DispNumber="142" DispName="マニフェストB6票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_B6" Format="" />
+      <Column ID="130" DispNumber="143" DispName="マニフェストB6票返送先現場名" Needs="0" TableName="MGE_B6" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="131" DispNumber="146" DispName="マニフェストC1票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_C1" Format="" />
+      <Column ID="132" DispNumber="147" DispName="マニフェストC1票返送先取引先名" Needs="0" TableName="MT_C1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="133" DispNumber="148" DispName="マニフェストC1票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_C1" Format="" />
+      <Column ID="134" DispNumber="149" DispName="マニフェストC1票返送先業者名" Needs="0" TableName="MGY_C1" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="135" DispNumber="150" DispName="マニフェストC1票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_C1" Format="" />
+      <Column ID="136" DispNumber="151" DispName="マニフェストC1票返送先現場名" Needs="0" TableName="MGE_C1" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="137" DispNumber="154" DispName="マニフェストC2票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_C2" Format="" />
+      <Column ID="138" DispNumber="155" DispName="マニフェストC2票返送先取引先名" Needs="0" TableName="MT_C2" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="139" DispNumber="156" DispName="マニフェストC2票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_C2" Format="" />
+      <Column ID="140" DispNumber="157" DispName="マニフェストC2票返送先業者名" Needs="0" TableName="MGY_C2" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="141" DispNumber="158" DispName="マニフェストC2票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_C2" Format="" />
+      <Column ID="142" DispNumber="159" DispName="マニフェストC2票返送先現場名" Needs="0" TableName="MGE_C2" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="143" DispNumber="162" DispName="マニフェストD票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_D" Format="" />
+      <Column ID="144" DispNumber="163" DispName="マニフェストD票返送先取引先名" Needs="0" TableName="MT_D" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="145" DispNumber="164" DispName="マニフェストD票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_D" Format="" />
+      <Column ID="146" DispNumber="165" DispName="マニフェストD票返送先業者名" Needs="0" TableName="MGY_D" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="147" DispNumber="166" DispName="マニフェストD票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_D" Format="" />
+      <Column ID="148" DispNumber="167" DispName="マニフェストD票返送先現場名" Needs="0" TableName="MGE_D" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="149" DispNumber="170" DispName="マニフェストE票返送先取引先CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_TORIHIKISAKI_CD_E" Format="" />
+      <Column ID="150" DispNumber="171" DispName="マニフェストE票返送先取引先名" Needs="0" TableName="MT_E" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <Column ID="151" DispNumber="172" DispName="マニフェストE票返送先業者CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GYOUSHA_CD_E" Format="" />
+      <Column ID="152" DispNumber="173" DispName="マニフェストE票返送先業者名" Needs="0" TableName="MGY_E" Name="GYOUSHA_NAME_RYAKU" Format="" />
+      <Column ID="153" DispNumber="174" DispName="マニフェストE票返送先現場CD" Needs="0" TableName="M_GENBA" Name="MANI_HENSOUSAKI_GENBA_CD_E" Format="" />
+      <Column ID="154" DispNumber="175" DispName="マニフェストE票返送先現場名" Needs="0" TableName="MGE_E" Name="GENBA_NAME_RYAKU" Format="" />
+      <Column ID="157" DispNumber="182" DispName="作成者" Needs="0" TableName="M_GENBA" Name="CREATE_USER" Format="" />
+      <Column ID="158" DispNumber="183" DispName="作成日時" Needs="0" TableName="M_GENBA" Name="CREATE_DATE" Format="" />
+      <Column ID="159" DispNumber="184" DispName="作成PC" Needs="0" TableName="M_GENBA" Name="CREATE_PC" Format="" />
+      <Column ID="160" DispNumber="185" DispName="最終更新者" Needs="0" TableName="M_GENBA" Name="UPDATE_USER" Format="" />
+      <Column ID="161" DispNumber="186" DispName="最終更新日時" Needs="0" TableName="M_GENBA" Name="UPDATE_DATE" Format="" />
+      <Column ID="162" DispNumber="187" DispName="最終更新PC" Needs="0" TableName="M_GENBA" Name="UPDATE_PC" Format="" />
+      <Column ID="163" DispNumber="188" DispName="削除フラグ" Needs="0" TableName="M_GENBA" Name="DELETE_FLG" Format="" />
+      <Column ID="164" DispNumber="68" DispName="発行先コード" Needs="0" TableName="M_GENBA" Name="HAKKOUSAKI_CD" Format="" />
+	  <Column ID="165" DispNumber="69" DispName="楽楽顧客コード" Needs="0" TableName="M_GENBA" Name="RAKURAKU_CUSTOMER_CD" Format="" />
+	  <Column ID="166" DispNumber="104" DispName="マニフェストA票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_A WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="167" DispNumber="105" DispName="マニフェストA票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_A WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_A WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_A,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_A,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_A,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="168" DispNumber="112" DispName="マニフェストB1票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_B1 WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="169" DispNumber="113" DispName="マニフェストB1票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_B1 WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_B1 WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B1,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B1,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B1,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="170" DispNumber="120" DispName="マニフェストB2票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_B2 WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="171" DispNumber="121" DispName="マニフェストB2票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_B2 WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_B2 WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B2,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B2,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B2,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="172" DispNumber="128" DispName="マニフェストB4票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_B4 WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="173" DispNumber="129" DispName="マニフェストB4票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_B4 WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_B4 WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B4,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B4,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B4,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="174" DispNumber="136" DispName="マニフェストB6票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_B6 WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="175" DispNumber="137" DispName="マニフェストB6票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_B6 WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_B6 WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B6,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B6,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B6,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="176" DispNumber="144" DispName="マニフェストC1票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_C1 WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="177" DispNumber="145" DispName="マニフェストC1票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_C1 WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_C1 WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_C1,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_C1,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_C1,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="178" DispNumber="152" DispName="マニフェストC2票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_C2 WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="179" DispNumber="153" DispName="マニフェストC2票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_C2 WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_C2 WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_C2,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_C2,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_C2,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="180" DispNumber="160" DispName="マニフェストD票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_D WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="181" DispNumber="161" DispName="マニフェストD票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_D WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_D WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_D,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_D,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_D,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="182" DispNumber="168" DispName="マニフェストE票使用区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_E WHEN 1 THEN '使用する' WHEN 2 THEN '使用しない' ELSE '' END" Format="" />
+	  <Column ID="183" DispNumber="169" DispName="マニフェストE票返送先区分" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.MANI_HENSOUSAKI_USE_E WHEN 2 THEN '' ELSE CASE M_GENBA.MANI_HENSOUSAKI_PLACE_KBN_E WHEN 1 THEN '排出現場' WHEN 2 THEN CASE WHEN isnull(M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_E,'') + isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_E,'') = '' THEN '取引先' WHEN  isnull(M_GENBA.MANI_HENSOUSAKI_GENBA_CD_E,'') = '' THEN '業者' ELSE '他現場' END END END" Format="" />
+	  <Column ID="184" DispNumber="176" DispName="現場メモ" Needs="0" TableName="" Name="CASE WHEN T_GENBAMEMO_ENTRY.SYSTEM_ID IS NULL THEN '' ELSE '有' END" Format="" />
+	  <Column ID="185" DispNumber="177" DispName="緯度" Needs="0" TableName="M_GENBA" Name="GENBA_LATITUDE" Format="" />
+	  <Column ID="186" DispNumber="178" DispName="経度" Needs="0" TableName="M_GENBA" Name="GENBA_LONGITUDE" Format="" />
+	  <Column ID="187" DispNumber="179" DispName="位置情報更新者" Needs="0" TableName="M_GENBA" Name="GENBA_LOCATION_INFO_UPDATE_NAME" Format="" />
+	  <Column ID="188" DispNumber="180" DispName="位置情報更新日付" Needs="0" TableName="M_GENBA" Name="GENBA_LOCATION_INFO_UPDATE_DATE" Format="" />
+      <Column ID="189" DispNumber="181" DispName="ｼｮｰﾄﾒｯｾｰｼﾞ送信" Needs="0" TableName="M_GENBA" Name="CASE M_GENBA.SMS_USE WHEN 1 THEN '有' WHEN  2 THEN '無' ELSE '無' END" Format="" />
+	  <!--20250320-->
+	  <Column ID="190" DispNumber="182" DispName="地図" Needs="0" TableName="M_GENBA" Name="CHIZU" Format="" />
+	</Group>
+    <Group OutputKbn="2">
+      <Column ID="32" DispNumber="1" DispName="行番号（月極）" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="ROW_NO" Format="" />
+      <Column ID="33" DispNumber="2" DispName="月極品名CD" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="HINMEI_CD" Format="" />
+      <Column ID="34" DispNumber="3" DispName="月極品名" Needs="0" TableName="M_HINMEI3" Name=" HINMEI_NAME_RYAKU" Format="" />
+      <Column ID="35" DispNumber="4" DispName="月極伝票区分CD" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="DENPYOU_KBN_CD" Format="" />
+      <Column ID="36" DispNumber="5" DispName="月極伝票区分名" Needs="0" TableName="M_DENPYOU_KBN2" Name="DENPYOU_KBN_NAME_RYAKU" Format="" />
+      <Column ID="37" DispNumber="6" DispName="月極単位CD" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="UNIT_CD" Format="00" />
+      <Column ID="38" DispNumber="7" DispName="月極単位名" Needs="0" TableName="M_UNIT3" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="39" DispNumber="8" DispName="月極単価" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="TANKA" Format="3" />
+      <Column ID="41" DispNumber="9" DispName="超過量設定" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="CHOUKA_SETTING" Format="" />
+      <Column ID="42" DispNumber="10" DispName="超過規定量" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="CHOUKA_LIMIT_AMOUNT" Format="1" />
+      <Column ID="43" DispNumber="11" DispName="超過時品名" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="CHOUKA_HINMEI_NAME" Format="" />
+      <Column ID="40" DispNumber="12" DispName="実績がない場合請求しない" Needs="0" TableName="M_GENBA_TSUKI_HINMEI" Name="TEIKI_JISSEKI_NO_SEIKYUU_KBN" Format="" />
+      <Column ID="1" DispNumber="13" DispName="市区町村CD" Needs="0" TableName="M_GENBA" Name="SHIKUCHOUSON_CD" Format="" />
+      <Column ID="2" DispNumber="14" DispName="市区町村名" Needs="0" TableName="M_SHIKUCHOUSON1" Name="SHIKUCHOUSON_NAME_RYAKU" Format="" />
+      <Column ID="3" DispNumber="15" DispName="行番号（定期）" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="ROW_NO" Format="" />
+      <Column ID="4" DispNumber="16" DispName="定期回収品名CD" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="HINMEI_CD" Format="" />
+      <Column ID="5" DispNumber="17" DispName="定期回収品名" Needs="0" TableName="M_HINMEI1" Name="HINMEI_NAME_RYAKU" Format="" />
+      <!--<Column ID="6" DispNumber="" DispName="印字名" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="PRINT_STRING" Format="" />-->
+      <Column ID="7" DispNumber="18" DispName="定期回収伝票区分CD" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="DENPYOU_KBN_CD" Format="00" />
+      <Column ID="8" DispNumber="19" DispName="定期回収伝票区分名" Needs="0" TableName="M_DENPYOU_KBN1" Name="DENPYOU_KBN_NAME_RYAKU" Format="" />
+      <Column ID="9" DispNumber="20" DispName="定期回収単位CD" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="UNIT_CD" Format="00" />
+      <Column ID="10" DispNumber="21" DispName="定期回収単位名" Needs="0" TableName="M_UNIT1" Name="UNIT_NAME_RYAKU" Format="" />
+      <!--<Column ID="11" DispNumber="22" DispName="基準値" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="STANDARD_VALUE" Format="#,##0" />-->
+      <Column ID="12" DispNumber="23" DispName="換算値" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="KANSANCHI" Format="1" />
+      <Column ID="13" DispNumber="24" DispName="換算後単位CD" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="KANSAN_UNIT_CD" Format="00" />
+      <Column ID="14" DispNumber="25" DispName="換算後単位名" Needs="0" TableName="M_UNIT2" Name="UNIT_NAME_RYAKU" Format="" />
+      <Column ID="15" DispNumber="26" DispName="要記入" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="KANSAN_UNIT_MOBILE_OUTPUT_FLG" Format="" />
+      <Column ID="16" DispNumber="27" DispName="月曜日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="MONDAY" Format="" />
+      <Column ID="17" DispNumber="28" DispName="火曜日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="TUESDAY" Format="" />
+      <Column ID="18" DispNumber="29" DispName="水曜日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="WEDNESDAY" Format="" />
+      <Column ID="19" DispNumber="30" DispName="木曜日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="THURSDAY" Format="" />
+      <Column ID="20" DispNumber="31" DispName="金曜日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="FRIDAY" Format="" />
+      <Column ID="21" DispNumber="32" DispName="土曜日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="SATURDAY" Format="" />
+      <Column ID="22" DispNumber="33" DispName="日曜日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="SUNDAY" Format="" />
+      <!--<Column ID="23" DispNumber="" DispName="契約区分CD" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="KEIYAKU_KBN" Format="" />-->
+      <Column ID="24" DispNumber="34" DispName="契約区分" Needs="0" TableName="" Name="CASE M_GENBA_TEIKI_HINMEI.KEIYAKU_KBN WHEN 1 THEN '定期' WHEN 2 THEN '単価' WHEN 3 THEN '回収のみ' ELSE '' END" Format="" />
+      <Column ID="25" DispNumber="35" DispName="定期回収月極品名CD" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="TSUKI_HINMEI_CD" Format="" />
+      <Column ID="26" DispNumber="36" DispName="定期回収月極品名" Needs="0" TableName="M_HINMEI2" Name="HINMEI_NAME_RYAKU" Format="" />
+      <!--<Column ID="27" DispNumber="" DispName="定期回収単価" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="TANKA" Format="3" />-->
+      <!--<Column ID="28" DispNumber="" DispName="集計単位CD" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="KEIJYOU_KBN" Format="" />-->
+      <Column ID="29" DispNumber="37" DispName="集計単位" Needs="0" TableName="" Name="CASE M_GENBA_TEIKI_HINMEI.KEIJYOU_KBN WHEN 1 THEN '伝票' WHEN 2 THEN '合算' ELSE '' END" Format="" />
+      <!--<Column ID="30" DispNumber="" DispName="単価適用開始日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="TANKA_TEKIYOU_BEGIN" Format="" />-->
+      <!--<Column ID="31" DispNumber="" DispName="単価適用終了日" Needs="0" TableName="M_GENBA_TEIKI_HINMEI" Name="TANKA_TEKIYOU_END" Format="" />-->
+	</Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON M_TORIHIKISAKI.TORIHIKISAKI_KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_BUSHO1">LEFT JOIN M_BUSHO M_BUSHO1 ON M_GENBA.EIGYOU_TANTOU_BUSHO_CD = M_BUSHO1.BUSHO_CD</JoinCondition>
+    <JoinCondition TableName="M_SHAIN1">LEFT JOIN M_SHAIN M_SHAIN1 ON M_GENBA.EIGYOU_TANTOU_CD = M_SHAIN1.SHAIN_CD</JoinCondition>
+    <JoinCondition TableName="M_TODOUFUKEN1">LEFT JOIN M_TODOUFUKEN M_TODOUFUKEN1 ON M_GENBA.GENBA_TODOUFUKEN_CD = M_TODOUFUKEN1.TODOUFUKEN_CD</JoinCondition>
+    <JoinCondition TableName="M_CHIIKI1">LEFT JOIN M_CHIIKI M_CHIIKI1 ON M_GENBA.CHIIKI_CD = M_CHIIKI1.CHIIKI_CD</JoinCondition>
+    <JoinCondition TableName="M_SHUUKEI_KOUMOKU1">LEFT JOIN M_SHUUKEI_KOUMOKU M_SHUUKEI_KOUMOKU1 ON M_GENBA.SHUUKEI_ITEM_CD = M_SHUUKEI_KOUMOKU1.SHUUKEI_KOUMOKU_CD</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHU1">LEFT JOIN M_GYOUSHU M_GYOUSHU1 ON M_GENBA.GYOUSHU_CD = M_GYOUSHU1.GYOUSHU_CD</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN2">LEFT JOIN M_KYOTEN M_KYOTEN2 ON M_GENBA.SEIKYUU_KYOTEN_CD = M_KYOTEN2.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_KYOTEN3">LEFT JOIN M_KYOTEN M_KYOTEN3 ON M_GENBA.SHIHARAI_KYOTEN_CD = M_KYOTEN3.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_SHURUI1">LEFT JOIN M_MANIFEST_SHURUI M_MANIFEST_SHURUI1 ON M_GENBA.MANIFEST_SHURUI_CD = M_MANIFEST_SHURUI1.MANIFEST_SHURUI_CD</JoinCondition>
+    <JoinCondition TableName="M_MANIFEST_TEHAI1">LEFT JOIN M_MANIFEST_TEHAI M_MANIFEST_TEHAI1 ON M_GENBA.MANIFEST_TEHAI_CD = M_MANIFEST_TEHAI1.MANIFEST_TEHAI_CD</JoinCondition>
+    <JoinCondition TableName="M_SHIKUCHOUSON1">LEFT JOIN M_SHIKUCHOUSON M_SHIKUCHOUSON1 ON M_GENBA.SHIKUCHOUSON_CD = M_SHIKUCHOUSON1.SHIKUCHOUSON_CD</JoinCondition>
+    <JoinCondition TableName="M_HINMEI1">LEFT JOIN M_HINMEI M_HINMEI1 ON M_GENBA_TEIKI_HINMEI.HINMEI_CD = M_HINMEI1.HINMEI_CD</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN1">LEFT JOIN M_DENPYOU_KBN M_DENPYOU_KBN1 ON M_GENBA_TEIKI_HINMEI.DENPYOU_KBN_CD = M_DENPYOU_KBN1.DENPYOU_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT1">LEFT JOIN M_UNIT M_UNIT1 ON M_GENBA_TEIKI_HINMEI.UNIT_CD = M_UNIT1.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT2">LEFT JOIN M_UNIT M_UNIT2 ON M_GENBA_TEIKI_HINMEI.KANSAN_UNIT_CD = M_UNIT2.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_DENPYOU_KBN2">LEFT JOIN M_DENPYOU_KBN M_DENPYOU_KBN2 ON M_GENBA_TSUKI_HINMEI.DENPYOU_KBN_CD = M_DENPYOU_KBN2.DENPYOU_KBN_CD</JoinCondition>
+    <JoinCondition TableName="M_UNIT3">LEFT JOIN M_UNIT M_UNIT3 ON M_GENBA_TSUKI_HINMEI.UNIT_CD = M_UNIT3.UNIT_CD</JoinCondition>
+    <JoinCondition TableName="M_CHIIKI2">LEFT JOIN M_CHIIKI M_CHIIKI2 ON M_GENBA.UPN_HOUKOKUSHO_TEISHUTSU_CHIIKI_CD = M_CHIIKI2.CHIIKI_CD</JoinCondition>
+    <JoinCondition TableName="MT_A">LEFT JOIN M_TORIHIKISAKI MT_A ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_A = MT_A.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_A">LEFT JOIN M_GYOUSHA MGY_A ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_A = MGY_A.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_A">LEFT JOIN M_GENBA MGE_A ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_A = MGE_A.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_A = MGE_A.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MT_B1">LEFT JOIN M_TORIHIKISAKI MT_B1 ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_B1 = MT_B1.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_B1">LEFT JOIN M_GYOUSHA MGY_B1 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B1 = MGY_B1.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_B1">LEFT JOIN M_GENBA MGE_B1 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B1 = MGE_B1.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B1 = MGE_B1.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MT_B2">LEFT JOIN M_TORIHIKISAKI MT_B2 ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_B2 = MT_B2.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_B2">LEFT JOIN M_GYOUSHA MGY_B2 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B2 = MGY_B2.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_B2">LEFT JOIN M_GENBA MGE_B2 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B2 = MGE_B2.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B2 = MGE_B2.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MT_B4">LEFT JOIN M_TORIHIKISAKI MT_B4 ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_B4 = MT_B4.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_B4">LEFT JOIN M_GYOUSHA MGY_B4 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B4 = MGY_B4.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_B4">LEFT JOIN M_GENBA MGE_B4 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B4 = MGE_B4.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B4 = MGE_B4.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MT_B6">LEFT JOIN M_TORIHIKISAKI MT_B6 ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_B6 = MT_B6.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_B6">LEFT JOIN M_GYOUSHA MGY_B6 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B6 = MGY_B6.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_B6">LEFT JOIN M_GENBA MGE_B6 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_B6 = MGE_B6.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_B6 = MGE_B6.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MT_C1">LEFT JOIN M_TORIHIKISAKI MT_C1 ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_C1 = MT_C1.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_C1">LEFT JOIN M_GYOUSHA MGY_C1 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_C1 = MGY_C1.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_C1">LEFT JOIN M_GENBA MGE_C1 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_C1 = MGE_C1.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_C1 = MGE_C1.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MT_C2">LEFT JOIN M_TORIHIKISAKI MT_C2 ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_C2 = MT_C2.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_C2">LEFT JOIN M_GYOUSHA MGY_C2 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_C2 = MGY_C2.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_C2">LEFT JOIN M_GENBA MGE_C2 ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_C2 = MGE_C2.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_C2 = MGE_C2.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MT_D">LEFT JOIN M_TORIHIKISAKI MT_D ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_D = MT_D.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_D">LEFT JOIN M_GYOUSHA MGY_D ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_D = MGY_D.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_D">LEFT JOIN M_GENBA MGE_D ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_D = MGE_D.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_D = MGE_D.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="MT_E">LEFT JOIN M_TORIHIKISAKI MT_E ON M_GENBA.MANI_HENSOUSAKI_TORIHIKISAKI_CD_E = MT_E.TORIHIKISAKI_CD</JoinCondition>
+    <JoinCondition TableName="MGY_E">LEFT JOIN M_GYOUSHA MGY_E ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_E = MGY_E.GYOUSHA_CD</JoinCondition>
+    <JoinCondition TableName="MGE_E">LEFT JOIN M_GENBA MGE_E ON M_GENBA.MANI_HENSOUSAKI_GYOUSHA_CD_E = MGE_E.GYOUSHA_CD AND M_GENBA.MANI_HENSOUSAKI_GENBA_CD_E = MGE_E.GENBA_CD</JoinCondition>
+    <JoinCondition TableName="T_GENBAMEMO_ENTRY">LEFT JOIN T_GENBAMEMO_ENTRY ON M_GENBA.GENBA_CD = T_GENBAMEMO_ENTRY.GENBA_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

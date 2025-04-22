@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="903">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="1" DispName="請求番号" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="SEIKYUU_NUMBER" Format="" />
+      <Column ID="4" DispNumber="4" DispName="拠点CD" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KYOTEN_CD" Format="00" />
+      <Column ID="5" DispNumber="5" DispName="拠点名" Needs="0" TableName="M_KYOTEN1" Name="KYOTEN_NAME_RYAKU" Format="" />
+      <Column ID="6" DispNumber="6" DispName="締日" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="SHIMEBI" Format="" />
+      <Column ID="7" DispNumber="7" DispName="取引先CD" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="TORIHIKISAKI_CD" Format="" />
+      <Column ID="8" DispNumber="8" DispName="取引先名" Needs="0" TableName="M_TORIHIKISAKI1" Name="TORIHIKISAKI_NAME_RYAKU" Format="" />
+      <!--<Column ID="9" DispNumber="" DispName="書式区分" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="SHOSHIKI_KBN" Format="" />-->
+      <Column ID="10" DispNumber="9" DispName="請求書書式1" Needs="0" TableName="" Name="CASE T_SEIKYUU_DENPYOU.SHOSHIKI_KBN WHEN  1 THEN '請求先別' WHEN 2 THEN '業者別' WHEN 3 THEN '現場別' ELSE '' END" Format="" />
+      <!--<Column ID="11" DispNumber="" DispName="書式明細区分" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="SHOSHIKI_MEISAI_KBN" Format="" />-->
+      <Column ID="12" DispNumber="10" DispName="請求書書式2" Needs="0" TableName="" Name="CASE T_SEIKYUU_DENPYOU.SHOSHIKI_MEISAI_KBN WHEN  1 THEN 'なし' WHEN 2 THEN '業者毎' WHEN 3 THEN '現場毎' ELSE '' END" Format="" />
+      <Column ID="118" DispNumber="11" DispName="請求書書式3" Needs="0" TableName="" Name="CASE T_SEIKYUU_DENPYOU.SHOSHIKI_GENBA_KBN WHEN  1 THEN '現場名あり' WHEN 2 THEN '現場名なし' ELSE '' END" Format="" />
+      <!--<Column ID="13" DispNumber="" DispName="請求形態区分" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="SEIKYUU_KEITAI_KBN" Format="" />-->
+      <Column ID="14" DispNumber="12" DispName="請求形態" Needs="0" TableName="" Name="CASE T_SEIKYUU_DENPYOU.SEIKYUU_KEITAI_KBN WHEN  1 THEN '単月請求' WHEN 2 THEN '繰越請求' ELSE '' END" Format="" />
+      <!--<Column ID="15" DispNumber="" DispName="入金明細区分" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="NYUUKIN_MEISAI_KBN" Format="" />-->
+      <Column ID="16" DispNumber="13" DispName="入金明細" Needs="0" TableName="" Name="CASE T_SEIKYUU_DENPYOU.NYUUKIN_MEISAI_KBN WHEN  1 THEN '表示する' WHEN 2 THEN '表示しない' ELSE '' END" Format="" />
+      <!--<Column ID="17" DispNumber="" DispName="用紙区分" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="YOUSHI_KBN" Format="" />-->
+      <Column ID="18" DispNumber="14" DispName="請求用紙" Needs="0" TableName="" Name="CASE T_SEIKYUU_DENPYOU.YOUSHI_KBN WHEN  1 THEN '自社請求書' WHEN 2 THEN '指定請求書' WHEN 3 THEN '印刷しない' ELSE '' END" Format="" />
+      <Column ID="19" DispNumber="15" DispName="請求日付" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="SEIKYUU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="20" DispNumber="16" DispName="入金予定日(変更前)" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="NYUUKIN_YOTEI_BI" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="21" DispNumber="17" DispName="前回請求額" Needs="0" TableName="" Name="CASE SEIKYUU_KEITAI_KBN WHEN 1 THEN NULL ELSE T_SEIKYUU_DENPYOU.ZENKAI_KURIKOSI_GAKU END" Format="#,##0" />
+      <Column ID="22" DispNumber="18" DispName="今回入金額" Needs="0" TableName="" Name="CASE SEIKYUU_KEITAI_KBN WHEN 1 THEN  NULL ELSE T_SEIKYUU_DENPYOU.KONKAI_NYUUKIN_GAKU END" Format="#,##0" />
+      <Column ID="23" DispNumber="19" DispName="調整額" Needs="0" TableName="" Name="CASE SEIKYUU_KEITAI_KBN WHEN 1 THEN NULL ELSE T_SEIKYUU_DENPYOU.KONKAI_CHOUSEI_GAKU END" Format="#,##0" />
+      <Column ID="24" DispNumber="21" DispName="今回取引額(税抜)" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KONKAI_URIAGE_GAKU" Format="#,##0" />
+      <!--<Column ID="25" DispNumber="" DispName="今回請内税額" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KONKAI_SEI_UTIZEI_GAKU" Format="#,##0" />-->
+      <Column ID="26" DispNumber="25" DispName="請求毎外税合計" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KONKAI_SEI_SOTOZEI_GAKU" Format="#,##0" />
+      <!--<Column ID="27" DispNumber="" DispName="今回伝内税額" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KONKAI_DEN_UTIZEI_GAKU" Format="#,##0" />-->
+      <Column ID="28" DispNumber="26" DispName="伝票毎外税合計" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KONKAI_DEN_SOTOZEI_GAKU" Format="#,##0" />
+      <Column ID="29" DispNumber="27" DispName="明細毎内税合計" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KONKAI_MEI_UTIZEI_GAKU" Format="#,##0" />
+      <Column ID="30" DispNumber="28" DispName="明細毎外税合計" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KONKAI_MEI_SOTOZEI_GAKU" Format="#,##0" />
+      <Column ID="31" DispNumber="24" DispName="今回請求額" Needs="0" TableName="" Name="CASE SEIKYUU_KEITAI_KBN WHEN 1 THEN (ISNULL(KONKAI_URIAGE_GAKU,0) + ISNULL(KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL (KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_MEI_SOTOZEI_GAKU,0)) ELSE T_SEIKYUU_DENPYOU.KONKAI_SEIKYU_GAKU END" Format="#,##0" />
+      <Column ID="32" DispNumber="29" DispName="振込銀行CD１" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_CD" Format="" />
+      <Column ID="33" DispNumber="30" DispName="振込銀行名１" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_NAME" Format="" />
+      <Column ID="34" DispNumber="31" DispName="振込銀行支店CD１" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_SHITEN_CD" Format="" />
+      <Column ID="35" DispNumber="32" DispName="振込銀行支店名１" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_SHITEN_NAME" Format="" />
+      <Column ID="36" DispNumber="33" DispName="口座種類１" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_SHURUI" Format="" />
+      <Column ID="37" DispNumber="34" DispName="口座番号１" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_NO" Format="" />
+      <Column ID="38" DispNumber="35" DispName="口座名義１" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_NAME" Format="" />
+      <Column ID="39" DispNumber="120" DispName="発行区分" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="HAKKOU_KBN" Format="" />
+      <Column ID="40" DispNumber="125" DispName="締実行番号" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="SHIME_JIKKOU_NO" Format="" />
+      <Column ID="41" DispNumber="130" DispName="作成者" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="CREATE_USER" Format="" />
+      <Column ID="42" DispNumber="135" DispName="作成日時" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="CREATE_DATE" Format="" />
+      <Column ID="43" DispNumber="140" DispName="作成PC" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="CREATE_PC" Format="" />
+      <Column ID="49" DispNumber="145" DispName="最終更新者" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="UPDATE_USER" Format="" />
+      <Column ID="55" DispNumber="150" DispName="最終更新日時" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="UPDATE_DATE" Format="" />
+      <Column ID="60" DispNumber="155" DispName="最終更新PC" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="UPDATE_PC" Format="" />
+      <Column ID="45" DispNumber="20" DispName="繰越額" Needs="0" TableName="" Name="CASE SEIKYUU_KEITAI_KBN WHEN 1 THEN NULL ELSE (ISNULL (ZENKAI_KURIKOSI_GAKU, 0) - ISNULL (KONKAI_NYUUKIN_GAKU, 0) - (ISNULL (KONKAI_CHOUSEI_GAKU, 0))) END" Format="#,##0" />
+      <Column ID="46" DispNumber="22" DispName="消費税" Needs="0" TableName="" Name="(ISNULL(KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_MEI_SOTOZEI_GAKU,0))" Format="#,##0" />
+      <Column ID="47" DispNumber="23" DispName="今回取引額" Needs="0" TableName="" Name="(ISNULL(KONKAI_URIAGE_GAKU,0) + ISNULL(KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_MEI_SOTOZEI_GAKU,0))" Format="#,##0" />
+
+      <Column ID="61" DispNumber="50" DispName="振込銀行CD２" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_CD_2" Format="" />
+      <Column ID="62" DispNumber="55" DispName="振込銀行名２" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_NAME_2" Format="" />
+      <Column ID="63" DispNumber="60" DispName="振込銀行支店CD２" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_SHITEN_CD_2" Format="" />
+      <Column ID="65" DispNumber="65" DispName="振込銀行支店名２" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_SHITEN_NAME_2" Format="" />
+      <Column ID="70" DispNumber="70" DispName="口座種類２" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_SHURUI_2" Format="" />
+      <Column ID="75" DispNumber="75" DispName="口座番号２" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_NO_2" Format="" />
+      <Column ID="80" DispNumber="80" DispName="口座名義２" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_NAME_2" Format="" />
+
+      <Column ID="85" DispNumber="85" DispName="振込銀行CD３" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_CD_3" Format="" />
+      <Column ID="90" DispNumber="90" DispName="振込銀行名３" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_NAME_3" Format="" />
+      <Column ID="95" DispNumber="95" DispName="振込銀行支店CD３" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_SHITEN_CD_3" Format="" />
+      <Column ID="100" DispNumber="100" DispName="振込銀行支店名３" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="FURIKOMI_BANK_SHITEN_NAME_3" Format="" />
+      <Column ID="105" DispNumber="105" DispName="口座種類３" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_SHURUI_3" Format="" />
+      <Column ID="110" DispNumber="110" DispName="口座番号３" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_NO_3" Format="" />
+      <Column ID="115" DispNumber="115" DispName="口座名義３" Needs="0" TableName="T_SEIKYUU_DENPYOU" Name="KOUZA_NAME_3" Format="" />
+      <Column ID="116" DispNumber="156" DispName="アップロード状況" Needs="0" TableName="" Name="CASE TORIHIKISAKI_SEIKYUU.INXS_SEIKYUU_KBN WHEN 1 THEN CASE T_SEIKYUU_DENPYOU_INXS.UPLOAD_STATUS WHEN 1 THEN N'未' WHEN 2 THEN N'済' WHEN 3 THEN N'取消' WHEN 4 THEN N'エラー' WHEN 5 THEN N'中' ELSE N'未' END ELSE '' END" Format="" />
+      <Column ID="117" DispNumber="157" DispName="ダウンロード状況" Needs="0" TableName="" Name="CASE TORIHIKISAKI_SEIKYUU.INXS_SEIKYUU_KBN WHEN 1 THEN CASE T_SEIKYUU_DENPYOU_INXS.DOWNLOAD_STATUS WHEN 1 THEN N'未' WHEN 2 THEN N'済' ELSE N'未' END ELSE '' END" Format="" />
+      <Column ID="120" DispNumber="170" DispName="消込額" Needs="0" TableName="" Name="ISNULL(NYUUKIN.SUM_KESHIKOMI_GAKU,0)" Format="#,##0" />
+      <Column ID="125" DispNumber="175" DispName="入金－消込差額" Needs="0" TableName="" Name="(ISNULL(KONKAI_URIAGE_GAKU,0) + ISNULL(KONKAI_SEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_SEI_SOTOZEI_GAKU,0) + ISNULL(KONKAI_DEN_UTIZEI_GAKU,0) + ISNULL(KONKAI_DEN_SOTOZEI_GAKU,0) + ISNULL(KONKAI_MEI_UTIZEI_GAKU,0) + ISNULL(KONKAI_MEI_SOTOZEI_GAKU,0)) - ISNULL(NYUUKIN.SUM_KESHIKOMI_GAKU,0)" Format="#,##0" />
+      <Column ID="130" DispNumber="180" DispName="入金予定日(変更後)" Needs="1" TableName="" Name="CAST(NULL AS DATETIME)" Format="yyyy/MM/dd(ddd)" />
+    </Group>
+    <Group OutputKbn="2">
+    </Group>
+    <JoinCondition TableName="M_KYOTEN1">LEFT JOIN M_KYOTEN M_KYOTEN1 ON T_SEIKYUU_DENPYOU.KYOTEN_CD = M_KYOTEN1.KYOTEN_CD</JoinCondition>
+    <JoinCondition TableName="M_TORIHIKISAKI1">LEFT JOIN M_TORIHIKISAKI M_TORIHIKISAKI1 ON T_SEIKYUU_DENPYOU.TORIHIKISAKI_CD = M_TORIHIKISAKI1.TORIHIKISAKI_CD</JoinCondition>
+  </OutputColumnSelect>
+</root>

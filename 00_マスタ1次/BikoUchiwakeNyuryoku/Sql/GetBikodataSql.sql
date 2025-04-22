@@ -1,0 +1,11 @@
+SELECT 
+    BIKO.BIKO_CD as BIKO_CD 
+    ,BIKO.BIKO_NAME_RYAKU as BIKO_NAME_RYAKU 
+FROM 
+    dbo.M_BIKO_PATAN_NYURYOKU BIKO 
+/*BEGIN*/
+WHERE 
+ BIKO.DELETE_FLG = 0 
+ /*IF data.BIKO_CD != null && data.BIKO_CD != ''*/
+ AND BIKO.BIKO_CD LIKE '%' + /*data.BIKO_CD*/'01' + '%'/*END*/
+/*END*/

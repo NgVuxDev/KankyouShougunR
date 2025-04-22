@@ -1,0 +1,6 @@
+﻿
+--紐付テーブルのシーケンスの最大値検出SQL文
+
+SELECT SYSTEM_ID,SEQ,TIME_STAMP
+FROM DT_R18_EX 
+WHERE KANRI_ID = /*data.KANRI_ID*/ AND DELETE_FLG = 0

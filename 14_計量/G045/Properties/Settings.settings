@@ -1,0 +1,78 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Shougun.Core.Scale.Keiryou.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=SW08RDS01\SQLEXPRESS2008R2;Persist Security Info=True;User ID=sa;Password=203388&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SW08RDS01\SQLEXPRESS2008R2;Persist Security Info=True;User ID=sa;Password=203388</Value>
+    </Setting>
+    <Setting Name="DenpyouCtrl" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DetailCtrl" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ApDenpyouCtrl" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;KYOTEN_CD:拠点CD:True:0&lt;/string&gt;
+  &lt;string&gt;KIHON_KEIRYOU:入出区分:True:1&lt;/string&gt;
+  &lt;string&gt;NYUURYOKU_TANTOUSHA_CD:入力担当者:True:4&lt;/string&gt;
+  &lt;string&gt;KEIRYOU_NUMBER:計量番号:True:6&lt;/string&gt;
+  &lt;string&gt;RENBAN:年連番/日連番:True:9&lt;/string&gt;
+  &lt;string&gt;UKETSUKE_NUMBER:受付番号:True:10&lt;/string&gt;
+  &lt;string&gt;DENPYOU_DATE:伝票日付:True:11&lt;/string&gt;
+  &lt;string&gt;UNPAN_GYOUSHA_CD:運搬業者CD:True:12&lt;/string&gt;
+  &lt;string&gt;UNPAN_GYOUSHA_NAME:運搬業者名:True:13&lt;/string&gt;
+  &lt;string&gt;SHASHU_CD:車種CD:True:14&lt;/string&gt;
+  &lt;string&gt;SHARYOU_CD:車輌CD:True:16&lt;/string&gt;
+  &lt;string&gt;SHARYOU_NAME_RYAKU:車輌名:True:17&lt;/string&gt;
+  &lt;string&gt;UNTENSHA_CD:運転者CD:True:19&lt;/string&gt;
+  &lt;string&gt;NINZUU_CNT:人数:True:21&lt;/string&gt;
+  &lt;string&gt;GYOUSHA_CD:業者CD:True:22&lt;/string&gt;
+  &lt;string&gt;GYOUSHA_NAME_RYAKU:業者名:True:23&lt;/string&gt;
+  &lt;string&gt;GENBA_CD:現場CD:True:24&lt;/string&gt;
+  &lt;string&gt;GENBA_NAME_RYAKU:現場名:True:25&lt;/string&gt;
+  &lt;string&gt;TORIHIKISAKI_CD:取引先CD:True:26&lt;/string&gt;
+  &lt;string&gt;TORIHIKISAKI_NAME_RYAKU:取引先名:True:27&lt;/string&gt;
+  &lt;string&gt;NIZUMI_GYOUSHA_CD:荷積業者CD:True:29&lt;/string&gt;
+  &lt;string&gt;NIZUMI_GYOUSHA_NAME:荷積業者名:True:30&lt;/string&gt;
+  &lt;string&gt;NIZUMI_GENBA_CD:荷積現場CD:True:31&lt;/string&gt;
+  &lt;string&gt;NIZUMI_GENBA_NAME:荷積現場名:True:32&lt;/string&gt;
+  &lt;string&gt;NIOROSHI_GYOUSHA_CD:荷降業者CD:True:33&lt;/string&gt;
+  &lt;string&gt;NIOROSHI_GYOUSHA_NAME:荷降業者名:True:34&lt;/string&gt;
+  &lt;string&gt;NIOROSHI_GENBA_CD:荷降現場CD:True:35&lt;/string&gt;
+  &lt;string&gt;NIOROSHI_GENBA_NAME:荷降現場名:True:36&lt;/string&gt;
+  &lt;string&gt;KEITAI_KBN_CD:形態区分CD:True:41&lt;/string&gt;
+  &lt;string&gt;MANIFEST_SHURUI_CD:マニ種類CD:True:44&lt;/string&gt;
+  &lt;string&gt;MANIFEST_TEHAI_CD:マニ手配CD:True:46&lt;/string&gt;
+  &lt;string&gt;EIGYOU_TANTOUSHA_CD:営業担当者:True:48&lt;/string&gt;
+  &lt;string&gt;DENPYOU_BIKOU:伝票備考:True:53&lt;/string&gt;
+  &lt;string&gt;TAIRYUU_BIKOU:滞留備考:True:54&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="ApDetailCtrl" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;STACK_JYUURYOU:総重量:True:10&lt;/string&gt;
+  &lt;string&gt;EMPTY_JYUURYOU:空車重量:True:20&lt;/string&gt;
+  &lt;string&gt;WARIFURI_JYUURYOU:割振(Kg):True:30&lt;/string&gt;
+  &lt;string&gt;WARIFURI_PERCENT:割振(%):True:40&lt;/string&gt;
+  &lt;string&gt;CHOUSEI_JYUURYOU:調整(Kg):True:50&lt;/string&gt;
+  &lt;string&gt;CHOUSEI_PERCENT:調整(%):True:60&lt;/string&gt;
+  &lt;string&gt;YOUKI_CD:容器CD:True:70&lt;/string&gt;
+  &lt;string&gt;YOUKI_SUURYOU:容器数量:True:80&lt;/string&gt;
+  &lt;string&gt;YOUKI_JYUURYOU:容器重量:True:90&lt;/string&gt;
+  &lt;string&gt;HINMEI_CD:品名CD:True:100&lt;/string&gt;
+  &lt;string&gt;NISUGATA_SUURYOU:荷姿数量:True:150&lt;/string&gt;
+  &lt;string&gt;NISUGATA_UNIT_CD:荷姿単位CD:True:160&lt;/string&gt;
+  &lt;string&gt;MANIFEST_ID:ﾏﾆﾌｪｽﾄ番号:True:170&lt;/string&gt;
+  &lt;string&gt;MEISAI_BIKOU:明細備考:True:180&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

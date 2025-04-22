@@ -1,0 +1,10 @@
+SELECT 
+    SS.*
+FROM 
+    dbo.M_ITAKU_KEIYAKU_SAISEIHINM SS
+ /*BEGIN*/WHERE
+ /*IF data.SYSTEM_ID != null*/
+ SS.SYSTEM_ID = /*data.SYSTEM_ID*/'000001'
+ /*END*/
+/*END*/
+ORDER BY SS.SEQ

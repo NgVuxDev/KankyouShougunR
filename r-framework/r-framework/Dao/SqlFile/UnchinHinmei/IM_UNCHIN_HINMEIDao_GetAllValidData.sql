@@ -1,0 +1,13 @@
+﻿SELECT * FROM dbo.M_UNCHIN_HINMEI
+WHERE 
+/*IF data.ISNOT_NEED_DELETE_FLG.IsNull || data.ISNOT_NEED_DELETE_FLG.IsFalse*/
+ DELETE_FLG = 0
+-- ELSE
+ 1 = 1
+/*END*/
+/*IF data.UNCHIN_HINMEI_CD != null*/AND UNCHIN_HINMEI_CD = /*data.UNCHIN_HINMEI_CD*/''/*END*/
+/*IF data.UNCHIN_HINMEI_NAME != null*/AND UNCHIN_HINMEI_NAME = /*data.UNCHIN_HINMEI_NAME*/''/*END*/
+/*IF data.UNCHIN_HINMEI_FURIGANA != null*/AND UNCHIN_HINMEI_FURIGANA = /*data.UNCHIN_HINMEI_FURIGANA*/''/*END*/
+/*IF !data.UNIT_CD.IsNull*/AND UNIT_CD = /*data.UNIT_CD.Value*/''/*END*/
+/*IF data.UNIT_NAME != null*/AND UNIT_NAME = /*data.UNIT_NAME*/''/*END*/
+/*IF data.BIKOU != null*/AND BIKOU = /*data.BIKOU*/''/*END*/

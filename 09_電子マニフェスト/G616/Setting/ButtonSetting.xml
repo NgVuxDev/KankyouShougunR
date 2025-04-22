@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <IchiranButtonName>[F9]&#xD;&#xA;登録</IchiranButtonName>
+    <IchiranButtonHintText>登録処理を行います</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func10</ButtonName>
+    <IchiranButtonName>[F10]&#xD;&#xA;行挿入</IchiranButtonName>
+    <IchiranButtonHintText>選択している明細行に1行挿入します。（空行）</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <IchiranButtonName>[F11]&#xD;&#xA;行削除</IchiranButtonName>
+    <IchiranButtonHintText>選択している明細行を1行削除します。</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <IchiranButtonHintText>画面を閉じます</IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>

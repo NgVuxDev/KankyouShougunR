@@ -1,0 +1,67 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Shougun.Core.SalesPayment.UkeireNyuuryoku2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DenpyouCtrl" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DetailCtrl" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ApDenpyouCtrl" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;KYOTEN_CD:拠点CD:True:0&lt;/string&gt;
+  &lt;string&gt;UKETSUKE_NUMBER:受付番号:True:1&lt;/string&gt;
+  &lt;string&gt;KEIRYOU_NUMBER:計量番号:True:2&lt;/string&gt;
+  &lt;string&gt;NYUURYOKU_TANTOUSHA_CD:入力担当者:True:3&lt;/string&gt;
+  &lt;string&gt;ENTRY_NUMBER:受入番号:True:4&lt;/string&gt;
+  &lt;string&gt;RENBAN:年連番/日連番:True:5&lt;/string&gt;
+  &lt;string&gt;KAKUTEI_KBN:確定区分:True:6&lt;/string&gt;
+  &lt;string&gt;DENPYOU_DATE:伝票日付:True:7&lt;/string&gt;
+  &lt;string&gt;UNPAN_GYOUSHA_CD:運搬業者CD:True:8&lt;/string&gt;
+  &lt;string&gt;UNPAN_GYOUSHA_NAME:運搬業者名:True:9&lt;/string&gt;
+  &lt;string&gt;SHARYOU_CD:車輌CD:True:10&lt;/string&gt;
+  &lt;string&gt;SHARYOU_NAME_RYAKU:車輌名:True:11&lt;/string&gt;
+  &lt;string&gt;NINZUU_CNT:人数:True:12&lt;/string&gt;
+  &lt;string&gt;GYOUSHA_CD:業者CD:True:13&lt;/string&gt;
+  &lt;string&gt;GYOUSHA_NAME_RYAKU:業者名:True:14&lt;/string&gt;
+  &lt;string&gt;GENBA_CD:現場CD:True:15&lt;/string&gt;
+  &lt;string&gt;GENBA_NAME_RYAKU:現場名:True:16&lt;/string&gt;
+  &lt;string&gt;TORIHIKISAKI_CD:取引先CD:True:17&lt;/string&gt;
+  &lt;string&gt;TORIHIKISAKI_NAME_RYAKU:取引先名:True:18&lt;/string&gt;
+  &lt;string&gt;KEITAI_KBN_CD:形態区分CD:True:19&lt;/string&gt;
+  &lt;string&gt;DENPYOU_BIKOU:伝票備考:True:20&lt;/string&gt;
+  &lt;string&gt;TAIRYUU_BIKOU:滞留備考:True:21&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="ApDetailCtrl" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;STACK_JYUURYOU:総重量:True:0&lt;/string&gt;
+  &lt;string&gt;EMPTY_JYUURYOU:空車重量:True:1&lt;/string&gt;
+  &lt;string&gt;WARIFURI_JYUURYOU:割振(Kg):True:2&lt;/string&gt;
+  &lt;string&gt;WARIFURI_PERCENT:割振(%):True:3&lt;/string&gt;
+  &lt;string&gt;CHOUSEI_JYUURYOU:調整(Kg):True:4&lt;/string&gt;
+  &lt;string&gt;CHOUSEI_PERCENT:調整(%):True:5&lt;/string&gt;
+  &lt;string&gt;YOUKI_CD:容器:True:6&lt;/string&gt;
+  &lt;string&gt;YOUKI_SUURYOU:容器数量:True:7&lt;/string&gt;
+  &lt;string&gt;YOUKI_JYUURYOU:容器重量:True:8&lt;/string&gt;
+  &lt;string&gt;HINMEI_CD:品名CD:True:9&lt;/string&gt;
+  &lt;string&gt;HINMEI_NAME:品名:True:10&lt;/string&gt;
+  &lt;string&gt;SUURYOU:数量:True:11&lt;/string&gt;
+  &lt;string&gt;UNIT_CD:単位CD:True:12&lt;/string&gt;
+  &lt;string&gt;TANKA:単価:True:13&lt;/string&gt;
+  &lt;string&gt;KINGAKU:金額:True:14&lt;/string&gt;
+  &lt;string&gt;NISUGATA_SUURYOU:荷姿数量:True:15&lt;/string&gt;
+  &lt;string&gt;NISUGATA_UNIT_CD:荷姿単位CD:True:16&lt;/string&gt;
+  &lt;string&gt;ZAIKO_HINMEI_CD:在庫品名CD:True:17&lt;/string&gt;
+  &lt;string&gt;MEISAI_BIKOU:明細備考:True:18&lt;/string&gt;
+  &lt;string&gt;MANIFEST_ID:ﾏﾆﾌｪｽﾄ番号:True:19&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="tadasigaki" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

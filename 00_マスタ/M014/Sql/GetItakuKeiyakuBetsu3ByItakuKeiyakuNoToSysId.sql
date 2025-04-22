@@ -1,0 +1,11 @@
+﻿SELECT 
+    KB3.*
+FROM 
+    dbo.M_ITAKU_KEIYAKU_BETSU3 KB3
+/*BEGIN*/
+WHERE
+ /*IF data.SYSTEM_ID != null*/
+ AND KB3.SYSTEM_ID = /*data.SYSTEM_ID*/
+ /*END*/
+/*END*/
+ORDER BY KB3.SYSTEM_ID

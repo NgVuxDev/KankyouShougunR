@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="1001">
+    <HyoujunTemplate Cd="001">
+      <Group OutputKbn="1">
+          <!--ID begin from 10000-->
+          <Column ID="10001" DispNumber="10001" DispName="INXS_依頼番号" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="REQUEST_NUMBER" Format="" />
+          <Column ID="10002" DispNumber="10002" DispName="INXS_ステータス" Needs="0" TableName="" Name="CASE T_PICKUP_REQUEST_INXS1.STATUS WHEN 1 THEN N'確定待ち' WHEN 2 THEN N'確定' WHEN 3 THEN N'変更確定待ち' WHEN 4 THEN N'キャンセル待ち' WHEN 5 THEN N'キャンセル' WHEN 6 THEN N'調整中' WHEN 7 THEN N'調整確定待ち' WHEN 8 THEN N'不成立' WHEN 10 THEN N'下書き' ELSE '' END" Format="" />
+          <Column ID="10003" DispNumber="10003" DispName="INXS_ユーザーID" Needs="0" TableName="M_USER_ACCOUNT_INFO_INXS1" Name="USER_NAME" Format="" />
+          <Column ID="10004" DispNumber="10004" DispName="INXS_利用者名" Needs="0" TableName="M_USER_ACCOUNT_INFO_INXS1" Name="FULL_NAME" Format="" />
+          <Column ID="10005" DispNumber="10005" DispName="INXS_企業名" Needs="0" TableName="M_USER_ACCOUNT_INFO_INXS1" Name="HAISHUTSU_GYOUSHA_NAME" Format="" />
+          <Column ID="10006" DispNumber="10006" DispName="INXS_部署名" Needs="0" TableName="M_USER_ACCOUNT_INFO_INXS1" Name="HAISHUTSU_GENBA_NAME" Format="" />
+          <Column ID="10007" DispNumber="10007" DispName="INXS_依頼可能日付" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="REQUEST_SETTING_DAY" Format="00" />
+          <Column ID="10008" DispNumber="10008" DispName="INXS_依頼可能時間" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="REQUEST_SETTING_HOURS" Format="00" />
+          <Column ID="10009" DispNumber="10009" DispName="INXS_変更可能日付" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="CHANGE_SETTING_DAY" Format="00" />
+          <Column ID="10010" DispNumber="10010" DispName="INXS_変更可能時間" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="CHANGE_SETTING_HOURS" Format="00" />
+          <Column ID="10011" DispNumber="10011" DispName="INXS_キャンセル可能日付" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="CANCEL_SETTING_DAY" Format="00" />
+          <Column ID="10012" DispNumber="10012" DispName="INXS_キャンセル可能時間" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="CANCEL_SETTING_HOURS" Format="00" />
+          <Column ID="10013" DispNumber="10013" DispName="INXS_ご連絡事項" Needs="0" TableName="" Name="REPLACE(T_PICKUP_REQUEST_INXS1.MESSAGE_FROM_ADMIN,CHAR(13) + CHAR(10),'/')" Format="" />
+          <Column ID="10014" DispNumber="10014" DispName="INXS_依頼事項" Needs="0" TableName="" Name="REPLACE(T_PICKUP_REQUEST_INXS1.MESSAGE_USER_REQUEST,CHAR(13) + CHAR(10),'/')" Format="" />
+          <Column ID="10015" DispNumber="10015" DispName="INXS_第一希望日" Needs="0" TableName="T_PICKUP_REQUEST_FIRST_DATE_INXS1" Name="PREFERENCE_DATE" Format="yyyy/MM/dd(ddd)" />
+          <Column ID="10016" DispNumber="10016" DispName="INXS_最短（第一希望日）" Needs="0" TableName="T_PICKUP_REQUEST_FIRST_DATE_INXS1" Name="PRIORITY_FLG" Format="" />
+          <Column ID="10017" DispNumber="10017" DispName="INXS_時間指定（第一希望日）" Needs="0" TableName="" Name="CASE T_PICKUP_REQUEST_FIRST_DATE_INXS1.TIME_SETTING_TYPE WHEN 1 THEN N'時間指定あり' WHEN 2 THEN N'AM指定' WHEN 3 THEN N'PM指定' WHEN 4 THEN N'指定なし' END" Format="" />
+          <Column ID="10018" DispNumber="10018" DispName="INXS_From時（第一希望日）" Needs="0" TableName="T_PICKUP_REQUEST_FIRST_DATE_INXS1" Name="FROM_HOURS" Format="00" />
+          <Column ID="10019" DispNumber="10019" DispName="INXS_From分（第一希望日）" Needs="0" TableName="T_PICKUP_REQUEST_FIRST_DATE_INXS1" Name="FROM_MINUTE" Format="00" />
+          <Column ID="10020" DispNumber="10020" DispName="INXS_To時（第一希望日）" Needs="0" TableName="T_PICKUP_REQUEST_FIRST_DATE_INXS1" Name="TO_HOURS" Format="00" />
+          <Column ID="10021" DispNumber="10021" DispName="INXS_To分（第一希望日）" Needs="0" TableName="T_PICKUP_REQUEST_FIRST_DATE_INXS1" Name="TO_MINUTE" Format="00" />
+          <Column ID="10022" DispNumber="10022" DispName="INXS_第二希望日" Needs="0" TableName="T_PICKUP_REQUEST_SECOND_DATE_INXS1" Name="PREFERENCE_DATE" Format="yyyy/MM/dd(ddd)" />
+          <Column ID="10023" DispNumber="10023" DispName="INXS_最短（第二希望日）" Needs="0" TableName="T_PICKUP_REQUEST_SECOND_DATE_INXS1" Name="PRIORITY_FLG" Format="" />
+          <Column ID="10024" DispNumber="10024" DispName="INXS_時間指定（第二希望日）" Needs="0" TableName="" Name="CASE T_PICKUP_REQUEST_SECOND_DATE_INXS1.TIME_SETTING_TYPE WHEN 1 THEN N'時間指定あり' WHEN 2 THEN N'AM指定' WHEN 3 THEN N'PM指定' WHEN 4 THEN N'指定なし' END" Format="" />
+          <Column ID="10025" DispNumber="10025" DispName="INXS_From時（第二希望日）" Needs="0" TableName="T_PICKUP_REQUEST_SECOND_DATE_INXS1" Name="FROM_HOURS" Format="00" />
+          <Column ID="10026" DispNumber="10026" DispName="INXS_From分（第二希望日）" Needs="0" TableName="T_PICKUP_REQUEST_SECOND_DATE_INXS1" Name="FROM_MINUTE" Format="00" />
+          <Column ID="10027" DispNumber="10027" DispName="INXS_To時（第二希望日）" Needs="0" TableName="T_PICKUP_REQUEST_SECOND_DATE_INXS1" Name="TO_HOURS" Format="00" />
+          <Column ID="10028" DispNumber="10028" DispName="INXS_To分（第二希望日）" Needs="0" TableName="T_PICKUP_REQUEST_SECOND_DATE_INXS1" Name="TO_MINUTE" Format="00" />
+          <Column ID="10045" DispNumber="10029" DispName="INXS_確定日" Needs="0" TableName="T_PICKUP_REQUEST_CONFIRM_DATE_INXS1" Name="PREFERENCE_DATE" Format="yyyy/MM/dd(ddd)" />
+          <Column ID="10046" DispNumber="10030" DispName="INXS_時間指定（確定日）" Needs="0" TableName="" Name="CASE T_PICKUP_REQUEST_CONFIRM_DATE_INXS1.TIME_SETTING_TYPE WHEN 1 THEN N'時間指定あり' WHEN 2 THEN N'AM指定' WHEN 3 THEN N'PM指定' WHEN 4 THEN N'指定なし' END" Format="" />
+          <Column ID="10047" DispNumber="10031" DispName="INXS_From時（確定日）" Needs="0" TableName="T_PICKUP_REQUEST_CONFIRM_DATE_INXS1" Name="FROM_HOURS" Format="00" />
+          <Column ID="10048" DispNumber="10032" DispName="INXS_From分（確定日）" Needs="0" TableName="T_PICKUP_REQUEST_CONFIRM_DATE_INXS1" Name="FROM_MINUTE" Format="00" />
+          <Column ID="10049" DispNumber="10033" DispName="INXS_To時（確定日）" Needs="0" TableName="T_PICKUP_REQUEST_CONFIRM_DATE_INXS1" Name="TO_HOURS" Format="00" />
+          <Column ID="10050" DispNumber="10034" DispName="INXS_To分（確定日）" Needs="0" TableName="T_PICKUP_REQUEST_CONFIRM_DATE_INXS1" Name="TO_MINUTE" Format="00" />
+          <Column ID="10029" DispNumber="10035" DispName="INXS_排出事業者CD" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GYOUSHA_CD" Format="" />
+          <Column ID="10030" DispNumber="10036" DispName="INXS_排出事業者名" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GYOUSHA_NAME" Format="" />
+          <Column ID="10031" DispNumber="10037" DispName="INXS_排出事業者住所" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GYOUSHA_ADDRESS" Format="" />
+          <Column ID="10032" DispNumber="10038" DispName="INXS_排出事業者部署名" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GYOUSHA_BUSHO" Format="" />
+          <Column ID="10033" DispNumber="10039" DispName="INXS_排出事業者担当者名" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GYOUSHA_TANTOUSHA" Format="" />
+          <Column ID="10034" DispNumber="10040" DispName="INXS_排出事業者電話番号" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GYOUSHA_TEL" Format="" />
+          <Column ID="10035" DispNumber="10041" DispName="INXS_排出事業場CD" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GENBA_CD" Format="" />
+          <Column ID="10036" DispNumber="10042" DispName="INXS_排出事業場名" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GENBA_NAME" Format="" />
+          <Column ID="10037" DispNumber="10043" DispName="INXS_排出事業場住所" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GENBA_ADDRESS" Format="" />
+          <Column ID="10038" DispNumber="10044" DispName="INXS_排出事業場部署" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GENBA_BUSHO" Format="" />
+          <Column ID="10039" DispNumber="10045" DispName="INXS_排出事業場担当者" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GENBA_TANTOUSHA" Format="" />
+          <Column ID="10040" DispNumber="10046" DispName="INXS_排出事業場電話番号" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="HAISHUTSU_GENBA_TEL" Format="" />
+          <Column ID="10041" DispNumber="10047" DispName="INXS_車種CD" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="TRUCK_TYPE_CD" Format="" />
+          <Column ID="10042" DispNumber="10048" DispName="INXS_車種名" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="TRUCK_TYPE" Format="" />
+          <Column ID="10043" DispNumber="10049" DispName="INXS_車種台数" Needs="0" TableName="T_PICKUP_REQUEST_INXS1" Name="NUMBER_OF_TRUCK" Format="" />
+          <Column ID="10044" DispNumber="10050" DispName="INXS_作業区分" Needs="0" TableName="" Name="CASE T_PICKUP_REQUEST_INXS1.JOB_TYPE WHEN 1 THEN N'指定なし' WHEN 2 THEN N'積込' WHEN 3 THEN N'交換' WHEN 4 THEN N'配置' WHEN 5 THEN N'引揚' WHEN 6 THEN N'配達' WHEN 7 THEN N'移動' WHEN 8 THEN N'その他' END" Format="" />
+          <Column ID="10051" DispNumber="10051" DispName="INXS_ダッシュ依頼名" Needs="0" TableName="M_PICKUP_REQUEST_TEMPLATE_INXS1" Name="DASH_REQUEST_TITLE" Format="" />
+      </Group>
+      <Group OutputKbn="2">
+          <!--ID begin from 10000-->
+          <Column ID="10001" DispNumber="" DispName="INXS_品名CD" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="HINMEI_CD" Format="" />
+          <Column ID="10002" DispNumber="" DispName="INXS_品名" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="HINMEI_NAME" Format="" />
+          <Column ID="10003" DispNumber="" DispName="INXS_伝票区分" Needs="0" TableName="M_DENPYOU_KBN_INXS1" Name="DENPYOU_KBN_NAME_RYAKU" Format="" />
+          <Column ID="10004" DispNumber="" DispName="INXS_廃棄物種類CD" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="HAIKI_SHURUI_CD" Format="" />
+          <Column ID="10005" DispNumber="" DispName="INXS_廃棄物種類名" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="HAIKI_SHURUI_NAME" Format="" />
+          <Column ID="10006" DispNumber="" DispName="INXS_廃棄物名称CD" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="HAIKI_NAME_CD" Format="" />
+          <Column ID="10007" DispNumber="" DispName="INXS_廃棄物名称" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="HAIKI_NAME" Format="" />
+          <Column ID="10008" DispNumber="" DispName="INXS_数量" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="QUANTITY" Format="1" />
+          <Column ID="10009" DispNumber="" DispName="INXS_単位CD" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="UNIT_CD" Format="00" />
+          <Column ID="10010" DispNumber="" DispName="INXS_単位名" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="UNIT_NAME" Format="" />
+          <Column ID="10011" DispNumber="" DispName="INXS_荷姿CD" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="NISUGATA_CD" Format="" />
+          <Column ID="10012" DispNumber="" DispName="INXS_荷姿名" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="NISUGATA_NAME" Format="" />
+          <Column ID="10013" DispNumber="" DispName="INXS_備考" Needs="0" TableName="T_PICKUP_REQUEST_DETAIL_INXS1" Name="NOTES" Format="" />
+      </Group>
+      <JoinCondition TableName="M_USER_ACCOUNT_INFO_INXS1">
+        LEFT JOIN M_USER_ACCOUNT_INFO_INXS AS M_USER_ACCOUNT_INFO_INXS1
+          ON M_USER_ACCOUNT_INFO_INXS1.USER_ID = T_PICKUP_REQUEST_INXS1.USER_ID
+      </JoinCondition>
+      <JoinCondition TableName="T_PICKUP_REQUEST_FIRST_DATE_INXS1">
+        LEFT JOIN T_PICKUP_REQUEST_PREFERENCE_DATE_INXS AS T_PICKUP_REQUEST_FIRST_DATE_INXS1
+          ON T_PICKUP_REQUEST_FIRST_DATE_INXS1.SYSTEM_ID = T_PICKUP_REQUEST_INXS1.SYSTEM_ID
+          AND T_PICKUP_REQUEST_FIRST_DATE_INXS1.SEQ = T_PICKUP_REQUEST_INXS1.SEQ
+          AND T_PICKUP_REQUEST_FIRST_DATE_INXS1.ROW_NUMBER = 1
+      </JoinCondition>
+      <JoinCondition TableName="T_PICKUP_REQUEST_SECOND_DATE_INXS1">
+        LEFT JOIN T_PICKUP_REQUEST_PREFERENCE_DATE_INXS AS T_PICKUP_REQUEST_SECOND_DATE_INXS1
+          ON T_PICKUP_REQUEST_SECOND_DATE_INXS1.SYSTEM_ID = T_PICKUP_REQUEST_INXS1.SYSTEM_ID
+          AND T_PICKUP_REQUEST_SECOND_DATE_INXS1.SEQ = T_PICKUP_REQUEST_INXS1.SEQ
+          AND T_PICKUP_REQUEST_SECOND_DATE_INXS1.ROW_NUMBER = 2
+      </JoinCondition>
+      <JoinCondition TableName="T_PICKUP_REQUEST_CONFIRM_DATE_INXS1">
+        LEFT JOIN T_PICKUP_REQUEST_PREFERENCE_DATE_INXS AS T_PICKUP_REQUEST_CONFIRM_DATE_INXS1
+          ON T_PICKUP_REQUEST_CONFIRM_DATE_INXS1.SYSTEM_ID = T_PICKUP_REQUEST_INXS1.SYSTEM_ID
+          AND T_PICKUP_REQUEST_CONFIRM_DATE_INXS1.SEQ = T_PICKUP_REQUEST_INXS1.SEQ
+          AND T_PICKUP_REQUEST_CONFIRM_DATE_INXS1.ROW_NUMBER = 10
+      </JoinCondition>
+      <JoinCondition TableName="T_PICKUP_REQUEST_DETAIL_INXS1">
+        LEFT JOIN T_PICKUP_REQUEST_DETAIL_INXS AS T_PICKUP_REQUEST_DETAIL_INXS1
+        ON T_PICKUP_REQUEST_DETAIL_INXS1.SYSTEM_ID = T_PICKUP_REQUEST_INXS1.SYSTEM_ID
+        AND T_PICKUP_REQUEST_DETAIL_INXS1.SEQ = T_PICKUP_REQUEST_INXS1.SEQ
+      </JoinCondition>
+	    <JoinCondition TableName="M_DENPYOU_KBN_INXS1">
+		    LEFT JOIN M_DENPYOU_KBN M_DENPYOU_KBN_INXS1 
+		    ON M_DENPYOU_KBN_INXS1.DENPYOU_KBN_CD = T_PICKUP_REQUEST_DETAIL_INXS1.DENPYOU_KBN_CD
+	    </JoinCondition>
+      <JoinCondition TableName="M_PICKUP_REQUEST_TEMPLATE_INXS1">
+        LEFT JOIN M_PICKUP_REQUEST_TEMPLATE_INXS M_PICKUP_REQUEST_TEMPLATE_INXS1
+        ON M_PICKUP_REQUEST_TEMPLATE_INXS1.INXS_AUTO_KEY = T_PICKUP_REQUEST_INXS1.TEMPLATE_ID
+      </JoinCondition>
+    </HyoujunTemplate>
+  </OutputColumnSelect>
+</root>

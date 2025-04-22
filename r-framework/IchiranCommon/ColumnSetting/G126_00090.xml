@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="90">
+    <Group OutputKbn="1">
+      <Column ID="1" DispNumber="" DispName="システムID" Needs="0" TableName="DT_R18_EX" Name="SYSTEM_ID" />
+      <Column ID="2" DispNumber="" DispName="枝番" Needs="0" TableName="DT_R18_EX" Name="SEQ" />
+      <Column ID="3" DispNumber="" DispName="管理番号" Needs="1" TableName="DT_R18_EX" Name="KANRI_ID" />
+      <Column ID="4" DispNumber="" DispName="マニフェスト／予約番号" Needs="0" TableName="DT_R18_EX" Name="MANIFEST_ID" />
+      <Column ID="5" DispNumber="" DispName="排出事業者CD" Needs="0" TableName="DT_R18_EX" Name="HST_GYOUSHA_CD" />
+      <Column ID="6" DispNumber="" DispName="業者名" Needs="0" TableName="M_GYOUSHA_8E1" Name="GYOUSHA_NAME_RYAKU" />
+      <Column ID="7" DispNumber="" DispName="排出事業場CD" Needs="0" TableName="DT_R18_EX" Name="HST_GENBA_CD" />
+      <Column ID="8" DispNumber="" DispName="現場略称名" Needs="0" TableName="M_GENBA_8E2" Name="GENBA_NAME_RYAKU" />
+      <Column ID="9" DispNumber="" DispName="処分受託者CD" Needs="0" TableName="DT_R18_EX" Name="SBN_GYOUSHA_CD" />
+      <Column ID="10" DispNumber="" DispName="処分受託者＿業者名" Needs="0" TableName="M_GYOUSHA_8E3" Name="GYOUSHA_NAME_RYAKU" />
+      <Column ID="11" DispNumber="" DispName="処分事業場CD" Needs="0" TableName="DT_R18_EX" Name="SBN_GENBA_CD" />
+      <Column ID="12" DispNumber="" DispName="現場略称名" Needs="0" TableName="M_GENBA_8E4" Name="GENBA_NAME_RYAKU" />
+      <Column ID="13" DispNumber="" DispName="報告不要処分事業者加入者番号" Needs="0" TableName="DT_R18_EX" Name="NO_REP_SBN_EDI_MEMBER_ID" />
+      <Column ID="14" DispNumber="" DispName="処分受託者許可番号" Needs="0" TableName="DT_R18_EX" Name="SBN_KYOKA_NO" />
+      <Column ID="15" DispNumber="" DispName="廃棄物名称CD" Needs="0" TableName="DT_R18_EX" Name="HAIKI_NAME_CD" />
+      <Column ID="16" DispNumber="" DispName="廃棄物略称名" Needs="0" TableName="M_HAIKI_NAME_8E5" Name="HAIKI_SHURUI_NAME_RYAKU" />
+      <Column ID="17" DispNumber="" DispName="処分方法CD" Needs="0" TableName="DT_R18_EX" Name="SBN_HOUHOU_CD" />
+      <Column ID="18" DispNumber="" DispName="処分方法マスタ" Needs="0" TableName="M_SHOBUN_HOUHOU_8E6" Name="GYOUSHA_NAME_RYAKU" />
+      <Column ID="19" DispNumber="" DispName="報告担当者CD" Needs="0" TableName="DT_R18_EX" Name="HOUKOKU_TANTOUSHA_CD" />
+      <Column ID="20" DispNumber="" DispName="報告担当者名" Needs="0" TableName="M_DENSHI_TANTOUSHA_8E7" Name="TANTOUSHA_NAME" />
+      <Column ID="21" DispNumber="" DispName="処分担当者CD" Needs="0" TableName="DT_R18_EX" Name="SBN_TANTOUSHA_CD" />
+      <Column ID="22" DispNumber="" DispName="処分担当者名" Needs="0" TableName="M_DENSHI_TANTOUSHA_8E8" Name="TANTOUSHA_NAME" />
+      <Column ID="23" DispNumber="" DispName="運搬担当者CD" Needs="0" TableName="DT_R18_EX" Name="UPN_TANTOUSHA_CD" />
+      <Column ID="24" DispNumber="" DispName="運搬担当者名" Needs="0" TableName="M_DENSHI_TANTOUSHA_8E9" Name="TANTOUSHA_NAME" />
+      <Column ID="25" DispNumber="" DispName="車輌CD" Needs="0" TableName="DT_R18_EX" Name="SHARYOU_CD" />
+      <Column ID="26" DispNumber="" DispName="車輌名" Needs="0" TableName="M_SHARYOU_8E10" Name="SHARYOU_NAME" />
+      <Column ID="27" DispNumber="" DispName="換算後数量" Needs="0" TableName="DT_R18_EX" Name="KANSAN_SUU" />
+      <Column ID="28" DispNumber="" DispName="作成者" Needs="0" TableName="DT_R18_EX" Name="CREATE_USER" />
+      <Column ID="29" DispNumber="" DispName="作成日時" Needs="0" TableName="DT_R18_EX" Name="CREATE_DATE" />
+      <Column ID="30" DispNumber="" DispName="作成PC" Needs="0" TableName="DT_R18_EX" Name="CREATE_PC" />
+      <Column ID="31" DispNumber="" DispName="最終更新者" Needs="0" TableName="DT_R18_EX" Name="UPDATE_USER" />
+      <Column ID="32" DispNumber="" DispName="最終更新日時" Needs="0" TableName="DT_R18_EX" Name="UPDATE_DATE" />
+      <Column ID="33" DispNumber="" DispName="最終更新PC" Needs="0" TableName="DT_R18_EX" Name="UPDATE_PC" />
+      <Column ID="34" DispNumber="" DispName="削除フラグ" Needs="0" TableName="DT_R18_EX" Name="DELETE_FLG" />
+      <Column ID="35" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="DT_R18_EX" Name="TIME_STAMP" />
+      <Column ID="36" DispNumber="" DispName="管理番号" Needs="0" TableName="DT_MF_TOC" Name="KANRI_ID" />
+      <Column ID="37" DispNumber="" DispName="マニフェスト／予約番号" Needs="0" TableName="DT_MF_TOC" Name="MANIFEST_ID" />
+      <Column ID="38" DispNumber="" DispName="最新SEQ" Needs="1" TableName="DT_MF_TOC" Name="LATEST_SEQ" />
+      <Column ID="39" DispNumber="" DispName="修正/取消中SEQ" Needs="0" TableName="DT_MF_TOC" Name="APPROVAL_SEQ" />
+      <Column ID="40" DispNumber="" DispName="状態フラグ" Needs="0" TableName="DT_MF_TOC" Name="STATUS_FLAG" />
+      <Column ID="41" DispNumber="" DispName="状態詳細フラグ" Needs="0" TableName="DT_MF_TOC" Name="STATUS_DETAIL" />
+      <Column ID="42" DispNumber="" DispName="既読フラグ" Needs="0" TableName="DT_MF_TOC" Name="READ_FLAG" />
+      <Column ID="43" DispNumber="" DispName="レコード作成日時" Needs="0" TableName="DT_MF_TOC" Name="CREATE_DATE" />
+      <Column ID="44" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="DT_MF_TOC" Name="UPDATE_TS" />
+      <Column ID="45" DispNumber="" DispName="種類" Needs="0" TableName="DT_MF_TOC" Name="KIND" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="管理番号" Needs="0" TableName="DT_R18" Name="KANRI_ID" />
+      <Column ID="2" DispNumber="" DispName="枝番" Needs="0" TableName="DT_R18" Name="SEQ" />
+      <Column ID="3" DispNumber="" DispName="マニフェスト／予約番号" Needs="0" TableName="DT_R18" Name="MANIFEST_ID" />
+      <Column ID="4" DispNumber="" DispName="予約/ﾏﾆﾌｪｽﾄ区分" Needs="0" TableName="DT_R18" Name="MANIFEST_KBN" />
+      <Column ID="5" DispNumber="" DispName="登録情報承認待ちフラグ" Needs="0" TableName="DT_R18" Name="SHOUNIN_FLAG" />
+      <Column ID="6" DispNumber="" DispName="引渡し日" Needs="0" TableName="DT_R18" Name="HIKIWATASHI_DATE" />
+      <Column ID="7" DispNumber="" DispName="運搬終了報告済フラグ" Needs="0" TableName="DT_R18" Name="UPN_ENDREP_FLAG" />
+      <Column ID="8" DispNumber="" DispName="処分終了報告済フラグ" Needs="0" TableName="DT_R18" Name="SBN_ENDREP_FLAG" />
+      <Column ID="9" DispNumber="" DispName="最終処分終了報告済フラグ" Needs="0" TableName="DT_R18" Name="LAST_SBN_ENDREP_FLAG" />
+      <Column ID="10" DispNumber="" DispName="課金日" Needs="0" TableName="DT_R18" Name="KAKIN_DATE" />
+      <Column ID="11" DispNumber="" DispName="登録日" Needs="0" TableName="DT_R18" Name="REGI_DATE" />
+      <Column ID="12" DispNumber="" DispName="運搬・処分終了報告期限日" Needs="0" TableName="DT_R18" Name="UPN_SBN_REP_LIMIT_DATE" />
+      <Column ID="13" DispNumber="" DispName="最終処分終了報告期限日" Needs="0" TableName="DT_R18" Name="LAST_SBN_REP_LIMIT_DATE" />
+      <Column ID="14" DispNumber="" DispName="予約情報有効期限日" Needs="0" TableName="DT_R18" Name="RESV_LIMIT_DATE" />
+      <Column ID="15" DispNumber="" DispName="処分終了報告区分" Needs="0" TableName="DT_R18" Name="SBN_ENDREP_KBN" />
+      <Column ID="16" DispNumber="" DispName="排出事業者の加入者番号" Needs="0" TableName="DT_R18" Name="HST_SHA_EDI_MEMBER_ID" />
+      <Column ID="17" DispNumber="" DispName="排出事業者名称" Needs="0" TableName="DT_R18" Name="HST_SHA_NAME" />
+      <Column ID="18" DispNumber="" DispName="排出事業者郵便番号" Needs="0" TableName="DT_R18" Name="HST_SHA_POST" />
+      <Column ID="19" DispNumber="" DispName="排出事業者所在地1" Needs="0" TableName="DT_R18" Name="HST_SHA_ADDRESS1" />
+      <Column ID="20" DispNumber="" DispName="排出事業者所在地2" Needs="0" TableName="DT_R18" Name="HST_SHA_ADDRESS2" />
+      <Column ID="21" DispNumber="" DispName="排出事業者所在地3" Needs="0" TableName="DT_R18" Name="HST_SHA_ADDRESS3" />
+      <Column ID="22" DispNumber="" DispName="排出事業者所在地4" Needs="0" TableName="DT_R18" Name="HST_SHA_ADDRESS4" />
+      <Column ID="23" DispNumber="" DispName="排出事業者の代表番号" Needs="0" TableName="DT_R18" Name="HST_SHA_TEL" />
+      <Column ID="24" DispNumber="" DispName="排出事業者の代表FAX" Needs="0" TableName="DT_R18" Name="HST_SHA_FAX" />
+      <Column ID="25" DispNumber="" DispName="排出事業場名称" Needs="0" TableName="DT_R18" Name="HST_JOU_NAME" />
+      <Column ID="26" DispNumber="" DispName="排出事業場所在地の郵便番号" Needs="0" TableName="DT_R18" Name="HST_JOU_POST_NO" />
+      <Column ID="27" DispNumber="" DispName="排出事業場所在地1" Needs="0" TableName="DT_R18" Name="HST_JOU_ADDRESS1" />
+      <Column ID="28" DispNumber="" DispName="排出事業場所在地2" Needs="0" TableName="DT_R18" Name="HST_JOU_ADDRESS2" />
+      <Column ID="29" DispNumber="" DispName="排出事業場所在地3" Needs="0" TableName="DT_R18" Name="HST_JOU_ADDRESS3" />
+      <Column ID="30" DispNumber="" DispName="排出事業場所在地4" Needs="0" TableName="DT_R18" Name="HST_JOU_ADDRESS4" />
+      <Column ID="31" DispNumber="" DispName="排出事業場電話番号" Needs="0" TableName="DT_R18" Name="HST_JOU_TEL" />
+      <Column ID="32" DispNumber="" DispName="登録担当者" Needs="0" TableName="DT_R18" Name="REGI_TAN" />
+      <Column ID="33" DispNumber="" DispName="引渡し担当者" Needs="0" TableName="DT_R18" Name="HIKIWATASHI_TAN_NAME" />
+      <Column ID="34" DispNumber="" DispName="大分類コード" Needs="0" TableName="DT_R18" Name="HAIKI_DAI_CODE" />
+      <Column ID="35" DispNumber="" DispName="中分類コード" Needs="0" TableName="DT_R18" Name="HAIKI_CHU_CODE" />
+      <Column ID="36" DispNumber="" DispName="小分類コード" Needs="0" TableName="DT_R18" Name="HAIKI_SHO_CODE" />
+      <Column ID="37" DispNumber="" DispName="細分類コード" Needs="0" TableName="DT_R18" Name="HAIKI_SAI_CODE" />
+      <Column ID="38" DispNumber="" DispName="廃棄物の大分類名称" Needs="0" TableName="DT_R18" Name="HAIKI_BUNRUI" />
+      <Column ID="39" DispNumber="" DispName="廃棄物の種類" Needs="0" TableName="DT_R18" Name="HAIKI_SHURUI" />
+      <Column ID="40" DispNumber="" DispName="廃棄物の名称" Needs="0" TableName="DT_R18" Name="HAIKI_NAME" />
+      <Column ID="41" DispNumber="" DispName="廃棄物の数量" Needs="0" TableName="DT_R18" Name="HAIKI_SUU" />
+      <Column ID="42" DispNumber="" DispName="廃棄物の数量単位コード" Needs="0" TableName="DT_R18" Name="HAIKI_UNIT_CODE" />
+      <Column ID="43" DispNumber="" DispName="数量確定者コード" Needs="0" TableName="DT_R18" Name="SUU_KAKUTEI_CODE" />
+      <Column ID="44" DispNumber="" DispName="廃棄物の確定数量" Needs="0" TableName="DT_R18" Name="HAIKI_KAKUTEI_SUU" />
+      <Column ID="45" DispNumber="" DispName="廃棄物の確定数量の単位コード" Needs="0" TableName="DT_R18" Name="HAIKI_KAKUTEI_UNIT_CODE" />
+      <Column ID="46" DispNumber="" DispName="荷姿コード" Needs="0" TableName="DT_R18" Name="NISUGATA_CODE" />
+      <Column ID="47" DispNumber="" DispName="荷姿名" Needs="0" TableName="DT_R18" Name="NISUGATA_NAME" />
+      <Column ID="48" DispNumber="" DispName="荷姿の数量" Needs="0" TableName="DT_R18" Name="NISUGATA_SUU" />
+      <Column ID="49" DispNumber="" DispName="処分業者加入者番号" Needs="0" TableName="DT_R18" Name="SBN_SHA_MEMBER_ID" />
+      <Column ID="50" DispNumber="" DispName="処分業者名" Needs="0" TableName="DT_R18" Name="SBN_SHA_NAME" />
+      <Column ID="51" DispNumber="" DispName="処分業者郵便番号" Needs="0" TableName="DT_R18" Name="SBN_SHA_POST" />
+      <Column ID="52" DispNumber="" DispName="処分業者所在地1" Needs="0" TableName="DT_R18" Name="SBN_SHA_ADDRESS1" />
+      <Column ID="53" DispNumber="" DispName="処分業者所在地2" Needs="0" TableName="DT_R18" Name="SBN_SHA_ADDRESS2" />
+      <Column ID="54" DispNumber="" DispName="処分業者所在地3" Needs="0" TableName="DT_R18" Name="SBN_SHA_ADDRESS3" />
+      <Column ID="55" DispNumber="" DispName="処分業者所在地4" Needs="0" TableName="DT_R18" Name="SBN_SHA_ADDRESS4" />
+      <Column ID="56" DispNumber="" DispName="処分業者電話番号" Needs="0" TableName="DT_R18" Name="SBN_SHA_TEL" />
+      <Column ID="57" DispNumber="" DispName="処分業者FAX" Needs="0" TableName="DT_R18" Name="SBN_SHA_FAX" />
+      <Column ID="58" DispNumber="" DispName="処分業者統一許可番号" Needs="0" TableName="DT_R18" Name="SBN_SHA_KYOKA_ID" />
+      <Column ID="59" DispNumber="" DispName="再委託先処分業者加入者番号" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_MEMBER_ID" />
+      <Column ID="60" DispNumber="" DispName="再委託先処分業者名" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_NAME" />
+      <Column ID="61" DispNumber="" DispName="再委託先処分業者郵便場号" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_POST" />
+      <Column ID="62" DispNumber="" DispName="再委託先処分業者所在地1" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_ADDRESS1" />
+      <Column ID="63" DispNumber="" DispName="再委託先処分業者所在地2" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_ADDRESS2" />
+      <Column ID="64" DispNumber="" DispName="再委託先処分業者所在地3" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_ADDRESS3" />
+      <Column ID="65" DispNumber="" DispName="再委託先処分業者所在地4" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_ADDRESS4" />
+      <Column ID="66" DispNumber="" DispName="再委託先処分業者電話番号" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_TEL" />
+      <Column ID="67" DispNumber="" DispName="再委託先処分業者FAX" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_FAX" />
+      <Column ID="68" DispNumber="" DispName="再委託先処分業者統一許可番号" Needs="0" TableName="DT_R18" Name="SAI_SBN_SHA_KYOKA_ID" />
+      <Column ID="69" DispNumber="" DispName="処分方法コード" Needs="0" TableName="DT_R18" Name="SBN_WAY_CODE" />
+      <Column ID="70" DispNumber="" DispName="処分方法名" Needs="0" TableName="DT_R18" Name="SBN_WAY_NAME" />
+      <Column ID="71" DispNumber="" DispName="処分報告情報承認待ちフラグ" Needs="0" TableName="DT_R18" Name="SBN_SHOUNIN_FLAG" />
+      <Column ID="72" DispNumber="" DispName="処分終了日" Needs="0" TableName="DT_R18" Name="SBN_END_DATE" />
+      <Column ID="73" DispNumber="" DispName="廃棄物の受領日" Needs="0" TableName="DT_R18" Name="HAIKI_IN_DATE" />
+      <Column ID="74" DispNumber="" DispName="受入量" Needs="0" TableName="DT_R18" Name="RECEPT_SUU" />
+      <Column ID="75" DispNumber="" DispName="受入量の単位コード" Needs="0" TableName="DT_R18" Name="RECEPT_UNIT_CODE" />
+      <Column ID="76" DispNumber="" DispName="運搬担当者" Needs="0" TableName="DT_R18" Name="UPN_TAN_NAME" />
+      <Column ID="77" DispNumber="" DispName="車両番号" Needs="0" TableName="DT_R18" Name="CAR_NO" />
+      <Column ID="78" DispNumber="" DispName="報告担当者" Needs="0" TableName="DT_R18" Name="REP_TAN_NAME" />
+      <Column ID="79" DispNumber="" DispName="処分担当者" Needs="0" TableName="DT_R18" Name="SBN_TAN_NAME" />
+      <Column ID="80" DispNumber="" DispName="処分終了報告日" Needs="0" TableName="DT_R18" Name="SBN_END_REP_DATE" />
+      <Column ID="81" DispNumber="" DispName="処分報告備考" Needs="0" TableName="DT_R18" Name="SBN_REP_BIKOU" />
+      <Column ID="82" DispNumber="" DispName="予約登録の修正権限コード" Needs="0" TableName="DT_R18" Name="KENGEN_CODE" />
+      <Column ID="83" DispNumber="" DispName="最終処分事業場記載フラグ" Needs="0" TableName="DT_R18" Name="LAST_SBN_JOU_KISAI_FLAG" />
+      <Column ID="84" DispNumber="" DispName="中間処理産業廃棄物情報管理方法フラグ" Needs="0" TableName="DT_R18" Name="FIRST_MANIFEST_FLAG" />
+      <Column ID="85" DispNumber="" DispName="最終処分終了日" Needs="0" TableName="DT_R18" Name="LAST_SBN_END_DATE" />
+      <Column ID="86" DispNumber="" DispName="最終処分終了報告日" Needs="0" TableName="DT_R18" Name="LAST_SBN_END_REP_DATE" />
+      <Column ID="87" DispNumber="" DispName="修正日" Needs="0" TableName="DT_R18" Name="SHUSEI_DATE" />
+      <Column ID="88" DispNumber="" DispName="取消フラグ" Needs="0" TableName="DT_R18" Name="CANCEL_FLAG" />
+      <Column ID="89" DispNumber="" DispName="取消日" Needs="0" TableName="DT_R18" Name="CANCEL_DATE" />
+      <Column ID="90" DispNumber="" DispName="最終更新日" Needs="0" TableName="DT_R18" Name="LAST_UPDATE_DATE" />
+      <Column ID="91" DispNumber="" DispName="有害物質情報件数" Needs="0" TableName="DT_R18" Name="YUUGAI_CNT" />
+      <Column ID="92" DispNumber="" DispName="収集運搬情報件数" Needs="0" TableName="DT_R18" Name="UPN_ROUTE_CNT" />
+      <Column ID="93" DispNumber="" DispName="最終処分事業場（予定）情報件数" Needs="0" TableName="DT_R18" Name="LAST_SBN_PLAN_CNT" />
+      <Column ID="94" DispNumber="" DispName="最終処分終了日･事業場情報件数" Needs="0" TableName="DT_R18" Name="LAST_SBN_CNT" />
+      <Column ID="95" DispNumber="" DispName="連絡番号情報件数" Needs="0" TableName="DT_R18" Name="RENRAKU_CNT" />
+      <Column ID="96" DispNumber="" DispName="備考情報件数" Needs="0" TableName="DT_R18" Name="BIKOU_CNT" />
+      <Column ID="97" DispNumber="" DispName="中間処理産業廃棄物情報件数" Needs="0" TableName="DT_R18" Name="FIRST_MANIFEST_CNT" />
+      <Column ID="98" DispNumber="" DispName="レコード作成日時" Needs="0" TableName="DT_R18" Name="CREATE_DATE" />
+      <Column ID="99" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="DT_R18" Name="UPDATE_TS" />
+      <Column ID="100" DispNumber="" DispName="管理番号" Needs="0" TableName="DT_R19" Name="KANRI_ID" />
+      <Column ID="101" DispNumber="" DispName="枝番" Needs="0" TableName="DT_R19" Name="SEQ" />
+      <Column ID="102" DispNumber="" DispName="マニフェスト／予約番号" Needs="0" TableName="DT_R19" Name="MANIFEST_ID" />
+      <Column ID="103" DispNumber="" DispName="区間番号" Needs="0" TableName="DT_R19" Name="UPN_ROUTE_NO" />
+      <Column ID="104" DispNumber="" DispName="収集運搬業者加入者番号" Needs="0" TableName="DT_R19" Name="UPN_SHA_EDI_MEMBER_ID" />
+      <Column ID="105" DispNumber="" DispName="収集運搬業者名" Needs="0" TableName="DT_R19" Name="UPN_SHA_NAME" />
+      <Column ID="106" DispNumber="" DispName="収集運搬業者郵便番号" Needs="0" TableName="DT_R19" Name="UPN_SHA_POST" />
+      <Column ID="107" DispNumber="" DispName="収集運搬業者所在地1" Needs="0" TableName="DT_R19" Name="UPN_SHA_ADDRESS1" />
+      <Column ID="108" DispNumber="" DispName="収集運搬業者所在地2" Needs="0" TableName="DT_R19" Name="UPN_SHA_ADDRESS2" />
+      <Column ID="109" DispNumber="" DispName="収集運搬業者所在地3" Needs="0" TableName="DT_R19" Name="UPN_SHA_ADDRESS3" />
+      <Column ID="110" DispNumber="" DispName="収集運搬業者所在地4" Needs="0" TableName="DT_R19" Name="UPN_SHA_ADDRESS4" />
+      <Column ID="111" DispNumber="" DispName="収集運搬業者電話番号" Needs="0" TableName="DT_R19" Name="UPN_SHA_TEL" />
+      <Column ID="112" DispNumber="" DispName="収集運搬業者FAX" Needs="0" TableName="DT_R19" Name="UPN_SHA_FAX" />
+      <Column ID="113" DispNumber="" DispName="収集運搬業者統一許可番号" Needs="0" TableName="DT_R19" Name="UPN_SHA_KYOKA_ID" />
+      <Column ID="114" DispNumber="" DispName="再委託先収集運搬業者加入者番号" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_EDI_MEMBER_ID" />
+      <Column ID="115" DispNumber="" DispName="再委託先収集運搬業者名" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_NAME" />
+      <Column ID="116" DispNumber="" DispName="再委託先収集運搬業者郵便番号" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_POST" />
+      <Column ID="117" DispNumber="" DispName="再委託先収集運搬業者所在地1" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_ADDRESS1" />
+      <Column ID="118" DispNumber="" DispName="再委託先収集運搬業者所在地2" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_ADDRESS2" />
+      <Column ID="119" DispNumber="" DispName="再委託先収集運搬業者所在地3" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_ADDRESS3" />
+      <Column ID="120" DispNumber="" DispName="再委託先収集運搬業者所在地4" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_ADDRESS4" />
+      <Column ID="121" DispNumber="" DispName="再委託先収集運搬業者電話番号" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_TEL" />
+      <Column ID="122" DispNumber="" DispName="再委託先収集運搬業者FAX" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_FAX" />
+      <Column ID="123" DispNumber="" DispName="再委託先収集運搬業者統一許可番号" Needs="0" TableName="DT_R19" Name="SAI_UPN_SHA_KYOKA_ID" />
+      <Column ID="124" DispNumber="" DispName="運搬方法コード" Needs="0" TableName="DT_R19" Name="UPN_WAY_CODE" />
+      <Column ID="125" DispNumber="" DispName="運搬担当者" Needs="0" TableName="DT_R19" Name="UPN_TAN_NAME" />
+      <Column ID="126" DispNumber="" DispName="車両番号" Needs="0" TableName="DT_R19" Name="CAR_NO" />
+      <Column ID="127" DispNumber="" DispName="運搬先加入者番号" Needs="0" TableName="DT_R19" Name="UPNSAKI_EDI_MEMBER_ID" />
+      <Column ID="128" DispNumber="" DispName="運搬先加入者名" Needs="0" TableName="DT_R19" Name="UPNSAKI_NAME" />
+      <Column ID="129" DispNumber="" DispName="運搬先事業場番号" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_ID" />
+      <Column ID="130" DispNumber="" DispName="運搬先事業場区分" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_KBN" />
+      <Column ID="131" DispNumber="" DispName="運搬先事業場名" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_NAME" />
+      <Column ID="132" DispNumber="" DispName="運搬先事業場郵便番号" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_POST" />
+      <Column ID="133" DispNumber="" DispName="運搬先事業場所在地1" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_ADDRESS1" />
+      <Column ID="134" DispNumber="" DispName="運搬先事業場所在地2" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_ADDRESS2" />
+      <Column ID="135" DispNumber="" DispName="運搬先事業場所在地3" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_ADDRESS3" />
+      <Column ID="136" DispNumber="" DispName="運搬先事業場所在地4" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_ADDRESS4" />
+      <Column ID="137" DispNumber="" DispName="運搬先事業場電話番号" Needs="0" TableName="DT_R19" Name="UPNSAKI_JOU_TEL" />
+      <Column ID="138" DispNumber="" DispName="運搬報告情報承認待ちフラグ" Needs="0" TableName="DT_R19" Name="UPN_SHOUNIN_FLAG" />
+      <Column ID="139" DispNumber="" DispName="運搬終了日" Needs="0" TableName="DT_R19" Name="UPN_END_DATE" />
+      <Column ID="140" DispNumber="" DispName="運搬報告記載の運搬担当者" Needs="0" TableName="DT_R19" Name="UPNREP_UPN_TAN_NAME" />
+      <Column ID="141" DispNumber="" DispName="運搬報告記載の車両番号" Needs="0" TableName="DT_R19" Name="UPNREP_CAR_NO" />
+      <Column ID="142" DispNumber="" DispName="運搬量" Needs="0" TableName="DT_R19" Name="UPN_SUU" />
+      <Column ID="143" DispNumber="" DispName="運搬量の単位コード" Needs="0" TableName="DT_R19" Name="UPN_UNIT_CODE" />
+      <Column ID="144" DispNumber="" DispName="有価物拾集量" Needs="0" TableName="DT_R19" Name="YUUKA_SUU" />
+      <Column ID="145" DispNumber="" DispName="有価物拾集量の単位コード" Needs="0" TableName="DT_R19" Name="YUUKA_UNIT_CODE" />
+      <Column ID="146" DispNumber="" DispName="報告担当者" Needs="0" TableName="DT_R19" Name="REP_TAN_NAME" />
+      <Column ID="147" DispNumber="" DispName="備考" Needs="0" TableName="DT_R19" Name="BIKOU" />
+      <Column ID="148" DispNumber="" DispName="レコード作成日時" Needs="0" TableName="DT_R19" Name="CREATE_DATE" />
+      <Column ID="149" DispNumber="" DispName="タイムスタンプ" Needs="0" TableName="DT_R19" Name="UPDATE_TS" />
+    </Group>
+    <JoinCondition TableName="DT_R18_EX" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA_8E1" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_GENBA_8E2" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_GYOUSHA_8E3" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_GENBA_8E4" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_HAIKI_NAME_8E5" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHOBUN_HOUHOU_8E6" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_DENSHI_TANTOUSHA_8E7" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_DENSHI_TANTOUSHA_8E8" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_DENSHI_TANTOUSHA_8E9" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="M_SHARYOU_8E10" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="DT_MF_TOC" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="DT_R18" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+    <JoinCondition TableName="DT_R19" ApplyCheckType="">ここにJOIN句を設定します。</JoinCondition>
+  </OutputColumnSelect>
+</root>

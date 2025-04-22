@@ -1,0 +1,9 @@
+﻿SELECT 
+    HAIKI_SHURUI_CD,
+	HAIKI_SHURUI_NAME_RYAKU
+FROM
+    M_HAIKI_SHURUI
+WHERE 
+    DELETE_FLG = 0
+AND HAIKI_KBN_CD = /*data.haikiKbnCd*/ 
+AND HAIKI_SHURUI_CD = /*data.haikiShuruiCd*/ 

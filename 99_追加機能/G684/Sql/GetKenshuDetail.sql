@@ -1,0 +1,7 @@
+SELECT *
+FROM
+  T_KENSHU_DETAIL
+WHERE
+  SYSTEM_ID = /*data.SYSTEM_ID*/'' AND
+  SEQ = /*data.SEQ*/'' AND
+  DETAIL_SYSTEM_ID = /*data.DETAIL_SYSTEM_ID*/'' 

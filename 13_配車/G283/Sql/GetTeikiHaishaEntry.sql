@@ -1,0 +1,3 @@
+﻿SELECT * FROM T_TEIKI_HAISHA_ENTRY
+WHERE (DELETE_FLG = 0)
+/*IF haishaNum != 0*/ AND (TEIKI_HAISHA_NUMBER = /*haishaNum*/) /*END*/

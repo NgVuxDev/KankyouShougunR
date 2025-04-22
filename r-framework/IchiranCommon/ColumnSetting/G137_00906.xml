@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <OutputColumnSelect DenshuKbn="906">
+    <Group OutputKbn="1">
+      <Column ID="0" DispNumber="" DispName="廃棄物区分" Needs="0" TableName="" Name="CASE T_MANIFEST_ENTRY.HAIKI_KBN_CD WHEN '1' THEN '産廃(直行)' WHEN '2' THEN '建廃' WHEN '3' THEN '産廃(積替)' END" Format="" />
+      <Column ID="1" DispNumber="" DispName="交付番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="MANIFEST_ID" Format="" />
+      <Column ID="2" DispNumber="" DispName="交付年月日" Needs="0" TableName="T_MANIFEST_ENTRY" Name="KOUFU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="3" DispNumber="" DispName="排出事業者名称" Needs="0" TableName="" Name="RTRIM(SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GYOUSHA_NAME, ''),1, 40)) + SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GYOUSHA_NAME, ''),41, 40)" Format="" />
+      <Column ID="4" DispNumber="" DispName="排出事業場名称" Needs="0" TableName="" Name="RTRIM(SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GENBA_NAME, ''),1, 40)) + SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GENBA_NAME, ''),41, 40)" Format="" />
+      <Column ID="5" DispNumber="" DispName="廃棄物種類略称名" Needs="0" TableName="M_HAIKI_SHURUI" Name="HAIKI_SHURUI_NAME_RYAKU" Format="" />
+      <!--<Column ID="6" DispNumber="" DispName="運搬終了日" Needs="0" TableName="T_MANIFEST_UPN" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />-->
+      <Column ID="7" DispNumber="" DispName="処分終了日" Needs="0" TableName="T_MANIFEST_DETAIL" Name="SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="8" DispNumber="" DispName="最終処分終了日" Needs="0" TableName="T_MANIFEST_DETAIL" Name="LAST_SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="9" DispNumber="" DispName="A票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_A" Format="" />
+      <Column ID="10" DispNumber="" DispName="B1票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_B1" Format="" />
+      <Column ID="11" DispNumber="" DispName="B2票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_B2" Format="" />
+      <Column ID="12" DispNumber="" DispName="B4票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_B4" Format="" />
+      <Column ID="13" DispNumber="" DispName="B6票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_B6" Format="" />
+      <Column ID="14" DispNumber="" DispName="C1票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_C1" Format="" />
+      <Column ID="15" DispNumber="" DispName="C2票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_C2" Format="" />
+      <Column ID="16" DispNumber="" DispName="D票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_D" Format="" />
+      <Column ID="17" DispNumber="" DispName="E票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_E" Format="" />
+      <Column ID="20" DispNumber="" DispName="運搬終了日(区間1)" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="21" DispNumber="" DispName="運搬終了日(区間2)" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="22" DispNumber="" DispName="運搬終了日(区間3)" Needs="0" TableName="T_MANIFEST_UPN3" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+    </Group>
+    <Group OutputKbn="2">
+      <Column ID="1" DispNumber="" DispName="交付番号" Needs="0" TableName="T_MANIFEST_ENTRY" Name="MANIFEST_ID" Format="" />
+      <Column ID="2" DispNumber="" DispName="交付年月日" Needs="0" TableName="T_MANIFEST_ENTRY" Name="KOUFU_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="3" DispNumber="" DispName="排出事業者名称" Needs="0" TableName="" Name="RTRIM(SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GYOUSHA_NAME, ''),1, 40)) + SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GYOUSHA_NAME, ''),41, 40)" Format="" />
+      <Column ID="4" DispNumber="" DispName="排出事業場名称" Needs="0" TableName="" Name="RTRIM(SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GENBA_NAME, ''),1, 40)) + SUBSTRING(ISNULL(T_MANIFEST_ENTRY.HST_GENBA_NAME, ''),41, 40)" Format="" />
+      <Column ID="5" DispNumber="" DispName="廃棄物種類略称名" Needs="0" TableName="M_HAIKI_SHURUI" Name="HAIKI_SHURUI_NAME_RYAKU" Format="" />
+      <!--<Column ID="6" DispNumber="" DispName="運搬終了日" Needs="0" TableName="T_MANIFEST_UPN" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />-->
+      <Column ID="7" DispNumber="" DispName="処分終了日" Needs="0" TableName="T_MANIFEST_DETAIL" Name="SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="8" DispNumber="" DispName="最終処分終了日" Needs="0" TableName="T_MANIFEST_DETAIL" Name="LAST_SBN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="9" DispNumber="" DispName="A票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_A" Format="" />
+      <Column ID="10" DispNumber="" DispName="B1票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_B1" Format="" />
+      <Column ID="11" DispNumber="" DispName="B2票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_B2" Format="" />
+      <Column ID="12" DispNumber="" DispName="B4票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_B4" Format="" />
+      <Column ID="13" DispNumber="" DispName="B6票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_B6" Format="" />
+      <Column ID="14" DispNumber="" DispName="C1票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_C1" Format="" />
+      <Column ID="15" DispNumber="" DispName="C2票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_C2" Format="" />
+      <Column ID="16" DispNumber="" DispName="D票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_D" Format="" />
+      <Column ID="17" DispNumber="" DispName="E票" Needs="1" TableName="T_MANIFEST_RET_DATE" Name="SEND_E" Format="" />
+      <Column ID="20" DispNumber="" DispName="運搬終了日(区間1)" Needs="0" TableName="T_MANIFEST_UPN1" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="21" DispNumber="" DispName="運搬終了日(区間2)" Needs="0" TableName="T_MANIFEST_UPN2" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+      <Column ID="22" DispNumber="" DispName="運搬終了日(区間3)" Needs="0" TableName="T_MANIFEST_UPN3" Name="UPN_END_DATE" Format="yyyy/MM/dd(ddd)" />
+    </Group>
+    <JoinCondition TableName="">ここにJOIN句を設定します。</JoinCondition>
+  </OutputColumnSelect>
+</root>

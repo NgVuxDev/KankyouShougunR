@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<ArrayOfButtonSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ButtonSetting>
+    <ButtonName>bt_func2</ButtonName>
+    <IchiranButtonName>[F2]&#xD;&#xA;個別変更</IchiranButtonName>
+    <IchiranButtonHintText>個別変更画面へ遷移します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func4</ButtonName>
+    <IchiranButtonName>[F4]&#xD;&#xA;削除</IchiranButtonName>
+    <IchiranButtonHintText>選択している明細行を削除します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func6</ButtonName>
+    <IchiranButtonName>[F6]&#xD;&#xA;CSV</IchiranButtonName>
+    <IchiranButtonHintText>画面に表示された内容をCSVファイルにて出力します</IchiranButtonHintText>
+</ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func7</ButtonName>
+    <IchiranButtonName>[F7]&#xD;&#xA;条件ｸﾘｱ</IchiranButtonName>
+    <IchiranButtonHintText>郵便番号 3ケタ・郵便番号 7ケタを初期化します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func8</ButtonName>
+    <IchiranButtonName>[F8]&#xD;&#xA;検索</IchiranButtonName>
+    <IchiranButtonHintText>郵便番号 3ケタ・郵便番号 7ケタに設定した内容にて明細を再表示します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func9</ButtonName>
+    <IchiranButtonName>[F9]&#xD;&#xA;登録</IchiranButtonName>
+    <IchiranButtonHintText>旧住所を新住所に置換して登録します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func11</ButtonName>
+    <IchiranButtonName>[F11]&#xD;&#xA;取消</IchiranButtonName>
+    <IchiranButtonHintText>画面の編集内容を破棄し、最新のデータを表示します</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_func12</ButtonName>
+    <IchiranButtonName>[F12]&#xD;&#xA;閉じる</IchiranButtonName>
+    <IchiranButtonHintText>画面を閉じます</IchiranButtonHintText>
+  </ButtonSetting>
+  <ButtonSetting>
+    <ButtonName>bt_process1</ButtonName>
+    <IchiranButtonName>[1]郵便辞書読込</IchiranButtonName>
+    <IchiranButtonHintText>csvファイルから郵便辞書を読込みます</IchiranButtonHintText>
+  </ButtonSetting>
+</ArrayOfButtonSetting>
