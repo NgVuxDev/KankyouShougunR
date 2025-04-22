@@ -3324,67 +3324,67 @@ namespace Shougun.Core.BusinessManagement.MitsumoriNyuryoku
 
         private void btn_GyoSonyu_Click(object sender, EventArgs e)
         {
-            if (dgvBiko.CurrentRow == null)
+            if (Ichiran.CurrentRow == null)
             {
                 return;
             }
 
-            int index = dgvBiko.CurrentRow.Index;
-            dgvBiko.Rows.Insert(index, 1);
-            dgvBiko.CurrentCell = dgvBiko.Rows[index].Cells[0];
+            int index = Ichiran.CurrentRow.Index;
+            Ichiran.Rows.Insert(index, 1);
+            Ichiran.CurrentCell = Ichiran.Rows[index].Cells[0];
         }
 
         private void btn_GyoSakuyo_Click(object sender, EventArgs e)
         {
-            if (dgvBiko.CurrentRow == null)
+            if (Ichiran.CurrentRow == null)
             {
                 return;
             }
 
-            int index = dgvBiko.CurrentRow.Index;
-            if (!dgvBiko.Rows[index].IsNewRow)
+            int index = Ichiran.CurrentRow.Index;
+            if (!Ichiran.Rows[index].IsNewRow)
             {
-                dgvBiko.Rows.RemoveAt(index);
+                Ichiran.Rows.RemoveAt(index);
             }
         }
 
         private void btn_UeIdo_Click(object sender, EventArgs e)
         {
-            if (dgvBiko.CurrentRow == null || dgvBiko.CurrentRow.IsNewRow)
+            if (Ichiran.CurrentRow == null || Ichiran.CurrentRow.IsNewRow)
             {
                 return;
             }
 
-            int index = dgvBiko.CurrentRow.Index;
+            int index = Ichiran.CurrentRow.Index;
             if (index > 0)
             {
                 SwapRows(index, index - 1);
-                dgvBiko.CurrentCell = dgvBiko.Rows[index - 1].Cells[0];
+                Ichiran.CurrentCell = Ichiran.Rows[index - 1].Cells[0];
             }
         }
 
         private void btn_ShimoIdo_Click(object sender, EventArgs e)
         {
-            if (dgvBiko.CurrentRow == null || dgvBiko.CurrentRow.IsNewRow)
+            if (Ichiran.CurrentRow == null || Ichiran.CurrentRow.IsNewRow)
             {
                 return;
             }
 
-            int index = dgvBiko.CurrentRow.Index;
-            if (index < dgvBiko.Rows.Count - 2)
+            int index = Ichiran.CurrentRow.Index;
+            if (index < Ichiran.Rows.Count - 2)
             {
                 SwapRows(index, index + 1);
-                dgvBiko.CurrentCell = dgvBiko.Rows[index + 1].Cells[0];
+                Ichiran.CurrentCell = Ichiran.Rows[index + 1].Cells[0];
             }
         }
 
         private void SwapRows(int i, int j)
         {
-            for (int col = 0; col < dgvBiko.Columns.Count; col++)
+            for (int col = 0; col < Ichiran.Columns.Count; col++)
             {
-                var tmp = dgvBiko.Rows[i].Cells[col].Value;
-                dgvBiko.Rows[i].Cells[col].Value = dgvBiko.Rows[j].Cells[col].Value;
-                dgvBiko.Rows[j].Cells[col].Value = tmp;
+                var tmp = Ichiran.Rows[i].Cells[col].Value;
+                Ichiran.Rows[i].Cells[col].Value = Ichiran.Rows[j].Cells[col].Value;
+                Ichiran.Rows[j].Cells[col].Value = tmp;
             }
         }
 

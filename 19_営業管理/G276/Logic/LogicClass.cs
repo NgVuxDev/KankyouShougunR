@@ -13560,6 +13560,11 @@ namespace Shougun.Core.BusinessManagement.MitsumoriNyuryoku
 
                 Row row = this.form.Ichiran.Rows[i];
 
+                if (row.IsNewRow || string.IsNullOrWhiteSpace(Convert.ToString(row.Cells["BIKO_CD"].Value)))
+                {
+                    continue;
+                }
+
                 T_MITSUMORI_DETAIL_2 entity = new T_MITSUMORI_DETAIL_2();
 
                 // モードに依存する処理

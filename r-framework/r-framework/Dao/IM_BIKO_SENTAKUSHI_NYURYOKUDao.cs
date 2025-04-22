@@ -45,7 +45,7 @@ namespace r_framework.Dao
         /// <returns></returns>
         [Sql("SELECT DISTINCT N'îıçlì‡ñÛì¸óÕ' AS NAME FROM M_BIKO_UCHIWAKE_NYURYOKU WHERE BIKO_CD IN /*BIKO_CD*/('') " +
              "UNION " +
-             "SELECT DISTINCT N'å©êœì¸óÕ' AS NAME FROM T_MITSUMORI_ENTRY WHERE BIKO_CD IN /*BIKO_CD*/('') ")]
+             "SELECT DISTINCT N'å©êœì¸óÕ' AS NAME FROM T_MITSUMORI_DETAIL_2 WHERE BIKO_CD IN /*BIKO_CD*/('') ")]
         DataTable GetDataBySqlFileCheck(string[] BIKO_CD);
 
         /// <summary>
