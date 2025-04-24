@@ -568,7 +568,6 @@ namespace Shougun.Core.Master.SystemKobetsuSetteiHoshu.APP
             else
             {
                 e.Cancel = true;
-                return;
             }
         }
 
@@ -602,7 +601,6 @@ namespace Shougun.Core.Master.SystemKobetsuSetteiHoshu.APP
             else
             {
                 e.Cancel = true;
-                return;
             }
         }
     }
